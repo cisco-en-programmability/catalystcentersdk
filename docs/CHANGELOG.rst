@@ -17,7 +17,7 @@ Versioning <https://semver.org/spec/v2.0.0.html>`__.
    -  requests = “^2.32.0”
    -  readthedocs-sphinx-search = “^0.3.2”
 
-[1.0.0] - 2024-10-31
+[1.0.0] - 2024-10-30
 --------------------
 
 Added
