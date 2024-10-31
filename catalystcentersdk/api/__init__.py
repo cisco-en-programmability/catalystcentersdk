@@ -69,7 +69,7 @@ from .v2_3_7_6_1.disaster_recovery import \
 from .v2_3_7_6_1.discovery import \
     Discovery as Discovery_v2_3_7_6_1
 from .v2_3_7_6_1.eox import \
-    Eox as Eox_v2_3_7_6_1
+    EoX as EoX_v2_3_7_6_1
 from .v2_3_7_6_1.event_management import \
     EventManagement as EventManagement_v2_3_7_6_1
 from .v2_3_7_6_1.fabric_wireless import \
@@ -373,7 +373,7 @@ class CatalystCenterAPI(object):
                     self._session, object_factory, _validator
                 )
             self.eox = \
-                Eox_v2_3_7_6_1(
+                EoX_v2_3_7_6_1(
                     self._session, object_factory, _validator
                 )
             self.event_management = \

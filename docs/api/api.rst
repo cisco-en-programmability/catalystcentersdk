@@ -187,7 +187,7 @@ discovery
 eox
 ---
 
-.. autoclass:: catalystcentersdk.api.v2_3_7_6_1.eox.Eox()
+.. autoclass:: catalystcentersdk.api.v2_3_7_6_1.eox.EoX()
 
 
 

@@ -62,7 +62,7 @@ from catalystcentersdk.api.v2_3_7_6_1.disaster_recovery import \
 from catalystcentersdk.api.v2_3_7_6_1.discovery import \
     Discovery as Discovery_v2_3_7_6_1
 from catalystcentersdk.api.v2_3_7_6_1.eox import \
-    Eox as Eox_v2_3_7_6_1
+    EoX as EoX_v2_3_7_6_1
 from catalystcentersdk.api.v2_3_7_6_1.event_management import \
     EventManagement as EventManagement_v2_3_7_6_1
 from catalystcentersdk.api.v2_3_7_6_1.fabric_wireless import \
@@ -217,7 +217,7 @@ class TestDNACenterSDK:
             assert isinstance(api.devices, Devices_v2_3_7_6_1)
             assert isinstance(api.disaster_recovery, DisasterRecovery_v2_3_7_6_1)
             assert isinstance(api.discovery, Discovery_v2_3_7_6_1)
-            assert isinstance(api.eox, Eox_v2_3_7_6_1)
+            assert isinstance(api.eox, EoX_v2_3_7_6_1)
             assert isinstance(api.event_management, EventManagement_v2_3_7_6_1)
             assert isinstance(api.fabric_wireless, FabricWireless_v2_3_7_6_1)
             assert isinstance(api.file, File_v2_3_7_6_1)
