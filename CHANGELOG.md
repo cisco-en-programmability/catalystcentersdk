@@ -14,4 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-10-30
 ### Added
 - Add support of Catalyst Center versions ('2.3.7.6')
-- Adds modules for v2_3_7_6.1
+- Adds modules for v2_3_7_6
