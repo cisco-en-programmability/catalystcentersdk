@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class UserandRoles(object):
-    """Cisco Catalyst Center User and Roles API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center User and Roles API (version: 2.3.7.6).
 
     Wraps the Catalyst Center User and Roles
     API and exposes the API as native Python

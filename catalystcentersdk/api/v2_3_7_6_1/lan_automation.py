@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class LanAutomation(object):
-    """Cisco Catalyst Center LAN Automation API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center LAN Automation API (version: 2.3.7.6).
 
     Wraps the Catalyst Center LAN Automation
     API and exposes the API as native Python

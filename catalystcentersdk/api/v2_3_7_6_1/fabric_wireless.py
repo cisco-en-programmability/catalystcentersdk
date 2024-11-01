@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class FabricWireless(object):
-    """Cisco Catalyst Center Fabric Wireless API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Fabric Wireless API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Fabric Wireless
     API and exposes the API as native Python

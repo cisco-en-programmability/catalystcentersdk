@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Users(object):
-    """Cisco Catalyst Center Users API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Users API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Users
     API and exposes the API as native Python

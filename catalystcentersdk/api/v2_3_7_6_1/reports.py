@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Reports(object):
-    """Cisco Catalyst Center Reports API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Reports API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Reports
     API and exposes the API as native Python

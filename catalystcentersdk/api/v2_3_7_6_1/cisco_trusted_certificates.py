@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class CiscoTrustedCertificates(object):
-    """Cisco Catalyst Center Cisco Trusted Certificates API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Cisco Trusted Certificates API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Cisco Trusted Certificates
     API and exposes the API as native Python

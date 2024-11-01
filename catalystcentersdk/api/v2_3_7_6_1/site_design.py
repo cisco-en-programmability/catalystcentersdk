@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class SiteDesign(object):
-    """Cisco Catalyst Center Site Design API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Site Design API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Site Design
     API and exposes the API as native Python

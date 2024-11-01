@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class SecurityAdvisories(object):
-    """Cisco Catalyst Center Security Advisories API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Security Advisories API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Security Advisories
     API and exposes the API as native Python

@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class File(object):
-    """Cisco Catalyst Center File API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center File API (version: 2.3.7.6).
 
     Wraps the Catalyst Center File
     API and exposes the API as native Python

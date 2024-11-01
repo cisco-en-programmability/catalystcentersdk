@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Discovery(object):
-    """Cisco Catalyst Center Discovery API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Discovery API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Discovery
     API and exposes the API as native Python

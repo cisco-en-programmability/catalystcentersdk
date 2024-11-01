@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Tag(object):
-    """Cisco Catalyst Center Tag API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Tag API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Tag
     API and exposes the API as native Python

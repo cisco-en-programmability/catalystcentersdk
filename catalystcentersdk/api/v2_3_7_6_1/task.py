@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Task(object):
-    """Cisco Catalyst Center Task API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Task API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Task
     API and exposes the API as native Python

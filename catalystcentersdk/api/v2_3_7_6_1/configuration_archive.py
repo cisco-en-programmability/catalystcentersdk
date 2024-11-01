@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class ConfigurationArchive(object):
-    """Cisco Catalyst Center Configuration Archive API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Configuration Archive API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Configuration Archive
     API and exposes the API as native Python

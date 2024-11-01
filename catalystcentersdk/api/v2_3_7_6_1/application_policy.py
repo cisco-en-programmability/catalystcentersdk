@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class ApplicationPolicy(object):
-    """Cisco Catalyst Center Application Policy API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Application Policy API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Application Policy
     API and exposes the API as native Python

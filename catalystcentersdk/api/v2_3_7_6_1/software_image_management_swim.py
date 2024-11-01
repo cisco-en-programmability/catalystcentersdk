@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class SoftwareImageManagementSwim(object):
-    """Cisco Catalyst Center Software Image Management (SWIM) API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Software Image Management (SWIM) API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Software Image Management (SWIM)
     API and exposes the API as native Python

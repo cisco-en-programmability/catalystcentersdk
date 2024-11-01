@@ -1002,7 +1002,7 @@ class SchemaValidator:
         self.load_validators(version)
 
     def load_validators(self, version):
-        if version == '2.3.7.6.1':
+        if version == '2.3.7.6':
             self.json_schema_validators['jsd_b2f15d0c54c2862a60a904289ddd_v2_3_7_6_1'] =\
                 JSONSchemaValidatorB2F15D0C54C2862A60A904289Ddd_v2_3_7_6_1()
             self.json_schema_validators['jsd_e4d208b5545f66bf0f94a155c81f46_v2_3_7_6_1'] =\

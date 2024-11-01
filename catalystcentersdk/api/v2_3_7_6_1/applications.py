@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Applications(object):
-    """Cisco Catalyst Center Applications API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Applications API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Applications
     API and exposes the API as native Python

@@ -202,7 +202,7 @@ class TestDNACenterSDK:
         assert isinstance(api.custom_caller, CustomCaller)
 
         
-        if api.version == '2.3.7.6.1':
+        if api.version == '2.3.7.6':
             assert isinstance(api.ai_endpoint_analytics, AIEndpointAnalytics_v2_3_7_6_1)
             assert isinstance(api.application_policy, ApplicationPolicy_v2_3_7_6_1)
             assert isinstance(api.applications, Applications_v2_3_7_6_1)

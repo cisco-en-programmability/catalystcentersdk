@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class NetworkSettings(object):
-    """Cisco Catalyst Center Network Settings API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Network Settings API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Network Settings
     API and exposes the API as native Python

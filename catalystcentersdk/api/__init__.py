@@ -219,7 +219,7 @@ class CatalystCenterAPI(object):
             VersionError: If the version is not provided via the version
                 argument or an environment variable, or it is not a
                 Catalyst Center API supported version
-                ['2.3.7.6.1'].
+                ['2.3.7.6'].
 
         """
         username = username or catalystcenter_environment.get_env_username()
@@ -258,11 +258,11 @@ class CatalystCenterAPI(object):
         check_type(user_string, str, may_be_none=False)
         check_type(user_agent, str, may_be_none=False)
 
-        if version not in ['2.3.7.6.1']:
+        if version not in ['2.3.7.6']:
             raise VersionError(
                 'Unknown API version, '
                 + 'known versions are {}'.format(
-                    '2.3.7.6.1.'
+                    '2.3.7.6.'
                 )
             )
 
@@ -315,7 +315,7 @@ class CatalystCenterAPI(object):
         _validator = validator(version).json_schema_validate
 
         # API wrappers
-        if version == '2.3.7.6.1':
+        if version == '2.3.7.6':
             self.ai_endpoint_analytics = \
                 AIEndpointAnalytics_v2_3_7_6_1(
                     self._session, object_factory, _validator

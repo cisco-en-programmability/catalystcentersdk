@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Issues(object):
-    """Cisco Catalyst Center Issues API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Issues API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Issues
     API and exposes the API as native Python

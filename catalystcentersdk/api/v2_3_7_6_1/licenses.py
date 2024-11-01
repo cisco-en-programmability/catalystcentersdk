@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Licenses(object):
-    """Cisco Catalyst Center Licenses API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Licenses API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Licenses
     API and exposes the API as native Python

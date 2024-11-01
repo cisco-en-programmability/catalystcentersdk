@@ -24,7 +24,7 @@ SOFTWARE.
 import pytest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6.1', reason='version does not match')
+pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
 
 
 def is_valid_authentication_api(json_schema_validate, obj):

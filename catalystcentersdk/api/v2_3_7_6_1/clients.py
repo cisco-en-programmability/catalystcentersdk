@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Clients(object):
-    """Cisco Catalyst Center Clients API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Clients API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Clients
     API and exposes the API as native Python

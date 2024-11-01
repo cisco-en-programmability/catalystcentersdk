@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class DeviceReplacement(object):
-    """Cisco Catalyst Center Device Replacement API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Device Replacement API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Device Replacement
     API and exposes the API as native Python

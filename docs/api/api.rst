@@ -20,7 +20,7 @@ CatalystCenterAPI summary structure
 
 .. _v2_3_7_6_1 summary:
 
-v2.3.7.6.1 summary
+v2.3.7.6 summary
 ------------------
 
 .. include:: api_structure_table_v2_3_7_6_1.rst
@@ -53,7 +53,7 @@ custom_caller
 .. autoclass:: catalystcentersdk.api.custom_caller.CustomCaller()
 
 
-CatalystCenterAPI v2.3.7.6.1
+CatalystCenterAPI v2.3.7.6
 ============================
 
 .. _ai_endpoint_analytics_2_3_7_6_1:

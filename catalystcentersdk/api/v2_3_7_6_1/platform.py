@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Platform(object):
-    """Cisco Catalyst Center Platform API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Platform API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Platform
     API and exposes the API as native Python

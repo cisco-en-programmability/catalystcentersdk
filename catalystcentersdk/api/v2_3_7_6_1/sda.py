@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Sda(object):
-    """Cisco Catalyst Center SDA API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center SDA API (version: 2.3.7.6).
 
     Wraps the Catalyst Center SDA
     API and exposes the API as native Python

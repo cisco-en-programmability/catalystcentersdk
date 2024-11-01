@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class PathTrace(object):
-    """Cisco Catalyst Center Path Trace API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Path Trace API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Path Trace
     API and exposes the API as native Python

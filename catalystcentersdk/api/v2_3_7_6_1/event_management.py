@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class EventManagement(object):
-    """Cisco Catalyst Center Event Management API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Event Management API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Event Management
     API and exposes the API as native Python

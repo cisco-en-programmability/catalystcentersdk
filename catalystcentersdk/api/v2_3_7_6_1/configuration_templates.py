@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class ConfigurationTemplates(object):
-    """Cisco Catalyst Center Configuration Templates API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Configuration Templates API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Configuration Templates
     API and exposes the API as native Python

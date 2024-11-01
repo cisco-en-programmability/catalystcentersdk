@@ -25,7 +25,7 @@ def get_mock_url(free_port):
 def start_mock_server(port, version):
     mockServerHandler = None
 
-    if version == '2.3.7.6.1':
+    if version == '2.3.7.6':
         mockServerHandler = MockServerRequestHandler_v2_3_7_6_1
 
     if mockServerHandler is None:

@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class Wireless(object):
-    """Cisco Catalyst Center Wireless API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Wireless API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Wireless
     API and exposes the API as native Python

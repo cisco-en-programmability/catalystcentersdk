@@ -26,7 +26,7 @@ from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6.1', reason='version does not match')
+pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
 
 
 def is_valid_get_the_details_of_issues_for_given_set_of_filters_know_your_network_v1(json_schema_validate, obj):

@@ -36,7 +36,7 @@ from ...utils import (
 
 
 class AIEndpointAnalytics(object):
-    """Cisco Catalyst Center AI Endpoint Analytics API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center AI Endpoint Analytics API (version: 2.3.7.6).
 
     Wraps the Catalyst Center AI Endpoint Analytics
     API and exposes the API as native Python

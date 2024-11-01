@@ -38,7 +38,7 @@ from ...utils import (
 
 
 class DeviceOnboardingPnp(object):
-    """Cisco Catalyst Center Device Onboarding (PnP) API (version: 2.3.7.6.1).
+    """Cisco Catalyst Center Device Onboarding (PnP) API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Device Onboarding (PnP)
     API and exposes the API as native Python
