@@ -253,7 +253,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-details-of-issues-for-given-set-of-filters-know-your-network-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-details-of-issues-for-given-set-of-filters-know-your-network
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -552,7 +552,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-total-number-of-issues-for-given-set-of-filters-know-your-network-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-total-number-of-issues-for-given-set-of-filters-know-your-network
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -707,7 +707,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-details-of-issues-for-given-set-of-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-details-of-issues-for-given-set-of-filters
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -800,7 +800,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-total-number-of-issues-for-given-set-of-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-total-number-of-issues-for-given-set-of-filters
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -897,7 +897,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-summary-analytics-data-of-issues-v1
+            https://developer.cisco.com/docs/dna-center/#!get-summary-analytics-data-of-issues
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1007,7 +1007,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-top-n-analytics-data-of-issues-v1
+            https://developer.cisco.com/docs/dna-center/#!get-top-n-analytics-data-of-issues
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1120,7 +1120,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-trend-analytics-data-of-issues-v1
+            https://developer.cisco.com/docs/dna-center/#!get-trend-analytics-data-of-issues
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1227,7 +1227,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-the-details-and-suggested-actions-of-an-issue-for-the-given-issue-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-the-details-and-suggested-actions-of-an-issue-for-the-given-issue-id
         """
         check_type(headers, dict)
         check_type(view, str)
@@ -1306,7 +1306,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!ignore-the-given-list-of-issues-v1
+            https://developer.cisco.com/docs/dna-center/#!ignore-the-given-list-of-issues
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1388,7 +1388,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!resolve-the-given-lists-of-issues-v1
+            https://developer.cisco.com/docs/dna-center/#!resolve-the-given-lists-of-issues
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1471,7 +1471,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-the-given-issue-by-updating-selected-fields-v1
+            https://developer.cisco.com/docs/dna-center/#!update-the-given-issue-by-updating-selected-fields
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1569,7 +1569,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!creates-a-new-user-defined-issue-definitions-v1
+            https://developer.cisco.com/docs/dna-center/#!creates-a-new-user-defined-issue-definitions
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1695,7 +1695,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-the-custom-issue-definitions-based-on-the-given-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-the-custom-issue-definitions-based-on-the-given-filters
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -1817,7 +1817,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-total-custom-issue-definitions-count-based-on-the-provided-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-total-custom-issue-definitions-count-based-on-the-provided-filters
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -1919,7 +1919,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-an-existing-custom-issue-definition-based-on-the-provided-id-v1
+            https://developer.cisco.com/docs/dna-center/#!updates-an-existing-custom-issue-definition-based-on-the-provided-id
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2008,7 +2008,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-an-existing-custom-issue-definition-v1
+            https://developer.cisco.com/docs/dna-center/#!deletes-an-existing-custom-issue-definition
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2079,7 +2079,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!execute-suggested-actions-commands-v1
+            https://developer.cisco.com/docs/dna-center/#!execute-suggested-actions-commands
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2146,7 +2146,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-issue-enrichment-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-issue-enrichment-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -2229,7 +2229,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!issues-v1
+            https://developer.cisco.com/docs/dna-center/#!issues
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -2349,7 +2349,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-all-issue-trigger-definitions-for-given-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-all-issue-trigger-definitions-for-given-filters
         """
         check_type(headers, dict)
         check_type(device_type, str)
@@ -2467,7 +2467,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-count-of-system-defined-issue-definitions-based-on-provided-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-count-of-system-defined-issue-definitions-based-on-provided-filters
         """
         check_type(headers, dict)
         check_type(device_type, str)
@@ -2545,7 +2545,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-issue-trigger-definition-for-given-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-issue-trigger-definition-for-given-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2622,7 +2622,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!issue-trigger-definition-update-v1
+            https://developer.cisco.com/docs/dna-center/#!issue-trigger-definition-update
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2701,7 +2701,7 @@ class Issues(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-custom-issue-definition-for-the-given-custom-issue-definition-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-custom-issue-definition-for-the-given-custom-issue-definition-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2745,17 +2745,39 @@ class Issues(object):
     def get_issue_enrichment_details(self,
                                         headers=None,
                                         **request_parameters):
+        """ This function is an alias of get_issue_enrichment_details_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_issue_enrichment_details_v1 .
+        """
         return self.get_issue_enrichment_details_v1(
-                                        headers=headers,
-                                        **request_parameters
-        )   
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_the_custom_issue_definition_for_the_given_custom_issue_definition_id(self,
                                                                                     id,
                                                                                     headers=None,
-                                                                                    **request_parameters):  
+                                                                                    **request_parameters):
+        """ This function is an alias of get_the_custom_issue_definition_for_the_given_custom_issue_definition_id_v1 .
+        Args:
+            id(basestring): id path parameter. Get the custom issue definition for the given custom issue definition
+                Id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_custom_issue_definition_for_the_given_custom_issue_definition_id_v1 .
+        """ 
         return self.get_the_custom_issue_definition_for_the_given_custom_issue_definition_id_v1(
                     id=id,
                     headers=headers,
@@ -2775,7 +2797,28 @@ class Issues(object):
                                                 headers=None,
                                                 payload=None,
                                                 active_validation=True,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of get_summary_analytics_data_of_issues_v1 .
+        Args:
+            aggregateAttributes(list): Issues's aggregateAttributes (list of objects).
+            attributes(list): Issues's Attributes (list of strings).
+            endTime(integer): Issues's End Time.
+            filters(list): Issues's filters (list of objects).
+            groupBy(list): Issues's Group By (list of strings).
+            page(object): Issues's page.
+            startTime(integer): Issues's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_summary_analytics_data_of_issues_v1 .
+        """ 
         return self.get_summary_analytics_data_of_issues_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -2798,7 +2841,24 @@ class Issues(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of execute_suggested_actions_commands_v1 .
+        Args:
+            entity_type(string): Issues's Commands provided as part of the suggested actions for an issue can be
+                executed based on issue id. The value here must be issue_id .
+            entity_value(string): Issues's Contains the actual value for the entity type that has been defined .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of execute_suggested_actions_commands_v1 .
+        """ 
         return self.execute_suggested_actions_commands_v1(
                     entity_type=entity_type,
                     entity_value=entity_value,
@@ -2820,7 +2880,39 @@ class Issues(object):
                                                                                       profile_id=None,
                                                                                       severity=None,
                                                                                       headers=None,
-                                                                                      **request_parameters):  
+                                                                                      **request_parameters):
+        """ This function is an alias of get_the_total_custom_issue_definitions_count_based_on_the_provided_filters_v1 .
+        Args:
+            id(basestring): id query parameter. The custom issue definition identifier and unique identifier across
+                the profile. Examples: id=6bef213c-19ca-4170-8375-b694e251101c (single entity uuid
+                requested)
+                id=6bef213c-19ca-4170-8375-b694e251101c&id=19ca-4170-8375-b694e251101c-6bef213c
+                (multiple Id request in the query param) .
+            profile_id(basestring): profileId query parameter. The profile identifier to fetch the profile
+                associated custom issue definitions. The default is global. For the custom profile, it
+                is profile UUID. Example : 3fa85f64-5717-4562-b3fc-2c963f66afa6 .
+            name(basestring): name query parameter. The list of UDI issue names. (Ex."TestUdiIssues") .
+            priority(basestring): priority query parameter. The Issue priority value, possible values are P1, P2,
+                P3, P4. P1: A critical issue that needs immediate attention and can have a wide impact
+                on network operations. P2: A major issue that can potentially impact multiple devices or
+                clients. P3: A minor issue that has a localized or minimal impact. P4: A warning issue
+                that may not be an immediate problem but addressing it can optimize the network
+                performance .
+            is_enabled(bool): isEnabled query parameter. The enable status of the custom issue definition, either
+                true or false. .
+            severity(int): severity query parameter. The syslog severity level. 0: Emergency 1: Alert, 2: Critical.
+                3: Error, 4: Warning, 5: Notice, 6: Info. Examples:severity=1&severity=2 (multi value
+                support with & separator) .
+            facility(basestring): facility query parameter. The syslog facility name .
+            mnemonic(basestring): mnemonic query parameter. The syslog mnemonic name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_total_custom_issue_definitions_count_based_on_the_provided_filters_v1 .
+        """ 
         return self.get_the_total_custom_issue_definitions_count_based_on_the_provided_filters_v1(
                     facility=facility,
                     id=id,
@@ -2843,7 +2935,24 @@ class Issues(object):
                                                                    headers=None,
                                                                    payload=None,
                                                                    active_validation=True,
-                                                                   **request_parameters):  
+                                                                   **request_parameters):
+        """ This function is an alias of get_the_total_number_of_issues_for_given_set_of_filters_v1 .
+        Args:
+            endTime(integer): Issues's End Time.
+            filters(list): Issues's filters (list of objects).
+            startTime(integer): Issues's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_total_number_of_issues_for_given_set_of_filters_v1 .
+        """ 
         return self.get_the_total_number_of_issues_for_given_set_of_filters_v1(
                     endTime=endTime,
                     filters=filters,
@@ -2868,7 +2977,29 @@ class Issues(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of get_top_n_analytics_data_of_issues_v1 .
+        Args:
+            aggregateAttributes(list): Issues's aggregateAttributes (list of objects).
+            attributes(list): Issues's Attributes (list of strings).
+            endTime(integer): Issues's End Time.
+            filters(list): Issues's filters (list of objects).
+            groupBy(list): Issues's Group By (list of strings).
+            page(object): Issues's page.
+            startTime(integer): Issues's Start Time.
+            topN(integer): Issues's Top N.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_top_n_analytics_data_of_issues_v1 .
+        """ 
         return self.get_top_n_analytics_data_of_issues_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -2898,7 +3029,29 @@ class Issues(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of get_trend_analytics_data_of_issues_v1 .
+        Args:
+            aggregateAttributes(list): Issues's aggregateAttributes (list of objects).
+            attributes(list): Issues's Attributes (list of strings).
+            endTime(integer): Issues's End Time.
+            filters(list): Issues's filters (list of objects).
+            groupBy(list): Issues's Group By (list of strings).
+            page(object): Issues's page.
+            startTime(integer): Issues's Start Time.
+            trendInterval(string): Issues's Trend Interval.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_trend_analytics_data_of_issues_v1 .
+        """ 
         return self.get_trend_analytics_data_of_issues_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -2919,7 +3072,18 @@ class Issues(object):
     def get_issue_trigger_definition_for_given_id(self,
                                                      id,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """ This function is an alias of get_issue_trigger_definition_for_given_id_v1 .
+        Args:
+            id(basestring): id path parameter. Issue trigger definition id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_issue_trigger_definition_for_given_id_v1 .
+        """ 
         return self.get_issue_trigger_definition_for_given_id_v1(
                     id=id,
                     headers=headers,
@@ -2938,7 +3102,27 @@ class Issues(object):
                                                         headers=None,
                                                         payload=None,
                                                         active_validation=True,
-                                                        **request_parameters):  
+                                                        **request_parameters):
+        """ This function is an alias of creates_a_new_user_defined_issue_definitions_v1 .
+        Args:
+            description(string): Issues's Description.
+            isEnabled(boolean): Issues's Is Enabled.
+            isNotificationEnabled(boolean): Issues's Is Notification Enabled.
+            name(string): Issues's Name.
+            priority(string): Issues's Priority.
+            rules(list): Issues's rules (list of objects).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of creates_a_new_user_defined_issue_definitions_v1 .
+        """ 
         return self.creates_a_new_user_defined_issue_definitions_v1(
                     description=description,
                     isEnabled=isEnabled,
@@ -2961,7 +3145,24 @@ class Issues(object):
                                                               headers=None,
                                                               payload=None,
                                                               active_validation=True,
-                                                              **request_parameters):  
+                                                              **request_parameters):
+        """ This function is an alias of get_the_details_of_issues_for_given_set_of_filters_v1 .
+        Args:
+            endTime(integer): Issues's End Time.
+            filters(list): Issues's filters (list of objects).
+            startTime(integer): Issues's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_details_of_issues_for_given_set_of_filters_v1 .
+        """ 
         return self.get_the_details_of_issues_for_given_set_of_filters_v1(
                     endTime=endTime,
                     filters=filters,
@@ -2985,7 +3186,28 @@ class Issues(object):
                                                                                 headers=None,
                                                                                 payload=None,
                                                                                 active_validation=True,
-                                                                                **request_parameters):  
+                                                                                **request_parameters):
+        """ This function is an alias of updates_an_existing_custom_issue_definition_based_on_the_provided_id_v1 .
+        Args:
+            description(string): Issues's Description.
+            isEnabled(boolean): Issues's Is Enabled.
+            isNotificationEnabled(boolean): Issues's Is Notification Enabled.
+            name(string): Issues's Name.
+            priority(string): Issues's Priority.
+            rules(list): Issues's rules (list of objects).
+            id(basestring): id path parameter. The custom issue definition Identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of updates_an_existing_custom_issue_definition_based_on_the_provided_id_v1 .
+        """ 
         return self.updates_an_existing_custom_issue_definition_based_on_the_provided_id_v1(
                     id=id,
                     description=description,
@@ -3012,7 +3234,30 @@ class Issues(object):
                   site_id=None,
                   start_time=None,
                   headers=None,
-                  **request_parameters):  
+                  **request_parameters):
+        """ This function is an alias of issues_v1 .
+        Args:
+            start_time(int): startTime query parameter. Starting epoch time in milliseconds of query time window .
+            end_time(int): endTime query parameter. Ending epoch time in milliseconds of query time window .
+            site_id(basestring): siteId query parameter. Assurance UUID value of the site in the issue content .
+            device_id(basestring): deviceId query parameter. Assurance UUID value of the device in the issue content
+                .
+            mac_address(basestring): macAddress query parameter. Client's device MAC address of the issue (format
+                xx:xx:xx:xx:xx:xx) .
+            priority(basestring): priority query parameter. The issue's priority value: P1, P2, P3, or P4 (case
+                insensitive) (Use only when macAddress and deviceId are not provided) .
+            issue_status(basestring): issueStatus query parameter. The issue's status value: ACTIVE, IGNORED,
+                RESOLVED (case insensitive) .
+            ai_driven(basestring): aiDriven query parameter. The issue's AI driven value: YES or NO (case
+                insensitive) (Use only when macAddress and deviceId are not provided) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of issues_v1 .
+        """ 
         return self.issues_v1(
                     ai_driven=ai_driven,
                     device_id=device_id,
@@ -3036,7 +3281,38 @@ class Issues(object):
                                                                                        priority=None,
                                                                                        profile_id=None,
                                                                                        headers=None,
-                                                                                       **request_parameters):  
+                                                                                       **request_parameters):
+        """ This function is an alias of get_the_count_of_system_defined_issue_definitions_based_on_provided_filters_v1 .
+        Args:
+            device_type(basestring): deviceType query parameter. These are the device families/types supported for
+                system issue definitions. If no input is made on device type, all device types are
+                considered. .
+            profile_id(basestring): profileId query parameter. The profile identier to fetch the profile associated
+                issue defintions. The default is `global`. Please refer Network design profiles
+                documentation for more details. .
+            id(basestring): id query parameter. The definition identifier. Examples:
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46 (single entity id request)
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46&id=015d9cba-4f53-4087-8317-7e49e5ffef47
+                (multiple ids in the query param) .
+            name(basestring): name query parameter. The list of system defined issue names. (Ex."BGP_Down")
+                Examples: name=BGP_Down (single entity uuid requested) name=BGP_Down&name=BGP_Flap
+                (multiple issue names separated by & operator) .
+            priority(basestring): priority query parameter. Issue priority, possible values are P1, P2, P3, P4.
+                `P1`: A critical issue that needs immediate attention and can have a wide impact on
+                network operations. `P2`: A major issue that can potentially impact multiple devices or
+                clients. `P3`: A minor issue that has a localized or minimal impact. `P4`: A warning
+                issue that may not be an immediate problem but addressing it can optimize the network
+                performance. .
+            issue_enabled(bool): issueEnabled query parameter. The enablement status of the issue definition, either
+                true or false. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_count_of_system_defined_issue_definitions_based_on_provided_filters_v1 .
+        """ 
         return self.get_the_count_of_system_defined_issue_definitions_based_on_provided_filters_v1(
                     device_type=device_type,
                     id=id,
@@ -3055,7 +3331,22 @@ class Issues(object):
                                              headers=None,
                                              payload=None,
                                              active_validation=True,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of resolve_the_given_lists_of_issues_v1 .
+        Args:
+            issueIds(list): Issues's Issue Ids (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of resolve_the_given_lists_of_issues_v1 .
+        """ 
         return self.resolve_the_given_lists_of_issues_v1(
                     issueIds=issueIds,
                     headers=headers,
@@ -3075,7 +3366,26 @@ class Issues(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of issue_trigger_definition_update_v1 .
+        Args:
+            issueEnabled(boolean): Issues's Issue Enabled.
+            priority(string): Issues's Priority.
+            synchronizeToHealthThreshold(boolean): Issues's Synchronize To Health Threshold.
+            thresholdValue(number): Issues's Threshold Value.
+            id(basestring): id path parameter. Issue trigger definition id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of issue_trigger_definition_update_v1 .
+        """ 
         return self.issue_trigger_definition_update_v1(
                     id=id,
                     issueEnabled=issueEnabled,
@@ -3126,7 +3436,144 @@ class Issues(object):
                                                                                 updated_by=None,
                                                                                 view=None,
                                                                                 headers=None,
-                                                                                **request_parameters):  
+                                                                                **request_parameters):
+        """ This function is an alias of get_the_details_of_issues_for_given_set_of_filters_know_your_network_v1 .
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            limit(int): limit query parameter. Maximum number of issues to return .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            sort_by(basestring): sortBy query parameter.
+            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            is_global(bool): isGlobal query parameter. Global issues are those issues which impacts across many
+                devices, sites. They are also displayed on Issue Dashboard in Catalyst Center UI. Non-
+                Global issues are displayed only on Client 360 or Device 360 pages. If this flag is
+                'true', only global issues are returned. If it if 'false', all issues are returned. .
+            priority(basestring): priority query parameter. Priority of the issue. Supports single priority and
+                multiple priorities Examples: priority=P1 (single priority requested)
+                priority=P1&priority=P2&priority=P3 (multiple priorities requested) .
+            severity(basestring): severity query parameter. Severity of the issue. Supports single severity and
+                multiple severities. Examples: severity=high (single severity requested)
+                severity=high&severity=medium (multiple severities requested) .
+            status(basestring): status query parameter. Status of the issue. Supports single status and multiple
+                statuses. Examples: status=active (single status requested)
+                status=active&status=resolved (multiple statuses requested) .
+            entity_type(basestring): entityType query parameter. Entity type of the issue. Supports single entity
+                type and multiple entity types. Examples: entityType=networkDevice (single entity type
+                requested) entityType=network device&entityType=client (multiple entity types requested)
+                .
+            category(basestring): category query parameter. Categories of the issue. Supports single category and
+                multiple categories. Examples: category=availability (single status requested)
+                category=availability&category=onboarding (multiple categories requested) .
+            device_type(basestring): deviceType query parameter. Device Type of the device to which this issue
+                belongs to. Supports single device type and multiple device types. Examples:
+                deviceType=wireless controller (single device type requested) deviceType=wireless
+                controller&deviceType=core (multiple device types requested) .
+            name(basestring): name query parameter. The name of the issue Examples: name=ap_down (single issue name
+                requested) name=ap_down&name=wlc_monitor (multiple issue names requested) Issue names
+                can be retrieved using the API /data/api/v1/assuranceIssueConfigurations .
+            issue_id(basestring): issueId query parameter. UUID of the issue Examples:
+                issueId=e52aecfe-b142-4287-a587-11a16ba6dd26 (single issue id requested) issueId=e52aecf
+                e-b142-4287-a587-11a16ba6dd26&issueId=864d0421-02c0-43a6-9c52-81cad45f66d8 (multiple
+                issue ids requested) .
+            entity_id(basestring): entityId query parameter. Id of the entity for which this issue belongs to. For
+                example, it     could be mac address of AP or UUID of Sensor   example:
+                68:ca:e4:79:3f:20 4de02167-901b-43cf-8822-cffd3caa286f Examples:
+                entityId=68:ca:e4:79:3f:20 (single entity id requested)
+                entityId=68:ca:e4:79:3f:20&entityId=864d0421-02c0-43a6-9c52-81cad45f66d8 (multiple
+                entity ids requested) .
+            updated_by(basestring): updatedBy query parameter. The user who last updated this issue. Examples:
+                updatedBy=admin (single updatedBy requested) updatedBy=admin&updatedBy=john (multiple
+                updatedBy requested) .
+            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
+                supports wildcard asterisk (*) character search support. E.g. */San*, */San, /San*
+                Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
+                requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
+                reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (*) character search support. E.g. `*uuid*, *uuid, uuid* Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
+            site_name(basestring): siteName query parameter. The name of the site. (Ex. `FloorName`) This field
+                supports wildcard asterisk (*) character search support. E.g. *San*, *San, San*
+                Examples: `?siteName=building1` (single siteName requested)
+                `?siteName=building1&siteName=building2&siteName=building3` (multiple siteNames
+                requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
+                wildcard asterisk (*) character search support. E.g.*flooruuid*, *flooruuid, flooruuid*
+                Examples: `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3`
+                (multiple ids requested) .
+            fabric_site_id(basestring): fabricSiteId query parameter. The UUID of the fabric site. (Ex. "flooruuid")
+                Examples: fabricSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26 (single id requested)
+                fabricSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26,864d0421-02c0-43a6-9c52-81cad45f66d8
+                (multiple ids requested) .
+            fabric_vn_name(basestring): fabricVnName query parameter. The name of the fabric virtual network
+                Examples: fabricVnName=name1 (single fabric virtual network name requested)
+                fabricVnName=name1&fabricVnName=name2&fabricVnName=name3 (multiple fabric virtual
+                network names requested) .
+            fabric_transit_site_id(basestring): fabricTransitSiteId query parameter. The UUID of the fabric transit
+                site. (Ex. "flooruuid") Examples:
+                fabricTransitSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26 (single id requested) fabricTra
+                nsitSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26&fabricTransitSiteId=864d0421-02c0-43a6-
+                9c52-81cad45f66d8 (multiple ids requested) .
+            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
+                requested) `networkDeviceId=6bef213c-19ca-4170-8375-
+                b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
+                cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
+                networkDeviceIds with & separator) .
+            network_device_ip_address(basestring): networkDeviceIpAddress query parameter. The list of Network
+                Device management IP Address. (Ex. `121.1.1.10`) This field supports wildcard (`*`)
+                character-based search.  Ex: `*1.1*` or `1.1*` or `*1.1` Examples:
+                `networkDeviceIpAddress=121.1.1.10` `networkDeviceIpAddress=121.1.1.10&networkDeviceIpAd
+                dress=172.20.1.10&networkDeviceIpAddress=10.10.20.10` (multiple networkDevice IP Address
+                with & separator) .
+            mac_address(basestring): macAddress query parameter. The macAddress of the network device or client This
+                field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
+                or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
+                `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
+                requested) .
+            view(basestring): view query parameter. The name of the View. Each view represents a specific data set.
+                Please refer to the `IssuesView` Model for supported views. View is predefined set of
+                attributes supported by the API. Only the attributes related to the given view will be
+                part of the API response along with default attributes. If multiple views are provided,
+                then response will contain attributes from all those views. If no views are specified,
+                all attributes will be returned. (View Name: Included Attributes: `update`: updatedTime,
+                updatedBy: `site`: siteName, siteHierarchy, siteId, siteHierarchyId: Examples:
+                `view=update` (single view requested) `view=update&view=site` (multiple views
+                requested)),  .
+            attribute(basestring): attribute query parameter. List of attributes related to the issue. If these are
+                provided, then only those attributes will be part of response along with the default
+                attributes. Please refer to the `IssuesResponseAttribute` Model for supported
+                attributes. Examples: `attribute=deviceType` (single attribute requested)
+                `attribute=deviceType&attribute=updatedBy` (multiple attributes requested) .
+            ai_driven(bool): aiDriven query parameter. Flag whether the issue is AI driven issue .
+            fabric_driven(bool): fabricDriven query parameter. Flag whether the issue is related to a Fabric site, a
+                virtual network or a transit. .
+            fabric_site_driven(bool): fabricSiteDriven query parameter. Flag whether the issue is Fabric site driven
+                issue .
+            fabric_vn_driven(bool): fabricVnDriven query parameter. Flag whether the issue is Fabric Virtual Network
+                driven issue .
+            fabric_transit_driven(bool): fabricTransitDriven query parameter. Flag whether the issue is Fabric
+                Transit driven issue .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_details_of_issues_for_given_set_of_filters_know_your_network_v1 .
+        """ 
         return self.get_the_details_of_issues_for_given_set_of_filters_know_your_network_v1(
                     ai_driven=ai_driven,
                     attribute=attribute,
@@ -3173,7 +3620,32 @@ class Issues(object):
                                                                                         attribute=None,
                                                                                         view=None,
                                                                                         headers=None,
-                                                                                        **request_parameters):  
+                                                                                        **request_parameters):
+        """ This function is an alias of get_all_the_details_and_suggested_actions_of_an_issue_for_the_given_issue_id_v1 .
+        Args:
+            id(basestring): id path parameter. The issue Uuid .
+            view(basestring): view query parameter. The name of the View. Each view represents a specific data set.
+                Please refer to the `IssuesView` Model for supported views. View is predefined set of
+                attributes supported by the API. Only the attributes related to the given view will be
+                part of the API response along with default attributes. If multiple views are provided,
+                then response will contain attributes from all those views. If no views are specified,
+                all attributes will be returned. (View Name: Included Attributes: `update`: updatedTime,
+                updatedBy: `site`: siteName, siteHierarchy, siteId, siteHierarchyId: Examples:
+                `view=update` (single view requested) `view=update&view=site` (multiple views
+                requested)),  .
+            attribute(basestring): attribute query parameter. List of attributes related to the issue. If these are
+                provided, then only those attributes will be part of response along with the default
+                attributes. Please refer to the `IssuesResponseAttribute` Model for supported
+                attributes. Examples: `attribute=deviceType` (single attribute requested)
+                `attribute=deviceType&attribute=updatedBy` (multiple attributes requested) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_the_details_and_suggested_actions_of_an_issue_for_the_given_issue_id_v1 .
+        """ 
         return self.get_all_the_details_and_suggested_actions_of_an_issue_for_the_given_issue_id_v1(
                     id=id,
                     attribute=attribute,
@@ -3198,7 +3670,44 @@ class Issues(object):
                                                                            severity=None,
                                                                            sort_by=None,
                                                                            headers=None,
-                                                                           **request_parameters):  
+                                                                           **request_parameters):
+        """ This function is an alias of get_all_the_custom_issue_definitions_based_on_the_given_filters_v1 .
+        Args:
+            id(basestring): id query parameter. The custom issue definition identifier and unique identifier across
+                the profile.Examples: id=6bef213c-19ca-4170-8375-b694e251101c (single entity uuid
+                requested)
+                id=6bef213c-19ca-4170-8375-b694e251101c&id=19ca-4170-8375-b694e251101c-6bef213c
+                (multiple Id request in the query param) .
+            profile_id(basestring): profileId query parameter. The profile identifier to fetch the profile
+                associated custom issue definitions. The default is global. For the custom profile, it
+                is profile UUID. Example : 3fa85f64-5717-4562-b3fc-2c963f66afa6 .
+            name(basestring): name query parameter. The list of UDI issue names .
+            priority(basestring): priority query parameter. The Issue priority value, possible values are P1, P2,
+                P3, P4. P1: A critical issue that needs immediate attention and can have a wide impact
+                on network operations. P2: A major issue that can potentially impact multiple devices or
+                clients. P3: A minor issue that has a localized or minimal impact. P4: A warning issue
+                that may not be an immediate problem but addressing it can optimize the network
+                performance .
+            is_enabled(bool): isEnabled query parameter. The enable status of the custom issue definition, either
+                true or false. .
+            severity(int): severity query parameter. The syslog severity level. 0: Emergency 1: Alert, 2: Critical.
+                3: Error, 4: Warning, 5: Notice, 6: Info. Examples:severity=1&severity=2 (multi value
+                support with & separator) .
+            facility(basestring): facility query parameter. The syslog facility name .
+            mnemonic(basestring): mnemonic query parameter. The syslog mnemonic name .
+            limit(int): limit query parameter. The maximum number of records to return .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
+            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_the_custom_issue_definitions_based_on_the_given_filters_v1 .
+        """ 
         return self.get_all_the_custom_issue_definitions_based_on_the_given_filters_v1(
                     facility=facility,
                     id=id,
@@ -3221,7 +3730,18 @@ class Issues(object):
     def deletes_an_existing_custom_issue_definition(self,
                                                        id,
                                                        headers=None,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of deletes_an_existing_custom_issue_definition_v1 .
+        Args:
+            id(basestring): id path parameter. The custom issue definition unique identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_an_existing_custom_issue_definition_v1 .
+        """ 
         return self.deletes_an_existing_custom_issue_definition_v1(
                     id=id,
                     headers=headers,
@@ -3235,7 +3755,22 @@ class Issues(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of ignore_the_given_list_of_issues_v1 .
+        Args:
+            issueIds(list): Issues's Issue Ids (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of ignore_the_given_list_of_issues_v1 .
+        """ 
         return self.ignore_the_given_list_of_issues_v1(
                     issueIds=issueIds,
                     headers=headers,
@@ -3276,7 +3811,125 @@ class Issues(object):
                                                                                      status=None,
                                                                                      updated_by=None,
                                                                                      headers=None,
-                                                                                     **request_parameters):  
+                                                                                     **request_parameters):
+        """ This function is an alias of get_the_total_number_of_issues_for_given_set_of_filters_know_your_network_v1 .
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            is_global(bool): isGlobal query parameter. Global issues are those issues which impacts across many
+                devices, sites. They are also displayed on Issue Dashboard in Catalyst Center UI. Non-
+                Global issues are displayed only on Client 360 or Device 360 pages. If this flag is
+                'true', only global issues are returned. If it if 'false', all issues are returned. .
+            priority(basestring): priority query parameter. Priority of the issue. Supports single priority and
+                multiple priorities Examples: priority=P1 (single priority requested)
+                priority=P1&priority=P2&priority=P3 (multiple priorities requested) .
+            severity(basestring): severity query parameter. Severity of the issue. Supports single severity and
+                multiple severities. Examples: severity=high (single severity requested)
+                severity=high&severity=medium (multiple severities requested) .
+            status(basestring): status query parameter. Status of the issue. Supports single status and multiple
+                statuses. Examples: status=active (single status requested)
+                status=active&status=resolved (multiple statuses requested) .
+            entity_type(basestring): entityType query parameter. Entity type of the issue. Supports single entity
+                type and multiple entity types. Examples: entityType=networkDevice (single entity type
+                requested) entityType=network device&entityType=client (multiple entity types requested)
+                .
+            category(basestring): category query parameter. Categories of the issue. Supports single category and
+                multiple categories. Examples: category=availability (single status requested)
+                category=availability&category=onboarding (multiple categories requested) .
+            device_type(basestring): deviceType query parameter. Device Type of the device to which this issue
+                belongs to. Supports single device type and multiple device types. Examples:
+                deviceType=wireless controller (single device type requested) deviceType=wireless
+                controller&deviceType=core (multiple device types requested) .
+            name(basestring): name query parameter. The name of the issue Examples: name=ap_down (single issue name
+                requested) name=ap_down&name=wlc_monitor (multiple issue names requested) Issue names
+                can be retrieved using the API /data/api/v1/assuranceIssueConfigurations .
+            issue_id(basestring): issueId query parameter. UUID of the issue Examples:
+                issueId=e52aecfe-b142-4287-a587-11a16ba6dd26 (single issue id requested) issueId=e52aecf
+                e-b142-4287-a587-11a16ba6dd26&issueId=864d0421-02c0-43a6-9c52-81cad45f66d8 (multiple
+                issue ids requested) .
+            entity_id(basestring): entityId query parameter. Id of the entity for which this issue belongs to. For
+                example, it     could be mac address of AP or UUID of Sensor   example:
+                68:ca:e4:79:3f:20 4de02167-901b-43cf-8822-cffd3caa286f Examples:
+                entityId=68:ca:e4:79:3f:20 (single entity id requested)
+                entityId=68:ca:e4:79:3f:20&entityId=864d0421-02c0-43a6-9c52-81cad45f66d8 (multiple
+                entity ids requested) .
+            updated_by(basestring): updatedBy query parameter. The user who last updated this issue. Examples:
+                updatedBy=admin (single updatedBy requested) updatedBy=admin&updatedBy=john (multiple
+                updatedBy requested) .
+            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
+                supports wildcard asterisk (*) character search support. E.g. */San*, */San, /San*
+                Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
+                requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
+                reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (*) character search support. E.g. `*uuid*, *uuid, uuid* Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
+            site_name(basestring): siteName query parameter. The name of the site. (Ex. `FloorName`) This field
+                supports wildcard asterisk (*) character search support. E.g. *San*, *San, San*
+                Examples: `?siteName=building1` (single siteName requested)
+                `?siteName=building1&siteName=building2&siteName=building3` (multiple siteNames
+                requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
+                wildcard asterisk (*) character search support. E.g.*flooruuid*, *flooruuid, flooruuid*
+                Examples: `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3`
+                (multiple ids requested) .
+            fabric_site_id(basestring): fabricSiteId query parameter. The UUID of the fabric site. (Ex. "flooruuid")
+                Examples: fabricSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26 (single id requested)
+                fabricSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26,864d0421-02c0-43a6-9c52-81cad45f66d8
+                (multiple ids requested) .
+            fabric_vn_name(basestring): fabricVnName query parameter. The name of the fabric virtual network
+                Examples: fabricVnName=name1 (single fabric virtual network name requested)
+                fabricVnName=name1&fabricVnName=name2&fabricVnName=name3 (multiple fabric virtual
+                network names requested) .
+            fabric_transit_site_id(basestring): fabricTransitSiteId query parameter. The UUID of the fabric transit
+                site. (Ex. "flooruuid") Examples:
+                fabricTransitSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26 (single id requested) fabricTra
+                nsitSiteId=e52aecfe-b142-4287-a587-11a16ba6dd26&fabricTransitSiteId=864d0421-02c0-43a6-
+                9c52-81cad45f66d8 (multiple ids requested) .
+            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
+                requested) `networkDeviceId=6bef213c-19ca-4170-8375-
+                b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
+                cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
+                networkDeviceIds with & separator) .
+            network_device_ip_address(basestring): networkDeviceIpAddress query parameter. The list of Network
+                Device management IP Address. (Ex. `121.1.1.10`) This field supports wildcard (`*`)
+                character-based search.  Ex: `*1.1*` or `1.1*` or `*1.1` Examples:
+                `networkDeviceIpAddress=121.1.1.10` `networkDeviceIpAddress=121.1.1.10&networkDeviceIpAd
+                dress=172.20.1.10&networkDeviceIpAddress=10.10.20.10` (multiple networkDevice IP Address
+                with & separator) .
+            mac_address(basestring): macAddress query parameter. The macAddress of the network device or client This
+                field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
+                or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
+                `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
+                requested) .
+            ai_driven(bool): aiDriven query parameter. Flag whether the issue is AI driven issue .
+            fabric_driven(bool): fabricDriven query parameter. Flag whether the issue is related to a Fabric site, a
+                virtual network or a transit. .
+            fabric_site_driven(bool): fabricSiteDriven query parameter. Flag whether the issue is Fabric site driven
+                issue .
+            fabric_vn_driven(bool): fabricVnDriven query parameter. Flag whether the issue is Fabric Virtual Network
+                driven issue .
+            fabric_transit_driven(bool): fabricTransitDriven query parameter. Flag whether the issue is Fabric
+                Transit driven issue .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_total_number_of_issues_for_given_set_of_filters_know_your_network_v1 .
+        """ 
         return self.get_the_total_number_of_issues_for_given_set_of_filters_know_your_network_v1(
                     ai_driven=ai_driven,
                     category=category,
@@ -3318,7 +3971,23 @@ class Issues(object):
                                                               headers=None,
                                                               payload=None,
                                                               active_validation=True,
-                                                              **request_parameters):  
+                                                              **request_parameters):
+        """ This function is an alias of update_the_given_issue_by_updating_selected_fields_v1 .
+        Args:
+            notes(string): Issues's Notes.
+            id(basestring): id path parameter. The issue Uuid .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_the_given_issue_by_updating_selected_fields_v1 .
+        """ 
         return self.update_the_given_issue_by_updating_selected_fields_v1(
                     id=id,
                     notes=notes,
@@ -3343,7 +4012,45 @@ class Issues(object):
                                                                    profile_id=None,
                                                                    sort_by=None,
                                                                    headers=None,
-                                                                   **request_parameters):  
+                                                                   **request_parameters):
+        """ This function is an alias of returns_all_issue_trigger_definitions_for_given_filters_v1 .
+        Args:
+            device_type(basestring): deviceType query parameter. These are the device families/types supported for
+                system issue definitions. If no input is made on device type, all device types are
+                considered. .
+            profile_id(basestring): profileId query parameter. The profile identier to fetch the profile associated
+                issue defintions. The default is `global`. Please refer Network design profiles
+                documentation for more details. .
+            id(basestring): id query parameter. The definition identifier. Examples:
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46 (single entity id request)
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46&id=015d9cba-4f53-4087-8317-7e49e5ffef47
+                (multiple ids in the query param) .
+            name(basestring): name query parameter. The list of system defined issue names. (Ex."BGP_Down")
+                Examples: name=BGP_Down (single entity uuid requested) name=BGP_Down&name=BGP_Flap
+                (multiple issue names separated by & operator) .
+            priority(basestring): priority query parameter. Issue priority, possible values are P1, P2, P3, P4.
+                `P1`: A critical issue that needs immediate attention and can have a wide impact on
+                network operations. `P2`: A major issue that can potentially impact multiple devices or
+                clients. `P3`: A minor issue that has a localized or minimal impact. `P4`: A warning
+                issue that may not be an immediate problem but addressing it can optimize the network
+                performance. .
+            issue_enabled(bool): issueEnabled query parameter. The enablement status of the issue definition, either
+                true or false. .
+            attribute(basestring): attribute query parameter. These are the attributes supported in system issue
+                definitions response. By default, all properties are sent in response. .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            limit(int): limit query parameter. Maximum number of records to return .
+            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
+            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_all_issue_trigger_definitions_for_given_filters_v1 .
+        """ 
         return self.returns_all_issue_trigger_definitions_for_given_filters_v1(
                     attribute=attribute,
                     device_type=device_type,

@@ -86,7 +86,7 @@ class EoX(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-eo-x-status-for-all-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-eo-x-status-for-all-devices
         """
         check_type(headers, dict)
         if headers is not None:
@@ -140,7 +140,7 @@ class EoX(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-eo-x-details-per-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-eo-x-details-per-device
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -195,7 +195,7 @@ class EoX(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-eo-x-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!get-eo-x-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -233,7 +233,18 @@ class EoX(object):
     def get_eox_details_per_device(self,
                                       device_id,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_eox_details_per_device_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device instance UUID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_eox_details_per_device_v1 .
+        """ 
         return self.get_eox_details_per_device_v1(
                     device_id=device_id,
                     headers=headers,
@@ -245,9 +256,19 @@ class EoX(object):
     def get_eox_status_for_all_devices(self,
                                           headers=None,
                                           **request_parameters):
+        """ This function is an alias of get_eox_status_for_all_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_eox_status_for_all_devices_v1 .
+        """
         return self.get_eox_status_for_all_devices_v1(
-                                            headers=headers,
-                                          **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -255,9 +276,19 @@ class EoX(object):
     def get_eox_summary(self,
                            headers=None,
                            **request_parameters):
+        """ This function is an alias of get_eox_summary_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_eox_summary_v1 .
+        """
         return self.get_eox_summary_v1(
-                           headers=headers,
-                           **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
 
 

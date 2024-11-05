@@ -89,7 +89,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-overall-network-health-v1
+            https://developer.cisco.com/docs/dna-center/#!get-overall-network-health
         """
         check_type(headers, dict)
         check_type(timestamp, int)
@@ -149,7 +149,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-topology-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-topology-details
         """
         check_type(headers, dict)
         check_type(vlan_id, str,
@@ -206,7 +206,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-l3-topology-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-l3-topology-details
         """
         check_type(headers, dict)
         check_type(topology_type, str,
@@ -263,7 +263,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-physical-topology-v1
+            https://developer.cisco.com/docs/dna-center/#!get-physical-topology
         """
         check_type(headers, dict)
         check_type(node_type, str)
@@ -318,7 +318,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-topology-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-topology
         """
         check_type(headers, dict)
         if headers is not None:
@@ -370,7 +370,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-v-l-a-n-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-v-l-a-n-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -408,17 +408,38 @@ class Topology(object):
     def get_site_topology(self,
                              headers=None,
                              **request_parameters):
+        """ This function is an alias of get_site_topology_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_topology_v1 .
+        """
         return self.get_site_topology_v1(
-                            headers=headers,
-                             **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_physical_topology(self,
                                  node_type=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of get_physical_topology_v1 .
+        Args:
+            node_type(basestring): nodeType query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_physical_topology_v1 .
+        """ 
         return self.get_physical_topology_v1(
                     node_type=node_type,
                     headers=headers,
@@ -430,7 +451,18 @@ class Topology(object):
     def get_topology_details(self,
                                 vlan_id,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_topology_details_v1 .
+        Args:
+            vlan_id(basestring): vlanID path parameter. Vlan Name for e.g Vlan1, Vlan23 etc .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_topology_details_v1 .
+        """ 
         return self.get_topology_details_v1(
                     vlan_id=vlan_id,
                     headers=headers,
@@ -442,7 +474,18 @@ class Topology(object):
     def get_l3_topology_details(self,
                                    topology_type,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_l3_topology_details_v1 .
+        Args:
+            topology_type(basestring): topologyType path parameter. Type of topology(OSPF,ISIS,etc) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_l3_topology_details_v1 .
+        """ 
         return self.get_l3_topology_details_v1(
                     topology_type=topology_type,
                     headers=headers,
@@ -454,9 +497,19 @@ class Topology(object):
     def get_vlan_details(self,
                             headers=None,
                             **request_parameters):
+        """ This function is an alias of get_vlan_details_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_vlan_details_v1 .
+        """
         return self.get_vlan_details_v1(
-                            headers=headers,
-                            **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -464,7 +517,18 @@ class Topology(object):
     def get_overall_network_health(self,
                                       timestamp=None,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_overall_network_health_v1 .
+        Args:
+            timestamp(int): timestamp query parameter. UTC timestamp of network health data in milliseconds .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_overall_network_health_v1 .
+        """ 
         return self.get_overall_network_health_v1(
                     timestamp=timestamp,
                     headers=headers,

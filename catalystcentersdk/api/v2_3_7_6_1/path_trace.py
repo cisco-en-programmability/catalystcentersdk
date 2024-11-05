@@ -116,7 +116,7 @@ class PathTrace(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-all-previous-pathtraces-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-all-previous-pathtraces-summary
         """
         check_type(headers, dict)
         check_type(periodic_refresh, bool)
@@ -237,7 +237,7 @@ class PathTrace(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!initiate-a-new-pathtrace-v1
+            https://developer.cisco.com/docs/dna-center/#!initiate-a-new-pathtrace
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -317,7 +317,7 @@ class PathTrace(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-previous-pathtrace-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-previous-pathtrace
         """
         check_type(headers, dict)
         check_type(flow_analysis_id, str,
@@ -374,7 +374,7 @@ class PathTrace(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-pathtrace-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!deletes-pathtrace-by-id
         """
         check_type(headers, dict)
         check_type(flow_analysis_id, str,
@@ -415,7 +415,18 @@ class PathTrace(object):
     def retrieves_previous_pathtrace(self,
                                         flow_analysis_id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of retrieves_previous_pathtrace_v1 .
+        Args:
+            flow_analysis_id(basestring): flowAnalysisId path parameter. Flow analysis request id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_previous_pathtrace_v1 .
+        """ 
         return self.retrieves_previous_pathtrace_v1(
                     flow_analysis_id=flow_analysis_id,
                     headers=headers,
@@ -427,7 +438,18 @@ class PathTrace(object):
     def deletes_pathtrace_by_id(self,
                                    flow_analysis_id,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of deletes_pathtrace_by_id_v1 .
+        Args:
+            flow_analysis_id(basestring): flowAnalysisId path parameter. Flow analysis request id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_pathtrace_by_id_v1 .
+        """ 
         return self.deletes_pathtrace_by_id_v1(
                     flow_analysis_id=flow_analysis_id,
                     headers=headers,
@@ -453,7 +475,32 @@ class PathTrace(object):
                                                      status=None,
                                                      task_id=None,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """ This function is an alias of retrieves_all_previous_pathtraces_summary_v1 .
+        Args:
+            periodic_refresh(bool): periodicRefresh query parameter. Is analysis periodically refreshed? .
+            source_ip(basestring): sourceIP query parameter. Source IP address .
+            dest_ip(basestring): destIP query parameter. Destination IP address .
+            source_port(int): sourcePort query parameter. Source port .
+            dest_port(int): destPort query parameter. Destination port .
+            gt_create_time(int): gtCreateTime query parameter. Analyses requested after this time .
+            lt_create_time(int): ltCreateTime query parameter. Analyses requested before this time .
+            protocol(basestring): protocol query parameter.
+            status(basestring): status query parameter.
+            task_id(basestring): taskId query parameter. Task ID .
+            last_update_time(int): lastUpdateTime query parameter. Last update time .
+            limit(int): limit query parameter. Number of resources returned .
+            offset(int): offset query parameter. Start index of resources returned (1-based) .
+            order(basestring): order query parameter. Order by this field .
+            sort_by(basestring): sortBy query parameter. Sort by this field .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_all_previous_pathtraces_summary_v1 .
+        """ 
         return self.retrieves_all_previous_pathtraces_summary_v1(
                     dest_ip=dest_ip,
                     dest_port=dest_port,
@@ -488,7 +535,30 @@ class PathTrace(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of initiate_a_new_pathtrace_v1 .
+        Args:
+            controlPath(boolean): Path Trace's Control path tracing .
+            destIP(string): Path Trace's Destination IP address .
+            destPort(string): Path Trace's Destination Port, range: 1-65535 .
+            inclusions(list): Path Trace's Subset of {INTERFACE-STATS, QOS-STATS, DEVICE-STATS, PERFORMANCE-STATS,
+                ACL-TRACE}  (list of strings).
+            periodicRefresh(boolean): Path Trace's Periodic refresh of path for every 30 sec .
+            protocol(string): Path Trace's Protocol one of [TCP, UDP] checks both when left blank .
+            sourceIP(string): Path Trace's Source IP address .
+            sourcePort(string): Path Trace's Source Port, range: 1-65535 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of initiate_a_new_pathtrace_v1 .
+        """ 
         return self.initiate_a_new_pathtrace_v1(
                     controlPath=controlPath,
                     destIP=destIP,

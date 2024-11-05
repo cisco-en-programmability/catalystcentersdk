@@ -96,7 +96,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!creates-an-area-v1
+            https://developer.cisco.com/docs/dna-center/#!creates-an-area
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -177,7 +177,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-an-area-v1
+            https://developer.cisco.com/docs/dna-center/#!updates-an-area
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -252,7 +252,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-an-area-v1
+            https://developer.cisco.com/docs/dna-center/#!deletes-an-area
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -309,7 +309,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-an-area-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-an-area
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -379,7 +379,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-network-devices-to-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-network-devices-to-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -456,7 +456,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-assigned-network-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-assigned-network-devices
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -520,7 +520,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-assigned-network-devices-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-assigned-network-devices-count
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -595,7 +595,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-controllability-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-controllability-settings
         """
         check_type(headers, dict)
         if headers is not None:
@@ -681,7 +681,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-controllability-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-controllability-settings
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -753,7 +753,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-not-assigned-network-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-not-assigned-network-devices
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -811,7 +811,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-not-assigned-network-devices-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-not-assigned-network-devices-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -874,7 +874,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!unassign-network-devices-from-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!unassign-network-devices-from-sites
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -944,7 +944,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-assigned-network-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-assigned-network-device
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1011,7 +1011,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-network-profiles-for-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-network-profiles-for-sites
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -1080,7 +1080,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-network-profiles-for-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-network-profiles-for-sites
         """
         check_type(headers, dict)
         check_type(type, str)
@@ -1138,7 +1138,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-a-network-profile-for-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!deletes-a-network-profile-for-sites
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1196,7 +1196,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-a-network-profile-for-sites-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-a-network-profile-for-sites-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1262,7 +1262,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-a-network-profile-for-sites-to-the-given-site-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-a-network-profile-for-sites-to-the-given-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1342,7 +1342,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-sites-that-the-given-network-profile-for-sites-is-assigned-to-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-sites-that-the-given-network-profile-for-sites-is-assigned-to
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -1415,7 +1415,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-a-network-profile-for-sites-to-a-list-of-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-a-network-profile-for-sites-to-a-list-of-sites
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1493,7 +1493,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!unassigns-a-network-profile-for-sites-from-multiple-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!unassigns-a-network-profile-for-sites-from-multiple-sites
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -1556,7 +1556,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-sites-that-the-given-network-profile-for-sites-is-assigned-to-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-sites-that-the-given-network-profile-for-sites-is-assigned-to
         """
         check_type(headers, dict)
         check_type(profile_id, str,
@@ -1619,7 +1619,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!unassigns-a-network-profile-for-sites-from-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!unassigns-a-network-profile-for-sites-from-a-site
         """
         check_type(headers, dict)
         check_type(profile_id, str,
@@ -1682,7 +1682,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!associate-v1
+            https://developer.cisco.com/docs/dna-center/#!associate
         """
         check_type(headers, dict)
         check_type(network_profile_id, str,
@@ -1748,7 +1748,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!disassociate-v1
+            https://developer.cisco.com/docs/dna-center/#!disassociate
         """
         check_type(headers, dict)
         check_type(network_profile_id, str,
@@ -1820,7 +1820,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!get-sites
         """
         check_type(headers, dict)
         check_type(name, str)
@@ -1897,7 +1897,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!create-sites
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1962,7 +1962,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-sites-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-sites-count
         """
         check_type(headers, dict)
         check_type(name, str)
@@ -2028,7 +2028,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-network-profiles-that-the-given-site-has-been-assigned-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-network-profiles-that-the-given-site-has-been-assigned
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -2093,7 +2093,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-profiles-that-the-given-site-has-been-assigned-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-profiles-that-the-given-site-has-been-assigned
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -2168,7 +2168,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!creates-a-building-v2
+            https://developer.cisco.com/docs/dna-center/#!creates-a-building
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2266,7 +2266,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-a-building-v2
+            https://developer.cisco.com/docs/dna-center/#!updates-a-building
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2349,7 +2349,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-a-building-v2
+            https://developer.cisco.com/docs/dna-center/#!deletes-a-building
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2406,7 +2406,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-a-building-v2
+            https://developer.cisco.com/docs/dna-center/#!gets-a-building
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2484,7 +2484,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!creates-a-floor-v2
+            https://developer.cisco.com/docs/dna-center/#!creates-a-floor
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2574,7 +2574,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-floor-settings-v2
+            https://developer.cisco.com/docs/dna-center/#!updates-floor-settings
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2638,7 +2638,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-floor-settings-v2
+            https://developer.cisco.com/docs/dna-center/#!get-floor-settings
         """
         check_type(headers, dict)
         if headers is not None:
@@ -2715,7 +2715,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-a-floor-v2
+            https://developer.cisco.com/docs/dna-center/#!updates-a-floor
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2803,7 +2803,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-a-floor-v2
+            https://developer.cisco.com/docs/dna-center/#!gets-a-floor
         """
         check_type(headers, dict)
         check_type(units_of_measure, str)
@@ -2864,7 +2864,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-a-floor-v2
+            https://developer.cisco.com/docs/dna-center/#!deletes-a-floor
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2921,7 +2921,7 @@ class SiteDesign(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!uploads-floor-image-v2
+            https://developer.cisco.com/docs/dna-center/#!uploads-floor-image
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2967,7 +2967,22 @@ class SiteDesign(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of updates_floor_settings_v2 .
+        Args:
+            unitsOfMeasure(string): Site Design's Floor units of measure . Available values are 'feet' and 'meters'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of updates_floor_settings_v2 .
+        """ 
         return self.updates_floor_settings_v2(
                     unitsOfMeasure=unitsOfMeasure,
                     headers=headers,
@@ -2981,7 +2996,18 @@ class SiteDesign(object):
     def get_sites_count(self,
                            name=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_sites_count_v1 .
+        Args:
+            name(basestring): name query parameter. Site name. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_sites_count_v1 .
+        """ 
         return self.get_sites_count_v1(
                     name=name,
                     headers=headers,
@@ -2993,7 +3019,19 @@ class SiteDesign(object):
     def retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(self,
                                                                                  site_id,
                                                                                  headers=None,
-                                                                                 **request_parameters):  
+                                                                                 **request_parameters):
+        """ This function is an alias of retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. The `id` of the site, retrievable from
+                `/dna/intent/api/v1/sites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_v1 .
+        """ 
         return self.retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_v1(
                     site_id=site_id,
                     headers=headers,
@@ -3009,7 +3047,24 @@ class SiteDesign(object):
                                                             sort_by=None,
                                                             type=None,
                                                             headers=None,
-                                                            **request_parameters):  
+                                                            **request_parameters):
+        """ This function is an alias of retrieves_the_list_of_network_profiles_for_sites_v1 .
+        Args:
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            sort_by(basestring): sortBy query parameter. A property within the response to sort by. .
+            order(basestring): order query parameter. Whether ascending or descending order should be used to sort
+                the response. .
+            type(basestring): type query parameter. Filter responses to only include profiles of a given type .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_list_of_network_profiles_for_sites_v1 .
+        """ 
         return self.retrieves_the_list_of_network_profiles_for_sites_v1(
                     limit=limit,
                     offset=offset,
@@ -3026,7 +3081,20 @@ class SiteDesign(object):
                                                  limit=None,
                                                  offset=None,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of get_site_not_assigned_network_devices_v1 .
+        Args:
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_not_assigned_network_devices_v1 .
+        """ 
         return self.get_site_not_assigned_network_devices_v1(
                     limit=limit,
                     offset=offset,
@@ -3039,9 +3107,19 @@ class SiteDesign(object):
     def get_site_not_assigned_network_devices_count(self,
                                                        headers=None,
                                                        **request_parameters):
+        """ This function is an alias of get_site_not_assigned_network_devices_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_not_assigned_network_devices_count_v1 .
+        """
         return self.get_site_not_assigned_network_devices_count_v1(
-                                                        headers=headers,
-                                                       **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -3058,7 +3136,30 @@ class SiteDesign(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of creates_a_floor_v2 .
+        Args:
+            floorNumber(integer): Site Design's Floor number .
+            height(number): Site Design's Floor height. Example : 10.1 .
+            length(number): Site Design's Floor length. Example : 110.3 .
+            name(string): Site Design's Floor name .
+            parentId(string): Site Design's Parent Id.
+            rfModel(string): Site Design's RF Model . Available values are 'Free Space', 'Outdoor Open Space',
+                'Cubes And Walled Offices', 'Indoor High Ceiling' and 'Drywall Office Only'.
+            unitsOfMeasure(string): Site Design's Units Of Measure. Available values are 'feet' and 'meters'.
+            width(number): Site Design's Floor width. Example : 100.5 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of creates_a_floor_v2 .
+        """ 
         return self.creates_a_floor_v2(
                     floorNumber=floorNumber,
                     height=height,
@@ -3083,7 +3184,24 @@ class SiteDesign(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of updates_an_area_v1 .
+        Args:
+            name(string): Site Design's Area name .
+            parentId(string): Site Design's Parent Id .
+            id(basestring): id path parameter. Area Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of updates_an_area_v1 .
+        """ 
         return self.updates_an_area_v1(
                     id=id,
                     name=name,
@@ -3099,7 +3217,18 @@ class SiteDesign(object):
     def uploads_floor_image(self,
                                id,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of uploads_floor_image_v2 .
+        Args:
+            id(basestring): id path parameter. Floor Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of uploads_floor_image_v2 .
+        """ 
         return self.uploads_floor_image_v2(
                     id=id,
                     headers=headers,
@@ -3114,7 +3243,23 @@ class SiteDesign(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of creates_an_area_v1 .
+        Args:
+            name(string): Site Design's Area name .
+            parentId(string): Site Design's Parent Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of creates_an_area_v1 .
+        """ 
         return self.creates_an_area_v1(
                     name=name,
                     parentId=parentId,
@@ -3129,7 +3274,19 @@ class SiteDesign(object):
     def retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(self,
                                                                                                 profile_id,
                                                                                                 headers=None,
-                                                                                                **request_parameters):  
+                                                                                                **request_parameters):
+        """ This function is an alias of retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1 .
+        Args:
+            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1 .
+        """ 
         return self.retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1(
                     profile_id=profile_id,
                     headers=headers,
@@ -3151,7 +3308,31 @@ class SiteDesign(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of updates_a_floor_v2 .
+        Args:
+            floorNumber(integer): Site Design's Floor number .
+            height(number): Site Design's Floor height. Example : 10.1 .
+            length(number): Site Design's Floor length. Example : 110.3 .
+            name(string): Site Design's Floor name .
+            parentId(string): Site Design's Parent Id.
+            rfModel(string): Site Design's RF Model . Available values are 'Free Space', 'Outdoor Open Space',
+                'Cubes And Walled Offices', 'Indoor High Ceiling' and 'Drywall Office Only'.
+            unitsOfMeasure(string): Site Design's Units Of Measure. Available values are 'feet' and 'meters'.
+            width(number): Site Design's Floor width. Example : 100.5 .
+            id(basestring): id path parameter. Floor Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of updates_a_floor_v2 .
+        """ 
         return self.updates_a_floor_v2(
                     id=id,
                     floorNumber=floorNumber,
@@ -3173,7 +3354,19 @@ class SiteDesign(object):
     def deletes_a_network_profile_for_sites(self,
                                                id,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of deletes_a_network_profile_for_sites_v1 .
+        Args:
+            id(basestring): id path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_a_network_profile_for_sites_v1 .
+        """ 
         return self.deletes_a_network_profile_for_sites_v1(
                     id=id,
                     headers=headers,
@@ -3185,7 +3378,18 @@ class SiteDesign(object):
     def get_site_assigned_network_device(self,
                                             id,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of get_site_assigned_network_device_v1 .
+        Args:
+            id(basestring): id path parameter. Network Device Id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_assigned_network_device_v1 .
+        """ 
         return self.get_site_assigned_network_device_v1(
                     id=id,
                     headers=headers,
@@ -3200,7 +3404,24 @@ class SiteDesign(object):
                                                                 headers=None,
                                                                 payload=None,
                                                                 active_validation=True,
-                                                                **request_parameters):  
+                                                                **request_parameters):
+        """ This function is an alias of assign_a_network_profile_for_sites_to_the_given_site_v1 .
+        Args:
+            id(string): Site Design's Id.
+            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of assign_a_network_profile_for_sites_to_the_given_site_v1 .
+        """ 
         return self.assign_a_network_profile_for_sites_to_the_given_site_v1(
                     profile_id=profile_id,
                     id=id,
@@ -3222,7 +3443,28 @@ class SiteDesign(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of creates_a_building_v2 .
+        Args:
+            address(string): Site Design's Building address. Example: 4900 Marie P. Debartolo Way, Santa Clara,
+                California 95054, United States .
+            country(string): Site Design's Country name .
+            latitude(number): Site Design's Building Latitude. Example: 37.403712 .
+            longitude(number): Site Design's Building Longitude. Example: -121.971063 .
+            name(string): Site Design's Building name .
+            parentId(string): Site Design's Parent Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of creates_a_building_v2 .
+        """ 
         return self.creates_a_building_v2(
                     address=address,
                     country=country,
@@ -3241,7 +3483,18 @@ class SiteDesign(object):
     def deletes_an_area(self,
                            id,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of deletes_an_area_v1 .
+        Args:
+            id(basestring): id path parameter. Area ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_an_area_v1 .
+        """ 
         return self.deletes_an_area_v1(
                     id=id,
                     headers=headers,
@@ -3253,7 +3506,19 @@ class SiteDesign(object):
     def retrieve_a_network_profile_for_sites_by_id(self,
                                                       id,
                                                       headers=None,
-                                                      **request_parameters):  
+                                                      **request_parameters):
+        """ This function is an alias of retrieve_a_network_profile_for_sites_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_a_network_profile_for_sites_by_id_v1 .
+        """ 
         return self.retrieve_a_network_profile_for_sites_by_id_v1(
                     id=id,
                     headers=headers,
@@ -3266,7 +3531,19 @@ class SiteDesign(object):
                         id,
                         units_of_measure=None,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of gets_a_floor_v2 .
+        Args:
+            id(basestring): id path parameter. Floor Id .
+            units_of_measure(basestring): _unitsOfMeasure query parameter. Floor units of measure .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_a_floor_v2 .
+        """ 
         return self.gets_a_floor_v2(
                     id=id,
                     units_of_measure=units_of_measure,
@@ -3281,7 +3558,22 @@ class SiteDesign(object):
                                                                                                limit=None,
                                                                                                offset=None,
                                                                                                headers=None,
-                                                                                               **request_parameters):  
+                                                                                               **request_parameters):
+        """ This function is an alias of retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1 .
+        Args:
+            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1 .
+        """ 
         return self.retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1(
                     profile_id=profile_id,
                     limit=limit,
@@ -3298,7 +3590,24 @@ class SiteDesign(object):
                                                                  headers=None,
                                                                  payload=None,
                                                                  active_validation=True,
-                                                                 **request_parameters):  
+                                                                 **request_parameters):
+        """ This function is an alias of assign_a_network_profile_for_sites_to_a_list_of_sites_v1 .
+        Args:
+            type(object): Site Design's type.
+            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of assign_a_network_profile_for_sites_to_a_list_of_sites_v1 .
+        """ 
         return self.assign_a_network_profile_for_sites_to_a_list_of_sites_v1(
                     profile_id=profile_id,
                     type=type,
@@ -3321,7 +3630,29 @@ class SiteDesign(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of updates_a_building_v2 .
+        Args:
+            address(string): Site Design's Building address. Example: 4900 Marie P. Debartolo Way, Santa Clara,
+                California 95054, United States .
+            country(string): Site Design's Country name .
+            latitude(number): Site Design's Building Latitude. Example: 37.403712 .
+            longitude(number): Site Design's Building Longitude. Example: -121.971063 .
+            name(string): Site Design's Building name .
+            parentId(string): Site Design's Parent Id .
+            id(basestring): id path parameter. Building Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of updates_a_building_v2 .
+        """ 
         return self.updates_a_building_v2(
                     id=id,
                     address=address,
@@ -3341,7 +3672,18 @@ class SiteDesign(object):
     def retrieves_the_count_of_network_profiles_for_sites(self,
                                                              type=None,
                                                              headers=None,
-                                                             **request_parameters):  
+                                                             **request_parameters):
+        """ This function is an alias of retrieves_the_count_of_network_profiles_for_sites_v1 .
+        Args:
+            type(basestring): type query parameter. Filter the response to only count profiles of a given type .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_count_of_network_profiles_for_sites_v1 .
+        """ 
         return self.retrieves_the_count_of_network_profiles_for_sites_v1(
                     type=type,
                     headers=headers,
@@ -3354,7 +3696,21 @@ class SiteDesign(object):
                                                                      profile_id,
                                                                      site_id,
                                                                      headers=None,
-                                                                     **request_parameters):  
+                                                                     **request_parameters):
+        """ This function is an alias of unassigns_a_network_profile_for_sites_from_multiple_sites_v1 .
+        Args:
+            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            site_id(basestring): siteId query parameter. The `id` of the site, retrievable from `GET
+                /intent/api/v1/sites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of unassigns_a_network_profile_for_sites_from_multiple_sites_v1 .
+        """ 
         return self.unassigns_a_network_profile_for_sites_from_multiple_sites_v1(
                     profile_id=profile_id,
                     site_id=site_id,
@@ -3369,7 +3725,22 @@ class SiteDesign(object):
                                                headers=None,
                                                payload=None,
                                                active_validation=True,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of unassign_network_devices_from_sites_v1 .
+        Args:
+            deviceIds(list): Site Design's Network device Ids.  (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of unassign_network_devices_from_sites_v1 .
+        """ 
         return self.unassign_network_devices_from_sites_v1(
                     deviceIds=deviceIds,
                     headers=headers,
@@ -3384,7 +3755,21 @@ class SiteDesign(object):
                                                              id,
                                                              profile_id,
                                                              headers=None,
-                                                             **request_parameters):  
+                                                             **request_parameters):
+        """ This function is an alias of unassigns_a_network_profile_for_sites_from_a_site_v1 .
+        Args:
+            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites` .
+            id(basestring): id path parameter. The `id` of the site, retrievable from `GET
+                /intent/api/v1/networkProfilesForSites/{id}/siteAssignments` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of unassigns_a_network_profile_for_sites_from_a_site_v1 .
+        """ 
         return self.unassigns_a_network_profile_for_sites_from_a_site_v1(
                     id=id,
                     profile_id=profile_id,
@@ -3397,7 +3782,18 @@ class SiteDesign(object):
     def gets_an_area(self,
                         id,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of gets_an_area_v1 .
+        Args:
+            id(basestring): id path parameter. Area Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_an_area_v1 .
+        """ 
         return self.gets_an_area_v1(
                     id=id,
                     headers=headers,
@@ -3409,7 +3805,18 @@ class SiteDesign(object):
     def deletes_a_building(self,
                               id,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of deletes_a_building_v2 .
+        Args:
+            id(basestring): id path parameter. Building ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_a_building_v2 .
+        """ 
         return self.deletes_a_building_v2(
                     id=id,
                     headers=headers,
@@ -3421,17 +3828,38 @@ class SiteDesign(object):
     def get_device_controllability_settings(self,
                                                headers=None,
                                                **request_parameters):
+        """ This function is an alias of get_device_controllability_settings_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_controllability_settings_v1 .
+        """
         return self.get_device_controllability_settings_v1(
-                                                headers=headers,
-                                               **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_site_assigned_network_devices_count(self,
                                                    site_id,
                                                    headers=None,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of get_site_assigned_network_devices_count_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site Id. It must be area Id or building Id or floor Id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_assigned_network_devices_count_v1 .
+        """ 
         return self.get_site_assigned_network_devices_count_v1(
                     site_id=site_id,
                     headers=headers,
@@ -3443,7 +3871,18 @@ class SiteDesign(object):
     def gets_a_building(self,
                            id,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of gets_a_building_v2 .
+        Args:
+            id(basestring): id path parameter. Building Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_a_building_v2 .
+        """ 
         return self.gets_a_building_v2(
                     id=id,
                     headers=headers,
@@ -3458,7 +3897,25 @@ class SiteDesign(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of assign_network_devices_to_a_site_v1 .
+        Args:
+            deviceIds(list): Site Design's Unassigned network devices.  (list of strings).
+            siteId(string): Site Design's This must be building Id or floor Id. Access points, Sensors are assigned
+                to floor. Remaining network devices are assigned to building. Site Id can be retrieved
+                using '/intent/api/v1/sites'. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of assign_network_devices_to_a_site_v1 .
+        """ 
         return self.assign_network_devices_to_a_site_v1(
                     deviceIds=deviceIds,
                     siteId=siteId,
@@ -3475,7 +3932,22 @@ class SiteDesign(object):
                                                                                         limit=None,
                                                                                         offset=None,
                                                                                         headers=None,
-                                                                                        **request_parameters):  
+                                                                                        **request_parameters):
+        """ This function is an alias of retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. The `id` of the site, retrievable from
+                `/dna/intent/api/v1/sites` .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_v1 .
+        """ 
         return self.retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_v1(
                     site_id=site_id,
                     limit=limit,
@@ -3490,7 +3962,21 @@ class SiteDesign(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of create_sites_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_sites_v1 .
+        """ 
         return self.create_sites_v1(
                     headers=headers,
                     payload=payload,
@@ -3503,7 +3989,18 @@ class SiteDesign(object):
     def deletes_a_floor(self,
                            id,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of deletes_a_floor_v2 .
+        Args:
+            id(basestring): id path parameter. Floor ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_a_floor_v2 .
+        """ 
         return self.deletes_a_floor_v2(
                     id=id,
                     headers=headers,
@@ -3518,7 +4015,26 @@ class SiteDesign(object):
                                                   headers=None,
                                                   payload=None,
                                                   active_validation=True,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of update_device_controllability_settings_v1 .
+        Args:
+            autocorrectTelemetryConfig(boolean): Site Design's If it is true, autocorrect telemetry config is
+                enabled. If it is false, autocorrect telemetry config is disabled. The autocorrect
+                telemetry config feature is supported only when device controllability is enabled. .
+            deviceControllability(boolean): Site Design's If it is true, device controllability is enabled. If it is
+                false, device controllability is disabled. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_device_controllability_settings_v1 .
+        """ 
         return self.update_device_controllability_settings_v1(
                     autocorrectTelemetryConfig=autocorrectTelemetryConfig,
                     deviceControllability=deviceControllability,
@@ -3533,10 +4049,20 @@ class SiteDesign(object):
     def get_floor_settings(self,
                               headers=None,
                               **request_parameters):
+        """ This function is an alias of get_floor_settings_v2 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_floor_settings_v2 .
+        """
         return self.get_floor_settings_v2(
-                                headers=headers,
-                              **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -3545,7 +4071,21 @@ class SiteDesign(object):
                                              limit=None,
                                              offset=None,
                                              headers=None,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of get_site_assigned_network_devices_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site Id. It must be area Id or building Id or floor Id. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_assigned_network_devices_v1 .
+        """ 
         return self.get_site_assigned_network_devices_v1(
                     site_id=site_id,
                     limit=limit,
@@ -3564,7 +4104,24 @@ class SiteDesign(object):
                      type=None,
                      units_of_measure=None,
                      headers=None,
-                     **request_parameters):  
+                     **request_parameters):
+        """ This function is an alias of get_sites_v1 .
+        Args:
+            name(basestring): name query parameter. Site name. .
+            name_hierarchy(basestring): nameHierarchy query parameter. Site name hierarchy. .
+            type(basestring): type query parameter. Site type. .
+            units_of_measure(basestring): _unitsOfMeasure query parameter. Floor units of measure .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_sites_v1 .
+        """ 
         return self.get_sites_v1(
                     limit=limit,
                     name=name,
@@ -3582,7 +4139,19 @@ class SiteDesign(object):
                      network_profile_id,
                      site_id,
                      headers=None,
-                     **request_parameters):  
+                     **request_parameters):
+        """ This function is an alias of associate_v1 .
+        Args:
+            network_profile_id(basestring): networkProfileId path parameter. Network-Profile Id to be associated .
+            site_id(basestring): siteId path parameter. Site Id to be associated .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of associate_v1 .
+        """ 
         return self.associate_v1(
                     network_profile_id=network_profile_id,
                     site_id=site_id,
@@ -3596,7 +4165,19 @@ class SiteDesign(object):
                         network_profile_id,
                         site_id,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of disassociate_v1 .
+        Args:
+            network_profile_id(basestring): networkProfileId path parameter. Network-Profile Id to be associated .
+            site_id(basestring): siteId path parameter. Site Id to be associated .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of disassociate_v1 .
+        """ 
         return self.disassociate_v1(
                     network_profile_id=network_profile_id,
                     site_id=site_id,

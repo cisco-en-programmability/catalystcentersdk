@@ -109,7 +109,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-total-number-network-devices-based-on-the-provided-complex-filters-and-aggregation-functions-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-total-number-network-devices-based-on-the-provided-complex-filters-and-aggregation-functions
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -278,7 +278,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!query-assurance-events-v1
+            https://developer.cisco.com/docs/dna-center/#!query-assurance-events
         """
         check_type(headers, dict)
         check_type(device_family, str,
@@ -455,7 +455,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-the-number-of-events-v1
+            https://developer.cisco.com/docs/dna-center/#!count-the-number-of-events
         """
         check_type(headers, dict)
         check_type(device_family, str,
@@ -568,7 +568,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!query-assurance-events-with-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!query-assurance-events-with-filters
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -668,7 +668,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-the-number-of-events-with-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!count-the-number-of-events-with-filters
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -760,7 +760,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-details-of-a-single-assurance-event-v1
+            https://developer.cisco.com/docs/dna-center/#!get-details-of-a-single-assurance-event
         """
         check_type(headers, dict)
         check_type(attribute, str)
@@ -829,7 +829,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-list-of-child-events-for-the-given-wireless-client-event-v1
+            https://developer.cisco.com/docs/dna-center/#!get-list-of-child-events-for-the-given-wireless-client-event
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -992,7 +992,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-interfaces-along-with-statistics-data-from-all-network-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-interfaces-along-with-statistics-data-from-all-network-devices
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1156,7 +1156,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-total-network-device-interface-counts-in-the-specified-time-range-when-there-is-no-start-and-end-time-specified-returns-the-latest-interfaces-total-count-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-total-network-device-interface-counts-in-the-specified-time-range-when-there-is-no-start-and-end-time-specified-returns-the-latest-interfaces-total-count
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1265,7 +1265,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-list-of-interfaces-across-the-network-devices-based-on-the-provided-complex-filters-and-aggregation-functions-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-list-of-interfaces-across-the-network-devices-based-on-the-provided-complex-filters-and-aggregation-functions
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1367,7 +1367,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!the-total-interfaces-count-across-the-network-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!the-total-interfaces-count-across-the-network-devices
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1472,7 +1472,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-interface-data-for-the-given-interface-idinstance-uuid-along-with-the-statistics-data-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-interface-data-for-the-given-interface-idinstance-uuid-along-with-the-statistics-data
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1638,7 +1638,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-network-device-details-based-on-the-provided-query-parameters-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-network-device-details-based-on-the-provided-query-parameters
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1843,7 +1843,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-total-network-device-counts-based-on-the-provided-query-parameters-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-total-network-device-counts-based-on-the-provided-query-parameters
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1969,7 +1969,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-list-of-network-devices-based-on-the-provided-complex-filters-and-aggregation-functions-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-list-of-network-devices-based-on-the-provided-complex-filters-and-aggregation-functions
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2072,7 +2072,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-summary-analytics-data-related-to-network-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-summary-analytics-data-related-to-network-devices
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2177,7 +2177,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-the-trend-analytics-data-v1
+            https://developer.cisco.com/docs/dna-center/#!gets-the-trend-analytics-data
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2277,7 +2277,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-device-data-for-the-given-device-id-uuid-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-device-data-for-the-given-device-id-uuid
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -2372,7 +2372,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!the-trend-analytics-data-for-the-network-device-in-the-specified-time-range-v1
+            https://developer.cisco.com/docs/dna-center/#!the-trend-analytics-data-for-the-network-device-in-the-specified-time-range
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2468,7 +2468,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-planned-access-points-for-building-v1
+            https://developer.cisco.com/docs/dna-center/#!get-planned-access-points-for-building
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -2542,7 +2542,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-detail-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-detail
         """
         check_type(headers, dict)
         check_type(timestamp, int)
@@ -2610,7 +2610,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-enrichment-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-enrichment-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -2690,7 +2690,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!devices-v1
+            https://developer.cisco.com/docs/dna-center/#!devices
         """
         check_type(headers, dict)
         check_type(device_role, str)
@@ -2786,7 +2786,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-planned-access-point-for-floor-v1
+            https://developer.cisco.com/docs/dna-center/#!update-planned-access-point-for-floor
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2890,7 +2890,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-planned-access-point-for-floor-v1
+            https://developer.cisco.com/docs/dna-center/#!create-planned-access-point-for-floor
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2979,7 +2979,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-planned-access-points-for-floor-v1
+            https://developer.cisco.com/docs/dna-center/#!get-planned-access-points-for-floor
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -3052,7 +3052,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-planned-access-point-for-floor-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-planned-access-point-for-floor
         """
         check_type(headers, dict)
         check_type(floor_id, str,
@@ -3137,7 +3137,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-health-score-definitions-for-given-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-health-score-definitions-for-given-filters
         """
         check_type(headers, dict)
         check_type(device_type, str)
@@ -3220,7 +3220,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-health-score-definitions-v1
+            https://developer.cisco.com/docs/dna-center/#!update-health-score-definitions
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3290,7 +3290,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-health-score-definition-for-the-given-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-health-score-definition-for-the-given-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -3366,7 +3366,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-health-score-definition-for-the-given-id-v1
+            https://developer.cisco.com/docs/dna-center/#!update-health-score-definition-for-the-given-id
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3445,7 +3445,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-interfaces-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-interfaces
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -3509,7 +3509,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-interface-count-for-multiple-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-interface-count-for-multiple-devices
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3563,7 +3563,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interface-by-i-p-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interface-by-i-p
         """
         check_type(headers, dict)
         check_type(ip_address, str,
@@ -3618,7 +3618,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-s-i-s-interfaces-v1
+            https://developer.cisco.com/docs/dna-center/#!get-i-s-i-s-interfaces
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3672,7 +3672,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interface-info-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interface-info-by-id
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -3729,7 +3729,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-interface-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-interface-count
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -3789,7 +3789,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interface-details-by-device-id-and-interface-name-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interface-details-by-device-id-and-interface-name
         """
         check_type(headers, dict)
         check_type(name, str,
@@ -3855,7 +3855,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-interfaces-by-specified-range-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-interfaces-by-specified-range
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -3917,7 +3917,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-o-s-p-f-interfaces-v1
+            https://developer.cisco.com/docs/dna-center/#!get-o-s-p-f-interfaces
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3971,7 +3971,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interface-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interface-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -4047,7 +4047,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-interface-details-v1
+            https://developer.cisco.com/docs/dna-center/#!update-interface-details
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4128,7 +4128,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!legit-operations-for-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!legit-operations-for-interface
         """
         check_type(headers, dict)
         check_type(interface_uuid, str,
@@ -4200,7 +4200,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!clear-mac-address-table-v1
+            https://developer.cisco.com/docs/dna-center/#!clear-mac-address-table
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4351,7 +4351,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-list-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-list
         """
         check_type(headers, dict)
         check_type(hostname, (str, list, set, tuple))
@@ -4582,7 +4582,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-device-know-your-network-v1
+            https://developer.cisco.com/docs/dna-center/#!add-device-know-your-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4785,7 +4785,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-details-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-details
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4949,7 +4949,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-values-that-match-fully-or-partially-an-attribute-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-values-that-match-fully-or-partially-an-attribute
         """
         check_type(headers, dict)
         check_type(vrf_name, str)
@@ -5079,7 +5079,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-role-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-role
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5150,7 +5150,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-polling-interval-for-all-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-polling-interval-for-all-devices
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5204,7 +5204,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-config-for-all-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-config-for-all-devices
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5256,7 +5256,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-config-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-config-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5317,7 +5317,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-count-know-your-network-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-count-know-your-network
         """
         check_type(headers, dict)
         check_type(hostname, (str, list, set, tuple))
@@ -5397,7 +5397,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!export-device-list-v1
+            https://developer.cisco.com/docs/dna-center/#!export-device-list
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5476,7 +5476,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-functional-capability-for-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-functional-capability-for-devices
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -5537,7 +5537,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-functional-capability-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-functional-capability-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5606,7 +5606,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!inventory-insight-device-link-mismatch-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!inventory-insight-device-link-mismatch-a-p-i
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -5680,7 +5680,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-device-by-i-p-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network-device-by-i-p
         """
         check_type(headers, dict)
         check_type(ip_address, str,
@@ -5749,7 +5749,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-modules-v1
+            https://developer.cisco.com/docs/dna-center/#!get-modules
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -5833,7 +5833,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-module-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-module-count
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -5903,7 +5903,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-module-info-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-module-info-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5960,7 +5960,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-by-serial-number-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-by-serial-number
         """
         check_type(headers, dict)
         check_type(serial_number, str,
@@ -6026,7 +6026,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!sync-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!sync-devices
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6096,7 +6096,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-devices-registered-for-w-s-a-notification-v1
+            https://developer.cisco.com/docs/dna-center/#!get-devices-registered-for-w-s-a-notification
         """
         check_type(headers, dict)
         check_type(serial_number, str)
@@ -6159,7 +6159,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-user-defined-fields-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-user-defined-fields
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -6227,7 +6227,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-user-defined-field-v1
+            https://developer.cisco.com/docs/dna-center/#!create-user-defined-field
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -6305,7 +6305,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-user-defined-field-v1
+            https://developer.cisco.com/docs/dna-center/#!update-user-defined-field
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -6377,7 +6377,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-user-defined-field-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-user-defined-field
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -6435,7 +6435,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-chassis-details-for-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-chassis-details-for-device
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -6492,7 +6492,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-stack-details-for-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-stack-details-for-device
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -6552,7 +6552,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!remove-user-defined-field-from-device-v1
+            https://developer.cisco.com/docs/dna-center/#!remove-user-defined-field-from-device
         """
         check_type(headers, dict)
         check_type(name, str,
@@ -6622,7 +6622,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-user-defined-field-to-device-v1
+            https://developer.cisco.com/docs/dna-center/#!add-user-defined-field-to-device
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6692,7 +6692,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-details-of-physical-components-of-the-given-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-details-of-physical-components-of-the-given-device
         """
         check_type(headers, dict)
         check_type(type, str)
@@ -6756,7 +6756,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-p-o-e-interface-details-for-the-device-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-p-o-e-interface-details-for-the-device
         """
         check_type(headers, dict)
         check_type(interface_name_list, str)
@@ -6819,7 +6819,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-connected-device-detail-v1
+            https://developer.cisco.com/docs/dna-center/#!get-connected-device-detail
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -6880,7 +6880,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-linecard-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-linecard-details
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -6937,7 +6937,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!p-o-e-details-v1
+            https://developer.cisco.com/docs/dna-center/#!p-o-e-details
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -6995,7 +6995,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-supervisor-card-detail-v1
+            https://developer.cisco.com/docs/dna-center/#!get-supervisor-card-detail
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -7062,7 +7062,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-management-address-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-management-address
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -7132,7 +7132,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7197,7 +7197,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-device-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-device-by-id
         """
         check_type(headers, dict)
         check_type(clean_config, bool)
@@ -7257,7 +7257,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-summary
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7314,7 +7314,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-polling-interval-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-polling-interval-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7372,7 +7372,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-organization-list-for-meraki-v1
+            https://developer.cisco.com/docs/dna-center/#!get-organization-list-for-meraki
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7434,7 +7434,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-interface-v-l-a-ns-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-interface-v-l-a-ns
         """
         check_type(headers, dict)
         check_type(interface_type, str)
@@ -7494,7 +7494,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-wireless-lan-controller-details-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-wireless-lan-controller-details-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7551,7 +7551,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-config-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-config-by-id
         """
         check_type(headers, dict)
         check_type(network_device_id, str,
@@ -7613,7 +7613,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-device-by-pagination-range-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network-device-by-pagination-range
         """
         check_type(headers, dict)
         check_type(start_index, int,
@@ -7682,7 +7682,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-global-resync-interval-v1
+            https://developer.cisco.com/docs/dna-center/#!update-global-resync-interval
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -7747,7 +7747,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!override-resync-interval-v1
+            https://developer.cisco.com/docs/dna-center/#!override-resync-interval
         """
         check_type(headers, dict)
         if headers is not None:
@@ -7812,7 +7812,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-resync-interval-for-the-network-device-v1
+            https://developer.cisco.com/docs/dna-center/#!update-resync-interval-for-the-network-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -7882,7 +7882,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-resync-interval-for-the-network-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-resync-interval-for-the-network-device
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7965,7 +7965,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!rogue-additional-details-v1
+            https://developer.cisco.com/docs/dna-center/#!rogue-additional-details
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8062,7 +8062,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!rogue-additional-detail-count-v1
+            https://developer.cisco.com/docs/dna-center/#!rogue-additional-detail-count
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8148,7 +8148,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!start-wireless-rogue-a-p-containment-v1
+            https://developer.cisco.com/docs/dna-center/#!start-wireless-rogue-a-p-containment
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8222,7 +8222,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!wireless-rogue-a-p-containment-status-v1
+            https://developer.cisco.com/docs/dna-center/#!wireless-rogue-a-p-containment-status
         """
         check_type(headers, dict)
         check_type(mac_address, str,
@@ -8295,7 +8295,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!stop-wireless-rogue-a-p-containment-v1
+            https://developer.cisco.com/docs/dna-center/#!stop-wireless-rogue-a-p-containment
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8389,7 +8389,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!threat-details-v1
+            https://developer.cisco.com/docs/dna-center/#!threat-details
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8492,7 +8492,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!threat-detail-count-v1
+            https://developer.cisco.com/docs/dna-center/#!threat-detail-count
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8573,7 +8573,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-threat-levels-v1
+            https://developer.cisco.com/docs/dna-center/#!get-threat-levels
         """
         check_type(headers, dict)
         if headers is not None:
@@ -8634,7 +8634,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-allowed-mac-address-v1
+            https://developer.cisco.com/docs/dna-center/#!add-allowed-mac-address
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -8702,7 +8702,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-allowed-mac-address-v1
+            https://developer.cisco.com/docs/dna-center/#!get-allowed-mac-address
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -8760,7 +8760,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-allowed-mac-address-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-allowed-mac-address-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -8821,7 +8821,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!remove-allowed-mac-address-v1
+            https://developer.cisco.com/docs/dna-center/#!remove-allowed-mac-address
         """
         check_type(headers, dict)
         check_type(mac_address, str,
@@ -8896,7 +8896,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!threat-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!threat-summary
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8971,7 +8971,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-threat-types-v1
+            https://developer.cisco.com/docs/dna-center/#!get-threat-types
         """
         check_type(headers, dict)
         if headers is not None:
@@ -9041,7 +9041,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-interface-stats-info-v2
+            https://developer.cisco.com/docs/dna-center/#!get-device-interface-stats-info
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -9132,7 +9132,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-the-count-of-health-score-definitions-based-on-provided-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!get-the-count-of-health-score-definitions-based-on-provided-filters
         """
         check_type(headers, dict)
         check_type(device_type, str)
@@ -9178,11 +9178,22 @@ class Devices(object):
 
                 
     
+        
     # Alias Function
     def get_interface_by_ip(self,
                                ip_address,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of get_interface_by_ip_v1 .
+        Args:
+            ip_address(basestring): ipAddress path parameter. IP address of the interface .
+            headers(dict): Dictionary of HTTP Headers to send with the Request.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interface_by_ip_v1 .
+        """ 
         return self.get_interface_by_ip_v1(
                     ip_address=ip_address,
                     headers=headers,
@@ -9194,7 +9205,17 @@ class Devices(object):
     def get_supervisor_card_detail(self,
                                       device_uuid,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_supervisor_card_detail_v1 .
+        Args:
+            device_uuid(basestring): deviceUuid path parameter. instanceuuid of device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_supervisor_card_detail_v1 .
+        """ 
         return self.get_supervisor_card_detail_v1(
                     device_uuid=device_uuid,
                     headers=headers,
@@ -9214,7 +9235,28 @@ class Devices(object):
                                                                  headers=None,
                                                                  payload=None,
                                                                  active_validation=True,
-                                                                 **request_parameters):  
+                                                                 **request_parameters):
+        """ This function is an alias of the_total_interfaces_count_across_the_network_devices_v1 .
+        Args:
+            aggregateAttributes(list): Devices's aggregateAttributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            views(list): Devices's Views (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the_total_interfaces_count_across_the_network_devices_v1 .
+        """ 
         return self.the_total_interfaces_count_across_the_network_devices_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -9243,7 +9285,29 @@ class Devices(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of threat_details_v1 .
+        Args:
+            endTime(integer): Devices's End Time.
+            isNewThreat(boolean): Devices's Is New Threat.
+            limit(integer): Devices's Limit.
+            offset(integer): Devices's Offset.
+            siteId(list): Devices's Site Id (list of strings).
+            startTime(integer): Devices's Start Time.
+            threatLevel(list): Devices's Threat Level (list of strings).
+            threatType(list): Devices's Threat Type (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of threat_details_v1 .
+        """ 
         return self.threat_details_v1(
                     endTime=endTime,
                     isNewThreat=isNewThreat,
@@ -9280,7 +9344,87 @@ class Devices(object):
                                                                                        type=None,
                                                                                        view=None,
                                                                                        headers=None,
-                                                                                       **request_parameters):  
+                                                                                       **request_parameters):
+        """ This function is an alias of gets_the_total_network_device_counts_based_on_the_provided_query_parameters_v1 .
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            id(basestring): id query parameter. The list of entity Uuids.
+                (Ex."6bef213c-19ca-4170-8375-b694e251101c") Examples:
+                id=6bef213c-19ca-4170-8375-b694e251101c (single entity uuid requested) id=6bef213c-19ca-
+                4170-8375-b694e251101c&id=32219612-819e-4b5e-a96b-cf22aca13dd9&id=2541e9a7-b80d-4955-
+                8aa2-79b233318ba0 (multiple entity uuid with '&' separator) .
+            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
+                supports wildcard asterisk (*) character search support. E.g. */San*, */San, /San*
+                Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
+                requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
+                reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (*) character search support. E.g. `*uuid*, *uuid, uuid* Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
+                wildcard asterisk (*) character search support. E.g.*flooruuid*, *flooruuid, flooruuid*
+                Examples: `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3`
+                (multiple ids requested) .
+            management_ip_address(basestring): managementIpAddress query parameter. The list of entity management IP
+                Address. It can be either Ipv4 or Ipv6 address or combination of both(Ex. "121.1.1.10")
+                This field supports wildcard (`*`) character-based search.  Ex: `*1.1*` or `1.1*` or
+                `*1.1` Examples: managementIpAddresses=121.1.1.10 managementIpAddresses=121.1.1.10&manag
+                ementIpAddresses=172.20.1.10&managementIpAddresses=200:10&=managementIpAddresses172.20.3
+                .4 (multiple entity IP Address with & separator) .
+            mac_address(basestring): macAddress query parameter. The macAddress of the network device or client This
+                field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
+                or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
+                `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
+                requested) .
+            family(basestring): family query parameter. The list of network device family names
+                Examples:family=Switches and Hubs (single network device family name )family=Switches
+                and Hubs&family=Router&family=Wireless Controller (multiple Network device family names
+                with & separator). This field is not case sensitive. .
+            type(basestring): type query parameter. The list of network device type This field supports wildcard
+                (`*`) character-based search. Ex: `*9407R*` or `*9407R` or
+                `9407R*`Examples:type=SwitchesCisco Catalyst 9407R Switch (single network device types
+                )type=Cisco Catalyst 38xx stack-able ethernet switch&type=Cisco 3945 Integrated Services
+                Router G2 (multiple Network device types with & separator) .
+            role(basestring): role query parameter. The list of network device role. Examples:role=CORE,
+                role=CORE&role=ACCESS&role=ROUTER (multiple Network device roles with & separator). This
+                field is not case sensitive. .
+            serial_number(basestring): serialNumber query parameter. The list of network device serial numbers. This
+                field supports wildcard (`*`) character-based search.  Ex: `*MS1SV*` or `MS1SV*` or
+                `*MS1SV` Examples: serialNumber=9FUFMS1SVAX
+                serialNumber=9FUFMS1SVAX&FCW2333Q0BY&FJC240617JX(multiple Network device serial number
+                with & separator) .
+            maintenance_mode(bool): maintenanceMode query parameter. The device maintenanceMode status true or false
+                .
+            software_version(basestring): softwareVersion query parameter. The list of network device software
+                version This field supports wildcard (`*`) character-based search. Ex: `*17.8*` or
+                `*17.8` or `17.8*` Examples: softwareVersion=2.3.4.0 (single network device software
+                version ) softwareVersion=17.9.3.23&softwareVersion=17.7.1.2&softwareVersion=*.17.7
+                (multiple Network device software versions with & separator) .
+            health_score(basestring): healthScore query parameter. The list of entity health score categories
+                Examples:healthScore=good,healthScore=good&healthScore=fair (multiple entity healthscore
+                values with & separator). This field is not case sensitive. .
+            view(basestring): view query parameter. The List of Network Device model views. Please refer to
+                ```NetworkDeviceView``` for the supported list .
+            attribute(basestring): attribute query parameter. The List of Network Device model attributes. This is
+                helps to specify the interested fields in the request. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_total_network_device_counts_based_on_the_provided_query_parameters_v1 .
+        """ 
         return self.gets_the_total_network_device_counts_based_on_the_provided_query_parameters_v1(
                     attribute=attribute,
                     end_time=end_time,
@@ -9308,7 +9452,18 @@ class Devices(object):
     def poe_details(self,
                        device_uuid,
                        headers=None,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of poe_details_v1 .
+        Args:
+            device_uuid(basestring): deviceUuid path parameter. UUID of the device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of poe_details_v1 .
+        """ 
         return self.poe_details_v1(
                     device_uuid=device_uuid,
                     headers=headers,
@@ -9320,10 +9475,20 @@ class Devices(object):
     def get_threat_levels(self,
                              headers=None,
                              **request_parameters):
+        """ This function is an alias of get_threat_levels_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_threat_levels_v1 .
+        """
         return self.get_threat_levels_v1(
-                            headers=headers,
-                            **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -9331,7 +9496,19 @@ class Devices(object):
                                        device_uuid,
                                        interface_uuid,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_connected_device_detail_v1 .
+        Args:
+            device_uuid(basestring): deviceUuid path parameter. instanceuuid of Device .
+            interface_uuid(basestring): interfaceUuid path parameter. instanceuuid of interface .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_connected_device_detail_v1 .
+        """ 
         return self.get_connected_device_detail_v1(
                     device_uuid=device_uuid,
                     interface_uuid=interface_uuid,
@@ -9349,7 +9526,27 @@ class Devices(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of export_device_list_v1 .
+        Args:
+            deviceUuids(list): Devices's List of device uuids  (list of strings).
+            operationEnum(string): Devices's 0 to export Device Credential Details Or 1 to export Device Details .
+                Available values are 'CREDENTIALDETAILS' and 'DEVICEDETAILS'.
+            parameters(list): Devices's List of device parameters that needs to be exported to file  (list of
+                strings).
+            password(string): Devices's Password is required when the operationEnum value is 0  .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of export_device_list_v1 .
+        """ 
         return self.export_device_list_v1(
                     deviceUuids=deviceUuids,
                     operationEnum=operationEnum,
@@ -9374,7 +9571,28 @@ class Devices(object):
                                                                                                                  headers=None,
                                                                                                                  payload=None,
                                                                                                                  active_validation=True,
-                                                                                                                 **request_parameters):  
+                                                                                                                 **request_parameters):
+        """ This function is an alias of gets_the_total_number_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
+        Args:
+            aggregateAttributes(list): Devices's aggregateAttributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            views(list): Devices's Views (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_total_number_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
+        """ 
         return self.gets_the_total_number_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -9394,7 +9612,18 @@ class Devices(object):
     def get_organization_list_for_meraki(self,
                                             id,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of get_organization_list_for_meraki_v1 .
+        Args:
+            id(basestring): id path parameter. Device Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_organization_list_for_meraki_v1 .
+        """ 
         return self.get_organization_list_for_meraki_v1(
                     id=id,
                     headers=headers,
@@ -9406,7 +9635,18 @@ class Devices(object):
     def get_wireless_lan_controller_details_by_id(self,
                                                      id,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """ This function is an alias of get_wireless_lan_controller_details_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_wireless_lan_controller_details_by_id_v1 .
+        """ 
         return self.get_wireless_lan_controller_details_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9421,7 +9661,21 @@ class Devices(object):
                               limit=None,
                               offset=None,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of get_all_interfaces_v1 .
+        Args:
+            offset(int): offset query parameter.
+            limit(int): limit query parameter.
+            last_input_time(basestring): lastInputTime query parameter. Last Input Time .
+            last_output_time(basestring): lastOutputTime query parameter. Last Output Time .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_interfaces_v1 .
+        """ 
         return self.get_all_interfaces_v1(
                     last_input_time=last_input_time,
                     last_output_time=last_output_time,
@@ -9440,7 +9694,24 @@ class Devices(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of update_user_defined_field_v1 .
+        Args:
+            description(string): Devices's Description of UDF .
+            name(string): Devices's Name of UDF .
+            id(basestring): id path parameter. UDF id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_user_defined_field_v1 .
+        """ 
         return self.update_user_defined_field_v1(
                     id=id,
                     description=description,
@@ -9461,7 +9732,25 @@ class Devices(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of get_device_interface_stats_info_v2 .
+        Args:
+            endTime(integer): Devices's UTC epoch timestamp in milliseconds .
+            query(object): Devices's query.
+            startTime(integer): Devices's UTC epoch timestamp in milliseconds .
+            device_id(basestring): deviceId path parameter. Network Device Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_interface_stats_info_v2 .
+        """ 
         return self.get_device_interface_stats_info_v2(
                     device_id=device_id,
                     endTime=endTime,
@@ -9479,7 +9768,20 @@ class Devices(object):
                                                   records_to_return,
                                                   start_index,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of get_network_device_by_pagination_range_v1 .
+        Args:
+            start_index(int): startIndex path parameter. Start index [>=1] .
+            records_to_return(int): recordsToReturn path parameter. Number of records to return [1<= recordsToReturn
+                <= 500] .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_network_device_by_pagination_range_v1 .
+        """ 
         return self.get_network_device_by_pagination_range_v1(
                     records_to_return=records_to_return,
                     start_index=start_index,
@@ -9496,7 +9798,24 @@ class Devices(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of stop_wireless_rogue_ap_containment_v1 .
+        Args:
+            macAddress(string): Devices's Mac Address.
+            type(integer): Devices's Type.
+            wlcIp(string): Devices's Wlc Ip.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of stop_wireless_rogue_ap_containment_v1 .
+        """ 
         return self.stop_wireless_rogue_ap_containment_v1(
                     macAddress=macAddress,
                     type=type,
@@ -9517,7 +9836,24 @@ class Devices(object):
                                                order=None,
                                                sort_by=None,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of inventory_insight_device_link_mismatch_v1 .
+        Args:
+            site_id(basestring): siteId path parameter.
+            offset(int): offset query parameter. Row Number.  Default value is 1 .
+            limit(int): limit query parameter. Default value is 500 .
+            category(basestring): category query parameter. Links mismatch category.  Value can be speed-duplex or
+                vlan. .
+            sort_by(basestring): sortBy query parameter. Sort By .
+            order(basestring): order query parameter. Order.  Value can be asc or desc.  Default value is asc .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of inventory_insight_device_link_mismatch_v1 .
+        """ 
         return self.inventory_insight_device_link_mismatch_v1(
                     category=category,
                     site_id=site_id,
@@ -9535,7 +9871,19 @@ class Devices(object):
                                                        macaddress=None,
                                                        serial_number=None,
                                                        headers=None,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of get_devices_registered_for_wsa_notification_v1 .
+        Args:
+            serial_number(basestring): serialNumber query parameter. Serial number of the device .
+            macaddress(basestring): macaddress query parameter. Mac addres of the device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_devices_registered_for_wsa_notification_v1 .
+        """ 
         return self.get_devices_registered_for_wsa_notification_v1(
                     macaddress=macaddress,
                     serial_number=serial_number,
@@ -9557,7 +9905,29 @@ class Devices(object):
                                headers=None,
                                payload=None,
                                active_validation=True,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of threat_detail_count_v1 .
+        Args:
+            endTime(integer): Devices's End Time.
+            isNewThreat(boolean): Devices's Is New Threat.
+            limit(integer): Devices's Limit.
+            offset(integer): Devices's Offset.
+            siteId(list): Devices's Site Id (list of strings).
+            startTime(integer): Devices's Start Time.
+            threatLevel(list): Devices's Threat Level (list of strings).
+            threatType(list): Devices's Threat Type (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of threat_detail_count_v1 .
+        """ 
         return self.threat_detail_count_v1(
                     endTime=endTime,
                     isNewThreat=isNewThreat,
@@ -9578,17 +9948,38 @@ class Devices(object):
     def get_device_enrichment_details(self,
                                          headers=None,
                                          **request_parameters):
+        """ This function is an alias of get_device_enrichment_details_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_enrichment_details_v1 .
+        """
         return self.get_device_enrichment_details_v1(
-                                        headers=headers,
-                                         **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_device_by_id(self,
                             id,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of get_device_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_by_id_v1 .
+        """ 
         return self.get_device_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9601,7 +9992,21 @@ class Devices(object):
                                       id,
                                       interface_type=None,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_device_interface_vlans_v1 .
+        Args:
+            id(basestring): id path parameter.
+            interface_type(basestring): interfaceType query parameter. Vlan associated with sub-interface. If no
+                interfaceType mentioned it will return all types of Vlan interfaces. If interfaceType is
+                selected but not specified then it will take default value. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_interface_vlans_v1 .
+        """ 
         return self.get_device_interface_vlans_v1(
                     id=id,
                     interface_type=interface_type,
@@ -9622,7 +10027,28 @@ class Devices(object):
                                                                       headers=None,
                                                                       payload=None,
                                                                       active_validation=True,
-                                                                      **request_parameters):  
+                                                                      **request_parameters):
+        """ This function is an alias of gets_the_summary_analytics_data_related_to_network_devices_v1 .
+        Args:
+            aggregateAttributes(list): Devices's aggregateAttributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            groupBy(list): Devices's Group By (list of strings).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_summary_analytics_data_related_to_network_devices_v1 .
+        """ 
         return self.gets_the_summary_analytics_data_related_to_network_devices_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -9642,7 +10068,18 @@ class Devices(object):
     def get_linecard_details(self,
                                 device_uuid,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_linecard_details_v1 .
+        Args:
+            device_uuid(basestring): deviceUuid path parameter. instanceuuid of device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_linecard_details_v1 .
+        """ 
         return self.get_linecard_details_v1(
                     device_uuid=device_uuid,
                     headers=headers,
@@ -9655,7 +10092,20 @@ class Devices(object):
                                                  floor_id,
                                                  planned_access_point_uuid,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of delete_planned_access_point_for_floor_v1 .
+        Args:
+            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            planned_access_point_uuid(basestring): plannedAccessPointUuid path parameter. The instance UUID of the
+                planned access point to delete .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_planned_access_point_for_floor_v1 .
+        """ 
         return self.delete_planned_access_point_for_floor_v1(
                     floor_id=floor_id,
                     planned_access_point_uuid=planned_access_point_uuid,
@@ -9668,7 +10118,18 @@ class Devices(object):
     def legit_operations_for_interface(self,
                                           interface_uuid,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of legit_operations_for_interface_v1 .
+        Args:
+            interface_uuid(basestring): interfaceUuid path parameter. Interface ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of legit_operations_for_interface_v1 .
+        """ 
         return self.legit_operations_for_interface_v1(
                     interface_uuid=interface_uuid,
                     headers=headers,
@@ -9679,7 +10140,17 @@ class Devices(object):
     # Alias Function
     def override_resync_interval(self,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of override_resync_interval_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of override_resync_interval_v1 .
+        """ 
         return self.override_resync_interval_v1(
                     headers=headers,
                     **request_parameters
@@ -9690,10 +10161,20 @@ class Devices(object):
     def get_threat_types(self,
                             headers=None,
                             **request_parameters):
+        """ This function is an alias of get_threat_types_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_threat_types_v1 .
+        """
         return self.get_threat_types_v1(
-                            headers=headers,
-                            **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -9706,7 +10187,24 @@ class Devices(object):
                        part_number_list=None,
                        vendor_equipment_type_list=None,
                        headers=None,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of get_modules_v1 .
+        Args:
+            device_id(basestring): deviceId query parameter.
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            name_list(basestring, list, set, tuple): nameList query parameter.
+            vendor_equipment_type_list(basestring, list, set, tuple): vendorEquipmentTypeList query parameter.
+            part_number_list(basestring, list, set, tuple): partNumberList query parameter.
+            operational_state_code_list(basestring, list, set, tuple): operationalStateCodeList query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_modules_v1 .
+        """ 
         return self.get_modules_v1(
                     device_id=device_id,
                     limit=limit,
@@ -9732,7 +10230,28 @@ class Devices(object):
                                                  headers=None,
                                                  payload=None,
                                                  active_validation=True,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of update_planned_access_point_for_floor_v1 .
+        Args:
+            attributes(object): Devices's attributes.
+            isSensor(boolean): Devices's Indicates that PAP is a sensor .
+            location(object): Devices's location.
+            position(object): Devices's position.
+            radioCount(integer): Devices's Number of radios of the planned access point .
+            radios(list): Devices's radios (list of objects).
+            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_planned_access_point_for_floor_v1 .
+        """ 
         return self.update_planned_access_point_for_floor_v1(
                     floor_id=floor_id,
                     attributes=attributes,
@@ -9754,7 +10273,22 @@ class Devices(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of sync_devices_using_forcesync_v1 .
+        Args:
+            force_sync(bool): forceSync query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of sync_devices_using_forcesync_v1 .
+        """ 
         return self.sync_devices_using_forcesync_v1(
                     force_sync=force_sync,
                     headers=headers,
@@ -9776,7 +10310,28 @@ class Devices(object):
                                                  headers=None,
                                                  payload=None,
                                                  active_validation=True,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of create_planned_access_point_for_floor_v1 .
+        Args:
+            attributes(object): Devices's attributes.
+            isSensor(boolean): Devices's Indicates that PAP is a sensor .
+            location(object): Devices's location.
+            position(object): Devices's position.
+            radioCount(integer): Devices's Number of radios of the planned access point .
+            radios(list): Devices's radios (list of objects).
+            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_planned_access_point_for_floor_v1 .
+        """ 
         return self.create_planned_access_point_for_floor_v1(
                     floor_id=floor_id,
                     attributes=attributes,
@@ -9804,7 +10359,28 @@ class Devices(object):
                                                                                                                                   headers=None,
                                                                                                                                   payload=None,
                                                                                                                                   active_validation=True,
-                                                                                                                                  **request_parameters):  
+                                                                                                                                  **request_parameters):
+        """ This function is an alias of gets_the_list_of_interfaces_across_the_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
+        Args:
+            aggregateAttributes(list): Devices's aggregateAttributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            views(list): Devices's Views (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_list_of_interfaces_across_the_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
+        """ 
         return self.gets_the_list_of_interfaces_across_the_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -9824,7 +10400,18 @@ class Devices(object):
     def get_polling_interval_by_id(self,
                                       id,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_polling_interval_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_polling_interval_by_id_v1 .
+        """ 
         return self.get_polling_interval_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9838,7 +10425,27 @@ class Devices(object):
                                                                                id=None,
                                                                                include_for_overall_health=None,
                                                                                headers=None,
-                                                                               **request_parameters):  
+                                                                               **request_parameters):
+        """ This function is an alias of get_the_count_of_health_score_definitions_based_on_provided_filters_v1 .
+        Args:
+            device_type(basestring): deviceType query parameter. These are the device families supported for health
+                score definitions. If no input is made on device family, all device families are
+                considered. .
+            id(basestring): id query parameter. The definition identifier. Examples:
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46 (single entity id request)
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46&id=015d9cba-4f53-4087-8317-7e49e5ffef47
+                (multiple ids in the query param) .
+            include_for_overall_health(bool): includeForOverallHealth query parameter. The inclusion status of the
+                issue definition, either true or false. true indicates that particular health metric is
+                included in overall health computation, otherwise false. By default it's set to true. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_count_of_health_score_definitions_based_on_provided_filters_v1 .
+        """ 
         return self.get_the_count_of_health_score_definitions_based_on_provided_filters_v1(
                     device_type=device_type,
                     id=id,
@@ -9858,7 +10465,26 @@ class Devices(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of threat_summary_v1 .
+        Args:
+            endTime(integer): Devices's End Time.
+            siteId(list): Devices's Site Id (list of strings).
+            startTime(integer): Devices's Start Time.
+            threatLevel(list): Devices's Threat Level (list of strings).
+            threatType(list): Devices's Threat Type (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of threat_summary_v1 .
+        """ 
         return self.threat_summary_v1(
                     endTime=endTime,
                     siteId=siteId,
@@ -9876,7 +10502,18 @@ class Devices(object):
     def get_interface_info_by_id(self,
                                     device_id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of get_interface_info_by_id_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interface_info_by_id_v1 .
+        """ 
         return self.get_interface_info_by_id_v1(
                     device_id=device_id,
                     headers=headers,
@@ -9888,7 +10525,18 @@ class Devices(object):
     def get_health_score_definition_for_the_given_id(self,
                                                         id,
                                                         headers=None,
-                                                        **request_parameters):  
+                                                        **request_parameters):
+        """ This function is an alias of get_health_score_definition_for_the_given_id_v1 .
+        Args:
+            id(basestring): id path parameter. Health score definition id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_health_score_definition_for_the_given_id_v1 .
+        """ 
         return self.get_health_score_definition_for_the_given_id_v1(
                     id=id,
                     headers=headers,
@@ -9905,7 +10553,25 @@ class Devices(object):
                                                    headers=None,
                                                    payload=None,
                                                    active_validation=True,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of count_the_number_of_events_with_filters_v1 .
+        Args:
+            deviceFamily(list): Devices's Device Family (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            startTime(integer): Devices's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_the_number_of_events_with_filters_v1 .
+        """ 
         return self.count_the_number_of_events_with_filters_v1(
                     deviceFamily=deviceFamily,
                     endTime=endTime,
@@ -9923,7 +10589,19 @@ class Devices(object):
                                                  device_id,
                                                  name,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of remove_user_defined_field_from_device_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. UUID of device from which UDF has to be removed .
+            name(basestring): name query parameter. Name of UDF to be removed .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of remove_user_defined_field_from_device_v1 .
+        """ 
         return self.remove_user_defined_field_from_device_v1(
                     device_id=device_id,
                     name=name,
@@ -9936,7 +10614,18 @@ class Devices(object):
     def delete_user_defined_field(self,
                                      id,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of delete_user_defined_field_v1 .
+        Args:
+            id(basestring): id path parameter. UDF id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_user_defined_field_v1 .
+        """ 
         return self.delete_user_defined_field_v1(
                     id=id,
                     headers=headers,
@@ -9949,7 +10638,23 @@ class Devices(object):
                                id,
                                clean_config=None,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of delete_device_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Device ID .
+            clean_config(bool): cleanConfig query parameter. Selecting the clean up configuration option will
+                attempt to remove device settings that were configured during the addition of the device
+                to the inventory and site assignment. Please note that this operation is different from
+                deprovisioning. It does not remove configurations that were pushed during device
+                provisioning. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_device_by_id_v1 .
+        """ 
         return self.delete_device_by_id_v1(
                     id=id,
                     clean_config=clean_config,
@@ -9964,7 +10669,22 @@ class Devices(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of update_global_resync_interval_v1 .
+        Args:
+            interval(integer): Devices's Resync Interval should be between 25 to 1440 minutes .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_global_resync_interval_v1 .
+        """ 
         return self.update_global_resync_interval_v1(
                     interval=interval,
                     headers=headers,
@@ -9978,7 +10698,18 @@ class Devices(object):
     def get_module_info_by_id(self,
                                  id,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of get_module_info_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Module id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_module_info_by_id_v1 .
+        """ 
         return self.get_module_info_by_id_v1(
                     id=id,
                     headers=headers,
@@ -10023,7 +10754,54 @@ class Devices(object):
                            type=None,
                            up_time=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_device_list_v1 .
+        Args:
+            hostname(basestring, list, set, tuple): hostname query parameter.
+            management_ip_address(basestring, list, set, tuple): managementIpAddress query parameter.
+            mac_address(basestring, list, set, tuple): macAddress query parameter.
+            location_name(basestring, list, set, tuple): locationName query parameter.
+            serial_number(basestring, list, set, tuple): serialNumber query parameter.
+            location(basestring, list, set, tuple): location query parameter.
+            family(basestring, list, set, tuple): family query parameter.
+            type(basestring, list, set, tuple): type query parameter.
+            series(basestring, list, set, tuple): series query parameter.
+            collection_status(basestring, list, set, tuple): collectionStatus query parameter.
+            collection_interval(basestring, list, set, tuple): collectionInterval query parameter.
+            not_synced_for_minutes(basestring, list, set, tuple): notSyncedForMinutes query parameter.
+            error_code(basestring, list, set, tuple): errorCode query parameter.
+            error_description(basestring, list, set, tuple): errorDescription query parameter.
+            software_version(basestring, list, set, tuple): softwareVersion query parameter.
+            software_type(basestring, list, set, tuple): softwareType query parameter.
+            platform_id(basestring, list, set, tuple): platformId query parameter.
+            role(basestring, list, set, tuple): role query parameter.
+            reachability_status(basestring, list, set, tuple): reachabilityStatus query parameter.
+            up_time(basestring, list, set, tuple): upTime query parameter.
+            associated_wlc_ip(basestring, list, set, tuple): associatedWlcIp query parameter.
+            license_name(basestring, list, set, tuple): license.name query parameter.
+            license_type(basestring, list, set, tuple): license.type query parameter.
+            license_status(basestring, list, set, tuple): license.status query parameter.
+            module_name(basestring, list, set, tuple): module+name query parameter.
+            module_equpimenttype(basestring, list, set, tuple): module+equpimenttype query parameter.
+            module_servicestate(basestring, list, set, tuple): module+servicestate query parameter.
+            module_vendorequipmenttype(basestring, list, set, tuple): module+vendorequipmenttype query parameter.
+            module_partnumber(basestring, list, set, tuple): module+partnumber query parameter.
+            module_operationstatecode(basestring, list, set, tuple): module+operationstatecode query parameter.
+            id(basestring): id query parameter. Accepts comma separated ids and return list of network-devices for
+                the given ids. If invalid or not-found ids are provided, null entry will be returned in
+                the list. .
+            device_support_level(basestring): deviceSupportLevel query parameter.
+            offset(int): offset query parameter. offset >= 1 [X gives results from Xth device onwards] .
+            limit(int): limit query parameter. 1 <= limit <= 500 [max. no. of devices to be returned in the result]
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_list_v1 .
+        """ 
         return self.get_device_list_v1(
                     associated_wlc_ip=associated_wlc_ip,
                     collection_interval=collection_interval,
@@ -10077,7 +10855,69 @@ class Devices(object):
                                                                                                                                                                               site_id=None,
                                                                                                                                                                               start_time=None,
                                                                                                                                                                               headers=None,
-                                                                                                                                                                              **request_parameters):  
+                                                                                                                                                                              **request_parameters):
+        """ This function is an alias of gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count_v1 .
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
+                supports wildcard asterisk (`*`) character search support. E.g. `*/San*, */San, /San*`
+                Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
+                requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
+                reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+                `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple ids
+                requested) .
+            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
+                requested) `networkDeviceId=6bef213c-19ca-4170-8375-
+                b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
+                cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
+                networkDeviceIds with & separator) .
+            network_device_ip_address(basestring): networkDeviceIpAddress query parameter. The list of Network
+                Device management IP Address. (Ex. `121.1.1.10`) This field supports wildcard (`*`)
+                character-based search.  Ex: `*1.1*` or `1.1*` or `*1.1` Examples:
+                `networkDeviceIpAddress=121.1.1.10` `networkDeviceIpAddress=121.1.1.10&networkDeviceIpAd
+                dress=172.20.1.10&networkDeviceIpAddress=10.10.20.10` (multiple networkDevice IP Address
+                with & separator) .
+            network_device_mac_address(basestring): networkDeviceMacAddress query parameter. The list of Network
+                Device MAC Address. (Ex. `64:f6:9d:07:9a:00`) This field supports wildcard (`*`)
+                character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*` or `*AB:AB:AB` Examples:
+                `networkDeviceMacAddress=64:f6:9d:07:9a:00`
+                `networkDeviceMacAddress=64:f6:9d:07:9a:00&networkDeviceMacAddress=70:56:9d:07:ac:77`
+                (multiple networkDevice MAC addresses with & separator) .
+            interface_id(basestring): interfaceId query parameter. The list of Interface Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `interfaceId=6bef213c-19ca-4170-8375-b694e251101c` (single interface uuid ) `interfaceId
+                =6bef213c-19ca-4170-8375-b694e251101c&32219612-819e-4b5e-a96b-cf22aca13dd9&2541e9a7-
+                b80d-4955-8aa2-79b233318ba0` (multiple Interface uuid with & separator) .
+            interface_name(basestring): interfaceName query parameter. The list of Interface name (Ex.
+                `GigabitEthernet1/0/1`) This field supports wildcard (`*`) character-based search.  Ex:
+                `*1/0/1*` or `1/0/1*` or `*1/0/1` Examples: `interfaceNames=GigabitEthernet1/0/1`
+                (single interface name)
+                `interfaceNames=GigabitEthernet1/0/1&GigabitEthernet2/0/1&GigabitEthernet3/0/1`
+                (multiple interface names with & separator) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count_v1 .
+        """ 
         return self.gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count_v1(
                     end_time=end_time,
                     interface_id=interface_id,
@@ -10125,7 +10965,66 @@ class Devices(object):
                    headers=None,
                    payload=None,
                    active_validation=True,
-                   **request_parameters):  
+                   **request_parameters):
+        """ This function is an alias of add_device_v1 .
+        Args:
+            cliTransport(string): Devices's CLI transport. Supported values: telnet, ssh. Required if type is
+                NETWORK_DEVICE. .
+            computeDevice(boolean): Devices's Compute Device or not. Options are true / false. .
+            enablePassword(string): Devices's CLI enable password of the device. Required if device is configured to
+                use enable password. .
+            extendedDiscoveryInfo(string): Devices's This field holds that info as whether to add device with canned
+                data or not. Supported values: DISCOVER_WITH_CANNED_DATA. .
+            httpPassword(string): Devices's HTTP password of the device / API key for Meraki Dashboard. Required if
+                type is MERAKI_DASHBOARD or COMPUTE_DEVICE. .
+            httpPort(string): Devices's HTTP port of the device. Required if type is COMPUTE_DEVICE. .
+            httpSecure(boolean): Devices's Flag to select HTTP / HTTPS protocol. Options are true / false. true for
+                HTTPS and false for HTTP. Default is true. .
+            httpUserName(string): Devices's HTTP Username of the device. Required if type is COMPUTE_DEVICE. .
+            ipAddress(list): Devices's IP Address of the device. Required if type is NETWORK_DEVICE, COMPUTE_DEVICE
+                or THIRD_PARTY_DEVICE.  (list of strings).
+            merakiOrgId(list): Devices's Selected Meraki organization for which the devices needs to be imported.
+                Required if type is MERAKI_DASHBOARD.  (list of strings).
+            netconfPort(string): Devices's Netconf Port of the device. cliTransport must be 'ssh' if netconf is
+                provided. .
+            password(string): Devices's CLI Password of the device. Required if type is NETWORK_DEVICE. .
+            serialNumber(string): Devices's Serial Number of the Device. Required if extendedDiscoveryInfo is
+                'DISCOVER_WITH_CANNED_DATA'. .
+            snmpAuthPassphrase(string): Devices's SNMPv3 auth passphrase of the device. Required if snmpMode is
+                authNoPriv or authPriv. .
+            snmpAuthProtocol(string): Devices's SNMPv3 auth protocol. Supported values: sha, md5. Required if
+                snmpMode is authNoPriv or authPriv. .
+            snmpMode(string): Devices's SNMPv3 mode. Supported values: noAuthnoPriv, authNoPriv, authPriv. Required
+                if snmpVersion is v3. .
+            snmpPrivPassphrase(string): Devices's SNMPv3 priv passphrase. Required if snmpMode is authPriv. .
+            snmpPrivProtocol(string): Devices's SNMPv3 priv protocol. Supported values: AES128. Required if snmpMode
+                is authPriv. .
+            snmpROCommunity(string): Devices's SNMP Read Community of the device. If snmpVersion is v2, at least one
+                of snmpROCommunity and snmpRWCommunity is required. .
+            snmpRWCommunity(string): Devices's SNMP Write Community of the device. If snmpVersion is v2, at least
+                one of snmpROCommunity and snmpRWCommunity is required. .
+            snmpRetry(integer): Devices's SNMP retry count. Max value supported is 3. Default is Global SNMP retry
+                (if exists) or 3. .
+            snmpTimeout(integer): Devices's SNMP timeout in seconds. Max value supported is 300. Default is Global
+                SNMP timeout (if exists) or 5. .
+            snmpUserName(string): Devices's SNMPV3 user name of the device. Required if snmpVersion is v3. .
+            snmpVersion(string): Devices's SNMP version. Values supported: v2, v3. Required if type is
+                NETWORK_DEVICE, COMPUTE_DEVICE or THIRD_PARTY_DEVICE. .
+            type(string): Devices's Type of device being added. Default is NETWORK_DEVICE. . Available values are
+                'COMPUTE_DEVICE', 'MERAKI_DASHBOARD', 'THIRD_PARTY_DEVICE' and 'NETWORK_DEVICE'.
+            userName(string): Devices's CLI user name of the device. Required if type is NETWORK_DEVICE. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_device_v1 .
+        """ 
         return self.add_device_v1(
                     cliTransport=cliTransport,
                     computeDevice=computeDevice,
@@ -10167,7 +11066,24 @@ class Devices(object):
                                                          headers=None,
                                                          payload=None,
                                                          active_validation=True,
-                                                         **request_parameters):  
+                                                         **request_parameters):
+        """ This function is an alias of update_resync_interval_for_the_network_device_v1 .
+        Args:
+            interval(integer): Devices's Resync interval in minutes. To disable periodic resync, set interval as
+                `0`. To use global settings, set interval as `null`. .
+            id(basestring): id path parameter. The id of the network device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_resync_interval_for_the_network_device_v1 .
+        """ 
         return self.update_resync_interval_for_the_network_device_v1(
                     id=id,
                     interval=interval,
@@ -10192,7 +11108,30 @@ class Devices(object):
                                                                                        headers=None,
                                                                                        payload=None,
                                                                                        active_validation=True,
-                                                                                       **request_parameters):  
+                                                                                       **request_parameters):
+        """ This function is an alias of the_trend_analytics_data_for_the_network_device_in_the_specified_time_range_v1 .
+        Args:
+            aggregateAttributes(list): Devices's aggregateAttributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            groupBy(list): Devices's Group By (list of strings).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            trendIntervalInMinutes(integer): Devices's Trend Interval In Minutes.
+            id(basestring): id path parameter. The device Uuid .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the_trend_analytics_data_for_the_network_device_in_the_specified_time_range_v1 .
+        """ 
         return self.the_trend_analytics_data_for_the_network_device_in_the_specified_time_range_v1(
                     id=id,
                     aggregateAttributes=aggregateAttributes,
@@ -10214,17 +11153,38 @@ class Devices(object):
     def get_isis_interfaces(self,
                                headers=None,
                                **request_parameters):
+        """ This function is an alias of get_isis_interfaces_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_isis_interfaces_v1 .
+        """
         return self.get_isis_interfaces_v1(
-                                headers=headers,
-                               **request_parameters    
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_device_by_serial_number(self,
                                        serial_number,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_device_by_serial_number_v1 .
+        Args:
+            serial_number(basestring): serialNumber path parameter. Device serial number .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_by_serial_number_v1 .
+        """ 
         return self.get_device_by_serial_number_v1(
                     serial_number=serial_number,
                     headers=headers,
@@ -10236,17 +11196,38 @@ class Devices(object):
     def get_device_config_count(self,
                                    headers=None,
                                    **request_parameters):
+        """ This function is an alias of get_device_config_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_config_count_v1 .
+        """
         return self.get_device_config_count_v1(
-                                    headers=headers,
-                                   **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_chassis_details_for_device(self,
                                           device_id,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of get_chassis_details_for_device_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_chassis_details_for_device_v1 .
+        """ 
         return self.get_chassis_details_for_device_v1(
                     device_id=device_id,
                     headers=headers,
@@ -10258,7 +11239,18 @@ class Devices(object):
     def get_device_config_by_id(self,
                                    network_device_id,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_device_config_by_id_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_config_by_id_v1 .
+        """ 
         return self.get_device_config_by_id_v1(
                     network_device_id=network_device_id,
                     headers=headers,
@@ -10278,7 +11270,33 @@ class Devices(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of rogue_additional_details_v1 .
+        Args:
+            endTime(number): Devices's This is the epoch end time in milliseconds upto which data need to be
+                fetched. Default value is current time .
+            limit(number): Devices's The maximum number of entries to return. Default value is 1000 .
+            offset(number): Devices's The offset of the first item in the collection to return. Default value is 1 .
+            siteId(list): Devices's Filter Rogues by location. Site IDs information can be fetched from "Get Site"
+                API  (list of strings).
+            startTime(number): Devices's This is the epoch start time in milliseconds from which data need to be
+                fetched. Default value is 24 hours earlier to endTime .
+            threatLevel(list): Devices's Filter Rogues by Threat Level. Threat Level information can be fetched from
+                "Get Threat Levels" API  (list of strings).
+            threatType(list): Devices's Filter Rogues by Threat Type. Threat Type information can be fetched from
+                "Get Threat Types" API  (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of rogue_additional_details_v1 .
+        """ 
         return self.rogue_additional_details_v1(
                     endTime=endTime,
                     limit=limit,
@@ -10303,7 +11321,32 @@ class Devices(object):
                                                               limit=None,
                                                               offset=None,
                                                               headers=None,
-                                                              **request_parameters):  
+                                                              **request_parameters):
+        """ This function is an alias of get_all_health_score_definitions_for_given_filters_v1 .
+        Args:
+            device_type(basestring): deviceType query parameter. These are the device families supported for health
+                score definitions. If no input is made on device family, all device families are
+                considered. .
+            id(basestring): id query parameter. The definition identifier. Examples:
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46 (single entity id request)
+                id=015d9cba-4f53-4087-8317-7e49e5ffef46&id=015d9cba-4f53-4087-8317-7e49e5ffef47
+                (multiple ids in the query param) .
+            include_for_overall_health(bool): includeForOverallHealth query parameter. The inclusion status of the
+                issue definition, either true or false. true indicates that particular health metric is
+                included in overall health computation, otherwise false. By default it's set to true.  .
+            attribute(basestring): attribute query parameter. These are the attributes supported in health score
+                definitions response. By default, all properties are sent in response. .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            limit(int): limit query parameter. Maximum number of records to return .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_health_score_definitions_for_given_filters_v1 .
+        """ 
         return self.get_all_health_score_definitions_for_given_filters_v1(
                     attribute=attribute,
                     device_type=device_type,
@@ -10323,7 +11366,25 @@ class Devices(object):
                                                   offset=None,
                                                   radios=None,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of get_planned_access_points_for_building_v1 .
+        Args:
+            building_id(basestring): buildingId path parameter. The instance UUID of the building hierarchy element
+                .
+            limit(int): limit query parameter. The page size limit for the response, e.g. limit=100 will return a
+                maximum of 100 records .
+            offset(int): offset query parameter. The page offset for the response. E.g. if limit=100, offset=0 will
+                return first 100 records, offset=1 will return next 100 records, etc. .
+            radios(bool): radios query parameter. Whether to include the planned radio details of the planned access
+                points .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_planned_access_points_for_building_v1 .
+        """ 
         return self.get_planned_access_points_for_building_v1(
                     building_id=building_id,
                     limit=limit,
@@ -10338,7 +11399,21 @@ class Devices(object):
     def remove_allowed_mac_address(self,
                                       mac_address,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of remove_allowed_mac_address_v1 .
+        Args:
+            mac_address(basestring): macAddress path parameter. Threat mac address which needs to be removed from
+                the allowed list. Multiple mac addresses will be removed if provided as comma separated
+                values (example: 00:2A:10:51:22:43,00:2A:10:51:22:44). Note: In one request, maximum 100
+                mac addresses can be removed.  .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of remove_allowed_mac_address_v1 .
+        """ 
         return self.remove_allowed_mac_address_v1(
                     mac_address=mac_address,
                     headers=headers,
@@ -10356,7 +11431,28 @@ class Devices(object):
                    site_id=None,
                    start_time=None,
                    headers=None,
-                   **request_parameters):  
+                   **request_parameters):
+        """ This function is an alias of devices_v1 .
+        Args:
+            device_role(basestring): deviceRole query parameter. CORE, ACCESS, DISTRIBUTION, ROUTER, WLC, or AP
+                (case insensitive) .
+            site_id(basestring): siteId query parameter. DNAC site UUID .
+            health(basestring): health query parameter. DNAC health catagory: POOR, FAIR, or GOOD (case insensitive)
+                .
+            start_time(int): startTime query parameter. UTC epoch time in milliseconds .
+            end_time(int): endTime query parameter. UTC epoch time in milliseconds .
+            limit(int): limit query parameter. Max number of device entries in the response (default to 50. Max at
+                500) .
+            offset(int): offset query parameter. The offset of the first device in the returned data (Mutiple of
+                'limit' + 1) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of devices_v1 .
+        """ 
         return self.devices_v1(
                     device_role=device_role,
                     end_time=end_time,
@@ -10378,7 +11474,24 @@ class Devices(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of update_device_role_v1 .
+        Args:
+            id(string): Devices's DeviceId of the Device .
+            role(string): Devices's Role of device as ACCESS, CORE, DISTRIBUTION, BORDER ROUTER .
+            roleSource(string): Devices's Role source as MANUAL / AUTO .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_device_role_v1 .
+        """ 
         return self.update_device_role_v1(
                     id=id,
                     role=role,
@@ -10414,7 +11527,92 @@ class Devices(object):
                                                                                   type=None,
                                                                                   view=None,
                                                                                   headers=None,
-                                                                                  **request_parameters):  
+                                                                                  **request_parameters):
+        """ This function is an alias of gets_the_network_device_details_based_on_the_provided_query_parameters_v1 .
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            limit(int): limit query parameter. Maximum number of records to return .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
+            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
+                supports wildcard asterisk (*) character search support. E.g. */San*, */San, /San*
+                Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
+                requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
+                reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (*) character search support. E.g. `*uuid*, *uuid, uuid* Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
+                wildcard asterisk (*) character search support. E.g.*flooruuid*, *flooruuid, flooruuid*
+                Examples: `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3`
+                (multiple ids requested) .
+            id(basestring): id query parameter. The list of entity Uuids.
+                (Ex."6bef213c-19ca-4170-8375-b694e251101c") Examples:
+                id=6bef213c-19ca-4170-8375-b694e251101c (single entity uuid requested) id=6bef213c-19ca-
+                4170-8375-b694e251101c&id=32219612-819e-4b5e-a96b-cf22aca13dd9&id=2541e9a7-b80d-4955-
+                8aa2-79b233318ba0 (multiple entity uuid with '&' separator) .
+            management_ip_address(basestring): managementIpAddress query parameter. The list of entity management IP
+                Address. It can be either Ipv4 or Ipv6 address or combination of both(Ex. "121.1.1.10")
+                This field supports wildcard (`*`) character-based search.  Ex: `*1.1*` or `1.1*` or
+                `*1.1` Examples: managementIpAddresses=121.1.1.10 managementIpAddresses=121.1.1.10&manag
+                ementIpAddresses=172.20.1.10&managementIpAddresses=200:10&=managementIpAddresses172.20.3
+                .4 (multiple entity IP Address with & separator) .
+            mac_address(basestring): macAddress query parameter. The macAddress of the network device or client This
+                field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
+                or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
+                `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
+                requested) .
+            family(basestring): family query parameter. The list of network device family names
+                Examples:family=Switches and Hubs (single network device family name )family=Switches
+                and Hubs&family=Router&family=Wireless Controller (multiple Network device family names
+                with & separator). This field is not case sensitive. .
+            type(basestring): type query parameter. The list of network device type This field supports wildcard
+                (`*`) character-based search. Ex: `*9407R*` or `*9407R` or `9407R*` Examples:
+                type=SwitchesCisco Catalyst 9407R Switch (single network device types ) type=Cisco
+                Catalyst 38xx stack-able ethernet switch&type=Cisco 3945 Integrated Services Router G2
+                (multiple Network device types with & separator) .
+            role(basestring): role query parameter. The list of network device role. Examples:role=CORE,
+                role=CORE&role=ACCESS&role=ROUTER (multiple Network device roles with & separator). This
+                field is not case sensitive. .
+            serial_number(basestring): serialNumber query parameter. The list of network device serial numbers. This
+                field supports wildcard (`*`) character-based search.  Ex: `*MS1SV*` or `MS1SV*` or
+                `*MS1SV` Examples: serialNumber=9FUFMS1SVAX
+                serialNumber=9FUFMS1SVAX&FCW2333Q0BY&FJC240617JX(multiple Network device serial number
+                with & separator) .
+            maintenance_mode(bool): maintenanceMode query parameter. The device maintenanceMode status true or false
+                .
+            software_version(basestring): softwareVersion query parameter. The list of network device software
+                version This field supports wildcard (`*`) character-based search. Ex: `*17.8*` or
+                `*17.8` or `17.8*` Examples: softwareVersion=2.3.4.0 (single network device software
+                version ) softwareVersion=17.9.3.23&softwareVersion=17.7.1.2&softwareVersion=*.17.7
+                (multiple Network device software versions with & separator) .
+            health_score(basestring): healthScore query parameter. The list of entity health score categories
+                Examples: healthScore=good, healthScore=good&healthScore=fair (multiple entity
+                healthscore values with & separator). This field is not case sensitive. .
+            view(basestring): view query parameter. The List of Network Device model views. Please refer to
+                ```NetworkDeviceView``` for the supported list .
+            attribute(basestring): attribute query parameter. The List of Network Device model attributes. This is
+                helps to specify the interested fields in the request. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_network_device_details_based_on_the_provided_query_parameters_v1 .
+        """ 
         return self.gets_the_network_device_details_based_on_the_provided_query_parameters_v1(
                     attribute=attribute,
                     end_time=end_time,
@@ -10446,17 +11644,38 @@ class Devices(object):
     def get_device_interface_count(self,
                                    headers=None,
                                    **request_parameters):
+        """ This function is an alias of get_device_interface_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_interface_count_v1 .
+        """
         return self.get_device_interface_count_v1(
-                                headers=headers,
-                                **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_resync_interval_for_the_network_device(self,
                                                       id,
                                                       headers=None,
-                                                      **request_parameters):  
+                                                      **request_parameters):
+        """ This function is an alias of get_resync_interval_for_the_network_device_v1 .
+        Args:
+            id(basestring): id path parameter. The id of the network device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_resync_interval_for_the_network_device_v1 .
+        """ 
         return self.get_resync_interval_for_the_network_device_v1(
                     id=id,
                     headers=headers,
@@ -10469,7 +11688,19 @@ class Devices(object):
                                        id=None,
                                        name=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_all_user_defined_fields_v1 .
+        Args:
+            id(basestring): id query parameter. Comma-seperated id(s) used for search/filtering .
+            name(basestring): name query parameter. Comma-seperated name(s) used for search/filtering .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_user_defined_fields_v1 .
+        """ 
         return self.get_all_user_defined_fields_v1(
                     id=id,
                     name=name,
@@ -10490,7 +11721,28 @@ class Devices(object):
                                                                                                             headers=None,
                                                                                                             payload=None,
                                                                                                             active_validation=True,
-                                                                                                            **request_parameters):  
+                                                                                                            **request_parameters):
+        """ This function is an alias of gets_the_list_of_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
+        Args:
+            aggregateAttributes(list): Devices's aggregateAttributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            views(list): Devices's Views (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_list_of_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
+        """ 
         return self.gets_the_list_of_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -10531,7 +11783,39 @@ class Devices(object):
                                                                         up_time=None,
                                                                         vrf_name=None,
                                                                         headers=None,
-                                                                        **request_parameters):  
+                                                                        **request_parameters):
+        """ This function is an alias of get_device_values_that_match_fully_or_partially_an_attribute_v1 .
+        Args:
+            vrf_name(basestring): vrfName query parameter.
+            management_ip_address(basestring): managementIpAddress query parameter.
+            hostname(basestring): hostname query parameter.
+            mac_address(basestring): macAddress query parameter.
+            family(basestring): family query parameter.
+            collection_status(basestring): collectionStatus query parameter.
+            collection_interval(basestring): collectionInterval query parameter.
+            software_version(basestring): softwareVersion query parameter.
+            software_type(basestring): softwareType query parameter.
+            reachability_status(basestring): reachabilityStatus query parameter.
+            reachability_failure_reason(basestring): reachabilityFailureReason query parameter.
+            error_code(basestring): errorCode query parameter.
+            platform_id(basestring): platformId query parameter.
+            series(basestring): series query parameter.
+            type(basestring): type query parameter.
+            serial_number(basestring): serialNumber query parameter.
+            up_time(basestring): upTime query parameter.
+            role(basestring): role query parameter.
+            role_source(basestring): roleSource query parameter.
+            associated_wlc_ip(basestring): associatedWlcIp query parameter.
+            offset(int): offset query parameter.
+            limit(int): limit query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_values_that_match_fully_or_partially_an_attribute_v1 .
+        """ 
         return self.get_device_values_that_match_fully_or_partially_an_attribute_v1(
                     associated_wlc_ip=associated_wlc_ip,
                     collection_interval=collection_interval,
@@ -10565,7 +11849,19 @@ class Devices(object):
                               device_uuid,
                               interface_name_list=None,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of poe_interface_details_v1 .
+        Args:
+            device_uuid(basestring): deviceUuid path parameter. uuid of the device .
+            interface_name_list(basestring): interfaceNameList query parameter. comma seperated interface names .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of poe_interface_details_v1 .
+        """ 
         return self.poe_interface_details_v1(
                     device_uuid=device_uuid,
                     interface_name_list=interface_name_list,
@@ -10582,7 +11878,22 @@ class Devices(object):
                             part_number_list=None,
                             vendor_equipment_type_list=None,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of get_module_count_v1 .
+        Args:
+            device_id(basestring): deviceId query parameter.
+            name_list(basestring, list, set, tuple): nameList query parameter.
+            vendor_equipment_type_list(basestring, list, set, tuple): vendorEquipmentTypeList query parameter.
+            part_number_list(basestring, list, set, tuple): partNumberList query parameter.
+            operational_state_code_list(basestring, list, set, tuple): operationalStateCodeList query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_module_count_v1 .
+        """ 
         return self.get_module_count_v1(
                     device_id=device_id,
                     name_list=name_list,
@@ -10598,10 +11909,20 @@ class Devices(object):
     def get_polling_interval_for_all_devices(self,
                                                 headers=None,
                                                 **request_parameters):
-        return get_polling_interval_for_all_devices_v1(
-                                                headers=headers,
-                                                **request_parameters 
-        )  
+        """ This function is an alias of get_polling_interval_for_all_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_polling_interval_for_all_devices_v1 .
+        """
+        return self.get_polling_interval_for_all_devices_v1(
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -10611,7 +11932,24 @@ class Devices(object):
                                                offset=None,
                                                radios=None,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of get_planned_access_points_for_floor_v1 .
+        Args:
+            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            limit(int): limit query parameter. The page size limit for the response, e.g. limit=100 will return a
+                maximum of 100 records .
+            offset(int): offset query parameter. The page offset for the response. E.g. if limit=100, offset=0 will
+                return first 100 records, offset=1 will return next 100 records, etc. .
+            radios(bool): radios query parameter. Whether to include the planned radio details of the planned access
+                points .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_planned_access_points_for_floor_v1 .
+        """ 
         return self.get_planned_access_points_for_floor_v1(
                     floor_id=floor_id,
                     limit=limit,
@@ -10630,7 +11968,27 @@ class Devices(object):
                                    payload=None,
                                    headers=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of clear_mac_address_table_v1 .
+        Args:
+            operation(string): Devices's Operation needs to be specified as 'ClearMacAddress'. .
+            payload(object): Devices's Payload is not applicable .
+            interface_uuid(basestring): interfaceUuid path parameter. Interface Id .
+            deployment_mode(basestring): deploymentMode query parameter. Preview/Deploy ['Preview' means the
+                configuration is not pushed to the device. 'Deploy' makes the configuration pushed to
+                the device] .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of clear_mac_address_table_v1 .
+        """ 
         return self.clear_mac_address_table_v1(
                     interface_uuid=interface_uuid,
                     deployment_mode=deployment_mode,
@@ -10646,7 +12004,18 @@ class Devices(object):
     def wireless_rogue_ap_containment_status(self,
                                                 mac_address,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of wireless_rogue_ap_containment_status_v1 .
+        Args:
+            mac_address(basestring): macAddress path parameter. MAC Address of the Wireless Rogue AP .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of wireless_rogue_ap_containment_status_v1 .
+        """ 
         return self.wireless_rogue_ap_containment_status_v1(
                     mac_address=mac_address,
                     headers=headers,
@@ -10667,7 +12036,29 @@ class Devices(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of gets_the_trend_analytics_data_v1 .
+        Args:
+            aggregateAttributes(list): Devices's Aggregate Attributes (list of objects).
+            attributes(list): Devices's Attributes (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            groupBy(list): Devices's Group By (list of objects).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            trendInterval(string): Devices's Trend Interval.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_the_trend_analytics_data_v1 .
+        """ 
         return self.gets_the_trend_analytics_data_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -10688,10 +12079,20 @@ class Devices(object):
     def get_device_config_for_all_devices(self,
                                              headers=None,
                                              **request_parameters):
-        return self.get_device_config_for_all_devices(
-                                             headers=headers,
-                                             **request_parameters
-        )  
+        """ This function is an alias of get_device_config_for_all_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_config_for_all_devices_v1 .
+        """
+        return self.get_device_config_for_all_devices_v1(
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -10700,7 +12101,22 @@ class Devices(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of add_user_defined_field_to_device_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. UUID of device to which UDF has to be added .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_user_defined_field_to_device_v1 .
+        """ 
         return self.add_user_defined_field_to_device_v1(
                     device_id=device_id,
                     headers=headers,
@@ -10714,7 +12130,18 @@ class Devices(object):
     def get_stack_details_for_device(self,
                                         device_id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of get_stack_details_for_device_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_stack_details_for_device_v1 .
+        """ 
         return self.get_stack_details_for_device_v1(
                     device_id=device_id,
                     headers=headers,
@@ -10732,7 +12159,31 @@ class Devices(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of rogue_additional_detail_count_v1 .
+        Args:
+            endTime(number): Devices's This is the epoch end time in milliseconds upto which data need to be
+                fetched. Default value is current time .
+            siteId(list): Devices's Filter Rogues by location. Site IDs information can be fetched from "Get Site"
+                API  (list of strings).
+            startTime(number): Devices's This is the epoch start time in milliseconds from which data need to be
+                fetched. Default value is 24 hours earlier to endTime .
+            threatLevel(list): Devices's This information can be fetched from "Get Threat Levels" API  (list of
+                strings).
+            threatType(list): Devices's This information can be fetched from "Get Threat Types" API  (list of
+                strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of rogue_additional_detail_count_v1 .
+        """ 
         return self.rogue_additional_detail_count_v1(
                     endTime=endTime,
                     siteId=siteId,
@@ -10750,7 +12201,18 @@ class Devices(object):
     def get_list_of_child_events_for_the_given_wireless_client_event(self,
                                                                         id,
                                                                         headers=None,
-                                                                        **request_parameters):  
+                                                                        **request_parameters):
+        """ This function is an alias of get_list_of_child_events_for_the_given_wireless_client_event_v1 .
+        Args:
+            id(basestring): id path parameter. Unique identifier for the event .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_list_of_child_events_for_the_given_wireless_client_event_v1 .
+        """ 
         return self.get_list_of_child_events_for_the_given_wireless_client_event_v1(
                     id=id,
                     headers=headers,
@@ -10762,7 +12224,18 @@ class Devices(object):
     def get_network_device_by_ip(self,
                                     ip_address,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of get_network_device_by_ip_v1 .
+        Args:
+            ip_address(basestring): ipAddress path parameter. Device IP address .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_network_device_by_ip_v1 .
+        """ 
         return self.get_network_device_by_ip_v1(
                     ip_address=ip_address,
                     headers=headers,
@@ -10774,7 +12247,18 @@ class Devices(object):
     def get_device_summary(self,
                               id,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of get_device_summary_v1 .
+        Args:
+            id(basestring): id path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_summary_v1 .
+        """ 
         return self.get_device_summary_v1(
                     id=id,
                     headers=headers,
@@ -10801,7 +12285,98 @@ class Devices(object):
                                                                                start_time=None,
                                                                                view=None,
                                                                                headers=None,
-                                                                               **request_parameters):  
+                                                                               **request_parameters):
+        """ This function is an alias of gets_interfaces_along_with_statistics_data_from_all_network_devices_v1 .
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            limit(int): limit query parameter. Maximum number of records to return .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
+            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
+                supports wildcard asterisk (`*`) character search support. E.g. `*/San*, */San, /San*`
+                Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
+                requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
+                reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+                `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple ids
+                requested) .
+            view(basestring): view query parameter. The specific summary view being requested. This is an optional
+                parameter which can be passed to get one or more of the specific view associated fields.
+                The default view is ``configuration``. ### Response data proviced by each view:   1.
+                **configuration** [id,adminStatus,description,duplexConfig,duplexOper,interfaceIfIndex,i
+                nterfaceType,ipv4Address,ipv6AddressList,isL3Interface,isWan,macAddress,mediaType,name,o
+                perStatus, portChannelId,portMode, portType,speed,timestamp,vlanId,networkDeviceId,netwo
+                rkDeviceIpAddress,networkDeviceMacAddress,siteName,siteHierarchy,siteHierarchyId]   2.
+                **statistics** [id,name,rxDiscards,rxError,rxRate,rxUtilization,txDiscards,txError,txRat
+                e,txUtilization,networkDeviceId,networkDeviceIpAddress,networkDeviceMacAddress,siteName,
+                siteHierarchy,siteHierarchyId]   3. **stackPort** [id,name,peerStackMember,peerStackPort
+                ,stackPortType,networkDeviceId,networkDeviceIpAddress,networkDeviceMacAddress,siteName,s
+                iteHierarchy,siteHierarchyId]   The default view is configuration, If need to access an
+                additional view, simply include the view name in the query parameter. Examples:
+                view=configuration (single view requested) view=configuration&view=statistic&stackPort
+                (multiple views requested) .
+            attribute(basestring): attribute query parameter. The following list of attributes can be provided in
+                the attribute field [id,adminStatus, description,duplexConfig,duplexOper,interfaceIfInde
+                x,interfaceType,ipv4Address,ipv6AddressList,isL3Interface,isWan,macAddress,mediaType,nam
+                e,operStatus,peerStackMember,peerStackPort, portChannelId,portMode, portType,rxDiscards,
+                rxError,rxRate,rxUtilization,speed,stackPortType,timestamp,txDiscards,txError,txRate,txU
+                tilization,vlanId,networkDeviceId,networkDeviceIpAddress,networkDeviceMacAddress,siteNam
+                e,siteHierarchy,siteHierarchyId] If length of attribute list is too long, please use
+                'views' param instead. Examples: attributes=name (single attribute requested)
+                attributes=name,description,duplexOper (multiple attributes with comma separator) .
+            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
+                requested) `networkDeviceId=6bef213c-19ca-4170-8375-
+                b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
+                cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
+                networkDeviceIds with & separator) .
+            network_device_ip_address(basestring): networkDeviceIpAddress query parameter. The list of Network
+                Device management IP Address. (Ex. `121.1.1.10`) This field supports wildcard (`*`)
+                character-based search.  Ex: `*1.1*` or `1.1*` or `*1.1` Examples:
+                `networkDeviceIpAddress=121.1.1.10` `networkDeviceIpAddress=121.1.1.10&networkDeviceIpAd
+                dress=172.20.1.10&networkDeviceIpAddress=10.10.20.10` (multiple networkDevice IP Address
+                with & separator) .
+            network_device_mac_address(basestring): networkDeviceMacAddress query parameter. The list of Network
+                Device MAC Address. (Ex. `64:f6:9d:07:9a:00`) This field supports wildcard (`*`)
+                character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*` or `*AB:AB:AB` Examples:
+                `networkDeviceMacAddress=64:f6:9d:07:9a:00`
+                `networkDeviceMacAddress=64:f6:9d:07:9a:00&networkDeviceMacAddress=70:56:9d:07:ac:77`
+                (multiple networkDevice MAC addresses with & separator) .
+            interface_id(basestring): interfaceId query parameter. The list of Interface Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `interfaceId=6bef213c-19ca-4170-8375-b694e251101c` (single interface uuid ) `interfaceId
+                =6bef213c-19ca-4170-8375-b694e251101c&32219612-819e-4b5e-a96b-cf22aca13dd9&2541e9a7-
+                b80d-4955-8aa2-79b233318ba0` (multiple Interface uuid with & separator) .
+            interface_name(basestring): interfaceName query parameter. The list of Interface name (Ex.
+                `GigabitEthernet1/0/1`) This field supports wildcard (`*`) character-based search.  Ex:
+                `*1/0/1*` or `1/0/1*` or `*1/0/1` Examples: `interfaceNames=GigabitEthernet1/0/1`
+                (single interface name)
+                `interfaceNames=GigabitEthernet1/0/1&GigabitEthernet2/0/1&GigabitEthernet3/0/1`
+                (multiple interface names with & separator) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_interfaces_along_with_statistics_data_from_all_network_devices_v1 .
+        """ 
         return self.gets_interfaces_along_with_statistics_data_from_all_network_devices_v1(
                     attribute=attribute,
                     end_time=end_time,
@@ -10829,7 +12404,21 @@ class Devices(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of add_allowed_mac_address_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_allowed_mac_address_v1 .
+        """ 
         return self.add_allowed_mac_address_v1(
                     headers=headers,
                     payload=payload,
@@ -10842,7 +12431,18 @@ class Devices(object):
     def get_functional_capability_by_id(self,
                                            id,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of get_functional_capability_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Functional Capability UUID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_functional_capability_by_id_v1 .
+        """ 
         return self.get_functional_capability_by_id_v1(
                     id=id,
                     headers=headers,
@@ -10870,7 +12470,86 @@ class Devices(object):
                                   start_time=None,
                                   view=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of query_assurance_events_v1 .
+        Args:
+            device_family(basestring): deviceFamily query parameter. Device family. Please note that multiple
+                families across network device type and client type is not allowed. For example,
+                choosing `Routers` along with `Wireless Client` or `Unified AP` is not supported.
+                Examples: `deviceFamily=Switches and Hubs` (single deviceFamily requested)
+                `deviceFamily=Switches and Hubs&deviceFamily=Routers` (multiple deviceFamily requested)
+                .
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time minus 24
+                hours. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. If
+                `endTime` is not provided, API will default to current time. .
+            message_type(basestring): messageType query parameter. Message type for the event. Examples:
+                `messageType=Syslog` (single messageType requested)
+                `messageType=Trap&messageType=Syslog` (multiple messageType requested) .
+            severity(int): severity query parameter. Severity of the event between 0 and 6. This is applicable only
+                for events related to network devices (other than AP) and `Wired Client` events. (Value:
+                Severity: 0: Emergency: 1: Alert: 2: Critical: 3: Error: 4: Warning: 5: Notice: 6:
+                Info),  Examples: `severity=0` (single severity requested) `severity=0&severity=1`
+                (multiple severity requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+                `?siteId=id1` (single siteId requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple
+                siteId requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyId requested) .
+            network_device_name(basestring): networkDeviceName query parameter. Network device name. This parameter
+                is applicable for network device related families. This field supports wildcard (`*`)
+                character-based search. Ex: `*Branch*` or `Branch*` or `*Branch` Examples:
+                `networkDeviceName=Branch-3-Gateway` (single networkDeviceName requested)
+                `networkDeviceName=Branch-3-Gateway&networkDeviceName=Branch-3-Switch` (multiple
+                networkDeviceName requested) .
+            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
+                requested) `networkDeviceId=6bef213c-19ca-4170-8375-
+                b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
+                cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
+                networkDeviceId with & separator) .
+            ap_mac(basestring): apMac query parameter. MAC address of the access point. This parameter is applicable
+                for `Unified AP` and `Wireless Client` events. This field supports wildcard (`*`)
+                character-based search. Ex: `*50:0F*` or `50:0F*` or `*50:0F` Examples:
+                `apMac=50:0F:80:0F:F7:E0` (single apMac requested)
+                `apMac=50:0F:80:0F:F7:E0&apMac=18:80:90:AB:7E:A0` (multiple apMac requested) .
+            client_mac(basestring): clientMac query parameter. MAC address of the client. This parameter is
+                applicable for `Wired Client` and `Wireless Client` events. This field supports wildcard
+                (`*`) character-based search. Ex: `*66:2B*` or `66:2B*` or `*66:2B` Examples:
+                `clientMac=66:2B:B8:D2:01:56` (single clientMac requested)
+                `clientMac=66:2B:B8:D2:01:56&clientMac=DC:A6:32:F5:5A:89` (multiple clientMac requested)
+                .
+            attribute(basestring): attribute query parameter. The list of attributes that needs to be included in
+                the response. If this parameter is not provided, then basic attributes (`id`, `name`,
+                `timestamp`, `details`, `messageType`, `siteHierarchyId`, `siteHierarchy`,
+                `deviceFamily`, `networkDeviceId`, `networkDeviceName`, `managementIpAddress`) would be
+                part of the response.  Examples: `attribute=name` (single attribute requested)
+                `attribute=name&attribute=networkDeviceName` (multiple attribute requested) .
+            view(basestring): view query parameter. The list of events views. Please refer to `EventViews` for the
+                supported list  Examples: `view=network` (single view requested) `view=network&view=ap`
+                (multiple view requested) .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            limit(int): limit query parameter. Maximum number of records to return .
+            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
+            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of query_assurance_events_v1 .
+        """ 
         return self.query_assurance_events_v1(
                     device_family=device_family,
                     ap_mac=ap_mac,
@@ -10898,10 +12577,20 @@ class Devices(object):
     def get_allowed_mac_address_count(self,
                                          headers=None,
                                          **request_parameters):
+        """ This function is an alias of get_allowed_mac_address_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_allowed_mac_address_count_v1 .
+        """
         return self.get_allowed_mac_address_count_v1(
-                                         headers=headers,
-                                         **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -10909,7 +12598,21 @@ class Devices(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of update_health_score_definitions_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_health_score_definitions_v1 .
+        """ 
         return self.update_health_score_definitions_v1(
                     headers=headers,
                     payload=payload,
@@ -10922,7 +12625,18 @@ class Devices(object):
     def get_device_interface_count_by_id(self,
                                          device_id,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_device_interface_count_by_id_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_interface_count_by_id_v1 .
+        """ 
         return self.get_device_interface_count_by_id_v1(
                     device_id=device_id,
                     headers=headers,
@@ -10934,7 +12648,18 @@ class Devices(object):
     def get_interface_by_id(self,
                                id,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of get_interface_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Interface ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interface_by_id_v1 .
+        """ 
         return self.get_interface_by_id_v1(
                     id=id,
                     headers=headers,
@@ -10947,7 +12672,20 @@ class Devices(object):
                                    limit=None,
                                    offset=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_allowed_mac_address_v1 .
+        Args:
+            offset(int): offset query parameter. The offset of the first item in the collection to return. .
+            limit(int): limit query parameter. The maximum number of entries to return. If the value exceeds the
+                total count, then the maximum entries will be returned. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_allowed_mac_address_v1 .
+        """ 
         return self.get_allowed_mac_address_v1(
                     limit=limit,
                     offset=offset,
@@ -10962,7 +12700,22 @@ class Devices(object):
                              search_by,
                              timestamp=None,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of get_device_detail_v1 .
+        Args:
+            timestamp(int): timestamp query parameter. UTC timestamp of device data in milliseconds .
+            identifier(basestring): identifier query parameter. One of "macAddress", "nwDeviceName", "uuid" (case
+                insensitive) .
+            search_by(basestring): searchBy query parameter. MAC Address, device name, or UUID of the network device
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_detail_v1 .
+        """ 
         return self.get_device_detail_v1(
                     identifier=identifier,
                     search_by=search_by,
@@ -10981,7 +12734,25 @@ class Devices(object):
                                                            headers=None,
                                                            payload=None,
                                                            active_validation=True,
-                                                           **request_parameters):  
+                                                           **request_parameters):
+        """ This function is an alias of update_health_score_definition_for_the_given_id_v1 .
+        Args:
+            includeForOverallHealth(boolean): Devices's Include For Overall Health.
+            synchronizeToIssueThreshold(boolean): Devices's Synchronize To Issue Threshold.
+            thresholdValue(number): Devices's Thresehold Value.
+            id(basestring): id path parameter. Health score definition id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_health_score_definition_for_the_given_id_v1 .
+        """ 
         return self.update_health_score_definition_for_the_given_id_v1(
                     id=id,
                     includeForOverallHealth=includeForOverallHealth,
@@ -11000,7 +12771,27 @@ class Devices(object):
                                                    attribute=None,
                                                    view=None,
                                                    headers=None,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of get_details_of_a_single_assurance_event_v1 .
+        Args:
+            id(basestring): id path parameter. Unique identifier for the event .
+            attribute(basestring): attribute query parameter. The list of attributes that needs to be included in
+                the response. If this parameter is not provided, then basic attributes (`id`, `name`,
+                `timestamp`, `details`, `messageType`, `siteHierarchyId`, `siteHierarchy`,
+                `deviceFamily`, `networkDeviceId`, `networkDeviceName`, `managementIpAddress`) would be
+                part of the response.  Examples: `attribute=name` (single attribute requested)
+                `attribute=name&attribute=networkDeviceName` (multiple attribute requested) .
+            view(basestring): view query parameter. The list of events views. Please refer to `EventViews` for the
+                supported list  Examples: `view=network` (single view requested) `view=network&view=ap`
+                (multiple view requested) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_details_of_a_single_assurance_event_v1 .
+        """ 
         return self.get_details_of_a_single_assurance_event_v1(
                     id=id,
                     attribute=attribute,
@@ -11016,7 +12807,20 @@ class Devices(object):
                                                     records_to_return,
                                                     start_index,
                                                     headers=None,
-                                                    **request_parameters):  
+                                                    **request_parameters):
+        """ This function is an alias of get_device_interfaces_by_specified_range_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device ID .
+            start_index(int): startIndex path parameter. Start index .
+            records_to_return(int): recordsToReturn path parameter. Number of records to return .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_interfaces_by_specified_range_v1 .
+        """ 
         return self.get_device_interfaces_by_specified_range_v1(
                     device_id=device_id,
                     records_to_return=records_to_return,
@@ -11038,7 +12842,28 @@ class Devices(object):
                                                headers=None,
                                                payload=None,
                                                active_validation=True,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of query_assurance_events_with_filters_v1 .
+        Args:
+            attributes(list): Devices's Attributes (list of strings).
+            deviceFamily(list): Devices's Device Family (list of strings).
+            endTime(integer): Devices's End Time.
+            filters(list): Devices's filters (list of objects).
+            page(object): Devices's page.
+            startTime(integer): Devices's Start Time.
+            views(list): Devices's Views (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of query_assurance_events_with_filters_v1 .
+        """ 
         return self.query_assurance_events_with_filters_v1(
                     attributes=attributes,
                     deviceFamily=deviceFamily,
@@ -11061,7 +12886,21 @@ class Devices(object):
                          mac_address=None,
                          management_ip_address=None,
                          headers=None,
-                         **request_parameters):  
+                         **request_parameters):
+        """ This function is an alias of get_device_count_v1 .
+        Args:
+            hostname(basestring, list, set, tuple): hostname query parameter.
+            management_ip_address(basestring, list, set, tuple): managementIpAddress query parameter.
+            mac_address(basestring, list, set, tuple): macAddress query parameter.
+            location_name(basestring, list, set, tuple): locationName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_count_v1 .
+        """ 
         return self.get_device_count_v1(
                     hostname=hostname,
                     location_name=location_name,
@@ -11079,7 +12918,23 @@ class Devices(object):
                                                headers=None,
                                                payload=None,
                                                active_validation=True,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of start_wireless_rogue_ap_containment_v1 .
+        Args:
+            macAddress(string): Devices's Mac Address.
+            type(integer): Devices's Type.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of start_wireless_rogue_ap_containment_v1 .
+        """ 
         return self.start_wireless_rogue_ap_containment_v1(
                     macAddress=macAddress,
                     type=type,
@@ -11097,7 +12952,23 @@ class Devices(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of create_user_defined_field_v1 .
+        Args:
+            description(string): Devices's Description of UDF .
+            name(string): Devices's Name of UDF .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_user_defined_field_v1 .
+        """ 
         return self.create_user_defined_field_v1(
                     description=description,
                     name=name,
@@ -11115,7 +12986,24 @@ class Devices(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of update_device_management_address_v1 .
+        Args:
+            newIP(string): Devices's New IP Address of the device to be Updated .
+            deviceid(basestring): deviceid path parameter. The UUID of the device whose management IP address is to
+                be updated. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_device_management_address_v1 .
+        """ 
         return self.update_device_management_address_v1(
                     deviceid=deviceid,
                     newIP=newIP,
@@ -11131,7 +13019,19 @@ class Devices(object):
                               device_id,
                               name,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of get_interface_details_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device ID .
+            name(basestring): name query parameter. Interface name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interface_details_v1 .
+        """ 
         return self.get_interface_details_v1(
                     device_id=device_id,
                     name=name,
@@ -11172,7 +13072,76 @@ class Devices(object):
                      headers=None,
                      payload=None,
                      active_validation=True,
-                     **request_parameters):  
+                     **request_parameters):
+        """ This function is an alias of sync_devices_v1 .
+        Args:
+            cliTransport(string): Devices's CLI transport. Supported values: telnet, ssh. Use NO!$DATA!$ if no
+                change is required. Required if type is NETWORK_DEVICE. .
+            computeDevice(boolean): Devices's Compute Device or not. Options are true / false. .
+            enablePassword(string): Devices's CLI enable password of the device. Required if device is configured to
+                use enable password. Use NO!$DATA!$ if no change is required. .
+            extendedDiscoveryInfo(string): Devices's This field holds that info as whether to add device with canned
+                data or not. Supported values: DISCOVER_WITH_CANNED_DATA. .
+            httpPassword(string): Devices's HTTP password of the device / API key for Meraki Dashboard. Required if
+                type is MERAKI_DASHBOARD or COMPUTE_DEVICE. Use NO!$DATA!$ if no change is required. .
+            httpPort(string): Devices's HTTP port of the device. Required if type is COMPUTE_DEVICE. .
+            httpSecure(boolean): Devices's Flag to select HTTP / HTTPS protocol. Options are true / false. true for
+                HTTPS and false for HTTP. .
+            httpUserName(string): Devices's HTTP Username of the device. Required if type is COMPUTE_DEVICE. Use
+                NO!$DATA!$ if no change is required. .
+            ipAddress(list): Devices's IP Address of the device. Required. Use 'api.meraki.com' for Meraki
+                Dashboard.  (list of strings).
+            merakiOrgId(list): Devices's Selected Meraki organization for which the devices needs to be imported.
+                Required if type is MERAKI_DASHBOARD.  (list of strings).
+            netconfPort(string): Devices's Netconf Port of the device. cliTransport must be 'ssh' if netconf is
+                provided. .
+            password(string): Devices's CLI Password of the device. Required if type is NETWORK_DEVICE. Use
+                NO!$DATA!$ if no change is required. .
+            serialNumber(string): Devices's Serial Number of the Device. Required if extendedDiscoveryInfo is
+                'DISCOVER_WITH_CANNED_DATA'. .
+            snmpAuthPassphrase(string): Devices's SNMPv3 auth passphrase of the device. Required if snmpMode is
+                authNoPriv or authPriv. Use NO!$DATA!$ if no change is required. .
+            snmpAuthProtocol(string): Devices's SNMPv3 auth protocol. Supported values: sha, md5.  Required if
+                snmpMode is authNoPriv or authPriv. Use NODATACHANGE if no change is required. .
+            snmpMode(string): Devices's SNMPv3 mode. Supported values: noAuthnoPriv, authNoPriv, authPriv. Required
+                if snmpVersion is v3. Use NODATACHANGE if no change is required. .
+            snmpPrivPassphrase(string): Devices's SNMPv3 priv passphrase. Required if snmpMode is authPriv. Use
+                NO!$DATA!$ if no change is required. .
+            snmpPrivProtocol(string): Devices's SNMPv3 priv protocol. Supported values: AES128. Required if snmpMode
+                is authPriv. Use NODATACHANGE if no change is required. .
+            snmpROCommunity(string): Devices's SNMP Read Community of the device. If snmpVersion is v2, at least one
+                of snmpROCommunity and snmpRWCommunity is required. Use NO!$DATA!$ if no change is
+                required. .
+            snmpRWCommunity(string): Devices's SNMP Write Community of the device. If snmpVersion is v2, at least
+                one of snmpROCommunity and snmpRWCommunity is required. Use NO!$DATA!$ if no change is
+                required. .
+            snmpRetry(integer): Devices's SNMP retry count. Max value supported is 3. Default is Global SNMP retry
+                (if exists) or 3. .
+            snmpTimeout(integer): Devices's SNMP timeout in seconds. Max value supported is 300. Default is Global
+                SNMP timeout (if exists) or 5. .
+            snmpUserName(string): Devices's SNMPV3 user name of the device. Required if snmpVersion is v3. Use
+                NO!$DATA!$ if no change is required. .
+            snmpVersion(string): Devices's SNMP version. Values supported: v2, v3. Required if type is
+                NETWORK_DEVICE, COMPUTE_DEVICE or THIRD_PARTY_DEVICE. Use NODATACHANGE if no change is
+                required. .
+            type(string): Devices's Type of device being edited. Default is NETWORK_DEVICE. . Available values are
+                'COMPUTE_DEVICE', 'MERAKI_DASHBOARD', 'NETWORK_DEVICE', 'THIRD_PARTY_DEVICE' and
+                'NODATACHANGE'.
+            updateMgmtIPaddressList(list): Devices's updateMgmtIPaddressList (list of objects).
+            userName(string): Devices's CLI user name of the device. Required if type is NETWORK_DEVICE. Use
+                NO!$DATA!$ if no change is required. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of sync_devices_v1 .
+        """ 
         return self.sync_devices_v1(
                     cliTransport=cliTransport,
                     computeDevice=computeDevice,
@@ -11213,7 +13182,21 @@ class Devices(object):
                                                                       device_uuid,
                                                                       type=None,
                                                                       headers=None,
-                                                                      **request_parameters):  
+                                                                      **request_parameters):
+        """ This function is an alias of get_the_details_of_physical_components_of_the_given_device_v1 .
+        Args:
+            device_uuid(basestring): deviceUuid path parameter.
+            type(basestring): type query parameter. Type value can be PowerSupply, Fan, Chassis, Backplane, Module,
+                PROCESSOR, Other, SFP. If no type is mentioned, All equipments are fetched for the
+                device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_the_details_of_physical_components_of_the_given_device_v1 .
+        """ 
         return self.get_the_details_of_physical_components_of_the_given_device_v1(
                     device_uuid=device_uuid,
                     type=type,
@@ -11227,7 +13210,21 @@ class Devices(object):
                                                  device_id,
                                                  function_name=None,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of get_functional_capability_for_devices_v1 .
+        Args:
+            device_id(basestring): deviceId query parameter. Accepts comma separated deviceid's and return list of
+                functional-capabilities for the given id's. If invalid or not-found id's are provided,
+                null entry will be returned in the list. .
+            function_name(basestring, list, set, tuple): functionName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_functional_capability_for_devices_v1 .
+        """ 
         return self.get_functional_capability_for_devices_v1(
                     device_id=device_id,
                     function_name=function_name,
@@ -11247,7 +13244,29 @@ class Devices(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of update_interface_details_v1 .
+        Args:
+            adminStatus(string): Devices's Admin status as ('UP'/'DOWN') .
+            description(string): Devices's Description for the Interface .
+            vlanId(integer): Devices's VLAN Id to be Updated .
+            voiceVlanId(integer): Devices's Voice Vlan Id to be Updated .
+            interface_uuid(basestring): interfaceUuid path parameter. Interface ID .
+            deployment_mode(basestring): deploymentMode query parameter. Preview/Deploy ['Preview' means the
+                configuration is not pushed to the device. 'Deploy' makes the configuration pushed to
+                the device] .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_interface_details_v1 .
+        """ 
         return self.update_interface_details_v1(
                     interface_uuid=interface_uuid,
                     adminStatus=adminStatus,
@@ -11276,7 +13295,72 @@ class Devices(object):
                                       site_id=None,
                                       start_time=None,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of count_the_number_of_events_v1 .
+        Args:
+            device_family(basestring): deviceFamily query parameter. Device family. Please note that multiple
+                families across network device type and client type is not allowed. For example,
+                choosing `Routers` along with `Wireless Client` or `Unified AP` is not supported.
+                Examples: `deviceFamily=Switches and Hubs` (single deviceFamily requested)
+                `deviceFamily=Switches and Hubs&deviceFamily=Routers` (multiple deviceFamily requested)
+                .
+            start_time(basestring): startTime query parameter. Start time from which API queries the data set
+                related to the resource. It must be specified in UNIX epochtime in milliseconds. Value
+                is inclusive. If `startTime` is not provided, API will default to current time minus 24
+                hours. .
+            end_time(basestring): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. If
+                `endTime` is not provided, API will default to current time. .
+            message_type(basestring): messageType query parameter. Message type for the event. Examples:
+                `messageType=Syslog` (single messageType requested)
+                `messageType=Trap&messageType=Syslog` (multiple messageType requested) .
+            severity(basestring): severity query parameter. Severity of the event between 0 and 6. This is
+                applicable only for events related to network devices (other than AP) and `Wired Client`
+                events. (Value: Severity: 0: Emergency: 1: Alert: 2: Critical: 3: Error: 4: Warning: 5:
+                Notice: 6: Info),  Examples: `severity=0` (single severity requested)
+                `severity=0&severity=1` (multiple severity requested) .
+            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+                `?siteId=id1` (single siteId requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple
+                siteId requested) .
+            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
+                (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
+                `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
+                requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
+                globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyId requested) .
+            network_device_name(basestring): networkDeviceName query parameter. Network device name. This parameter
+                is applicable for network device related families. This field supports wildcard (`*`)
+                character-based search. Ex: `*Branch*` or `Branch*` or `*Branch` Examples:
+                `networkDeviceName=Branch-3-Gateway` (single networkDeviceName requested)
+                `networkDeviceName=Branch-3-Gateway&networkDeviceName=Branch-3-Switch` (multiple
+                networkDeviceName requested) .
+            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+                `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
+                `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
+                requested) `networkDeviceId=6bef213c-19ca-4170-8375-
+                b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
+                cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
+                networkDeviceId requested) .
+            ap_mac(basestring): apMac query parameter. MAC address of the access point. This parameter is applicable
+                for `Unified AP` and `Wireless Client` events. This field supports wildcard (`*`)
+                character-based search. Ex: `*50:0F*` or `50:0F*` or `*50:0F` Examples:
+                `apMac=50:0F:80:0F:F7:E0` (single apMac requested)
+                `apMac=50:0F:80:0F:F7:E0&apMac=18:80:90:AB:7E:A0` (multiple apMac requested) .
+            client_mac(basestring): clientMac query parameter. MAC address of the client. This parameter is
+                applicable for `Wired Client` and `Wireless Client` events. This field supports wildcard
+                (`*`) character-based search. Ex: `*66:2B*` or `66:2B*` or `*66:2B` Examples:
+                `clientMac=66:2B:B8:D2:01:56` (single clientMac requested)
+                `clientMac=66:2B:B8:D2:01:56&clientMac=DC:A6:32:F5:5A:89` (multiple clientMac requested)
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_the_number_of_events_v1 .
+        """ 
         return self.count_the_number_of_events_v1(
                     device_family=device_family,
                     ap_mac=ap_mac,
@@ -11298,9 +13382,17 @@ class Devices(object):
     def get_ospf_interfaces(self,
                                headers=None,
                                **request_parameters):
+        """ This function is an alias of get_ospf_interfaces_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ospf_interfaces_v1 .
+        """
         return self.get_ospf_interfaces_v1(
-                                headers=headers,
-                               **request_parameters
-        )  
-
-
+                    headers=headers,
+                    **request_parameters
+        )

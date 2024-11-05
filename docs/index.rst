@@ -59,15 +59,14 @@ What is CatalystCenter?
 --------------------
 
 
-    "A better way to control your network. Cisco CatalystCenter is the network management and command center for Cisco CatalystCenter, your intent-based network for the enterprise."
+"A better way to control your network. Cisco CatalystCenter is the network management and command center for Cisco CatalystCenter, your intent-based network for the enterprise."
 
-Visit the official `CatalystCenter`_ website for more information and to create a `free account`_!
 
 
 CatalystCenter for Developers
 -------------------------
 
-Leveraging the CatalystCenter APIs and developing on top of the CatalystCenter cloud is easy.  Signup for a `free account`_ and then head over to the `CatalystCenter for Developers`_ website to learn more.
+Leveraging the CatalystCenter APIs and developing on top of the CatalystCenter cloud is easy. Head over to the `CatalystCenter for Developers`_ website to learn more.
 
 
 *Copyright (c) 2024 Cisco Systems.*

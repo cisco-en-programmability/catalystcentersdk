@@ -150,7 +150,7 @@ The following table shows the supported versions.
    * - Cisco CatalystCenter version
      - Python "catalystcentersdk" version
    * - 2.3.7.6
-     - 1.0.0
+     - 2.3.7.6.X
 
    
 

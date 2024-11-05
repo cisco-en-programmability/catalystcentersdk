@@ -138,7 +138,6 @@ class RestSession(object):
                  verify=DEFAULT_VERIFY,
                  version=None,
                  debug=False,
-                 user_string = None,
                  user_agent = None):
         """Initialize a new RestSession object.
 
@@ -177,7 +176,6 @@ class RestSession(object):
         check_type(verify, (bool, str), may_be_none=False)
         check_type(version, str, may_be_none=False)
         check_type(debug, (bool), may_be_none=False)
-        check_type(user_string, str, may_be_none=False)
         check_type(user_agent, str, may_be_none=False)
 
         super(RestSession, self).__init__()
@@ -191,7 +189,6 @@ class RestSession(object):
         self._verify = verify
         self._version = version
         self._debug = debug
-        self._user_string = user_string
         self._user_agent = user_agent
 
         if debug:
@@ -208,7 +205,8 @@ class RestSession(object):
 
         # Update the headers of the `requests` session
         self.update_headers({'X-Auth-Token': access_token,
-                             'Content-type': 'application/json;charset=utf-8'})
+                             'Content-type': 'application/json;charset=utf-8',
+                             'User-Agent': f'python-cisco-dnacsdk/{version}-{user_agent}'})
 
     @property
     def version(self):

@@ -88,7 +88,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-policy-v1
+            https://developer.cisco.com/docs/dna-center/#!get-application-policy
         """
         check_type(headers, dict)
         check_type(policy_scope, str)
@@ -143,7 +143,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-policy-default-v1
+            https://developer.cisco.com/docs/dna-center/#!get-application-policy-default
         """
         check_type(headers, dict)
         if headers is not None:
@@ -207,7 +207,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!application-policy-intent-v1
+            https://developer.cisco.com/docs/dna-center/#!application-policy-intent
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -280,7 +280,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-policy-queuing-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!get-application-policy-queuing-profile
         """
         check_type(headers, dict)
         check_type(name, str)
@@ -341,7 +341,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-application-policy-queuing-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-application-policy-queuing-profile
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -406,7 +406,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-application-policy-queuing-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-application-policy-queuing-profile
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -465,7 +465,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-policy-queuing-profile-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-application-policy-queuing-profile-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -519,7 +519,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-application-policy-queuing-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-application-policy-queuing-profile
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -580,7 +580,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-sets-v1
+            https://developer.cisco.com/docs/dna-center/#!get-application-sets
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -643,7 +643,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-application-set-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-application-set
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -705,7 +705,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-application-set-v1
+            https://developer.cisco.com/docs/dna-center/#!create-application-set
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -764,7 +764,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-sets-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-application-sets-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -823,7 +823,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-application-v1
+            https://developer.cisco.com/docs/dna-center/#!create-application
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -888,7 +888,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!edit-application-v1
+            https://developer.cisco.com/docs/dna-center/#!edit-application
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -949,7 +949,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-application-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-application
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1012,7 +1012,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-applications-v1
+            https://developer.cisco.com/docs/dna-center/#!get-applications
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -1073,7 +1073,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-applications-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-applications-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1127,7 +1127,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-qos-device-interface-info-v1
+            https://developer.cisco.com/docs/dna-center/#!get-qos-device-interface-info
         """
         check_type(headers, dict)
         check_type(network_device_id, str)
@@ -1188,7 +1188,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-qos-device-interface-info-v1
+            https://developer.cisco.com/docs/dna-center/#!update-qos-device-interface-info
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1255,7 +1255,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-qos-device-interface-info-v1
+            https://developer.cisco.com/docs/dna-center/#!create-qos-device-interface-info
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1314,7 +1314,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-qos-device-interface-info-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-qos-device-interface-info-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1369,7 +1369,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-qos-device-interface-info-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-qos-device-interface-info
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1430,7 +1430,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-application-sets-v2
+            https://developer.cisco.com/docs/dna-center/#!create-application-sets
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1502,7 +1502,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-sets-v2
+            https://developer.cisco.com/docs/dna-center/#!get-application-sets
         """
         check_type(headers, dict)
         check_type(attributes, str,
@@ -1572,7 +1572,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-set-count-v2
+            https://developer.cisco.com/docs/dna-center/#!get-application-set-count
         """
         check_type(headers, dict)
         check_type(scalable_group_type, str,
@@ -1631,7 +1631,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-application-set-v2
+            https://developer.cisco.com/docs/dna-center/#!delete-application-set
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1693,7 +1693,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!edit-applications-v2
+            https://developer.cisco.com/docs/dna-center/#!edit-applications
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1761,7 +1761,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-applications-v2
+            https://developer.cisco.com/docs/dna-center/#!create-applications
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1830,7 +1830,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-applications-v2
+            https://developer.cisco.com/docs/dna-center/#!get-applications
         """
         check_type(headers, dict)
         check_type(attributes, str,
@@ -1900,7 +1900,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-application-count-v2
+            https://developer.cisco.com/docs/dna-center/#!get-application-count
         """
         check_type(headers, dict)
         check_type(scalable_group_type, str,
@@ -1958,7 +1958,7 @@ class ApplicationPolicy(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-application-v2
+            https://developer.cisco.com/docs/dna-center/#!delete-application
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1999,6 +1999,17 @@ class ApplicationPolicy(object):
     def get_application_policy_default(self,
                                           headers=None,
                                           **request_parameters):
+        """This function is an alias of get_application_policy_default_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_policy_default_v1.
+        """
         return self.get_application_policy_default_v1(
                                         headers=headers,
                                         **request_parameters
@@ -2009,7 +2020,19 @@ class ApplicationPolicy(object):
     def get_qos_device_interface_info(self,
                                          network_device_id=None,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """This function is an alias of get_qos_device_interface_info_v1 .
+
+        Args:
+            network_device_id(str): networkDeviceId query parameter. network device id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_qos_device_interface_info_v1.
+        """  
         return self.get_qos_device_interface_info_v1(
                     network_device_id=network_device_id,
                     headers=headers,
@@ -2022,7 +2045,22 @@ class ApplicationPolicy(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """This function is an alias of create_application_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_application_v1.
+        """  
         return self.create_application_v1(
                     headers=headers,
                     payload=payload,
@@ -2035,7 +2073,19 @@ class ApplicationPolicy(object):
     def delete_application(self,
                               id,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """This function is an alias of delete_application_v1 .
+
+        Args:
+            id(str): id query parameter. Application's Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_application_v1.
+        """  
         return self.delete_application_v1(
                     id=id,
                     headers=headers,
@@ -2047,7 +2097,19 @@ class ApplicationPolicy(object):
     def get_application_policy(self,
                                   policy_scope=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """This function is an alias of get_application_policy_v1 .
+
+        Args:
+            policy_scope(str): policyScope query parameter. policy scope name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_policy_v1.
+        """  
         return self.get_application_policy_v1(
                     policy_scope=policy_scope,
                     headers=headers,
@@ -2059,7 +2121,20 @@ class ApplicationPolicy(object):
     def get_application_count(self,
                                  scalable_group_type,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """This function is an alias of get_application_count_v2 .
+
+        Args:
+            scalable_group_type(str): scalableGroupType query parameter. scalable group type to retrieve,
+                valid value APPLICATION .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_count_v2.
+        """  
         return self.get_application_count_v2(
                     scalable_group_type=scalable_group_type,
                     headers=headers,
@@ -2071,6 +2146,17 @@ class ApplicationPolicy(object):
     def get_application_sets_count(self,
                                       headers=None,
                                       **request_parameters):
+        """This function is an alias of  get_application_sets_count_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_sets_count_v1.
+        """
         return self.get_application_sets_count_v1(
                                 headers=headers,
                                 **request_parameters
@@ -2082,7 +2168,22 @@ class ApplicationPolicy(object):
                             headers=None,
                             payload=None,
                             active_validation=True,
-                            **request_parameters):  
+                            **request_parameters):
+        """This function is an alias of edit_application_v1  .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of edit_application_v1.
+        """  
         return self.edit_application_v1(
                     headers=headers,
                     payload=payload,
@@ -2095,6 +2196,17 @@ class ApplicationPolicy(object):
     def get_application_policy_queuing_profile_count(self,
                                                         headers=None,
                                                         **request_parameters):
+        """This function is an alias of get_application_policy_queuing_profile_count_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_policy_queuing_profile_count_v1.
+        """
         return self.get_application_policy_queuing_profile_count_v1(
                                                         headers=headers,
                                                         **request_parameters
@@ -2106,7 +2218,22 @@ class ApplicationPolicy(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """This function is an alias of create_application_sets_v2 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_application_sets_v2.
+        """  
         return self.create_application_sets_v2(
                     headers=headers,
                     payload=payload,
@@ -2120,7 +2247,22 @@ class ApplicationPolicy(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """This function is an alias of edit_applications_v2 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of edit_applications_v2.
+        """  
         return self.edit_applications_v2(
                     headers=headers,
                     payload=payload,
@@ -2133,7 +2275,20 @@ class ApplicationPolicy(object):
     def get_application_set_count(self,
                                      scalable_group_type,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """This function is an alias of get_application_set_count_v2 .
+
+        Args:
+            scalable_group_type(str): scalableGroupType query parameter. Scalable group type to retrieve,
+                valid value APPLICATION_GROUP .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_set_count_v2.
+        """  
         return self.get_application_set_count_v2(
                     scalable_group_type=scalable_group_type,
                     headers=headers,
@@ -2146,7 +2301,22 @@ class ApplicationPolicy(object):
                                headers=None,
                                payload=None,
                                active_validation=True,
-                               **request_parameters):  
+                               **request_parameters):
+        """This function is an alias of create_applications_v2 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_applications_v2.
+        """  
         return self.create_applications_v2(
                     headers=headers,
                     payload=payload,
@@ -2161,7 +2331,21 @@ class ApplicationPolicy(object):
                             name=None,
                             offset=None,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """This function is an alias of get_applications_v1 .
+
+        Args:
+            offset(int): offset query parameter. The offset of the first application to be returned .
+            limit(int): limit query parameter. The maximum number of applications to be returned .
+            name(str): name query parameter. Application's name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_applications_v1.
+        """  
         return self.get_applications_v1(
                     limit=limit,
                     name=name,
@@ -2175,7 +2359,20 @@ class ApplicationPolicy(object):
     def delete_qos_device_interface_info(self,
                                             id,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """This function is an alias of delete_qos_device_interface_info_v1 .
+
+        Args:
+            id(str): id path parameter. Id of the qos device info, this object holds all qos device interface
+                infos associate with network device id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_qos_device_interface_info_v1.
+        """  
         return self.delete_qos_device_interface_info_v1(
                     id=id,
                     headers=headers,
@@ -2187,6 +2384,17 @@ class ApplicationPolicy(object):
     def get_qos_device_interface_info_count(self,
                                                headers=None,
                                                **request_parameters):
+        """This function is an alias of get_qos_device_interface_info_count_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_qos_device_interface_info_count_v1.
+        """
         return self.get_qos_device_interface_info_count_v1(
                                             headers=headers,
                                             **request_parameters
@@ -2201,7 +2409,25 @@ class ApplicationPolicy(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """This function is an alias of application_policy_intent_v1 .
+
+        Args:
+            createList(list): Application Policy's createList (list of objects).
+            deleteList(list): Application Policy's Delete list of Group Based Policy ids  (list of strings).
+            updateList(list): Application Policy's updateList (list of objects).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of application_policy_intent_v1.
+        """  
         return self.application_policy_intent_v1(
                     createList=createList,
                     deleteList=deleteList,
@@ -2217,7 +2443,19 @@ class ApplicationPolicy(object):
     def get_application_policy_queuing_profile(self,
                                                   name=None,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """This function is an alias of get_application_policy_queuing_profile_v1 .
+
+        Args:
+            name(str): name query parameter. queuing profile name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_policy_queuing_profile_v1.
+        """  
         return self.get_application_policy_queuing_profile_v1(
                     name=name,
                     headers=headers,
@@ -2230,7 +2468,22 @@ class ApplicationPolicy(object):
                                                      headers=None,
                                                      payload=None,
                                                      active_validation=True,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """This function is an alias of update_application_policy_queuing_profile_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_application_policy_queuing_profile_v1.
+        """  
         return self.update_application_policy_queuing_profile_v1(
                     headers=headers,
                     payload=payload,
@@ -2243,7 +2496,19 @@ class ApplicationPolicy(object):
     def delete_application_set(self,
                                   id,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """This function is an alias of delete_application_set_v1 .
+
+        Args:
+            id(str): id query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_application_set_v1.
+        """  
         return self.delete_application_set_v1(
                     id=id,
                     headers=headers,
@@ -2257,7 +2522,21 @@ class ApplicationPolicy(object):
                                 name=None,
                                 offset=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """This function is an alias of get_application_sets_v1 .
+
+        Args:
+            offset(int): offset query parameter.
+            limit(int): limit query parameter.
+            name(str): name query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_application_sets_v1.
+        """  
         return self.get_application_sets_v1(
                     limit=limit,
                     name=name,
@@ -2272,7 +2551,22 @@ class ApplicationPolicy(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """This function is an alias of update_qos_device_interface_info_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_qos_device_interface_info_v1.
+        """  
         return self.update_qos_device_interface_info_v1(
                     headers=headers,
                     payload=payload,
@@ -2285,6 +2579,17 @@ class ApplicationPolicy(object):
     def get_applications_count(self,
                                 headers=None,
                                 **request_parameters):
+        """This function is an alias of get_applications_count_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_applications_count_v1.
+        """
         return self.get_applications_count_v1(
                                 headers=headers,
                                 **request_parameters
@@ -2296,7 +2601,21 @@ class ApplicationPolicy(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """This function is an alias of create_qos_device_interface_info_v1.
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_qos_device_interface_info_v1.
+        """  
         return self.create_qos_device_interface_info_v1(
                     headers=headers,
                     payload=payload,
@@ -2310,7 +2629,22 @@ class ApplicationPolicy(object):
                                                      headers=None,
                                                      payload=None,
                                                      active_validation=True,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """This function is an alias of create_application_policy_queuing_profile_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_application_policy_queuing_profile_v1.
+        """
         return self.create_application_policy_queuing_profile_v1(
                     headers=headers,
                     payload=payload,
@@ -2323,7 +2657,19 @@ class ApplicationPolicy(object):
     def delete_application_policy_queuing_profile(self,
                                                      id,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """This function is an alias of delete_application_policy_queuing_profile_v1 .
+
+        Args:
+            id(str): id path parameter. Id of custom queuing profile to delete .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_application_policy_queuing_profile_v1.
+        """  
         return self.delete_application_policy_queuing_profile_v1(
                     id=id,
                     headers=headers,
@@ -2336,7 +2682,22 @@ class ApplicationPolicy(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """This function is an alias of create_application_set_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_application_set_v1.
+        """  
         return self.create_application_set_v1(
                     headers=headers,
                     payload=payload,

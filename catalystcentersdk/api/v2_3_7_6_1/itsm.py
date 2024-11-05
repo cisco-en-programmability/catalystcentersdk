@@ -95,7 +95,7 @@ class Itsm(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-c-m-d-b-sync-status-v1
+            https://developer.cisco.com/docs/dna-center/#!get-c-m-d-b-sync-status
         """
         check_type(headers, dict)
         check_type(status, str)
@@ -157,7 +157,7 @@ class Itsm(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-failed-i-t-s-m-events-v1
+            https://developer.cisco.com/docs/dna-center/#!get-failed-i-t-s-m-events
         """
         check_type(headers, dict)
         check_type(instance_id, str)
@@ -221,7 +221,7 @@ class Itsm(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retry-integration-events-v1
+            https://developer.cisco.com/docs/dna-center/#!retry-integration-events
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -267,7 +267,20 @@ class Itsm(object):
                                 date=None,
                                 status=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_cmdb_sync_status_v1 .
+        Args:
+            status(basestring): status query parameter. Supported values are "Success","Failed" and "Unknown".
+                Providing other values will result in all the available sync job status. .
+            date(basestring): date query parameter. Provide date in "YYYY-MM-DD" format .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_cmdb_sync_status_v1 .
+        """ 
         return self.get_cmdb_sync_status_v1(
                     date=date,
                     status=status,
@@ -280,7 +293,19 @@ class Itsm(object):
     def get_failed_itsm_events(self,
                                   instance_id=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_failed_itsm_events_v1 .
+        Args:
+            instance_id(basestring): instanceId query parameter. Instance Id of the failed event as in the Runtime
+                Dashboard .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_failed_itsm_events_v1 .
+        """ 
         return self.get_failed_itsm_events_v1(
                     instance_id=instance_id,
                     headers=headers,
@@ -293,7 +318,21 @@ class Itsm(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of retry_integration_events_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retry_integration_events_v1 .
+        """ 
         return self.retry_integration_events_v1(
                     headers=headers,
                     payload=payload,

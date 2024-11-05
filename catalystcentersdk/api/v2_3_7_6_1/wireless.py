@@ -95,7 +95,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!sensor-test-results-v1
+            https://developer.cisco.com/docs/dna-center/#!sensor-test-results
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -177,7 +177,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-and-provision-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!create-and-provision-s-s-i-d
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -259,7 +259,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-s-i-d-and-provision-it-to-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-s-s-i-d-and-provision-it-to-devices
         """
         check_type(headers, dict)
         check_type(ssid_name, str,
@@ -329,7 +329,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!reboot-access-points-v1
+            https://developer.cisco.com/docs/dna-center/#!reboot-access-points
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -399,7 +399,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-access-point-reboot-task-result-v1
+            https://developer.cisco.com/docs/dna-center/#!get-access-point-reboot-task-result
         """
         check_type(headers, dict)
         check_type(parent_task_id, str)
@@ -458,7 +458,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-enterprise-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-enterprise-s-s-i-d
         """
         check_type(headers, dict)
         check_type(ssid_name, str)
@@ -595,7 +595,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-enterprise-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!create-enterprise-s-s-i-d
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -803,7 +803,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-enterprise-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!update-enterprise-s-s-i-d
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -931,7 +931,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-enterprise-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-enterprise-s-s-i-d
         """
         check_type(headers, dict)
         check_type(ssid_name, str,
@@ -1191,7 +1191,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!create-s-s-i-d
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1397,7 +1397,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-by-site-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-by-site
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -1460,7 +1460,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-count-by-site-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-count-by-site
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -1520,7 +1520,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-by-i-d
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -1786,7 +1786,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!update-s-s-i-d
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1992,7 +1992,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-s-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-s-s-i-d
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -2053,7 +2053,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-wireless-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-wireless-profile
         """
         check_type(headers, dict)
         check_type(wireless_profile_name, str,
@@ -2177,7 +2177,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!configure-access-points-v1
+            https://developer.cisco.com/docs/dna-center/#!configure-access-points
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2289,7 +2289,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-access-point-configuration-task-result-v1
+            https://developer.cisco.com/docs/dna-center/#!get-access-point-configuration-task-result
         """
         check_type(headers, dict)
         check_type(task_id, str,
@@ -2347,7 +2347,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-access-point-configuration-v1
+            https://developer.cisco.com/docs/dna-center/#!get-access-point-configuration
         """
         check_type(headers, dict)
         check_type(key, str,
@@ -2410,7 +2410,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!a-p-provision-connectivity-v1
+            https://developer.cisco.com/docs/dna-center/#!a-p-provision-connectivity
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2474,7 +2474,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-dynamic-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-dynamic-interface
         """
         check_type(headers, dict)
         check_type(interface_name, str,
@@ -2546,7 +2546,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-update-dynamic-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!create-update-dynamic-interface
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2616,7 +2616,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-dynamic-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!get-dynamic-interface
         """
         check_type(headers, dict)
         check_type(interface_name, str)
@@ -2680,7 +2680,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2752,7 +2752,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2819,7 +2819,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-wireless-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!get-wireless-profile
         """
         check_type(headers, dict)
         check_type(profile_name, str)
@@ -2880,7 +2880,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!provision-update-v1
+            https://developer.cisco.com/docs/dna-center/#!provision-update
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2948,7 +2948,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!provision-v1
+            https://developer.cisco.com/docs/dna-center/#!provision
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3013,7 +3013,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!p-s-k-override-v1
+            https://developer.cisco.com/docs/dna-center/#!p-s-k-override
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3074,7 +3074,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-r-f-profiles-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-r-f-profiles
         """
         check_type(headers, dict)
         check_type(rf_profile_name, str)
@@ -3157,7 +3157,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-or-update-r-f-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-or-update-r-f-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3244,7 +3244,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-r-f-profiles-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-r-f-profiles
         """
         check_type(headers, dict)
         check_type(rf_profile_name, str,
@@ -3315,7 +3315,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!factory-reset-access-points-v1
+            https://developer.cisco.com/docs/dna-center/#!factory-reset-access-points
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3388,7 +3388,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-access-points-factory-reset-status-v1
+            https://developer.cisco.com/docs/dna-center/#!get-access-points-factory-reset-status
         """
         check_type(headers, dict)
         check_type(task_id, str,
@@ -3460,7 +3460,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!a-p-provision-v1
+            https://developer.cisco.com/docs/dna-center/#!a-p-provision
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3540,7 +3540,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-mobility-groups-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-mobility-groups
         """
         check_type(headers, dict)
         check_type(network_device_id, str)
@@ -3596,7 +3596,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-mobility-groups-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-mobility-groups-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3674,7 +3674,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!mobility-provision-v1
+            https://developer.cisco.com/docs/dna-center/#!mobility-provision
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3764,7 +3764,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!mobility-reset-v1
+            https://developer.cisco.com/docs/dna-center/#!mobility-reset
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3851,7 +3851,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-managed-a-p-locations-for-w-l-c-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-managed-a-p-locations-for-w-l-c
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3939,7 +3939,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!wireless-controller-provision-v1
+            https://developer.cisco.com/docs/dna-center/#!wireless-controller-provision
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4022,7 +4022,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-anchor-managed-a-p-locations-for-specific-wireless-controller-v1
+            https://developer.cisco.com/docs/dna-center/#!get-anchor-managed-a-p-locations-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4088,7 +4088,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-managed-a-p-locations-count-for-specific-wireless-controller-v1
+            https://developer.cisco.com/docs/dna-center/#!get-managed-a-p-locations-count-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(network_device_id, str,
@@ -4152,7 +4152,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-primary-managed-a-p-locations-for-specific-wireless-controller-v1
+            https://developer.cisco.com/docs/dna-center/#!get-primary-managed-a-p-locations-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4222,7 +4222,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-secondary-managed-a-p-locations-for-specific-wireless-controller-v1
+            https://developer.cisco.com/docs/dna-center/#!get-secondary-managed-a-p-locations-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4303,7 +4303,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-details-for-specific-wireless-controller-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-details-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(ssid_name, str)
@@ -4385,7 +4385,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-count-for-specific-wireless-controller-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-count-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(admin_status, bool)
@@ -4451,7 +4451,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-wireless-profiles-v1
+            https://developer.cisco.com/docs/dna-center/#!get-wireless-profiles
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4519,7 +4519,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile-connectivity-v1
+            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile-connectivity
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4585,7 +4585,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-wireless-profiles-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-wireless-profiles-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -4649,7 +4649,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile-connectivity-v1
+            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile-connectivity
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4723,7 +4723,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-wireless-profile-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-wireless-profile-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -4780,7 +4780,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-wireless-profile-connectivity-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-wireless-profile-connectivity
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -4839,7 +4839,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all80211be-profiles-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all80211be-profiles
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4917,7 +4917,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-a80211be-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-a80211be-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4991,7 +4991,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get80211be-profiles-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get80211be-profiles-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5047,7 +5047,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-a80211be-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-a80211be-profile
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5122,7 +5122,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update80211be-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update80211be-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5201,7 +5201,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get80211be-profile-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get80211be-profile-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5260,7 +5260,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interfaces-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interfaces
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -5328,7 +5328,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!create-interface
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5394,7 +5394,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interfaces-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interfaces-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5448,7 +5448,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interface-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-interface-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5505,7 +5505,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-interface
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5572,7 +5572,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-interface-v1
+            https://developer.cisco.com/docs/dna-center/#!update-interface
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5667,7 +5667,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-r-f-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-r-f-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5752,7 +5752,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-r-f-profiles-v1
+            https://developer.cisco.com/docs/dna-center/#!get-r-f-profiles
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -5810,7 +5810,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-r-f-profiles-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-r-f-profiles-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5864,7 +5864,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-r-f-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-r-f-profile
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5921,7 +5921,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-r-f-profile-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-r-f-profile-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -6004,7 +6004,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-r-f-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-r-f-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -6281,7 +6281,29 @@ class Wireless(object):
                                                  headers=None,
                                                  payload=None,
                                                  active_validation=True,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of assign_managed_ap_locations_for_w_l_c_v1 .
+        Args:
+            primaryManagedAPLocationsSiteIds(list): Wireless's Site IDs of Primary Managed AP Locations. These
+                values can be obtained by using the API call GET: /dna/intent/api/v1/site  (list of
+                strings).
+            secondaryManagedAPLocationsSiteIds(list): Wireless's Site IDs of Secondary Managed AP Locations. These
+                values can be obtained by using the API call GET: /dna/intent/api/v1/site  (list of
+                strings).
+            device_id(basestring): deviceId path parameter. Network Device ID. This value can be obtained by using
+                the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress} .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of assign_managed_ap_locations_for_w_l_c_v1 .
+        """ 
         return self.assign_managed_ap_locations_for_w_l_c_v1(
                     device_id=device_id,
                     primaryManagedAPLocationsSiteIds=primaryManagedAPLocationsSiteIds,
@@ -6306,7 +6328,33 @@ class Wireless(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of create_rf_profile_v1 .
+        Args:
+            defaultRfProfile(boolean): Wireless's True if RF Profile is default, else False. Maximum of only 1 RF
+                Profile can be marked as default at any given time .
+            enableRadioType6GHz(boolean): Wireless's True if 6 GHz radio band is enabled in the RF Profile, else
+                False .
+            enableRadioTypeA(boolean): Wireless's True if 5 GHz radio band is enabled in the RF Profile, else False
+                .
+            enableRadioTypeB(boolean): Wireless's True if 2.4 GHz radio band is enabled in the RF Profile, else
+                False .
+            radioType6GHzProperties(object): Wireless's radioType6GHzProperties.
+            radioTypeAProperties(object): Wireless's radioTypeAProperties.
+            radioTypeBProperties(object): Wireless's radioTypeBProperties.
+            rfProfileName(string): Wireless's RF Profile Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_rf_profile_v1 .
+        """ 
         return self.create_rf_profile_v1(
                     defaultRfProfile=defaultRfProfile,
                     enableRadioType6GHz=enableRadioType6GHz,
@@ -6327,17 +6375,38 @@ class Wireless(object):
     def get_interfaces_count(self,
                                 headers=None,
                                 **request_parameters):
+        """ This function is an alias of get_interfaces_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interfaces_count_v1 .
+        """
         return self.get_interfaces_count_v1(
-                                headers=headers,
-                                **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def delete_dynamic_interface(self,
                                     interface_name,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of delete_dynamic_interface_v1 .
+        Args:
+            interface_name(basestring): interfaceName query parameter. valid interface-name to be deleted .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_dynamic_interface_v1 .
+        """ 
         return self.delete_dynamic_interface_v1(
                     interface_name=interface_name,
                     headers=headers,
@@ -6349,7 +6418,18 @@ class Wireless(object):
     def delete_rf_profile(self,
                              id,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of delete_rf_profile_v1 .
+        Args:
+            id(basestring): id path parameter. RF Profile ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_rf_profile_v1 .
+        """ 
         return self.delete_rf_profile_v1(
                     id=id,
                     headers=headers,
@@ -6363,7 +6443,22 @@ class Wireless(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of update_wireless_profile_v1 .
+        Args:
+            profileDetails(object): Wireless's profileDetails.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_wireless_profile_v1 .
+        """ 
         return self.update_wireless_profile_v1(
                     profileDetails=profileDetails,
                     headers=headers,
@@ -6381,7 +6476,24 @@ class Wireless(object):
                                                 headers=None,
                                                 payload=None,
                                                 active_validation=True,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of update_wireless_profile_connectivity_v1 .
+        Args:
+            ssidDetails(list): Wireless's ssidDetails (list of objects).
+            wirelessProfileName(string): Wireless's Wireless Network Profile Name .
+            id(basestring): id path parameter. Wireless Profile Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_wireless_profile_connectivity_v1 .
+        """ 
         return self.update_wireless_profile_connectivity_v1(
                     id=id,
                     ssidDetails=ssidDetails,
@@ -6399,7 +6511,22 @@ class Wireless(object):
                                                                             limit=None,
                                                                             offset=None,
                                                                             headers=None,
-                                                                            **request_parameters):  
+                                                                            **request_parameters):
+        """ This function is an alias of get_anchor_managed_ap_locations_for_specific_wireless_controller_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+                using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_anchor_managed_ap_locations_for_specific_wireless_controller_v1 .
+        """ 
         return self.get_anchor_managed_ap_locations_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     limit=limit,
@@ -6416,7 +6543,23 @@ class Wireless(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of create_update_dynamic_interface_v1 .
+        Args:
+            interfaceName(string): Wireless's dynamic-interface name .
+            vlanId(number): Wireless's Vlan Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_update_dynamic_interface_v1 .
+        """ 
         return self.create_update_dynamic_interface_v1(
                     interfaceName=interfaceName,
                     vlanId=vlanId,
@@ -6432,7 +6575,19 @@ class Wireless(object):
                           limit=None,
                           offset=None,
                           headers=None,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of get_interfaces_v1 .
+        Args:
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interfaces_v1 .
+        """ 
         return self.get_interfaces_v1(
                     limit=limit,
                     offset=offset,
@@ -6445,7 +6600,19 @@ class Wireless(object):
     def get_enterprise_ssid(self,
                                ssid_name=None,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of get_enterprise_ssid_v1 .
+        Args:
+            ssid_name(basestring): ssidName query parameter. Enter the enterprise SSID name that needs to be
+                retrieved. If not entered, all the enterprise SSIDs will be retrieved. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_enterprise_ssid_v1 .
+        """ 
         return self.get_enterprise_ssid_v1(
                     ssid_name=ssid_name,
                     headers=headers,
@@ -6458,7 +6625,19 @@ class Wireless(object):
                           id,
                           site_id,
                           headers=None,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of get_ssid_by_id_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. Site UUID .
+            id(basestring): id path parameter. SSID ID. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ssid_by_id_v1 .
+        """ 
         return self.get_ssid_by_id_v1(
                     id=id,
                     site_id=site_id,
@@ -6471,7 +6650,18 @@ class Wireless(object):
     def retrieve_rf_profiles(self,
                                 rf_profile_name=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of retrieve_rf_profiles_v1 .
+        Args:
+            rf_profile_name(basestring): rf-profile-name query parameter. RF Profile Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_rf_profiles_v1 .
+        """ 
         return self.retrieve_rf_profiles_v1(
                     rf_profile_name=rf_profile_name,
                     headers=headers,
@@ -6506,7 +6696,60 @@ class Wireless(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of configure_access_points_v1 .
+        Args:
+            adminStatus(boolean): Wireless's Configure the access point's admin status. Set this parameter's value
+                to "true" to enable it and "false" to disable it. .
+            apList(list): Wireless's apList (list of objects).
+            apMode(integer): Wireless's Configure the access point's mode: for local/flexconnect mode, set "0"; for
+                monitor mode, set "1"; for sniffer mode, set "4"; and for bridge/flex+bridge mode, set
+                "5". .
+            configureAdminStatus(boolean): Wireless's To change the access point's admin status, set this
+                parameter's value to "true". .
+            configureApMode(boolean): Wireless's To change the access point's mode, set this parameter's value to
+                "true". .
+            configureFailoverPriority(boolean): Wireless's To change the access point's failover priority, set this
+                parameter's value to "true". .
+            configureHAController(boolean): Wireless's To change the access point's HA controller, set this
+                parameter's value to "true". .
+            configureLedBrightnessLevel(boolean): Wireless's To change the access point's LED brightness level, set
+                this parameter's value to "true". .
+            configureLedStatus(boolean): Wireless's To change the access point's LED status, set this parameter's
+                value to "true". .
+            configureLocation(boolean): Wireless's To change the access point's location, set this parameter's value
+                to "true". .
+            failoverPriority(integer): Wireless's Configure the acess point's failover priority: for low, set "1";
+                for medium, set "2"; for high, set "3"; and for critical, set "4". .
+            isAssignedSiteAsLocation(boolean): Wireless's If AP is assigned to a site, then to assign AP location as
+                the site name, set this parameter's value to "true". .
+            ledBrightnessLevel(integer): Wireless's Configure the access point's LED brightness level by setting a
+                value between 1 and 8. .
+            ledStatus(boolean): Wireless's Configure the access point's LED status. Set "true" to enable its status
+                and "false" to disable it. .
+            location(string): Wireless's Configure the access point's location. .
+            primaryControllerName(string): Wireless's Configure the hostname for an access point's primary
+                controller. .
+            primaryIpAddress(object): Wireless's primaryIpAddress.
+            radioConfigurations(list): Wireless's radioConfigurations (list of objects).
+            secondaryControllerName(string): Wireless's Configure the hostname for an access point's secondary
+                controller. .
+            secondaryIpAddress(object): Wireless's secondaryIpAddress.
+            tertiaryControllerName(string): Wireless's Configure the hostname for an access point's tertiary
+                controller. .
+            tertiaryIpAddress(object): Wireless's tertiaryIpAddress.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of configure_access_points_v1 .
+        """ 
         return self.configure_access_points_v1(
                     adminStatus=adminStatus,
                     apList=apList,
@@ -6541,7 +6784,18 @@ class Wireless(object):
     def get_rf_profile_by_id(self,
                                 id,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_rf_profile_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. RF Profile ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_rf_profile_by_id_v1 .
+        """ 
         return self.get_rf_profile_by_id_v1(
                     id=id,
                     headers=headers,
@@ -6555,7 +6809,22 @@ class Wireless(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of create_wireless_profile_v1 .
+        Args:
+            profileDetails(object): Wireless's profileDetails.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_wireless_profile_v1 .
+        """ 
         return self.create_wireless_profile_v1(
                     profileDetails=profileDetails,
                     headers=headers,
@@ -6577,7 +6846,33 @@ class Wireless(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of mobility_provision_v1 .
+        Args:
+            dataLinkEncryption(boolean): Wireless's A secure link in which data is encrypted using CAPWAP DTLS
+                protocol can be established between two controllers. This value will be applied to all
+                peers during POST operation. .
+            dtlsHighCipher(boolean): Wireless's DTLS High Cipher. .
+            macAddress(string): Wireless's Device mobility MAC Address. Allowed formats are: 0a0b.0c01.0211,
+                0a0b0c010211, 0a:0b:0c:01:02:11 .
+            managementIp(string): Wireless's Self device wireless Management IP. .
+            mobilityGroupName(string): Wireless's Self device Group Name. Must be alphanumeric without
+                {!,<,space,?/'}   and maximum of 31 characters. .
+            mobilityPeers(list): Wireless's mobilityPeers (list of objects).
+            networkDeviceId(string): Wireless's Obtain the network device ID value by using the API call GET:
+                /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of mobility_provision_v1 .
+        """ 
         return self.mobility_provision_v1(
                     dataLinkEncryption=dataLinkEncryption,
                     dtlsHighCipher=dtlsHighCipher,
@@ -6597,7 +6892,18 @@ class Wireless(object):
     def delete_a80211be_profile(self,
                                    id,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of delete_a80211be_profile_v1 .
+        Args:
+            id(basestring): id path parameter. 802.11be Profile ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_a80211be_profile_v1 .
+        """ 
         return self.delete_a80211be_profile_v1(
                     id=id,
                     headers=headers,
@@ -6609,10 +6915,20 @@ class Wireless(object):
     def get_mobility_groups_count(self,
                                      headers=None,
                                      **request_parameters):
+        """ This function is an alias of get_mobility_groups_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_mobility_groups_count_v1 .
+        """
         return self.get_mobility_groups_count_v1(
-                                    headers=headers,
-                                     **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -6620,7 +6936,19 @@ class Wireless(object):
                            limit=None,
                            offset=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_rf_profiles_v1 .
+        Args:
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_rf_profiles_v1 .
+        """ 
         return self.get_rf_profiles_v1(
                     limit=limit,
                     offset=offset,
@@ -6633,7 +6961,21 @@ class Wireless(object):
     def get_all_mobility_groups(self,
                                    network_device_id=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_all_mobility_groups_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId query parameter. Employ this query parameter to obtain
+                the details of the Mobility Group corresponding to the provided networkDeviceId. Obtain
+                the network device ID value by using the API GET call /dna/intent/api/v1/network-
+                device/ip-address/${ipAddress}. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_mobility_groups_v1 .
+        """ 
         return self.get_all_mobility_groups_v1(
                     network_device_id=network_device_id,
                     headers=headers,
@@ -6645,7 +6987,18 @@ class Wireless(object):
     def delete_wireless_profile(self,
                                    wireless_profile_name,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of delete_wireless_profile_v1 .
+        Args:
+            wireless_profile_name(basestring): wirelessProfileName path parameter. Wireless Profile Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_wireless_profile_v1 .
+        """ 
         return self.delete_wireless_profile_v1(
                     wireless_profile_name=wireless_profile_name,
                     headers=headers,
@@ -6657,10 +7010,20 @@ class Wireless(object):
     def get_rf_profiles_count(self,
                                  headers=None,
                                  **request_parameters):
+        """ This function is an alias of get_rf_profiles_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_rf_profiles_count_v1 .
+        """
         return self.get_rf_profiles_count_v1(
-                                headers=headers,
-                                 **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -6669,7 +7032,24 @@ class Wireless(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of mobility_reset_v1 .
+        Args:
+            networkDeviceId(string): Wireless's Network device Id of Cisco wireless controller.Obtain the network
+                device ID value by using the API call GET /dna/intent/api/v1/network-device/ip-
+                address/${ipAddress}. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of mobility_reset_v1 .
+        """ 
         return self.mobility_reset_v1(
                     networkDeviceId=networkDeviceId,
                     headers=headers,
@@ -6691,7 +7071,28 @@ class Wireless(object):
                                  headers=None,
                                  payload=None,
                                  active_validation=True,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of update80211be_profile_v1 .
+        Args:
+            muMimoDownLink(boolean): Wireless's MU-MIMO Downlink (Default: false) .
+            muMimoUpLink(boolean): Wireless's MU-MIMO Uplink (Default: false) .
+            ofdmaDownLink(boolean): Wireless's OFDMA Downlink (Default: true) .
+            ofdmaMultiRu(boolean): Wireless's OFDMA Multi-RU (Default: false) .
+            ofdmaUpLink(boolean): Wireless's OFDMA Uplink (Default: true) .
+            profileName(string): Wireless's 802.11be Profile Name .
+            id(basestring): id path parameter. 802.11be Profile ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update80211be_profile_v1 .
+        """ 
         return self.update80211be_profile_v1(
                     id=id,
                     muMimoDownLink=muMimoDownLink,
@@ -6711,7 +7112,19 @@ class Wireless(object):
     def get_dynamic_interface(self,
                                  interface_name=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of get_dynamic_interface_v1 .
+        Args:
+            interface_name(basestring): interface-name query parameter. dynamic-interface name, if not specified all
+                the existing dynamic interfaces will be retrieved .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_dynamic_interface_v1 .
+        """ 
         return self.get_dynamic_interface_v1(
                     interface_name=interface_name,
                     headers=headers,
@@ -6723,7 +7136,18 @@ class Wireless(object):
     def get_interface_by_id(self,
                                id,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of get_interface_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Interface ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_interface_by_id_v1 .
+        """ 
         return self.get_interface_by_id_v1(
                     id=id,
                     headers=headers,
@@ -6735,7 +7159,18 @@ class Wireless(object):
     def get_wireless_profile(self,
                                 profile_name=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_wireless_profile_v1 .
+        Args:
+            profile_name(basestring): profileName query parameter. Wireless Network Profile Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_wireless_profile_v1 .
+        """ 
         return self.get_wireless_profile_v1(
                     profile_name=profile_name,
                     headers=headers,
@@ -6815,7 +7250,153 @@ class Wireless(object):
                        headers=None,
                        payload=None,
                        active_validation=True,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of create_ssid_v1 .
+        Args:
+            aaaOverride(boolean): Wireless's Activate the AAA Override feature when set to true .
+            acctServers(list): Wireless's List of Accounting server IpAddresses  (list of strings).
+            aclName(string): Wireless's Pre-Auth Access Control List (ACL) Name .
+            authServer(string): Wireless's Authentication Server, Mandatory for Guest SSIDs with wlanType=Guest and
+                l3AuthType=web_auth . Available values are 'auth_ise', 'auth_external' and
+                'auth_internal'.
+            authServers(list): Wireless's List of Authentication/Authorization server IpAddresses  (list of
+                strings).
+            authType(string): Wireless's L2 Authentication Type (If authType is not open , then atleast one RSN
+                Cipher Suite and corresponding valid AKM must be enabled) . Available values are
+                'WPA2_ENTERPRISE', 'WPA2_PERSONAL', 'OPEN', 'WPA3_ENTERPRISE', 'WPA3_PERSONAL',
+                'WPA2_WPA3_PERSONAL', 'WPA2_WPA3_ENTERPRISE' and 'OPEN-SECURED'.
+            basicServiceSetClientIdleTimeout(integer): Wireless's This refers to the duration of inactivity,
+                measured in seconds, before a client connected to the Basic Service Set is considered
+                idle and timed out .
+            basicServiceSetMaxIdleEnable(boolean): Wireless's Activate the maximum idle feature for the Basic
+                Service Set .
+            cckmTsfTolerance(integer): Wireless's Cckm TImestamp Tolerance(in milliseconds) .
+            clientExclusionEnable(boolean): Wireless's Activate the feature that allows for the exclusion of clients
+                .
+            clientExclusionTimeout(integer): Wireless's This refers to the length of time, in seconds, a client is
+                excluded or blocked from accessing the network after a specified number of unsuccessful
+                attempts .
+            clientRateLimit(integer): Wireless's This pertains to the maximum data transfer rate, specified in bits
+                per second, that a client is permitted to achieve .
+            coverageHoleDetectionEnable(boolean): Wireless's Activate Coverage Hole Detection feature when set to
+                true .
+            directedMulticastServiceEnable(boolean): Wireless's The Directed Multicast Service feature becomes
+                operational when it is set to true .
+            egressQos(string): Wireless's Egress QOS . Available values are 'PLATINUM', 'SILVER', 'GOLD' and
+                'BRONZE'.
+            externalAuthIpAddress(string): Wireless's External WebAuth URL (Mandatory for Guest SSIDs with wlanType
+                = Guest, l3AuthType = web_auth and authServer = auth_external) .
+            fastTransition(string): Wireless's Fast Transition . Available values are 'ADAPTIVE', 'ENABLE' and
+                'DISABLE'.
+            fastTransitionOverTheDistributedSystemEnable(boolean): Wireless's Enable Fast Transition over the
+                Distributed System when set to true .
+            ghz24Policy(string): Wireless's 2.4 Ghz Band Policy value. Allowed only when 2.4 Radio Band is enabled
+                in ssidRadioType . Available values are 'dot11-bg-only' and 'dot11-g-only'.
+            ghz6PolicyClientSteering(boolean): Wireless's True if 6 GHz Policy Client Steering is enabled, else
+                False .
+            ingressQos(string): Wireless's Ingress QOS . Available values are 'PLATINUM-UP', 'SILVER-UP', 'GOLD-UP'
+                and 'BRONZE-UP'.
+            isApBeaconProtectionEnabled(boolean): Wireless's When set to true, the Access Point (AP) Beacon
+                Protection feature is activated, enhancing the security of the network. .
+            isAuthKey8021x(boolean): Wireless's When set to true, the 802.1X authentication key is in use .
+            isAuthKey8021xPlusFT(boolean): Wireless's When set to true, the 802.1X-Plus-FT authentication key is in
+                use .
+            isAuthKey8021x_SHA256(boolean): Wireless's When set to true, the feature that enables 802.1X
+                authentication using the SHA256 algorithm is turned on .
+            isAuthKeyEasyPSK(boolean): Wireless's When set to true, the feature that enables the use of Easy Pre-
+                shared Key (PSK) authentication is activated .
+            isAuthKeyOWE(boolean): Wireless's When set to true, the Opportunistic Wireless Encryption (OWE)
+                authentication key feature is turned on .
+            isAuthKeyPSK(boolean): Wireless's When set to true, the Pre-shared Key (PSK) authentication feature is
+                enabled .
+            isAuthKeyPSKPlusFT(boolean): Wireless's When set to true, the feature that enables the combination of
+                Pre-shared Key (PSK) and Fast Transition (FT) authentication keys is activated .
+            isAuthKeyPSKSHA256(boolean): Wireless's The feature that allows the use of Pre-shared Key (PSK)
+                authentication with the SHA256 algorithm is enabled when it is set to true .
+            isAuthKeySae(boolean): Wireless's When set to true, the feature enabling the Simultaneous Authentication
+                of Equals (SAE) authentication key is activated .
+            isAuthKeySaeExt(boolean): Wireless's When set to true, the Simultaneous Authentication of Equals (SAE)
+                Extended Authentication key feature is turned on. .
+            isAuthKeySaeExtPlusFT(boolean): Wireless's When set to true, the Simultaneous Authentication of Equals
+                (SAE) combined with Fast Transition (FT) Authentication Key feature is enabled. .
+            isAuthKeySaePlusFT(boolean): Wireless's Activating this setting by switching it to true turns on the
+                authentication key feature that supports both Simultaneous Authentication of Equals
+                (SAE) and Fast Transition (FT) .
+            isAuthKeySuiteB1921x(boolean): Wireless's When set to true, the SuiteB192-1x authentication key feature
+                is enabled. .
+            isAuthKeySuiteB1x(boolean): Wireless's When activated by setting it to true, the SuiteB-1x
+                authentication key feature is engaged. .
+            isBroadcastSSID(boolean): Wireless's When activated by setting it to true, the Broadcast SSID feature
+                will make the SSID publicly visible to wireless devices searching for available networks
+                .
+            isCckmEnabled(boolean): Wireless's True if CCKM is enabled, else False .
+            isEnabled(boolean): Wireless's Set SSID's admin status as 'Enabled' when set to true .
+            isFastLaneEnabled(boolean): Wireless's True if FastLane is enabled, else False .
+            isHex(boolean): Wireless's True if passphrase is in Hex format, else False. .
+            isMacFilteringEnabled(boolean): Wireless's When set to true, MAC Filtering will be activated, allowing
+                control over network access based on the MAC address of the device .
+            isPosturingEnabled(boolean): Wireless's Applicable only for Enterprise SSIDs. When set to True,
+                Posturing will enabled. Required to be set to True if ACL needs to be mapped for
+                Enterprise SSID.   .
+            isRandomMacFilterEnabled(boolean): Wireless's Deny clients using randomized MAC addresses when set to
+                true .
+            l3AuthType(string): Wireless's L3 Authentication Type . Available values are 'open' and 'web_auth'.
+            managementFrameProtectionClientprotection(string): Wireless's Management Frame Protection Client .
+                Available values are 'OPTIONAL', 'DISABLED' and 'REQUIRED'.
+            multiPSKSettings(list): Wireless's multiPSKSettings (list of objects).
+            nasOptions(list): Wireless's Pre-Defined NAS Options : AP ETH Mac Address, AP IP address, AP Location ,
+                AP MAC Address, AP Name, AP Policy Tag, AP Site Tag, SSID, System IP Address, System MAC
+                Address, System Name.  (list of strings).
+            neighborListEnable(boolean): Wireless's The Neighbor List feature is enabled when it is set to true .
+            openSsid(string): Wireless's Open SSID which is already created in the design and not associated to any
+                other OPEN-SECURED SSID .
+            passphrase(string): Wireless's Passphrase (Only applicable for SSID with PERSONAL security level).
+                Passphrase needs to be between 8 and 63 characters for ASCII type. HEX passphrase needs
+                to be 64 characters .
+            profileName(string): Wireless's WLAN Profile Name, if not passed autogenerated profile name will be
+                assigned. The same wlanProfileName will also be used for policyProfileName .
+            protectedManagementFrame(string): Wireless's (REQUIRED is applicable for authType WPA3_PERSONAL,
+                WPA3_ENTERPRISE, OPEN_SECURED) and (OPTIONAL/REQUIRED is applicable for authType
+                WPA2_WPA3_PERSONAL and WPA2_WPA3_ENTERPRISE) . Available values are 'OPTIONAL',
+                'DISABLED' and 'REQUIRED'.
+            rsnCipherSuiteCcmp128(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite CCMP128 encryption protocol is activated .
+            rsnCipherSuiteCcmp256(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite CCMP256 encryption protocol is activated .
+            rsnCipherSuiteGcmp128(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite GCMP128 encryption protocol is activated .
+            rsnCipherSuiteGcmp256(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite GCMP256 encryption protocol is activated .
+            sessionTimeOut(integer): Wireless's This denotes the allotted time span, expressed in seconds, before a
+                session is automatically terminated due to inactivity .
+            sessionTimeOutEnable(boolean): Wireless's Turn on the feature that imposes a time limit on user sessions
+                .
+            sleepingClientEnable(boolean): Wireless's When set to true, this will activate the timeout settings that
+                apply to clients in sleep mode .
+            sleepingClientTimeout(integer): Wireless's This refers to the amount of time, measured in minutes,
+                before a sleeping (inactive) client is timed out of the network .
+            ssid(string): Wireless's Name of the SSID .
+            ssidRadioType(string): Wireless's Radio Policy Enum (default: Triple band operation(2.4GHz, 5GHz and
+                6GHz)) . Available values are 'Triple band operation(2.4GHz, 5GHz and 6GHz)', '5GHz
+                only', '2.4GHz only', '6GHz only', '2.4 and 5 GHz', '2.4 and 6 GHz' and '5 and 6 GHz'.
+            webPassthrough(boolean): Wireless's When set to true, the Web-Passthrough feature will be activated for
+                the Guest SSID, allowing guests to bypass certain login requirements .
+            wlanBandSelectEnable(boolean): Wireless's Band select is allowed only when band options selected
+                contains at least 2.4 GHz and 5 GHz band .
+            wlanType(string): Wireless's Wlan Type . Available values are 'Enterprise' and 'Guest'.
+            site_id(basestring): siteId path parameter. Site UUID of Global site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_ssid_v1 .
+        """ 
         return self.create_ssid_v1(
                     site_id=site_id,
                     aaaOverride=aaaOverride,
@@ -6928,7 +7509,65 @@ class Wireless(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of create_enterprise_ssid_v1 .
+        Args:
+            aaaOverride(boolean): Wireless's Aaa Override .
+            authKeyMgmt(list): Wireless's Takes string inputs for the AKMs that should be set true. Possible AKM
+                values : dot1x,dot1x_ft, dot1x_sha, psk, psk_ft, psk_sha, owe, sae, sae_ft  (list of
+                strings).
+            basicServiceSetClientIdleTimeout(integer): Wireless's Basic Service Set Client Idle Timeout .
+            clientExclusionTimeout(integer): Wireless's Client Exclusion Timeout .
+            clientRateLimit(number): Wireless's Client Rate Limit (in bits per second) .
+            coverageHoleDetectionEnable(boolean): Wireless's Coverage Hole Detection Enable .
+            enableBasicServiceSetMaxIdle(boolean): Wireless's Enable Basic Service Set Max Idle  .
+            enableBroadcastSSID(boolean): Wireless's Enable Broadcase SSID  .
+            enableClientExclusion(boolean): Wireless's Enable Client Exclusion .
+            enableDirectedMulticastService(boolean): Wireless's Enable Directed Multicast Service .
+            enableFastLane(boolean): Wireless's Enable FastLane .
+            enableMACFiltering(boolean): Wireless's Enable MAC Filtering .
+            enableNeighborList(boolean): Wireless's Enable Neighbor List .
+            enableSessionTimeOut(boolean): Wireless's Enable Session Timeout .
+            fastTransition(string): Wireless's Fast Transition . Available values are 'Adaptive', 'Enable' and
+                'Disable'.
+            ghz24Policy(string): Wireless's Ghz24 Policy . Available values are 'dot11-g-only' and 'dot11-bg-only'.
+            ghz6PolicyClientSteering(boolean): Wireless's Ghz6 Policy Client Steering .
+            mfpClientProtection(string): Wireless's Management Frame Protection Client . Available values are
+                'Optional', 'Disabled' and 'Required'.
+            multiPSKSettings(list): Wireless's multiPSKSettings (list of objects).
+            name(string): Wireless's SSID NAME .
+            nasOptions(list): Wireless's Nas Options  (list of strings).
+            passphrase(string): Wireless's Passphrase .
+            policyProfileName(string): Wireless's Policy Profile Name .
+            profileName(string): Wireless's Profile Name .
+            protectedManagementFrame(string): Wireless's (Required applicable for Security Type WPA3_PERSONAL,
+                WPA3_ENTERPRISE, OPEN_SECURED) and (Optional, Required Applicable for Security Type
+                WPA2_WPA3_PERSONAL and WPA2_WPA3_ENTERPRISE) . Available values are 'Optional',
+                'Disabled' and 'Required'.
+            radioPolicy(string): Wireless's Radio Policy Enum  . Available values are 'Triple band operation(2.4GHz,
+                5GHz and 6GHz)', '5GHz only', '2.4GHz only', '6GHz only', '2.4 and 5 GHz', '2.4 and 6
+                GHz' and '5 and 6 GHz'.
+            rsnCipherSuiteCcmp256(boolean): Wireless's Rsn Cipher Suite Ccmp256 .
+            rsnCipherSuiteGcmp128(boolean): Wireless's Rsn Cipher Suite Gcmp 128 .
+            rsnCipherSuiteGcmp256(boolean): Wireless's Rsn Cipher Suite Gcmp256 .
+            securityLevel(string): Wireless's Security Level . Available values are 'WPA2_ENTERPRISE',
+                'WPA2_PERSONAL', 'OPEN', 'WPA3_ENTERPRISE', 'WPA3_PERSONAL', 'WPA2_WPA3_PERSONAL',
+                'WPA2_WPA3_ENTERPRISE' and 'OPEN_SECURED'.
+            sessionTimeOut(integer): Wireless's Session Time Out .
+            trafficType(string): Wireless's Traffic Type Enum (voicedata or data ) . Available values are
+                'voicedata' and 'data'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_enterprise_ssid_v1 .
+        """ 
         return self.create_enterprise_ssid_v1(
                     aaaOverride=aaaOverride,
                     authKeyMgmt=authKeyMgmt,
@@ -6983,7 +7622,34 @@ class Wireless(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of update_rf_profile_v1 .
+        Args:
+            defaultRfProfile(boolean): Wireless's True if RF Profile is default, else False. Maximum of only 1 RF
+                Profile can be marked as default at any given time .
+            enableRadioType6GHz(boolean): Wireless's True if 6 GHz radio band is enabled in the RF Profile, else
+                False .
+            enableRadioTypeA(boolean): Wireless's True if 5 GHz radio band is enabled in the RF Profile, else False
+                .
+            enableRadioTypeB(boolean): Wireless's True if 2.4 GHz radio band is enabled in the RF Profile, else
+                False .
+            radioType6GHzProperties(object): Wireless's radioType6GHzProperties.
+            radioTypeAProperties(object): Wireless's radioTypeAProperties.
+            radioTypeBProperties(object): Wireless's radioTypeBProperties.
+            rfProfileName(string): Wireless's RF Profile Name .
+            id(basestring): id path parameter. RF Profile ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_rf_profile_v1 .
+        """ 
         return self.update_rf_profile_v1(
                     id=id,
                     defaultRfProfile=defaultRfProfile,
@@ -7005,7 +7671,18 @@ class Wireless(object):
     def get_access_point_configuration_task_result(self,
                                                       task_id,
                                                       headers=None,
-                                                      **request_parameters):  
+                                                      **request_parameters):
+        """ This function is an alias of get_access_point_configuration_task_result_v1 .
+        Args:
+            task_id(basestring): task_id path parameter. task id information of ap config .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_access_point_configuration_task_result_v1 .
+        """ 
         return self.get_access_point_configuration_task_result_v1(
                     task_id=task_id,
                     headers=headers,
@@ -7017,7 +7694,18 @@ class Wireless(object):
     def get_wireless_profile_by_id(self,
                                       id,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_wireless_profile_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. Wireless Profile Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_wireless_profile_by_id_v1 .
+        """ 
         return self.get_wireless_profile_by_id_v1(
                     id=id,
                     headers=headers,
@@ -7029,7 +7717,18 @@ class Wireless(object):
     def get80211be_profile_by_id(self,
                                     id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of get80211be_profile_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. 802.11be Profile ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get80211be_profile_by_id_v1 .
+        """ 
         return self.get80211be_profile_by_id_v1(
                     id=id,
                     headers=headers,
@@ -7041,7 +7740,19 @@ class Wireless(object):
     def get_managed_ap_locations_count_for_specific_wireless_controller(self,
                                                                            network_device_id,
                                                                            headers=None,
-                                                                           **request_parameters):  
+                                                                           **request_parameters):
+        """ This function is an alias of get_managed_ap_locations_count_for_specific_wireless_controller_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+                using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_managed_ap_locations_count_for_specific_wireless_controller_v1 .
+        """ 
         return self.get_managed_ap_locations_count_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     headers=headers,
@@ -7086,7 +7797,65 @@ class Wireless(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of update_enterprise_ssid_v1 .
+        Args:
+            aaaOverride(boolean): Wireless's Aaa Override .
+            authKeyMgmt(list): Wireless's Takes string inputs for the AKMs that should be set true. Possible AKM
+                values : dot1x,dot1x_ft, dot1x_sha, psk, psk_ft, psk_sha, owe, sae, sae_ft  (list of
+                strings).
+            basicServiceSetClientIdleTimeout(integer): Wireless's Basic Service Set Client Idle Timeout .
+            clientExclusionTimeout(integer): Wireless's Client Exclusion Timeout .
+            clientRateLimit(number): Wireless's Client Rate Limit (in bits per second) .
+            coverageHoleDetectionEnable(boolean): Wireless's Coverage Hole Detection Enable .
+            enableBasicServiceSetMaxIdle(boolean): Wireless's Enable Basic Service Set Max Idle  .
+            enableBroadcastSSID(boolean): Wireless's Enable Broadcase SSID  .
+            enableClientExclusion(boolean): Wireless's Enable Client Exclusion .
+            enableDirectedMulticastService(boolean): Wireless's Enable Directed Multicast Service .
+            enableFastLane(boolean): Wireless's Enable FastLane .
+            enableMACFiltering(boolean): Wireless's Enable MAC Filtering .
+            enableNeighborList(boolean): Wireless's Enable Neighbor List .
+            enableSessionTimeOut(boolean): Wireless's Enable Session Timeout .
+            fastTransition(string): Wireless's Fast Transition . Available values are 'Adaptive', 'Enable' and
+                'Disable'.
+            ghz24Policy(string): Wireless's Ghz24 Policy . Available values are 'dot11-g-only' and 'dot11-bg-only'.
+            ghz6PolicyClientSteering(boolean): Wireless's Ghz6 Policy Client Steering .
+            mfpClientProtection(string): Wireless's Management Frame Protection Client . Available values are
+                'Optional', 'Disabled' and 'Required'.
+            multiPSKSettings(list): Wireless's multiPSKSettings (list of objects).
+            name(string): Wireless's SSID NAME .
+            nasOptions(list): Wireless's Nas Options  (list of strings).
+            passphrase(string): Wireless's Passphrase .
+            policyProfileName(string): Wireless's Policy Profile Name .
+            profileName(string): Wireless's Profile Name .
+            protectedManagementFrame(string): Wireless's (Required applicable for Security Type WPA3_PERSONAL,
+                WPA3_ENTERPRISE, OPEN_SECURED) and (Optional, Required Applicable for Security Type
+                WPA2_WPA3_PERSONAL and WPA2_WPA3_ENTERPRISE) . Available values are 'Optional',
+                'Disabled' and 'Required'.
+            radioPolicy(string): Wireless's Radio Policy Enum  . Available values are 'Triple band operation(2.4GHz,
+                5GHz and 6GHz)', '5GHz only', '2.4GHz only', '6GHz only', '2.4 and 5 GHz', '2.4 and 6
+                GHz' and '5 and 6 GHz'.
+            rsnCipherSuiteCcmp256(boolean): Wireless's Rsn Cipher Suite Ccmp256 .
+            rsnCipherSuiteGcmp128(boolean): Wireless's Rsn Cipher Suite Gcmp 128 .
+            rsnCipherSuiteGcmp256(boolean): Wireless's Rsn Cipher Suite Gcmp256 .
+            securityLevel(string): Wireless's Security Level . Available values are 'WPA2_ENTERPRISE',
+                'WPA2_PERSONAL', 'OPEN', 'WPA3_ENTERPRISE', 'WPA3_PERSONAL', 'WPA2_WPA3_PERSONAL',
+                'WPA2_WPA3_ENTERPRISE' and 'OPEN_SECURED'.
+            sessionTimeOut(integer): Wireless's Session Time Out .
+            trafficType(string): Wireless's Traffic Type Enum (voicedata or data ) . Available values are
+                'voicedata' and 'data'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_enterprise_ssid_v1 .
+        """ 
         return self.update_enterprise_ssid_v1(
                     aaaOverride=aaaOverride,
                     authKeyMgmt=authKeyMgmt,
@@ -7136,7 +7905,26 @@ class Wireless(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of ap_provision_v1 .
+        Args:
+            apZoneName(string): Wireless's AP Zone Name. A custom AP Zone should be passed if no rfProfileName is
+                provided. .
+            networkDevices(list): Wireless's networkDevices (list of objects).
+            rfProfileName(string): Wireless's RF Profile Name. RF Profile is not allowed for custom AP Zones. .
+            siteId(string): Wireless's Site ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of ap_provision_v1 .
+        """ 
         return self.ap_provision_v1(
                     apZoneName=apZoneName,
                     networkDevices=networkDevices,
@@ -7154,7 +7942,21 @@ class Wireless(object):
                      headers=None,
                      payload=None,
                      active_validation=True,
-                     **request_parameters):  
+                     **request_parameters):
+        """ This function is an alias of psk_override_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of psk_override_v1 .
+        """ 
         return self.psk_override_v1(
                     headers=headers,
                     payload=payload,
@@ -7168,7 +7970,21 @@ class Wireless(object):
                          headers=None,
                          payload=None,
                          active_validation=True,
-                         **request_parameters):  
+                         **request_parameters):
+        """ This function is an alias of provision_update_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of provision_update_v1 .
+        """ 
         return self.provision_update_v1(
                     headers=headers,
                     payload=payload,
@@ -7183,7 +7999,20 @@ class Wireless(object):
                             limit=None,
                             offset=None,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of get_ssid_by_site_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. Site UUID .
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ssid_by_site_v1 .
+        """ 
         return self.get_ssid_by_site_v1(
                     site_id=site_id,
                     limit=limit,
@@ -7200,7 +8029,22 @@ class Wireless(object):
                                start_time=None,
                                test_failure_by=None,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of sensor_test_results_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Assurance site UUID .
+            start_time(int): startTime query parameter. The epoch time in milliseconds .
+            end_time(int): endTime query parameter. The epoch time in milliseconds .
+            test_failure_by(basestring): testFailureBy query parameter. Obtain failure statistics group by "area",
+                "building", or "floor" (case insensitive) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of sensor_test_results_v1 .
+        """ 
         return self.sensor_test_results_v1(
                     end_time=end_time,
                     site_id=site_id,
@@ -7216,7 +8060,19 @@ class Wireless(object):
                                    limit=None,
                                    offset=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_all80211be_profiles_v1 .
+        Args:
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all80211be_profiles_v1 .
+        """ 
         return self.get_all80211be_profiles_v1(
                     limit=limit,
                     offset=offset,
@@ -7229,7 +8085,18 @@ class Wireless(object):
     def delete_interface(self,
                             id,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of delete_interface_v1 .
+        Args:
+            id(basestring): id path parameter. Interface ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_interface_v1 .
+        """ 
         return self.delete_interface_v1(
                     id=id,
                     headers=headers,
@@ -7243,7 +8110,25 @@ class Wireless(object):
                                                            admin_status=None,
                                                            managed=None,
                                                            headers=None,
-                                                           **request_parameters):  
+                                                           **request_parameters):
+        """ This function is an alias of get_ssid_count_for_specific_wireless_controller_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+                using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            admin_status(bool): adminStatus query parameter. Utilize this query parameter to obtain the number of
+                SSIDs according to their administrative status. A 'true' value signifies that the admin
+                status of the SSID is enabled, while a 'false' value indicates that the admin status of
+                the SSID is disabled. .
+            managed(bool): managed query parameter. If value is 'true' means SSIDs are configured through design.If
+                the value is 'false' means out of band configuration from the Wireless Controller. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ssid_count_for_specific_wireless_controller_v1 .
+        """ 
         return self.get_ssid_count_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     admin_status=admin_status,
@@ -7258,7 +8143,21 @@ class Wireless(object):
                      headers=None,
                      payload=None,
                      active_validation=True,
-                     **request_parameters):  
+                     **request_parameters):
+        """ This function is an alias of provision_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of provision_v1 .
+        """ 
         return self.provision_v1(
                     headers=headers,
                     payload=payload,
@@ -7273,7 +8172,22 @@ class Wireless(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of reboot_access_points_v1 .
+        Args:
+            apMacAddresses(list): Wireless's The ethernet MAC address of the access point.  (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of reboot_access_points_v1 .
+        """ 
         return self.reboot_access_points_v1(
                     apMacAddresses=apMacAddresses,
                     headers=headers,
@@ -7288,7 +8202,21 @@ class Wireless(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of ap_provision_connectivity_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of ap_provision_connectivity_v1 .
+        """ 
         return self.ap_provision_connectivity_v1(
                     headers=headers,
                     payload=payload,
@@ -7307,7 +8235,27 @@ class Wireless(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of create_and_provision_ssid_v1 .
+        Args:
+            enableFabric(boolean): Wireless's Enable SSID for Fabric .
+            flexConnect(object): Wireless's flexConnect.
+            managedAPLocations(list): Wireless's Managed AP Locations (Enter entire Site(s) hierarchy)  (list of
+                strings).
+            ssidDetails(object): Wireless's ssidDetails.
+            ssidType(string): Wireless's SSID Type . Available values are 'Guest' and 'Enterprise'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_and_provision_ssid_v1 .
+        """ 
         return self.create_and_provision_ssid_v1(
                     enableFabric=enableFabric,
                     flexConnect=flexConnect,
@@ -7337,7 +8285,32 @@ class Wireless(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of create_or_update_rf_profile_v1 .
+        Args:
+            channelWidth(string): Wireless's Channel Width .
+            defaultRfProfile(boolean): Wireless's is Default Rf Profile .
+            enableBrownField(boolean): Wireless's Enable Brown Field .
+            enableCustom(boolean): Wireless's Enable Custom .
+            enableRadioTypeA(boolean): Wireless's Enable Radio Type A .
+            enableRadioTypeB(boolean): Wireless's Enable Radio Type B .
+            enableRadioTypeC(boolean): Wireless's Enable Radio Type C (6GHz) .
+            name(string): Wireless's RF Profile Name .
+            radioTypeAProperties(object): Wireless's radioTypeAProperties.
+            radioTypeBProperties(object): Wireless's radioTypeBProperties.
+            radioTypeCProperties(object): Wireless's radioTypeCProperties.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_or_update_rf_profile_v1 .
+        """ 
         return self.create_or_update_rf_profile_v1(
                     channelWidth=channelWidth,
                     defaultRfProfile=defaultRfProfile,
@@ -7364,7 +8337,23 @@ class Wireless(object):
                             headers=None,
                             payload=None,
                             active_validation=True,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of create_interface_v1 .
+        Args:
+            interfaceName(string): Wireless's Interface Name .
+            vlanId(integer): Wireless's VLAN ID range is 1-4094 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_interface_v1 .
+        """ 
         return self.create_interface_v1(
                     interfaceName=interfaceName,
                     vlanId=vlanId,
@@ -7384,7 +8373,30 @@ class Wireless(object):
                                                              offset=None,
                                                              ssid_name=None,
                                                              headers=None,
-                                                             **request_parameters):  
+                                                             **request_parameters):
+        """ This function is an alias of get_ssid_details_for_specific_wireless_controller_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+                using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            ssid_name(basestring): ssidName query parameter. Employ this query parameter to obtain the details of
+                the SSID corresponding to the provided SSID name. .
+            admin_status(bool): adminStatus query parameter. Utilize this query parameter to obtain the
+                administrative status. A 'true' value signifies that the admin status of the SSID is
+                enabled, while a 'false' value indicates that the admin status of the SSID is disabled.
+                .
+            managed(bool): managed query parameter. If value is 'true' means SSIDs are configured through design.If
+                the value is 'false' means out of band configuration from the Wireless Controller. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ssid_details_for_specific_wireless_controller_v1 .
+        """ 
         return self.get_ssid_details_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     admin_status=admin_status,
@@ -7402,7 +8414,21 @@ class Wireless(object):
                                                    managed_aplocations,
                                                    ssid_name,
                                                    headers=None,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of delete_ssid_and_provision_it_to_devices_v1 .
+        Args:
+            ssid_name(basestring): ssidName path parameter. SSID Name. This parameter needs to be encoded as per
+                UTF-8 encoding. .
+            managed_aplocations(basestring): managedAPLocations path parameter. List of managed AP locations (Site
+                Hierarchies). This parameter needs to be encoded as per UTF-8 encoding .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_ssid_and_provision_it_to_devices_v1 .
+        """ 
         return self.delete_ssid_and_provision_it_to_devices_v1(
                     managed_aplocations=managed_aplocations,
                     ssid_name=ssid_name,
@@ -7419,7 +8445,24 @@ class Wireless(object):
                             headers=None,
                             payload=None,
                             active_validation=True,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of update_interface_v1 .
+        Args:
+            interfaceName(string): Wireless's Interface Name .
+            vlanId(integer): Wireless's VLAN ID range is 1-4094 .
+            id(basestring): id path parameter. Interface ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_interface_v1 .
+        """ 
         return self.update_interface_v1(
                     id=id,
                     interfaceName=interfaceName,
@@ -7436,7 +8479,19 @@ class Wireless(object):
                                  limit=None,
                                  offset=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of get_wireless_profiles_v1 .
+        Args:
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_wireless_profiles_v1 .
+        """ 
         return self.get_wireless_profiles_v1(
                     limit=limit,
                     offset=offset,
@@ -7518,7 +8573,154 @@ class Wireless(object):
                        headers=None,
                        payload=None,
                        active_validation=True,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of update_ssid_v1 .
+        Args:
+            aaaOverride(boolean): Wireless's Activate the AAA Override feature when set to true .
+            acctServers(list): Wireless's List of Accounting server IpAddresses  (list of strings).
+            aclName(string): Wireless's Pre-Auth Access Control List (ACL) Name .
+            authServer(string): Wireless's Authentication Server, Mandatory for Guest SSIDs with wlanType=Guest and
+                l3AuthType=web_auth . Available values are 'auth_ise', 'auth_external' and
+                'auth_internal'.
+            authServers(list): Wireless's List of Authentication/Authorization server IpAddresses  (list of
+                strings).
+            authType(string): Wireless's L2 Authentication Type (If authType is not open , then atleast one RSN
+                Cipher Suite and corresponding valid AKM must be enabled) . Available values are
+                'WPA2_ENTERPRISE', 'WPA2_PERSONAL', 'OPEN', 'WPA3_ENTERPRISE', 'WPA3_PERSONAL',
+                'WPA2_WPA3_PERSONAL', 'WPA2_WPA3_ENTERPRISE' and 'OPEN-SECURED'.
+            basicServiceSetClientIdleTimeout(integer): Wireless's This refers to the duration of inactivity,
+                measured in seconds, before a client connected to the Basic Service Set is considered
+                idle and timed out .
+            basicServiceSetMaxIdleEnable(boolean): Wireless's Activate the maximum idle feature for the Basic
+                Service Set .
+            cckmTsfTolerance(integer): Wireless's Cckm TImestamp Tolerance(in milliseconds) .
+            clientExclusionEnable(boolean): Wireless's Activate the feature that allows for the exclusion of clients
+                .
+            clientExclusionTimeout(integer): Wireless's This refers to the length of time, in seconds, a client is
+                excluded or blocked from accessing the network after a specified number of unsuccessful
+                attempts .
+            clientRateLimit(integer): Wireless's This pertains to the maximum data transfer rate, specified in bits
+                per second, that a client is permitted to achieve .
+            coverageHoleDetectionEnable(boolean): Wireless's Activate Coverage Hole Detection feature when set to
+                true .
+            directedMulticastServiceEnable(boolean): Wireless's The Directed Multicast Service feature becomes
+                operational when it is set to true .
+            egressQos(string): Wireless's Egress QOS . Available values are 'PLATINUM', 'SILVER', 'GOLD' and
+                'BRONZE'.
+            externalAuthIpAddress(string): Wireless's External WebAuth URL (Mandatory for Guest SSIDs with wlanType
+                = Guest, l3AuthType = web_auth and authServer = auth_external) .
+            fastTransition(string): Wireless's Fast Transition . Available values are 'ADAPTIVE', 'ENABLE' and
+                'DISABLE'.
+            fastTransitionOverTheDistributedSystemEnable(boolean): Wireless's Enable Fast Transition over the
+                Distributed System when set to true .
+            ghz24Policy(string): Wireless's 2.4 Ghz Band Policy value. Allowed only when 2.4 Radio Band is enabled
+                in ssidRadioType . Available values are 'dot11-bg-only' and 'dot11-g-only'.
+            ghz6PolicyClientSteering(boolean): Wireless's True if 6 GHz Policy Client Steering is enabled, else
+                False .
+            ingressQos(string): Wireless's Ingress QOS . Available values are 'PLATINUM-UP', 'SILVER-UP', 'GOLD-UP'
+                and 'BRONZE-UP'.
+            isApBeaconProtectionEnabled(boolean): Wireless's When set to true, the Access Point (AP) Beacon
+                Protection feature is activated, enhancing the security of the network. .
+            isAuthKey8021x(boolean): Wireless's When set to true, the 802.1X authentication key is in use .
+            isAuthKey8021xPlusFT(boolean): Wireless's When set to true, the 802.1X-Plus-FT authentication key is in
+                use .
+            isAuthKey8021x_SHA256(boolean): Wireless's When set to true, the feature that enables 802.1X
+                authentication using the SHA256 algorithm is turned on .
+            isAuthKeyEasyPSK(boolean): Wireless's When set to true, the feature that enables the use of Easy Pre-
+                shared Key (PSK) authentication is activated .
+            isAuthKeyOWE(boolean): Wireless's When set to true, the Opportunistic Wireless Encryption (OWE)
+                authentication key feature is turned on .
+            isAuthKeyPSK(boolean): Wireless's When set to true, the Pre-shared Key (PSK) authentication feature is
+                enabled .
+            isAuthKeyPSKPlusFT(boolean): Wireless's When set to true, the feature that enables the combination of
+                Pre-shared Key (PSK) and Fast Transition (FT) authentication keys is activated .
+            isAuthKeyPSKSHA256(boolean): Wireless's The feature that allows the use of Pre-shared Key (PSK)
+                authentication with the SHA256 algorithm is enabled when it is set to true .
+            isAuthKeySae(boolean): Wireless's When set to true, the feature enabling the Simultaneous Authentication
+                of Equals (SAE) authentication key is activated .
+            isAuthKeySaeExt(boolean): Wireless's When set to true, the Simultaneous Authentication of Equals (SAE)
+                Extended Authentication key feature is turned on. .
+            isAuthKeySaeExtPlusFT(boolean): Wireless's When set to true, the Simultaneous Authentication of Equals
+                (SAE) combined with Fast Transition (FT) Authentication Key feature is enabled. .
+            isAuthKeySaePlusFT(boolean): Wireless's Activating this setting by switching it to true turns on the
+                authentication key feature that supports both Simultaneous Authentication of Equals
+                (SAE) and Fast Transition (FT) .
+            isAuthKeySuiteB1921x(boolean): Wireless's When set to true, the SuiteB192-1x authentication key feature
+                is enabled. .
+            isAuthKeySuiteB1x(boolean): Wireless's When activated by setting it to true, the SuiteB-1x
+                authentication key feature is engaged. .
+            isBroadcastSSID(boolean): Wireless's When activated by setting it to true, the Broadcast SSID feature
+                will make the SSID publicly visible to wireless devices searching for available networks
+                .
+            isCckmEnabled(boolean): Wireless's True if CCKM is enabled, else False .
+            isEnabled(boolean): Wireless's Set SSID's admin status as 'Enabled' when set to true .
+            isFastLaneEnabled(boolean): Wireless's True if FastLane is enabled, else False .
+            isHex(boolean): Wireless's True if passphrase is in Hex format, else False. .
+            isMacFilteringEnabled(boolean): Wireless's When set to true, MAC Filtering will be activated, allowing
+                control over network access based on the MAC address of the device .
+            isPosturingEnabled(boolean): Wireless's Applicable only for Enterprise SSIDs. When set to True,
+                Posturing will enabled. Required to be set to True if ACL needs to be mapped for
+                Enterprise SSID.   .
+            isRandomMacFilterEnabled(boolean): Wireless's Deny clients using randomized MAC addresses when set to
+                true .
+            l3AuthType(string): Wireless's L3 Authentication Type . Available values are 'open' and 'web_auth'.
+            managementFrameProtectionClientprotection(string): Wireless's Management Frame Protection Client .
+                Available values are 'OPTIONAL', 'DISABLED' and 'REQUIRED'.
+            multiPSKSettings(list): Wireless's multiPSKSettings (list of objects).
+            nasOptions(list): Wireless's Pre-Defined NAS Options : AP ETH Mac Address, AP IP address, AP Location ,
+                AP MAC Address, AP Name, AP Policy Tag, AP Site Tag, SSID, System IP Address, System MAC
+                Address, System Name.  (list of strings).
+            neighborListEnable(boolean): Wireless's The Neighbor List feature is enabled when it is set to true .
+            openSsid(string): Wireless's Open SSID which is already created in the design and not associated to any
+                other OPEN-SECURED SSID .
+            passphrase(string): Wireless's Passphrase (Only applicable for SSID with PERSONAL security level).
+                Passphrase needs to be between 8 and 63 characters for ASCII type. HEX passphrase needs
+                to be 64 characters .
+            profileName(string): Wireless's WLAN Profile Name, if not passed autogenerated profile name will be
+                assigned. The same wlanProfileName will also be used for policyProfileName .
+            protectedManagementFrame(string): Wireless's (REQUIRED is applicable for authType WPA3_PERSONAL,
+                WPA3_ENTERPRISE, OPEN_SECURED) and (OPTIONAL/REQUIRED is applicable for authType
+                WPA2_WPA3_PERSONAL and WPA2_WPA3_ENTERPRISE) . Available values are 'OPTIONAL',
+                'DISABLED' and 'REQUIRED'.
+            rsnCipherSuiteCcmp128(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite CCMP128 encryption protocol is activated .
+            rsnCipherSuiteCcmp256(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite CCMP256 encryption protocol is activated .
+            rsnCipherSuiteGcmp128(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite GCMP128 encryption protocol is activated .
+            rsnCipherSuiteGcmp256(boolean): Wireless's When set to true, the Robust Security Network (RSN) Cipher
+                Suite GCMP256 encryption protocol is activated .
+            sessionTimeOut(integer): Wireless's This denotes the allotted time span, expressed in seconds, before a
+                session is automatically terminated due to inactivity .
+            sessionTimeOutEnable(boolean): Wireless's Turn on the feature that imposes a time limit on user sessions
+                .
+            sleepingClientEnable(boolean): Wireless's When set to true, this will activate the timeout settings that
+                apply to clients in sleep mode .
+            sleepingClientTimeout(integer): Wireless's This refers to the amount of time, measured in minutes,
+                before a sleeping (inactive) client is timed out of the network .
+            ssid(string): Wireless's Name of the SSID .
+            ssidRadioType(string): Wireless's Radio Policy Enum (default: Triple band operation(2.4GHz, 5GHz and
+                6GHz)) . Available values are 'Triple band operation(2.4GHz, 5GHz and 6GHz)', '5GHz
+                only', '2.4GHz only', '6GHz only', '2.4 and 5 GHz', '2.4 and 6 GHz' and '5 and 6 GHz'.
+            webPassthrough(boolean): Wireless's When set to true, the Web-Passthrough feature will be activated for
+                the Guest SSID, allowing guests to bypass certain login requirements .
+            wlanBandSelectEnable(boolean): Wireless's Band select is allowed only when band options selected
+                contains at least 2.4 GHz and 5 GHz band .
+            wlanType(string): Wireless's Wlan Type . Available values are 'Enterprise' and 'Guest'.
+            site_id(basestring): siteId path parameter. Site UUID .
+            id(basestring): id path parameter. SSID ID. Inputs containing special characters should be encoded .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_ssid_v1 .
+        """ 
         return self.update_ssid_v1(
                     id=id,
                     site_id=site_id,
@@ -7606,7 +8808,27 @@ class Wireless(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of create_a80211be_profile_v1 .
+        Args:
+            muMimoDownLink(boolean): Wireless's MU-MIMO Downlink (Default: false) .
+            muMimoUpLink(boolean): Wireless's MU-MIMO Uplink (Default: false) .
+            ofdmaDownLink(boolean): Wireless's OFDMA Downlink (Default: true) .
+            ofdmaMultiRu(boolean): Wireless's OFDMA Multi-RU (Default: false) .
+            ofdmaUpLink(boolean): Wireless's OFDMA Uplink (Default: true) .
+            profileName(string): Wireless's 802.11be Profile Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_a80211be_profile_v1 .
+        """ 
         return self.create_a80211be_profile_v1(
                     muMimoDownLink=muMimoDownLink,
                     muMimoUpLink=muMimoUpLink,
@@ -7625,9 +8847,19 @@ class Wireless(object):
     def get_wireless_profiles_count(self,
                                        headers=None,
                                        **request_parameters):
+        """ This function is an alias of get_wireless_profiles_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_wireless_profiles_count_v1 .
+        """
         return self.get_wireless_profiles_count_v1(
-                                        headers=headers,
-                                       **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -7635,7 +8867,18 @@ class Wireless(object):
     def get_access_point_configuration(self,
                                           key,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of get_access_point_configuration_v1 .
+        Args:
+            key(basestring): key query parameter. The ethernet MAC address of Access point .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_access_point_configuration_v1 .
+        """ 
         return self.get_access_point_configuration_v1(
                     key=key,
                     headers=headers,
@@ -7647,7 +8890,19 @@ class Wireless(object):
     def delete_rf_profiles(self,
                               rf_profile_name,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of delete_rf_profiles_v1 .
+        Args:
+            rf_profile_name(basestring): rfProfileName path parameter. RF profile name to be deleted(required) *non-
+                custom RF profile cannot be deleted .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_rf_profiles_v1 .
+        """ 
         return self.delete_rf_profiles_v1(
                     rf_profile_name=rf_profile_name,
                     headers=headers,
@@ -7660,7 +8915,19 @@ class Wireless(object):
                        id,
                        site_id,
                        headers=None,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of delete_ssid_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. Site UUID where SSID is to be deleted .
+            id(basestring): id path parameter. SSID ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_ssid_v1 .
+        """ 
         return self.delete_ssid_v1(
                     id=id,
                     site_id=site_id,
@@ -7673,7 +8940,18 @@ class Wireless(object):
     def delete_enterprise_ssid(self,
                                   ssid_name,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of delete_enterprise_ssid_v1 .
+        Args:
+            ssid_name(basestring): ssidName path parameter. Enter the SSID name to be deleted .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_enterprise_ssid_v1 .
+        """ 
         return self.delete_enterprise_ssid_v1(
                     ssid_name=ssid_name,
                     headers=headers,
@@ -7685,7 +8963,18 @@ class Wireless(object):
     def delete_wireless_profile_connectivity(self,
                                                 id,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of delete_wireless_profile_connectivity_v1 .
+        Args:
+            id(basestring): id path parameter. Wireless Profile Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_wireless_profile_connectivity_v1 .
+        """ 
         return self.delete_wireless_profile_connectivity_v1(
                     id=id,
                     headers=headers,
@@ -7697,17 +8986,38 @@ class Wireless(object):
     def get80211be_profiles_count(self,
                                      headers=None,
                                      **request_parameters):
+        """ This function is an alias of get80211be_profiles_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get80211be_profiles_count_v1 .
+        """
         return self.get80211be_profiles_count_v1(
-                                    headers=headers,
-                                     **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_ssid_count_by_site(self,
                                   site_id,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_ssid_count_by_site_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. Site UUID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ssid_count_by_site_v1 .
+        """ 
         return self.get_ssid_count_by_site_v1(
                     site_id=site_id,
                     headers=headers,
@@ -7721,7 +9031,22 @@ class Wireless(object):
                                                                              limit=None,
                                                                              offset=None,
                                                                              headers=None,
-                                                                             **request_parameters):  
+                                                                             **request_parameters):
+        """ This function is an alias of get_primary_managed_ap_locations_for_specific_wireless_controller_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+                using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_primary_managed_ap_locations_for_specific_wireless_controller_v1 .
+        """ 
         return self.get_primary_managed_ap_locations_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     limit=limit,
@@ -7738,7 +9063,23 @@ class Wireless(object):
                                                 headers=None,
                                                 payload=None,
                                                 active_validation=True,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of create_wireless_profile_connectivity_v1 .
+        Args:
+            ssidDetails(list): Wireless's ssidDetails (list of objects).
+            wirelessProfileName(string): Wireless's Wireless Network Profile Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_wireless_profile_connectivity_v1 .
+        """ 
         return self.create_wireless_profile_connectivity_v1(
                     ssidDetails=ssidDetails,
                     wirelessProfileName=wirelessProfileName,
@@ -7758,7 +9099,26 @@ class Wireless(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of wireless_controller_provision_v1 .
+        Args:
+            interfaces(list): Wireless's interfaces (list of objects).
+            rollingApUpgrade(object): Wireless's rollingApUpgrade.
+            skipApProvision(boolean): Wireless's True if Skip AP Provision is enabled, else False .
+            device_id(basestring): deviceId path parameter. Network Device ID. This value can be obtained by using
+                the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress} .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of wireless_controller_provision_v1 .
+        """ 
         return self.wireless_controller_provision_v1(
                     device_id=device_id,
                     interfaces=interfaces,
@@ -7775,7 +9135,18 @@ class Wireless(object):
     def get_access_point_reboot_task_result(self,
                                                parent_task_id=None,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of get_access_point_reboot_task_result_v1 .
+        Args:
+            parent_task_id(basestring): parentTaskId query parameter. task id of ap reboot request .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_access_point_reboot_task_result_v1 .
+        """ 
         return self.get_access_point_reboot_task_result_v1(
                     parent_task_id=parent_task_id,
                     headers=headers,
@@ -7789,7 +9160,22 @@ class Wireless(object):
                                                                                limit=None,
                                                                                offset=None,
                                                                                headers=None,
-                                                                               **request_parameters):  
+                                                                               **request_parameters):
+        """ This function is an alias of get_secondary_managed_ap_locations_for_specific_wireless_controller_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+                using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_secondary_managed_ap_locations_for_specific_wireless_controller_v1 .
+        """ 
         return self.get_secondary_managed_ap_locations_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     limit=limit,

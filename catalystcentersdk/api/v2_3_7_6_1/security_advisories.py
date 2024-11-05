@@ -86,7 +86,7 @@ class SecurityAdvisories(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-advisories-list-v1
+            https://developer.cisco.com/docs/dna-center/#!get-advisories-list
         """
         check_type(headers, dict)
         if headers is not None:
@@ -138,7 +138,7 @@ class SecurityAdvisories(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-advisories-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!get-advisories-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -192,7 +192,7 @@ class SecurityAdvisories(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-devices-per-advisory-v1
+            https://developer.cisco.com/docs/dna-center/#!get-devices-per-advisory
         """
         check_type(headers, dict)
         check_type(advisory_id, str,
@@ -250,7 +250,7 @@ class SecurityAdvisories(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-advisory-device-detail-v1
+            https://developer.cisco.com/docs/dna-center/#!get-advisory-device-detail
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -307,7 +307,7 @@ class SecurityAdvisories(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-advisories-per-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-advisories-per-device
         """
         check_type(headers, dict)
         check_type(device_id, str,
@@ -349,17 +349,38 @@ class SecurityAdvisories(object):
     def get_advisories_summary(self,
                                   headers=None,
                                   **request_parameters):
+        """ This function is an alias of get_advisories_summary_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_advisories_summary_v1 .
+        """
         return self.get_advisories_summary_v1(
-                                headers=headers,
-                                  **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_advisory_device_detail(self,
                                       device_id,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_advisory_device_detail_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device instance UUID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_advisory_device_detail_v1 .
+        """ 
         return self.get_advisory_device_detail_v1(
                     device_id=device_id,
                     headers=headers,
@@ -371,7 +392,18 @@ class SecurityAdvisories(object):
     def get_devices_per_advisory(self,
                                     advisory_id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of get_devices_per_advisory_v1 .
+        Args:
+            advisory_id(basestring): advisoryId path parameter. Advisory ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_devices_per_advisory_v1 .
+        """ 
         return self.get_devices_per_advisory_v1(
                     advisory_id=advisory_id,
                     headers=headers,
@@ -383,7 +415,18 @@ class SecurityAdvisories(object):
     def get_advisories_per_device(self,
                                      device_id,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of get_advisories_per_device_v1 .
+        Args:
+            device_id(basestring): deviceId path parameter. Device instance UUID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_advisories_per_device_v1 .
+        """ 
         return self.get_advisories_per_device_v1(
                     device_id=device_id,
                     headers=headers,
@@ -395,9 +438,19 @@ class SecurityAdvisories(object):
     def get_advisories_list(self,
                                headers=None,
                                **request_parameters):
+        """ This function is an alias of get_advisories_list_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_advisories_list_v1 .
+        """
         return self.get_advisories_list_v1(
-                                headers=headers,
-                               **request_parameters
+                    headers=headers,
+                    **request_parameters
         )  
 
 

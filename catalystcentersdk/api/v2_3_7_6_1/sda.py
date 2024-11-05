@@ -90,7 +90,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-default-authentication-profile-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-default-authentication-profile-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -155,7 +155,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-default-authentication-template-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-default-authentication-template-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -220,7 +220,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-default-authentication-profile-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!update-default-authentication-profile-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -281,7 +281,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-default-authentication-profile-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-default-authentication-profile-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -343,7 +343,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-border-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-border-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -404,7 +404,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-border-device-detail-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-border-device-detail-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -462,7 +462,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-border-device-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-border-device-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -520,7 +520,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-control-plane-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-control-plane-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -578,7 +578,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-control-plane-device-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-control-plane-device-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -649,7 +649,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-control-plane-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-control-plane-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -719,7 +719,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-info-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-info-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -778,7 +778,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-role-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-role-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -846,7 +846,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-edge-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-edge-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -914,7 +914,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-edge-device-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-edge-device-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -972,7 +972,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-edge-device-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-edge-device-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -1030,7 +1030,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-site-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-site-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -1088,7 +1088,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-site-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-site-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -1160,7 +1160,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-site-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-site-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1248,7 +1248,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-port-assignment-for-access-point-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-port-assignment-for-access-point-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1327,7 +1327,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-port-assignment-for-access-point-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-port-assignment-for-access-point-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -1392,7 +1392,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-port-assignment-for-access-point-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-port-assignment-for-access-point-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -1457,7 +1457,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-port-assignment-for-user-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-port-assignment-for-user-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -1547,7 +1547,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-port-assignment-for-user-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-port-assignment-for-user-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1632,7 +1632,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-port-assignment-for-user-device-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-port-assignment-for-user-device-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -1708,7 +1708,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-multicast-in-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-multicast-in-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1780,7 +1780,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-multicast-details-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-multicast-details-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -1838,7 +1838,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-multicast-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-multicast-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -1897,7 +1897,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-provisioned-wired-device-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-provisioned-wired-device
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -1963,7 +1963,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!re-provision-wired-device-v1
+            https://developer.cisco.com/docs/dna-center/#!re-provision-wired-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2039,7 +2039,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!provision-wired-device-v1
+            https://developer.cisco.com/docs/dna-center/#!provision-wired-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2107,7 +2107,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-provisioned-wired-device-v1
+            https://developer.cisco.com/docs/dna-center/#!get-provisioned-wired-device
         """
         check_type(headers, dict)
         check_type(device_management_ip_address, str,
@@ -2166,7 +2166,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-transit-peer-network-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-transit-peer-network
         """
         check_type(headers, dict)
         check_type(transit_peer_network_name, str,
@@ -2225,7 +2225,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-transit-peer-network-info-v1
+            https://developer.cisco.com/docs/dna-center/#!get-transit-peer-network-info
         """
         check_type(headers, dict)
         check_type(transit_peer_network_name, str,
@@ -2296,7 +2296,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-transit-peer-network-v1
+            https://developer.cisco.com/docs/dna-center/#!add-transit-peer-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2370,7 +2370,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-v-n-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-v-n-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(virtual_network_name, str,
@@ -2434,7 +2434,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-v-n-from-s-d-a-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!get-v-n-from-s-d-a-fabric
         """
         check_type(headers, dict)
         check_type(virtual_network_name, str,
@@ -2504,7 +2504,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-v-n-in-fabric-v1
+            https://developer.cisco.com/docs/dna-center/#!add-v-n-in-fabric
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2573,7 +2573,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-virtual-network-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!get-virtual-network-summary
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -2637,7 +2637,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-p-pool-from-s-d-a-virtual-network-v1
+            https://developer.cisco.com/docs/dna-center/#!get-i-p-pool-from-s-d-a-virtual-network
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -2707,7 +2707,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-i-p-pool-from-s-d-a-virtual-network-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-i-p-pool-from-s-d-a-virtual-network
         """
         check_type(headers, dict)
         check_type(site_name_hierarchy, str,
@@ -2818,7 +2818,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-i-p-pool-in-s-d-a-virtual-network-v1
+            https://developer.cisco.com/docs/dna-center/#!add-i-p-pool-in-s-d-a-virtual-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2918,7 +2918,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-anycast-gateways-v1
+            https://developer.cisco.com/docs/dna-center/#!update-anycast-gateways
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2986,7 +2986,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-anycast-gateways-v1
+            https://developer.cisco.com/docs/dna-center/#!add-anycast-gateways
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3064,7 +3064,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-anycast-gateways-v1
+            https://developer.cisco.com/docs/dna-center/#!get-anycast-gateways
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -3153,7 +3153,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-anycast-gateway-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-anycast-gateway-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -3222,7 +3222,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-anycast-gateway-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-anycast-gateway-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -3288,7 +3288,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-authentication-profiles-v1
+            https://developer.cisco.com/docs/dna-center/#!get-authentication-profiles
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -3358,7 +3358,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-authentication-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-authentication-profile
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3419,7 +3419,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-extranet-policies-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-extranet-policies
         """
         check_type(headers, dict)
         check_type(extranet_policy_name, str)
@@ -3480,7 +3480,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-extranet-policy-v1
+            https://developer.cisco.com/docs/dna-center/#!update-extranet-policy
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3545,7 +3545,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-extranet-policy-v1
+            https://developer.cisco.com/docs/dna-center/#!add-extranet-policy
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3610,7 +3610,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-extranet-policies-v1
+            https://developer.cisco.com/docs/dna-center/#!get-extranet-policies
         """
         check_type(headers, dict)
         check_type(extranet_policy_name, str)
@@ -3671,7 +3671,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-extranet-policy-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-extranet-policy-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3725,7 +3725,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-extranet-policy-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-extranet-policy-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -3793,7 +3793,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -3867,7 +3867,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-fabric-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!update-fabric-devices
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3934,7 +3934,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-devices
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4002,7 +4002,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -4070,7 +4070,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4137,7 +4137,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer2-handoffs-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer2-handoffs
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4206,7 +4206,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer2-handoffs-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer2-handoffs
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4277,7 +4277,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-layer2-handoffs-v1
+            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-layer2-handoffs
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -4341,7 +4341,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer2-handoffs-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer2-handoffs-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4403,7 +4403,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer2-handoff-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer2-handoff-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -4464,7 +4464,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-layer3-handoffs-with-ip-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-layer3-handoffs-with-ip-transit
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -4533,7 +4533,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-fabric-devices-layer3-handoffs-with-ip-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!update-fabric-devices-layer3-handoffs-with-ip-transit
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -4598,7 +4598,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer3-handoffs-with-ip-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer3-handoffs-with-ip-transit
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4668,7 +4668,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-ip-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-ip-transit
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4740,7 +4740,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-ip-transit-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-ip-transit-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -4802,7 +4802,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer3-handoff-with-ip-transit-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer3-handoff-with-ip-transit-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -4864,7 +4864,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-fabric-devices-layer3-handoffs-with-sda-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!update-fabric-devices-layer3-handoffs-with-sda-transit
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -4937,7 +4937,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-sda-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-sda-transit
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -5008,7 +5008,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer3-handoffs-with-sda-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-layer3-handoffs-with-sda-transit
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -5075,7 +5075,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-layer3-handoffs-with-sda-transit-v1
+            https://developer.cisco.com/docs/dna-center/#!add-fabric-devices-layer3-handoffs-with-sda-transit
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -5141,7 +5141,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-sda-transit-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-devices-layer3-handoffs-with-sda-transit-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -5203,7 +5203,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-device-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5267,7 +5267,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-sites-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-sites
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -5337,7 +5337,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-fabric-site-v1
+            https://developer.cisco.com/docs/dna-center/#!add-fabric-site
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -5402,7 +5402,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-fabric-site-v1
+            https://developer.cisco.com/docs/dna-center/#!update-fabric-site
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -5461,7 +5461,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-site-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-site-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5515,7 +5515,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-site-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-site-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5579,7 +5579,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-zones-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-zones
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -5649,7 +5649,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-fabric-zone-v1
+            https://developer.cisco.com/docs/dna-center/#!update-fabric-zone
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -5714,7 +5714,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-fabric-zone-v1
+            https://developer.cisco.com/docs/dna-center/#!add-fabric-zone
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -5773,7 +5773,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-fabric-zone-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-fabric-zone-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5827,7 +5827,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-fabric-zone-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-fabric-zone-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5888,7 +5888,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-layer2-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!add-layer2-virtual-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -5963,7 +5963,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-layer2-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-layer2-virtual-networks
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -6050,7 +6050,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-layer2-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!get-layer2-virtual-networks
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -6132,7 +6132,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-layer2-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!update-layer2-virtual-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6204,7 +6204,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-layer2-virtual-network-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-layer2-virtual-network-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -6273,7 +6273,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-layer2-virtual-network-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-layer2-virtual-network-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -6334,7 +6334,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-layer3-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!add-layer3-virtual-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6409,7 +6409,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-layer3-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!get-layer3-virtual-networks
         """
         check_type(headers, dict)
         check_type(virtual_network_name, str)
@@ -6479,7 +6479,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-layer3-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-layer3-virtual-networks
         """
         check_type(headers, dict)
         check_type(virtual_network_name, str)
@@ -6540,7 +6540,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-layer3-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!update-layer3-virtual-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6605,7 +6605,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-layer3-virtual-networks-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-layer3-virtual-networks-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -6665,7 +6665,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-layer3-virtual-network-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-layer3-virtual-network-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -6726,7 +6726,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-multicast-v1
+            https://developer.cisco.com/docs/dna-center/#!update-multicast
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6794,7 +6794,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-multicast-v1
+            https://developer.cisco.com/docs/dna-center/#!get-multicast
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -6861,7 +6861,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-multicast-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!add-multicast-virtual-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -6932,7 +6932,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-multicast-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!get-multicast-virtual-networks
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -7002,7 +7002,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-multicast-virtual-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!update-multicast-virtual-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -7065,7 +7065,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-multicast-virtual-network-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-multicast-virtual-network-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -7122,7 +7122,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-multicast-virtual-network-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-multicast-virtual-network-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7183,7 +7183,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-port-assignments-v1
+            https://developer.cisco.com/docs/dna-center/#!add-port-assignments
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -7260,7 +7260,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-port-assignments-v1
+            https://developer.cisco.com/docs/dna-center/#!get-port-assignments
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -7339,7 +7339,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-port-assignments-v1
+            https://developer.cisco.com/docs/dna-center/#!update-port-assignments
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -7409,7 +7409,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-port-assignments-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-port-assignments
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -7489,7 +7489,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-port-assignment-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-port-assignment-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -7558,7 +7558,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-port-assignment-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-port-assignment-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7626,7 +7626,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-port-channels-v1
+            https://developer.cisco.com/docs/dna-center/#!get-port-channels
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -7702,7 +7702,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-port-channels-v1
+            https://developer.cisco.com/docs/dna-center/#!add-port-channels
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -7767,7 +7767,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-port-channels-v1
+            https://developer.cisco.com/docs/dna-center/#!update-port-channels
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -7835,7 +7835,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-port-channels-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-port-channels
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -7910,7 +7910,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-port-channel-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-port-channel-count
         """
         check_type(headers, dict)
         check_type(fabric_id, str)
@@ -7976,7 +7976,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-port-channel-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-port-channel-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -8035,7 +8035,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-provisioned-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-provisioned-devices
         """
         check_type(headers, dict)
         check_type(network_device_id, str)
@@ -8099,7 +8099,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!provision-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!provision-devices
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -8168,7 +8168,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-provisioned-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!get-provisioned-devices
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -8241,7 +8241,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!re-provision-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!re-provision-devices
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -8302,7 +8302,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-provisioned-devices-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-provisioned-devices-count
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -8359,7 +8359,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-provisioned-device-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-provisioned-device-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -8420,7 +8420,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-transit-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!update-transit-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -8493,7 +8493,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-transit-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!get-transit-networks
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -8566,7 +8566,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-transit-networks-v1
+            https://developer.cisco.com/docs/dna-center/#!add-transit-networks
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -8628,7 +8628,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-transit-networks-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-transit-networks-count
         """
         check_type(headers, dict)
         check_type(type, str)
@@ -8685,7 +8685,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-transit-network-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-transit-network-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -8754,7 +8754,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-virtual-network-with-scalable-groups-v1
+            https://developer.cisco.com/docs/dna-center/#!add-virtual-network-with-scalable-groups
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8826,7 +8826,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-virtual-network-with-scalable-groups-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-virtual-network-with-scalable-groups
         """
         check_type(headers, dict)
         check_type(virtual_network_name, str,
@@ -8884,7 +8884,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-virtual-network-with-scalable-groups-v1
+            https://developer.cisco.com/docs/dna-center/#!get-virtual-network-with-scalable-groups
         """
         check_type(headers, dict)
         check_type(virtual_network_name, str,
@@ -8956,7 +8956,7 @@ class Sda(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-virtual-network-with-scalable-groups-v1
+            https://developer.cisco.com/docs/dna-center/#!update-virtual-network-with-scalable-groups
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -9013,7 +9013,19 @@ class Sda(object):
                                            site_name_hierarchy,
                                            authenticate_template_name=None,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of get_default_authentication_profile_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            authenticate_template_name(basestring): authenticateTemplateName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_default_authentication_profile_v1 .
+        """ 
         return self.get_default_authentication_profile_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     authenticate_template_name=authenticate_template_name,
@@ -9026,7 +9038,18 @@ class Sda(object):
     def get_device_info(self,
                         device_management_ip_address,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of get_device_info_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_info_v1 .
+        """ 
         return self.get_device_info_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -9039,7 +9062,21 @@ class Sda(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of adds_border_device_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of adds_border_device_v1 .
+        """ 
         return self.adds_border_device_v1(
                     headers=headers,
                     payload=payload,
@@ -9052,7 +9089,18 @@ class Sda(object):
     def get_site(self,
                  site_name_hierarchy,
                  headers=None,
-                 **request_parameters):  
+                 **request_parameters):
+        """ This function is an alias of get_site_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Site Name Hierarchy .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_site_v1 .
+        """ 
         return self.get_site_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     headers=headers,
@@ -9071,7 +9119,29 @@ class Sda(object):
                                              headers=None,
                                              payload=None,
                                              active_validation=True,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of add_port_assignment_for_access_point_v1 .
+        Args:
+            authenticateTemplateName(string): SDA's Authenticate TemplateName associated to Fabric Site . Available
+                values are 'No Authentication', 'Open Authentication', 'Closed Authentication ' and 'Low
+                Impact '.
+            dataIpAddressPoolName(string): SDA's Ip Pool Name, that is assigned to INFRA_VN   .
+            deviceManagementIpAddress(string): SDA's Management Ip Address of the edge device  .
+            interfaceDescription(string): SDA's Details or note of interface port assignment .
+            interfaceName(string): SDA's Interface Name of the edge device  .
+            siteNameHierarchy(string): SDA's Path of sda Fabric Site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_port_assignment_for_access_point_v1 .
+        """ 
         return self.add_port_assignment_for_access_point_v1(
                     authenticateTemplateName=authenticateTemplateName,
                     dataIpAddressPoolName=dataIpAddressPoolName,
@@ -9091,7 +9161,21 @@ class Sda(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of update_anycast_gateways_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_anycast_gateways_v1 .
+        """ 
         return self.update_anycast_gateways_v1(
                     headers=headers,
                     payload=payload,
@@ -9106,7 +9190,22 @@ class Sda(object):
                                                 site_name_hierarchy,
                                                 virtual_network_name,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of get_ip_pool_from_sda_virtual_network_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            virtual_network_name(basestring): virtualNetworkName query parameter.
+            ip_pool_name(basestring): ipPoolName query parameter. ipPoolName. Note: Use vlanName as a value for this
+                parameter if same ip pool is assigned to multiple virtual networks (e.g..
+                ipPoolName=vlan1021) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ip_pool_from_sda_virtual_network_v1 .
+        """ 
         return self.get_ip_pool_from_sda_virtual_network_v1(
                     ip_pool_name=ip_pool_name,
                     site_name_hierarchy=site_name_hierarchy,
@@ -9121,7 +9220,21 @@ class Sda(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of add_anycast_gateways_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_anycast_gateways_v1 .
+        """ 
         return self.add_anycast_gateways_v1(
                     headers=headers,
                     payload=payload,
@@ -9135,7 +9248,21 @@ class Sda(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of add_default_authentication_profile_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_default_authentication_profile_v1 .
+        """ 
         return self.add_default_authentication_profile_v1(
                     headers=headers,
                     payload=payload,
@@ -9150,7 +9277,20 @@ class Sda(object):
                                                    site_name_hierarchy,
                                                    virtual_network_name,
                                                    headers=None,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of delete_ip_pool_from_sda_virtual_network_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            virtual_network_name(basestring): virtualNetworkName query parameter.
+            ip_pool_name(basestring): ipPoolName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_ip_pool_from_sda_virtual_network_v1 .
+        """ 
         return self.delete_ip_pool_from_sda_virtual_network_v1(
                     ip_pool_name=ip_pool_name,
                     site_name_hierarchy=site_name_hierarchy,
@@ -9181,7 +9321,46 @@ class Sda(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of add_ip_pool_in_sda_virtual_network_v1 .
+        Args:
+            autoGenerateVlanName(boolean): SDA's It will auto generate vlanName, if vlanName is empty(applicable for
+                L3  and INFRA_VN) .
+            ipPoolName(string): SDA's Ip Pool Name, that is reserved to Fabric Site (Required for L3 and INFRA_VN) .
+            isBridgeModeVm(boolean): SDA's Bridge Mode Vm enablement flag (applicable for L3 and L2 and default
+                value is False ) .
+            isCommonPool(boolean): SDA's Common Pool enablement flag(applicable for L3 and L2 and default value is
+                False ) .
+            isIpDirectedBroadcast(boolean): SDA's Ip Directed Broadcast enablement flag(applicable for L3 and
+                default value is False ) .
+            isL2FloodingEnabled(boolean): SDA's Layer2 flooding enablement flag(applicable for L3 , L2 and always
+                true for L2 and default value is False ) .
+            isLayer2Only(boolean): SDA's Layer2 Only enablement flag and default value is False  .
+            isThisCriticalPool(boolean): SDA's Critical pool enablement flag(applicable for L3 and default value is
+                False ) .
+            isWirelessPool(boolean): SDA's Wireless Pool enablement flag(applicable for L3  and L2 and default value
+                is False ) .
+            poolType(string): SDA's Pool Type (applicable for INFRA_VN) . Available values are 'AP' and 'Extended'.
+            scalableGroupName(string): SDA's Scalable Group Name(applicable for L3) .
+            siteNameHierarchy(string): SDA's Path of sda Fabric Site .
+            trafficType(string): SDA's Traffic type(applicable for L3  and L2) . Available values are 'Data' and
+                'Voice'.
+            virtualNetworkName(string): SDA's Virtual Network Name, that is associated to Fabric Site .
+            vlanId(string): SDA's vlan Id(applicable for L3 , L2 and  INFRA_VN) .
+            vlanName(string): SDA's Vlan name represent the segment name, if empty, vlanName would be auto generated
+                by API .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_ip_pool_in_sda_virtual_network_v1 .
+        """ 
         return self.add_ip_pool_in_sda_virtual_network_v1(
                     autoGenerateVlanName=autoGenerateVlanName,
                     ipPoolName=ipPoolName,
@@ -9211,7 +9390,20 @@ class Sda(object):
                                                 fabric_id,
                                                 network_device_id,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of delete_fabric_device_layer2_handoffs_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_device_layer2_handoffs_v1 .
+        """ 
         return self.delete_fabric_device_layer2_handoffs_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -9227,7 +9419,24 @@ class Sda(object):
                                        limit=None,
                                        offset=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_authentication_profiles_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the authentication profile is assigned
+                to. .
+            authentication_profile_name(basestring): authenticationProfileName query parameter. Return only the
+                authentication profiles with this specified name. Note that 'No Authentication' is not a
+                valid option for this parameter. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_authentication_profiles_v1 .
+        """ 
         return self.get_authentication_profiles_v1(
                     authentication_profile_name=authentication_profile_name,
                     fabric_id=fabric_id,
@@ -9243,7 +9452,20 @@ class Sda(object):
                                                                     fabric_id,
                                                                     network_device_id=None,
                                                                     headers=None,
-                                                                    **request_parameters):  
+                                                                    **request_parameters):
+        """ This function is an alias of get_fabric_devices_layer3_handoffs_with_ip_transit_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_layer3_handoffs_with_ip_transit_count_v1 .
+        """ 
         return self.get_fabric_devices_layer3_handoffs_with_ip_transit_count_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -9257,7 +9479,21 @@ class Sda(object):
                                                               headers=None,
                                                               payload=None,
                                                               active_validation=True,
-                                                              **request_parameters):  
+                                                              **request_parameters):
+        """ This function is an alias of add_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
+        """ 
         return self.add_fabric_devices_layer3_handoffs_with_ip_transit_v1(
                     headers=headers,
                     payload=payload,
@@ -9271,7 +9507,21 @@ class Sda(object):
                                              anchored_site_id=None,
                                              fabric_id=None,
                                              headers=None,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of get_layer3_virtual_networks_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 3 virtual network is
+                assigned to. .
+            anchored_site_id(basestring): anchoredSiteId query parameter. Fabric ID of the fabric site the layer 3
+                virtual network is anchored at. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_layer3_virtual_networks_count_v1 .
+        """ 
         return self.get_layer3_virtual_networks_count_v1(
                     anchored_site_id=anchored_site_id,
                     fabric_id=fabric_id,
@@ -9285,7 +9535,21 @@ class Sda(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of add_port_assignments_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_port_assignments_v1 .
+        """ 
         return self.add_port_assignments_v1(
                     headers=headers,
                     payload=payload,
@@ -9298,7 +9562,18 @@ class Sda(object):
     def delete_layer2_virtual_network_by_id(self,
                                                id,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of delete_layer2_virtual_network_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the layer 2 virtual network. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_layer2_virtual_network_by_id_v1 .
+        """ 
         return self.delete_layer2_virtual_network_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9310,7 +9585,18 @@ class Sda(object):
     def delete_extranet_policies(self,
                                     extranet_policy_name=None,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of delete_extranet_policies_v1 .
+        Args:
+            extranet_policy_name(basestring): extranetPolicyName query parameter. Name of the extranet policy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_extranet_policies_v1 .
+        """ 
         return self.delete_extranet_policies_v1(
                     extranet_policy_name=extranet_policy_name,
                     headers=headers,
@@ -9325,7 +9611,22 @@ class Sda(object):
                             offset=None,
                             site_id=None,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of get_fabric_sites_v1 .
+        Args:
+            id(basestring): id query parameter. ID of the fabric site. .
+            site_id(basestring): siteId query parameter. ID of the network hierarchy associated with the fabric
+                site. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_sites_v1 .
+        """ 
         return self.get_fabric_sites_v1(
                     id=id,
                     limit=limit,
@@ -9345,7 +9646,25 @@ class Sda(object):
                                                     headers=None,
                                                     payload=None,
                                                     active_validation=True,
-                                                    **request_parameters):  
+                                                    **request_parameters):
+        """ This function is an alias of add_virtual_network_with_scalable_groups_v1 .
+        Args:
+            isGuestVirtualNetwork(boolean): SDA's Guest Virtual Network enablement flag, default value is False. .
+            scalableGroupNames(list): SDA's Scalable Group to be associated to virtual network  (list of strings).
+            vManageVpnId(string): SDA's vManage vpn id for SD-WAN .
+            virtualNetworkName(string): SDA's Virtual Network Name to be assigned at global level .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_virtual_network_with_scalable_groups_v1 .
+        """ 
         return self.add_virtual_network_with_scalable_groups_v1(
                     isGuestVirtualNetwork=isGuestVirtualNetwork,
                     scalableGroupNames=scalableGroupNames,
@@ -9363,7 +9682,19 @@ class Sda(object):
                                                 device_management_ip_address,
                                                 interface_name,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of delete_port_assignment_for_access_point_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            interface_name(basestring): interfaceName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_port_assignment_for_access_point_v1 .
+        """ 
         return self.delete_port_assignment_for_access_point_v1(
                     device_management_ip_address=device_management_ip_address,
                     interface_name=interface_name,
@@ -9381,7 +9712,26 @@ class Sda(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of add_multicast_in_sda_fabric_v1 .
+        Args:
+            multicastMethod(string): SDA's Multicast Method . Available values are 'native_multicast'.
+            multicastType(string): SDA's Multicast Type . Available values are 'ssm', 'asm_with_internal_rp' and
+                'asm_with_external_rp'.
+            multicastVnInfo(list): SDA's multicastVnInfo (list of objects).
+            siteNameHierarchy(string): SDA's Full path of sda Fabric Site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_multicast_in_sda_fabric_v1 .
+        """ 
         return self.add_multicast_in_sda_fabric_v1(
                     multicastMethod=multicastMethod,
                     multicastType=multicastType,
@@ -9399,7 +9749,21 @@ class Sda(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of update_transit_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_transit_networks_v1 .
+        """ 
         return self.update_transit_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -9412,7 +9776,18 @@ class Sda(object):
     def delete_fabric_device_layer3_handoff_with_ip_transit_by_id(self,
                                                                      id,
                                                                      headers=None,
-                                                                     **request_parameters):  
+                                                                     **request_parameters):
+        """ This function is an alias of delete_fabric_device_layer3_handoff_with_ip_transit_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the layer 3 handoff with ip transit of a fabric device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_device_layer3_handoff_with_ip_transit_by_id_v1 .
+        """ 
         return self.delete_fabric_device_layer3_handoff_with_ip_transit_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9425,7 +9800,21 @@ class Sda(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of update_extranet_policy_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_extranet_policy_v1 .
+        """ 
         return self.update_extranet_policy_v1(
                     headers=headers,
                     payload=payload,
@@ -9438,7 +9827,18 @@ class Sda(object):
     def delete_fabric_site_by_id(self,
                                     id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of delete_fabric_site_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the fabric site. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_site_by_id_v1 .
+        """ 
         return self.delete_fabric_site_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9453,7 +9853,22 @@ class Sda(object):
                                               network_device_id=None,
                                               offset=None,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of get_fabric_devices_layer2_handoffs_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_layer2_handoffs_v1 .
+        """ 
         return self.get_fabric_devices_layer2_handoffs_v1(
                     fabric_id=fabric_id,
                     limit=limit,
@@ -9470,7 +9885,23 @@ class Sda(object):
                                     device_roles=None,
                                     network_device_id=None,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of get_fabric_devices_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            device_roles(basestring): deviceRoles query parameter. Device roles of the fabric device. Allowed values
+                are [CONTROL_PLANE_NODE, EDGE_NODE, BORDER_NODE, WIRELESS_CONTROLLER_NODE,
+                EXTENDED_NODE]. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_count_v1 .
+        """ 
         return self.get_fabric_devices_count_v1(
                     fabric_id=fabric_id,
                     device_roles=device_roles,
@@ -9484,7 +9915,18 @@ class Sda(object):
     def delete_fabric_device_layer2_handoff_by_id(self,
                                                      id,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """ This function is an alias of delete_fabric_device_layer2_handoff_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the layer 2 handoff of a fabric device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_device_layer2_handoff_by_id_v1 .
+        """ 
         return self.delete_fabric_device_layer2_handoff_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9501,7 +9943,24 @@ class Sda(object):
                              offset=None,
                              port_channel_name=None,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of get_port_channels_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
+            port_channel_name(basestring): portChannelName query parameter. Name of the port channel. .
+            connected_device_type(basestring): connectedDeviceType query parameter. Connected device type of the
+                port channel. The allowed values are [TRUNK, EXTENDED_NODE]. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_port_channels_v1 .
+        """ 
         return self.get_port_channels_v1(
                     connected_device_type=connected_device_type,
                     fabric_id=fabric_id,
@@ -9521,7 +9980,25 @@ class Sda(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of add_edge_device_v1 .
+        Args:
+            deviceManagementIpAddress(string): SDA's Management Ip Address of the Device which is provisioned
+                successfully .
+            siteNameHierarchy(string): SDA's siteNameHierarchy of the Provisioned Device(site should be part of
+                Fabric Site) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_edge_device_v1 .
+        """ 
         return self.add_edge_device_v1(
                     deviceManagementIpAddress=deviceManagementIpAddress,
                     siteNameHierarchy=siteNameHierarchy,
@@ -9536,7 +10013,19 @@ class Sda(object):
     def get_device_role_in_sda_fabric(self,
                                          device_management_ip_address,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_device_role_in_sda_fabric_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter. Device Management
+                IP Address .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_role_in_sda_fabric_v1 .
+        """ 
         return self.get_device_role_in_sda_fabric_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -9548,7 +10037,18 @@ class Sda(object):
     def delete_port_channel_by_id(self,
                                      id,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of delete_port_channel_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the port channel. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_port_channel_by_id_v1 .
+        """ 
         return self.delete_port_channel_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9561,7 +10061,21 @@ class Sda(object):
                                                                  headers=None,
                                                                  payload=None,
                                                                  active_validation=True,
-                                                                 **request_parameters):  
+                                                                 **request_parameters):
+        """ This function is an alias of update_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
+        """ 
         return self.update_fabric_devices_layer3_handoffs_with_ip_transit_v1(
                     headers=headers,
                     payload=payload,
@@ -9575,7 +10089,21 @@ class Sda(object):
                             headers=None,
                             payload=None,
                             active_validation=True,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of update_multicast_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_multicast_v1 .
+        """ 
         return self.update_multicast_v1(
                     headers=headers,
                     payload=payload,
@@ -9588,7 +10116,19 @@ class Sda(object):
     def get_transit_networks_count(self,
                                       type=None,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_transit_networks_count_v1 .
+        Args:
+            type(basestring): type query parameter. Type of the transit network. Allowed values are
+                [IP_BASED_TRANSIT, SDA_LISP_PUB_SUB_TRANSIT, SDA_LISP_BGP_TRANSIT]. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_transit_networks_count_v1 .
+        """ 
         return self.get_transit_networks_count_v1(
                     type=type,
                     headers=headers,
@@ -9601,7 +10141,21 @@ class Sda(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of add_layer3_virtual_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_layer3_virtual_networks_v1 .
+        """ 
         return self.add_layer3_virtual_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -9618,7 +10172,25 @@ class Sda(object):
                                        offset=None,
                                        virtual_network_name=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_layer3_virtual_networks_v1 .
+        Args:
+            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the layer 3 virtual
+                network. .
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 3 virtual network is
+                assigned to. .
+            anchored_site_id(basestring): anchoredSiteId query parameter. Fabric ID of the fabric site the layer 3
+                virtual network is anchored at. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_layer3_virtual_networks_v1 .
+        """ 
         return self.get_layer3_virtual_networks_v1(
                     anchored_site_id=anchored_site_id,
                     fabric_id=fabric_id,
@@ -9638,7 +10210,23 @@ class Sda(object):
                                      network_device_id=None,
                                      voice_vlan_name=None,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of get_port_assignment_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the port
+                assignment. .
+            interface_name(basestring): interfaceName query parameter. Interface name of the port assignment. .
+            data_vlan_name(basestring): dataVlanName query parameter. Data VLAN name of the port assignment. .
+            voice_vlan_name(basestring): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_port_assignment_count_v1 .
+        """ 
         return self.get_port_assignment_count_v1(
                     data_vlan_name=data_vlan_name,
                     fabric_id=fabric_id,
@@ -9654,7 +10242,18 @@ class Sda(object):
     def delete_extranet_policy_by_id(self,
                                         id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of delete_extranet_policy_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the extranet policy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_extranet_policy_by_id_v1 .
+        """ 
         return self.delete_extranet_policy_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9666,7 +10265,18 @@ class Sda(object):
     def delete_multicast_virtual_network_by_id(self,
                                                   id,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of delete_multicast_virtual_network_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the multicast configuration. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_multicast_virtual_network_by_id_v1 .
+        """ 
         return self.delete_multicast_virtual_network_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9678,7 +10288,18 @@ class Sda(object):
     def delete_virtual_network_with_scalable_groups(self,
                                                        virtual_network_name,
                                                        headers=None,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of delete_virtual_network_with_scalable_groups_v1 .
+        Args:
+            virtual_network_name(basestring): virtualNetworkName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_virtual_network_with_scalable_groups_v1 .
+        """ 
         return self.delete_virtual_network_with_scalable_groups_v1(
                     virtual_network_name=virtual_network_name,
                     headers=headers,
@@ -9691,7 +10312,19 @@ class Sda(object):
                                       network_device_id=None,
                                       site_id=None,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of delete_provisioned_devices_v1 .
+        Args:
+            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
+            site_id(basestring): siteId query parameter. ID of the site hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_provisioned_devices_v1 .
+        """ 
         return self.delete_provisioned_devices_v1(
                     network_device_id=network_device_id,
                     site_id=site_id,
@@ -9704,7 +10337,18 @@ class Sda(object):
     def delete_layer3_virtual_network_by_id(self,
                                                id,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of delete_layer3_virtual_network_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the layer 3 virtual network. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_layer3_virtual_network_by_id_v1 .
+        """ 
         return self.delete_layer3_virtual_network_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9716,7 +10360,19 @@ class Sda(object):
     def delete_transit_peer_network(self,
                                        transit_peer_network_name,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of delete_transit_peer_network_v1 .
+        Args:
+            transit_peer_network_name(basestring): transitPeerNetworkName query parameter. Transit Peer Network Name
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_transit_peer_network_v1 .
+        """ 
         return self.delete_transit_peer_network_v1(
                     transit_peer_network_name=transit_peer_network_name,
                     headers=headers,
@@ -9728,7 +10384,18 @@ class Sda(object):
     def delete_provisioned_device_by_id(self,
                                            id,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of delete_provisioned_device_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the provisioned device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_provisioned_device_by_id_v1 .
+        """ 
         return self.delete_provisioned_device_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9744,7 +10411,25 @@ class Sda(object):
                               network_device_id=None,
                               offset=None,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of get_fabric_devices_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            device_roles(basestring): deviceRoles query parameter. Device roles of the fabric device. Allowed values
+                are [CONTROL_PLANE_NODE, EDGE_NODE, BORDER_NODE, WIRELESS_CONTROLLER_NODE,
+                EXTENDED_NODE]. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_v1 .
+        """ 
         return self.get_fabric_devices_v1(
                     fabric_id=fabric_id,
                     device_roles=device_roles,
@@ -9761,7 +10446,21 @@ class Sda(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of add_multicast_virtual_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_multicast_virtual_networks_v1 .
+        """ 
         return self.add_multicast_virtual_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -9778,7 +10477,23 @@ class Sda(object):
                                 offset=None,
                                 type=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_transit_networks_v1 .
+        Args:
+            id(basestring): id query parameter. ID of the transit network. .
+            name(basestring): name query parameter. Name of the transit network. .
+            type(basestring): type query parameter. Type of the transit network. Allowed values are
+                [IP_BASED_TRANSIT, SDA_LISP_PUB_SUB_TRANSIT, SDA_LISP_BGP_TRANSIT]. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_transit_networks_v1 .
+        """ 
         return self.get_transit_networks_v1(
                     id=id,
                     limit=limit,
@@ -9795,7 +10510,19 @@ class Sda(object):
                   site_name_hierarchy,
                   virtual_network_name,
                   headers=None,
-                  **request_parameters):  
+                  **request_parameters):
+        """ This function is an alias of delete_vn_v1 .
+        Args:
+            virtual_network_name(basestring): virtualNetworkName query parameter.
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_vn_v1 .
+        """ 
         return self.delete_vn_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     virtual_network_name=virtual_network_name,
@@ -9809,7 +10536,21 @@ class Sda(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of add_fabric_devices_layer2_handoffs_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_fabric_devices_layer2_handoffs_v1 .
+        """ 
         return self.add_fabric_devices_layer2_handoffs_v1(
                     headers=headers,
                     payload=payload,
@@ -9823,7 +10564,21 @@ class Sda(object):
                                  headers=None,
                                  payload=None,
                                  active_validation=True,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of update_fabric_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_fabric_devices_v1 .
+        """ 
         return self.update_fabric_devices_v1(
                     headers=headers,
                     payload=payload,
@@ -9836,7 +10591,18 @@ class Sda(object):
     def gets_border_device_detail(self,
                                   device_management_ip_address,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of gets_border_device_detail_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of gets_border_device_detail_v1 .
+        """ 
         return self.gets_border_device_detail_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -9848,17 +10614,39 @@ class Sda(object):
     def get_extranet_policy_count(self,
                                      headers=None,
                                      **request_parameters):
+        """ This function is an alias of get_extranet_policy_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_extranet_policy_count_v1 .
+        """
         return self.get_extranet_policy_count_v1(
-                                    headers=headers,
-                                     **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_transit_peer_network_info(self,
                                          transit_peer_network_name,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_transit_peer_network_info_v1 .
+        Args:
+            transit_peer_network_name(basestring): transitPeerNetworkName query parameter. Transit or Peer Network
+                Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_transit_peer_network_info_v1 .
+        """ 
         return self.get_transit_peer_network_info_v1(
                     transit_peer_network_name=transit_peer_network_name,
                     headers=headers,
@@ -9870,7 +10658,18 @@ class Sda(object):
     def delete_fabric_device_by_id(self,
                                       id,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of delete_fabric_device_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the fabric device. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_device_by_id_v1 .
+        """ 
         return self.delete_fabric_device_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9888,7 +10687,25 @@ class Sda(object):
                                 offset=None,
                                 voice_vlan_name=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_port_assignments_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the port
+                assignment. .
+            interface_name(basestring): interfaceName query parameter. Interface name of the port assignment. .
+            data_vlan_name(basestring): dataVlanName query parameter. Data VLAN name of the port assignment. .
+            voice_vlan_name(basestring): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_port_assignments_v1 .
+        """ 
         return self.get_port_assignments_v1(
                     data_vlan_name=data_vlan_name,
                     fabric_id=fabric_id,
@@ -9906,7 +10723,18 @@ class Sda(object):
     def get_virtual_network_with_scalable_groups(self,
                                                     virtual_network_name,
                                                     headers=None,
-                                                    **request_parameters):  
+                                                    **request_parameters):
+        """ This function is an alias of get_virtual_network_with_scalable_groups_v1 .
+        Args:
+            virtual_network_name(basestring): virtualNetworkName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_virtual_network_with_scalable_groups_v1 .
+        """ 
         return self.get_virtual_network_with_scalable_groups_v1(
                     virtual_network_name=virtual_network_name,
                     headers=headers,
@@ -9918,7 +10746,18 @@ class Sda(object):
     def get_multicast_details_from_sda_fabric(self,
                                                  site_name_hierarchy,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of get_multicast_details_from_sda_fabric_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter. fabric site name hierarchy .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_multicast_details_from_sda_fabric_v1 .
+        """ 
         return self.get_multicast_details_from_sda_fabric_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     headers=headers,
@@ -9930,7 +10769,19 @@ class Sda(object):
     def delete_provisioned_wired_device(self,
                                            device_management_ip_address,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of delete_provisioned_wired_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter. Valid IP address of
+                the device currently provisioned in a fabric site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_provisioned_wired_device_v1 .
+        """ 
         return self.delete_provisioned_wired_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -9942,7 +10793,18 @@ class Sda(object):
     def delete_anycast_gateway_by_id(self,
                                         id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of delete_anycast_gateway_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the anycast gateway. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_anycast_gateway_by_id_v1 .
+        """ 
         return self.delete_anycast_gateway_by_id_v1(
                     id=id,
                     headers=headers,
@@ -9954,7 +10816,19 @@ class Sda(object):
     def get_virtual_network_summary(self,
                                        site_name_hierarchy,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_virtual_network_summary_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Complete fabric siteNameHierarchy
+                Path .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_virtual_network_summary_v1 .
+        """ 
         return self.get_virtual_network_summary_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     headers=headers,
@@ -9967,7 +10841,21 @@ class Sda(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of add_port_channels_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_port_channels_v1 .
+        """ 
         return self.add_port_channels_v1(
                     headers=headers,
                     payload=payload,
@@ -9980,7 +10868,18 @@ class Sda(object):
     def delete_edge_device(self,
                            device_management_ip_address,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of delete_edge_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_edge_device_v1 .
+        """ 
         return self.delete_edge_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -9994,7 +10893,22 @@ class Sda(object):
                                  device_roles=None,
                                  network_device_id=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of delete_fabric_devices_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            device_roles(basestring): deviceRoles query parameter. Device roles of the fabric device. Allowed values
+                are [CONTROL_PLANE_NODE, EDGE_NODE, BORDER_NODE, WIRELESS_CONTROLLER_NODE]. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_devices_v1 .
+        """ 
         return self.delete_fabric_devices_v1(
                     fabric_id=fabric_id,
                     device_roles=device_roles,
@@ -10011,7 +10925,22 @@ class Sda(object):
                             offset=None,
                             site_id=None,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """ This function is an alias of get_fabric_zones_v1 .
+        Args:
+            id(basestring): id query parameter. ID of the fabric zone. .
+            site_id(basestring): siteId query parameter. ID of the network hierarchy associated with the fabric
+                zone. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_zones_v1 .
+        """ 
         return self.get_fabric_zones_v1(
                     id=id,
                     limit=limit,
@@ -10027,7 +10956,21 @@ class Sda(object):
                                                                   headers=None,
                                                                   payload=None,
                                                                   active_validation=True,
-                                                                  **request_parameters):  
+                                                                  **request_parameters):
+        """ This function is an alias of update_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
+        """ 
         return self.update_fabric_devices_layer3_handoffs_with_sda_transit_v1(
                     headers=headers,
                     payload=payload,
@@ -10041,7 +10984,21 @@ class Sda(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of update_authentication_profile_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_authentication_profile_v1 .
+        """ 
         return self.update_authentication_profile_v1(
                     headers=headers,
                     payload=payload,
@@ -10054,7 +11011,18 @@ class Sda(object):
     def delete_control_plane_device(self,
                                     device_management_ip_address,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of delete_control_plane_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_control_plane_device_v1 .
+        """ 
         return self.delete_control_plane_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -10069,7 +11037,22 @@ class Sda(object):
                                           offset=None,
                                           virtual_network_name=None,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of get_multicast_virtual_networks_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric site where multicast is configured. .
+            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the virtual network
+                associated to the multicast configuration. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_multicast_virtual_networks_v1 .
+        """ 
         return self.get_multicast_virtual_networks_v1(
                     fabric_id=fabric_id,
                     limit=limit,
@@ -10085,7 +11068,21 @@ class Sda(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of update_port_assignments_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_port_assignments_v1 .
+        """ 
         return self.update_port_assignments_v1(
                     headers=headers,
                     payload=payload,
@@ -10101,7 +11098,22 @@ class Sda(object):
                                                                network_device_id=None,
                                                                offset=None,
                                                                headers=None,
-                                                               **request_parameters):  
+                                                               **request_parameters):
+        """ This function is an alias of get_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
+        """ 
         return self.get_fabric_devices_layer3_handoffs_with_sda_transit_v1(
                     fabric_id=fabric_id,
                     limit=limit,
@@ -10117,7 +11129,20 @@ class Sda(object):
                                                                  fabric_id,
                                                                  network_device_id,
                                                                  headers=None,
-                                                                 **request_parameters):  
+                                                                 **request_parameters):
+        """ This function is an alias of delete_fabric_device_layer3_handoffs_with_sda_transit_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_device_layer3_handoffs_with_sda_transit_v1 .
+        """ 
         return self.delete_fabric_device_layer3_handoffs_with_sda_transit_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -10131,7 +11156,21 @@ class Sda(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of add_layer2_virtual_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_layer2_virtual_networks_v1 .
+        """ 
         return self.add_layer2_virtual_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -10145,7 +11184,21 @@ class Sda(object):
                                                                headers=None,
                                                                payload=None,
                                                                active_validation=True,
-                                                               **request_parameters):  
+                                                               **request_parameters):
+        """ This function is an alias of add_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
+        """ 
         return self.add_fabric_devices_layer3_handoffs_with_sda_transit_v1(
                     headers=headers,
                     payload=payload,
@@ -10159,7 +11212,19 @@ class Sda(object):
                                                device_management_ip_address,
                                                interface_name,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of delete_port_assignment_for_user_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            interface_name(basestring): interfaceName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_port_assignment_for_user_device_v1 .
+        """ 
         return self.delete_port_assignment_for_user_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     interface_name=interface_name,
@@ -10173,7 +11238,20 @@ class Sda(object):
                                                     fabric_id,
                                                     network_device_id=None,
                                                     headers=None,
-                                                    **request_parameters):  
+                                                    **request_parameters):
+        """ This function is an alias of get_fabric_devices_layer2_handoffs_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_layer2_handoffs_count_v1 .
+        """ 
         return self.get_fabric_devices_layer2_handoffs_count_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -10187,7 +11265,21 @@ class Sda(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of add_transit_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_transit_networks_v1 .
+        """ 
         return self.add_transit_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -10201,7 +11293,21 @@ class Sda(object):
                                              headers=None,
                                              payload=None,
                                              active_validation=True,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of update_multicast_virtual_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_multicast_virtual_networks_v1 .
+        """ 
         return self.update_multicast_virtual_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -10214,7 +11320,18 @@ class Sda(object):
     def delete_transit_network_by_id(self,
                                         id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of delete_transit_network_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the transit network. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_transit_network_by_id_v1 .
+        """ 
         return self.delete_transit_network_by_id_v1(
                     id=id,
                     headers=headers,
@@ -10226,7 +11343,18 @@ class Sda(object):
     def delete_fabric_zone_by_id(self,
                                     id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of delete_fabric_zone_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the fabric zone. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_zone_by_id_v1 .
+        """ 
         return self.delete_fabric_zone_by_id_v1(
                     id=id,
                     headers=headers,
@@ -10238,7 +11366,18 @@ class Sda(object):
     def get_provisioned_devices_count(self,
                                          site_id=None,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_provisioned_devices_count_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. ID of the site hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_provisioned_devices_count_v1 .
+        """ 
         return self.get_provisioned_devices_count_v1(
                     site_id=site_id,
                     headers=headers,
@@ -10250,7 +11389,18 @@ class Sda(object):
     def delete_site(self,
                     site_name_hierarchy,
                     headers=None,
-                    **request_parameters):  
+                    **request_parameters):
+        """ This function is an alias of delete_site_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Site Name Hierarchy .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_site_v1 .
+        """ 
         return self.delete_site_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     headers=headers,
@@ -10263,7 +11413,21 @@ class Sda(object):
                                headers=None,
                                payload=None,
                                active_validation=True,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of add_extranet_policy_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_extranet_policy_v1 .
+        """ 
         return self.add_extranet_policy_v1(
                     headers=headers,
                     payload=payload,
@@ -10276,7 +11440,19 @@ class Sda(object):
     def delete_layer3_virtual_networks(self,
                                           virtual_network_name=None,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of delete_layer3_virtual_networks_v1 .
+        Args:
+            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the layer 3 virtual
+                network. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_layer3_virtual_networks_v1 .
+        """ 
         return self.delete_layer3_virtual_networks_v1(
                     virtual_network_name=virtual_network_name,
                     headers=headers,
@@ -10289,7 +11465,21 @@ class Sda(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of update_fabric_zone_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_fabric_zone_v1 .
+        """ 
         return self.update_fabric_zone_v1(
                     headers=headers,
                     payload=payload,
@@ -10304,7 +11494,20 @@ class Sda(object):
                          limit=None,
                          offset=None,
                          headers=None,
-                         **request_parameters):  
+                         **request_parameters):
+        """ This function is an alias of get_multicast_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric site where multicast is configured. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_multicast_v1 .
+        """ 
         return self.get_multicast_v1(
                     fabric_id=fabric_id,
                     limit=limit,
@@ -10319,7 +11522,21 @@ class Sda(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of add_fabric_zone_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_fabric_zone_v1 .
+        """ 
         return self.add_fabric_zone_v1(
                     headers=headers,
                     payload=payload,
@@ -10335,7 +11552,23 @@ class Sda(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of re_provision_wired_device_v1 .
+        Args:
+            deviceManagementIpAddress(string): SDA's Management Ip Address of the device to be re-provisioned .
+            siteNameHierarchy(string): SDA's siteNameHierarchy of the provisioned device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of re_provision_wired_device_v1 .
+        """ 
         return self.re_provision_wired_device_v1(
                     deviceManagementIpAddress=deviceManagementIpAddress,
                     siteNameHierarchy=siteNameHierarchy,
@@ -10350,7 +11583,18 @@ class Sda(object):
     def delete_port_assignment_by_id(self,
                                         id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of delete_port_assignment_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. ID of the port assignment. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_port_assignment_by_id_v1 .
+        """ 
         return self.delete_port_assignment_by_id_v1(
                     id=id,
                     headers=headers,
@@ -10363,7 +11607,20 @@ class Sda(object):
                                                                 fabric_id,
                                                                 network_device_id,
                                                                 headers=None,
-                                                                **request_parameters):  
+                                                                **request_parameters):
+        """ This function is an alias of delete_fabric_device_layer3_handoffs_with_ip_transit_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_fabric_device_layer3_handoffs_with_ip_transit_v1 .
+        """ 
         return self.delete_fabric_device_layer3_handoffs_with_ip_transit_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -10381,7 +11638,26 @@ class Sda(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of add_transit_peer_network_v1 .
+        Args:
+            ipTransitSettings(object): SDA's ipTransitSettings.
+            sdaTransitSettings(object): SDA's sdaTransitSettings.
+            transitPeerNetworkName(string): SDA's Transit Peer Network Name .
+            transitPeerNetworkType(string): SDA's Transit Peer Network Type . Available values are 'ip_transit',
+                'sda_transit_with_lisp_bgp' and 'sda_transit_with_pub_sub'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_transit_peer_network_v1 .
+        """ 
         return self.add_transit_peer_network_v1(
                     ipTransitSettings=ipTransitSettings,
                     sdaTransitSettings=sdaTransitSettings,
@@ -10398,7 +11674,18 @@ class Sda(object):
     def get_control_plane_device(self,
                                  device_management_ip_address,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of get_control_plane_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_control_plane_device_v1 .
+        """ 
         return self.get_control_plane_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -10414,7 +11701,25 @@ class Sda(object):
                                           vlan_id=None,
                                           vlan_name=None,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of delete_layer2_virtual_networks_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 2 virtual network is
+                assigned to. .
+            vlan_name(basestring): vlanName query parameter. The vlan name of the layer 2 virtual network. .
+            vlan_id(int): vlanId query parameter. The vlan ID of the layer 2 virtual network. .
+            traffic_type(basestring): trafficType query parameter. The traffic type of the layer 2 virtual network.
+                .
+            associated_layer3_virtual_network_name(basestring): associatedLayer3VirtualNetworkName query parameter.
+                Name of the associated layer 3 virtual network. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_layer2_virtual_networks_v1 .
+        """ 
         return self.delete_layer2_virtual_networks_v1(
                     fabric_id=fabric_id,
                     associated_layer3_virtual_network_name=associated_layer3_virtual_network_name,
@@ -10430,10 +11735,20 @@ class Sda(object):
     def get_fabric_zone_count(self,
                                  headers=None,
                                  **request_parameters):
+        """ This function is an alias of get_fabric_zone_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_zone_count_v1 .
+        """
         return self.get_fabric_zone_count_v1(
-                                headers=headers,
-                                 **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -10450,7 +11765,35 @@ class Sda(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of add_port_assignment_for_user_device_v1 .
+        Args:
+            authenticateTemplateName(string): SDA's Authenticate TemplateName associated with siteNameHierarchy .
+                Available values are 'Open Authentication', 'Closed Authentication', 'Low Impact' and
+                'No Authentication'.
+            dataIpAddressPoolName(string): SDA's Ip Pool Name, that is assigned to virtual network with traffic type
+                as DATA(can't be empty if voiceIpAddressPoolName is empty) .
+            deviceManagementIpAddress(string): SDA's Management Ip Address of the Edge Node Device. .
+            interfaceDescription(string): SDA's User defined text message for port assignment .
+            interfaceName(string): SDA's Interface Name on the Edge Node Device. .
+            interfaceNames(list): SDA's List of Interface Names on the Edge Node Device.
+                E.g.["GigabitEthernet1/0/3","GigabitEthernet1/0/4"]   (list of strings).
+            scalableGroupName(string): SDA's Scalable Group name associated with VN .
+            siteNameHierarchy(string): SDA's Complete Path of SD-Access Fabric Site. .
+            voiceIpAddressPoolName(string): SDA's Ip Pool Name, that is assigned to virtual network with traffic
+                type as VOICE(can't be empty if dataIpAddressPoolName is empty) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_port_assignment_for_user_device_v1 .
+        """ 
         return self.add_port_assignment_for_user_device_v1(
                     authenticateTemplateName=authenticateTemplateName,
                     dataIpAddressPoolName=dataIpAddressPoolName,
@@ -10473,7 +11816,21 @@ class Sda(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of update_port_channels_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_port_channels_v1 .
+        """ 
         return self.update_port_channels_v1(
                     headers=headers,
                     payload=payload,
@@ -10487,7 +11844,19 @@ class Sda(object):
                site_name_hierarchy,
                virtual_network_name,
                headers=None,
-               **request_parameters):  
+               **request_parameters):
+        """ This function is an alias of get_vn_v1 .
+        Args:
+            virtual_network_name(basestring): virtualNetworkName query parameter.
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_vn_v1 .
+        """ 
         return self.get_vn_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     virtual_network_name=virtual_network_name,
@@ -10503,7 +11872,22 @@ class Sda(object):
                                                               network_device_id=None,
                                                               offset=None,
                                                               headers=None,
-                                                              **request_parameters):  
+                                                              **request_parameters):
+        """ This function is an alias of get_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
+        """ 
         return self.get_fabric_devices_layer3_handoffs_with_ip_transit_v1(
                     fabric_id=fabric_id,
                     limit=limit,
@@ -10519,7 +11903,21 @@ class Sda(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of add_fabric_site_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_fabric_site_v1 .
+        """ 
         return self.add_fabric_site_v1(
                     headers=headers,
                     payload=payload,
@@ -10537,7 +11935,27 @@ class Sda(object):
                                                        headers=None,
                                                        payload=None,
                                                        active_validation=True,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of update_virtual_network_with_scalable_groups_v1 .
+        Args:
+            isGuestVirtualNetwork(boolean): SDA's Indicates whether to set this as guest virtual network or not,
+                default value is False. .
+            scalableGroupNames(list): SDA's Scalable Group Name to be associated to virtual network  (list of
+                strings).
+            vManageVpnId(string): SDA's vManage vpn id for SD-WAN .
+            virtualNetworkName(string): SDA's Virtual Network Name to be assigned global level .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_virtual_network_with_scalable_groups_v1 .
+        """ 
         return self.update_virtual_network_with_scalable_groups_v1(
                     isGuestVirtualNetwork=isGuestVirtualNetwork,
                     scalableGroupNames=scalableGroupNames,
@@ -10561,7 +11979,28 @@ class Sda(object):
                                 vlan_id=None,
                                 vlan_name=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_anycast_gateways_v1 .
+        Args:
+            id(basestring): id query parameter. ID of the anycast gateway. .
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the anycast gateway is assigned to. .
+            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the virtual network
+                associated with the anycast gateways. .
+            ip_pool_name(basestring): ipPoolName query parameter. Name of the IP pool associated with the anycast
+                gateways. .
+            vlan_name(basestring): vlanName query parameter. VLAN name of the anycast gateways. .
+            vlan_id(int): vlanId query parameter. VLAN ID of the anycast gateways. The allowed range for vlanId is
+                [2-4093] except for reserved VLANs [1002-1005], 2046, and 4094. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_anycast_gateways_v1 .
+        """ 
         return self.get_anycast_gateways_v1(
                     fabric_id=fabric_id,
                     id=id,
@@ -10581,7 +12020,21 @@ class Sda(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of provision_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of provision_devices_v1 .
+        """ 
         return self.provision_devices_v1(
                     headers=headers,
                     payload=payload,
@@ -10595,7 +12048,21 @@ class Sda(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of update_layer3_virtual_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_layer3_virtual_networks_v1 .
+        """ 
         return self.update_layer3_virtual_networks_v1(
                     headers=headers,
                     payload=payload,
@@ -10608,7 +12075,18 @@ class Sda(object):
     def delete_multicast_from_sda_fabric(self,
                                             site_name_hierarchy,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of delete_multicast_from_sda_fabric_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_multicast_from_sda_fabric_v1 .
+        """ 
         return self.delete_multicast_from_sda_fabric_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     headers=headers,
@@ -10624,7 +12102,27 @@ class Sda(object):
                                  headers=None,
                                  payload=None,
                                  active_validation=True,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of add_control_plane_device_v1 .
+        Args:
+            deviceManagementIpAddress(string): SDA's Management Ip Address of the Device which is provisioned
+                successfully .
+            routeDistributionProtocol(string): SDA's Route Distribution Protocol for Control Plane Device. Allowed
+                values are "LISP_BGP" or "LISP_PUB_SUB". Default value is "LISP_BGP" .
+            siteNameHierarchy(string): SDA's siteNameHierarchy of the Provisioned Device(site should be part of
+                Fabric Site) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_control_plane_device_v1 .
+        """ 
         return self.add_control_plane_device_v1(
                     deviceManagementIpAddress=deviceManagementIpAddress,
                     routeDistributionProtocol=routeDistributionProtocol,
@@ -10644,7 +12142,23 @@ class Sda(object):
                                    interface_name=None,
                                    voice_vlan_name=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of delete_port_assignments_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the port
+                assignment. .
+            interface_name(basestring): interfaceName query parameter. Interface name of the port assignment. .
+            data_vlan_name(basestring): dataVlanName query parameter. Data VLAN name of the port assignment. .
+            voice_vlan_name(basestring): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_port_assignments_v1 .
+        """ 
         return self.delete_port_assignments_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -10660,7 +12174,19 @@ class Sda(object):
     def get_multicast_virtual_network_count(self,
                                                fabric_id=None,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of get_multicast_virtual_network_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric site the multicast configuration is
+                associated with. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_multicast_virtual_network_count_v1 .
+        """ 
         return self.get_multicast_virtual_network_count_v1(
                     fabric_id=fabric_id,
                     headers=headers,
@@ -10673,7 +12199,21 @@ class Sda(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of update_default_authentication_profile_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_default_authentication_profile_v1 .
+        """ 
         return self.update_default_authentication_profile_v1(
                     headers=headers,
                     payload=payload,
@@ -10687,7 +12227,20 @@ class Sda(object):
                                                                      fabric_id,
                                                                      network_device_id=None,
                                                                      headers=None,
-                                                                     **request_parameters):  
+                                                                     **request_parameters):
+        """ This function is an alias of get_fabric_devices_layer3_handoffs_with_sda_transit_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_devices_layer3_handoffs_with_sda_transit_count_v1 .
+        """ 
         return self.get_fabric_devices_layer3_handoffs_with_sda_transit_count_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -10701,7 +12254,21 @@ class Sda(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of add_fabric_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_fabric_devices_v1 .
+        """ 
         return self.add_fabric_devices_v1(
                     headers=headers,
                     payload=payload,
@@ -10718,7 +12285,22 @@ class Sda(object):
                                    offset=None,
                                    site_id=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_provisioned_devices_v1 .
+        Args:
+            id(basestring): id query parameter. ID of the provisioned device. .
+            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
+            site_id(basestring): siteId query parameter. ID of the site hierarchy. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of devices to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_provisioned_devices_v1 .
+        """ 
         return self.get_provisioned_devices_v1(
                     id=id,
                     limit=limit,
@@ -10738,7 +12320,25 @@ class Sda(object):
                                             vlan_id=None,
                                             vlan_name=None,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of get_layer2_virtual_network_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 2 virtual network is
+                assigned to. .
+            vlan_name(basestring): vlanName query parameter. The vlan name of the layer 2 virtual network. .
+            vlan_id(int): vlanId query parameter. The vlan ID of the layer 2 virtual network. .
+            traffic_type(basestring): trafficType query parameter. The traffic type of the layer 2 virtual network.
+                .
+            associated_layer3_virtual_network_name(basestring): associatedLayer3VirtualNetworkName query parameter.
+                Name of the associated layer 3 virtual network. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_layer2_virtual_network_count_v1 .
+        """ 
         return self.get_layer2_virtual_network_count_v1(
                     associated_layer3_virtual_network_name=associated_layer3_virtual_network_name,
                     fabric_id=fabric_id,
@@ -10758,7 +12358,25 @@ class Sda(object):
                                      vlan_id=None,
                                      vlan_name=None,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of get_anycast_gateway_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the anycast gateway is assigned to. .
+            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the virtual network
+                associated with the anycast gateways. .
+            ip_pool_name(basestring): ipPoolName query parameter. Name of the IP pool associated with the anycast
+                gateways. .
+            vlan_name(basestring): vlanName query parameter. VLAN name of the anycast gateways. .
+            vlan_id(int): vlanId query parameter. VLAN ID of the anycast gateways. The allowed range for vlanId is
+                [2-4093] except for reserved VLANs [1002-1005], 2046, and 4094. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_anycast_gateway_count_v1 .
+        """ 
         return self.get_anycast_gateway_count_v1(
                     fabric_id=fabric_id,
                     ip_pool_name=ip_pool_name,
@@ -10777,7 +12395,22 @@ class Sda(object):
                                   network_device_id=None,
                                   port_channel_name=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_port_channel_count_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
+            port_channel_name(basestring): portChannelName query parameter. Name of the port channel. .
+            connected_device_type(basestring): connectedDeviceType query parameter. Connected device type of the
+                port channel. The allowed values are [TRUNK, EXTENDED_NODE]. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_port_channel_count_v1 .
+        """ 
         return self.get_port_channel_count_v1(
                     connected_device_type=connected_device_type,
                     fabric_id=fabric_id,
@@ -10792,7 +12425,18 @@ class Sda(object):
     def get_edge_device(self,
                         device_management_ip_address,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of get_edge_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_edge_device_v1 .
+        """ 
         return self.get_edge_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -10804,9 +12448,19 @@ class Sda(object):
     def get_fabric_site_count(self,
                                  headers=None,
                                  **request_parameters):
+        """ This function is an alias of get_fabric_site_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_fabric_site_count_v1 .
+        """
         return self.get_fabric_site_count_v1(
-                                headers=headers,
-                                 **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -10815,7 +12469,21 @@ class Sda(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of re_provision_devices_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of re_provision_devices_v1 .
+        """ 
         return self.re_provision_devices_v1(
                     headers=headers,
                     payload=payload,
@@ -10831,7 +12499,23 @@ class Sda(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of provision_wired_device_v1 .
+        Args:
+            deviceManagementIpAddress(string): SDA's Management Ip Address of the device to be provisioned .
+            siteNameHierarchy(string): SDA's Site Name Hierarchy for device location(only building / floor level)  .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of provision_wired_device_v1 .
+        """ 
         return self.provision_wired_device_v1(
                     deviceManagementIpAddress=deviceManagementIpAddress,
                     siteNameHierarchy=siteNameHierarchy,
@@ -10846,7 +12530,18 @@ class Sda(object):
     def get_provisioned_wired_device(self,
                                         device_management_ip_address,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of get_provisioned_wired_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_provisioned_wired_device_v1 .
+        """ 
         return self.get_provisioned_wired_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -10859,7 +12554,19 @@ class Sda(object):
                                             device_management_ip_address,
                                             interface_name,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of get_port_assignment_for_user_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            interface_name(basestring): interfaceName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_port_assignment_for_user_device_v1 .
+        """ 
         return self.get_port_assignment_for_user_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     interface_name=interface_name,
@@ -10872,7 +12579,18 @@ class Sda(object):
     def delete_default_authentication_profile(self,
                                               site_name_hierarchy,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of delete_default_authentication_profile_v1 .
+        Args:
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_default_authentication_profile_v1 .
+        """ 
         return self.delete_default_authentication_profile_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     headers=headers,
@@ -10885,7 +12603,21 @@ class Sda(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of update_fabric_site_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_fabric_site_v1 .
+        """ 
         return self.update_fabric_site_v1(
                     headers=headers,
                     payload=payload,
@@ -10902,7 +12634,28 @@ class Sda(object):
                  headers=None,
                  payload=None,
                  active_validation=True,
-                 **request_parameters):  
+                 **request_parameters):
+        """ This function is an alias of add_site_v1 .
+        Args:
+            fabricName(string): SDA's Warning Starting DNA Center 2.2.3.5 release, this field has been deprecated.
+                SD-Access Fabric does not need it anymore.  It will be removed in future DNA Center
+                releases. .
+            fabricType(string): SDA's Type of SD-Access Fabric. Allowed values are "FABRIC_SITE" or "FABRIC_ZONE".
+                Default value is "FABRIC_SITE". .
+            siteNameHierarchy(string): SDA's Existing site name hierarchy available at global level. For Example
+                "Global/Chicago/Building21/Floor1" .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_site_v1 .
+        """ 
         return self.add_site_v1(
                     fabricName=fabricName,
                     fabricType=fabricType,
@@ -10918,7 +12671,18 @@ class Sda(object):
     def deletes_border_device(self,
                               device_management_ip_address,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of deletes_border_device_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_border_device_v1 .
+        """ 
         return self.deletes_border_device_v1(
                     device_management_ip_address=device_management_ip_address,
                     headers=headers,
@@ -10937,7 +12701,28 @@ class Sda(object):
                                        vlan_id=None,
                                        vlan_name=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_layer2_virtual_networks_v1 .
+        Args:
+            id(basestring): id query parameter. ID of the layer 2 virtual network. .
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 2 virtual network is
+                assigned to. .
+            vlan_name(basestring): vlanName query parameter. The vlan name of the layer 2 virtual network. .
+            vlan_id(int): vlanId query parameter. The vlan ID of the layer 2 virtual network. .
+            traffic_type(basestring): trafficType query parameter. The traffic type of the layer 2 virtual network.
+                .
+            associated_layer3_virtual_network_name(basestring): associatedLayer3VirtualNetworkName query parameter.
+                Name of the associated layer 3 virtual network. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_layer2_virtual_networks_v1 .
+        """ 
         return self.get_layer2_virtual_networks_v1(
                     associated_layer3_virtual_network_name=associated_layer3_virtual_network_name,
                     fabric_id=fabric_id,
@@ -10958,7 +12743,20 @@ class Sda(object):
                                  limit=None,
                                  offset=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of get_extranet_policies_v1 .
+        Args:
+            extranet_policy_name(basestring): extranetPolicyName query parameter. Name of the extranet policy. .
+            offset(int): offset query parameter. Starting record for pagination. .
+            limit(int): limit query parameter. Maximum number of records to return. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_extranet_policies_v1 .
+        """ 
         return self.get_extranet_policies_v1(
                     extranet_policy_name=extranet_policy_name,
                     limit=limit,
@@ -10973,7 +12771,19 @@ class Sda(object):
                                              device_management_ip_address,
                                              interface_name,
                                              headers=None,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of get_port_assignment_for_access_point_v1 .
+        Args:
+            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            interface_name(basestring): interfaceName query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_port_assignment_for_access_point_v1 .
+        """ 
         return self.get_port_assignment_for_access_point_v1(
                     device_management_ip_address=device_management_ip_address,
                     interface_name=interface_name,
@@ -10989,7 +12799,22 @@ class Sda(object):
                                 connected_device_type=None,
                                 port_channel_name=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of delete_port_channels_v1 .
+        Args:
+            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
+            port_channel_name(basestring): portChannelName query parameter. Name of the port channel. .
+            connected_device_type(basestring): connectedDeviceType query parameter. Connected device type of the
+                port channel. The allowed values are [TRUNK, EXTENDED_NODE]. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_port_channels_v1 .
+        """ 
         return self.delete_port_channels_v1(
                     fabric_id=fabric_id,
                     network_device_id=network_device_id,
@@ -11007,7 +12832,23 @@ class Sda(object):
                headers=None,
                payload=None,
                active_validation=True,
-               **request_parameters):  
+               **request_parameters):
+        """ This function is an alias of add_vn .
+        Args:
+            siteNameHierarchy(string): SDA's Path of sda Fabric Site .
+            virtualNetworkName(string): SDA's Virtual Network Name, that is created at Global level .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_vn .
+        """ 
         return self.add_vn_v1(
                     siteNameHierarchy=siteNameHierarchy,
                     virtualNetworkName=virtualNetworkName,
@@ -11023,7 +12864,21 @@ class Sda(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of update_layer2_virtual_networks_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_layer2_virtual_networks_v1 .
+        """ 
         return self.update_layer2_virtual_networks_v1(
                     headers=headers,
                     payload=payload,

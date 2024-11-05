@@ -86,7 +86,7 @@ class CiscoTrustedCertificates(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!import-trusted-certificate-v1
+            https://developer.cisco.com/docs/dna-center/#!import-trusted-certificate
         """
         check_type(headers, dict)
         if headers is not None:
@@ -126,7 +126,18 @@ class CiscoTrustedCertificates(object):
     # Alias Function
     def import_trusted_certificate(self,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """This function is an alias of import_trusted_certificate_v1. .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of import_trusted_certificate_v1.
+        """  
         return self.import_trusted_certificate_v1(
                     headers=headers,
                     **request_parameters

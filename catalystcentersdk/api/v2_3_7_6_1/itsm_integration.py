@@ -100,7 +100,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-i-t-s-m-integration-setting-v1
+            https://developer.cisco.com/docs/dna-center/#!create-i-t-s-m-integration-setting
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -186,7 +186,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-i-t-s-m-integration-setting-v1
+            https://developer.cisco.com/docs/dna-center/#!update-i-t-s-m-integration-setting
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -262,7 +262,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-t-s-m-integration-setting-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-i-t-s-m-integration-setting-by-id
         """
         check_type(headers, dict)
         check_type(instance_id, str,
@@ -320,7 +320,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-i-t-s-m-integration-setting-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-i-t-s-m-integration-setting
         """
         check_type(headers, dict)
         check_type(instance_id, str,
@@ -377,7 +377,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-i-t-s-m-integration-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-i-t-s-m-integration-settings
         """
         check_type(headers, dict)
         if headers is not None:
@@ -429,7 +429,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-t-s-m-integration-status-v1
+            https://developer.cisco.com/docs/dna-center/#!get-i-t-s-m-integration-status
         """
         check_type(headers, dict)
         if headers is not None:
@@ -472,7 +472,25 @@ class ItsmIntegration(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of create_itsm_integration_setting_v1 .
+        Args:
+            data(object): ITSM Integration's data.
+            description(string): ITSM Integration's Description of the setting instance .
+            dypName(string): ITSM Integration's It can be ServiceNowConnection .
+            name(string): ITSM Integration's Name of the setting instance .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_itsm_integration_setting_v1 .
+        """ 
         return self.create_itsm_integration_setting_v1(
                     data=data,
                     description=description,
@@ -489,19 +507,39 @@ class ItsmIntegration(object):
     def get_all_itsm_integration_settings(self,
                                              headers=None,
                                              **request_parameters):
+        """ This function is an alias of get_all_itsm_integration_settings_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_itsm_integration_settings_v1 .
+        """
         return self.get_all_itsm_integration_settings_v1(
-                                            headers=headers,
-                                             **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_itsm_integration_status(self,
                                        headers=None,
                                        **request_parameters):
+        """ This function is an alias of get_itsm_integration_status_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_itsm_integration_status_v1 .
+        """
         return self.get_itsm_integration_status_v1(
-                                        headers=headers,
-                                       **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -515,7 +553,26 @@ class ItsmIntegration(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of update_itsm_integration_setting_v1 .
+        Args:
+            data(object): ITSM Integration's data.
+            description(string): ITSM Integration's Description of the setting instance .
+            dypName(string): ITSM Integration's It can be ServiceNowConnection .
+            name(string): ITSM Integration's Name of the setting instance .
+            instance_id(basestring): instanceId path parameter. Instance Id of the Integration setting instance .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_itsm_integration_setting_v1 .
+        """ 
         return self.update_itsm_integration_setting_v1(
                     instance_id=instance_id,
                     data=data,
@@ -533,7 +590,18 @@ class ItsmIntegration(object):
     def get_itsm_integration_setting_by_id(self,
                                               instance_id,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of get_itsm_integration_setting_by_id_v1 .
+        Args:
+            instance_id(basestring): instanceId path parameter. Instance Id of the Integration setting instance .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_itsm_integration_setting_by_id_v1 .
+        """ 
         return self.get_itsm_integration_setting_by_id_v1(
                     instance_id=instance_id,
                     headers=headers,
@@ -545,7 +613,18 @@ class ItsmIntegration(object):
     def delete_itsm_integration_setting(self,
                                            instance_id,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of delete_itsm_integration_setting_v1 .
+        Args:
+            instance_id(basestring): instanceId path parameter. Instance Id of the Integration setting instance .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_itsm_integration_setting_v1 .
+        """ 
         return self.delete_itsm_integration_setting_v1(
                     instance_id=instance_id,
                     headers=headers,

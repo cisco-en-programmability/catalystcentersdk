@@ -86,7 +86,7 @@ class Platform(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-packages-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-packages-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -139,7 +139,7 @@ class Platform(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-release-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-release-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -193,7 +193,7 @@ class Platform(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-nodes-configuration-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-nodes-configuration-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -231,9 +231,19 @@ class Platform(object):
     def nodes_configuration_summary(self,
                                     headers=None,
                                     **request_parameters):
+        """ This function is an alias of nodes_configuration_summary_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of nodes_configuration_summary_v1 .
+        """
         return self.nodes_configuration_summary_v1(
-                                    headers=headers,
-                                    **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -241,19 +251,39 @@ class Platform(object):
     def cisco_catalystcenter_packages_summary(self,
                                              headers=None,
                                              **request_parameters):
+        """ This function is an alias of cisco_catalystcenter_packages_summary_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of cisco_catalystcenter_packages_summary_v1 .
+        """
         return self.cisco_catalystcenter_packages_summary_v1(
-                                            headers=headers,
-                                             **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def release_summary(self,
                         headers=None,
                         **request_parameters):
+        """ This function is an alias of release_summary_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of release_summary_v1 .
+        """
         return self.release_summary_v1(
-                        headers=headers,
-                        **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
 
 

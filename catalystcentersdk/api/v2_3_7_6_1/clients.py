@@ -196,7 +196,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-clients-while-also-offering-basic-filtering-and-sorting-capabilities-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-clients-while-also-offering-basic-filtering-and-sorting-capabilities
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -405,7 +405,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-total-count-of-clients-by-applying-basic-filtering-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-total-count-of-clients-by-applying-basic-filtering
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -528,7 +528,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-clients-by-applying-complex-filters-while-also-supporting-aggregate-attributes-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-clients-by-applying-complex-filters-while-also-supporting-aggregate-attributes
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -625,7 +625,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-number-of-clients-by-applying-complex-filters-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-number-of-clients-by-applying-complex-filters
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -723,7 +723,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-summary-analytics-data-related-to-clients-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-summary-analytics-data-related-to-clients
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -831,7 +831,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-top-n-analytics-data-related-to-clients-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-top-n-analytics-data-related-to-clients
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -942,7 +942,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-trend-analytics-data-related-to-clients-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-trend-analytics-data-related-to-clients
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1050,7 +1050,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-specific-client-information-matching-the-m-a-c-address-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-specific-client-information-matching-the-m-a-c-address
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1150,7 +1150,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-specific-client-information-over-a-specified-period-of-time-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-specific-client-information-over-a-specified-period-of-time
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1242,7 +1242,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-client-detail-v1
+            https://developer.cisco.com/docs/dna-center/#!get-client-detail
         """
         check_type(headers, dict)
         check_type(mac_address, str,
@@ -1307,7 +1307,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-client-enrichment-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-client-enrichment-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1374,7 +1374,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-overall-client-health-v1
+            https://developer.cisco.com/docs/dna-center/#!get-overall-client-health
         """
         check_type(headers, dict)
         check_type(timestamp, int)
@@ -1444,7 +1444,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!client-proximity-v1
+            https://developer.cisco.com/docs/dna-center/#!client-proximity
         """
         check_type(headers, dict)
         check_type(username, str,
@@ -1493,7 +1493,21 @@ class Clients(object):
                              mac_address,
                              timestamp=None,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """This function is an alias of get_client_detail_v1.  .
+
+        Args:
+            mac_address(str): macAddress query parameter. MAC Address of the client .
+            timestamp(int): timestamp query parameter. Epoch time(in milliseconds) when the Client health data is
+                required .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_client_detail_v1.
+        """  
         return self.get_client_detail_v1(
                     mac_address=mac_address,
                     timestamp=timestamp,
@@ -1506,6 +1520,17 @@ class Clients(object):
     def get_client_enrichment_details(self,
                                          headers=None,
                                          **request_parameters):
+        """This function is an alias of get_client_enrichment_details_v1.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_client_enrichment_details_v1.
+        """
         return self.get_client_enrichment_details_v1(
                                          headers=headers,
                                          **request_parameters
@@ -1536,7 +1561,104 @@ class Clients(object):
                                                                                                       view=None,
                                                                                                       wlc_name=None,
                                                                                                       headers=None,
-                                                                                                      **request_parameters):  
+                                                                                                      **request_parameters):
+        """This function is an alias of retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_v1.
+
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            limit(int): limit query parameter. Maximum number of records to return .
+            offset(int): offset query parameter. Specifies the starting point within all records returned by the
+                API. It's one based offset. The starting value is 1. .
+            sort_by(str): sortBy query parameter. A field within the response to sort by. .
+            order(str): order query parameter. The sort order of the field ascending or descending. .
+            type(str): type query parameter. The client device type whether client is connected to network
+                through Wired or Wireless medium. .
+            os_type(str): osType query parameter. Client device operating system type. This field supports
+                wildcard (`*`) character-based search. If the value contains the (`*`) character, please
+                use the /query API for regex search.  Ex: `*iOS*` or `iOS*` or `*iOS` Examples:
+                `osType=iOS` (single osType requested) `osType=iOS&osType=Android` (multiple osType
+                requested) .
+            os_version(str): osVersion query parameter. Client device operating system version This field
+                supports wildcard (`*`) character-based search. If the value contains the (`*`)
+                character, please use the /query API for regex search.  Ex: `*14.3*` or `14.3*` or
+                `*14.3` Examples: `osVersion=14.3` (single osVersion requested)
+                `osVersion=14.3&osVersion=10.1` (multiple osVersion requested) .
+            site_hierarchy(str): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. "Global/AreaName/BuildingName/FloorName") This field
+                supports wildcard (`*`) character-based search. If the value contains the (`*`)
+                character, please use the /query API for regex search.  Ex: `*BuildingName*` or
+                `BuildingName*` or `*BuildingName` Examples:
+                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested) 
+                `siteHierarchy=Global/AreaName/BuildingName1/FloorName1&siteHierarchy=Global/AreaName/Bu
+                ildingName1/FloorName2` (multiple siteHierarchy requested) .
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. "globalUuid/areaUuid/buildingUuid/floorUuid") This field supports wildcard (`*`)
+                character-based search.  Ex: `*buildingUuid*` or `buildingUuid*` or `*buildingUuid`
+                Examples: `siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid` (single
+                siteHierarchyId requested) `siteHierarchyId=globalUuid/areaUuid/buildingUuid1/floorUuid1
+                &siteHierarchyId=globalUuid/areaUuid/buildingUuid1/floorUuid2` (multiple siteHierarchyId
+                requested) .
+            site_id(str): siteId query parameter. The site UUID without the top level hierarchy.
+                (Ex."floorUuid") Examples: `siteId=floorUuid` (single siteId requested)
+                `siteId=floorUuid1&siteId=floorUuid2` (multiple siteId requested) .
+            ipv4_address(str): ipv4Address query parameter. IPv4 Address of the network entity either network
+                device or client This field supports wildcard (`*`) character-based search.  Ex: `*1.1*`
+                or `1.1*` or `*1.1` Examples: `ipv4Address=1.1.1.1` (single ipv4Address requested)
+                `ipv4Address=1.1.1.1&ipv4Address=2.2.2.2` (multiple ipv4Address requested) .
+            ipv6_address(str): ipv6Address query parameter. IPv6 Address of the network entity either network
+                device or client This field supports wildcard (`*`) character-based search. Ex:
+                `*2001:db8*` or `2001:db8*` or `*2001:db8` Examples: `ipv6Address=2001:db8:0:0:0:0:2:1`
+                (single ipv6Address requested)
+                `ipv6Address=2001:db8:0:0:0:0:2:1&ipv6Address=2001:db8:85a3:8d3:1319:8a2e:370:7348`
+                (multiple ipv6Address requested) .
+            mac_address(str): macAddress query parameter. The macAddress of the network device or client This
+                field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
+                or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
+                `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
+                requested) .
+            wlc_name(str): wlcName query parameter. Wireless Controller name that reports the wireless
+                client. This field supports wildcard (`*`) character-based search. If the value contains
+                the (`*`) character, please use the /query API for regex search. Ex: `*wlc-25*` or
+                `wlc-25*` or `*wlc-25` Examples: `wlcName=wlc-25` (single wlcName requested)
+                `wlcName=wlc-25&wlc-34` (multiple wlcName requested) .
+            connected_network_device_name(str): connectedNetworkDeviceName query parameter. Name of the
+                neighbor network device that client is connected to. This field supports wildcard (`*`)
+                character-based search. If the value contains the (`*`) character, please use the /query
+                API for regex search. Ex: `*ap-25*` or `ap-25*` or `*ap-25` Examples:
+                `connectedNetworkDeviceName=ap-25` (single connectedNetworkDeviceName requested)
+                `connectedNetworkDeviceName=ap-25&ap-34` (multiple connectedNetworkDeviceName requested)
+                .
+            ssid(str): ssid query parameter. SSID is the name of wireless network to which client connects
+                to. It is also referred to as WLAN ID Wireless Local Area Network Identifier. This field
+                supports wildcard (`*`) character-based search. If the value contains the (`*`)
+                character, please use the /query API for regex search.  Ex: `*Alpha*` or `Alpha*` or
+                `*Alpha` Examples: `ssid=Alpha` (single ssid requested) `ssid=Alpha&ssid=Guest`
+                (multiple ssid requested) .
+            band(str): band query parameter. WiFi frequency band that client or Access Point operates. Band
+                value is represented in Giga Hertz GHz Examples: `band=5GHZ` (single band requested)
+                `band=2.4GHZ&band=6GHZ` (multiple band requested) .
+            view(str): view query parameter. Client related Views Refer to ClientView schema for list of
+                views supported Examples: `view=Wireless` (single view requested)
+                `view=WirelessHealth&view=WirelessTraffic` (multiple view requested) .
+            attribute(str): attribute query parameter. List of attributes related to resource that can be
+                requested to only be part of the response along with the required attributes. Refer to
+                ClientAttribute schema for list of attributes supported Examples: `attribute=band`
+                (single attribute requested) `attribute=band&attribute=ssid&attribute=overallScore`
+                (multiple attribute requested) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_v1.
+        """
         return self.retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_v1(
                     attribute=attribute,
                     band=band,
@@ -1570,7 +1692,24 @@ class Clients(object):
                             number_days=None,
                             time_resolution=None,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """This function is an alias of client_proximity_v1. .
+
+        Args:
+            username(str): username query parameter. Wireless client username for which proximity information
+                is required .
+            number_days(int): number_days query parameter. Number of days to track proximity until current date.
+                Defaults and maximum up to 14 days. .
+            time_resolution(int): time_resolution query parameter. Time interval (in minutes) to measure proximity.
+                Defaults to 15 minutes with a minimum 5 minutes. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of client_proximity_v1.
+        """
         return self.client_proximity_v1(
                     username=username,
                     number_days=number_days,
@@ -1588,7 +1727,25 @@ class Clients(object):
                                                                        headers=None,
                                                                        payload=None,
                                                                        active_validation=True,
-                                                                       **request_parameters):  
+                                                                       **request_parameters):
+        """This function is an alias of retrieves_the_number_of_clients_by_applying_complex_filters_v1.
+
+        Args:
+            endTime(integer): Clients's End Time.
+            filters(list): Clients's filters (list of objects).
+            startTime(integer): Clients's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_number_of_clients_by_applying_complex_filters_v1.
+        """  
         return self.retrieves_the_number_of_clients_by_applying_complex_filters_v1(
                     endTime=endTime,
                     filters=filters,
@@ -1612,7 +1769,29 @@ class Clients(object):
                                                                headers=None,
                                                                payload=None,
                                                                active_validation=True,
-                                                               **request_parameters):  
+                                                               **request_parameters):
+        """This function is an alias of retrieves_summary_analytics_data_related_to_clients_v1 .
+
+        Args:
+            aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
+            attributes(list): Clients's Attributes (list of strings).
+            endTime(integer): Clients's End Time.
+            filters(list): Clients's filters (list of objects).
+            groupBy(list): Clients's Group By (list of strings).
+            page(object): Clients's page.
+            startTime(integer): Clients's Start Time.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_summary_analytics_data_related_to_clients_v1.
+        """  
         return self.retrieves_summary_analytics_data_related_to_clients_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -1641,7 +1820,30 @@ class Clients(object):
                                                                  headers=None,
                                                                  payload=None,
                                                                  active_validation=True,
-                                                                 **request_parameters):  
+                                                                 **request_parameters):
+        """This function is an alias of retrieves_the_top_n_analytics_data_related_to_clients_v1 .
+
+        Args:
+            aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
+            attributes(list): Clients's Attributes (list of strings).
+            endTime(integer): Clients's End Time.
+            filters(list): Clients's filters (list of objects).
+            groupBy(list): Clients's Group By (list of strings).
+            page(object): Clients's page.
+            startTime(integer): Clients's Start Time.
+            topN(integer): Clients's Top N.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_top_n_analytics_data_related_to_clients_v1.
+        """  
         return self.retrieves_the_top_n_analytics_data_related_to_clients_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -1666,7 +1868,34 @@ class Clients(object):
                                                                          start_time=None,
                                                                          view=None,
                                                                          headers=None,
-                                                                         **request_parameters):  
+                                                                         **request_parameters):
+        """This function is an alias of  retrieves_specific_client_information_matching_the_macaddress_v1.
+
+        Args:
+            id(str): id path parameter. id is the client mac address. It can be specified is any notational
+                conventions  01:23:45:67:89:AB or 01-23-45-67-89-AB or 0123.4567.89AB and is case
+                insensitive .
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            view(str): view query parameter. Client related Views Refer to ClientView schema for list of
+                views supported Examples: `view=Wireless` (single view requested)
+                `view=WirelessHealth&view=WirelessTraffic` (multiple view requested) .
+            attribute(str): attribute query parameter. List of attributes related to resource that can be
+                requested to only be part of the response along with the required attributes. Refer to
+                ClientAttribute schema for list of attributes supported Examples: `attribute=band`
+                (single attribute requested) `attribute=band&attribute=ssid&attribute=overallScore`
+                (multiple attribute requested) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_specific_client_information_matching_the_macaddress_v1.
+        """  
         return self.retrieves_specific_client_information_matching_the_macaddress_v1(
                     id=id,
                     attribute=attribute,
@@ -1692,7 +1921,33 @@ class Clients(object):
                                                                                  headers=None,
                                                                                  payload=None,
                                                                                  active_validation=True,
-                                                                                 **request_parameters):  
+                                                                                 **request_parameters):
+        """This function is an alias of retrieves_specific_client_information_over_a_specified_period_of_time_v1 .
+
+        Args:
+            aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
+            attributes(list): Clients's Attributes (list of strings).
+            endTime(integer): Clients's End Time.
+            filters(list): Clients's filters (list of objects).
+            groupBy(list): Clients's Group By (list of strings).
+            page(object): Clients's page.
+            startTime(integer): Clients's Start Time.
+            trendInterval(string): Clients's Trend Interval.
+            id(str): id path parameter. id is the client mac address. It can be specified in one of the
+                notational conventions  01:23:45:67:89:AB or 01-23-45-67-89-AB or 0123.4567.89AB and is
+                case insensitive .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_specific_client_information_over_a_specified_period_of_time_v1.
+        """  
         return self.retrieves_specific_client_information_over_a_specified_period_of_time_v1(
                     id=id,
                     aggregateAttributes=aggregateAttributes,
@@ -1723,7 +1978,30 @@ class Clients(object):
                                                                  headers=None,
                                                                  payload=None,
                                                                  active_validation=True,
-                                                                 **request_parameters):  
+                                                                 **request_parameters):
+        """This function is an alias of retrieves_the_trend_analytics_data_related_to_clients_v1 .
+
+        Args:
+            aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
+            attributes(list): Clients's Attributes (list of strings).
+            endTime(integer): Clients's End Time.
+            filters(list): Clients's filters (list of objects).
+            groupBy(list): Clients's Group By (list of strings).
+            page(object): Clients's page.
+            startTime(integer): Clients's Start Time.
+            trendInterval(string): Clients's Trend Interval.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_trend_analytics_data_related_to_clients_v1.
+        """  
         return self.retrieves_the_trend_analytics_data_related_to_clients_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -1752,7 +2030,29 @@ class Clients(object):
                                                                                                                 headers=None,
                                                                                                                 payload=None,
                                                                                                                 active_validation=True,
-                                                                                                                **request_parameters):  
+                                                                                                                **request_parameters):
+        """This function is an alias of retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_v1 .
+
+        Args:
+            aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
+            attributes(list): Clients's Attributes (list of strings).
+            endTime(integer): Clients's End Time.
+            filters(list): Clients's filters (list of objects).
+            page(object): Clients's page.
+            startTime(integer): Clients's Start Time.
+            views(list): Clients's Views (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_v1.
+        """  
         return self.retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -1772,7 +2072,20 @@ class Clients(object):
     def get_overall_client_health(self,
                                      timestamp=None,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """This function is an alias of get_overall_client_health_v1 .
+
+        Args:
+            timestamp(int): timestamp query parameter. Epoch time(in milliseconds) when the Client health data is
+                required .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_overall_client_health_v1.
+        """  
         return self.get_overall_client_health_v1(
                     timestamp=timestamp,
                     headers=headers,
@@ -1798,7 +2111,91 @@ class Clients(object):
                                                                             type=None,
                                                                             wlc_name=None,
                                                                             headers=None,
-                                                                            **request_parameters):  
+                                                                            **request_parameters):
+        """This function is an alias of retrieves_the_total_count_of_clients_by_applying_basic_filtering_v1.
+
+        Args:
+            start_time(int): startTime query parameter. Start time from which API queries the data set related to
+                the resource. It must be specified in UNIX epochtime in milliseconds. Value is
+                inclusive. If `startTime` is not provided, API will default to current time. .
+            end_time(int): endTime query parameter. End time to which API queries the data set related to the
+                resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
+            type(str): type query parameter. The client device type whether client is connected to network
+                through Wired or Wireless medium. .
+            os_type(str): osType query parameter. Client device operating system type. This field supports
+                wildcard (`*`) character-based search. If the value contains the (`*`) character, please
+                use the /query API for regex search.  Ex: `*iOS*` or `iOS*` or `*iOS` Examples:
+                `osType=iOS` (single osType requested) `osType=iOS&osType=Android` (multiple osType
+                requested) .
+            os_version(str): osVersion query parameter. Client device operating system version This field
+                supports wildcard (`*`) character-based search. If the value contains the (`*`)
+                character, please use the /query API for regex search.  Ex: `*14.3*` or `14.3*` or
+                `*14.3` Examples: `osVersion=14.3` (single osVersion requested)
+                `osVersion=14.3&osVersion=10.1` (multiple osVersion requested) .
+            site_hierarchy(str): siteHierarchy query parameter. The full hierarchical breakdown of the site
+                tree starting from Global site name and ending with the specific site name. The Root
+                site is named "Global" (Ex. "Global/AreaName/BuildingName/FloorName") This field
+                supports wildcard (`*`) character-based search. If the value contains the (`*`)
+                character, please use the /query API for regex search.  Ex: `*BuildingName*` or
+                `BuildingName*` or `*BuildingName` Examples:
+                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested) 
+                `siteHierarchy=Global/AreaName/BuildingName1/FloorName1&siteHierarchy=Global/AreaName/Bu
+                ildingName1/FloorName2` (multiple siteHierarchy requested) .
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+                tree in id form starting from Global site UUID and ending with the specific site UUID.
+                (Ex. "globalUuid/areaUuid/buildingUuid/floorUuid") This field supports wildcard (`*`)
+                character-based search.  Ex: `*buildingUuid*` or `buildingUuid*` or `*buildingUuid`
+                Examples: `siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid` (single
+                siteHierarchyId requested) `siteHierarchyId=globalUuid/areaUuid/buildingUuid1/floorUuid1
+                &siteHierarchyId=globalUuid/areaUuid/buildingUuid1/floorUuid2` (multiple siteHierarchyId
+                requested) .
+            site_id(str): siteId query parameter. The site UUID without the top level hierarchy.
+                (Ex."floorUuid") Examples: `siteId=floorUuid` (single siteId requested)
+                `siteId=floorUuid1&siteId=floorUuid2` (multiple siteId requested) .
+            ipv4_address(str): ipv4Address query parameter. IPv4 Address of the network entity either network
+                device or client This field supports wildcard (`*`) character-based search.  Ex: `*1.1*`
+                or `1.1*` or `*1.1` Examples: `ipv4Address=1.1.1.1` (single ipv4Address requested)
+                `ipv4Address=1.1.1.1&ipv4Address=2.2.2.2` (multiple ipv4Address requested) .
+            ipv6_address(str): ipv6Address query parameter. IPv6 Address of the network entity either network
+                device or client This field supports wildcard (`*`) character-based search. Ex:
+                `*2001:db8*` or `2001:db8*` or `*2001:db8` Examples: `ipv6Address=2001:db8:0:0:0:0:2:1`
+                (single ipv6Address requested)
+                `ipv6Address=2001:db8:0:0:0:0:2:1&ipv6Address=2001:db8:85a3:8d3:1319:8a2e:370:7348`
+                (multiple ipv6Address requested) .
+            mac_address(str): macAddress query parameter. The macAddress of the network device or client This
+                field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
+                or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
+                `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
+                requested) .
+            wlc_name(str): wlcName query parameter. Wireless Controller name that reports the wireless
+                client. This field supports wildcard (`*`) character-based search. If the value contains
+                the (`*`) character, please use the /query API for regex search. Ex: `*wlc-25*` or
+                `wlc-25*` or `*wlc-25` Examples: `wlcName=wlc-25` (single wlcName requested)
+                `wlcName=wlc-25&wlc-34` (multiple wlcName requested) .
+            connected_network_device_name(str): connectedNetworkDeviceName query parameter. Name of the
+                neighbor network device that client is connected to. This field supports wildcard (`*`)
+                character-based search. If the value contains the (`*`) character, please use the /query
+                API for regex search. Ex: `*ap-25*` or `ap-25*` or `*ap-25` Examples:
+                `connectedNetworkDeviceName=ap-25` (single connectedNetworkDeviceName requested)
+                `connectedNetworkDeviceName=ap-25&ap-34` (multiple connectedNetworkDeviceName requested)
+                .
+            ssid(str): ssid query parameter. SSID is the name of wireless network to which client connects
+                to. It is also referred to as WLAN ID Wireless Local Area Network Identifier. This field
+                supports wildcard (`*`) character-based search. If the value contains the (`*`)
+                character, please use the /query API for regex search.  Ex: `*Alpha*` or `Alpha*` or
+                `*Alpha` Examples: `ssid=Alpha` (single ssid requested) `ssid=Alpha&ssid=Guest`
+                (multiple ssid requested) .
+            band(str): band query parameter. WiFi frequency band that client or Access Point operates. Band
+                value is represented in Giga Hertz GHz Examples: `band=5GHZ` (single band requested)
+                `band=2.4GHZ&band=6GHZ` (multiple band requested) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_total_count_of_clients_by_applying_basic_filtering_v1.
+        """  
         return self.retrieves_the_total_count_of_clients_by_applying_basic_filtering_v1(
                     band=band,
                     connected_network_device_name=connected_network_device_name,

@@ -113,7 +113,7 @@ class Applications(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!applications-v1
+            https://developer.cisco.com/docs/dna-center/#!applications
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -186,7 +186,34 @@ class Applications(object):
                         site_id=None,
                         start_time=None,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """This function is an alias of applications_v1. .
+
+        Args:
+            site_id(str): siteId query parameter. Assurance site UUID value (Cannot be submitted together
+                with deviceId and clientMac) .
+            device_id(str): deviceId query parameter. Assurance device UUID value (Cannot be submitted
+                together with siteId and clientMac) .
+            mac_address(str): macAddress query parameter. Client device's MAC address (Cannot be submitted
+                together with siteId and deviceId) .
+            start_time(int): startTime query parameter. Starting epoch time in milliseconds of time window .
+            end_time(int): endTime query parameter. Ending epoch time in milliseconds of time window .
+            application_health(str): applicationHealth query parameter. Application health category (POOR,
+                FAIR, or GOOD.  Optionally use with siteId only) .
+            offset(int): offset query parameter. The offset of the first application in the returned data
+                (optionally used with siteId only) .
+            limit(int): limit query parameter. The max number of application entries in returned data [1, 1000]
+                (optionally used with siteId only) .
+            application_name(str): applicationName query parameter. The name of the application to get
+                information on .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of applications_v1.
+        """  
         return self.applications_v1(
                     application_health=application_health,
                     application_name=application_name,

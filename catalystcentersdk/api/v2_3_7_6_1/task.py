@@ -88,7 +88,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-business-a-p-i-execution-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-business-a-p-i-execution-details
         """
         check_type(headers, dict)
         check_type(execution_id, str,
@@ -176,7 +176,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-tasks-operational-tasks-v1
+            https://developer.cisco.com/docs/dna-center/#!get-tasks-operational-tasks
         """
         check_type(headers, dict)
         check_type(start_time, str)
@@ -294,7 +294,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-task-count
         """
         check_type(headers, dict)
         check_type(start_time, str)
@@ -383,7 +383,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-by-operation-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-task-by-operation-id
         """
         check_type(headers, dict)
         check_type(operation_id, str,
@@ -447,7 +447,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-task-by-id
         """
         check_type(headers, dict)
         check_type(task_id, str,
@@ -504,7 +504,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-tree-v1
+            https://developer.cisco.com/docs/dna-center/#!get-task-tree
         """
         check_type(headers, dict)
         check_type(task_id, str,
@@ -582,7 +582,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-tasks-v1
+            https://developer.cisco.com/docs/dna-center/#!get-tasks
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -674,7 +674,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-tasks-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-tasks-count
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -743,7 +743,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-tasks-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-tasks-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -800,7 +800,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-details-by-i-d-v1
+            https://developer.cisco.com/docs/dna-center/#!get-task-details-by-i-d
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -850,7 +850,31 @@ class Task(object):
                           start_time=None,
                           username=None,
                           headers=None,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of get_task_count_v1 .
+        Args:
+            start_time(basestring): startTime query parameter. This is the epoch start time from which tasks need to
+                be fetched .
+            end_time(basestring): endTime query parameter. This is the epoch end time upto which audit records need
+                to be fetched .
+            data(basestring): data query parameter. Fetch tasks that contains this data .
+            error_code(basestring): errorCode query parameter. Fetch tasks that have this error code .
+            service_type(basestring): serviceType query parameter. Fetch tasks with this service type .
+            username(basestring): username query parameter. Fetch tasks with this username .
+            progress(basestring): progress query parameter. Fetch tasks that contains this progress .
+            is_error(basestring): isError query parameter. Fetch tasks ended as success or failure. Valid values:
+                true, false .
+            failure_reason(basestring): failureReason query parameter. Fetch tasks that contains this failure reason
+                .
+            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_task_count_v1 .
+        """ 
         return self.get_task_count_v1(
                     data=data,
                     end_time=end_time,
@@ -871,7 +895,18 @@ class Task(object):
     def get_task_tree(self,
                          task_id,
                          headers=None,
-                         **request_parameters):  
+                         **request_parameters):
+        """ This function is an alias of get_task_tree_v1 .
+        Args:
+            task_id(basestring): taskId path parameter. UUID of the Task .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_task_tree_v1 .
+        """ 
         return self.get_task_tree_v1(
                     task_id=task_id,
                     headers=headers,
@@ -891,7 +926,31 @@ class Task(object):
                      start_time=None,
                      status=None,
                      headers=None,
-                     **request_parameters):  
+                     **request_parameters):
+        """ This function is an alias of get_tasks_v1 .
+        Args:
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            sort_by(basestring): sortBy query parameter. A property within the response to sort by. .
+            order(basestring): order query parameter. Whether ascending or descending order should be used to sort
+                the response. .
+            start_time(int): startTime query parameter. This is the epoch millisecond start time from which tasks
+                need to be fetched .
+            end_time(int): endTime query parameter. This is the epoch millisecond end time upto which task records
+                need to be fetched .
+            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
+            root_id(basestring): rootId query parameter. Fetch tasks that have this root Id .
+            status(basestring): status query parameter. Fetch tasks that have this status. Available values :
+                PENDING, FAILURE, SUCCESS .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_tasks_v1 .
+        """ 
         return self.get_tasks_v1(
                     end_time=end_time,
                     limit=limit,
@@ -911,7 +970,18 @@ class Task(object):
     def get_task_details_by_id(self,
                                   id,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_task_details_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. the `id` of the task to retrieve details for .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_task_details_by_id_v1 .
+        """ 
         return self.get_task_details_by_id_v1(
                     id=id,
                     headers=headers,
@@ -936,7 +1006,35 @@ class Task(object):
                                        start_time=None,
                                        username=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_tasks_operational_tasks_v1 .
+        Args:
+            start_time(basestring): startTime query parameter. This is the epoch start time from which tasks need to
+                be fetched .
+            end_time(basestring): endTime query parameter. This is the epoch end time upto which audit records need
+                to be fetched .
+            data(basestring): data query parameter. Fetch tasks that contains this data .
+            error_code(basestring): errorCode query parameter. Fetch tasks that have this error code .
+            service_type(basestring): serviceType query parameter. Fetch tasks with this service type .
+            username(basestring): username query parameter. Fetch tasks with this username .
+            progress(basestring): progress query parameter. Fetch tasks that contains this progress .
+            is_error(basestring): isError query parameter. Fetch tasks ended as success or failure. Valid values:
+                true, false .
+            failure_reason(basestring): failureReason query parameter. Fetch tasks that contains this failure reason
+                .
+            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
+            offset(int): offset query parameter.
+            limit(int): limit query parameter.
+            sort_by(basestring): sortBy query parameter. Sort results by this field .
+            order(basestring): order query parameter. Sort order asc or dsc .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_tasks_operational_tasks_v1 .
+        """ 
         return self.get_tasks_operational_tasks_v1(
                     data=data,
                     end_time=end_time,
@@ -961,7 +1059,18 @@ class Task(object):
     def get_task_by_id(self,
                           task_id,
                           headers=None,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of get_task_by_id_v1 .
+        Args:
+            task_id(basestring): taskId path parameter. UUID of the Task .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_task_by_id_v1 .
+        """ 
         return self.get_task_by_id_v1(
                     task_id=task_id,
                     headers=headers,
@@ -973,7 +1082,18 @@ class Task(object):
     def get_business_api_execution_details(self,
                                               execution_id,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of get_business_api_execution_details_v1 .
+        Args:
+            execution_id(basestring): executionId path parameter. Execution Id of API .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_business_api_execution_details_v1 .
+        """ 
         return self.get_business_api_execution_details_v1(
                     execution_id=execution_id,
                     headers=headers,
@@ -989,7 +1109,25 @@ class Task(object):
                            start_time=None,
                            status=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_tasks_count_v1 .
+        Args:
+            start_time(int): startTime query parameter. This is the epoch millisecond start time from which tasks
+                need to be fetched .
+            end_time(int): endTime query parameter. This is the epoch millisecond end time upto which task records
+                need to be fetched .
+            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
+            root_id(basestring): rootId query parameter. Fetch tasks that have this root Id .
+            status(basestring): status query parameter. Fetch tasks that have this status. Available values :
+                PENDING, FAILURE, SUCCESS .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_tasks_count_v1 .
+        """ 
         return self.get_tasks_count_v1(
                     end_time=end_time,
                     parent_id=parent_id,
@@ -1007,7 +1145,21 @@ class Task(object):
                                 offset,
                                 operation_id,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_task_by_operation_id_v1 .
+        Args:
+            operation_id(basestring): operationId path parameter.
+            offset(int): offset path parameter. Index, minimum value is 0 .
+            limit(int): limit path parameter. The maximum value of {limit} supported is 500.               Base 1
+                indexing for {limit}, minimum value is 1 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_task_by_operation_id_v1 .
+        """ 
         return self.get_task_by_operation_id_v1(
                     limit=limit,
                     offset=offset,
@@ -1021,7 +1173,18 @@ class Task(object):
     def get_tasks_by_id(self,
                            id,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_tasks_by_id_v1 .
+        Args:
+            id(basestring): id path parameter. the `id` of the task to retrieve .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_tasks_by_id_v1 .
+        """ 
         return self.get_tasks_by_id_v1(
                     id=id,
                     headers=headers,

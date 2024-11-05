@@ -88,7 +88,7 @@ class Users(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-user-enrichment-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-user-enrichment-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -135,9 +135,19 @@ class Users(object):
     def get_user_enrichment_details(self,
                                        headers=None,
                                        **request_parameters):
+        """ This function is an alias of get_user_enrichment_details_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_user_enrichment_details_v1 .
+        """
         return self.get_user_enrichment_details_v1(
-                                        headers=headers,
-                                       **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        ) 
 
 

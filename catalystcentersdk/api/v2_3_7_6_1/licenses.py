@@ -90,7 +90,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-license-setting-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-license-setting
         """
         check_type(headers, dict)
         if headers is not None:
@@ -155,7 +155,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-license-setting-v1
+            https://developer.cisco.com/docs/dna-center/#!update-license-setting
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -232,7 +232,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!device-count-details-v1
+            https://developer.cisco.com/docs/dna-center/#!device-count-details
         """
         check_type(headers, dict)
         check_type(device_type, str)
@@ -324,7 +324,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!device-license-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!device-license-summary
         """
         check_type(headers, dict)
         check_type(page_number, int,
@@ -411,7 +411,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!device-license-details-v1
+            https://developer.cisco.com/docs/dna-center/#!device-license-details
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -474,7 +474,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!device-deregistration-v1
+            https://developer.cisco.com/docs/dna-center/#!device-deregistration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -552,7 +552,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!device-registration-v1
+            https://developer.cisco.com/docs/dna-center/#!device-registration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -632,7 +632,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!change-virtual-account-v1
+            https://developer.cisco.com/docs/dna-center/#!change-virtual-account
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -706,7 +706,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!virtual-account-details-v1
+            https://developer.cisco.com/docs/dna-center/#!virtual-account-details
         """
         check_type(headers, dict)
         check_type(smart_account_id, str,
@@ -762,7 +762,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!smart-account-details-v1
+            https://developer.cisco.com/docs/dna-center/#!smart-account-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -822,7 +822,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!license-term-details-v1
+            https://developer.cisco.com/docs/dna-center/#!license-term-details
         """
         check_type(headers, dict)
         check_type(device_type, str,
@@ -893,7 +893,7 @@ class Licenses(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!license-usage-details-v1
+            https://developer.cisco.com/docs/dna-center/#!license-usage-details
         """
         check_type(headers, dict)
         check_type(device_type, str,
@@ -942,7 +942,18 @@ class Licenses(object):
     def virtual_account_details(self,
                                    smart_account_id,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of virtual_account_details_v1 .
+        Args:
+            smart_account_id(basestring): smart_account_id path parameter. Id of smart account .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of virtual_account_details_v1 .
+        """ 
         return self.virtual_account_details_v1(
                     smart_account_id=smart_account_id,
                     headers=headers,
@@ -956,7 +967,22 @@ class Licenses(object):
                                 smart_account_id,
                                 virtual_account_name,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of license_term_details_v1 .
+        Args:
+            smart_account_id(basestring): smart_account_id path parameter. Id of smart account .
+            virtual_account_name(basestring): virtual_account_name path parameter. Name of virtual account. Putting
+                "All" will give license term detail for all virtual accounts. .
+            device_type(basestring): device_type query parameter. Type of device like router, switch, wireless or
+                ise .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of license_term_details_v1 .
+        """ 
         return self.license_term_details_v1(
                     device_type=device_type,
                     smart_account_id=smart_account_id,
@@ -974,7 +1000,23 @@ class Licenses(object):
                                 smart_account_id=None,
                                 virtual_account_name=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of device_count_details_v1 .
+        Args:
+            device_type(basestring): device_type query parameter. Type of device .
+            registration_status(basestring): registration_status query parameter. Smart license registration status
+                of device .
+            dna_level(basestring): dna_level query parameter. Device Cisco DNA License Level .
+            virtual_account_name(basestring): virtual_account_name query parameter. Virtual account name .
+            smart_account_id(basestring): smart_account_id query parameter. Smart account id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of device_count_details_v1 .
+        """ 
         return self.device_count_details_v1(
                     device_type=device_type,
                     dna_level=dna_level,
@@ -990,9 +1032,19 @@ class Licenses(object):
     def retrieve_license_setting(self,
                                     headers=None,
                                     **request_parameters):
+        """ This function is an alias of retrieve_license_setting_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_license_setting_v1 .
+        """
         return self.retrieve_license_setting_v1(
-                                    headers=headers,
-                                    **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -1009,7 +1061,32 @@ class Licenses(object):
                                   sort_by=None,
                                   virtual_account_name=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of device_license_summary_v1 .
+        Args:
+            page_number(int): page_number query parameter. Page number of response .
+            order(basestring): order query parameter. Sorting order .
+            sort_by(basestring): sort_by query parameter. Sort result by field .
+            dna_level(basestring): dna_level query parameter. Device Cisco DNA license level. The valid values are
+                Advantage, Essentials .
+            device_type(basestring): device_type query parameter. Type of device. The valid values are Routers,
+                Switches and Hubs, Wireless Controller .
+            limit(int): limit query parameter.
+            registration_status(basestring): registration_status query parameter. Smart license registration status
+                of device. The valid values are Unknown, NA, Unregistered, Registered,
+                Registration_expired, Reservation_in_progress, Registered_slr, Registered_plr,
+                Registered_satellite .
+            virtual_account_name(basestring): virtual_account_name query parameter. Name of virtual account .
+            smart_account_id(basestring): smart_account_id query parameter. Id of smart account .
+            device_uuid(basestring): device_uuid query parameter. Id of device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of device_license_summary_v1 .
+        """ 
         return self.device_license_summary_v1(
                     limit=limit,
                     order=order,
@@ -1034,7 +1111,24 @@ class Licenses(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of change_virtual_account_v1 .
+        Args:
+            device_uuids(list): Licenses's Comma separated device ids  (list of strings).
+            smart_account_id(basestring): smart_account_id path parameter. Id of smart account .
+            virtual_account_name(basestring): virtual_account_name path parameter. Name of target virtual account .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of change_virtual_account_v1 .
+        """ 
         return self.change_virtual_account_v1(
                     smart_account_id=smart_account_id,
                     virtual_account_name=virtual_account_name,
@@ -1053,7 +1147,23 @@ class Licenses(object):
                                headers=None,
                                payload=None,
                                active_validation=True,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of device_registration_v1 .
+        Args:
+            device_uuids(list): Licenses's Comma separated device ids  (list of strings).
+            virtual_account_name(basestring): virtual_account_name path parameter. Name of virtual account .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of device_registration_v1 .
+        """ 
         return self.device_registration_v1(
                     virtual_account_name=virtual_account_name,
                     device_uuids=device_uuids,
@@ -1068,10 +1178,20 @@ class Licenses(object):
     def smart_account_details(self,
                                  headers=None,
                                  **request_parameters):
+        """ This function is an alias of smart_account_details_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of smart_account_details_v1 .
+        """
         return self.smart_account_details_v1(
-                                 headers=headers,
-                                 **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1081,7 +1201,23 @@ class Licenses(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of update_license_setting_v1 .
+        Args:
+            autoRegistrationVirtualAccountId(string): Licenses's Virtual account id .
+            defaultSmartAccountId(string): Licenses's Default smart account id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_license_setting_v1 .
+        """ 
         return self.update_license_setting_v1(
                     autoRegistrationVirtualAccountId=autoRegistrationVirtualAccountId,
                     defaultSmartAccountId=defaultSmartAccountId,
@@ -1096,7 +1232,18 @@ class Licenses(object):
     def device_license_details(self,
                                   device_uuid,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of device_license_details_v1 .
+        Args:
+            device_uuid(basestring): device_uuid path parameter. Id of device .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of device_license_details_v1 .
+        """ 
         return self.device_license_details_v1(
                     device_uuid=device_uuid,
                     headers=headers,
@@ -1110,7 +1257,22 @@ class Licenses(object):
                                  headers=None,
                                  payload=None,
                                  active_validation=True,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of device_deregistration_v1 .
+        Args:
+            device_uuids(list): Licenses's Comma separated device ids  (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of device_deregistration_v1 .
+        """ 
         return self.device_deregistration_v1(
                     device_uuids=device_uuids,
                     headers=headers,
@@ -1126,7 +1288,22 @@ class Licenses(object):
                                  smart_account_id,
                                  virtual_account_name,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of license_usage_details_v1 .
+        Args:
+            smart_account_id(basestring): smart_account_id path parameter. Id of smart account .
+            virtual_account_name(basestring): virtual_account_name path parameter. Name of virtual account. Putting
+                "All" will give license term detail for all virtual accounts. .
+            device_type(basestring): device_type query parameter. Type of device like router, switch, wireless or
+                ise .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of license_usage_details_v1 .
+        """ 
         return self.license_usage_details_v1(
                     device_type=device_type,
                     smart_account_id=smart_account_id,

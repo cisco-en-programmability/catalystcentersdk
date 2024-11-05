@@ -93,7 +93,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!download-flexible-report-v1
+            https://developer.cisco.com/docs/dna-center/#!download-flexible-report
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -157,7 +157,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!executing-the-flexible-report-v1
+            https://developer.cisco.com/docs/dna-center/#!executing-the-flexible-report
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -218,7 +218,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-execution-id-by-report-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-execution-id-by-report-id
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -287,7 +287,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-schedule-of-flexible-report-v1
+            https://developer.cisco.com/docs/dna-center/#!update-schedule-of-flexible-report
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -359,7 +359,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-flexible-report-schedule-by-report-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-flexible-report-schedule-by-report-id
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -415,7 +415,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-flexible-report-schedules-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-flexible-report-schedules
         """
         check_type(headers, dict)
         if headers is not None:
@@ -493,7 +493,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-or-schedule-a-report-v1
+            https://developer.cisco.com/docs/dna-center/#!create-or-schedule-a-report
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -579,7 +579,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-list-of-scheduled-reports-v1
+            https://developer.cisco.com/docs/dna-center/#!get-list-of-scheduled-reports
         """
         check_type(headers, dict)
         check_type(view_group_id, str)
@@ -639,7 +639,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-a-scheduled-report-v1
+            https://developer.cisco.com/docs/dna-center/#!get-a-scheduled-report
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -696,7 +696,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-a-scheduled-report-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-a-scheduled-report
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -753,7 +753,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-execution-details-for-a-given-report-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-execution-details-for-a-given-report
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -814,7 +814,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!download-report-content-v1
+            https://developer.cisco.com/docs/dna-center/#!download-report-content
         """
         check_type(headers, dict)
         check_type(report_id, str,
@@ -874,7 +874,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-view-groups-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-view-groups
         """
         check_type(headers, dict)
         if headers is not None:
@@ -929,7 +929,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-views-for-a-given-view-group-v1
+            https://developer.cisco.com/docs/dna-center/#!get-views-for-a-given-view-group
         """
         check_type(headers, dict)
         check_type(view_group_id, str,
@@ -989,7 +989,7 @@ class Reports(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-view-details-for-a-given-view-group_-view-v1
+            https://developer.cisco.com/docs/dna-center/#!get-view-details-for-a-given-view-group_-view
         """
         check_type(headers, dict)
         check_type(view_group_id, str,
@@ -1043,7 +1043,29 @@ class Reports(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of create_or_schedule_a_report_v1 .
+        Args:
+            dataCategory(string): Reports's category of viewgroup for the report .
+            deliveries(list): Reports's Array of available delivery channels  (list of objects).
+            name(string): Reports's report name .
+            schedule(object): Reports's schedule.
+            tags(list): Reports's array of tags for report  (list of strings).
+            view(object): Reports's view.
+            viewGroupId(string): Reports's viewGroupId of the viewgroup for the report .
+            viewGroupVersion(string): Reports's version of viewgroup for the report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_or_schedule_a_report_v1 .
+        """ 
         return self.create_or_schedule_a_report_v1(
                     dataCategory=dataCategory,
                     deliveries=deliveries,
@@ -1064,7 +1086,18 @@ class Reports(object):
     def get_execution_id_by_report_id(self,
                                          report_id,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_execution_id_by_report_id_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. Id of the report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_execution_id_by_report_id_v1 .
+        """ 
         return self.get_execution_id_by_report_id_v1(
                     report_id=report_id,
                     headers=headers,
@@ -1076,17 +1109,38 @@ class Reports(object):
     def get_all_view_groups(self,
                                headers=None,
                                **request_parameters):
+        """ This function is an alias of get_all_view_groups_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_view_groups_v1 .
+        """
         return self.get_all_view_groups_v1(
-                                headers=headers,
-                               **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def executing_the_flexible_report(self,
                                          report_id,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of executing_the_flexible_report_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. Id of the Report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of executing_the_flexible_report_v1 .
+        """ 
         return self.executing_the_flexible_report_v1(
                     report_id=report_id,
                     headers=headers,
@@ -1098,7 +1152,18 @@ class Reports(object):
     def get_a_scheduled_report(self,
                                   report_id,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_a_scheduled_report_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. reportId of report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_a_scheduled_report_v1 .
+        """ 
         return self.get_a_scheduled_report_v1(
                     report_id=report_id,
                     headers=headers,
@@ -1113,7 +1178,23 @@ class Reports(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of update_schedule_of_flexible_report_v1 .
+        Args:
+            schedule(object): Reports's Schedule information .
+            report_id(basestring): reportId path parameter. Id of the report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_schedule_of_flexible_report_v1 .
+        """ 
         return self.update_schedule_of_flexible_report_v1(
                     report_id=report_id,
                     schedule=schedule,
@@ -1128,7 +1209,18 @@ class Reports(object):
     def get_all_execution_details_for_a_given_report(self,
                                                         report_id,
                                                         headers=None,
-                                                        **request_parameters):  
+                                                        **request_parameters):
+        """ This function is an alias of get_all_execution_details_for_a_given_report_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. reportId of report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_execution_details_for_a_given_report_v1 .
+        """ 
         return self.get_all_execution_details_for_a_given_report_v1(
                     report_id=report_id,
                     headers=headers,
@@ -1140,10 +1232,20 @@ class Reports(object):
     def get_all_flexible_report_schedules(self,
                                              headers=None,
                                              **request_parameters):
+        """ This function is an alias of get_all_flexible_report_schedules_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_flexible_report_schedules_v1 .
+        """
         return self.get_all_flexible_report_schedules_v1(
-                                            headers=headers,
-                                             **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1151,7 +1253,19 @@ class Reports(object):
                                     execution_id,
                                     report_id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of download_flexible_report_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. Id of the report .
+            execution_id(basestring): executionId path parameter. Id of execution .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of download_flexible_report_v1 .
+        """ 
         return self.download_flexible_report_v1(
                     execution_id=execution_id,
                     report_id=report_id,
@@ -1165,7 +1279,19 @@ class Reports(object):
                                          view_group_id=None,
                                          view_id=None,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_list_of_scheduled_reports_v1 .
+        Args:
+            view_group_id(basestring): viewGroupId query parameter. viewGroupId of viewgroup for report .
+            view_id(basestring): viewId query parameter. viewId of view for report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_list_of_scheduled_reports_v1 .
+        """ 
         return self.get_list_of_scheduled_reports_v1(
                     view_group_id=view_group_id,
                     view_id=view_id,
@@ -1179,7 +1305,19 @@ class Reports(object):
                                    execution_id,
                                    report_id,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of download_report_content_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. reportId of report .
+            execution_id(basestring): executionId path parameter. executionId of report execution .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of download_report_content_v1 .
+        """ 
         return self.download_report_content_v1(
                     execution_id=execution_id,
                     report_id=report_id,
@@ -1192,7 +1330,18 @@ class Reports(object):
     def get_views_for_a_given_view_group(self,
                                             view_group_id,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of get_views_for_a_given_view_group_v1 .
+        Args:
+            view_group_id(basestring): viewGroupId path parameter. viewGroupId of viewgroup. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_views_for_a_given_view_group_v1 .
+        """ 
         return self.get_views_for_a_given_view_group_v1(
                     view_group_id=view_group_id,
                     headers=headers,
@@ -1204,7 +1353,18 @@ class Reports(object):
     def delete_a_scheduled_report(self,
                                      report_id,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of delete_a_scheduled_report_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. reportId of report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_a_scheduled_report_v1 .
+        """ 
         return self.delete_a_scheduled_report_v1(
                     report_id=report_id,
                     headers=headers,
@@ -1216,11 +1376,21 @@ class Reports(object):
     def get_flexible_report_schedule_by_report_id(self,
                                                      report_id,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """ This function is an alias of get_flexible_report_schedule_by_report_id_v1 .
+        Args:
+            report_id(basestring): reportId path parameter. Id of the report .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_flexible_report_schedule_by_report_id_v1 .
+        """ 
         return self.get_flexible_report_schedule_by_report_id_v1(
                     report_id=report_id,
                     headers=headers,
                     **request_parameters
         )
-
 

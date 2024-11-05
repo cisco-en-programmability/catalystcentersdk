@@ -143,7 +143,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-authentication-and-policy-server-access-configuration-v1
+            https://developer.cisco.com/docs/dna-center/#!add-authentication-and-policy-server-access-configuration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -247,7 +247,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-authentication-and-policy-servers-v1
+            https://developer.cisco.com/docs/dna-center/#!get-authentication-and-policy-servers
         """
         check_type(headers, dict)
         check_type(is_ise_enabled, bool)
@@ -311,7 +311,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-authentication-and-policy-server-access-configuration-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-authentication-and-policy-server-access-configuration
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -422,7 +422,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!edit-authentication-and-policy-server-access-configuration-v1
+            https://developer.cisco.com/docs/dna-center/#!edit-authentication-and-policy-server-access-configuration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -535,7 +535,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!accept-cisco-i-s-e-server-certificate-for-cisco-i-s-e-server-integration-v1
+            https://developer.cisco.com/docs/dna-center/#!accept-cisco-i-s-e-server-certificate-for-cisco-i-s-e-server-integration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -625,7 +625,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!creates-configuration-details-of-the-external-i-p-a-m-server-v1
+            https://developer.cisco.com/docs/dna-center/#!creates-configuration-details-of-the-external-i-p-a-m-server
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -705,7 +705,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-configuration-details-of-the-external-i-p-a-m-server-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-configuration-details-of-the-external-i-p-a-m-server
         """
         check_type(headers, dict)
         if headers is not None:
@@ -757,7 +757,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-configuration-details-of-the-external-i-p-a-m-server-v1
+            https://developer.cisco.com/docs/dna-center/#!deletes-configuration-details-of-the-external-i-p-a-m-server
         """
         check_type(headers, dict)
         if headers is not None:
@@ -829,7 +829,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-configuration-details-of-the-external-i-p-a-m-server-v1
+            https://developer.cisco.com/docs/dna-center/#!updates-configuration-details-of-the-external-i-p-a-m-server
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -903,7 +903,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-i-s-e-server-integration-status-v1
+            https://developer.cisco.com/docs/dna-center/#!cisco-i-s-e-server-integration-status
         """
         check_type(headers, dict)
         if headers is not None:
@@ -955,7 +955,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!custom-prompt-support-g-e-t-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!custom-prompt-support-g-e-t-a-p-i
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1018,7 +1018,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!custom-prompt-p-o-s-t-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!custom-prompt-p-o-s-t-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1097,7 +1097,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-provisioning-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!set-provisioning-settings
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1166,7 +1166,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-provisioning-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!get-provisioning-settings
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1212,7 +1212,30 @@ class SystemSettings(object):
                                                                        headers=None,
                                                                        payload=None,
                                                                        active_validation=True,
-                                                                       **request_parameters):  
+                                                                       **request_parameters):
+        """ This function is an alias of creates_configuration_details_of_the_external_ip_a_m_server_v1 .
+        Args:
+            password(string): System Settings's The password for the external IPAM server login username.
+            provider(string): System Settings's Type of external IPAM. Can be either INFOBLOX, BLUECAT or GENERIC.
+            serverName(string): System Settings's A descriptive name of this external server, used for
+                identification purposes.
+            serverUrl(string): System Settings's The URL of this external server.
+            syncView(boolean): System Settings's Synchronize the IP pools from the local IPAM to this external
+                server.
+            userName(string): System Settings's The external IPAM server login username.
+            view(string): System Settings's The view under which pools are created in the external IPAM server.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of creates_configuration_details_of_the_external_ip_a_m_server_v1 .
+        """ 
         return self.creates_configuration_details_of_the_external_ip_a_m_server_v1(
                     password=password,
                     provider=provider,
@@ -1232,7 +1255,19 @@ class SystemSettings(object):
     def delete_authentication_and_policy_server_access_configuration(self,
                                                                         id,
                                                                         headers=None,
-                                                                        **request_parameters):  
+                                                                        **request_parameters):
+        """ This function is an alias of delete_authentication_and_policy_server_access_configuration_v1 .
+        Args:
+            id(basestring): id path parameter. Authentication and Policy Server Identifier. Use 'Get Authentication
+                and Policy Servers' intent API to find the identifier. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_authentication_and_policy_server_access_configuration_v1 .
+        """ 
         return self.delete_authentication_and_policy_server_access_configuration_v1(
                     id=id,
                     headers=headers,
@@ -1247,7 +1282,26 @@ class SystemSettings(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of set_provisioning_settings_v1 .
+        Args:
+            requireItsmApproval(boolean): System Settings's If require ITSM approval is enabled, the planned
+                configurations must be submitted for ITSM approval. Also if enabled, requirePreview will
+                default to enabled. .
+            requirePreview(boolean): System Settings's If require preview is enabled, the device configurations must
+                be reviewed before deploying them .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_provisioning_settings_v1 .
+        """ 
         return self.set_provisioning_settings_v1(
                     requireItsmApproval=requireItsmApproval,
                     requirePreview=requirePreview,
@@ -1262,10 +1316,20 @@ class SystemSettings(object):
     def custom_prompt_support_get_api(self,
                                            headers=None,
                                            **request_parameters):
+        """ This function is an alias of custom_prompt_support_get_api_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of custom_prompt_support_get_api_v1 .
+        """
         return self.custom_prompt_support_get_api_v1(
-                                            headers=headers,
-                                           **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1290,7 +1354,50 @@ class SystemSettings(object):
                                                                      headers=None,
                                                                      payload=None,
                                                                      active_validation=True,
-                                                                     **request_parameters):  
+                                                                     **request_parameters):
+        """ This function is an alias of add_authentication_and_policy_server_access_configuration_v1 .
+        Args:
+            accountingPort(integer): System Settings's Accounting port of RADIUS server (readonly). The range is
+                from 1 to 65535. E.g. 1813 .
+            authenticationPort(integer): System Settings's Authentication port of RADIUS server (readonly). The
+                range is from 1 to 65535. E.g. 1812 .
+            ciscoIseDtos(list): System Settings's ciscoIseDtos (list of objects).
+            encryptionKey(string): System Settings's Encryption key used to encrypt shared secret (readonly) .
+            encryptionScheme(string): System Settings's Type of encryption scheme for additional security (readonly)
+                . Available values are 'KEYWRAP' and 'RADSEC'.
+            externalCiscoIseIpAddrDtos(list): System Settings's externalCiscoIseIpAddrDtos (list of objects).
+            ipAddress(string): System Settings's IP address of authentication and policy server (readonly) .
+            isIseEnabled(boolean): System Settings's Value true for Cisco ISE Server (readonly). Default value is
+                false .
+            messageKey(string): System Settings's Message key used to encrypt shared secret (readonly) .
+            port(integer): System Settings's Port of TACACS server (readonly). The range is from 1 to 65535 .
+            protocol(string): System Settings's Type of protocol for authentication and policy server. If already
+                saved with RADIUS, can update to RADIUS_TACACS. If already saved with TACACS, can update
+                to RADIUS_TACACS  . Available values are 'TACACS', 'RADIUS' and 'RADIUS_TACACS'.
+            pxgridEnabled(boolean): System Settings's Value true for enable, false for disable. Default value is
+                true .
+            retries(string): System Settings's Number of communication retries between devices and authentication
+                and policy server. The range is from 1 to 3 .
+            role(string): System Settings's Role of authentication and policy server (readonly). E.g. primary,
+                secondary .
+            sharedSecret(string): System Settings's Shared secret between devices and authentication and policy
+                server (readonly) .
+            timeoutSeconds(string): System Settings's Number of seconds before timing out between devices and
+                authentication and policy server. The range is from 2 to 20 .
+            useDnacCertForPxgrid(boolean): System Settings's Value true to use DNAC certificate for Pxgrid. Default
+                value is false .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_authentication_and_policy_server_access_configuration_v1 .
+        """ 
         return self.add_authentication_and_policy_server_access_configuration_v1(
                     accountingPort=accountingPort,
                     authenticationPort=authenticationPort,
@@ -1320,10 +1427,20 @@ class SystemSettings(object):
     def retrieves_configuration_details_of_the_external_ip_a_m_server(self,
                                                                          headers=None,
                                                                          **request_parameters):
+        """ This function is an alias of retrieves_configuration_details_of_the_external_ip_a_m_server_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_configuration_details_of_the_external_ip_a_m_server_v1 .
+        """
         return self.retrieves_configuration_details_of_the_external_ip_a_m_server_v1(
-                                                                        headers=headers,
-                                                                         **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1333,7 +1450,23 @@ class SystemSettings(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of custom_prompt_post_api_v1 .
+        Args:
+            passwordPrompt(string): System Settings's Password for Custom Prompt .
+            usernamePrompt(string): System Settings's Username for Custom Prompt .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of custom_prompt_post_api_v1 .
+        """ 
         return self.custom_prompt_post_api_v1(
                     passwordPrompt=passwordPrompt,
                     usernamePrompt=usernamePrompt,
@@ -1348,10 +1481,20 @@ class SystemSettings(object):
     def get_provisioning_settings(self,
                                      headers=None,
                                      **request_parameters):
+        """ This function is an alias of get_provisioning_settings_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_provisioning_settings_v1 .
+        """
         return self.get_provisioning_settings_v1(
-                                    headers=headers,
-                                     **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1361,7 +1504,25 @@ class SystemSettings(object):
                                                                                 headers=None,
                                                                                 payload=None,
                                                                                 active_validation=True,
-                                                                                **request_parameters):  
+                                                                                **request_parameters):
+        """ This function is an alias of accept_cisco_ise_server_certificate_for_cisco_ise_server_integration_v1 .
+        Args:
+            isCertAcceptedByUser(boolean): System Settings's Value true for accept, false for deny. Remove this
+                field and send empty request payload ( {} ) to retry the failed integration .
+            id(basestring): id path parameter. Cisco ISE Server Identifier. Use 'Get Authentication and Policy
+                Servers' intent API to find the identifier. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of accept_cisco_ise_server_certificate_for_cisco_ise_server_integration_v1 .
+        """ 
         return self.accept_cisco_ise_server_certificate_for_cisco_ise_server_integration_v1(
                     id=id,
                     isCertAcceptedByUser=isCertAcceptedByUser,
@@ -1376,20 +1537,40 @@ class SystemSettings(object):
     def deletes_configuration_details_of_the_external_ip_a_m_server(self,
                                                                        headers=None,
                                                                        **request_parameters):
-        return  self.deletes_configuration_details_of_the_external_ip_a_m_server_v1(
-                                                                        headers=headers,
-                                                                       **request_parameters
-        ) 
+        """ This function is an alias of deletes_configuration_details_of_the_external_ip_a_m_server_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deletes_configuration_details_of_the_external_ip_a_m_server_v1 .
+        """
+        return self.deletes_configuration_details_of_the_external_ip_a_m_server_v1(
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def cisco_ise_server_integration_status(self,
                                                headers=None,
                                                **request_parameters):
+        """ This function is an alias of cisco_ise_server_integration_status_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of cisco_ise_server_integration_status_v1 .
+        """
         return self.cisco_ise_server_integration_status_v1(
-                                                headers=headers,
-                                               **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1415,7 +1596,52 @@ class SystemSettings(object):
                                                                       headers=None,
                                                                       payload=None,
                                                                       active_validation=True,
-                                                                      **request_parameters):  
+                                                                      **request_parameters):
+        """ This function is an alias of edit_authentication_and_policy_server_access_configuration_v1 .
+        Args:
+            accountingPort(integer): System Settings's Accounting port of RADIUS server (readonly). The range is
+                from 1 to 65535. E.g. 1813 .
+            authenticationPort(integer): System Settings's Authentication port of RADIUS server (readonly). The
+                range is from 1 to 65535. E.g. 1812 .
+            ciscoIseDtos(list): System Settings's ciscoIseDtos (list of objects).
+            encryptionKey(string): System Settings's Encryption key used to encrypt shared secret (readonly) .
+            encryptionScheme(string): System Settings's Type of encryption scheme for additional security (readonly)
+                . Available values are 'KEYWRAP' and 'RADSEC'.
+            externalCiscoIseIpAddrDtos(list): System Settings's externalCiscoIseIpAddrDtos (list of objects).
+            ipAddress(string): System Settings's IP address of authentication and policy server (readonly) .
+            isIseEnabled(boolean): System Settings's Value true for Cisco ISE Server (readonly). Default value is
+                false .
+            messageKey(string): System Settings's Message key used to encrypt shared secret (readonly) .
+            port(integer): System Settings's Port of TACACS server (readonly). The range is from 1 to 65535 .
+            protocol(string): System Settings's Type of protocol for authentication and policy server. If already
+                saved with RADIUS, can update to RADIUS_TACACS. If already saved with TACACS, can update
+                to RADIUS_TACACS  . Available values are 'TACACS', 'RADIUS' and 'RADIUS_TACACS'.
+            pxgridEnabled(boolean): System Settings's Value true for enable, false for disable. Default value is
+                true .
+            retries(string): System Settings's Number of communication retries between devices and authentication
+                and policy server. The range is from 1 to 3 .
+            role(string): System Settings's Role of authentication and policy server (readonly). E.g. primary,
+                secondary .
+            sharedSecret(string): System Settings's Shared secret between devices and authentication and policy
+                server (readonly) .
+            timeoutSeconds(string): System Settings's Number of seconds before timing out between devices and
+                authentication and policy server. The range is from 2 to 20 .
+            useDnacCertForPxgrid(boolean): System Settings's Value true to use DNAC certificate for Pxgrid. Default
+                value is false .
+            id(basestring): id path parameter. Authentication and Policy Server Identifier. Use 'Get Authentication
+                and Policy Servers' intent API to find the identifier. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of edit_authentication_and_policy_server_access_configuration_v1 .
+        """ 
         return self.edit_authentication_and_policy_server_access_configuration_v1(
                     id=id,
                     accountingPort=accountingPort,
@@ -1453,7 +1679,29 @@ class SystemSettings(object):
                                                                        headers=None,
                                                                        payload=None,
                                                                        active_validation=True,
-                                                                       **request_parameters):  
+                                                                       **request_parameters):
+        """ This function is an alias of updates_configuration_details_of_the_external_ip_a_m_server_v1 .
+        Args:
+            password(string): System Settings's The password for the external IPAM server login username.
+            serverName(string): System Settings's A descriptive name of this external server, used for
+                identification purposes.
+            serverUrl(string): System Settings's The URL of this external server.
+            syncView(boolean): System Settings's Synchronize the IP pools from the local IPAM to this external
+                server.
+            userName(string): System Settings's The external IPAM server login username.
+            view(string): System Settings's The view under which pools are created in the external IPAM server.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of updates_configuration_details_of_the_external_ip_a_m_server_v1 .
+        """ 
         return self.updates_configuration_details_of_the_external_ip_a_m_server_v1(
                     password=password,
                     serverName=serverName,
@@ -1474,7 +1722,22 @@ class SystemSettings(object):
                                                  role=None,
                                                  state=None,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of get_authentication_and_policy_servers_v1 .
+        Args:
+            is_ise_enabled(bool): isIseEnabled query parameter. Valid values are : true, false .
+            state(basestring): state query parameter. Valid values are: ACTIVE, INACTIVE, RBAC_SUCCESS,
+                RBAC_FAILURE, DELETED, FAILED, INPROGRESS .
+            role(basestring): role query parameter. Authentication and Policy Server Role (Example: primary,
+                secondary) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_authentication_and_policy_servers_v1 .
+        """ 
         return self.get_authentication_and_policy_servers_v1(
                     is_ise_enabled=is_ise_enabled,
                     role=role,
@@ -1482,5 +1745,3 @@ class SystemSettings(object):
                     headers=headers,
                     **request_parameters
         )
-
-

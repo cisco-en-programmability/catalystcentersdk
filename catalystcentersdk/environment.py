@@ -56,11 +56,8 @@ VERIFY_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_VERIFY'
 #: name of the environment verify variable
 VERIFY_STRING_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_VERIFY_STRING'
 
-#: name of the environment user string variable
-USER_STRING_ENVIRONMENT_VARIABLE = ''
-
 #: name of the environment user agent variable
-USER_AGENT_ENVIRONMENT_VARIABLE = 'catalystsdk/'
+USER_AGENT_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_USER_AGENT'
 
 def _is_bool(value):
     if isinstance(value, str):
@@ -82,10 +79,6 @@ def _get_env_value(env_var, env_type, cast_func):
 def get_env_username():
     CATALYST_CENTER_USERNAME = os.getenv(USERNAME_ENVIRONMENT_VARIABLE)
     return CATALYST_CENTER_USERNAME
-
-def get_env_user_string():
-    CATALYST_CENTER_USER_STRING = os.getenv(USER_STRING_ENVIRONMENT_VARIABLE)
-    return CATALYST_CENTER_USER_STRING
 
 def get_env_user_agent():
     CATALYST_CENTER_USER_AGENT = os.getenv(USER_AGENT_ENVIRONMENT_VARIABLE)

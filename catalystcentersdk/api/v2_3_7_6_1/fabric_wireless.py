@@ -100,7 +100,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-s-s-i-d-to-i-p-pool-mapping-v1
+            https://developer.cisco.com/docs/dna-center/#!add-s-s-i-d-to-i-p-pool-mapping
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -185,7 +185,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-s-i-d-to-i-p-pool-mapping-v1
+            https://developer.cisco.com/docs/dna-center/#!update-s-s-i-d-to-i-p-pool-mapping
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -260,7 +260,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-to-i-p-pool-mapping-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-to-i-p-pool-mapping
         """
         check_type(headers, dict)
         check_type(vlan_name, str,
@@ -323,7 +323,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!remove-w-l-c-from-fabric-domain-v1
+            https://developer.cisco.com/docs/dna-center/#!remove-w-l-c-from-fabric-domain
         """
         check_type(headers, dict)
         check_type(device_ipaddress, str,
@@ -392,7 +392,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-w-l-c-to-fabric-domain-v1
+            https://developer.cisco.com/docs/dna-center/#!add-w-l-c-to-fabric-domain
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -462,7 +462,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-all-the-fabric-sites-that-have-v-l-a-n-to-s-s-i-d-mapping-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-all-the-fabric-sites-that-have-v-l-a-n-to-s-s-i-d-mapping
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -520,7 +520,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!return-the-count-of-all-the-fabric-site-which-has-s-s-i-d-to-i-p-pool-mapping-v1
+            https://developer.cisco.com/docs/dna-center/#!return-the-count-of-all-the-fabric-site-which-has-s-s-i-d-to-i-p-pool-mapping
         """
         check_type(headers, dict)
         if headers is not None:
@@ -588,7 +588,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-update-or-remove-s-s-i-d-mapping-to-a-v-l-a-n-v1
+            https://developer.cisco.com/docs/dna-center/#!add-update-or-remove-s-s-i-d-mapping-to-a-v-l-a-n
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -662,7 +662,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-the-v-l-a-ns-and-s-s-i-ds-mapped-to-the-v-l-a-n-within-a-fabric-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-the-v-l-a-ns-and-s-s-i-ds-mapped-to-the-v-l-a-n-within-a-fabric-site
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -727,7 +727,7 @@ class FabricWireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-the-count-of-v-l-a-ns-mapped-to-s-s-i-ds-in-a-fabric-site-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-the-count-of-v-l-a-ns-mapped-to-s-s-i-ds-in-a-fabric-site
         """
         check_type(headers, dict)
         check_type(fabric_id, str,
@@ -772,7 +772,18 @@ class FabricWireless(object):
     def remove_w_l_c_from_fabric_domain(self,
                                            device_ipaddress,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of remove_w_l_c_from_fabric_domain_v1 .
+        Args:
+            device_ipaddress(basestring): deviceIPAddress query parameter. Device Management IP Address .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of remove_w_l_c_from_fabric_domain_v1 .
+        """ 
         return self.remove_w_l_c_from_fabric_domain_v1(
                     device_ipaddress=device_ipaddress,
                     headers=headers,
@@ -785,7 +796,19 @@ class FabricWireless(object):
                                                                        limit=None,
                                                                        offset=None,
                                                                        headers=None,
-                                                                       **request_parameters):  
+                                                                       **request_parameters):
+        """ This function is an alias of returns_all_the_fabric_sites_that_have_vlan_to_ssid_mapping_v1 .
+        Args:
+            limit(int): limit query parameter. Return only this many IP Pool to SSID Mapping .
+            offset(int): offset query parameter. Number of records to skip for pagination .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_all_the_fabric_sites_that_have_vlan_to_ssid_mapping_v1 .
+        """ 
         return self.returns_all_the_fabric_sites_that_have_vlan_to_ssid_mapping_v1(
                     limit=limit,
                     offset=offset,
@@ -801,7 +824,23 @@ class FabricWireless(object):
                                       headers=None,
                                       payload=None,
                                       active_validation=True,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of add_w_l_c_to_fabric_domain_v1 .
+        Args:
+            deviceName(string): Fabric Wireless's WLC Device Name .
+            siteNameHierarchy(string): Fabric Wireless's Fabric Site Name Hierarchy .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_w_l_c_to_fabric_domain_v1 .
+        """ 
         return self.add_w_l_c_to_fabric_domain_v1(
                     deviceName=deviceName,
                     siteNameHierarchy=siteNameHierarchy,
@@ -821,7 +860,25 @@ class FabricWireless(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of add_ssid_to_ip_pool_mapping_v1 .
+        Args:
+            scalableGroupName(string): Fabric Wireless's Scalable Group Name .
+            siteNameHierarchy(string): Fabric Wireless's Site Name Hierarchy .
+            ssidNames(list): Fabric Wireless's List of SSIDs  (list of strings).
+            vlanName(string): Fabric Wireless's VLAN Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_ssid_to_ip_pool_mapping_v1 .
+        """ 
         return self.add_ssid_to_ip_pool_mapping_v1(
                     scalableGroupName=scalableGroupName,
                     siteNameHierarchy=siteNameHierarchy,
@@ -843,7 +900,25 @@ class FabricWireless(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of update_ssid_to_ip_pool_mapping_v1 .
+        Args:
+            scalableGroupName(string): Fabric Wireless's Scalable Group Name .
+            siteNameHierarchy(string): Fabric Wireless's Site Name Hierarchy .
+            ssidNames(list): Fabric Wireless's List of SSIDs  (list of strings).
+            vlanName(string): Fabric Wireless's VLAN Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_ssid_to_ip_pool_mapping_v1 .
+        """ 
         return self.update_ssid_to_ip_pool_mapping_v1(
                     scalableGroupName=scalableGroupName,
                     siteNameHierarchy=siteNameHierarchy,
@@ -862,7 +937,23 @@ class FabricWireless(object):
                                                        headers=None,
                                                        payload=None,
                                                        active_validation=True,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of add_update_or_remove_ssid_mapping_to_a_vlan_v1 .
+        Args:
+            fabric_id(basestring): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
+                Fabric Site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_update_or_remove_ssid_mapping_to_a_vlan_v1 .
+        """ 
         return self.add_update_or_remove_ssid_mapping_to_a_vlan_v1(
                     fabric_id=fabric_id,
                     headers=headers,
@@ -876,7 +967,19 @@ class FabricWireless(object):
     def returns_the_count_of_vlans_mapped_to_ssids_in_a_fabric_site(self,
                                                                        fabric_id,
                                                                        headers=None,
-                                                                       **request_parameters):  
+                                                                       **request_parameters):
+        """ This function is an alias of returns_the_count_of_vlans_mapped_to_ssids_in_a_fabric_site_v1 .
+        Args:
+            fabric_id(basestring): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
+                Fabric Site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_the_count_of_vlans_mapped_to_ssids_in_a_fabric_site_v1 .
+        """ 
         return self.returns_the_count_of_vlans_mapped_to_ssids_in_a_fabric_site_v1(
                     fabric_id=fabric_id,
                     headers=headers,
@@ -888,10 +991,20 @@ class FabricWireless(object):
     def return_the_count_of_all_the_fabric_site_which_has_ssid_to_ip_pool_mapping(self,
                                                                                      headers=None,
                                                                                      **request_parameters):
+        """ This function is an alias of return_the_count_of_all_the_fabric_site_which_has_ssid_to_ip_pool_mapping_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of return_the_count_of_all_the_fabric_site_which_has_ssid_to_ip_pool_mapping_v1 .
+        """
         return self.return_the_count_of_all_the_fabric_site_which_has_ssid_to_ip_pool_mapping_v1(
-                                                                                     headers=headers,
-                                                                                     **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -899,7 +1012,19 @@ class FabricWireless(object):
                                        site_name_hierarchy,
                                        vlan_name,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of get_ssid_to_ip_pool_mapping_v1 .
+        Args:
+            vlan_name(basestring): vlanName query parameter. VLAN Name .
+            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Site Name Heirarchy .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ssid_to_ip_pool_mapping_v1 .
+        """ 
         return self.get_ssid_to_ip_pool_mapping_v1(
                     site_name_hierarchy=site_name_hierarchy,
                     vlan_name=vlan_name,
@@ -914,7 +1039,22 @@ class FabricWireless(object):
                                                                                 limit=None,
                                                                                 offset=None,
                                                                                 headers=None,
-                                                                                **request_parameters):  
+                                                                                **request_parameters):
+        """ This function is an alias of retrieve_the_vlans_and_ssids_mapped_to_the_vlan_within_a_fabric_site_v1 .
+        Args:
+            fabric_id(basestring): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
+                Fabric Site .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_the_vlans_and_ssids_mapped_to_the_vlan_within_a_fabric_site_v1 .
+        """ 
         return self.retrieve_the_vlans_and_ssids_mapped_to_the_vlan_within_a_fabric_site_v1(
                     fabric_id=fabric_id,
                     limit=limit,

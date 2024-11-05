@@ -86,7 +86,7 @@ class CommandRunner(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-keywords-of-c-l-is-accepted-by-command-runner-v1
+            https://developer.cisco.com/docs/dna-center/#!get-all-keywords-of-c-l-is-accepted-by-command-runner
         """
         check_type(headers, dict)
         if headers is not None:
@@ -155,7 +155,7 @@ class CommandRunner(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!run-read-only-commands-on-devices-to-get-their-real-time-configuration-v1
+            https://developer.cisco.com/docs/dna-center/#!run-read-only-commands-on-devices-to-get-their-real-time-configuration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -217,6 +217,17 @@ class CommandRunner(object):
     def get_all_keywords_of_clis_accepted(self,
                                           headers=None,
                                           **request_parameters):
+        """This function is an alias of  get_all_keywords_of_clis_accepted_v1.
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_all_keywords_of_clis_accepted_v1.
+        """
         return  self.get_all_keywords_of_clis_accepted_v1(
                                         headers=headers,
                                         **request_parameters
@@ -233,7 +244,28 @@ class CommandRunner(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """This function is an alias of run_read_only_commands_on_devices_v1.
+
+        Args:
+            commands(list): Command Runner's Commands to be executed  (list of strings).
+            description(string): Command Runner's Describe the details about the command request .
+            deviceUuids(list): Command Runner's Device Id of the device  (list of strings).
+            name(string): Command Runner's Name of the the request like getshowrun , deviceinterfacestatusCli. .
+            timeout(integer): Command Runner's The timeout value in unit of second. If no timeout provided wait till
+                300sec .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of run_read_only_commands_on_devices_v1.
+        """  
         return self.run_read_only_commands_on_devices_v1(
                     commands=commands,
                     description=description,

@@ -86,7 +86,7 @@ class File(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-list-of-available-namespaces-v1
+            https://developer.cisco.com/docs/dna-center/#!get-list-of-available-namespaces
         """
         check_type(headers, dict)
         if headers is not None:
@@ -140,7 +140,7 @@ class File(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-list-of-files-v1
+            https://developer.cisco.com/docs/dna-center/#!get-list-of-files
         """
         check_type(headers, dict)
         check_type(name_space, str,
@@ -208,7 +208,7 @@ class File(object):
             DownloadFailure: If was not able to download the raw
             response to a file.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!download-a-file-by-file-id-v1
+            https://developer.cisco.com/docs/dna-center/#!download-a-file-by-file-id
         """
         check_type(headers, dict)
         check_type(file_id, str,
@@ -267,7 +267,7 @@ class File(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!upload-file-v1
+            https://developer.cisco.com/docs/dna-center/#!upload-file
         """
         check_type(headers, dict)
         check_type(name_space, str,
@@ -308,7 +308,18 @@ class File(object):
     def upload_file(self,
                        name_space,
                        headers=None,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of upload_file_v1 .
+        Args:
+            name_space(basestring): nameSpace path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of upload_file_v1 .
+        """ 
         return self.upload_file_v1(
                     name_space=name_space,
                     headers=headers,
@@ -320,7 +331,18 @@ class File(object):
     def get_list_of_files(self,
                              name_space,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of get_list_of_files_v1 .
+        Args:
+            name_space(basestring): nameSpace path parameter. A listing of fileId's .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_list_of_files_v1 .
+        """ 
         return self.get_list_of_files_v1(
                     name_space=name_space,
                     headers=headers,
@@ -332,17 +354,44 @@ class File(object):
     def get_list_of_available_namespaces(self,
                                             headers=None,
                                             **request_parameters):
+        """ This function is an alias of get_list_of_available_namespaces_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_list_of_available_namespaces_v1 .
+        """
         return self.get_list_of_available_namespaces_v1(
-                                            headers=headers,
-                                            **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def download_a_file_by_file_id(self,
                                   file_id,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of download_a_file_by_file_id_v1 .
+        Args:
+            file_id(basestring): fileId path parameter. File Identification number .
+            dirpath(basestring): Directory absolute path. Defaults to
+                os.getcwd().
+            save_file(bool): Enable or disable automatic file creation of
+                raw response.
+            filename(basestring): The filename used to save the download
+                file.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of download_a_file_by_file_id_v1 .
+        """ 
         return self.download_a_file_by_file_id_v1(
                     file_id=file_id,
                     headers=headers,

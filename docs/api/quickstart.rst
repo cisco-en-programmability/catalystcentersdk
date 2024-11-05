@@ -44,6 +44,8 @@ By default, catalystcentersdk will look for the following environment variables 
 
     * ``CATALYST_CENTER_VERIFY`` - Controls whether to verify the server's TLS certificate or not. Defaults to True.
 
+    * ``CATALYST_CENTER_USER_AGENT`` - The User-Agent identifies the client using the SDK, providing useful data such as the SDK version and operating system. This information helps with debugging and monitoring requests.
+
 __ https://12factor.net/config
 
 
@@ -272,19 +274,6 @@ parameters, is available in the :ref:`User API Doc`.
 
 A summary of the structure is available for each version supported
 
-
-
-
-+ :ref:`v2.2.2.3 <v2_2_2_3 summary>`
-
-
-+ :ref:`v2.2.3.3 <v2_2_3_3 summary>`
-
-
-+ :ref:`v2.3.3.0 <v2_3_3_0 summary>`
-
-
-+ :ref:`v2.3.5.3 <v2_3_5_3 summary>`
 
 
 + :ref:`v2.3.7.6 <v2_3_7_6 summary>`

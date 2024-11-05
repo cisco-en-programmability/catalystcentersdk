@@ -92,7 +92,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-compliance-status-v1
+            https://developer.cisco.com/docs/dna-center/#!get-compliance-status
         """
         check_type(headers, dict)
         check_type(compliance_status, str)
@@ -166,7 +166,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!run-compliance-v1
+            https://developer.cisco.com/docs/dna-center/#!run-compliance
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -241,7 +241,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-compliance-status-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-compliance-status-count
         """
         check_type(headers, dict)
         check_type(compliance_status, str)
@@ -310,7 +310,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-compliance-detail-v1
+            https://developer.cisco.com/docs/dna-center/#!get-compliance-detail
         """
         check_type(headers, dict)
         check_type(compliance_type, str)
@@ -385,7 +385,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-compliance-detail-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-compliance-detail-count
         """
         check_type(headers, dict)
         check_type(compliance_type, str)
@@ -447,7 +447,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!compliance-remediation-v1
+            https://developer.cisco.com/docs/dna-center/#!compliance-remediation
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -508,7 +508,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!device-compliance-status-v1
+            https://developer.cisco.com/docs/dna-center/#!device-compliance-status
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -574,7 +574,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!compliance-details-of-device-v1
+            https://developer.cisco.com/docs/dna-center/#!compliance-details-of-device
         """
         check_type(headers, dict)
         check_type(category, str)
@@ -640,7 +640,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-config-task-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-config-task-details
         """
         check_type(headers, dict)
         check_type(parent_task_id, str,
@@ -704,7 +704,7 @@ class Compliance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!commit-device-configuration-v1
+            https://developer.cisco.com/docs/dna-center/#!commit-device-configuration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -758,7 +758,24 @@ class Compliance(object):
                                        compliance_status=None,
                                        compliance_type=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """This function is an alias of get_compliance_detail_count_v1 .
+
+        Args:
+            compliance_type(str): complianceType query parameter. Specify "Compliance type(s)" separated by
+                commas. The Compliance type can be 'APPLICATION_VISIBILITY', 'EOX', 'FABRIC', 'IMAGE',
+                'NETWORK_PROFILE', 'NETWORK_SETTINGS', 'PSIRT', 'RUNNING_CONFIG', 'WORKFLOW'.  .
+            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)"
+                separated by commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT',
+                'IN_PROGRESS', 'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_compliance_detail_count_v1.
+        """  
         return self.get_compliance_detail_count_v1(
                     compliance_status=compliance_status,
                     compliance_type=compliance_type,
@@ -771,7 +788,19 @@ class Compliance(object):
     def compliance_remediation(self,
                                   id,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """This function is an alias of compliance_remediation_v1. .
+
+        Args:
+            id(str): id path parameter. Network device identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of compliance_remediation_v1.
+        """  
         return self.compliance_remediation_v1(
                     id=id,
                     headers=headers,
@@ -787,7 +816,27 @@ class Compliance(object):
                                  limit=None,
                                  offset=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """This function is an alias of get_compliance_detail_v1  .
+
+        Args:
+            compliance_type(str): complianceType query parameter. Specify "Compliance type(s)" in commas. The
+                Compliance type can be 'NETWORK_PROFILE', 'IMAGE', 'FABRIC', 'APPLICATION_VISIBILITY',
+                'FABRIC', RUNNING_CONFIG', 'NETWORK_SETTINGS', 'WORKFLOW' , 'EOX'. .
+            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)" in
+                commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT', 'IN_PROGRESS',
+                'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
+            device_uuid(str): deviceUuid query parameter. Comma separated "Device Id(s)" .
+            offset(int): offset query parameter. offset/starting row .
+            limit(int): limit query parameter. Number of records to be retrieved .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_compliance_detail_v1.
+        """  
         return self.get_compliance_detail_v1(
                     compliance_status=compliance_status,
                     compliance_type=compliance_type,
@@ -803,7 +852,19 @@ class Compliance(object):
     def get_config_task_details(self,
                                    parent_task_id,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """This function is an alias of get_config_task_details_v1 .
+
+        Args:
+            parent_task_id(str): parentTaskId query parameter. task Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_config_task_details_v1.
+        """  
         return self.get_config_task_details_v1(
                     parent_task_id=parent_task_id,
                     headers=headers,
@@ -816,7 +877,22 @@ class Compliance(object):
                                  compliance_status=None,
                                  device_uuid=None,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """This function is an alias of get_compliance_status_v1. .
+
+        Args:
+            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)"
+                separated by commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT',
+                'IN_PROGRESS', 'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
+            device_uuid(str): deviceUuid query parameter. Comma separated 'Device Ids' .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_compliance_status_v1.
+        """  
         return self.get_compliance_status_v1(
                     compliance_status=compliance_status,
                     device_uuid=device_uuid,
@@ -829,7 +905,19 @@ class Compliance(object):
     def device_compliance_status(self,
                                     device_uuid,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """This function is an alias of device_compliance_status_v1. .
+
+        Args:
+            device_uuid(str): deviceUuid path parameter. Device Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of device_compliance_status_v1.
+        """
         return self.device_compliance_status_v1(
                     device_uuid=device_uuid,
                     headers=headers,
@@ -843,7 +931,23 @@ class Compliance(object):
                                        headers=None,
                                        payload=None,
                                        active_validation=True,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """This function is an alias of commit_device_configuration_v1 .
+
+        Args:
+            deviceId(list): Compliance's UUID of the device.  (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of commit_device_configuration_v1.
+        """  
         return self.commit_device_configuration_v1(
                     deviceId=deviceId,
                     headers=headers,
@@ -860,7 +964,25 @@ class Compliance(object):
                                         compliance_type=None,
                                         diff_list=None,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """This function is an alias of compliance_details_of_device_v1. .
+
+        Args:
+            device_uuid(str): deviceUuid path parameter. Device Id .
+            category(str): category query parameter. category can have any value among 'INTENT',
+                'RUNNING_CONFIG' , 'IMAGE' , 'PSIRT' , 'DESIGN_OOD' , 'EOX' , 'NETWORK_SETTINGS' .
+            compliance_type(str): complianceType query parameter. Specify "Compliance type(s)" separated by
+                commas. The Compliance type can be 'APPLICATION_VISIBILITY', 'EOX', 'FABRIC', 'IMAGE',
+                'NETWORK_PROFILE', 'NETWORK_SETTINGS', 'PSIRT', 'RUNNING_CONFIG', 'WORKFLOW'.  .
+            diff_list(bool): diffList query parameter. diff list [ pass true to fetch the diff list ] .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of compliance_details_of_device_v1.
+        """
         return self.compliance_details_of_device_v1(
                     device_uuid=device_uuid,
                     category=category,
@@ -875,7 +997,21 @@ class Compliance(object):
     def get_compliance_status_count(self,
                                        compliance_status=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """This function is an alias of get_compliance_status_count_v1 .
+
+        Args:
+            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)"
+                separated by commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT',
+                'IN_PROGRESS', 'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_compliance_status_count_v1.
+        """  
         return self.get_compliance_status_count_v1(
                     compliance_status=compliance_status,
                     headers=headers,
@@ -891,7 +1027,29 @@ class Compliance(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """This function is an alias of run_compliance_v1. .
+
+        Args:
+            categories(list): Compliance's Category can have any value among 'INTENT'(mapped to compliance types:
+                NETWORK_SETTINGS,NETWORK_PROFILE,WORKFLOW,FABRIC,APPLICATION_VISIBILITY),
+                'RUNNING_CONFIG' , 'IMAGE' , 'PSIRT' , 'EOX' , 'NETWORK_SETTINGS'  (list of strings).
+            deviceUuids(list): Compliance's UUID of the device.  (list of strings).
+            triggerFull(boolean): Compliance's if it is true then compliance will be triggered for all categories.
+                If it is false then compliance will be triggered for categories mentioned in categories
+                section . .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of run_compliance_v1.
+        """  
         return self.run_compliance_v1(
                     categories=categories,
                     deviceUuids=deviceUuids,

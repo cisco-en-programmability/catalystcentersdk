@@ -86,7 +86,7 @@ class DisasterRecovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!disaster-recovery-operational-status-v1
+            https://developer.cisco.com/docs/dna-center/#!disaster-recovery-operational-status
         """
         check_type(headers, dict)
         if headers is not None:
@@ -139,7 +139,7 @@ class DisasterRecovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!disaster-recovery-status-v1
+            https://developer.cisco.com/docs/dna-center/#!disaster-recovery-status
         """
         check_type(headers, dict)
         if headers is not None:
@@ -177,19 +177,39 @@ class DisasterRecovery(object):
     def disaster_recovery_operational_status(self,
                                                 headers=None,
                                                 **request_parameters):
+        """ This function is an alias of disaster_recovery_operational_status_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of disaster_recovery_operational_status_v1 .
+        """
         return self.disaster_recovery_operational_status_v1(
-                                                headers=headers,
-                                                **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def disaster_recovery_status(self,
                                     headers=None,
                                     **request_parameters):
+        """ This function is an alias of disaster_recovery_status_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of disaster_recovery_status_v1 .
+        """
         return self.disaster_recovery_status_v1(
-                                     headers=headers,
-                                    **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
 
 

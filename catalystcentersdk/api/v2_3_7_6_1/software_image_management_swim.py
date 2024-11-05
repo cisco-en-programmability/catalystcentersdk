@@ -95,7 +95,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!trigger-software-image-activation-v1
+            https://developer.cisco.com/docs/dna-center/#!trigger-software-image-activation
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -173,7 +173,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!trigger-software-image-distribution-v1
+            https://developer.cisco.com/docs/dna-center/#!trigger-software-image-distribution
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -272,7 +272,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-software-image-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-software-image-details
         """
         check_type(headers, dict)
         check_type(image_uuid, str)
@@ -378,7 +378,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-family-identifiers-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-family-identifiers
         """
         check_type(headers, dict)
         if headers is not None:
@@ -451,7 +451,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!tag-as-golden-image-v1
+            https://developer.cisco.com/docs/dna-center/#!tag-as-golden-image
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -537,7 +537,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!remove-golden-tag-for-image-v1
+            https://developer.cisco.com/docs/dna-center/#!remove-golden-tag-for-image
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -616,7 +616,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-golden-tag-status-of-an-image-v1
+            https://developer.cisco.com/docs/dna-center/#!get-golden-tag-status-of-an-image
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -692,7 +692,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!import-local-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!import-local-software-image
         """
         check_type(headers, dict)
         check_type(is_third_party, bool)
@@ -773,7 +773,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!import-software-image-via-u-r-l-v1
+            https://developer.cisco.com/docs/dna-center/#!import-software-image-via-u-r-l
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -890,7 +890,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-list-of-software-images-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-list-of-software-images
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -1017,7 +1017,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-count-of-software-images-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-count-of-software-images
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -1115,7 +1115,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-image-distribution-server-v1
+            https://developer.cisco.com/docs/dna-center/#!add-image-distribution-server
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1191,7 +1191,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-image-distribution-servers-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-image-distribution-servers
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1257,7 +1257,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-remote-image-distribution-server-v1
+            https://developer.cisco.com/docs/dna-center/#!update-remote-image-distribution-server
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1334,7 +1334,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-specific-image-distribution-server-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-specific-image-distribution-server
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1392,7 +1392,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!remove-image-distribution-server-v1
+            https://developer.cisco.com/docs/dna-center/#!remove-image-distribution-server
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1452,7 +1452,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-applicable-add-on-images-for-the-given-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-applicable-add-on-images-for-the-given-software-image
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1511,7 +1511,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-count-of-add-on-images-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-count-of-add-on-images
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1570,7 +1570,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!download-the-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!download-the-software-image
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1641,7 +1641,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-network-device-product-name-to-the-given-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-network-device-product-name-to-the-given-software-image
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1738,7 +1738,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-network-device-product-names-assigned-to-a-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-network-device-product-names-assigned-to-a-software-image
         """
         check_type(headers, dict)
         check_type(product_name, str)
@@ -1830,7 +1830,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-assigned-network-device-products-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-count-of-assigned-network-device-products
         """
         check_type(headers, dict)
         check_type(product_name, str)
@@ -1908,7 +1908,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!unassign-network-device-product-name-from-the-given-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!unassign-network-device-product-name-from-the-given-software-image
         """
         check_type(headers, dict)
         check_type(image_id, str,
@@ -1986,7 +1986,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-the-list-of-sites-for-the-network-device-product-name-assigned-to-the-software-image-v1
+            https://developer.cisco.com/docs/dna-center/#!update-the-list-of-sites-for-the-network-device-product-name-assigned-to-the-software-image
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2091,7 +2091,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-device-image-updates-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network-device-image-updates
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -2206,7 +2206,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-of-network-device-image-updates-v1
+            https://developer.cisco.com/docs/dna-center/#!count-of-network-device-image-updates
         """
         check_type(headers, dict)
         check_type(id, str)
@@ -2296,7 +2296,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-network-device-product-names-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-the-list-of-network-device-product-names
         """
         check_type(headers, dict)
         check_type(product_name, str)
@@ -2365,7 +2365,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-of-network-product-names-v1
+            https://developer.cisco.com/docs/dna-center/#!count-of-network-product-names
         """
         check_type(headers, dict)
         check_type(product_name, str)
@@ -2426,7 +2426,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-network-device-product-name-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-network-device-product-name
         """
         check_type(headers, dict)
         check_type(product_name_ordinal, int,
@@ -2495,7 +2495,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-network-device-product-names-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-network-device-product-names-for-a-site
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -2566,7 +2566,7 @@ class SoftwareImageManagementSwim(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-the-count-of-network-device-product-names-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!returns-the-count-of-network-device-product-names-for-a-site
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -2610,10 +2610,20 @@ class SoftwareImageManagementSwim(object):
     def get_device_family_identifiers(self,
                                          headers=None,
                                          **request_parameters):
+        """ This function is an alias of get_device_family_identifiers_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_family_identifiers_v1 .
+        """
         return self.get_device_family_identifiers_v1(
-                                         headers=headers,
-                                         **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -2621,7 +2631,21 @@ class SoftwareImageManagementSwim(object):
                                                headers=None,
                                                payload=None,
                                                active_validation=True,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of trigger_software_image_distribution_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of trigger_software_image_distribution_v1 .
+        """ 
         return self.trigger_software_image_distribution_v1(
                     headers=headers,
                     payload=payload,
@@ -2646,7 +2670,38 @@ class SoftwareImageManagementSwim(object):
                                             start_time=None,
                                             status=None,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of get_network_device_image_updates_v1 .
+        Args:
+            id(basestring): id query parameter. Update id which is unique for each network device under the parentId
+                .
+            parent_id(basestring): parentId query parameter. Updates that have this parent id .
+            network_device_id(basestring): networkDeviceId query parameter. Network device id .
+            status(basestring): status query parameter. Status of the image update. Available values : FAILURE,
+                SUCCESS, IN_PROGRESS, PENDING .
+            image_name(basestring): imageName query parameter. Software image name for the update .
+            host_name(basestring): hostName query parameter. Host name of the network device for the image update.
+                Supports case-insensitive partial search .
+            management_address(basestring): managementAddress query parameter. Management address of the network
+                device .
+            start_time(int): startTime query parameter. Image update started after the given time (as milliseconds
+                since UNIX epoch) .
+            end_time(int): endTime query parameter. Image update started before the given time (as milliseconds
+                since UNIX epoch) .
+            sort_by(basestring): sortBy query parameter. A property within the response to sort by. .
+            order(basestring): order query parameter. Whether ascending or descending order should be used to sort
+                the response. .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. .
+            limit(int): limit query parameter. The number of records to show for this page. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_network_device_image_updates_v1 .
+        """ 
         return self.get_network_device_image_updates_v1(
                     end_time=end_time,
                     host_name=host_name,
@@ -2675,7 +2730,25 @@ class SoftwareImageManagementSwim(object):
                                                    headers=None,
                                                    payload=None,
                                                    active_validation=True,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of update_remote_image_distribution_server_v1 .
+        Args:
+            password(string): Software Image Management (SWIM)'s Server password .
+            portNumber(number): Software Image Management (SWIM)'s Port number .
+            username(string): Software Image Management (SWIM)'s Server username .
+            id(basestring): id path parameter. Remote server identifier. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_remote_image_distribution_server_v1 .
+        """ 
         return self.update_remote_image_distribution_server_v1(
                     id=id,
                     password=password,
@@ -2695,7 +2768,24 @@ class SoftwareImageManagementSwim(object):
                                                               product_id=None,
                                                               product_name=None,
                                                               headers=None,
-                                                              **request_parameters):  
+                                                              **request_parameters):
+        """ This function is an alias of retrieves_the_list_of_network_device_product_names_v1 .
+        Args:
+            product_name(basestring): productName query parameter. Filter with network device product name. Supports
+                partial case-insensitive search. A minimum of 3 characters are required for search .
+            product_id(basestring): productId query parameter. Filter with product ID (PID) .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. The minimum value is 1. .
+            limit(int): limit query parameter. The number of records to show for this page. The minimum and maximum
+                values are 1 and 500, respectively. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_list_of_network_device_product_names_v1 .
+        """ 
         return self.retrieves_the_list_of_network_device_product_names_v1(
                     limit=limit,
                     offset=offset,
@@ -2710,7 +2800,19 @@ class SoftwareImageManagementSwim(object):
     def download_the_software_image(self,
                                        id,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of download_the_software_image_v1 .
+        Args:
+            id(basestring): id path parameter. Software image identifier. Check API `/dna/intent/api/v1/images` for
+                `id` from response. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of download_the_software_image_v1 .
+        """ 
         return self.download_the_software_image_v1(
                     id=id,
                     headers=headers,
@@ -2724,7 +2826,23 @@ class SoftwareImageManagementSwim(object):
                                              headers=None,
                                              payload=None,
                                              active_validation=True,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of trigger_software_image_activation_v1 .
+        Args:
+            schedule_validate(bool): scheduleValidate query parameter. scheduleValidate, validates data before
+                schedule (Optional) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of trigger_software_image_activation_v1 .
+        """ 
         return self.trigger_software_image_activation_v1(
                     schedule_validate=schedule_validate,
                     headers=headers,
@@ -2742,7 +2860,27 @@ class SoftwareImageManagementSwim(object):
                                                                           headers=None,
                                                                           payload=None,
                                                                           active_validation=True,
-                                                                          **request_parameters):  
+                                                                          **request_parameters):
+        """ This function is an alias of assign_network_device_product_name_to_the_given_software_image_v1 .
+        Args:
+            productNameOrdinal(number): Software Image Management (SWIM)'s Product name ordinal is unique value for
+                each network device product .
+            siteIds(list): Software Image Management (SWIM)'s Sites where this image needs to be assigned. Ref
+                https://developer.cisco.com/docs/dna-center/#!sites  (list of strings).
+            image_id(basestring): imageId path parameter. Software image identifier. Refer
+                `/dna/intent/api/v1/images` API for obtaining `imageId` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of assign_network_device_product_name_to_the_given_software_image_v1 .
+        """ 
         return self.assign_network_device_product_name_to_the_given_software_image_v1(
                     image_id=image_id,
                     productNameOrdinal=productNameOrdinal,
@@ -2758,7 +2896,19 @@ class SoftwareImageManagementSwim(object):
     def retrieve_network_device_product_name(self,
                                                 product_name_ordinal,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of retrieve_network_device_product_name_v1 .
+        Args:
+            product_name_ordinal(int): productNameOrdinal path parameter. Product name ordinal is unique value for
+                each network device product. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_network_device_product_name_v1 .
+        """ 
         return self.retrieve_network_device_product_name_v1(
                     product_name_ordinal=product_name_ordinal,
                     headers=headers,
@@ -2787,7 +2937,36 @@ class SoftwareImageManagementSwim(object):
                                       sort_order=None,
                                       version=None,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of get_software_image_details_v1 .
+        Args:
+            image_uuid(basestring): imageUuid query parameter.
+            name(basestring): name query parameter.
+            family(basestring): family query parameter.
+            application_type(basestring): applicationType query parameter.
+            image_integrity_status(basestring): imageIntegrityStatus query parameter. imageIntegrityStatus FAILURE,
+                UNKNOWN, VERIFIED .
+            version(basestring): version query parameter. software Image Version .
+            image_series(basestring): imageSeries query parameter. image Series .
+            image_name(basestring): imageName query parameter. image Name .
+            is_tagged_golden(bool): isTaggedGolden query parameter. is Tagged Golden .
+            is_cco_recommended(bool): isCCORecommended query parameter. is recommended from cisco.com .
+            is_cco_latest(bool): isCCOLatest query parameter. is latest from cisco.com .
+            created_time(int): createdTime query parameter. time in milliseconds (epoch format) .
+            image_size_greater_than(int): imageSizeGreaterThan query parameter. size in bytes .
+            image_size_lesser_than(int): imageSizeLesserThan query parameter. size in bytes .
+            sort_by(basestring): sortBy query parameter. sort results by this field .
+            sort_order(basestring): sortOrder query parameter. sort order 'asc' or 'des'. Default is asc .
+            limit(int): limit query parameter.
+            offset(int): offset query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_software_image_details_v1 .
+        """ 
         return self.get_software_image_details_v1(
                     application_type=application_type,
                     created_time=created_time,
@@ -2827,7 +3006,49 @@ class SoftwareImageManagementSwim(object):
                                            supervisor_product_name_ordinal=None,
                                            version=None,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of returns_list_of_software_images_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site identifier to get the list of all available products
+                under the site. The default value is the global site.  See
+                https://developer.cisco.com/docs/dna-center/get-site for `siteId` .
+            product_name_ordinal(int): productNameOrdinal query parameter. The product name ordinal is a unique
+                value for each network device product. The productNameOrdinal can be obtained from the
+                response of API `/dna/intent/api/v1/siteWiseProductNames` .
+            supervisor_product_name_ordinal(int): supervisorProductNameOrdinal query parameter. The supervisor
+                engine module ordinal is a unique value for each supervisor module. The
+                `supervisorProductNameOrdinal` can be obtained from the response of API
+                `/dna/intent/api/v1/siteWiseProductNames` .
+            imported(bool): imported query parameter. When the value is set to `true`, it will include physically
+                imported images. Conversely, when the value is set to `false`, it will include image
+                records from the cloud. The identifier for cloud images can be utilized to download
+                images from Cisco.com to the disk. .
+            name(basestring): name query parameter. Filter with software image or add-on name. Supports partial
+                case-insensitive search. A minimum of 3 characters is required for the search. .
+            version(basestring): version query parameter. Filter with image version. Supports partial case-
+                insensitive search. A minimum of 3 characters is required for the search. .
+            golden(bool): golden query parameter. When set to `true`, it will retrieve the images marked as tagged
+                golden. When set to `false`, it will retrieve the images marked as not tagged golden. .
+            integrity(basestring): integrity query parameter. Filter with verified images using Integrity
+                Verification Available values: UNKNOWN, VERIFIED .
+            has_addon_images(bool): hasAddonImages query parameter. When set to `true`, it will retrieve the images
+                which have add-on images. When set to `false`, it will retrieve the images which do not
+                have add-on images. .
+            is_addon_images(bool): isAddonImages query parameter. When set to `true`, it will retrieve the images
+                that an add-on image.  When set to `false`, it will retrieve the images that are not
+                add-on images .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. The minimum value is 1. .
+            limit(int): limit query parameter. The number of records to show for this page. The minimum and maximum
+                values are 1 and 500, respectively. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_list_of_software_images_v1 .
+        """ 
         return self.returns_list_of_software_images_v1(
                     golden=golden,
                     has_addon_images=has_addon_images,
@@ -2850,7 +3071,19 @@ class SoftwareImageManagementSwim(object):
     def returns_count_of_add_on_images(self,
                                           id,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of returns_count_of_add_on_images_v1 .
+        Args:
+            id(basestring): id path parameter. Software image identifier. Check API `/dna/intent/api/v1/images` for
+                id from response. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_count_of_add_on_images_v1 .
+        """ 
         return self.returns_count_of_add_on_images_v1(
                     id=id,
                     headers=headers,
@@ -2863,7 +3096,20 @@ class SoftwareImageManagementSwim(object):
                                           product_id=None,
                                           product_name=None,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of count_of_network_product_names_v1 .
+        Args:
+            product_name(basestring): productName query parameter. Filter with network device product name. Supports
+                partial case-insensitive search. A minimum of 3 characters are required for search .
+            product_id(basestring): productId query parameter. Filter with product ID (PID) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_of_network_product_names_v1 .
+        """ 
         return self.count_of_network_product_names_v1(
                     product_id=product_id,
                     product_name=product_name,
@@ -2876,7 +3122,18 @@ class SoftwareImageManagementSwim(object):
     def retrieve_specific_image_distribution_server(self,
                                                        id,
                                                        headers=None,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of retrieve_specific_image_distribution_server_v1 .
+        Args:
+            id(basestring): id path parameter. Server identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_specific_image_distribution_server_v1 .
+        """ 
         return self.retrieve_specific_image_distribution_server_v1(
                     id=id,
                     headers=headers,
@@ -2892,7 +3149,25 @@ class SoftwareImageManagementSwim(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of import_software_image_via_url_v1 .
+        Args:
+            schedule_at(basestring): scheduleAt query parameter. Epoch Time (The number of milli-seconds since
+                January 1 1970 UTC) at which the distribution should be scheduled (Optional)  .
+            schedule_desc(basestring): scheduleDesc query parameter. Custom Description (Optional) .
+            schedule_origin(basestring): scheduleOrigin query parameter. Originator of this call (Optional) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of import_software_image_via_url_v1 .
+        """ 
         return self.import_software_image_via_url_v1(
                     schedule_at=schedule_at,
                     schedule_desc=schedule_desc,
@@ -2911,7 +3186,26 @@ class SoftwareImageManagementSwim(object):
                                                            product_name=None,
                                                            site_id=None,
                                                            headers=None,
-                                                           **request_parameters):  
+                                                           **request_parameters):
+        """ This function is an alias of returns_network_device_product_names_for_a_site_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site identifier to get the list of all available products
+                under the site. The default value is the global site.  See
+                https://developer.cisco.com/docs/dna-center/get-site for siteId .
+            product_name(basestring): productName query parameter. Filter with network device product name. Supports
+                partial case-insensitive search. A minimum of 3 characters are required for search .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. The minimum value is 1 .
+            limit(int): limit query parameter. The number of records to show for this page. The minimum and maximum
+                values are 1 and 500, respectively .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_network_device_product_names_for_a_site_v1 .
+        """ 
         return self.returns_network_device_product_names_for_a_site_v1(
                     limit=limit,
                     offset=offset,
@@ -2935,7 +3229,46 @@ class SoftwareImageManagementSwim(object):
                                             supervisor_product_name_ordinal=None,
                                             version=None,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of returns_count_of_software_images_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site identifier to get the list of all available products
+                under the site. The default value is the global site.  See
+                https://developer.cisco.com/docs/dna-center/get-site for siteId .
+            product_name_ordinal(int): productNameOrdinal query parameter. The product name ordinal is a unique
+                value for each network device product. The productNameOrdinal can be obtained from the
+                response of the API `/dna/intent/api/v1/siteWiseProductNames`. .
+            supervisor_product_name_ordinal(int): supervisorProductNameOrdinal query parameter. The supervisor
+                engine module ordinal is a unique value for each supervisor module. The
+                `supervisorProductNameOrdinal` can be obtained from the response of API
+                `/dna/intent/api/v1/siteWiseProductNames` .
+            imported(bool): imported query parameter. When the value is set to `true`, it will include physically
+                imported images. Conversely, when the value is set to `false`, it will include image
+                records from the cloud. The identifier for cloud images can be utilised to download
+                images from Cisco.com to the disk. .
+            name(basestring): name query parameter. Filter with software image or add-on name. Supports partial
+                case-insensitive search. A minimum of 3 characters is required for the search .
+            version(basestring): version query parameter. Filter with image version. Supports partial case-
+                insensitive search. A minimum of 3 characters is required for the search .
+            golden(basestring): golden query parameter. When set to `true`, it will retrieve the images marked
+                tagged golden. When set to `false`, it will retrieve the images marked not tagged
+                golden. .
+            integrity(basestring): integrity query parameter. Filter with verified images using Integrity
+                Verification Available values: UNKNOWN, VERIFIED .
+            has_addon_images(bool): hasAddonImages query parameter. When set to `true`, it will retrieve the images
+                which have add-on images. When set to `false`, it will retrieve the images which do not
+                have add-on images. .
+            is_addon_images(bool): isAddonImages query parameter. When set to `true`, it will retrieve the images
+                that an add-on image.  When set to `false`, it will retrieve the images that are not
+                add-on images .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_count_of_software_images_v1 .
+        """ 
         return self.returns_count_of_software_images_v1(
                     golden=golden,
                     has_addon_images=has_addon_images,
@@ -2964,7 +3297,32 @@ class SoftwareImageManagementSwim(object):
                                                  start_time=None,
                                                  status=None,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of count_of_network_device_image_updates_v1 .
+        Args:
+            id(basestring): id query parameter. Update id which is unique for each network device under the parentId
+                .
+            parent_id(basestring): parentId query parameter. Updates that have this parent id .
+            network_device_id(basestring): networkDeviceId query parameter. Network device id .
+            status(basestring): status query parameter. Status of the image update. Available values: FAILURE,
+                SUCCESS, IN_PROGRESS, PENDING .
+            image_name(basestring): imageName query parameter. Software image name for the update .
+            host_name(basestring): hostName query parameter. Host name of the network device for the image update.
+                Supports case-insensitive partial search. .
+            management_address(basestring): managementAddress query parameter. Management address of the network
+                device .
+            start_time(int): startTime query parameter. Image update started after the given time (as milliseconds
+                since UNIX epoch). .
+            end_time(int): endTime query parameter. Image update started before the given time (as milliseconds
+                since UNIX epoch). .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_of_network_device_image_updates_v1 .
+        """ 
         return self.count_of_network_device_image_updates_v1(
                     end_time=end_time,
                     host_name=host_name,
@@ -2985,7 +3343,23 @@ class SoftwareImageManagementSwim(object):
                                                                               image_id,
                                                                               product_name_ordinal,
                                                                               headers=None,
-                                                                              **request_parameters):  
+                                                                              **request_parameters):
+        """ This function is an alias of unassign_network_device_product_name_from_the_given_software_image_v1 .
+        Args:
+            image_id(basestring): imageId path parameter. Software image identifier. Refer
+                `/dna/intent/api/v1/images` API for obtaining `imageId` .
+            product_name_ordinal(int): productNameOrdinal path parameter. The product name ordinal is a unique value
+                for each network device product. Refer
+                `/dna/intent/api/v1/images/{imageId}/siteWiseProductNames` GET API for obtaining
+                `productNameOrdinal` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of unassign_network_device_product_name_from_the_given_software_image_v1 .
+        """ 
         return self.unassign_network_device_product_name_from_the_given_software_image_v1(
                     image_id=image_id,
                     product_name_ordinal=product_name_ordinal,
@@ -2998,7 +3372,18 @@ class SoftwareImageManagementSwim(object):
     def remove_image_distribution_server(self,
                                             id,
                                             headers=None,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of remove_image_distribution_server_v1 .
+        Args:
+            id(basestring): id path parameter. Remote server identifier. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of remove_image_distribution_server_v1 .
+        """ 
         return self.remove_image_distribution_server_v1(
                     id=id,
                     headers=headers,
@@ -3010,7 +3395,19 @@ class SoftwareImageManagementSwim(object):
     def retrieve_applicable_add_on_images_for_the_given_software_image(self,
                                                                           id,
                                                                           headers=None,
-                                                                          **request_parameters):  
+                                                                          **request_parameters):
+        """ This function is an alias of retrieve_applicable_add_on_images_for_the_given_software_image_v1 .
+        Args:
+            id(basestring): id path parameter. Software image identifier. Check
+                `/dna/intent/api/v1/images?hasAddonImages=true` API to get the same. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_applicable_add_on_images_for_the_given_software_image_v1 .
+        """ 
         return self.retrieve_applicable_add_on_images_for_the_given_software_image_v1(
                     id=id,
                     headers=headers,
@@ -3025,7 +3422,23 @@ class SoftwareImageManagementSwim(object):
                                        image_id,
                                        site_id,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of remove_golden_tag_for_image_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. Site Id in uuid format. Set siteId as -1 for Global site. .
+            device_family_identifier(basestring): deviceFamilyIdentifier path parameter. Device family identifier
+                e.g. : 277696480-283933147, e.g. : 277696480 .
+            device_role(basestring): deviceRole path parameter. Device Role. Permissible Values : ALL, UNKNOWN,
+                ACCESS, BORDER ROUTER, DISTRIBUTION and CORE. .
+            image_id(basestring): imageId path parameter. Image Id in uuid format. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of remove_golden_tag_for_image_v1 .
+        """ 
         return self.remove_golden_tag_for_image_v1(
                     device_family_identifier=device_family_identifier,
                     device_role=device_role,
@@ -3041,7 +3454,22 @@ class SoftwareImageManagementSwim(object):
                                                                         product_name=None,
                                                                         site_id=None,
                                                                         headers=None,
-                                                                        **request_parameters):  
+                                                                        **request_parameters):
+        """ This function is an alias of returns_the_count_of_network_device_product_names_for_a_site_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site identifier to get the list of all available products
+                under the site. The default value is global site id. See
+                https://developer.cisco.com/docs/dna-center/get-site/ for siteId .
+            product_name(basestring): productName query parameter. Filter with network device product name. Supports
+                partial case-insensitive search. A minimum of 3 characters are required for search .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of returns_the_count_of_network_device_product_names_for_a_site_v1 .
+        """ 
         return self.returns_the_count_of_network_device_product_names_for_a_site_v1(
                     product_name=product_name,
                     site_id=site_id,
@@ -3058,7 +3486,30 @@ class SoftwareImageManagementSwim(object):
                                                                    product_name=None,
                                                                    recommended=None,
                                                                    headers=None,
-                                                                   **request_parameters):  
+                                                                   **request_parameters):
+        """ This function is an alias of retrieves_the_count_of_assigned_network_device_products_v1 .
+        Args:
+            image_id(basestring): imageId path parameter. Software image identifier. Refer
+                `/dna/intent/api/v/images` API for obtaining `imageId` .
+            product_name(basestring): productName query parameter. Filter with network device product name. Supports
+                partial case-insensitive search. A minimum of 3 characters are required for search. .
+            product_id(basestring): productId query parameter. Filter with product ID (PID) .
+            recommended(basestring): recommended query parameter. Filter with recommended source. If `CISCO` then
+                the network device product assigned was recommended by Cisco and `USER` then the user
+                has manually assigned. Available values : CISCO, USER .
+            assigned(basestring): assigned query parameter. Filter with the assigned/unassigned, `ASSIGNED` option
+                will filter network device products that are associated with the given image. The
+                `NOT_ASSIGNED` option will filter network device products that have not yet been
+                associated with the given image but apply to it. Available values: ASSIGNED,
+                NOT_ASSIGNED .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_the_count_of_assigned_network_device_products_v1 .
+        """ 
         return self.retrieves_the_count_of_assigned_network_device_products_v1(
                     image_id=image_id,
                     assigned=assigned,
@@ -3077,7 +3528,23 @@ class SoftwareImageManagementSwim(object):
                                              image_id,
                                              site_id,
                                              headers=None,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of get_golden_tag_status_of_an_image_v1 .
+        Args:
+            site_id(basestring): siteId path parameter. Site Id in uuid format. Set siteId as -1 for Global site. .
+            device_family_identifier(basestring): deviceFamilyIdentifier path parameter. Device family identifier
+                e.g. : 277696480-283933147, e.g. : 277696480 .
+            device_role(basestring): deviceRole path parameter. Device Role. Permissible Values : ALL, UNKNOWN,
+                ACCESS, BORDER ROUTER, DISTRIBUTION and CORE. .
+            image_id(basestring): imageId path parameter. Image Id in uuid format. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_golden_tag_status_of_an_image_v1 .
+        """ 
         return self.get_golden_tag_status_of_an_image_v1(
                     device_family_identifier=device_family_identifier,
                     device_role=device_role,
@@ -3098,7 +3565,26 @@ class SoftwareImageManagementSwim(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of add_image_distribution_server_v1 .
+        Args:
+            password(string): Software Image Management (SWIM)'s Server password .
+            portNumber(number): Software Image Management (SWIM)'s Port number .
+            rootLocation(string): Software Image Management (SWIM)'s Server root location .
+            serverAddress(string): Software Image Management (SWIM)'s FQDN or IP address of the server .
+            username(string): Software Image Management (SWIM)'s Server username .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_image_distribution_server_v1 .
+        """ 
         return self.add_image_distribution_server_v1(
                     password=password,
                     portNumber=portNumber,
@@ -3120,7 +3606,29 @@ class SoftwareImageManagementSwim(object):
                                                                                                        headers=None,
                                                                                                        payload=None,
                                                                                                        active_validation=True,
-                                                                                                       **request_parameters):  
+                                                                                                       **request_parameters):
+        """ This function is an alias of update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1 .
+        Args:
+            siteIds(list): Software Image Management (SWIM)'s Sites where all this image need to be assigned  (list
+                of strings).
+            image_id(basestring): imageId path parameter. Software image identifier. Refer
+                `/dna/intent/api/v1/images` API for obtaining `imageId` .
+            product_name_ordinal(int): productNameOrdinal path parameter. Product name ordinal is unique value for
+                each network device product. Refer
+                `/dna/intent/api/v1/images/{imageId}/siteWiseProductNames` GET API for obtaining
+                `productNameOrdinal`. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1 .
+        """ 
         return self.update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(
                     image_id=image_id,
                     product_name_ordinal=product_name_ordinal,
@@ -3139,7 +3647,22 @@ class SoftwareImageManagementSwim(object):
                                        third_party_image_family=None,
                                        third_party_vendor=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """ This function is an alias of import_local_software_image_v1 .
+        Args:
+            is_third_party(bool): isThirdParty query parameter. Third party Image check .
+            third_party_vendor(basestring): thirdPartyVendor query parameter. Third Party Vendor .
+            third_party_image_family(basestring): thirdPartyImageFamily query parameter. Third Party image family .
+            third_party_application_type(basestring): thirdPartyApplicationType query parameter. Third Party
+                Application Type .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of import_local_software_image_v1 .
+        """ 
         return self.import_local_software_image_v1(
                     is_third_party=is_third_party,
                     third_party_application_type=third_party_application_type,
@@ -3159,7 +3682,28 @@ class SoftwareImageManagementSwim(object):
                                headers=None,
                                payload=None,
                                active_validation=True,
-                               **request_parameters):  
+                               **request_parameters):
+        """ This function is an alias of tag_as_golden_image_v1 .
+        Args:
+            deviceFamilyIdentifier(string): Software Image Management (SWIM)'s Device Family Identifier e.g. :
+                277696480-283933147, 277696480 .
+            deviceRole(string): Software Image Management (SWIM)'s Device Role. Permissible Values : ALL, UNKNOWN,
+                ACCESS, BORDER ROUTER, DISTRIBUTION and CORE. .
+            imageId(string): Software Image Management (SWIM)'s imageId in uuid format. .
+            siteId(string): Software Image Management (SWIM)'s SiteId in uuid format. For Global Site "-1" to be
+                used. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of tag_as_golden_image_v1 .
+        """ 
         return self.tag_as_golden_image_v1(
                     deviceFamilyIdentifier=deviceFamilyIdentifier,
                     deviceRole=deviceRole,
@@ -3176,9 +3720,19 @@ class SoftwareImageManagementSwim(object):
     def retrieve_image_distribution_servers(self,
                                                headers=None,
                                                **request_parameters):
+        """ This function is an alias of retrieve_image_distribution_servers_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_image_distribution_servers_v1 .
+        """
         return self.retrieve_image_distribution_servers_v1(
-                                                headers=headers,
-                                               **request_parameters
+                    headers=headers,
+                    **request_parameters
         )
                 
     
@@ -3192,7 +3746,34 @@ class SoftwareImageManagementSwim(object):
                                                                                product_name=None,
                                                                                recommended=None,
                                                                                headers=None,
-                                                                               **request_parameters):  
+                                                                               **request_parameters):
+        """ This function is an alias of retrieves_network_device_product_names_assigned_to_a_software_image_v1 .
+        Args:
+            image_id(basestring): imageId path parameter. Software image identifier. Refer
+                `/dna/intent/api/v1/images` API for obtaining `imageId` .
+            product_name(basestring): productName query parameter. Filter with network device product name. Supports
+                partial case-insensitive search. A minimum of 3 characters is required for the search. .
+            product_id(basestring): productId query parameter. Filter with product ID (PID) .
+            recommended(basestring): recommended query parameter. Filter with recommended source. If `CISCO` then
+                the network device product assigned was recommended by Cisco and `USER` then the user
+                has manually assigned. Available values: CISCO, USER .
+            assigned(basestring): assigned query parameter. Filter with the assigned/unassigned, `ASSIGNED` option
+                will filter network device products that are associated with the given image. The
+                `NOT_ASSIGNED` option will filter network device products that have not yet been
+                associated with the given image but apply to it. Available values: ASSIGNED,
+                NOT_ASSIGNED .
+            offset(int): offset query parameter. The first record to show for this page; the first record is
+                numbered 1. The minimum value is 1 .
+            limit(int): limit query parameter. The number of records to show for this page. The minimum and maximum
+                values are 1 and 500, respectively .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieves_network_device_product_names_assigned_to_a_software_image_v1 .
+        """ 
         return self.retrieves_network_device_product_names_assigned_to_a_software_image_v1(
                     image_id=image_id,
                     assigned=assigned,

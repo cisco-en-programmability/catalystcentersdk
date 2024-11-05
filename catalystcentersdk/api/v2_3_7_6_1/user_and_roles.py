@@ -98,7 +98,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-role-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!add-role-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -181,7 +181,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-role-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!update-role-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -249,7 +249,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-permissions-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!get-permissions-a-p-i
         """
         check_type(headers, dict)
         if headers is not None:
@@ -303,7 +303,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-role-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-role-a-p-i
         """
         check_type(headers, dict)
         check_type(role_id, str,
@@ -358,7 +358,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-roles-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!get-roles-a-p-i
         """
         check_type(headers, dict)
         if headers is not None:
@@ -420,7 +420,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-users-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!get-users-a-p-i
         """
         check_type(headers, dict)
         check_type(invoke_source, str,
@@ -497,7 +497,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-user-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!add-user-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -589,7 +589,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-user-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!update-user-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -665,7 +665,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-user-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-user-a-p-i
         """
         check_type(headers, dict)
         check_type(user_id, str,
@@ -720,7 +720,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-setting-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-setting-a-p-i
         """
         check_type(headers, dict)
         if headers is not None:
@@ -783,7 +783,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!manage-external-authentication-setting-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!manage-external-authentication-setting-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -850,7 +850,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-servers-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-servers-a-p-i
         """
         check_type(headers, dict)
         check_type(invoke_source, str,
@@ -917,7 +917,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-and-update-a-a-a-attribute-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!add-and-update-a-a-a-attribute-a-p-i
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -986,7 +986,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-a-a-a-attribute-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-a-a-a-attribute-a-p-i
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1038,7 +1038,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-a-a-a-attribute-a-p-i-v1
+            https://developer.cisco.com/docs/dna-center/#!get-a-a-a-attribute-a-p-i
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1078,7 +1078,22 @@ class UserandRoles(object):
                                               headers=None,
                                               payload=None,
                                               active_validation=True,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of add_and_update_aaa_attribute_api_v1 .
+        Args:
+            attributeName(string): User and Roles's name of the custom AAA attribute. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_and_update_aaa_attribute_api_v1 .
+        """ 
         return self.add_and_update_aaa_attribute_api_v1(
                     attributeName=attributeName,
                     headers=headers,
@@ -1093,7 +1108,22 @@ class UserandRoles(object):
                          invoke_source,
                          auth_source=None,
                          headers=None,
-                         **request_parameters):  
+                         **request_parameters):
+        """ This function is an alias of get_users_api_v1 .
+        Args:
+            invoke_source(basestring): invokeSource query parameter. The source that invokes this API. The value of
+                this query parameter must be set to "external". .
+            auth_source(basestring): authSource query parameter. The source that authenticates the user. The value
+                of this query parameter can be set to "internal" or "external". If not provided, then
+                all users will be returned in the response. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_users_api_v1 .
+        """ 
         return self.get_users_api_v1(
                     invoke_source=invoke_source,
                     auth_source=auth_source,
@@ -1106,7 +1136,19 @@ class UserandRoles(object):
     def get_external_authentication_servers_api(self,
                                                    invoke_source,
                                                    headers=None,
-                                                   **request_parameters):  
+                                                   **request_parameters):
+        """ This function is an alias of get_external_authentication_servers_api_v1 .
+        Args:
+            invoke_source(basestring): invokeSource query parameter. The source that invokes this API. The value of
+                this query parameter must be set to "external". .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_external_authentication_servers_api_v1 .
+        """ 
         return self.get_external_authentication_servers_api_v1(
                     invoke_source=invoke_source,
                     headers=headers,
@@ -1125,7 +1167,27 @@ class UserandRoles(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of add_user_api_v1 .
+        Args:
+            email(string): User and Roles's Email.
+            firstName(string): User and Roles's First Name.
+            lastName(string): User and Roles's Last Name.
+            password(string): User and Roles's Password.
+            roleList(list): User and Roles's Role id list  (list of strings).
+            username(string): User and Roles's Username.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_user_api_v1 .
+        """ 
         return self.add_user_api_v1(
                     email=email,
                     firstName=firstName,
@@ -1144,17 +1206,38 @@ class UserandRoles(object):
     def delete_aaa_attribute_api(self,
                                       headers=None,
                                       **request_parameters):
+        """ This function is an alias of delete_aaa_attribute_api_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_aaa_attribute_api_v1 .
+        """
         return self.delete_aaa_attribute_api_v1(
-                                        headers=headers,
-                                      **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def delete_user_api(self,
                            user_id,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of delete_user_api_v1 .
+        Args:
+            user_id(basestring): userId path parameter. The id of the user to be deleted .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_user_api_v1 .
+        """ 
         return self.delete_user_api_v1(
                     user_id=user_id,
                     headers=headers,
@@ -1166,20 +1249,40 @@ class UserandRoles(object):
     def get_external_authentication_setting_api(self,
                                                    headers=None,
                                                    **request_parameters):
+        """ This function is an alias of get_external_authentication_setting_api_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_external_authentication_setting_api_v1 .
+        """
         return self.get_external_authentication_setting_api_v1(
-                                                headers=headers,
-                                                **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_roles_api(self,
                          headers=None,
                          **request_parameters):
+        """ This function is an alias of get_roles_api_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_roles_api_v1 .
+        """
         return self.get_roles_api_v1(
-                        headers=headers,
-                         **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1190,7 +1293,24 @@ class UserandRoles(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """ This function is an alias of add_role_api_v1 .
+        Args:
+            description(string): User and Roles's Description of role .
+            resourceTypes(list): User and Roles's resourceTypes (list of objects).
+            role(string): User and Roles's Name of the role .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_role_api_v1 .
+        """ 
         return self.add_role_api_v1(
                     description=description,
                     resourceTypes=resourceTypes,
@@ -1213,7 +1333,27 @@ class UserandRoles(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of update_user_api_v1 .
+        Args:
+            email(string): User and Roles's email should be set if the original value is not empty .
+            firstName(string): User and Roles's firstName should be set if the original value is not empty .
+            lastName(string): User and Roles's lastName should be set if the original value is not empty .
+            roleList(list): User and Roles's Role id list  (list of strings).
+            userId(string): User and Roles's User Id.
+            username(string): User and Roles's Username.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_user_api_v1 .
+        """ 
         return self.update_user_api_v1(
                     email=email,
                     firstName=firstName,
@@ -1232,20 +1372,40 @@ class UserandRoles(object):
     def get_permissions_api(self,
                                headers=None,
                                **request_parameters):
+        """ This function is an alias of get_permissions_api_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_permissions_api_v1 .
+        """
         return self.get_permissions_api_v1(
-                                headers=headers,
-                               **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
     def get_aaa_attribute_api(self,
                                    headers=None,
                                    **request_parameters):
+        """ This function is an alias of get_aaa_attribute_api_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_aaa_attribute_api_v1 .
+        """
         return self.get_aaa_attribute_api_v1(
-                                    headers=headers,
-                                   **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -1254,7 +1414,22 @@ class UserandRoles(object):
                                                       headers=None,
                                                       payload=None,
                                                       active_validation=True,
-                                                      **request_parameters):  
+                                                      **request_parameters):
+        """ This function is an alias of manage_external_authentication_setting_api_v1 .
+        Args:
+            enable(boolean): User and Roles's Enable/disable External Authentication. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of manage_external_authentication_setting_api_v1 .
+        """ 
         return self.manage_external_authentication_setting_api_v1(
                     enable=enable,
                     headers=headers,
@@ -1268,7 +1443,18 @@ class UserandRoles(object):
     def delete_role_api(self,
                            role_id,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of delete_role_api_v1 .
+        Args:
+            role_id(basestring): roleId path parameter. The Id of the role to be deleted .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_role_api_v1 .
+        """ 
         return self.delete_role_api_v1(
                     role_id=role_id,
                     headers=headers,
@@ -1284,7 +1470,24 @@ class UserandRoles(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of update_role_api_v1 .
+        Args:
+            description(string): User and Roles's Description of the role .
+            resourceTypes(list): User and Roles's resourceTypes (list of objects).
+            roleId(string): User and Roles's Id of the role .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_role_api_v1 .
+        """ 
         return self.update_role_api_v1(
                     description=description,
                     resourceTypes=resourceTypes,

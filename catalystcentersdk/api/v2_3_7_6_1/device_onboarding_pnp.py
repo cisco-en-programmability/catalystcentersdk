@@ -94,7 +94,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!authorize-device-v1
+            https://developer.cisco.com/docs/dna-center/#!authorize-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -169,7 +169,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-device-v1
+            https://developer.cisco.com/docs/dna-center/#!add-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -275,7 +275,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-list-site-management-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-list-site-management
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -408,7 +408,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!claim-device-v1
+            https://developer.cisco.com/docs/dna-center/#!claim-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -516,7 +516,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-count
         """
         check_type(headers, dict)
         check_type(serial_number, (str, list, set, tuple))
@@ -607,7 +607,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-history-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-history
         """
         check_type(headers, dict)
         check_type(serial_number, str,
@@ -675,7 +675,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!import-devices-in-bulk-v1
+            https://developer.cisco.com/docs/dna-center/#!import-devices-in-bulk
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -749,7 +749,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!reset-device-v1
+            https://developer.cisco.com/docs/dna-center/#!reset-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -824,7 +824,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-sync-result-for-virtual-account-v1
+            https://developer.cisco.com/docs/dna-center/#!get-sync-result-for-virtual-account
         """
         check_type(headers, dict)
         check_type(domain, str,
@@ -919,7 +919,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!claim-a-device-to-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!claim-a-device-to-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1023,7 +1023,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!preview-config-v1
+            https://developer.cisco.com/docs/dna-center/#!preview-config
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1103,7 +1103,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!un-claim-device-v1
+            https://developer.cisco.com/docs/dna-center/#!un-claim-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1204,7 +1204,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!sync-virtual-account-devices-v1
+            https://developer.cisco.com/docs/dna-center/#!sync-virtual-account-devices
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1306,7 +1306,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1380,7 +1380,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-device-by-id-from-pn-p-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-device-by-id-from-pnp
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1437,7 +1437,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1506,7 +1506,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-pn-p-global-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!update-pnp-global-settings
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1579,7 +1579,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-pn-p-global-settings-v1
+            https://developer.cisco.com/docs/dna-center/#!get-pnp-global-settings
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1632,7 +1632,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-smart-account-list-v1
+            https://developer.cisco.com/docs/dna-center/#!get-smart-account-list
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1687,7 +1687,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-virtual-account-list-v1
+            https://developer.cisco.com/docs/dna-center/#!get-virtual-account-list
         """
         check_type(headers, dict)
         check_type(domain, str,
@@ -1782,7 +1782,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-virtual-account-v1
+            https://developer.cisco.com/docs/dna-center/#!add-virtual-account
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1888,7 +1888,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-pn-p-server-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-pn-p-server-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1965,7 +1965,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deregister-virtual-account-v1
+            https://developer.cisco.com/docs/dna-center/#!deregister-virtual-account
         """
         check_type(headers, dict)
         check_type(domain, str,
@@ -2039,7 +2039,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-workflows-v1
+            https://developer.cisco.com/docs/dna-center/#!get-workflows
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -2154,7 +2154,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-a-workflow-v1
+            https://developer.cisco.com/docs/dna-center/#!add-a-workflow
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2256,7 +2256,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-workflow-count-v1
+            https://developer.cisco.com/docs/dna-center/#!get-workflow-count
         """
         check_type(headers, dict)
         check_type(name, (str, list, set, tuple))
@@ -2313,7 +2313,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-workflow-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!get-workflow-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2370,7 +2370,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-workflow-by-id-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-workflow-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2472,7 +2472,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-workflow-v1
+            https://developer.cisco.com/docs/dna-center/#!update-workflow
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2563,7 +2563,23 @@ class DeviceOnboardingPnp(object):
                    headers=None,
                    payload=None,
                    active_validation=True,
-                   **request_parameters):  
+                   **request_parameters):
+        """This function is an alias of add_device_v1. .
+
+        Args:
+            deviceInfo(object): Device Onboarding (PnP)'s deviceInfo.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_device_v1.
+        """  
         return self.add_device_v1(
                     deviceInfo=deviceInfo,
                     headers=headers,
@@ -2582,7 +2598,24 @@ class DeviceOnboardingPnp(object):
                          sort_order=None,
                          type=None,
                          headers=None,
-                         **request_parameters):  
+                         **request_parameters):
+        """This function is an alias of get_workflows_v1 .
+
+        Args:
+            limit(int): limit query parameter. Limits number of results .
+            offset(int): offset query parameter. Index of first result .
+            sort(str, list, set, tuple): sort query parameter. Comma seperated lost of fields to sort on .
+            sort_order(str): sortOrder query parameter. Sort Order Ascending (asc) or Descending (des) .
+            type(str, list, set, tuple): type query parameter. Workflow Type .
+            name(str, list, set, tuple): name query parameter. Workflow Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_workflows_v1.
+        """  
         return self.get_workflows_v1(
                     limit=limit,
                     name=name,
@@ -2599,7 +2632,19 @@ class DeviceOnboardingPnp(object):
     def get_workflow_by_id(self,
                               id,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """This function is an alias of get_workflow_by_id_v1 .
+
+        Args:
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_workflow_by_id_v1.
+        """  
         return self.get_workflow_by_id_v1(
                     id=id,
                     headers=headers,
@@ -2612,7 +2657,22 @@ class DeviceOnboardingPnp(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """This function is an alias of import_devices_in_bulk_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of import_devices_in_bulk_v1.
+        """  
         return self.import_devices_in_bulk_v1(
                     headers=headers,
                     payload=payload,
@@ -2639,7 +2699,40 @@ class DeviceOnboardingPnp(object):
                                headers=None,
                                payload=None,
                                active_validation=True,
-                               **request_parameters):  
+                               **request_parameters):
+        """This function is an alias of add_virtual_account_v1 .
+
+        Args:
+            autoSyncPeriod(integer): Device Onboarding (PnP)'s autoSyncPeriod.
+            ccoUser(string): Device Onboarding (PnP)'s ccoUser.
+            expiry(integer): Device Onboarding (PnP)'s expiry.
+            lastSync(integer): Device Onboarding (PnP)'s lastSync.
+            profile(object): Device Onboarding (PnP)'s profile.
+            smartAccountId(string): Device Onboarding (PnP)'s smartAccountId.
+            syncResult(object): Device Onboarding (PnP)'s syncResult.
+            syncResultStr(string): Device Onboarding (PnP)'s Represent internal state and SHOULD not be used or
+                relied upon. (Deprecated) .
+            syncStartTime(integer): Device Onboarding (PnP)'s syncStartTime.
+            syncStatus(string): Device Onboarding (PnP)'s Represent internal state and SHOULD not be used or relied
+                upon. (Deprecated) . Available values are 'NOT_SYNCED', 'SYNCING', 'SUCCESS' and
+                'FAILURE'.
+            tenantId(string): Device Onboarding (PnP)'s Represent internal state and SHOULD not be used or relied
+                upon. (Deprecated) .
+            token(string): Device Onboarding (PnP)'s Represent internal state and SHOULD not be used or relied upon.
+                (Deprecated) .
+            virtualAccountId(string): Device Onboarding (PnP)'s virtualAccountId.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_virtual_account_v1.
+        """  
         return self.add_virtual_account_v1(
                     autoSyncPeriod=autoSyncPeriod,
                     ccoUser=ccoUser,
@@ -2670,7 +2763,26 @@ class DeviceOnboardingPnp(object):
                                       headers=None,
                                       payload=None,
                                       active_validation=True,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """This function is an alias of update_pnp_global_settings_v1 .
+
+        Args:
+            acceptEula(string): Device Onboarding (PnP)'s Accept Eula.
+            defaultProfile(object): Device Onboarding (PnP)'s defaultProfile.
+            id(string): Device Onboarding (PnP)'s Id.
+            savaMappingList(list): Device Onboarding (PnP)'s savaMappingList (list of objects).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_pnp_global_settings_v1.
+        """  
         return self.update_pnp_global_settings_v1(
                     acceptEula=acceptEula,
                     defaultProfile=defaultProfile,
@@ -2687,7 +2799,19 @@ class DeviceOnboardingPnp(object):
     def get_virtual_account_list(self,
                                     domain,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """This function is an alias of get_virtual_account_list_v1 .
+
+        Args:
+            domain(str): domain path parameter. Smart Account Domain .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_virtual_account_list_v1. 
+        """  
         return self.get_virtual_account_list_v1(
                     domain=domain,
                     headers=headers,
@@ -2703,7 +2827,27 @@ class DeviceOnboardingPnp(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """This function is an alias of preview_config_v1 .
+
+        Args:
+            deviceId(string): Device Onboarding (PnP)'s deviceId.
+            siteId(string): Device Onboarding (PnP)'s siteId.
+            type(string): Device Onboarding (PnP)'s type. Available values are 'Default', 'AccessPoint',
+                'StackSwitch', 'Sensor' and 'MobilityExpress'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of preview_config_v1.
+        """
+
         return self.preview_config_v1(
                     deviceId=deviceId,
                     siteId=siteId,
@@ -2723,7 +2867,25 @@ class DeviceOnboardingPnp(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """This function is an alias of reset_device_v1 .
+
+        Args:
+            deviceResetList(list): Device Onboarding (PnP)'s deviceResetList (list of objects).
+            projectId(string): Device Onboarding (PnP)'s projectId.
+            workflowId(string): Device Onboarding (PnP)'s workflowId.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of reset_device_v1.
+        """  
         return self.reset_device_v1(
                     deviceResetList=deviceResetList,
                     projectId=projectId,
@@ -2739,6 +2901,17 @@ class DeviceOnboardingPnp(object):
     def get_smart_account_list(self,
                                   headers=None,
                                   **request_parameters):
+        """This function is an alias of get_smart_account_list_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_smart_account_list_v1.
+        """
         return self.get_smart_account_list_v1(
                                 headers=headers,
                                 **request_parameters
@@ -2754,7 +2927,26 @@ class DeviceOnboardingPnp(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """This function is an alias of update_pnp_server_profile_v1.
+
+        Args:
+            ccoUser(string): Device Onboarding (PnP)'s Cco User.
+            profile(object): Device Onboarding (PnP)'s profile.
+            smartAccountId(string): Device Onboarding (PnP)'s Smart Account Id.
+            virtualAccountId(string): Device Onboarding (PnP)'s Virtual Account Id.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_pnp_server_profile_v1. 
+        """  
         return self.update_pnp_server_profile_v1(
                     ccoUser=ccoUser,
                     profile=profile,
@@ -2774,7 +2966,25 @@ class DeviceOnboardingPnp(object):
                          headers=None,
                          payload=None,
                          active_validation=True,
-                         **request_parameters):  
+                         **request_parameters):
+        """This function is an alias of update_device_v1 .
+
+        Args:
+            deviceInfo(object): Device Onboarding (PnP)'s deviceInfo.
+            id(string): Device Onboarding (PnP)'s Id.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_device_v1.
+        """  
         return self.update_device_v1(
                     id=id,
                     deviceInfo=deviceInfo,
@@ -2791,7 +3001,23 @@ class DeviceOnboardingPnp(object):
                             headers=None,
                             payload=None,
                             active_validation=True,
-                            **request_parameters):  
+                            **request_parameters):
+        """This function is an alias of authorize_device_v1. .
+
+        Args:
+            deviceIdList(list): Device Onboarding (PnP)'s Device Id List (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of authorize_device_v1.
+        """  
         return self.authorize_device_v1(
                     deviceIdList=deviceIdList,
                     headers=headers,
@@ -2805,7 +3031,19 @@ class DeviceOnboardingPnp(object):
     def delete_workflow_by_id(self,
                                  id,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """This function is an alias of  delete_workflow_by_id_v1.
+
+        Args:
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_workflow_by_id_v1.
+        """  
         return self.delete_workflow_by_id_v1(
                     id=id,
                     headers=headers,
@@ -2819,7 +3057,21 @@ class DeviceOnboardingPnp(object):
                               sort=None,
                               sort_order=None,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """This function is an alias of get_device_history_v1 .
+
+        Args:
+            serial_number(str): serialNumber query parameter. Device Serial Number .
+            sort(str, list, set, tuple): sort query parameter. Comma seperated list of fields to sort on .
+            sort_order(str): sortOrder query parameter. Sort Order Ascending (asc) or Descending (des) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_history_v1.
+        """  
         return self.get_device_history_v1(
                     serial_number=serial_number,
                     sort=sort,
@@ -2853,7 +3105,42 @@ class DeviceOnboardingPnp(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """This function is an alias of add_a_workflow_v1 .
+
+        Args:
+            _id(string): Device Onboarding (PnP)'s _id.
+            addToInventory(boolean): Device Onboarding (PnP)'s addToInventory.
+            addedOn(integer): Device Onboarding (PnP)'s addedOn.
+            configId(string): Device Onboarding (PnP)'s configId.
+            currTaskIdx(integer): Device Onboarding (PnP)'s currTaskIdx.
+            description(string): Device Onboarding (PnP)'s description.
+            endTime(integer): Device Onboarding (PnP)'s endTime.
+            execTime(integer): Device Onboarding (PnP)'s execTime.
+            imageId(string): Device Onboarding (PnP)'s imageId.
+            instanceType(string): Device Onboarding (PnP)'s instanceType. Available values are 'SystemWorkflow',
+                'UserWorkflow' and 'SystemResetWorkflow'.
+            lastupdateOn(integer): Device Onboarding (PnP)'s lastupdateOn.
+            name(string): Device Onboarding (PnP)'s name.
+            startTime(integer): Device Onboarding (PnP)'s startTime.
+            state(string): Device Onboarding (PnP)'s state.
+            tasks(list): Device Onboarding (PnP)'s tasks (list of objects).
+            tenantId(string): Device Onboarding (PnP)'s tenantId.
+            type(string): Device Onboarding (PnP)'s type.
+            useState(string): Device Onboarding (PnP)'s useState.
+            version(integer): Device Onboarding (PnP)'s version.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of add_a_workflow_v1.
+        """  
         return self.add_a_workflow_v1(
                     _id=_id,
                     addToInventory=addToInventory,
@@ -2895,7 +3182,30 @@ class DeviceOnboardingPnp(object):
                          workflow_id=None,
                          workflow_name=None,
                          headers=None,
-                         **request_parameters):  
+                         **request_parameters):
+        """This function is an alias of get_device_count_v1 .
+
+        Args:
+            serial_number(str, list, set, tuple): serialNumber query parameter. Device Serial Number .
+            state(str, list, set, tuple): state query parameter. Device State .
+            onb_state(str, list, set, tuple): onbState query parameter. Device Onboarding State .
+            name(str, list, set, tuple): name query parameter. Device Name .
+            pid(str, list, set, tuple): pid query parameter. Device ProductId .
+            source(str, list, set, tuple): source query parameter. Device Source .
+            workflow_id(str, list, set, tuple): workflowId query parameter. Device Workflow Id .
+            workflow_name(str, list, set, tuple): workflowName query parameter. Device Workflow Name .
+            smart_account_id(str, list, set, tuple): smartAccountId query parameter. Device Smart Account .
+            virtual_account_id(str, list, set, tuple): virtualAccountId query parameter. Device Virtual
+                Account .
+            last_contact(bool): lastContact query parameter. Device Has Contacted lastContact > 0 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_count_v1.
+        """  
         return self.get_device_count_v1(
                     last_contact=last_contact,
                     name=name,
@@ -2928,7 +3238,33 @@ class DeviceOnboardingPnp(object):
                         headers=None,
                         payload=None,
                         active_validation=True,
-                        **request_parameters):  
+                        **request_parameters):
+        """This function is an alias of claim_device_v1.
+
+        Args:
+            authorizationNeeded(boolean): Device Onboarding (PnP)'s Flag to enable/disable PnP device authorization.
+                (true means enable) .
+            configFileUrl(string): Device Onboarding (PnP)'s configFileUrl.
+            configId(string): Device Onboarding (PnP)'s configId.
+            deviceClaimList(list): Device Onboarding (PnP)'s deviceClaimList (list of objects).
+            fileServiceId(string): Device Onboarding (PnP)'s fileServiceId.
+            imageId(string): Device Onboarding (PnP)'s imageId.
+            imageUrl(string): Device Onboarding (PnP)'s imageUrl.
+            populateInventory(boolean): Device Onboarding (PnP)'s populateInventory.
+            projectId(string): Device Onboarding (PnP)'s projectId.
+            workflowId(string): Device Onboarding (PnP)'s workflowId.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of claim_device_v1.
+        """  
         return self.claim_device_v1(
                     authorizationNeeded=authorizationNeeded,
                     configFileUrl=configFileUrl,
@@ -2972,7 +3308,43 @@ class DeviceOnboardingPnp(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """This function is an alias of update_workflow_v1 .
+
+        Args:
+            _id(string): Device Onboarding (PnP)'s _id.
+            addToInventory(boolean): Device Onboarding (PnP)'s addToInventory.
+            addedOn(integer): Device Onboarding (PnP)'s addedOn.
+            configId(string): Device Onboarding (PnP)'s configId.
+            currTaskIdx(integer): Device Onboarding (PnP)'s currTaskIdx.
+            description(string): Device Onboarding (PnP)'s description.
+            endTime(integer): Device Onboarding (PnP)'s endTime.
+            execTime(integer): Device Onboarding (PnP)'s execTime.
+            imageId(string): Device Onboarding (PnP)'s imageId.
+            instanceType(string): Device Onboarding (PnP)'s instanceType. Available values are 'SystemWorkflow',
+                'UserWorkflow' and 'SystemResetWorkflow'.
+            lastupdateOn(integer): Device Onboarding (PnP)'s lastupdateOn.
+            name(string): Device Onboarding (PnP)'s name.
+            startTime(integer): Device Onboarding (PnP)'s startTime.
+            state(string): Device Onboarding (PnP)'s state.
+            tasks(list): Device Onboarding (PnP)'s tasks (list of objects).
+            tenantId(string): Device Onboarding (PnP)'s tenantId.
+            type(string): Device Onboarding (PnP)'s type.
+            useState(string): Device Onboarding (PnP)'s useState.
+            version(integer): Device Onboarding (PnP)'s version.
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_workflow_v1.
+        """  
         return self.update_workflow_v1(
                     id=id,
                     _id=_id,
@@ -3019,7 +3391,36 @@ class DeviceOnboardingPnp(object):
                                         headers=None,
                                         payload=None,
                                         active_validation=True,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """This function is an alias of sync_virtual_account_devices_v1. .
+
+        Args:
+            autoSyncPeriod(integer): Device Onboarding (PnP)'s autoSyncPeriod.
+            ccoUser(string): Device Onboarding (PnP)'s ccoUser.
+            expiry(integer): Device Onboarding (PnP)'s expiry.
+            lastSync(integer): Device Onboarding (PnP)'s lastSync.
+            profile(object): Device Onboarding (PnP)'s profile.
+            smartAccountId(string): Device Onboarding (PnP)'s smartAccountId.
+            syncResult(object): Device Onboarding (PnP)'s syncResult.
+            syncResultStr(string): Device Onboarding (PnP)'s syncResultStr.
+            syncStartTime(integer): Device Onboarding (PnP)'s syncStartTime.
+            syncStatus(string): Device Onboarding (PnP)'s syncStatus. Available values are 'NOT_SYNCED', 'SYNCING',
+                'SUCCESS' and 'FAILURE'.
+            tenantId(string): Device Onboarding (PnP)'s tenantId.
+            token(string): Device Onboarding (PnP)'s token.
+            virtualAccountId(string): Device Onboarding (PnP)'s virtualAccountId.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of sync_virtual_account_devices_v1.
+        """  
         return self.sync_virtual_account_devices_v1(
                     autoSyncPeriod=autoSyncPeriod,
                     ccoUser=ccoUser,
@@ -3047,7 +3448,23 @@ class DeviceOnboardingPnp(object):
                            headers=None,
                            payload=None,
                            active_validation=True,
-                           **request_parameters):  
+                           **request_parameters):
+        """This function is an alias of un_claim_device_v1. .
+
+        Args:
+            deviceIdList(list): Device Onboarding (PnP)'s deviceIdList (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of un_claim_device_v1.
+        """  
         return self.un_claim_device_v1(
                     deviceIdList=deviceIdList,
                     headers=headers,
@@ -3061,7 +3478,19 @@ class DeviceOnboardingPnp(object):
     def delete_device_by_id_from_pnp(self,
                                         id,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """This function is an alias of delete_device_by_id_from_pnp_v1 .
+
+        Args:
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_device_by_id_from_pnp_v1.
+        """  
         return self.delete_device_by_id_from_pnp_v1(
                     id=id,
                     headers=headers,
@@ -3074,7 +3503,20 @@ class DeviceOnboardingPnp(object):
                                                domain,
                                                name,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """This function is an alias of get_sync_result_for_virtual_account_v1 .
+
+        Args:
+            domain(str): domain path parameter. Smart Account Domain .
+            name(str): name path parameter. Virtual Account Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_sync_result_for_virtual_account_v1.
+        """
         return self.get_sync_result_for_virtual_account_v1(
                     domain=domain,
                     name=name,
@@ -3088,7 +3530,20 @@ class DeviceOnboardingPnp(object):
                                       domain,
                                       name,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """This function is an alias of deregister_virtual_account_v1.
+
+        Args:
+            domain(str): domain query parameter. Smart Account Domain .
+            name(str): name query parameter. Virtual Account Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of deregister_virtual_account_v1.
+        """  
         return self.deregister_virtual_account_v1(
                     domain=domain,
                     name=name,
@@ -3118,7 +3573,37 @@ class DeviceOnboardingPnp(object):
                         workflow_id=None,
                         workflow_name=None,
                         headers=None,
-                        **request_parameters):  
+                        **request_parameters):
+        """This function is an alias of get_device_list_v1. .
+
+        Args:
+            limit(int): limit query parameter. Limits number of results .
+            offset(int): offset query parameter. Index of first result .
+            sort(str, list, set, tuple): sort query parameter. Comma seperated list of fields to sort on .
+            sort_order(str): sortOrder query parameter. Sort Order Ascending (asc) or Descending (des) .
+            serial_number(str, list, set, tuple): serialNumber query parameter. Device Serial Number .
+            state(str, list, set, tuple): state query parameter. Device State .
+            onb_state(str, list, set, tuple): onbState query parameter. Device Onboarding State .
+            name(str, list, set, tuple): name query parameter. Device Name .
+            pid(str, list, set, tuple): pid query parameter. Device ProductId .
+            source(str, list, set, tuple): source query parameter. Device Source .
+            workflow_id(str, list, set, tuple): workflowId query parameter. Device Workflow Id .
+            workflow_name(str, list, set, tuple): workflowName query parameter. Device Workflow Name .
+            smart_account_id(str, list, set, tuple): smartAccountId query parameter. Device Smart Account .
+            virtual_account_id(str, list, set, tuple): virtualAccountId query parameter. Device Virtual
+                Account .
+            last_contact(bool): lastContact query parameter. Device Has Contacted lastContact > 0 .
+            mac_address(str): macAddress query parameter. Device Mac Address .
+            hostname(str): hostname query parameter. Device Hostname .
+            site_name(str): siteName query parameter. Device Site Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_list_v1.
+        """  
         return self.get_device_list_v1(
                     hostname=hostname,
                     last_contact=last_contact,
@@ -3147,6 +3632,17 @@ class DeviceOnboardingPnp(object):
     def get_pnp_global_settings(self,
                                    headers=None,
                                    **request_parameters):
+        """This function is an alias of get_pnp_global_settings_v1 .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_pnp_global_settings_v1.
+        """
         return self.get_pnp_global_settings_v1(
                                 headers=headers,
                                 **request_parameters
@@ -3157,7 +3653,19 @@ class DeviceOnboardingPnp(object):
     def get_device_by_id(self,
                             id,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """This function is an alias of get_device_by_id_v1.
+
+        Args:
+            id(str): id path parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_by_id_v1.
+        """  
         return self.get_device_by_id_v1(
                     id=id,
                     headers=headers,
@@ -3183,7 +3691,36 @@ class DeviceOnboardingPnp(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """This function is an alias of claim_a_device_to_a_site_v1. .
+
+        Args:
+            configInfo(object): Device Onboarding (PnP)'s configInfo.
+            deviceId(string): Device Onboarding (PnP)'s Device Id.
+            gateway(string): Device Onboarding (PnP)'s for CatalystWLC/MobilityExpress .
+            hostname(string): Device Onboarding (PnP)'s hostname to configure on Device. .
+            imageInfo(object): Device Onboarding (PnP)'s imageInfo.
+            ipInterfaceName(string): Device Onboarding (PnP)'s for Catalyst 9800 WLC .
+            rfProfile(string): Device Onboarding (PnP)'s for Access Points .
+            sensorProfile(string): Device Onboarding (PnP)'s for Sensors .
+            siteId(string): Device Onboarding (PnP)'s Site Id.
+            staticIP(string): Device Onboarding (PnP)'s for CatalystWLC/MobilityExpress .
+            subnetMask(string): Device Onboarding (PnP)'s for CatalystWLC/MobilityExpress .
+            type(string): Device Onboarding (PnP)'s Type. Available values are 'Default', 'StackSwitch',
+                'AccessPoint', 'Sensor', 'CatalystWLC' and 'MobilityExpress'.
+            vlanId(string): Device Onboarding (PnP)'s for Catalyst 9800 WLC .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of claim_a_device_to_a_site_v1.
+        """  
         return self.claim_a_device_to_a_site_v1(
                     configInfo=configInfo,
                     deviceId=deviceId,
@@ -3209,7 +3746,19 @@ class DeviceOnboardingPnp(object):
     def get_workflow_count(self,
                               name=None,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """This function is an alias of get_workflow_count_v1 .
+
+        Args:
+            name(str, list, set, tuple): name query parameter. Workflow Name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_workflow_count_v1.
+        """  
         return self.get_workflow_count_v1(
                     name=name,
                     headers=headers,

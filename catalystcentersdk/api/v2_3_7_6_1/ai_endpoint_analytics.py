@@ -85,7 +85,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-a-n-c-policies-v1
+            https://developer.cisco.com/docs/dna-center/#!get-anc-policies
         """
         check_type(headers, dict)
         if headers is not None:
@@ -143,7 +143,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!process-c-m-d-b-endpoints-v1
+            https://developer.cisco.com/docs/dna-center/#!process-cmdb-endpoints
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -209,7 +209,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-a-i-endpoint-analytics-attribute-dictionaries-v1
+            https://developer.cisco.com/docs/dna-center/#!get-a-i-endpoint-analytics-attribute-dictionaries
         """
         check_type(headers, dict)
         check_type(include_attributes, bool)
@@ -278,7 +278,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!register-an-endpoint-v1
+            https://developer.cisco.com/docs/dna-center/#!register-an-endpoint
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -432,7 +432,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!query-the-endpoints-v1
+            https://developer.cisco.com/docs/dna-center/#!query-the-endpoints
         """
         check_type(headers, dict)
         check_type(profiling_status, str)
@@ -621,7 +621,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!fetch-the-count-of-endpoints-v1
+            https://developer.cisco.com/docs/dna-center/#!fetch-the-count-of-endpoints
         """
         check_type(headers, dict)
         check_type(profiling_status, str)
@@ -750,7 +750,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-a-registered-endpoint-v1
+            https://developer.cisco.com/docs/dna-center/#!update-a-registered-endpoint
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -834,7 +834,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-endpoint-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-endpoint-details
         """
         check_type(headers, dict)
         check_type(include, str)
@@ -894,7 +894,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-an-endpoint-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-an-endpoint
         """
         check_type(headers, dict)
         check_type(ep_id, str,
@@ -961,7 +961,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!apply-a-n-c-policy-v1
+            https://developer.cisco.com/docs/dna-center/#!apply-a-n-c-policy
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1036,7 +1036,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!revoke-a-n-c-policy-v1
+            https://developer.cisco.com/docs/dna-center/#!revoke-anc-policy
         """
         check_type(headers, dict)
         check_type(ep_id, str,
@@ -1137,7 +1137,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-a-profiling-rule-v1
+            https://developer.cisco.com/docs/dna-center/#!create-a-profiling-rule
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1256,7 +1256,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-list-of-profiling-rules-v1
+            https://developer.cisco.com/docs/dna-center/#!get-list-of-profiling-rules
         """
         check_type(headers, dict)
         check_type(rule_type, str)
@@ -1338,7 +1338,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!import-profiling-rules-in-bulk-v1
+            https://developer.cisco.com/docs/dna-center/#!import-profiling-rules-in-bulk
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1414,7 +1414,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-count-of-profiling-rules-v1
+            https://developer.cisco.com/docs/dna-center/#!get-count-of-profiling-rules
         """
         check_type(headers, dict)
         check_type(rule_type, str)
@@ -1520,7 +1520,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-an-existing-profiling-rule-v1
+            https://developer.cisco.com/docs/dna-center/#!update-an-existing-profiling-rule
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1621,7 +1621,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-details-of-a-single-profiling-rule-v1
+            https://developer.cisco.com/docs/dna-center/#!get-details-of-a-single-profiling-rule
         """
         check_type(headers, dict)
         check_type(rule_id, str,
@@ -1679,7 +1679,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-an-existing-profiling-rule-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-an-existing-profiling-rule
         """
         check_type(headers, dict)
         check_type(rule_id, str,
@@ -1738,7 +1738,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-task-details
         """
         check_type(headers, dict)
         check_type(task_id, str,
@@ -1796,7 +1796,47 @@ class AIEndpointAnalytics(object):
                                              headers=None,
                                              payload=None,
                                              active_validation=True,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """This function is an alias of update_an_existing_profiling_rule_v1. .
+
+        Args:
+            clusterId(string): AI Endpoint Analytics's Unique identifier for ML cluster. Only applicable for 'ML
+                Rule'. .
+            conditionGroups(object): AI Endpoint Analytics's conditionGroups.
+            isDeleted(boolean): AI Endpoint Analytics's Flag to indicate whether the rule was deleted. .
+            lastModifiedBy(string): AI Endpoint Analytics's User that last modified the rule. It is read-only, and
+                is ignored if provided as part of input request. .
+            lastModifiedOn(integer): AI Endpoint Analytics's Timestamp (in epoch milliseconds) of last modification.
+                It is read-only, and is ignored if provided as part of input request. .
+            pluginId(string): AI Endpoint Analytics's Plugin for the rule. Only applicable for 'Cisco Default'
+                rules. .
+            rejected(boolean): AI Endpoint Analytics's Flag to indicate whether rule has been rejected by user or
+                not. Only applicable for 'ML Rule'. .
+            result(object): AI Endpoint Analytics's result.
+            ruleId(string): AI Endpoint Analytics's Unique identifier for the rule. This is normally generated by
+                the system, and client does not need to provide it for rules that need to be newly
+                created. .
+            ruleName(string): AI Endpoint Analytics's Human readable name for the rule. .
+            rulePriority(integer): AI Endpoint Analytics's Priority for the rule. .
+            ruleType(string): AI Endpoint Analytics's Type of the rule. . Available values are 'Cisco Default -
+                Static', 'Cisco Default - Dynamic', 'Custom Rule' and 'ML Rule'.
+            ruleVersion(integer): AI Endpoint Analytics's Version of the rule. .
+            sourcePriority(integer): AI Endpoint Analytics's Source priority for the rule. .
+            usedAttributes(list): AI Endpoint Analytics's List of attributes used in the rule. Only applicable for
+                'Cisco Default' rules.  (list of strings).
+            rule_id(str): ruleId path parameter. Unique rule identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the function update_an_existing_profiling_rule_v1.
+        """  
         return self.update_an_existing_profiling_rule_v1(
                     rule_id=rule_id,
                     clusterId=clusterId,
@@ -1830,7 +1870,26 @@ class AIEndpointAnalytics(object):
                                         headers=None,
                                         payload=None,
                                         active_validation=True,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """This function is an alias of update_a_registered_endpoint_v1. .
+
+        Args:
+            deviceType(string): AI Endpoint Analytics's Type of the device represented by this endpoint. .
+            hardwareManufacturer(string): AI Endpoint Analytics's Hardware manufacturer for the endpoint. .
+            hardwareModel(string): AI Endpoint Analytics's Hardware model of the endpoint. .
+            ep_id(str): epId path parameter. Unique identifier for the endpoint. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the function update_a_registered_endpoint_v1.
+        """  
         return self.update_a_registered_endpoint_v1(
                     ep_id=ep_id,
                     deviceType=deviceType,
@@ -1852,7 +1911,26 @@ class AIEndpointAnalytics(object):
                                 headers=None,
                                 payload=None,
                                 active_validation=True,
-                                **request_parameters):  
+                                **request_parameters):
+        """This function is an alias of register_an_endpoint_v1. .
+
+        Args:
+            deviceType(string): AI Endpoint Analytics's Type of the device represented by this endpoint. .
+            hardwareManufacturer(string): AI Endpoint Analytics's Hardware manufacturer for the endpoint. .
+            hardwareModel(string): AI Endpoint Analytics's Hardware model of the endpoint. .
+            macAddress(string): AI Endpoint Analytics's MAC address of the endpoint. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the function register_an_endpoint_v1.
+        """  
         return self.register_an_endpoint_v1(
                     deviceType=deviceType,
                     hardwareManufacturer=hardwareManufacturer,
@@ -1874,6 +1952,24 @@ class AIEndpointAnalytics(object):
                             payload=None,
                             active_validation=True,
                             **request_parameters):  
+        """This function is an alias of apply_anc_policy_v1. .
+
+        Args:
+            ancPolicy(string): AI Endpoint Analytics's ANC policy name. .
+            granularAncPolicy(list): AI Endpoint Analytics's granularAncPolicy (list of objects).
+            ep_id(str): epId path parameter. Unique identifier for the endpoint. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the apply_anc_policy_v1.
+        """
         return self.apply_anc_policy_v1(
                     ep_id=ep_id,
                     ancPolicy=ancPolicy,
@@ -1890,7 +1986,22 @@ class AIEndpointAnalytics(object):
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """This function is an alias of process_cmdb_endpoints_v1. .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(list): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the process_cmdb_endpoints_v1.
+        """
         return self.process_cmdb_endpoints_v1(
                     headers=headers,
                     payload=payload,
@@ -1903,7 +2014,19 @@ class AIEndpointAnalytics(object):
     def get_details_of_a_single_profiling_rule(self,
                                                   rule_id,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters): 
+        """This function is an alias of get_details_of_a_single_profiling_rule_v1. .
+
+        Args:
+            rule_id(str): ruleId path parameter. Unique rule identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of the get_details_of_a_single_profiling_rule_v1.
+        """ 
         return self.get_details_of_a_single_profiling_rule_v1(
                     rule_id=rule_id,
                     headers=headers,
@@ -1915,6 +2038,17 @@ class AIEndpointAnalytics(object):
     def get_anc_policies(self,
                             headers=None,
                             **request_parameters):
+        """This function is an alias of get_anc_policies_v1. .
+
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_anc_policies_v1.
+        """
         return self.get_anc_policies_v1(
                         headers=headers,
                         **request_parameters
@@ -1941,7 +2075,46 @@ class AIEndpointAnalytics(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """This function is an alias of create_a_profiling_rule_v1. .
+
+        Args:
+            clusterId(string): AI Endpoint Analytics's Unique identifier for ML cluster. Only applicable for 'ML
+                Rule'. .
+            conditionGroups(object): AI Endpoint Analytics's conditionGroups.
+            isDeleted(boolean): AI Endpoint Analytics's Flag to indicate whether the rule was deleted. .
+            lastModifiedBy(string): AI Endpoint Analytics's User that last modified the rule. It is read-only, and
+                is ignored if provided as part of input request. .
+            lastModifiedOn(integer): AI Endpoint Analytics's Timestamp (in epoch milliseconds) of last modification.
+                It is read-only, and is ignored if provided as part of input request. .
+            pluginId(string): AI Endpoint Analytics's Plugin for the rule. Only applicable for 'Cisco Default'
+                rules. .
+            rejected(boolean): AI Endpoint Analytics's Flag to indicate whether rule has been rejected by user or
+                not. Only applicable for 'ML Rule'. .
+            result(object): AI Endpoint Analytics's result.
+            ruleId(string): AI Endpoint Analytics's Unique identifier for the rule. This is normally generated by
+                the system, and client does not need to provide it for rules that need to be newly
+                created. .
+            ruleName(string): AI Endpoint Analytics's Human readable name for the rule. .
+            rulePriority(integer): AI Endpoint Analytics's Priority for the rule. .
+            ruleType(string): AI Endpoint Analytics's Type of the rule. . Available values are 'Cisco Default -
+                Static', 'Cisco Default - Dynamic', 'Custom Rule' and 'ML Rule'.
+            ruleVersion(integer): AI Endpoint Analytics's Version of the rule. .
+            sourcePriority(integer): AI Endpoint Analytics's Source priority for the rule. .
+            usedAttributes(list): AI Endpoint Analytics's List of attributes used in the rule. Only applicable for
+                'Cisco Default' rules.  (list of strings).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_a_profiling_rule_v1.
+        """  
         return self.create_a_profiling_rule_v1(
                     clusterId=clusterId,
                     conditionGroups=conditionGroups,
@@ -1994,7 +2167,72 @@ class AIEndpointAnalytics(object):
                                unauth_port_detected=None,
                                weak_cred_detected=None,
                                headers=None,
-                               **request_parameters):  
+                               **request_parameters):
+        """This function is an alias of query_the_endpoints_v1. .
+
+        Args:
+            profiling_status(str): profilingStatus query parameter. Profiling status of the endpoint.
+                Possible values are 'profiled', 'partialProfiled', 'notProfiled'. .
+            mac_address(str): macAddress query parameter. MAC address to search for. Partial string is
+                allowed. .
+            mac_addresses(str, list, set, tuple): macAddresses query parameter. List of MAC addresses to
+                filter on. Only exact matches will be returned. .
+            ip(str): ip query parameter. IP address to search for. Partial string is allowed. .
+            device_type(str): deviceType query parameter. Type of device to search for. Partial string is
+                allowed. .
+            hardware_manufacturer(str): hardwareManufacturer query parameter. Hardware manufacturer to search
+                for. Partial string is allowed. .
+            hardware_model(str): hardwareModel query parameter. Hardware model to search for. Partial string
+                is allowed. .
+            operating_system(str): operatingSystem query parameter. Operating system to search for. Partial
+                string is allowed. .
+            registered(bool): registered query parameter. Flag to fetch manually registered or non-registered
+                endpoints. .
+            random_mac(bool): randomMac query parameter. Flag to fetch endpoints having randomized MAC or not. .
+            trust_score(str): trustScore query parameter. Overall trust score of the endpoint. It can be
+                provided either as a number value (e.g. 5), or as a range (e.g. 3-7). Provide value as
+                '-' if you want to search for all endpoints where trust score is not assigned. .
+            auth_method(str): authMethod query parameter. Authentication method. Partial string is allowed. .
+            posture_status(str): postureStatus query parameter. Posture status. .
+            ai_spoofing_trust_level(str): aiSpoofingTrustLevel query parameter. Trust level of the endpoint
+                due to AI spoofing. Possible values are 'low', 'medium', 'high'. .
+            changed_profile_trust_level(str): changedProfileTrustLevel query parameter. Trust level of the
+                endpoint due to changing profile labels. Possible values are 'low', 'medium', 'high'. .
+            nat_trust_level(str): natTrustLevel query parameter. Trust level of the endpoint due to NAT
+                access. Possible values are 'low', 'medium', 'high'. .
+            concurrent_mac_trust_level(str): concurrentMacTrustLevel query parameter. Trust level of the
+                endpoint due to concurrent MAC address. Possible values are 'low', 'medium', 'high'. .
+            ip_blocklist_detected(bool): ipBlocklistDetected query parameter. Flag to fetch endpoints hitting IP
+                blocklist or not. .
+            unauth_port_detected(bool): unauthPortDetected query parameter. Flag to fetch endpoints exposing
+                unauthorized ports or not. .
+            weak_cred_detected(bool): weakCredDetected query parameter. Flag to fetch endpoints having weak
+                credentials or not. .
+            anc_policy(str): ancPolicy query parameter. ANC policy. Only exact match will be returned. .
+            limit(int): limit query parameter. Maximum number of records to be fetched. If not provided, 50 records
+                will be fetched by default. Maximum 1000 records can be fetched at a time. Use
+                pagination if more records need to be fetched. .
+            offset(int): offset query parameter. Record offset to start data fetch at. Offset starts at zero. .
+            sort_by(str): sortBy query parameter. Name of the column to sort the results on. Please note that
+                fetch might take more time if sorting is requested. Possible values are 'macAddress',
+                'ip'. .
+            order(str): order query parameter. Order to be used for sorting. Possible values are 'asc',
+                'desc'. .
+            include(str): include query parameter. The datasets that should be included in the response. By
+                default, value of this parameter is blank, and the response will include only basic
+                details of the endpoint. To include other datasets or dictionaries, send comma separated
+                list of following values: 'ALL' Include all attributes. 'CDP', 'DHCP', etc. Include
+                attributes from given dictionaries. To get full list of dictionaries, use corresponding
+                GET API. 'ANC' Include ANC policy related details. 'TRUST' Include trust score details.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of query_the_endpoints_v1.
+        """  
         return self.query_the_endpoints_v1(
                     ai_spoofing_trust_level=ai_spoofing_trust_level,
                     anc_policy=anc_policy,
@@ -2031,7 +2269,19 @@ class AIEndpointAnalytics(object):
     def revoke_anc_policy(self,
                              ep_id,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """This function is an alias of revoke_anc_policy_v1. .
+
+        Args:
+            ep_id(str): epId path parameter. Unique identifier for the endpoint. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of revoke_anc_policy_v1.
+        """  
         return self.revoke_anc_policy_v1(
                     ep_id=ep_id,
                     headers=headers,
@@ -2048,7 +2298,29 @@ class AIEndpointAnalytics(object):
                                        rule_type=None,
                                        sort_by=None,
                                        headers=None,
-                                       **request_parameters):  
+                                       **request_parameters):
+        """This function is an alias of get_list_of_profiling_rules_v1. .
+
+        Args:
+            rule_type(str): ruleType query parameter. Use comma-separated list of rule types to filter the
+                data. Defaults to 'Custom Rule'. .
+            include_deleted(bool): includeDeleted query parameter. Flag to indicate whether deleted rules should be
+                part of the records fetched. .
+            limit(int): limit query parameter. Maximum number of records to be fetched. If not provided, 500 records
+                will be fetched by default. To fetch all the records in the system, provide a large
+                value for this parameter. .
+            offset(int): offset query parameter. Record offset to start data fetch at. Offset starts at zero. .
+            sort_by(str): sortBy query parameter. Name of the column to sort the results on. Please note that
+                fetch might take more time if sorting is requested. .
+            order(str): order query parameter. Order to be used for sorting. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_list_of_profiling_rules_v1.
+        """  
         return self.get_list_of_profiling_rules_v1(
                     include_deleted=include_deleted,
                     limit=limit,
@@ -2065,7 +2337,19 @@ class AIEndpointAnalytics(object):
     def get_task_details(self,
                             task_id,
                             headers=None,
-                            **request_parameters):  
+                            **request_parameters):
+        """This function is an alias of get_task_details_v1. .
+
+        Args:
+            task_id(str): taskId path parameter. Unique identifier for the task. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_task_details_v1.
+        """ 
         return self.get_task_details_v1(
                     task_id=task_id,
                     headers=headers,
@@ -2077,7 +2361,20 @@ class AIEndpointAnalytics(object):
     def get_ai_endpoint_analytics_attribute_dictionaries(self,
                                                              include_attributes=None,
                                                              headers=None,
-                                                             **request_parameters):  
+                                                             **request_parameters):
+        """This function is an alias of get_ai_endpoint_analytics_attribute_dictionaries_v1. .
+
+        Args:
+            include_attributes(bool): includeAttributes query parameter. Flag to indicate whether attribute list for
+                each dictionary should be included in response. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_ai_endpoint_analytics_attribute_dictionaries_v1.
+        """  
         return self.get_ai_endpoint_analytics_attribute_dictionaries_v1(
                     include_attributes=include_attributes,
                     headers=headers,
@@ -2109,7 +2406,56 @@ class AIEndpointAnalytics(object):
                                         unauth_port_detected=None,
                                         weak_cred_detected=None,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """This function is an alias of fetch_the_count_of_endpoints_v1. .
+
+        Args:
+            profiling_status(str): profilingStatus query parameter. Profiling status of the endpoint.
+                Possible values are 'profiled', 'partialProfiled', 'notProfiled'. .
+            mac_address(str): macAddress query parameter. MAC address to search for. Partial string is
+                allowed. .
+            mac_addresses(str, list, set, tuple): macAddresses query parameter. List of MAC addresses to
+                filter on. Only exact matches will be returned. .
+            ip(str): ip query parameter. IP address to search for. Partial string is allowed. .
+            device_type(str): deviceType query parameter. Type of device to search for. Partial string is
+                allowed. .
+            hardware_manufacturer(str): hardwareManufacturer query parameter. Hardware manufacturer to search
+                for. Partial string is allowed. .
+            hardware_model(str): hardwareModel query parameter. Hardware model to search for. Partial string
+                is allowed. .
+            operating_system(str): operatingSystem query parameter. Operating system to search for. Partial
+                string is allowed. .
+            registered(bool): registered query parameter. Flag to fetch manually registered or non-registered
+                endpoints. .
+            random_mac(bool): randomMac query parameter. Flag to fetch endpoints having randomized MAC or not. .
+            trust_score(str): trustScore query parameter. Overall trust score of the endpoint. It can be
+                provided either as a number value (e.g. 5), or as a range (e.g. 3-7). Provide value as
+                '-' if you want to search for all endpoints where trust score is not assigned. .
+            auth_method(str): authMethod query parameter. Authentication method. Partial string is allowed. .
+            posture_status(str): postureStatus query parameter. Posture status. .
+            ai_spoofing_trust_level(str): aiSpoofingTrustLevel query parameter. Trust level of the endpoint
+                due to AI spoofing. Possible values are 'low', 'medium', 'high'. .
+            changed_profile_trust_level(str): changedProfileTrustLevel query parameter. Trust level of the
+                endpoint due to changing profile labels. Possible values are 'low', 'medium', 'high'. .
+            nat_trust_level(str): natTrustLevel query parameter. Trust level of the endpoint due to NAT
+                access. Possible values are 'low', 'medium', 'high'. .
+            concurrent_mac_trust_level(str): concurrentMacTrustLevel query parameter. Trust level of the
+                endpoint due to concurrent MAC address. Possible values are 'low', 'medium', 'high'. .
+            ip_blocklist_detected(bool): ipBlocklistDetected query parameter. Flag to fetch endpoints hitting IP
+                blocklist or not. .
+            unauth_port_detected(bool): unauthPortDetected query parameter. Flag to fetch endpoints exposing
+                unauthorized ports or not. .
+            weak_cred_detected(bool): weakCredDetected query parameter. Flag to fetch endpoints having weak
+                credentials or not. .
+            anc_policy(str): ancPolicy query parameter. ANC policy. Only exact match will be returned. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of fetch_the_count_of_endpoints_v1.
+        """  
         return self.fetch_the_count_of_endpoints_v1(
                     ai_spoofing_trust_level=ai_spoofing_trust_level,
                     anc_policy=anc_policy,
@@ -2143,7 +2489,23 @@ class AIEndpointAnalytics(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """This function is an alias of import_profiling_rules_in_bulk_v1. .
+
+        Args:
+            profilingRules(list): AI Endpoint Analytics's profilingRules (list of objects).
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of import_profiling_rules_in_bulk_v1.
+        """  
         return self.import_profiling_rules_in_bulk_v1(
                     profilingRules=profilingRules,
                     headers=headers,
@@ -2157,7 +2519,19 @@ class AIEndpointAnalytics(object):
     def delete_an_existing_profiling_rule(self,
                                              rule_id,
                                              headers=None,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """This function is an alias of delete_an_existing_profiling_rule_v1. .
+
+        Args:
+            rule_id(str): ruleId path parameter. Unique rule identifier .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_an_existing_profiling_rule_v1.
+        """  
         return self.delete_an_existing_profiling_rule_v1(
                     rule_id=rule_id,
                     headers=headers,
@@ -2170,7 +2544,26 @@ class AIEndpointAnalytics(object):
                                 ep_id,
                                 include=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """This function is an alias of get_endpoint_details_v1. .
+
+        Args:
+            ep_id(str): epId path parameter. Unique identifier for the endpoint. .
+            include(str): include query parameter. The datasets that should be included in the response. By
+                default, value of this parameter is blank, and the response will include only basic
+                details of the endpoint. To include other datasets or dictionaries, send comma separated
+                list of following values: 'ALL' Include all attributes. 'CDP', 'DHCP', etc. Include
+                attributes from given dictionaries. To get full list of dictionaries, use corresponding
+                GET API. 'ANC' Include ANC policy related details. 'TRUST' Include trust score details.
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_endpoint_details_v1 .
+        """  
         return self.get_endpoint_details_v1(
                     ep_id=ep_id,
                     include=include,
@@ -2184,7 +2577,22 @@ class AIEndpointAnalytics(object):
                                         include_deleted=None,
                                         rule_type=None,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """This function is an alias of get_count_of_profiling_rules_v1. .
+
+        Args:
+            rule_type(str): ruleType query parameter. Use comma-separated list of rule types to filter the
+                data. Defaults to 'Custom Rule'. .
+            include_deleted(bool): includeDeleted query parameter. Flag to indicate whether deleted rules should be
+                part of the records fetched. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_count_of_profiling_rules_v1.
+        """  
         return self.get_count_of_profiling_rules_v1(
                     include_deleted=include_deleted,
                     rule_type=rule_type,
@@ -2197,7 +2605,19 @@ class AIEndpointAnalytics(object):
     def delete_an_endpoint(self,
                               ep_id,
                               headers=None,
-                              **request_parameters):  
+                              **request_parameters):
+        """This function is an alias of delete_an_endpoint_v1. .
+
+        Args:
+            ep_id(str): epId path parameter. Unique identifier for the endpoint. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_an_endpoint_v1.
+        """  
         return self.delete_an_endpoint_v1(
                     ep_id=ep_id,
                     headers=headers,

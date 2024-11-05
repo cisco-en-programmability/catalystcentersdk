@@ -140,7 +140,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-audit-log-parent-records-v1
+            https://developer.cisco.com/docs/dna-center/#!get-audit-log-parent-records
         """
         check_type(headers, dict)
         check_type(instance_id, str)
@@ -305,7 +305,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-audit-log-summary-v1
+            https://developer.cisco.com/docs/dna-center/#!get-audit-log-summary
         """
         check_type(headers, dict)
         check_type(parent_instance_id, str)
@@ -471,7 +471,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-audit-log-records-v1
+            https://developer.cisco.com/docs/dna-center/#!get-audit-log-records
         """
         check_type(headers, dict)
         check_type(parent_instance_id, str)
@@ -602,7 +602,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-n-m-p-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!get-s-n-m-p-destination
         """
         check_type(headers, dict)
         check_type(config_id, str)
@@ -671,7 +671,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-status-a-p-i-for-events-v1
+            https://developer.cisco.com/docs/dna-center/#!get-status-a-p-i-for-events
         """
         check_type(headers, dict)
         check_type(execution_id, str,
@@ -744,7 +744,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-email-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!update-email-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -822,7 +822,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-email-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!get-email-destination
         """
         check_type(headers, dict)
         if headers is not None:
@@ -892,7 +892,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-email-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!create-email-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -999,7 +999,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-notifications-v1
+            https://developer.cisco.com/docs/dna-center/#!get-notifications
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -1117,7 +1117,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-of-notifications-v1
+            https://developer.cisco.com/docs/dna-center/#!count-of-notifications
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -1228,7 +1228,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-n-m-p-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!create-s-n-m-p-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1351,7 +1351,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-n-m-p-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!update-s-n-m-p-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1453,7 +1453,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!get-event-subscriptions
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -1522,7 +1522,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-event-subscriptions
         """
         check_type(headers, dict)
         check_type(subscriptions, str,
@@ -1584,7 +1584,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!update-event-subscriptions
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1649,7 +1649,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!create-event-subscriptions
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1723,7 +1723,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-email-subscription-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-email-subscription-details
         """
         check_type(headers, dict)
         check_type(name, str)
@@ -1808,7 +1808,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-rest-webhook-subscription-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-rest-webhook-subscription-details
         """
         check_type(headers, dict)
         check_type(name, str)
@@ -1893,7 +1893,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-syslog-subscription-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-syslog-subscription-details
         """
         check_type(headers, dict)
         check_type(name, str)
@@ -1966,7 +1966,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-of-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!count-of-event-subscriptions
         """
         check_type(headers, dict)
         check_type(event_ids, str,
@@ -2028,7 +2028,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-email-event-subscription-v1
+            https://developer.cisco.com/docs/dna-center/#!create-email-event-subscription
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2096,7 +2096,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-email-event-subscription-v1
+            https://developer.cisco.com/docs/dna-center/#!update-email-event-subscription
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2182,7 +2182,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-email-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!get-email-event-subscriptions
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -2270,7 +2270,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-rest-webhook-event-subscription-v1
+            https://developer.cisco.com/docs/dna-center/#!create-rest-webhook-event-subscription
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2358,7 +2358,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-rest-webhook-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!get-rest-webhook-event-subscriptions
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -2446,7 +2446,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-rest-webhook-event-subscription-v1
+            https://developer.cisco.com/docs/dna-center/#!update-rest-webhook-event-subscription
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2511,7 +2511,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-syslog-event-subscription-v1
+            https://developer.cisco.com/docs/dna-center/#!update-syslog-event-subscription
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2579,7 +2579,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-syslog-event-subscription-v1
+            https://developer.cisco.com/docs/dna-center/#!create-syslog-event-subscription
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2664,7 +2664,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-syslog-event-subscriptions-v1
+            https://developer.cisco.com/docs/dna-center/#!get-syslog-event-subscriptions
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -2764,7 +2764,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-syslog-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!update-syslog-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2857,7 +2857,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-syslog-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!get-syslog-destination
         """
         check_type(headers, dict)
         check_type(config_id, str)
@@ -2948,7 +2948,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-syslog-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!create-syslog-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3043,7 +3043,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-webhook-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!create-webhook-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3145,7 +3145,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-webhook-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!update-webhook-destination
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3235,7 +3235,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-webhook-destination-v1
+            https://developer.cisco.com/docs/dna-center/#!get-webhook-destination
         """
         check_type(headers, dict)
         check_type(webhook_ids, str)
@@ -3317,7 +3317,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-events-v1
+            https://developer.cisco.com/docs/dna-center/#!get-events
         """
         check_type(headers, dict)
         check_type(event_id, str)
@@ -3392,7 +3392,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!count-of-events-v1
+            https://developer.cisco.com/docs/dna-center/#!count-of-events
         """
         check_type(headers, dict)
         check_type(event_id, str)
@@ -3467,7 +3467,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-event-artifacts-v1
+            https://developer.cisco.com/docs/dna-center/#!get-event-artifacts
         """
         check_type(headers, dict)
         check_type(event_ids, str)
@@ -3540,7 +3540,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!event-artifact-count-v1
+            https://developer.cisco.com/docs/dna-center/#!event-artifact-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3593,7 +3593,7 @@ class EventManagement(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-connector-types-v1
+            https://developer.cisco.com/docs/dna-center/#!get-connector-types
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3635,7 +3635,25 @@ class EventManagement(object):
                                    order=None,
                                    sort_by=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_event_subscriptions_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+                eventIds .
+            offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
+                default value 0 .
+            limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
+                value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_event_subscriptions_v1 .
+        """ 
         return self.get_event_subscriptions_v1(
                     event_ids=event_ids,
                     limit=limit,
@@ -3658,7 +3676,27 @@ class EventManagement(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of update_syslog_destination_v1 .
+        Args:
+            configId(string): Event Management's Required only for update syslog configuration .
+            description(string): Event Management's Description.
+            host(string): Event Management's Host.
+            name(string): Event Management's Name.
+            port(integer): Event Management's Port.
+            protocol(string): Event Management's Protocol. Available values are 'UDP' and 'TCP'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_syslog_destination_v1 .
+        """ 
         return self.update_syslog_destination_v1(
                     configId=configId,
                     description=description,
@@ -3678,7 +3716,21 @@ class EventManagement(object):
                                                   headers=None,
                                                   payload=None,
                                                   active_validation=True,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of create_rest_webhook_event_subscription_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_rest_webhook_event_subscription_v1 .
+        """ 
         return self.create_rest_webhook_event_subscription_v1(
                     headers=headers,
                     payload=payload,
@@ -3698,7 +3750,27 @@ class EventManagement(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of update_email_destination_v1 .
+        Args:
+            emailConfigId(string): Event Management's Required only for update email configuration .
+            fromEmail(string): Event Management's From Email.
+            primarySMTPConfig(object): Event Management's primarySMTPConfig.
+            secondarySMTPConfig(object): Event Management's secondarySMTPConfig.
+            subject(string): Event Management's Subject.
+            toEmail(string): Event Management's To Email.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_email_destination_v1 .
+        """ 
         return self.update_email_destination_v1(
                     emailConfigId=emailConfigId,
                     fromEmail=fromEmail,
@@ -3722,7 +3794,25 @@ class EventManagement(object):
                                                  order=None,
                                                  sort_by=None,
                                                  headers=None,
-                                                 **request_parameters):  
+                                                 **request_parameters):
+        """ This function is an alias of get_rest_webhook_subscription_details_v1 .
+        Args:
+            name(basestring): name query parameter. Name of the specific configuration .
+            instance_id(basestring): instanceId query parameter. Instance Id of the specific configuration .
+            offset(int): offset query parameter. The number of Rest/Webhook Subscription detail's to offset in the
+                resultset whose default value 0 .
+            limit(int): limit query parameter. The number of Rest/Webhook Subscription detail's to limit in the
+                resultset whose default value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_rest_webhook_subscription_details_v1 .
+        """ 
         return self.get_rest_webhook_subscription_details_v1(
                     instance_id=instance_id,
                     limit=limit,
@@ -3748,7 +3838,32 @@ class EventManagement(object):
                                                 sub_domain=None,
                                                 type=None,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of get_rest_webhook_event_subscriptions_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+                eventIds (Comma separated event ids) .
+            offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
+                default value 0 .
+            limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
+                value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            domain(basestring): domain query parameter. List of subscriptions related to the respective domain .
+            sub_domain(basestring): subDomain query parameter. List of subscriptions related to the respective sub-
+                domain .
+            category(basestring): category query parameter. List of subscriptions related to the respective category
+                .
+            type(basestring): type query parameter. List of subscriptions related to the respective type .
+            name(basestring): name query parameter. List of subscriptions related to the respective name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_rest_webhook_event_subscriptions_v1 .
+        """ 
         return self.get_rest_webhook_event_subscriptions_v1(
                     category=category,
                     domain=domain,
@@ -3769,7 +3884,18 @@ class EventManagement(object):
     def delete_event_subscriptions(self,
                                       subscriptions,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of delete_event_subscriptions_v1 .
+        Args:
+            subscriptions(basestring): subscriptions query parameter. List of EventSubscriptionId's for removal .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_event_subscriptions_v1 .
+        """ 
         return self.delete_event_subscriptions_v1(
                     subscriptions=subscriptions,
                     headers=headers,
@@ -3781,10 +3907,20 @@ class EventManagement(object):
     def get_email_destination(self,
                                  headers=None,
                                  **request_parameters):
+        """ This function is an alias of get_email_destination_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_email_destination_v1 .
+        """
         return self.get_email_destination_v1(
-                                headers=headers,
-                                 **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -3804,7 +3940,35 @@ class EventManagement(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of create_snmp_destination_v1 .
+        Args:
+            authPassword(string): Event Management's Auth Password.
+            community(string): Event Management's Required only if snmpVersion is V2C .
+            description(string): Event Management's Description.
+            ipAddress(string): Event Management's Ip Address.
+            name(string): Event Management's Name.
+            port(string): Event Management's Port.
+            privacyPassword(string): Event Management's Privacy Password.
+            snmpAuthType(string): Event Management's Snmp Auth Type. Available values are 'SHA', 'MD5' and 'NONE'.
+            snmpMode(string): Event Management's If snmpVersion is V3 it is required and cannot be NONE . Available
+                values are 'AUTH_PRIVACY', 'AUTH_NO_PRIVACY', 'NO_AUTH_NO_PRIVACY' and 'NONE'.
+            snmpPrivacyType(string): Event Management's Snmp Privacy Type. Available values are 'AES128', 'DES' and
+                'NONE'.
+            snmpVersion(string): Event Management's Snmp Version. Available values are 'V2C' and 'V3'.
+            userName(string): Event Management's Required only if snmpVersion is V3 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_snmp_destination_v1 .
+        """ 
         return self.create_snmp_destination_v1(
                     authPassword=authPassword,
                     community=community,
@@ -3830,7 +3994,21 @@ class EventManagement(object):
                                       headers=None,
                                       payload=None,
                                       active_validation=True,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of update_event_subscriptions_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_event_subscriptions_v1 .
+        """ 
         return self.update_event_subscriptions_v1(
                     headers=headers,
                     payload=payload,
@@ -3843,10 +4021,20 @@ class EventManagement(object):
     def event_artifact_count(self,
                             headers=None,
                             **request_parameters):
+        """ This function is an alias of event_artifact_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of event_artifact_count_v1 .
+        """
         return self.event_artifact_count_v1(
-                            headers=headers,
-                            **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -3857,7 +4045,24 @@ class EventManagement(object):
                                 order=None,
                                 sort_by=None,
                                 headers=None,
-                                **request_parameters):  
+                                **request_parameters):
+        """ This function is an alias of get_snmp_destination_v1 .
+        Args:
+            config_id(basestring): configId query parameter. List of SNMP configurations .
+            offset(int): offset query parameter. The number of SNMP configuration's to offset in the resultset whose
+                default value 0 .
+            limit(int): limit query parameter. The number of SNMP configuration's to limit in the resultset whose
+                default value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_snmp_destination_v1 .
+        """ 
         return self.get_snmp_destination_v1(
                     config_id=config_id,
                     limit=limit,
@@ -3874,7 +4079,21 @@ class EventManagement(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of create_email_event_subscription_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_email_event_subscription_v1 .
+        """ 
         return self.create_email_event_subscription_v1(
                     headers=headers,
                     payload=payload,
@@ -3887,7 +4106,19 @@ class EventManagement(object):
     def count_of_event_subscriptions(self,
                                         event_ids,
                                         headers=None,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of count_of_event_subscriptions_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+                eventIds .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_of_event_subscriptions_v1 .
+        """ 
         return self.count_of_event_subscriptions_v1(
                     event_ids=event_ids,
                     headers=headers,
@@ -3907,7 +4138,29 @@ class EventManagement(object):
                                       webhookId=None,
                                       payload=None,
                                       active_validation=True,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of create_webhook_destination_v1 .
+        Args:
+            description(string): Event Management's Description.
+            headers(list): Event Management's headers (list of objects).
+            isProxyRoute(boolean): Event Management's Is Proxy Route.
+            method(string): Event Management's Method. Available values are 'POST' and 'PUT'.
+            name(string): Event Management's Name.
+            trustCert(boolean): Event Management's Trust Cert.
+            url(string): Event Management's Url.
+            webhookId(string): Event Management's Required only for update webhook configuration .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_webhook_destination_v1 .
+        """ 
         return self.create_webhook_destination_v1(
                     description=description,
                     headers=headers,
@@ -3932,7 +4185,25 @@ class EventManagement(object):
                                           order=None,
                                           sort_by=None,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of get_email_subscription_details_v1 .
+        Args:
+            name(basestring): name query parameter. Name of the specific configuration .
+            instance_id(basestring): instanceId query parameter. Instance Id of the specific configuration .
+            offset(int): offset query parameter. The number of Email Subscription detail's to offset in the
+                resultset whose default value 0 .
+            limit(int): limit query parameter. The number of Email Subscription detail's to limit in the resultset
+                whose default value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_email_subscription_details_v1 .
+        """ 
         return self.get_email_subscription_details_v1(
                     instance_id=instance_id,
                     limit=limit,
@@ -3949,7 +4220,18 @@ class EventManagement(object):
     def get_status_api_for_events(self,
                                      execution_id,
                                      headers=None,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of get_status_api_for_events_v1 .
+        Args:
+            execution_id(basestring): executionId path parameter. Execution ID .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_status_api_for_events_v1 .
+        """ 
         return self.get_status_api_for_events_v1(
                     execution_id=execution_id,
                     headers=headers,
@@ -3966,7 +4248,25 @@ class EventManagement(object):
                       order=None,
                       sort_by=None,
                       headers=None,
-                      **request_parameters):  
+                      **request_parameters):
+        """ This function is an alias of get_events_v1 .
+        Args:
+            event_id(basestring): eventId query parameter. The registered EventId should be provided .
+            tags(basestring): tags query parameter. The registered Tags should be provided .
+            offset(int): offset query parameter. The number of Registries to offset in the resultset whose default
+                value 0 .
+            limit(int): limit query parameter. The number of Registries to limit in the resultset whose default
+                value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_events_v1 .
+        """ 
         return self.get_events_v1(
                     tags=tags,
                     event_id=event_id,
@@ -3997,7 +4297,36 @@ class EventManagement(object):
                                    headers=None,
                                    payload=None,
                                    active_validation=True,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of update_snmp_destination_v1 .
+        Args:
+            authPassword(string): Event Management's Auth Password.
+            community(string): Event Management's Required only if snmpVersion is V2C .
+            configId(string): Event Management's Config Id.
+            description(string): Event Management's description.
+            ipAddress(string): Event Management's Ip Address.
+            name(string): Event Management's Name.
+            port(string): Event Management's Port.
+            privacyPassword(string): Event Management's Privacy Password.
+            snmpAuthType(string): Event Management's Snmp Auth Type. Available values are 'SHA', 'MD5' and 'NONE'.
+            snmpMode(string): Event Management's If snmpVersion is V3 it is required and cannot be NONE . Available
+                values are 'AUTH_PRIVACY', 'AUTH_NO_PRIVACY', 'NO_AUTH_NO_PRIVACY' and 'NONE'.
+            snmpPrivacyType(string): Event Management's Snmp Privacy Type. Available values are 'AES128', 'DES' and
+                'NONE'.
+            snmpVersion(string): Event Management's Snmp Version. Available values are 'V2C' and 'V3'.
+            userName(string): Event Management's Required only if snmpVersion is V3 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_snmp_destination_v1 .
+        """ 
         return self.update_snmp_destination_v1(
                     authPassword=authPassword,
                     community=community,
@@ -4024,7 +4353,21 @@ class EventManagement(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of update_syslog_event_subscription_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_syslog_event_subscription_v1 .
+        """ 
         return self.update_syslog_event_subscription_v1(
                     headers=headers,
                     payload=payload,
@@ -4044,7 +4387,27 @@ class EventManagement(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of create_email_destination_v1 .
+        Args:
+            emailConfigId(string): Event Management's Required only for update email configuration .
+            fromEmail(string): Event Management's From Email.
+            primarySMTPConfig(object): Event Management's primarySMTPConfig.
+            secondarySMTPConfig(object): Event Management's secondarySMTPConfig.
+            subject(string): Event Management's Subject.
+            toEmail(string): Event Management's To Email.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_email_destination_v1 .
+        """ 
         return self.create_email_destination_v1(
                     emailConfigId=emailConfigId,
                     fromEmail=fromEmail,
@@ -4064,7 +4427,21 @@ class EventManagement(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of create_syslog_event_subscription_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_syslog_event_subscription_v1 .
+        """ 
         return self.create_syslog_event_subscription_v1(
                     headers=headers,
                     payload=payload,
@@ -4078,7 +4455,21 @@ class EventManagement(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of update_email_event_subscription_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_email_event_subscription_v1 .
+        """ 
         return self.update_email_event_subscription_v1(
                     headers=headers,
                     payload=payload,
@@ -4099,7 +4490,29 @@ class EventManagement(object):
                                       webhookId=None,
                                       payload=None,
                                       active_validation=True,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of update_webhook_destination_v1 .
+        Args:
+            description(string): Event Management's Description.
+            headers(list): Event Management's headers (list of objects).
+            isProxyRoute(boolean): Event Management's Is Proxy Route.
+            method(string): Event Management's Method. Available values are 'POST' and 'PUT'.
+            name(string): Event Management's Name.
+            trustCert(boolean): Event Management's Trust Cert.
+            url(string): Event Management's Url.
+            webhookId(string): Event Management's Required only for update webhook configuration .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_webhook_destination_v1 .
+        """ 
         return self.update_webhook_destination_v1(
                     description=description,
                     headers=headers,
@@ -4125,7 +4538,26 @@ class EventManagement(object):
                                   protocol=None,
                                   sort_by=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_syslog_destination_v1 .
+        Args:
+            config_id(basestring): configId query parameter. Config id of syslog server .
+            name(basestring): name query parameter. Name of syslog server .
+            protocol(basestring): protocol query parameter. Protocol of syslog server .
+            offset(int): offset query parameter. The number of syslog configuration's to offset in the resultset
+                whose default value 0 .
+            limit(int): limit query parameter. The number of syslog configuration's to limit in the resultset whose
+                default value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_syslog_destination_v1 .
+        """ 
         return self.get_syslog_destination_v1(
                     config_id=config_id,
                     limit=limit,
@@ -4144,7 +4576,21 @@ class EventManagement(object):
                                       headers=None,
                                       payload=None,
                                       active_validation=True,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of create_event_subscriptions_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_event_subscriptions_v1 .
+        """ 
         return self.create_event_subscriptions_v1(
                     headers=headers,
                     payload=payload,
@@ -4172,7 +4618,33 @@ class EventManagement(object):
                              tags=None,
                              type=None,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of get_notifications_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. The registered EventId should be provided .
+            start_time(int): startTime query parameter. Start Time in milliseconds .
+            end_time(int): endTime query parameter. End Time in milliseconds .
+            category(basestring): category query parameter.
+            type(basestring): type query parameter.
+            severity(basestring): severity query parameter.
+            domain(basestring): domain query parameter.
+            sub_domain(basestring): subDomain query parameter. Sub Domain .
+            source(basestring): source query parameter.
+            offset(int): offset query parameter. Start Offset .
+            limit(int): limit query parameter. # of records .
+            sort_by(basestring): sortBy query parameter. Sort By column .
+            order(basestring): order query parameter. Ascending/Descending order [asc/desc] .
+            tags(basestring): tags query parameter.
+            namespace(basestring): namespace query parameter.
+            site_id(basestring): siteId query parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_notifications_v1 .
+        """ 
         return self.get_notifications_v1(
                     category=category,
                     domain=domain,
@@ -4204,7 +4676,25 @@ class EventManagement(object):
                                            order=None,
                                            sort_by=None,
                                            headers=None,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of get_syslog_subscription_details_v1 .
+        Args:
+            name(basestring): name query parameter. Name of the specific configuration .
+            instance_id(basestring): instanceId query parameter. Instance Id of the specific configuration .
+            offset(int): offset query parameter. The number of Syslog Subscription detail's to offset in the
+                resultset whose default value 0 .
+            limit(int): limit query parameter. The number of Syslog Subscription detail's to limit in the resultset
+                whose default value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_syslog_subscription_details_v1 .
+        """ 
         return self.get_syslog_subscription_details_v1(
                     instance_id=instance_id,
                     limit=limit,
@@ -4221,10 +4711,20 @@ class EventManagement(object):
     def get_connector_types(self,
                                headers=None,
                                **request_parameters):
+        """ This function is an alias of get_connector_types_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_connector_types_v1 .
+        """
         return self.get_connector_types_v1(
-                                headers=headers,
-                               **request_parameters
-        )  
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -4240,7 +4740,33 @@ class EventManagement(object):
                                          sub_domain=None,
                                          type=None,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_email_event_subscriptions_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. List of email subscriptions related to the respective
+                eventIds (Comma separated event ids) .
+            offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
+                default value 0 .
+            limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
+                value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            domain(basestring): domain query parameter. List of email subscriptions related to the respective domain
+                .
+            sub_domain(basestring): subDomain query parameter. List of email subscriptions related to the respective
+                sub-domain .
+            category(basestring): category query parameter. List of email subscriptions related to the respective
+                category .
+            type(basestring): type query parameter. List of email subscriptions related to the respective type .
+            name(basestring): name query parameter. List of email subscriptions related to the respective name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_email_event_subscriptions_v1 .
+        """ 
         return self.get_email_event_subscriptions_v1(
                     category=category,
                     domain=domain,
@@ -4282,7 +4808,51 @@ class EventManagement(object):
                              sub_domain=None,
                              user_id=None,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of get_audit_log_records_v1 .
+        Args:
+            parent_instance_id(basestring): parentInstanceId query parameter. Parent Audit Log record's instanceID.
+                .
+            instance_id(basestring): instanceId query parameter. InstanceID of the Audit Log. .
+            name(basestring): name query parameter. Audit Log notification event name. .
+            event_id(basestring): eventId query parameter. Audit Log notification's event ID.  .
+            category(basestring): category query parameter. Audit Log notification's event category. Supported
+                values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
+                QUERY, CONVERSATION .
+            severity(basestring): severity query parameter. Audit Log notification's event severity. Supported
+                values: 1, 2, 3, 4, 5. .
+            domain(basestring): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(basestring): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(basestring): source query parameter. Audit Log notification's event source. .
+            user_id(basestring): userId query parameter. Audit Log notification's event userId. .
+            context(basestring): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(basestring): eventHierarchy query parameter. Audit Log notification's event
+                eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
+                hierarchy separation is ".". .
+            site_id(basestring): siteId query parameter. Audit Log notification's siteId. .
+            device_id(basestring): deviceId query parameter. Audit Log notification's deviceId. .
+            is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
+                .
+            description(basestring): description query parameter. String full/partial search (Provided input string
+                is case insensitively matched for records). .
+            offset(int): offset query parameter. Position of a particular Audit Log record in the data.  .
+            limit(int): limit query parameter. Number of Audit Log records to be returned per page. .
+            start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
+                (when provided endTime is mandatory) .
+            end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
+                provided startTime is mandatory) .
+            sort_by(basestring): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
+                event notification header attributes. .
+            order(basestring): order query parameter. Order of the sorted Audit Log records. Default value is desc
+                by timestamp. Supported values: asc, desc. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_audit_log_records_v1 .
+        """ 
         return self.get_audit_log_records_v1(
                     category=category,
                     context=context,
@@ -4316,7 +4886,21 @@ class EventManagement(object):
                                                   headers=None,
                                                   payload=None,
                                                   active_validation=True,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of update_rest_webhook_event_subscription_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_rest_webhook_event_subscription_v1 .
+        """ 
         return self.update_rest_webhook_event_subscription_v1(
                     headers=headers,
                     payload=payload,
@@ -4337,7 +4921,26 @@ class EventManagement(object):
                                   sub_domain=None,
                                   type=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of count_of_notifications_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. The registered EventId should be provided .
+            start_time(int): startTime query parameter. Start Time in milliseconds .
+            end_time(int): endTime query parameter. End Time in milliseconds .
+            category(basestring): category query parameter.
+            type(basestring): type query parameter.
+            severity(basestring): severity query parameter.
+            domain(basestring): domain query parameter.
+            sub_domain(basestring): subDomain query parameter. Sub Domain .
+            source(basestring): source query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_of_notifications_v1 .
+        """ 
         return self.count_of_notifications_v1(
                     category=category,
                     domain=domain,
@@ -4364,7 +4967,27 @@ class EventManagement(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of create_syslog_destination_v1 .
+        Args:
+            configId(string): Event Management's Required only for update syslog configuration .
+            description(string): Event Management's Description.
+            host(string): Event Management's Host.
+            name(string): Event Management's Name.
+            port(integer): Event Management's Port.
+            protocol(string): Event Management's Protocol. Available values are 'UDP' and 'TCP'.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_syslog_destination_v1 .
+        """ 
         return self.create_syslog_destination_v1(
                     configId=configId,
                     description=description,
@@ -4392,7 +5015,32 @@ class EventManagement(object):
                                           sub_domain=None,
                                           type=None,
                                           headers=None,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of get_syslog_event_subscriptions_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+                eventIds (Comma separated event ids) .
+            offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
+                default value 0 .
+            limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
+                value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            domain(basestring): domain query parameter. List of subscriptions related to the respective domain .
+            sub_domain(basestring): subDomain query parameter. List of subscriptions related to the respective sub-
+                domain .
+            category(basestring): category query parameter. List of subscriptions related to the respective category
+                .
+            type(basestring): type query parameter. List of subscriptions related to the respective type .
+            name(basestring): name query parameter. List of subscriptions related to the respective name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_syslog_event_subscriptions_v1 .
+        """ 
         return self.get_syslog_event_subscriptions_v1(
                     category=category,
                     domain=domain,
@@ -4431,7 +5079,46 @@ class EventManagement(object):
                              sub_domain=None,
                              user_id=None,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of get_audit_log_summary_v1 .
+        Args:
+            parent_instance_id(basestring): parentInstanceId query parameter. Parent Audit Log record's instanceID.
+                .
+            is_parent_only(bool): isParentOnly query parameter. Parameter to filter parent only audit-logs. .
+            instance_id(basestring): instanceId query parameter. InstanceID of the Audit Log. .
+            name(basestring): name query parameter. Audit Log notification event name. .
+            event_id(basestring): eventId query parameter. Audit Log notification's event ID.  .
+            category(basestring): category query parameter. Audit Log notification's event category. Supported
+                values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
+                QUERY, CONVERSATION .
+            severity(basestring): severity query parameter. Audit Log notification's event severity. Supported
+                values: 1, 2, 3, 4, 5. .
+            domain(basestring): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(basestring): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(basestring): source query parameter. Audit Log notification's event source. .
+            user_id(basestring): userId query parameter. Audit Log notification's event userId. .
+            context(basestring): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(basestring): eventHierarchy query parameter. Audit Log notification's event
+                eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
+                hierarchy separation is ".". .
+            site_id(basestring): siteId query parameter. Audit Log notification's siteId. .
+            device_id(basestring): deviceId query parameter. Audit Log notification's deviceId. .
+            is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
+                .
+            description(basestring): description query parameter. String full/partial search (Provided input string
+                is case insensitively matched for records). .
+            start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
+                (when provided endTime is mandatory) .
+            end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
+                provided startTime is mandatory) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_audit_log_summary_v1 .
+        """ 
         return self.get_audit_log_summary_v1(
                     category=category,
                     context=context,
@@ -4467,7 +5154,25 @@ class EventManagement(object):
                            sort_by=None,
                            tags=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_event_artifacts_v1 .
+        Args:
+            event_ids(basestring): eventIds query parameter. List of eventIds .
+            tags(basestring): tags query parameter. Tags defined .
+            offset(int): offset query parameter. Record start offset .
+            limit(int): limit query parameter. # of records to return in result set .
+            sort_by(basestring): sortBy query parameter. Sort by field .
+            order(basestring): order query parameter. sorting order (asc/desc) .
+            search(basestring): search query parameter. findd matches in name, description, eventId, type, category
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_event_artifacts_v1 .
+        """ 
         return self.get_event_artifacts_v1(
                     event_ids=event_ids,
                     limit=limit,
@@ -4505,7 +5210,49 @@ class EventManagement(object):
                                     sub_domain=None,
                                     user_id=None,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of get_audit_log_parent_records_v1 .
+        Args:
+            instance_id(basestring): instanceId query parameter. InstanceID of the Audit Log. .
+            name(basestring): name query parameter. Audit Log notification event name. .
+            event_id(basestring): eventId query parameter. Audit Log notification's event ID.  .
+            category(basestring): category query parameter. Audit Log notification's event category. Supported
+                values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
+                QUERY, CONVERSATION .
+            severity(basestring): severity query parameter. Audit Log notification's event severity. Supported
+                values: 1, 2, 3, 4, 5. .
+            domain(basestring): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(basestring): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(basestring): source query parameter. Audit Log notification's event source. .
+            user_id(basestring): userId query parameter. Audit Log notification's event userId. .
+            context(basestring): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(basestring): eventHierarchy query parameter. Audit Log notification's event
+                eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
+                hierarchy separation is ".". .
+            site_id(basestring): siteId query parameter. Audit Log notification's siteId. .
+            device_id(basestring): deviceId query parameter. Audit Log notification's deviceId. .
+            is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
+                .
+            description(basestring): description query parameter. String full/partial search (Provided input string
+                is case insensitively matched for records). .
+            offset(int): offset query parameter. Position of a particular Audit Log record in the data.  .
+            limit(int): limit query parameter. Number of Audit Log records to be returned per page. .
+            start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
+                (when provided endTime is mandatory) .
+            end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
+                provided startTime is mandatory) .
+            sort_by(basestring): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
+                event notification header attributes. .
+            order(basestring): order query parameter. Order of the sorted Audit Log records. Default value is desc
+                by timestamp. Supported values: asc, desc. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_audit_log_parent_records_v1 .
+        """ 
         return self.get_audit_log_parent_records_v1(
                     category=category,
                     context=context,
@@ -4538,7 +5285,19 @@ class EventManagement(object):
                            tags,
                            event_id=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of count_of_events_v1 .
+        Args:
+            event_id(basestring): eventId query parameter. The registered EventId should be provided .
+            tags(basestring): tags query parameter. The registered Tags should be provided .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of count_of_events_v1 .
+        """ 
         return self.count_of_events_v1(
                     tags=tags,
                     event_id=event_id,
@@ -4555,7 +5314,24 @@ class EventManagement(object):
                                    sort_by=None,
                                    webhook_ids=None,
                                    headers=None,
-                                   **request_parameters):  
+                                   **request_parameters):
+        """ This function is an alias of get_webhook_destination_v1 .
+        Args:
+            webhook_ids(basestring): webhookIds query parameter. List of webhook configurations .
+            offset(int): offset query parameter. The number of webhook configuration's to offset in the resultset
+                whose default value 0 .
+            limit(int): limit query parameter. The number of webhook configuration's to limit in the resultset whose
+                default value 10 .
+            sort_by(basestring): sortBy query parameter. SortBy field name .
+            order(basestring): order query parameter.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_webhook_destination_v1 .
+        """ 
         return self.get_webhook_destination_v1(
                     limit=limit,
                     offset=offset,

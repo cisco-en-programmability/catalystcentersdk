@@ -106,7 +106,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-device-credential-to-site-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-device-credential-to-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -195,7 +195,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-device-credentials-v1
+            https://developer.cisco.com/docs/dna-center/#!create-device-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -268,7 +268,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-credentials-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -337,7 +337,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-credential-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-credential-details
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -395,7 +395,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-device-credential-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-device-credential
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -455,7 +455,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-global-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!get-global-pool
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -521,7 +521,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-global-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!update-global-pool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -593,7 +593,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-global-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!create-global-pool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -659,7 +659,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-global-i-p-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-global-i-p-pool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -717,7 +717,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -784,7 +784,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-network-v1
+            https://developer.cisco.com/docs/dna-center/#!create-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -866,7 +866,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-network-v1
+            https://developer.cisco.com/docs/dna-center/#!update-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -951,7 +951,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!get-reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -1023,7 +1023,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!release-reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!release-reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1140,7 +1140,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1292,7 +1292,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!update-reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1389,7 +1389,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-service-provider-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-service-provider-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1449,7 +1449,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-p-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-s-p-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1521,7 +1521,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-p-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-s-p-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1599,7 +1599,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!sync-network-devices-credential-v1
+            https://developer.cisco.com/docs/dna-center/#!sync-network-devices-credential
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1681,7 +1681,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-a-a-a-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-a-a-a-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1761,7 +1761,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-a-a-a-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-a-a-a-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -1827,7 +1827,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-banner-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-banner-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -1896,7 +1896,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-banner-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-banner-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1973,7 +1973,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-credential-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-credential-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2054,7 +2054,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-credential-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-credential-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2133,7 +2133,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-devices-credentials-sync-status-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network-devices-credentials-sync-status
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2199,7 +2199,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-dhcp-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-dhcp-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2277,7 +2277,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-d-h-c-p-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-d-h-c-p-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2343,7 +2343,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-d-n-s-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-d-n-s-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2412,7 +2412,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-d-n-s-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-d-n-s-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2490,7 +2490,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-image-distribution-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-image-distribution-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2568,7 +2568,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-image-distribution-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-image-distribution-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2637,7 +2637,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-n-t-p-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-n-t-p-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2715,7 +2715,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-n-t-p-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-n-t-p-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2782,7 +2782,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-telemetry-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-telemetry-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2860,7 +2860,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-telemetry-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-telemetry-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2946,7 +2946,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-time-zone-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-time-zone-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3024,7 +3024,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-time-zone-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-time-zone-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3084,7 +3084,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-p-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-s-p-profile
         """
         check_type(headers, dict)
         check_type(sp_profile_name, str,
@@ -3149,7 +3149,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-a-devices-telemetry-settings-to-conform-to-the-telemetry-settings-for-its-site-v1
+            https://developer.cisco.com/docs/dna-center/#!update-a-devices-telemetry-settings-to-conform-to-the-telemetry-settings-for-its-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3538,7 +3538,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-p-profile-v2
+            https://developer.cisco.com/docs/dna-center/#!create-sp-profile-v2
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3610,7 +3610,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-p-profile-v2
+            https://developer.cisco.com/docs/dna-center/#!update-sp-profile-v2
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3728,7 +3728,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-p-profile-v2
+            https://developer.cisco.com/docs/dna-center/#!delete-sp-profile-v2
         """
         check_type(headers, dict)
         check_type(sp_profile_name, str,
@@ -3772,7 +3772,23 @@ class NetworkSettings(object):
                                                       headers=None,
                                                       payload=None,
                                                       active_validation=True,
-                                                      **request_parameters):  
+                                                      **request_parameters):
+        """ This function is an alias of set_image_distribution_settings_for_a_site_v1 .
+        Args:
+            imageDistribution(object): Network Settings's imageDistribution.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_image_distribution_settings_for_a_site_v1 .
+        """ 
         return self.set_image_distribution_settings_for_a_site_v1(
                     id=id,
                     imageDistribution=imageDistribution,
@@ -3787,7 +3803,18 @@ class NetworkSettings(object):
     def delete_sp_profile(self,
                              sp_profile_name,
                              headers=None,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of delete_sp_profile_v1 .
+        Args:
+            sp_profile_name(basestring): spProfileName path parameter. sp profile name .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_sp_profile_v1 .
+        """ 
         return self.delete_sp_profile_v1(
                     sp_profile_name=sp_profile_name,
                     headers=headers,
@@ -3802,7 +3829,23 @@ class NetworkSettings(object):
                                         headers=None,
                                         payload=None,
                                         active_validation=True,
-                                        **request_parameters):  
+                                        **request_parameters):
+        """ This function is an alias of set_dhcp_settings_for_a_site_v1 .
+        Args:
+            dhcp(object): Network Settings's dhcp.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_dhcp_settings_for_a_site_v1 .
+        """ 
         return self.set_dhcp_settings_for_a_site_v1(
                     id=id,
                     dhcp=dhcp,
@@ -3818,7 +3861,23 @@ class NetworkSettings(object):
                                                      id,
                                                      inherited=None,
                                                      headers=None,
-                                                     **request_parameters):  
+                                                     **request_parameters):
+        """ This function is an alias of get_device_credential_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+                `/dna/intent/api/v1/sites` .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_credential_settings_for_a_site_v1 .
+        """ 
         return self.get_device_credential_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -3832,7 +3891,22 @@ class NetworkSettings(object):
                                                 id,
                                                 inherited=None,
                                                 headers=None,
-                                                **request_parameters):  
+                                                **request_parameters):
+        """ This function is an alias of retrieve_d_h_c_p_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_d_h_c_p_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_d_h_c_p_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -3845,7 +3919,18 @@ class NetworkSettings(object):
     def release_reserve_ip_subpool(self,
                                       id,
                                       headers=None,
-                                      **request_parameters):  
+                                      **request_parameters):
+        """ This function is an alias of release_reserve_ip_subpool_v1 .
+        Args:
+            id(basestring): id path parameter. Id of reserve ip subpool to be deleted. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of release_reserve_ip_subpool_v1 .
+        """ 
         return self.release_reserve_ip_subpool_v1(
                     id=id,
                     headers=headers,
@@ -3857,7 +3942,18 @@ class NetworkSettings(object):
     def delete_device_credential(self,
                                     id,
                                     headers=None,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of delete_device_credential_v1 .
+        Args:
+            id(basestring): id path parameter. global credential id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_device_credential_v1 .
+        """ 
         return self.delete_device_credential_v1(
                     id=id,
                     headers=headers,
@@ -3869,10 +3965,20 @@ class NetworkSettings(object):
     def get_service_provider_details(self,
                                         headers=None,
                                         **request_parameters):
+        """ This function is an alias of get_service_provider_details_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_service_provider_details_v1 .
+        """
         return self.get_service_provider_details_v1(
-                                        headers=headers,
-                                        **request_parameters
-        ) 
+                    headers=headers,
+                    **request_parameters
+        )
                 
     
     # Alias Function
@@ -3881,7 +3987,22 @@ class NetworkSettings(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of create_sp_profile_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_sp_profile_v1 .
+        """ 
         return self.create_sp_profile_v1(
                     settings=settings,
                     headers=headers,
@@ -3896,7 +4017,22 @@ class NetworkSettings(object):
                                                id,
                                                inherited=None,
                                                headers=None,
-                                               **request_parameters):  
+                                               **request_parameters):
+        """ This function is an alias of retrieve_banner_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_banner_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_banner_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -3909,7 +4045,19 @@ class NetworkSettings(object):
     def get_network(self,
                        site_id=None,
                        headers=None,
-                       **request_parameters):  
+                       **request_parameters):
+        """ This function is an alias of get_network_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site id to get the network settings associated with the
+                site. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_network_v1 .
+        """ 
         return self.get_network_v1(
                     site_id=site_id,
                     headers=headers,
@@ -3925,7 +4073,24 @@ class NetworkSettings(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of set_aaa_settings_for_a_site_v1 .
+        Args:
+            aaaClient(object): Network Settings's aaaClient.
+            aaaNetwork(object): Network Settings's aaaNetwork.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_aaa_settings_for_a_site_v1 .
+        """ 
         return self.set_aaa_settings_for_a_site_v1(
                     id=id,
                     aaaClient=aaaClient,
@@ -3942,7 +4107,22 @@ class NetworkSettings(object):
                                                            id,
                                                            inherited=None,
                                                            headers=None,
-                                                           **request_parameters):  
+                                                           **request_parameters):
+        """ This function is an alias of retrieve_image_distribution_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_image_distribution_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_image_distribution_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -3957,7 +4137,22 @@ class NetworkSettings(object):
                              headers=None,
                              payload=None,
                              active_validation=True,
-                             **request_parameters):  
+                             **request_parameters):
+        """ This function is an alias of update_sp_profile_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_sp_profile_v1 .
+        """ 
         return self.update_sp_profile_v1(
                     settings=settings,
                     headers=headers,
@@ -3974,7 +4169,23 @@ class NetworkSettings(object):
                                     headers=None,
                                     payload=None,
                                     active_validation=True,
-                                    **request_parameters):  
+                                    **request_parameters):
+        """ This function is an alias of set_time_zone_for_a_site_v1 .
+        Args:
+            timeZone(object): Network Settings's timeZone.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_time_zone_for_a_site_v1 .
+        """ 
         return self.set_time_zone_for_a_site_v1(
                     id=id,
                     timeZone=timeZone,
@@ -3991,7 +4202,22 @@ class NetworkSettings(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of create_device_credentials_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_device_credentials_v1 .
+        """ 
         return self.create_device_credentials_v1(
                     settings=settings,
                     headers=headers,
@@ -4008,7 +4234,23 @@ class NetworkSettings(object):
                                            headers=None,
                                            payload=None,
                                            active_validation=True,
-                                           **request_parameters):  
+                                           **request_parameters):
+        """ This function is an alias of sync_network_devices_credential_v1 .
+        Args:
+            deviceCredentialId(string): Network Settings's It must be cli/snmpV2Read/snmpV2Write/snmpV3 Id. .
+            siteId(string): Network Settings's Site Id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of sync_network_devices_credential_v1 .
+        """ 
         return self.sync_network_devices_credential_v1(
                     deviceCredentialId=deviceCredentialId,
                     siteId=siteId,
@@ -4031,7 +4273,28 @@ class NetworkSettings(object):
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
-                                            **request_parameters):  
+                                            **request_parameters):
+        """ This function is an alias of assign_device_credential_to_site_v1 .
+        Args:
+            cliId(string): Network Settings's Cli Id.
+            httpRead(string): Network Settings's Http Read.
+            httpWrite(string): Network Settings's Http Write.
+            snmpV2ReadId(string): Network Settings's Snmp V2 Read Id.
+            snmpV2WriteId(string): Network Settings's Snmp V2 Write Id.
+            snmpV3Id(string): Network Settings's Snmp V3 Id.
+            site_id(basestring): siteId path parameter. site id to assign credential. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of assign_device_credential_to_site_v1 .
+        """ 
         return self.assign_device_credential_to_site_v1(
                     site_id=site_id,
                     cliId=cliId,
@@ -4054,7 +4317,24 @@ class NetworkSettings(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of create_network_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            site_id(basestring): siteId path parameter. Site id to which site details to associate with the network
+                settings. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_network_v1 .
+        """ 
         return self.create_network_v1(
                     site_id=site_id,
                     settings=settings,
@@ -4077,7 +4357,29 @@ class NetworkSettings(object):
                                                         headers=None,
                                                         payload=None,
                                                         active_validation=True,
-                                                        **request_parameters):  
+                                                        **request_parameters):
+        """ This function is an alias of update_device_credential_settings_for_a_site_v1 .
+        Args:
+            cliCredentialsId(object): Network Settings's cliCredentialsId.
+            httpReadCredentialsId(object): Network Settings's httpReadCredentialsId.
+            httpWriteCredentialsId(object): Network Settings's httpWriteCredentialsId.
+            snmpv2cReadCredentialsId(object): Network Settings's snmpv2cReadCredentialsId.
+            snmpv2cWriteCredentialsId(object): Network Settings's snmpv2cWriteCredentialsId.
+            snmpv3CredentialsId(object): Network Settings's snmpv3CredentialsId.
+            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+                `/dna/intent/api/v1/sites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_device_credential_settings_for_a_site_v1 .
+        """ 
         return self.update_device_credential_settings_for_a_site_v1(
                     id=id,
                     cliCredentialsId=cliCredentialsId,
@@ -4099,7 +4401,22 @@ class NetworkSettings(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of update_device_credentials_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_device_credentials_v1 .
+        """ 
         return self.update_device_credentials_v1(
                     settings=settings,
                     headers=headers,
@@ -4114,7 +4431,20 @@ class NetworkSettings(object):
                            limit=None,
                            offset=None,
                            headers=None,
-                           **request_parameters):  
+                           **request_parameters):
+        """ This function is an alias of get_global_pool_v1 .
+        Args:
+            offset(int): offset query parameter. Offset/starting row. Indexed from 1. Default value of 1. .
+            limit(int): limit query parameter. Number of Global Pools to be retrieved. Default is 25 if not
+                specified. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_global_pool_v1 .
+        """ 
         return self.get_global_pool_v1(
                     limit=limit,
                     offset=offset,
@@ -4128,7 +4458,22 @@ class NetworkSettings(object):
                                                   id,
                                                   inherited=None,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of retrieve_time_zone_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_time_zone_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_time_zone_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -4143,7 +4488,22 @@ class NetworkSettings(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of update_global_pool_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_global_pool_v1 .
+        """ 
         return self.update_global_pool_v1(
                     settings=settings,
                     headers=headers,
@@ -4158,7 +4518,22 @@ class NetworkSettings(object):
                                               id,
                                               inherited=None,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of retrieve_d_n_s_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_d_n_s_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_d_n_s_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -4174,7 +4549,23 @@ class NetworkSettings(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of set_n_t_p_settings_for_a_site_v1 .
+        Args:
+            ntp(object): Network Settings's ntp.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_n_t_p_settings_for_a_site_v1 .
+        """ 
         return self.set_n_t_p_settings_for_a_site_v1(
                     id=id,
                     ntp=ntp,
@@ -4189,7 +4580,19 @@ class NetworkSettings(object):
     def get_device_credential_details(self,
                                          site_id=None,
                                          headers=None,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of get_device_credential_details_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. Site id to retrieve the credential details associated with
+                the site. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_device_credential_details_v1 .
+        """ 
         return self.get_device_credential_details_v1(
                     site_id=site_id,
                     headers=headers,
@@ -4202,7 +4605,23 @@ class NetworkSettings(object):
                                                   id,
                                                   inherited=None,
                                                   headers=None,
-                                                  **request_parameters):  
+                                                  **request_parameters):
+        """ This function is an alias of retrieve_telemetry_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+                `/dna/intent/api/v1/sites` .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_telemetry_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_telemetry_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -4216,7 +4635,22 @@ class NetworkSettings(object):
                                               id,
                                               inherited=None,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of retrieve_aaa_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_aaa_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_aaa_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -4229,7 +4663,18 @@ class NetworkSettings(object):
     def delete_global_ip_pool(self,
                                  id,
                                  headers=None,
-                                 **request_parameters):  
+                                 **request_parameters):
+        """ This function is an alias of delete_global_ip_pool_v1 .
+        Args:
+            id(basestring): id path parameter. global pool id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of delete_global_ip_pool_v1 .
+        """ 
         return self.delete_global_ip_pool_v1(
                     id=id,
                     headers=headers,
@@ -4248,7 +4693,28 @@ class NetworkSettings(object):
                                              headers=None,
                                              payload=None,
                                              active_validation=True,
-                                             **request_parameters):  
+                                             **request_parameters):
+        """ This function is an alias of set_telemetry_settings_for_a_site_v1 .
+        Args:
+            applicationVisibility(object): Network Settings's applicationVisibility.
+            snmpTraps(object): Network Settings's snmpTraps.
+            syslogs(object): Network Settings's syslogs.
+            wiredDataCollection(object): Network Settings's wiredDataCollection.
+            wirelessTelemetry(object): Network Settings's wirelessTelemetry.
+            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+                `/dna/intent/api/v1/sites` .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_telemetry_settings_for_a_site_v1 .
+        """ 
         return self.set_telemetry_settings_for_a_site_v1(
                     id=id,
                     applicationVisibility=applicationVisibility,
@@ -4272,7 +4738,29 @@ class NetworkSettings(object):
                                   pool_usage=None,
                                   site_id=None,
                                   headers=None,
-                                  **request_parameters):  
+                                  **request_parameters):
+        """ This function is an alias of get_reserve_ip_subpool_v1 .
+        Args:
+            site_id(basestring): siteId query parameter. site id of site from which to retrieve associated reserve
+                pools. Either siteId (per site queries) or ignoreInheritedGroups must be used. They can
+                also be used together.  .
+            offset(int): offset query parameter. offset/starting row. Indexed from 1. .
+            limit(int): limit query parameter. Number of reserve pools to be retrieved. Default is 25 if not
+                specified. Maximum allowed limit is 500. .
+            ignore_inherited_groups(basestring): ignoreInheritedGroups query parameter. Ignores pools inherited from
+                parent site. Either siteId or ignoreInheritedGroups must be passed. They can also be
+                used together. .
+            pool_usage(basestring): poolUsage query parameter. Can take values empty, partially-full or empty-
+                partially-full .
+            group_name(basestring): groupName query parameter. Name of the group .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_reserve_ip_subpool_v1 .
+        """ 
         return self.get_reserve_ip_subpool_v1(
                     group_name=group_name,
                     ignore_inherited_groups=ignore_inherited_groups,
@@ -4311,7 +4799,56 @@ class NetworkSettings(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of reserve_ip_subpool_v1 .
+        Args:
+            ipv4DhcpServers(list): Network Settings's IPv4 input for dhcp server ip example: ["1.1.1.1"]  (list of
+                strings).
+            ipv4DnsServers(list): Network Settings's IPv4 input for dns server ip example: ["4.4.4.4"]  (list of
+                strings).
+            ipv4GateWay(string): Network Settings's Gateway ip address details, example: 175.175.0.1 .
+            ipv4GlobalPool(string): Network Settings's IP v4 Global pool address with cidr, example: 175.175.0.0/16
+                .
+            ipv4Prefix(boolean): Network Settings's IPv4 prefix value is true, the ip4 prefix length input field is
+                enabled , if it is false ipv4 total Host input is enable .
+            ipv4PrefixLength(integer): Network Settings's The ipv4 prefix length is required when ipv4prefix value
+                is true. .
+            ipv4Subnet(string): Network Settings's IPv4 Subnet address, example: 175.175.0.0. Either ipv4Subnet or
+                ipv4TotalHost needs to be passed if creating IPv4 subpool. .
+            ipv4TotalHost(integer): Network Settings's IPv4 total host is required when ipv4prefix value is false. .
+            ipv6AddressSpace(boolean): Network Settings's If the value is omitted or false only ipv4 input are
+                required, otherwise both ipv6 and ipv4 are required .
+            ipv6DhcpServers(list): Network Settings's IPv6 format dhcp server as input example : ["2001:db8::1234"]
+                (list of strings).
+            ipv6DnsServers(list): Network Settings's IPv6 format dns server input example: ["2001:db8::1234"]  (list
+                of strings).
+            ipv6GateWay(string): Network Settings's Gateway ip address details, example: 2001:db8:85a3:0:100::1 .
+            ipv6GlobalPool(string): Network Settings's IPv6 Global pool address with cidr this is required when
+                Ipv6AddressSpace value is true, example: 2001:db8:85a3::/64 .
+            ipv6Prefix(boolean): Network Settings's Ipv6 prefix value is true, the ip6 prefix length input field is
+                enabled , if it is false ipv6 total Host input is enable .
+            ipv6PrefixLength(integer): Network Settings's IPv6 prefix length is required when the ipv6prefix value
+                is true .
+            ipv6Subnet(string): Network Settings's IPv6 Subnet address, example :2001:db8:85a3:0:100::. Either
+                ipv6Subnet or ipv6TotalHost needs to be passed if creating IPv6 subpool. .
+            ipv6TotalHost(integer): Network Settings's IPv6 total host is required when ipv6prefix value is false. .
+            name(string): Network Settings's Name of the reserve ip sub pool .
+            slaacSupport(boolean): Network Settings's Slaac Support.
+            type(string): Network Settings's Type of the reserve ip sub pool . Available values are 'Generic',
+                'LAN', 'WAN', 'management' and 'service'.
+            site_id(basestring): siteId path parameter. Site id to reserve the ip sub pool. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of reserve_ip_subpool_v1 .
+        """ 
         return self.reserve_ip_subpool_v1(
                     site_id=site_id,
                     ipv4DhcpServers=ipv4DhcpServers,
@@ -4348,7 +4885,23 @@ class NetworkSettings(object):
                                          headers=None,
                                          payload=None,
                                          active_validation=True,
-                                         **request_parameters):  
+                                         **request_parameters):
+        """ This function is an alias of set_d_n_s_settings_for_a_site_v1 .
+        Args:
+            dns(object): Network Settings's dns.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_d_n_s_settings_for_a_site_v1 .
+        """ 
         return self.set_d_n_s_settings_for_a_site_v1(
                     id=id,
                     dns=dns,
@@ -4380,7 +4933,46 @@ class NetworkSettings(object):
                                      headers=None,
                                      payload=None,
                                      active_validation=True,
-                                     **request_parameters):  
+                                     **request_parameters):
+        """ This function is an alias of update_reserve_ip_subpool_v1 .
+        Args:
+            ipv4DhcpServers(list): Network Settings's IPv4 input for dhcp server ip example: ["1.1.1.1"]  (list of
+                strings).
+            ipv4DnsServers(list): Network Settings's IPv4 input for dns server ip  example: ["4.4.4.4"]  (list of
+                strings).
+            ipv4GateWay(string): Network Settings's Gateway ip address details, example: 175.175.0.1 .
+            ipv6AddressSpace(boolean): Network Settings's If the value is false only ipv4 input are required. NOTE
+                if value is false then any existing ipv6 subpool in the group will be removed. .
+            ipv6DhcpServers(list): Network Settings's IPv6 format dhcp server as input example : ["2001:db8::1234"]
+                (list of strings).
+            ipv6DnsServers(list): Network Settings's IPv6 format dns server input example: ["2001:db8::1234"]  (list
+                of strings).
+            ipv6GateWay(string): Network Settings's Gateway ip address details, example: 2001:db8:85a3:0:100::1 .
+            ipv6GlobalPool(string): Network Settings's IPv6 Global pool address with cidr this is required when
+                Ipv6AddressSpace value is true, example: 2001:db8:85a3::/64 .
+            ipv6Prefix(boolean): Network Settings's Ipv6 prefix value is true, the ip6 prefix length input field is
+                enabled, if it is false ipv6 total Host input is enable .
+            ipv6PrefixLength(integer): Network Settings's IPv6 prefix length is required when the ipv6prefix value
+                is true .
+            ipv6Subnet(string): Network Settings's IPv6 Subnet address, example :2001:db8:85a3:0:100::. .
+            ipv6TotalHost(integer): Network Settings's Size of pool in terms of number of IPs. IPv6 total host is
+                required when ipv6prefix value is false. .
+            name(string): Network Settings's Name of the reserve ip sub pool .
+            slaacSupport(boolean): Network Settings's Slaac Support.
+            site_id(basestring): siteId path parameter. Site id of site to update sub pool. .
+            id(basestring): id query parameter. Id of subpool group .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_reserve_ip_subpool_v1 .
+        """ 
         return self.update_reserve_ip_subpool_v1(
                     id=id,
                     site_id=site_id,
@@ -4412,7 +5004,24 @@ class NetworkSettings(object):
                           headers=None,
                           payload=None,
                           active_validation=True,
-                          **request_parameters):  
+                          **request_parameters):
+        """ This function is an alias of update_network_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            site_id(basestring): siteId path parameter. Site id to update the network settings which is associated
+                with the site .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of update_network_v1 .
+        """ 
         return self.update_network_v1(
                     site_id=site_id,
                     settings=settings,
@@ -4430,7 +5039,23 @@ class NetworkSettings(object):
                                           headers=None,
                                           payload=None,
                                           active_validation=True,
-                                          **request_parameters):  
+                                          **request_parameters):
+        """ This function is an alias of set_banner_settings_for_a_site_v1 .
+        Args:
+            banner(object): Network Settings's banner.
+            id(basestring): id path parameter. Site Id .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of set_banner_settings_for_a_site_v1 .
+        """ 
         return self.set_banner_settings_for_a_site_v1(
                     id=id,
                     banner=banner,
@@ -4445,7 +5070,18 @@ class NetworkSettings(object):
     def get_network_devices_credentials_sync_status(self,
                                                        id,
                                                        headers=None,
-                                                       **request_parameters):  
+                                                       **request_parameters):
+        """ This function is an alias of get_network_devices_credentials_sync_status_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of get_network_devices_credentials_sync_status_v1 .
+        """ 
         return self.get_network_devices_credentials_sync_status_v1(
                     id=id,
                     headers=headers,
@@ -4458,7 +5094,22 @@ class NetworkSettings(object):
                                               id,
                                               inherited=None,
                                               headers=None,
-                                              **request_parameters):  
+                                              **request_parameters):
+        """ This function is an alias of retrieve_n_t_p_settings_for_a_site_v1 .
+        Args:
+            id(basestring): id path parameter. Site Id .
+            inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
+                inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
+                that the site inherits that setting from the parent site or a site higher in the site
+                hierarchy. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of retrieve_n_t_p_settings_for_a_site_v1 .
+        """ 
         return self.retrieve_n_t_p_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
@@ -4473,7 +5124,22 @@ class NetworkSettings(object):
                               headers=None,
                               payload=None,
                               active_validation=True,
-                              **request_parameters):  
+                              **request_parameters):
+        """ This function is an alias of create_global_pool_v1 .
+        Args:
+            settings(object): Network Settings's settings.
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+
+        Returns:
+            This function returns the output of create_global_pool_v1 .
+        """ 
         return self.create_global_pool_v1(
                     settings=settings,
                     headers=headers,

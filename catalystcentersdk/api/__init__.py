@@ -31,6 +31,7 @@ from catalystcentersdk.config import (
     DEFAULT_SINGLE_REQUEST_TIMEOUT,
     DEFAULT_WAIT_ON_RATE_LIMIT,
     DEFAULT_VERIFY,
+    DEFAULT_VERIFY_USER_AGENT,
 )
 import catalystcentersdk.environment as catalystcenter_environment
 from catalystcentersdk.exceptions import AccessTokenError, VersionError
@@ -147,7 +148,7 @@ class CatalystCenterAPI(object):
                  debug=None,
                  object_factory=mydict_data_factory,
                  validator=SchemaValidator,
-                 user_string = ""):
+                 user_agent =None):
         """Create a new CatalystCenterAPI object.
         An access token is required to interact with the Catalyst Center APIs.
         This package supports two methods for you to generate the
@@ -227,7 +228,6 @@ class CatalystCenterAPI(object):
         encoded_auth = encoded_auth or catalystcenter_environment.get_env_encoded_auth()
         base_url = base_url or catalystcenter_environment.get_env_base_url() or DEFAULT_BASE_URL
         user_agent = catalystcenter_environment.get_env_user_agent()
-        user_string = user_string or catalystcenter_environment.get_env_user_string()
 
         if single_request_timeout is None:
             single_request_timeout = catalystcenter_environment.get_env_single_request_timeout() or DEFAULT_SINGLE_REQUEST_TIMEOUT
@@ -243,8 +243,8 @@ class CatalystCenterAPI(object):
         if debug is None:
             debug = catalystcenter_environment.get_env_debug() or DEFAULT_DEBUG
         
-        user_agent = (user_agent or "") + (version or "") + '-' + (user_string or "")
-        user_string = user_string or ""
+        if user_agent is None:
+            user_agent = catalystcenter_environment.get_env_user_agent() or DEFAULT_VERIFY_USER_AGENT
 
         check_type(base_url, str)
         check_type(single_request_timeout, int)
@@ -255,7 +255,6 @@ class CatalystCenterAPI(object):
         check_type(encoded_auth, str, may_be_none=True)
         check_type(verify, (bool, str), may_be_none=False)
         check_type(version, str, may_be_none=False)
-        check_type(user_string, str, may_be_none=False)
         check_type(user_agent, str, may_be_none=False)
 
         if version not in ['2.3.7.6']:
@@ -307,7 +306,6 @@ class CatalystCenterAPI(object):
             verify=verify,
             version=version,
             debug=debug,
-            user_string = user_string,
             user_agent = user_agent,
 
         )
