@@ -177,7 +177,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-and-provision-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!create-and-provision-ssid
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -237,7 +237,7 @@ class Wireless(object):
                                                    ssid_name,
                                                    headers=None,
                                                    **request_parameters):
-        """Removes SSID or WLAN from the network profile, reprovision the device(s) and deletes the SSID or WLAN from DNA
+        """Removes SSID or WLAN from the network profile, reprovision the device(s) and deletes the SSID or WLAN from Catalyst
         Center    .
 
         Args:
@@ -259,7 +259,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-s-i-d-and-provision-it-to-devices
+            https://developer.cisco.com/docs/dna-center/#!delete-ssid-and-provision-it-to-devices
         """
         check_type(headers, dict)
         check_type(ssid_name, str,
@@ -458,7 +458,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-enterprise-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-enterprise-ssid
         """
         check_type(headers, dict)
         check_type(ssid_name, str)
@@ -595,7 +595,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-enterprise-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!create-enterprise-ssid
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -803,7 +803,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-enterprise-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!update-enterprise-ssid
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -931,7 +931,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-enterprise-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!delete-enterprise-ssid
         """
         check_type(headers, dict)
         check_type(ssid_name, str,
@@ -1191,7 +1191,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!create-ssid
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1397,7 +1397,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-by-site
+            https://developer.cisco.com/docs/dna-center/#!get-ssid-by-site
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -1460,7 +1460,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-count-by-site
+            https://developer.cisco.com/docs/dna-center/#!get-ssid-count-by-site
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -1520,7 +1520,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-ssid-by-i-d
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -1786,7 +1786,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!update-ssid
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1992,7 +1992,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-s-i-d
+            https://developer.cisco.com/docs/dna-center/#!delete-ssid
         """
         check_type(headers, dict)
         check_type(site_id, str,
@@ -2410,7 +2410,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!a-p-provision-connectivity
+            https://developer.cisco.com/docs/dna-center/#!wireless-ap-provision
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3013,7 +3013,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!p-s-k-override
+            https://developer.cisco.com/docs/dna-center/#!psk-override
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3074,7 +3074,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-r-f-profiles
+            https://developer.cisco.com/docs/dna-center/#!retrieve-rf-profiles
         """
         check_type(headers, dict)
         check_type(rf_profile_name, str)
@@ -3157,7 +3157,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-or-update-r-f-profile
+            https://developer.cisco.com/docs/dna-center/#!create-or-update-rf-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3244,7 +3244,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-r-f-profiles
+            https://developer.cisco.com/docs/dna-center/#!delete-rf-profiles
         """
         check_type(headers, dict)
         check_type(rf_profile_name, str,
@@ -3460,7 +3460,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!a-p-provision
+            https://developer.cisco.com/docs/dna-center/#!ap-provision
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3851,7 +3851,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-managed-a-p-locations-for-w-l-c
+            https://developer.cisco.com/docs/dna-center/#!assign-managed-ap-locations-for-wlc
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4022,7 +4022,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-anchor-managed-a-p-locations-for-specific-wireless-controller
+            https://developer.cisco.com/docs/dna-center/#!get-anchor-managed-ap-locations-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4088,7 +4088,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-managed-a-p-locations-count-for-specific-wireless-controller
+            https://developer.cisco.com/docs/dna-center/#!get-managed-ap-locations-count-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(network_device_id, str,
@@ -4152,7 +4152,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-primary-managed-a-p-locations-for-specific-wireless-controller
+            https://developer.cisco.com/docs/dna-center/#!get-primary-managed-ap-locations-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4222,7 +4222,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-secondary-managed-a-p-locations-for-specific-wireless-controller
+            https://developer.cisco.com/docs/dna-center/#!get-secondary-managed-ap-locations-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -4303,7 +4303,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-details-for-specific-wireless-controller
+            https://developer.cisco.com/docs/dna-center/#!get-ssid-details-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(ssid_name, str)
@@ -4385,7 +4385,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-s-i-d-count-for-specific-wireless-controller
+            https://developer.cisco.com/docs/dna-center/#!get-ssid-count-for-specific-wireless-controller
         """
         check_type(headers, dict)
         check_type(admin_status, bool)
@@ -4519,7 +4519,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile-connectivity
+            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4649,7 +4649,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile-connectivity
+            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4723,7 +4723,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-wireless-profile-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-wireless-profile-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -4780,7 +4780,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-wireless-profile-connectivity
+            https://developer.cisco.com/docs/dna-center/#!delete-wireless-profile
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5201,7 +5201,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get80211be-profile-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get80211be-profile-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5448,7 +5448,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-interface-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-interface-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5667,7 +5667,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-r-f-profile
+            https://developer.cisco.com/docs/dna-center/#!create-rf-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -5752,7 +5752,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-r-f-profiles
+            https://developer.cisco.com/docs/dna-center/#!get-rf-profiles
         """
         check_type(headers, dict)
         check_type(limit, int)
@@ -5810,7 +5810,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-r-f-profiles-count
+            https://developer.cisco.com/docs/dna-center/#!get-rf-profiles-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5864,7 +5864,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-r-f-profile
+            https://developer.cisco.com/docs/dna-center/#!delete-rf-profile
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -5921,7 +5921,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-r-f-profile-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-rf-profile-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -6004,7 +6004,7 @@ class Wireless(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-r-f-profile
+            https://developer.cisco.com/docs/dna-center/#!update-rf-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -6271,8 +6271,8 @@ class Wireless(object):
 
         return self._object_factory('bpm_deb34387d0235811a90985711be9fe2e_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def assign_managed_ap_locations_for_w_l_c(self,
                                                  device_id,
@@ -6303,7 +6303,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of assign_managed_ap_locations_for_w_l_c_v1 .
-        """ 
+        """
         return self.assign_managed_ap_locations_for_w_l_c_v1(
                     device_id=device_id,
                     primaryManagedAPLocationsSiteIds=primaryManagedAPLocationsSiteIds,
@@ -6313,8 +6313,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_rf_profile(self,
                              defaultRfProfile=None,
@@ -6354,7 +6354,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_rf_profile_v1 .
-        """ 
+        """
         return self.create_rf_profile_v1(
                     defaultRfProfile=defaultRfProfile,
                     enableRadioType6GHz=enableRadioType6GHz,
@@ -6369,8 +6369,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_interfaces_count(self,
                                 headers=None,
@@ -6389,8 +6389,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_dynamic_interface(self,
                                     interface_name,
@@ -6406,14 +6406,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_dynamic_interface_v1 .
-        """ 
+        """
         return self.delete_dynamic_interface_v1(
                     interface_name=interface_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_rf_profile(self,
                              id,
@@ -6429,14 +6429,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_rf_profile_v1 .
-        """ 
+        """
         return self.delete_rf_profile_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_wireless_profile(self,
                                    profileDetails=None,
@@ -6458,7 +6458,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update_wireless_profile_v1 .
-        """ 
+        """
         return self.update_wireless_profile_v1(
                     profileDetails=profileDetails,
                     headers=headers,
@@ -6466,8 +6466,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_wireless_profile_connectivity(self,
                                                 id,
@@ -6493,7 +6493,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update_wireless_profile_connectivity_v1 .
-        """ 
+        """
         return self.update_wireless_profile_connectivity_v1(
                     id=id,
                     ssidDetails=ssidDetails,
@@ -6503,8 +6503,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_anchor_managed_ap_locations_for_specific_wireless_controller(self,
                                                                             network_device_id,
@@ -6526,7 +6526,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_anchor_managed_ap_locations_for_specific_wireless_controller_v1 .
-        """ 
+        """
         return self.get_anchor_managed_ap_locations_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     limit=limit,
@@ -6534,8 +6534,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_update_dynamic_interface(self,
                                            interfaceName=None,
@@ -6559,7 +6559,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_update_dynamic_interface_v1 .
-        """ 
+        """
         return self.create_update_dynamic_interface_v1(
                     interfaceName=interfaceName,
                     vlanId=vlanId,
@@ -6568,8 +6568,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_interfaces(self,
                           limit=None,
@@ -6587,15 +6587,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_interfaces_v1 .
-        """ 
+        """
         return self.get_interfaces_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_enterprise_ssid(self,
                                ssid_name=None,
@@ -6612,14 +6612,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_enterprise_ssid_v1 .
-        """ 
+        """
         return self.get_enterprise_ssid_v1(
                     ssid_name=ssid_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ssid_by_id(self,
                           id,
@@ -6637,15 +6637,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_ssid_by_id_v1 .
-        """ 
+        """
         return self.get_ssid_by_id_v1(
                     id=id,
                     site_id=site_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_rf_profiles(self,
                                 rf_profile_name=None,
@@ -6661,14 +6661,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of retrieve_rf_profiles_v1 .
-        """ 
+        """
         return self.retrieve_rf_profiles_v1(
                     rf_profile_name=rf_profile_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def configure_access_points(self,
                                    adminStatus=None,
@@ -6749,7 +6749,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of configure_access_points_v1 .
-        """ 
+        """
         return self.configure_access_points_v1(
                     adminStatus=adminStatus,
                     apList=apList,
@@ -6778,8 +6778,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_rf_profile_by_id(self,
                                 id,
@@ -6795,14 +6795,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_rf_profile_by_id_v1 .
-        """ 
+        """
         return self.get_rf_profile_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_wireless_profile(self,
                                    profileDetails=None,
@@ -6824,7 +6824,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_wireless_profile_v1 .
-        """ 
+        """
         return self.create_wireless_profile_v1(
                     profileDetails=profileDetails,
                     headers=headers,
@@ -6832,8 +6832,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def mobility_provision(self,
                               dataLinkEncryption=None,
@@ -6872,7 +6872,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of mobility_provision_v1 .
-        """ 
+        """
         return self.mobility_provision_v1(
                     dataLinkEncryption=dataLinkEncryption,
                     dtlsHighCipher=dtlsHighCipher,
@@ -6886,8 +6886,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_a80211be_profile(self,
                                    id,
@@ -6903,14 +6903,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_a80211be_profile_v1 .
-        """ 
+        """
         return self.delete_a80211be_profile_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_mobility_groups_count(self,
                                      headers=None,
@@ -6929,8 +6929,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_rf_profiles(self,
                            limit=None,
@@ -6948,15 +6948,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_rf_profiles_v1 .
-        """ 
+        """
         return self.get_rf_profiles_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all_mobility_groups(self,
                                    network_device_id=None,
@@ -6975,14 +6975,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_all_mobility_groups_v1 .
-        """ 
+        """
         return self.get_all_mobility_groups_v1(
                     network_device_id=network_device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_wireless_profile(self,
                                    wireless_profile_name,
@@ -6998,14 +6998,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_wireless_profile_v1 .
-        """ 
+        """
         return self.delete_wireless_profile_v1(
                     wireless_profile_name=wireless_profile_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_rf_profiles_count(self,
                                  headers=None,
@@ -7024,8 +7024,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def mobility_reset(self,
                           networkDeviceId=None,
@@ -7049,7 +7049,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of mobility_reset_v1 .
-        """ 
+        """
         return self.mobility_reset_v1(
                     networkDeviceId=networkDeviceId,
                     headers=headers,
@@ -7057,8 +7057,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update80211be_profile(self,
                                  id,
@@ -7092,7 +7092,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update80211be_profile_v1 .
-        """ 
+        """
         return self.update80211be_profile_v1(
                     id=id,
                     muMimoDownLink=muMimoDownLink,
@@ -7106,8 +7106,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_dynamic_interface(self,
                                  interface_name=None,
@@ -7124,14 +7124,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_dynamic_interface_v1 .
-        """ 
+        """
         return self.get_dynamic_interface_v1(
                     interface_name=interface_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_interface_by_id(self,
                                id,
@@ -7147,14 +7147,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_interface_by_id_v1 .
-        """ 
+        """
         return self.get_interface_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_wireless_profile(self,
                                 profile_name=None,
@@ -7170,14 +7170,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_wireless_profile_v1 .
-        """ 
+        """
         return self.get_wireless_profile_v1(
                     profile_name=profile_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_ssid(self,
                        site_id,
@@ -7396,7 +7396,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_ssid_v1 .
-        """ 
+        """
         return self.create_ssid_v1(
                     site_id=site_id,
                     aaaOverride=aaaOverride,
@@ -7470,8 +7470,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_enterprise_ssid(self,
                                   aaaOverride=None,
@@ -7567,7 +7567,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_enterprise_ssid_v1 .
-        """ 
+        """
         return self.create_enterprise_ssid_v1(
                     aaaOverride=aaaOverride,
                     authKeyMgmt=authKeyMgmt,
@@ -7606,8 +7606,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_rf_profile(self,
                              id,
@@ -7649,7 +7649,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update_rf_profile_v1 .
-        """ 
+        """
         return self.update_rf_profile_v1(
                     id=id,
                     defaultRfProfile=defaultRfProfile,
@@ -7665,8 +7665,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_access_point_configuration_task_result(self,
                                                       task_id,
@@ -7682,14 +7682,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_access_point_configuration_task_result_v1 .
-        """ 
+        """
         return self.get_access_point_configuration_task_result_v1(
                     task_id=task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_wireless_profile_by_id(self,
                                       id,
@@ -7705,14 +7705,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_wireless_profile_by_id_v1 .
-        """ 
+        """
         return self.get_wireless_profile_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get80211be_profile_by_id(self,
                                     id,
@@ -7728,14 +7728,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get80211be_profile_by_id_v1 .
-        """ 
+        """
         return self.get80211be_profile_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_managed_ap_locations_count_for_specific_wireless_controller(self,
                                                                            network_device_id,
@@ -7752,14 +7752,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_managed_ap_locations_count_for_specific_wireless_controller_v1 .
-        """ 
+        """
         return self.get_managed_ap_locations_count_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_enterprise_ssid(self,
                                   aaaOverride=None,
@@ -7855,7 +7855,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update_enterprise_ssid_v1 .
-        """ 
+        """
         return self.update_enterprise_ssid_v1(
                     aaaOverride=aaaOverride,
                     authKeyMgmt=authKeyMgmt,
@@ -7894,8 +7894,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def ap_provision(self,
                         apZoneName=None,
@@ -7924,7 +7924,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of ap_provision_v1 .
-        """ 
+        """
         return self.ap_provision_v1(
                     apZoneName=apZoneName,
                     networkDevices=networkDevices,
@@ -7935,8 +7935,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def psk_override(self,
                      headers=None,
@@ -7956,15 +7956,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of psk_override_v1 .
-        """ 
+        """
         return self.psk_override_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def provision_update(self,
                          headers=None,
@@ -7984,15 +7984,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of provision_update_v1 .
-        """ 
+        """
         return self.provision_update_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ssid_by_site(self,
                             site_id,
@@ -8012,7 +8012,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_ssid_by_site_v1 .
-        """ 
+        """
         return self.get_ssid_by_site_v1(
                     site_id=site_id,
                     limit=limit,
@@ -8020,8 +8020,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def sensor_test_results(self,
                                end_time=None,
@@ -8044,7 +8044,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of sensor_test_results_v1 .
-        """ 
+        """
         return self.sensor_test_results_v1(
                     end_time=end_time,
                     site_id=site_id,
@@ -8053,8 +8053,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all80211be_profiles(self,
                                    limit=None,
@@ -8072,15 +8072,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_all80211be_profiles_v1 .
-        """ 
+        """
         return self.get_all80211be_profiles_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_interface(self,
                             id,
@@ -8096,14 +8096,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_interface_v1 .
-        """ 
+        """
         return self.delete_interface_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ssid_count_for_specific_wireless_controller(self,
                                                            network_device_id,
@@ -8128,7 +8128,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_ssid_count_for_specific_wireless_controller_v1 .
-        """ 
+        """
         return self.get_ssid_count_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     admin_status=admin_status,
@@ -8136,8 +8136,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def provision(self,
                      headers=None,
@@ -8157,15 +8157,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of provision_v1 .
-        """ 
+        """
         return self.provision_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def reboot_access_points(self,
                                 apMacAddresses=None,
@@ -8187,7 +8187,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of reboot_access_points_v1 .
-        """ 
+        """
         return self.reboot_access_points_v1(
                     apMacAddresses=apMacAddresses,
                     headers=headers,
@@ -8195,8 +8195,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def ap_provision_connectivity(self,
                                      headers=None,
@@ -8216,15 +8216,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of ap_provision_connectivity_v1 .
-        """ 
+        """
         return self.ap_provision_connectivity_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_and_provision_ssid(self,
                                      enableFabric=None,
@@ -8255,7 +8255,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_and_provision_ssid_v1 .
-        """ 
+        """
         return self.create_and_provision_ssid_v1(
                     enableFabric=enableFabric,
                     flexConnect=flexConnect,
@@ -8267,8 +8267,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_or_update_rf_profile(self,
                                        channelWidth=None,
@@ -8310,7 +8310,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_or_update_rf_profile_v1 .
-        """ 
+        """
         return self.create_or_update_rf_profile_v1(
                     channelWidth=channelWidth,
                     defaultRfProfile=defaultRfProfile,
@@ -8328,8 +8328,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_interface(self,
                             interfaceName=None,
@@ -8353,7 +8353,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_interface_v1 .
-        """ 
+        """
         return self.create_interface_v1(
                     interfaceName=interfaceName,
                     vlanId=vlanId,
@@ -8362,8 +8362,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ssid_details_for_specific_wireless_controller(self,
                                                              network_device_id,
@@ -8396,7 +8396,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_ssid_details_for_specific_wireless_controller_v1 .
-        """ 
+        """
         return self.get_ssid_details_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     admin_status=admin_status,
@@ -8407,8 +8407,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_ssid_and_provision_it_to_devices(self,
                                                    managed_aplocations,
@@ -8428,15 +8428,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_ssid_and_provision_it_to_devices_v1 .
-        """ 
+        """
         return self.delete_ssid_and_provision_it_to_devices_v1(
                     managed_aplocations=managed_aplocations,
                     ssid_name=ssid_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_interface(self,
                             id,
@@ -8462,7 +8462,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update_interface_v1 .
-        """ 
+        """
         return self.update_interface_v1(
                     id=id,
                     interfaceName=interfaceName,
@@ -8472,8 +8472,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_wireless_profiles(self,
                                  limit=None,
@@ -8491,15 +8491,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_wireless_profiles_v1 .
-        """ 
+        """
         return self.get_wireless_profiles_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_ssid(self,
                        id,
@@ -8720,7 +8720,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of update_ssid_v1 .
-        """ 
+        """
         return self.update_ssid_v1(
                     id=id,
                     site_id=site_id,
@@ -8795,8 +8795,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_a80211be_profile(self,
                                    muMimoDownLink=None,
@@ -8828,7 +8828,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_a80211be_profile_v1 .
-        """ 
+        """
         return self.create_a80211be_profile_v1(
                     muMimoDownLink=muMimoDownLink,
                     muMimoUpLink=muMimoUpLink,
@@ -8841,8 +8841,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_wireless_profiles_count(self,
                                        headers=None,
@@ -8861,8 +8861,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_access_point_configuration(self,
                                           key,
@@ -8878,14 +8878,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_access_point_configuration_v1 .
-        """ 
+        """
         return self.get_access_point_configuration_v1(
                     key=key,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_rf_profiles(self,
                               rf_profile_name,
@@ -8902,14 +8902,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_rf_profiles_v1 .
-        """ 
+        """
         return self.delete_rf_profiles_v1(
                     rf_profile_name=rf_profile_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_ssid(self,
                        id,
@@ -8927,15 +8927,15 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_ssid_v1 .
-        """ 
+        """
         return self.delete_ssid_v1(
                     id=id,
                     site_id=site_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_enterprise_ssid(self,
                                   ssid_name,
@@ -8951,14 +8951,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_enterprise_ssid_v1 .
-        """ 
+        """
         return self.delete_enterprise_ssid_v1(
                     ssid_name=ssid_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_wireless_profile_connectivity(self,
                                                 id,
@@ -8974,14 +8974,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of delete_wireless_profile_connectivity_v1 .
-        """ 
+        """
         return self.delete_wireless_profile_connectivity_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get80211be_profiles_count(self,
                                      headers=None,
@@ -9000,8 +9000,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ssid_count_by_site(self,
                                   site_id,
@@ -9017,14 +9017,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_ssid_count_by_site_v1 .
-        """ 
+        """
         return self.get_ssid_count_by_site_v1(
                     site_id=site_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_primary_managed_ap_locations_for_specific_wireless_controller(self,
                                                                              network_device_id,
@@ -9046,7 +9046,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_primary_managed_ap_locations_for_specific_wireless_controller_v1 .
-        """ 
+        """
         return self.get_primary_managed_ap_locations_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     limit=limit,
@@ -9054,8 +9054,8 @@ class Wireless(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_wireless_profile_connectivity(self,
                                                 ssidDetails=None,
@@ -9079,7 +9079,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of create_wireless_profile_connectivity_v1 .
-        """ 
+        """
         return self.create_wireless_profile_connectivity_v1(
                     ssidDetails=ssidDetails,
                     wirelessProfileName=wirelessProfileName,
@@ -9088,8 +9088,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def wireless_controller_provision(self,
                                          device_id,
@@ -9118,7 +9118,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of wireless_controller_provision_v1 .
-        """ 
+        """
         return self.wireless_controller_provision_v1(
                     device_id=device_id,
                     interfaces=interfaces,
@@ -9129,8 +9129,8 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_access_point_reboot_task_result(self,
                                                parent_task_id=None,
@@ -9146,14 +9146,14 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_access_point_reboot_task_result_v1 .
-        """ 
+        """
         return self.get_access_point_reboot_task_result_v1(
                     parent_task_id=parent_task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_secondary_managed_ap_locations_for_specific_wireless_controller(self,
                                                                                network_device_id,
@@ -9175,7 +9175,7 @@ class Wireless(object):
 
         Returns:
             This function returns the output of get_secondary_managed_ap_locations_for_specific_wireless_controller_v1 .
-        """ 
+        """
         return self.get_secondary_managed_ap_locations_for_specific_wireless_controller_v1(
                     network_device_id=network_device_id,
                     limit=limit,

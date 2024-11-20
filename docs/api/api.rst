@@ -81,6 +81,12 @@ applications
 
 .. autoclass:: catalystcentersdk.api.v2_3_7_6_1.applications.Applications()
 
+.. _authentication_management_2_3_7_6_1:
+
+authentication_management
+-------------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_6_1.authentication_management.AuthenticationManagement()
 
 
 .. _cisco_trusted_certificates_2_3_7_6_1:

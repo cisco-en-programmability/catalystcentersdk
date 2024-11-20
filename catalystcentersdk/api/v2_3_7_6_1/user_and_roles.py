@@ -98,7 +98,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-role-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!add-role-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -181,7 +181,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-role-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!update-role-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -249,7 +249,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-permissions-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!get-permissions-api
         """
         check_type(headers, dict)
         if headers is not None:
@@ -303,7 +303,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-role-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!delete-role-api
         """
         check_type(headers, dict)
         check_type(role_id, str,
@@ -358,7 +358,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-roles-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!get-roles-api
         """
         check_type(headers, dict)
         if headers is not None:
@@ -420,7 +420,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-users-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!get-users-api
         """
         check_type(headers, dict)
         check_type(invoke_source, str,
@@ -497,7 +497,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-user-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!add-user-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -589,7 +589,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-user-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!update-user-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -665,7 +665,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-user-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!delete-user-api
         """
         check_type(headers, dict)
         check_type(user_id, str,
@@ -720,7 +720,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-setting-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-setting-api
         """
         check_type(headers, dict)
         if headers is not None:
@@ -783,7 +783,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!manage-external-authentication-setting-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!manage-external-authentication-setting-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -850,7 +850,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-servers-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!get-external-authentication-servers-api
         """
         check_type(headers, dict)
         check_type(invoke_source, str,
@@ -917,7 +917,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!add-and-update-a-a-a-attribute-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!add-and-update-aaa-attribute-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -986,7 +986,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-a-a-a-attribute-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!delete-aaa-attribute-api
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1038,7 +1038,7 @@ class UserandRoles(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-a-a-a-attribute-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!get-aaa-attribute-api
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1070,8 +1070,8 @@ class UserandRoles(object):
 
         return self._object_factory('bpm_bedf83096a45ad1beaaa1fc6c192103_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def add_and_update_aaa_attribute_api(self,
                                               attributeName=None,
@@ -1093,7 +1093,7 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of add_and_update_aaa_attribute_api_v1 .
-        """ 
+        """
         return self.add_and_update_aaa_attribute_api_v1(
                     attributeName=attributeName,
                     headers=headers,
@@ -1101,8 +1101,8 @@ class UserandRoles(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_users_api(self,
                          invoke_source,
@@ -1123,15 +1123,15 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of get_users_api_v1 .
-        """ 
+        """
         return self.get_users_api_v1(
                     invoke_source=invoke_source,
                     auth_source=auth_source,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_external_authentication_servers_api(self,
                                                    invoke_source,
@@ -1148,14 +1148,14 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of get_external_authentication_servers_api_v1 .
-        """ 
+        """
         return self.get_external_authentication_servers_api_v1(
                     invoke_source=invoke_source,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_user_api(self,
                         email=None,
@@ -1187,7 +1187,7 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of add_user_api_v1 .
-        """ 
+        """
         return self.add_user_api_v1(
                     email=email,
                     firstName=firstName,
@@ -1200,8 +1200,8 @@ class UserandRoles(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_aaa_attribute_api(self,
                                       headers=None,
@@ -1220,8 +1220,8 @@ class UserandRoles(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_user_api(self,
                            user_id,
@@ -1237,14 +1237,14 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of delete_user_api_v1 .
-        """ 
+        """
         return self.delete_user_api_v1(
                     user_id=user_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_external_authentication_setting_api(self,
                                                    headers=None,
@@ -1263,8 +1263,8 @@ class UserandRoles(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_roles_api(self,
                          headers=None,
@@ -1283,8 +1283,8 @@ class UserandRoles(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_role_api(self,
                         description=None,
@@ -1310,7 +1310,7 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of add_role_api_v1 .
-        """ 
+        """
         return self.add_role_api_v1(
                     description=description,
                     resourceTypes=resourceTypes,
@@ -1320,8 +1320,8 @@ class UserandRoles(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_user_api(self,
                            email=None,
@@ -1353,7 +1353,7 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of update_user_api_v1 .
-        """ 
+        """
         return self.update_user_api_v1(
                     email=email,
                     firstName=firstName,
@@ -1366,8 +1366,8 @@ class UserandRoles(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_permissions_api(self,
                                headers=None,
@@ -1386,8 +1386,8 @@ class UserandRoles(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_aaa_attribute_api(self,
                                    headers=None,
@@ -1406,8 +1406,8 @@ class UserandRoles(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def manage_external_authentication_setting_api(self,
                                                       enable=None,
@@ -1429,7 +1429,7 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of manage_external_authentication_setting_api_v1 .
-        """ 
+        """
         return self.manage_external_authentication_setting_api_v1(
                     enable=enable,
                     headers=headers,
@@ -1437,8 +1437,8 @@ class UserandRoles(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_role_api(self,
                            role_id,
@@ -1454,14 +1454,14 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of delete_role_api_v1 .
-        """ 
+        """
         return self.delete_role_api_v1(
                     role_id=role_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_role_api(self,
                            description=None,
@@ -1487,7 +1487,7 @@ class UserandRoles(object):
 
         Returns:
             This function returns the output of update_role_api_v1 .
-        """ 
+        """
         return self.update_role_api_v1(
                     description=description,
                     resourceTypes=resourceTypes,

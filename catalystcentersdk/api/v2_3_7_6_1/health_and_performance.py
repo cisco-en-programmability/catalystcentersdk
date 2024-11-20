@@ -567,7 +567,7 @@ class HealthAndPerformance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!system-health-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!system-health-api
         """
         check_type(headers, dict)
         check_type(summary, bool)
@@ -641,7 +641,7 @@ class HealthAndPerformance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!system-health-count-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!system-health-count-api
         """
         check_type(headers, dict)
         check_type(domain, str)
@@ -711,7 +711,7 @@ class HealthAndPerformance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!system-performance-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!system-performance-api
         """
         check_type(headers, dict)
         check_type(kpi, str)
@@ -786,7 +786,7 @@ class HealthAndPerformance(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!system-performance-historical-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!system-performance-historical-api
         """
         check_type(headers, dict)
         check_type(kpi, str)
@@ -828,8 +828,8 @@ class HealthAndPerformance(object):
 
         return self._object_factory('bpm_f131d712dc253dca528c0298b3e41c6_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def system_performance(self,
                            end_time=None,
@@ -853,7 +853,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of system_performance_v1 .
-        """ 
+        """
         return self.system_performance_v1(
                     end_time=end_time,
                     function=function,
@@ -862,8 +862,8 @@ class HealthAndPerformance(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def system_performance_historical(self,
                                       end_time=None,
@@ -886,7 +886,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of system_performance_historical_v1 .
-        """ 
+        """
         return self.system_performance_historical_v1(
                     end_time=end_time,
                     kpi=kpi,
@@ -894,8 +894,8 @@ class HealthAndPerformance(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def system_health(self,
                       domain=None,
@@ -922,7 +922,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of system_health_v1 .
-        """ 
+        """
         return self.system_health_v1(
                     domain=domain,
                     limit=limit,
@@ -932,8 +932,8 @@ class HealthAndPerformance(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def deletes_a_validation_workflow(self,
                                          id,
@@ -949,14 +949,14 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of deletes_a_validation_workflow_v1 .
-        """ 
+        """
         return self.deletes_a_validation_workflow_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_validation_details_for_a_validation_set(self,
                                                              id,
@@ -972,14 +972,14 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of retrieves_validation_details_for_a_validation_set_v1 .
-        """ 
+        """
         return self.retrieves_validation_details_for_a_validation_set_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_count_of_validation_workflows(self,
                                                        end_time=None,
@@ -1005,7 +1005,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of retrieves_the_count_of_validation_workflows_v1 .
-        """ 
+        """
         return self.retrieves_the_count_of_validation_workflows_v1(
                     end_time=end_time,
                     run_status=run_status,
@@ -1013,8 +1013,8 @@ class HealthAndPerformance(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_list_of_validation_workflows(self,
                                                       end_time=None,
@@ -1045,7 +1045,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of retrieves_the_list_of_validation_workflows_v1 .
-        """ 
+        """
         return self.retrieves_the_list_of_validation_workflows_v1(
                     end_time=end_time,
                     limit=limit,
@@ -1055,8 +1055,8 @@ class HealthAndPerformance(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def system_health_count(self,
                             domain=None,
@@ -1077,15 +1077,15 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of system_health_count_v1 .
-        """ 
+        """
         return self.system_health_count_v1(
                     domain=domain,
                     subdomain=subdomain,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_validation_workflow_details(self,
                                                  id,
@@ -1101,14 +1101,14 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of retrieves_validation_workflow_details_v1 .
-        """ 
+        """
         return self.retrieves_validation_workflow_details_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def submits_the_workflow_for_executing_validations(self,
                                                           description=None,
@@ -1134,7 +1134,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of submits_the_workflow_for_executing_validations_v1 .
-        """ 
+        """
         return self.submits_the_workflow_for_executing_validations_v1(
                     description=description,
                     name=name,
@@ -1144,8 +1144,8 @@ class HealthAndPerformance(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_all_the_validation_sets(self,
                                              view=None,
@@ -1163,7 +1163,7 @@ class HealthAndPerformance(object):
 
         Returns:
             This function returns the output of retrieves_all_the_validation_sets_v1 .
-        """ 
+        """
         return self.retrieves_all_the_validation_sets_v1(
                     view=view,
                     headers=headers,

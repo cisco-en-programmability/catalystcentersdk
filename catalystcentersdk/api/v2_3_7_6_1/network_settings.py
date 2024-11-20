@@ -316,7 +316,7 @@ class NetworkSettings(object):
                                          site_id=None,
                                          headers=None,
                                          **request_parameters):
-        """API to get device credential details. This API has been deprecated and will not be available in a Cisco DNA
+        """API to get device credential details. This API has been deprecated and will not be available in a Cisco Catalyst
         Center release after August 1st 2024 23:59:59 GMT. Please refer new Intent API : Get All Global
         Credentials V2 .
 
@@ -1140,7 +1140,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!reserve-i-p-subpool
+            https://developer.cisco.com/docs/dna-center/#!reserve-ip-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1292,7 +1292,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-reserve-i-p-subpool
+            https://developer.cisco.com/docs/dna-center/#!update-reserve-ip-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1449,7 +1449,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-p-profile
+            https://developer.cisco.com/docs/dna-center/#!create-sp-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1521,7 +1521,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-p-profile
+            https://developer.cisco.com/docs/dna-center/#!update-sp-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1681,7 +1681,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-a-a-a-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!set-aaa-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1761,7 +1761,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-a-a-a-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!retrieve-aaa-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2277,7 +2277,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-d-h-c-p-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!retrieve-dh-cp-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2343,7 +2343,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-d-n-s-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!retrieve-dns-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2412,7 +2412,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-d-n-s-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!set-dns-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2637,7 +2637,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-n-t-p-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!set-ntp-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2715,7 +2715,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-n-t-p-settings-for-a-site
+            https://developer.cisco.com/docs/dna-center/#!retrieve-ntp-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3084,7 +3084,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-p-profile
+            https://developer.cisco.com/docs/dna-center/#!delete-sp-profile
         """
         check_type(headers, dict)
         check_type(sp_profile_name, str,
@@ -3763,8 +3763,8 @@ class NetworkSettings(object):
 
         return self._object_factory('bpm_a9bbbce953615baeb0a324c61753139d_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def set_image_distribution_settings_for_a_site(self,
                                                       id,
@@ -3788,7 +3788,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_image_distribution_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_image_distribution_settings_for_a_site_v1(
                     id=id,
                     imageDistribution=imageDistribution,
@@ -3797,8 +3797,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_sp_profile(self,
                              sp_profile_name,
@@ -3814,14 +3814,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of delete_sp_profile_v1 .
-        """ 
+        """
         return self.delete_sp_profile_v1(
                     sp_profile_name=sp_profile_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_dhcp_settings_for_a_site(self,
                                         id,
@@ -3845,7 +3845,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_dhcp_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_dhcp_settings_for_a_site_v1(
                     id=id,
                     dhcp=dhcp,
@@ -3854,8 +3854,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_credential_settings_for_a_site(self,
                                                      id,
@@ -3877,15 +3877,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of get_device_credential_settings_for_a_site_v1 .
-        """ 
+        """
         return self.get_device_credential_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_d_h_c_p_settings_for_a_site(self,
                                                 id,
@@ -3906,15 +3906,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_d_h_c_p_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_d_h_c_p_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def release_reserve_ip_subpool(self,
                                       id,
@@ -3930,14 +3930,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of release_reserve_ip_subpool_v1 .
-        """ 
+        """
         return self.release_reserve_ip_subpool_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_device_credential(self,
                                     id,
@@ -3953,14 +3953,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of delete_device_credential_v1 .
-        """ 
+        """
         return self.delete_device_credential_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_service_provider_details(self,
                                         headers=None,
@@ -3979,8 +3979,8 @@ class NetworkSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_sp_profile(self,
                              settings=None,
@@ -4002,7 +4002,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of create_sp_profile_v1 .
-        """ 
+        """
         return self.create_sp_profile_v1(
                     settings=settings,
                     headers=headers,
@@ -4010,8 +4010,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_banner_settings_for_a_site(self,
                                                id,
@@ -4032,15 +4032,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_banner_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_banner_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_network(self,
                        site_id=None,
@@ -4057,14 +4057,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of get_network_v1 .
-        """ 
+        """
         return self.get_network_v1(
                     site_id=site_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_aaa_settings_for_a_site(self,
                                          id,
@@ -4090,7 +4090,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_aaa_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_aaa_settings_for_a_site_v1(
                     id=id,
                     aaaClient=aaaClient,
@@ -4100,8 +4100,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_image_distribution_settings_for_a_site(self,
                                                            id,
@@ -4122,15 +4122,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_image_distribution_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_image_distribution_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_sp_profile(self,
                              settings=None,
@@ -4152,7 +4152,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of update_sp_profile_v1 .
-        """ 
+        """
         return self.update_sp_profile_v1(
                     settings=settings,
                     headers=headers,
@@ -4160,8 +4160,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_time_zone_for_a_site(self,
                                     id,
@@ -4185,7 +4185,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_time_zone_for_a_site_v1 .
-        """ 
+        """
         return self.set_time_zone_for_a_site_v1(
                     id=id,
                     timeZone=timeZone,
@@ -4194,8 +4194,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_device_credentials(self,
                                      settings=None,
@@ -4217,7 +4217,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of create_device_credentials_v1 .
-        """ 
+        """
         return self.create_device_credentials_v1(
                     settings=settings,
                     headers=headers,
@@ -4225,8 +4225,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def sync_network_devices_credential(self,
                                            deviceCredentialId=None,
@@ -4250,7 +4250,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of sync_network_devices_credential_v1 .
-        """ 
+        """
         return self.sync_network_devices_credential_v1(
                     deviceCredentialId=deviceCredentialId,
                     siteId=siteId,
@@ -4259,8 +4259,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def assign_device_credential_to_site(self,
                                             site_id,
@@ -4294,7 +4294,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of assign_device_credential_to_site_v1 .
-        """ 
+        """
         return self.assign_device_credential_to_site_v1(
                     site_id=site_id,
                     cliId=cliId,
@@ -4308,8 +4308,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_network(self,
                           site_id,
@@ -4334,7 +4334,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of create_network_v1 .
-        """ 
+        """
         return self.create_network_v1(
                     site_id=site_id,
                     settings=settings,
@@ -4343,8 +4343,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_device_credential_settings_for_a_site(self,
                                                         id,
@@ -4379,7 +4379,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of update_device_credential_settings_for_a_site_v1 .
-        """ 
+        """
         return self.update_device_credential_settings_for_a_site_v1(
                     id=id,
                     cliCredentialsId=cliCredentialsId,
@@ -4393,8 +4393,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_device_credentials(self,
                                      settings=None,
@@ -4416,7 +4416,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of update_device_credentials_v1 .
-        """ 
+        """
         return self.update_device_credentials_v1(
                     settings=settings,
                     headers=headers,
@@ -4424,8 +4424,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_global_pool(self,
                            limit=None,
@@ -4444,15 +4444,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of get_global_pool_v1 .
-        """ 
+        """
         return self.get_global_pool_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_time_zone_settings_for_a_site(self,
                                                   id,
@@ -4473,15 +4473,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_time_zone_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_time_zone_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_global_pool(self,
                               settings=None,
@@ -4503,7 +4503,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of update_global_pool_v1 .
-        """ 
+        """
         return self.update_global_pool_v1(
                     settings=settings,
                     headers=headers,
@@ -4511,8 +4511,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_d_n_s_settings_for_a_site(self,
                                               id,
@@ -4533,15 +4533,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_d_n_s_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_d_n_s_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_n_t_p_settings_for_a_site(self,
                                          id,
@@ -4565,7 +4565,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_n_t_p_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_n_t_p_settings_for_a_site_v1(
                     id=id,
                     ntp=ntp,
@@ -4574,8 +4574,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_credential_details(self,
                                          site_id=None,
@@ -4592,14 +4592,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of get_device_credential_details_v1 .
-        """ 
+        """
         return self.get_device_credential_details_v1(
                     site_id=site_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_telemetry_settings_for_a_site(self,
                                                   id,
@@ -4621,15 +4621,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_telemetry_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_telemetry_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_aaa_settings_for_a_site(self,
                                               id,
@@ -4650,15 +4650,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_aaa_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_aaa_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_global_ip_pool(self,
                                  id,
@@ -4674,14 +4674,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of delete_global_ip_pool_v1 .
-        """ 
+        """
         return self.delete_global_ip_pool_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_telemetry_settings_for_a_site(self,
                                              id,
@@ -4714,7 +4714,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_telemetry_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_telemetry_settings_for_a_site_v1(
                     id=id,
                     applicationVisibility=applicationVisibility,
@@ -4727,8 +4727,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_reserve_ip_subpool(self,
                                   group_name=None,
@@ -4760,7 +4760,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of get_reserve_ip_subpool_v1 .
-        """ 
+        """
         return self.get_reserve_ip_subpool_v1(
                     group_name=group_name,
                     ignore_inherited_groups=ignore_inherited_groups,
@@ -4771,8 +4771,8 @@ class NetworkSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def reserve_ip_subpool(self,
                               site_id,
@@ -4848,7 +4848,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of reserve_ip_subpool_v1 .
-        """ 
+        """
         return self.reserve_ip_subpool_v1(
                     site_id=site_id,
                     ipv4DhcpServers=ipv4DhcpServers,
@@ -4876,8 +4876,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_d_n_s_settings_for_a_site(self,
                                          id,
@@ -4901,7 +4901,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_d_n_s_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_d_n_s_settings_for_a_site_v1(
                     id=id,
                     dns=dns,
@@ -4910,8 +4910,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_reserve_ip_subpool(self,
                                      id,
@@ -4972,7 +4972,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of update_reserve_ip_subpool_v1 .
-        """ 
+        """
         return self.update_reserve_ip_subpool_v1(
                     id=id,
                     site_id=site_id,
@@ -4995,8 +4995,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_network(self,
                           site_id,
@@ -5021,7 +5021,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of update_network_v1 .
-        """ 
+        """
         return self.update_network_v1(
                     site_id=site_id,
                     settings=settings,
@@ -5030,8 +5030,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_banner_settings_for_a_site(self,
                                           id,
@@ -5055,7 +5055,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of set_banner_settings_for_a_site_v1 .
-        """ 
+        """
         return self.set_banner_settings_for_a_site_v1(
                     id=id,
                     banner=banner,
@@ -5064,8 +5064,8 @@ class NetworkSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_network_devices_credentials_sync_status(self,
                                                        id,
@@ -5081,14 +5081,14 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of get_network_devices_credentials_sync_status_v1 .
-        """ 
+        """
         return self.get_network_devices_credentials_sync_status_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_n_t_p_settings_for_a_site(self,
                                               id,
@@ -5109,15 +5109,15 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of retrieve_n_t_p_settings_for_a_site_v1 .
-        """ 
+        """
         return self.retrieve_n_t_p_settings_for_a_site_v1(
                     id=id,
                     inherited=inherited,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_global_pool(self,
                               settings=None,
@@ -5139,7 +5139,7 @@ class NetworkSettings(object):
 
         Returns:
             This function returns the output of create_global_pool_v1 .
-        """ 
+        """
         return self.create_global_pool_v1(
                     settings=settings,
                     headers=headers,

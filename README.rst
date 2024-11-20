@@ -1,6 +1,6 @@
-=============
+==================
 catalystcentersdk
-=============
+==================
 
 *Work with the CatalystCenter APIs in native Python!*
 
@@ -35,7 +35,7 @@ catalystcentersdk
     #  Delete all of the demo tags
     for tag in demo_tags:
         catalyst.tag.delete_tag(tag.id)
-    
+
     # Create a new demo tag
     demo_tag = catalyst.tag.create_tag(name='catalyst Demo')
     task_demo_tag = catalyst.task.get_task_by_id(task_id=demo_tag.response.taskId)
@@ -45,17 +45,17 @@ catalystcentersdk
         created_tag = catalyst.tag.get_tag(name='catalyst Demo')
 
         # Update tag
-        update_tag = catalyst.tag.update_tag(id=created_tag.response[0].id, 
+        update_tag = catalyst.tag.update_tag(id=created_tag.response[0].id,
                                          name='Updated ' + created_tag.response[0].name,
-                                         description='DNA demo tag')
-        
+                                         description='Catalyst demo tag')
+
         print(catalyst.task.get_task_by_id(task_id=update_tag.response.taskId).response.progress)
-        
+
         # Retrieved updated
         updated_tag = catalyst.tag.get_tag(name='Updated catalyst Demo')
         print(updated_tag)
     else:
-        # Get task error details 
+        # Get task error details
         print('Unfortunately ', task_demo_tag.response.progress)
         print('Reason: ', task_demo_tag.response.failureReason)
 
@@ -150,9 +150,9 @@ The following table shows the supported versions.
    * - Cisco CatalystCenter version
      - Python "catalystcentersdk" version
    * - 2.3.7.6
-     - 2.3.7.6.X
+     - 2.3.7.6.x
 
-   
+
 
 If your SDK is older please consider updating it first.
 

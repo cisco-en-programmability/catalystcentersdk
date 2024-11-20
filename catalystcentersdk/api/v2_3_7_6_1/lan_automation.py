@@ -92,7 +92,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-start
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-start
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -154,7 +154,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-session-count
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-session-count
         """
         check_type(headers, dict)
         if headers is not None:
@@ -211,7 +211,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-log
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-log
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -271,7 +271,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-log-by-id
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-log-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -336,7 +336,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-logs-for-individual-devices
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-logs-for-individual-devices
         """
         check_type(headers, dict)
         check_type(log_level, str)
@@ -398,7 +398,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-active-sessions
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-active-sessions
         """
         check_type(headers, dict)
         if headers is not None:
@@ -455,7 +455,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-status
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-status
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -515,7 +515,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-status-by-id
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-status-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -586,7 +586,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-device-update
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-device-update
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -664,7 +664,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-stop
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-stop
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -729,7 +729,7 @@ class LanAutomation(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!l-a-n-automation-stop-and-update-devices
+            https://developer.cisco.com/docs/dna-center/#!lan-automation-stop-and-update-devices
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -919,8 +919,8 @@ class LanAutomation(object):
 
         return self._object_factory('bpm_ad0cb5a12a76384ba4644e55e_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def lan_automation_status_by_id(self,
                                        id,
@@ -936,14 +936,14 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_status_by_id_v1 .
-        """ 
+        """
         return self.lan_automation_status_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_stop(self,
                                id,
@@ -960,14 +960,14 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_stop_v1 .
-        """ 
+        """
         return self.lan_automation_stop_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_log(self,
                               limit=None,
@@ -986,15 +986,15 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_log_v1 .
-        """ 
+        """
         return self.lan_automation_log_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_log_by_id(self,
                                     id,
@@ -1010,14 +1010,14 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_log_by_id_v1 .
-        """ 
+        """
         return self.lan_automation_log_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_logs_for_individual_devices(self,
                                                       id,
@@ -1040,7 +1040,7 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_logs_for_individual_devices_v1 .
-        """ 
+        """
         return self.lan_automation_logs_for_individual_devices_v1(
                     id=id,
                     serial_number=serial_number,
@@ -1048,8 +1048,8 @@ class LanAutomation(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_stop_and_update_devices(self,
                                                   id,
@@ -1072,7 +1072,7 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_stop_and_update_devices_v1 .
-        """ 
+        """
         return self.lan_automation_stop_and_update_devices_v1(
                     id=id,
                     headers=headers,
@@ -1080,8 +1080,8 @@ class LanAutomation(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_start(self,
                                 headers=None,
@@ -1101,15 +1101,15 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_start_v1 .
-        """ 
+        """
         return self.lan_automation_start_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_status(self,
                                  limit=None,
@@ -1128,15 +1128,15 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_status_v1 .
-        """ 
+        """
         return self.lan_automation_status_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_device_update(self,
                                         feature,
@@ -1165,7 +1165,7 @@ class LanAutomation(object):
 
         Returns:
             This function returns the output of lan_automation_device_update_v1 .
-        """ 
+        """
         return self.lan_automation_device_update_v1(
                     feature=feature,
                     hostnameUpdateDevices=hostnameUpdateDevices,
@@ -1176,8 +1176,8 @@ class LanAutomation(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_session_count(self,
                                         headers=None,
@@ -1196,8 +1196,8 @@ class LanAutomation(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def lan_automation_active_sessions(self,
                                           headers=None,

@@ -535,7 +535,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!accept-cisco-i-s-e-server-certificate-for-cisco-i-s-e-server-integration
+            https://developer.cisco.com/docs/dna-center/#!accept-cisco-ise-server-certificate-for-cisco-ise-server-integration
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -625,7 +625,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!creates-configuration-details-of-the-external-i-p-a-m-server
+            https://developer.cisco.com/docs/dna-center/#!creates-configuration-details-of-the-external-ipam-server
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -705,7 +705,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-configuration-details-of-the-external-i-p-a-m-server
+            https://developer.cisco.com/docs/dna-center/#!retrieves-configuration-details-of-the-external-ipam-server
         """
         check_type(headers, dict)
         if headers is not None:
@@ -757,7 +757,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!deletes-configuration-details-of-the-external-i-p-a-m-server
+            https://developer.cisco.com/docs/dna-center/#!deletes-configuration-details-of-the-external-ipam-server
         """
         check_type(headers, dict)
         if headers is not None:
@@ -829,7 +829,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-configuration-details-of-the-external-i-p-a-m-server
+            https://developer.cisco.com/docs/dna-center/#!updates-configuration-details-of-the-external-ipam-server
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -903,7 +903,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-i-s-e-server-integration-status
+            https://developer.cisco.com/docs/dna-center/#!cisco-ise-server-integration-status
         """
         check_type(headers, dict)
         if headers is not None:
@@ -955,7 +955,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!custom-prompt-support-g-e-t-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!custom-prompt-support-get-api
         """
         check_type(headers, dict)
         if headers is not None:
@@ -1018,7 +1018,7 @@ class SystemSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!custom-prompt-p-o-s-t-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!custom-prompt-post-api
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1198,8 +1198,8 @@ class SystemSettings(object):
 
         return self._object_factory('bpm_b2e5d0e7f80b555f865bb1f72c4d7bdd_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def creates_configuration_details_of_the_external_ip_a_m_server(self,
                                                                        password=None,
@@ -1235,7 +1235,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of creates_configuration_details_of_the_external_ip_a_m_server_v1 .
-        """ 
+        """
         return self.creates_configuration_details_of_the_external_ip_a_m_server_v1(
                     password=password,
                     provider=provider,
@@ -1249,8 +1249,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_authentication_and_policy_server_access_configuration(self,
                                                                         id,
@@ -1267,14 +1267,14 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of delete_authentication_and_policy_server_access_configuration_v1 .
-        """ 
+        """
         return self.delete_authentication_and_policy_server_access_configuration_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def set_provisioning_settings(self,
                                      requireItsmApproval=None,
@@ -1301,7 +1301,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of set_provisioning_settings_v1 .
-        """ 
+        """
         return self.set_provisioning_settings_v1(
                     requireItsmApproval=requireItsmApproval,
                     requirePreview=requirePreview,
@@ -1310,8 +1310,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def custom_prompt_support_get_api(self,
                                            headers=None,
@@ -1330,8 +1330,8 @@ class SystemSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_authentication_and_policy_server_access_configuration(self,
                                                                      accountingPort=None,
@@ -1397,7 +1397,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of add_authentication_and_policy_server_access_configuration_v1 .
-        """ 
+        """
         return self.add_authentication_and_policy_server_access_configuration_v1(
                     accountingPort=accountingPort,
                     authenticationPort=authenticationPort,
@@ -1421,8 +1421,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_configuration_details_of_the_external_ip_a_m_server(self,
                                                                          headers=None,
@@ -1441,8 +1441,8 @@ class SystemSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def custom_prompt_post_api(self,
                                      passwordPrompt=None,
@@ -1466,7 +1466,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of custom_prompt_post_api_v1 .
-        """ 
+        """
         return self.custom_prompt_post_api_v1(
                     passwordPrompt=passwordPrompt,
                     usernamePrompt=usernamePrompt,
@@ -1475,8 +1475,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_provisioning_settings(self,
                                      headers=None,
@@ -1495,8 +1495,8 @@ class SystemSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def accept_cisco_ise_server_certificate_for_cisco_ise_server_integration(self,
                                                                                 id,
@@ -1522,7 +1522,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of accept_cisco_ise_server_certificate_for_cisco_ise_server_integration_v1 .
-        """ 
+        """
         return self.accept_cisco_ise_server_certificate_for_cisco_ise_server_integration_v1(
                     id=id,
                     isCertAcceptedByUser=isCertAcceptedByUser,
@@ -1531,8 +1531,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def deletes_configuration_details_of_the_external_ip_a_m_server(self,
                                                                        headers=None,
@@ -1551,8 +1551,8 @@ class SystemSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def cisco_ise_server_integration_status(self,
                                                headers=None,
@@ -1571,8 +1571,8 @@ class SystemSettings(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def edit_authentication_and_policy_server_access_configuration(self,
                                                                       id,
@@ -1641,7 +1641,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of edit_authentication_and_policy_server_access_configuration_v1 .
-        """ 
+        """
         return self.edit_authentication_and_policy_server_access_configuration_v1(
                     id=id,
                     accountingPort=accountingPort,
@@ -1666,8 +1666,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def updates_configuration_details_of_the_external_ip_a_m_server(self,
                                                                        password=None,
@@ -1701,7 +1701,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of updates_configuration_details_of_the_external_ip_a_m_server_v1 .
-        """ 
+        """
         return self.updates_configuration_details_of_the_external_ip_a_m_server_v1(
                     password=password,
                     serverName=serverName,
@@ -1714,8 +1714,8 @@ class SystemSettings(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_authentication_and_policy_servers(self,
                                                  is_ise_enabled=None,
@@ -1737,7 +1737,7 @@ class SystemSettings(object):
 
         Returns:
             This function returns the output of get_authentication_and_policy_servers_v1 .
-        """ 
+        """
         return self.get_authentication_and_policy_servers_v1(
                     is_ise_enabled=is_ise_enabled,
                     role=role,

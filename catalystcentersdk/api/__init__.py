@@ -43,6 +43,8 @@ from catalystcentersdk.utils import check_type
 from .authentication import Authentication
 from .v2_3_7_6_1.ai_endpoint_analytics import \
     AIEndpointAnalytics as AIEndpointAnalytics_v2_3_7_6_1
+from .v2_3_7_6_1.authentication_management import \
+    AuthenticationManagement as AuthenticationManagement_v2_3_7_6_1
 from .v2_3_7_6_1.application_policy import \
     ApplicationPolicy as ApplicationPolicy_v2_3_7_6_1
 from .v2_3_7_6_1.applications import \
@@ -143,6 +145,7 @@ class CatalystCenterAPI(object):
                  base_url=None,
                  single_request_timeout=None,
                  wait_on_rate_limit=None,
+                 session=None,
                  verify=None,
                  version=None,
                  debug=None,
@@ -227,7 +230,7 @@ class CatalystCenterAPI(object):
         password = password or catalystcenter_environment.get_env_password()
         encoded_auth = encoded_auth or catalystcenter_environment.get_env_encoded_auth()
         base_url = base_url or catalystcenter_environment.get_env_base_url() or DEFAULT_BASE_URL
-        user_agent = catalystcenter_environment.get_env_user_agent()
+        user_agent = user_agent or catalystcenter_environment.get_env_user_agent()
 
         if single_request_timeout is None:
             single_request_timeout = catalystcenter_environment.get_env_single_request_timeout() or DEFAULT_SINGLE_REQUEST_TIMEOUT
@@ -242,7 +245,7 @@ class CatalystCenterAPI(object):
 
         if debug is None:
             debug = catalystcenter_environment.get_env_debug() or DEFAULT_DEBUG
-        
+
         if user_agent is None:
             user_agent = catalystcenter_environment.get_env_user_agent() or DEFAULT_VERIFY_USER_AGENT
 
@@ -303,6 +306,7 @@ class CatalystCenterAPI(object):
             base_url=base_url,
             single_request_timeout=single_request_timeout,
             wait_on_rate_limit=wait_on_rate_limit,
+            session= session,
             verify=verify,
             version=version,
             debug=debug,
@@ -316,6 +320,10 @@ class CatalystCenterAPI(object):
         if version == '2.3.7.6':
             self.ai_endpoint_analytics = \
                 AIEndpointAnalytics_v2_3_7_6_1(
+                    self._session, object_factory, _validator
+                )
+            self.authentication_management = \
+                AuthenticationManagement_v2_3_7_6_1(
                     self._session, object_factory, _validator
                 )
             self.application_policy = \

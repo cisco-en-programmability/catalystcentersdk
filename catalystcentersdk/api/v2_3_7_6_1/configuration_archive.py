@@ -238,8 +238,8 @@ class ConfigurationArchive(object):
 
         return self._object_factory('bpm_ff699112d3854d99557dc1f48987f09_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def export_device_configurations(self,
                                         deviceId=None,
@@ -268,7 +268,7 @@ class ConfigurationArchive(object):
 
         Returns:
             This function returns the output of export_device_configurations_v1.
-        """  
+        """
         return self.export_device_configurations_v1(
                     deviceId=deviceId,
                     password=password,
@@ -277,8 +277,8 @@ class ConfigurationArchive(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_configuration_archive_details(self,
                                              created_by=None,
@@ -310,7 +310,7 @@ class ConfigurationArchive(object):
 
         Returns:
             This function returns the output of get_configuration_archive_details_v1.
-        """  
+        """
         return self.get_configuration_archive_details_v1(
                     created_by=created_by,
                     created_time=created_time,

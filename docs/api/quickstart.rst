@@ -21,7 +21,7 @@ A CatalystCenter Access Token is how the CatalystCenter APIs validate access and
 requesting user.
 
 As a `best practice`__, you can store your CatalystCenter 'credentials' as
-an environment variables in your development or production environment. 
+an environment variables in your development or production environment.
 
 By default, catalystcentersdk will look for the following environment variables to create new connection objects:
 
@@ -134,7 +134,7 @@ If you don't provide a known version and try to create a new :class:`CatalystCen
     VersionError: Unknown API version, known versions are  2.2.2.3, 2.2.3.3, 2.3.3.0, 2.3.5.3 and 2.3.7.6.
 
 
-Use the arguments to manually provide enough information for the HTTP Basic Auth process, 
+Use the arguments to manually provide enough information for the HTTP Basic Auth process,
 when creating a new :class:`CatalystCenterAPI` connection object.
 
 .. code-block:: python
@@ -174,7 +174,7 @@ To avoid getting errors like the following:
 .. code-block:: python
 
     >>> from catalystcentersdk import CatalystCenterAPI
-    >>> own_api = CatalystCenterAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK', 
+    >>> own_api = CatalystCenterAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK',
     ... base_url="https://128.107.71.199:443", version='2.3.7.6')
     requests.exceptions.SLError: HTTPSConnectionPool(host='128.107.71.199', port=443):
     Max retries exceeded with url: /dna/system/api/v1/auth/token (Caused by
@@ -187,7 +187,7 @@ Include the verify parameter and set it to False:
 .. code-block:: python
 
     >>> from catalystcentersdk import CatalystCenterAPI
-    >>> own_api = CatalystCenterAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK', 
+    >>> own_api = CatalystCenterAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK',
     ... base_url="https://128.107.71.199:443", version='1.3.0',
     ... verify=False)
     InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate
@@ -212,7 +212,7 @@ The following are the default values pulled ``from catalystcentersdk.config`` an
 .. automodule:: catalystcentersdk.config
     :members:
     :no-undoc-members:
-    :exclude-members: DEBUG_ENVIRONMENT_VARIABLE, VERSION_ENVIRONMENT_VARIABLE, USERNAME_ENVIRONMENT_VARIABLE, PASSWORD_ENVIRONMENT_VARIABLE, ENCODED_AUTH_ENVIRONMENT_VARIABLE, BASE_URL_ENVIRONMENT_VARIABLE, SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE, WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE, VERIFY_ENVIRONMENT_VARIABLE, VERIFY_STRING_ENVIRONMENT_VARIABLE 
+    :exclude-members: DEBUG_ENVIRONMENT_VARIABLE, VERSION_ENVIRONMENT_VARIABLE, USERNAME_ENVIRONMENT_VARIABLE, PASSWORD_ENVIRONMENT_VARIABLE, ENCODED_AUTH_ENVIRONMENT_VARIABLE, BASE_URL_ENVIRONMENT_VARIABLE, SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE, WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE, VERIFY_ENVIRONMENT_VARIABLE, VERIFY_STRING_ENVIRONMENT_VARIABLE
 
 
 Making API Calls
@@ -223,7 +223,7 @@ ready to start making API calls.
 
 .. code-block:: python
 
-    >>> api.device_onboarding_pnp.get_workflows()[0] # api.pnp.get_workflows()[0] till version 1.3.0 
+    >>> api.device_onboarding_pnp.get_workflows()[0] # api.pnp.get_workflows()[0] till version 1.3.0
     {
       'version': 1,
       'name': 'test',
@@ -259,7 +259,7 @@ It really is that easy.
 
 All of the calls have been wrapped and represented as native Python method
 calls, like :meth:`CatalystCenterAPI.device_onboarding_pnp.get_workflows() <catalystcentersdk.api.v2_1_2.device_onboarding_pnp.DeviceOnboardingPnp.get_workflows>` which gets the workflows details
-for the pnp - see 
+for the pnp - see
 the `Get Workflows
 <https://pubhub.devnetcloud.com/media/dnac-api-docs-1-3-3-x/docs/Antman-swagger-v1.annotated.html#/Device%20Onboarding%20(PnP)/getWorkflows>`_ API endpoint
 documentation.
@@ -270,7 +270,7 @@ API endpoint as a ``device_onboarding_pnp.get_workflows()`` method available und
 :class:`CatalystCenterAPI` connection object.
 
 A full list of the available API methods, with their descriptions and
-parameters, is available in the :ref:`User API Doc`. 
+parameters, is available in the :ref:`User API Doc`.
 
 A summary of the structure is available for each version supported
 
@@ -283,7 +283,7 @@ You can easily access and call any of these methods directly from your
 
 .. code-block:: python
 
-    >>> api.device_onboarding_pnp.get_device_list(limit=1)  # api.pnp.get_device_list(limit=1) till version 1.3.0 
+    >>> api.device_onboarding_pnp.get_device_list(limit=1)  # api.pnp.get_device_list(limit=1) till version 1.3.0
     [{'version': 1,
       'deviceInfo': {'serialNumber': '1234567890s',
       'name': 'Postname-add',
@@ -417,7 +417,7 @@ attributes using '.' notation)? catalystcentersdk enables you to do just that:
 
 .. code-block:: python
 
-    >>> pnp_devices = api.device_onboarding_pnp.get_device_list() # api.device_onboarding_pnp.get_device_list() till version 1.3.0 
+    >>> pnp_devices = api.device_onboarding_pnp.get_device_list() # api.device_onboarding_pnp.get_device_list() till version 1.3.0
     >>> pnp_devices[0].id
     '5cf9bd2b568ecc000779da65'
     >>> pnp_devices[0].deviceInfo.state
@@ -606,9 +606,9 @@ Custom caller functions help you:
                     credential_type(str): Credential type as CLI
                         / SNMPV2_READ_COMMUNITY /
                         SNMPV2_WRITE_COMMUNITY / SNMPV3 /
-                        HTTP_WRITE / HTTP_READ / NETCONF. 
+                        HTTP_WRITE / HTTP_READ / NETCONF.
 
-                Returns: 
+                Returns:
                     MyDict: JSON response. Access the object's properties by using
                     the dot notation or the bracket notation.
             """
@@ -634,10 +634,10 @@ Custom caller functions help you:
         # Finally add the documentation
         api_.custom_caller.create_netconf_credentials.__doc__ = """
             Custom global credential API call to add NETCONF credentials
-            
+
             Receives:
                 port(string): Netconf port number
-            
+
             Returns: JSON response.
             """
 

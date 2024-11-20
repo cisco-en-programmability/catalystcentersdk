@@ -95,7 +95,7 @@ class Itsm(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-c-m-d-b-sync-status
+            https://developer.cisco.com/docs/dna-center/#!get-cmdb-sync-status
         """
         check_type(headers, dict)
         check_type(status, str)
@@ -157,7 +157,7 @@ class Itsm(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-failed-i-t-s-m-events
+            https://developer.cisco.com/docs/dna-center/#!get-failed-itsm-events
         """
         check_type(headers, dict)
         check_type(instance_id, str)
@@ -260,8 +260,8 @@ class Itsm(object):
 
         return self._object_factory('bpm_cfb1d6e52878d057740de275896_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def get_cmdb_sync_status(self,
                                 date=None,
@@ -280,15 +280,15 @@ class Itsm(object):
 
         Returns:
             This function returns the output of get_cmdb_sync_status_v1 .
-        """ 
+        """
         return self.get_cmdb_sync_status_v1(
                     date=date,
                     status=status,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_failed_itsm_events(self,
                                   instance_id=None,
@@ -305,14 +305,14 @@ class Itsm(object):
 
         Returns:
             This function returns the output of get_failed_itsm_events_v1 .
-        """ 
+        """
         return self.get_failed_itsm_events_v1(
                     instance_id=instance_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retry_integration_events(self,
                                     headers=None,
@@ -332,7 +332,7 @@ class Itsm(object):
 
         Returns:
             This function returns the output of retry_integration_events_v1 .
-        """ 
+        """
         return self.retry_integration_events_v1(
                     headers=headers,
                     payload=payload,

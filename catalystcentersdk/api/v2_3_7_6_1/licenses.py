@@ -215,7 +215,7 @@ class Licenses(object):
             device_type(str): device_type query parameter. Type of device .
             registration_status(str): registration_status query parameter. Smart license registration status
                 of device .
-            dna_level(str): dna_level query parameter. Device Cisco DNA License Level .
+            dna_level(str): dna_level query parameter. Device Cisco Catalyst License Level .
             virtual_account_name(str): virtual_account_name query parameter. Virtual account name .
             smart_account_id(str): smart_account_id query parameter. Smart account id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -298,7 +298,7 @@ class Licenses(object):
             page_number(int): page_number query parameter. Page number of response .
             order(str): order query parameter. Sorting order .
             sort_by(str): sort_by query parameter. Sort result by field .
-            dna_level(str): dna_level query parameter. Device Cisco DNA license level. The valid values are
+            dna_level(str): dna_level query parameter. Device Cisco Catalyst license level. The valid values are
                 Advantage, Essentials .
             device_type(str): device_type query parameter. Type of device. The valid values are Routers,
                 Switches and Hubs, Wireless Controller .
@@ -871,7 +871,7 @@ class Licenses(object):
                                  virtual_account_name,
                                  headers=None,
                                  **request_parameters):
-        """Get count of purchased and in use Cisco DNA and Network licenses. .
+        """Get count of purchased and in use Cisco Catalyst and Network licenses. .
 
         Args:
             smart_account_id(str): smart_account_id path parameter. Id of smart account .
@@ -936,8 +936,8 @@ class Licenses(object):
 
         return self._object_factory('bpm_e55ecbbda454c6a01d905e6f4cce16_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def virtual_account_details(self,
                                    smart_account_id,
@@ -953,14 +953,14 @@ class Licenses(object):
 
         Returns:
             This function returns the output of virtual_account_details_v1 .
-        """ 
+        """
         return self.virtual_account_details_v1(
                     smart_account_id=smart_account_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def license_term_details(self,
                                 device_type,
@@ -982,7 +982,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of license_term_details_v1 .
-        """ 
+        """
         return self.license_term_details_v1(
                     device_type=device_type,
                     smart_account_id=smart_account_id,
@@ -990,8 +990,8 @@ class Licenses(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def device_count_details(self,
                                 device_type=None,
@@ -1006,7 +1006,7 @@ class Licenses(object):
             device_type(basestring): device_type query parameter. Type of device .
             registration_status(basestring): registration_status query parameter. Smart license registration status
                 of device .
-            dna_level(basestring): dna_level query parameter. Device Cisco DNA License Level .
+            dna_level(basestring): dna_level query parameter. Device Cisco Catalyst License Level .
             virtual_account_name(basestring): virtual_account_name query parameter. Virtual account name .
             smart_account_id(basestring): smart_account_id query parameter. Smart account id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1016,7 +1016,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of device_count_details_v1 .
-        """ 
+        """
         return self.device_count_details_v1(
                     device_type=device_type,
                     dna_level=dna_level,
@@ -1026,8 +1026,8 @@ class Licenses(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_license_setting(self,
                                     headers=None,
@@ -1046,8 +1046,8 @@ class Licenses(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def device_license_summary(self,
                                   limit,
@@ -1067,7 +1067,7 @@ class Licenses(object):
             page_number(int): page_number query parameter. Page number of response .
             order(basestring): order query parameter. Sorting order .
             sort_by(basestring): sort_by query parameter. Sort result by field .
-            dna_level(basestring): dna_level query parameter. Device Cisco DNA license level. The valid values are
+            dna_level(basestring): dna_level query parameter. Device Cisco Catalyst license level. The valid values are
                 Advantage, Essentials .
             device_type(basestring): device_type query parameter. Type of device. The valid values are Routers,
                 Switches and Hubs, Wireless Controller .
@@ -1086,7 +1086,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of device_license_summary_v1 .
-        """ 
+        """
         return self.device_license_summary_v1(
                     limit=limit,
                     order=order,
@@ -1101,8 +1101,8 @@ class Licenses(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def change_virtual_account(self,
                                   smart_account_id,
@@ -1128,7 +1128,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of change_virtual_account_v1 .
-        """ 
+        """
         return self.change_virtual_account_v1(
                     smart_account_id=smart_account_id,
                     virtual_account_name=virtual_account_name,
@@ -1138,8 +1138,8 @@ class Licenses(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def device_registration(self,
                                virtual_account_name,
@@ -1163,7 +1163,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of device_registration_v1 .
-        """ 
+        """
         return self.device_registration_v1(
                     virtual_account_name=virtual_account_name,
                     device_uuids=device_uuids,
@@ -1172,8 +1172,8 @@ class Licenses(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def smart_account_details(self,
                                  headers=None,
@@ -1192,8 +1192,8 @@ class Licenses(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_license_setting(self,
                                   autoRegistrationVirtualAccountId=None,
@@ -1217,7 +1217,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of update_license_setting_v1 .
-        """ 
+        """
         return self.update_license_setting_v1(
                     autoRegistrationVirtualAccountId=autoRegistrationVirtualAccountId,
                     defaultSmartAccountId=defaultSmartAccountId,
@@ -1226,8 +1226,8 @@ class Licenses(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def device_license_details(self,
                                   device_uuid,
@@ -1243,14 +1243,14 @@ class Licenses(object):
 
         Returns:
             This function returns the output of device_license_details_v1 .
-        """ 
+        """
         return self.device_license_details_v1(
                     device_uuid=device_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def device_deregistration(self,
                                  device_uuids=None,
@@ -1272,7 +1272,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of device_deregistration_v1 .
-        """ 
+        """
         return self.device_deregistration_v1(
                     device_uuids=device_uuids,
                     headers=headers,
@@ -1280,8 +1280,8 @@ class Licenses(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def license_usage_details(self,
                                  device_type,
@@ -1303,7 +1303,7 @@ class Licenses(object):
 
         Returns:
             This function returns the output of license_usage_details_v1 .
-        """ 
+        """
         return self.license_usage_details_v1(
                     device_type=device_type,
                     smart_account_id=smart_account_id,

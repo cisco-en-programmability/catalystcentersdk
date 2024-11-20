@@ -100,7 +100,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-i-t-s-m-integration-setting
+            https://developer.cisco.com/docs/dna-center/#!create-itsm-integration-setting
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -186,7 +186,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-i-t-s-m-integration-setting
+            https://developer.cisco.com/docs/dna-center/#!update-itsm-integration-setting
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -262,7 +262,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-t-s-m-integration-setting-by-id
+            https://developer.cisco.com/docs/dna-center/#!get-itsm-integration-setting-by-id
         """
         check_type(headers, dict)
         check_type(instance_id, str,
@@ -320,7 +320,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-i-t-s-m-integration-setting
+            https://developer.cisco.com/docs/dna-center/#!delete-itsm-integration-setting
         """
         check_type(headers, dict)
         check_type(instance_id, str,
@@ -377,7 +377,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-i-t-s-m-integration-settings
+            https://developer.cisco.com/docs/dna-center/#!get-all-itsm-integration-settings
         """
         check_type(headers, dict)
         if headers is not None:
@@ -429,7 +429,7 @@ class ItsmIntegration(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-t-s-m-integration-status
+            https://developer.cisco.com/docs/dna-center/#!get-itsm-integration-status
         """
         check_type(headers, dict)
         if headers is not None:
@@ -461,8 +461,8 @@ class ItsmIntegration(object):
 
         return self._object_factory('bpm_e8398520e0aa5a549ddb60c11581b93d_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def create_itsm_integration_setting(self,
                                            data=None,
@@ -490,7 +490,7 @@ class ItsmIntegration(object):
 
         Returns:
             This function returns the output of create_itsm_integration_setting_v1 .
-        """ 
+        """
         return self.create_itsm_integration_setting_v1(
                     data=data,
                     description=description,
@@ -501,8 +501,8 @@ class ItsmIntegration(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all_itsm_integration_settings(self,
                                              headers=None,
@@ -521,8 +521,8 @@ class ItsmIntegration(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_itsm_integration_status(self,
                                        headers=None,
@@ -541,8 +541,8 @@ class ItsmIntegration(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_itsm_integration_setting(self,
                                            instance_id,
@@ -572,7 +572,7 @@ class ItsmIntegration(object):
 
         Returns:
             This function returns the output of update_itsm_integration_setting_v1 .
-        """ 
+        """
         return self.update_itsm_integration_setting_v1(
                     instance_id=instance_id,
                     data=data,
@@ -584,8 +584,8 @@ class ItsmIntegration(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_itsm_integration_setting_by_id(self,
                                               instance_id,
@@ -601,14 +601,14 @@ class ItsmIntegration(object):
 
         Returns:
             This function returns the output of get_itsm_integration_setting_by_id_v1 .
-        """ 
+        """
         return self.get_itsm_integration_setting_by_id_v1(
                     instance_id=instance_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_itsm_integration_setting(self,
                                            instance_id,
@@ -624,7 +624,7 @@ class ItsmIntegration(object):
 
         Returns:
             This function returns the output of delete_itsm_integration_setting_v1 .
-        """ 
+        """
         return self.delete_itsm_integration_setting_v1(
                     instance_id=instance_id,
                     headers=headers,

@@ -606,7 +606,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-discovery-jobs-by-i-p
+            https://developer.cisco.com/docs/dna-center/#!get-discovery-jobs-by-ip
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -1396,7 +1396,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-c-l-i-credentials
+            https://developer.cisco.com/docs/dna-center/#!update-cli-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1485,7 +1485,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-c-l-i-credentials
+            https://developer.cisco.com/docs/dna-center/#!create-cli-credentials
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1550,7 +1550,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-h-t-t-p-read-credentials
+            https://developer.cisco.com/docs/dna-center/#!create-http-read-credentials
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -1639,7 +1639,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-h-t-t-p-read-credential
+            https://developer.cisco.com/docs/dna-center/#!update-http-read-credential
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1748,7 +1748,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-h-t-t-p-write-credentials
+            https://developer.cisco.com/docs/dna-center/#!update-http-write-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1839,7 +1839,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-h-t-t-p-write-credentials
+            https://developer.cisco.com/docs/dna-center/#!create-http-write-credentials
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2081,7 +2081,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-n-m-p-read-community
+            https://developer.cisco.com/docs/dna-center/#!update-snmp-read-community
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2163,7 +2163,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-n-m-p-read-community
+            https://developer.cisco.com/docs/dna-center/#!create-snmp-read-community
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2229,7 +2229,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-n-m-p-write-community
+            https://developer.cisco.com/docs/dna-center/#!create-snmp-write-community
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2309,7 +2309,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-n-m-p-write-community
+            https://developer.cisco.com/docs/dna-center/#!update-snmp-write-community
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2420,7 +2420,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-n-m-pv3-credentials
+            https://developer.cisco.com/docs/dna-center/#!update-snmpv3-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2515,7 +2515,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-n-m-pv3-credentials
+            https://developer.cisco.com/docs/dna-center/#!create-snmpv3-credentials
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -2767,7 +2767,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-s-n-m-p-properties
+            https://developer.cisco.com/docs/dna-center/#!get-snmp-properties
         """
         check_type(headers, dict)
         if headers is not None:
@@ -2825,7 +2825,7 @@ class Discovery(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-update-s-n-m-p-properties
+            https://developer.cisco.com/docs/dna-center/#!create-update-snmp-properties
         """
         check_type(headers, dict)
         check_type(payload, list)
@@ -3160,8 +3160,8 @@ class Discovery(object):
 
         return self._object_factory('bpm_caa7cd8d7a3550cfb102cd3498494d04_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def create_snmp_write_community(self,
                                        headers=None,
@@ -3181,15 +3181,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_snmp_write_community_v1 .
-        """ 
+        """
         return self.create_snmp_write_community_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_discoveries_by_range(self,
                                     records_to_return,
@@ -3208,15 +3208,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_discoveries_by_range_v1 .
-        """ 
+        """
         return self.get_discoveries_by_range_v1(
                     records_to_return=records_to_return,
                     start_index=start_index,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_count_of_all_discovery_jobs(self,
                                            headers=None,
@@ -3235,8 +3235,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_snmp_properties(self,
                                headers=None,
@@ -3255,8 +3255,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_discovered_network_devices_by_discovery_id(self,
                                                           id,
@@ -3274,15 +3274,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_discovered_network_devices_by_discovery_id_v1 .
-        """ 
+        """
         return self.get_discovered_network_devices_by_discovery_id_v1(
                     id=id,
                     task_id=task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_global_credentials(self,
                                   credential_sub_type,
@@ -3305,7 +3305,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_global_credentials_v1 .
-        """ 
+        """
         return self.get_global_credentials_v1(
                     credential_sub_type=credential_sub_type,
                     order=order,
@@ -3313,8 +3313,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_devices_discovered_by_id(self,
                                         id,
@@ -3332,15 +3332,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_devices_discovered_by_id_v1 .
-        """ 
+        """
         return self.get_devices_discovered_by_id_v1(
                     id=id,
                     task_id=task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_discovery_by_specified_range(self,
                                                records_to_delete,
@@ -3359,15 +3359,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of delete_discovery_by_specified_range_v1 .
-        """ 
+        """
         return self.delete_discovery_by_specified_range_v1(
                     records_to_delete=records_to_delete,
                     start_index=start_index,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_netconf_credentials(self,
                                       comments=None,
@@ -3403,7 +3403,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_netconf_credentials_v1 .
-        """ 
+        """
         return self.update_netconf_credentials_v1(
                     comments=comments,
                     credentialType=credentialType,
@@ -3417,8 +3417,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_discovered_devices_by_range(self,
                                            id,
@@ -3441,7 +3441,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_discovered_devices_by_range_v1 .
-        """ 
+        """
         return self.get_discovered_devices_by_range_v1(
                     id=id,
                     records_to_return=records_to_return,
@@ -3450,8 +3450,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_all_discovery(self,
                                 headers=None,
@@ -3470,8 +3470,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def updates_discovery_by_id(self,
                                 attributeInfo=None,
@@ -3571,7 +3571,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of updates_discovery_by_id_v1 .
-        """ 
+        """
         return self.updates_discovery_by_id_v1(
                     attributeInfo=attributeInfo,
                     cdpLevel=cdpLevel,
@@ -3614,8 +3614,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_snmp_read_community(self,
                                       comments=None,
@@ -3646,7 +3646,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_snmp_read_community_v1 .
-        """ 
+        """
         return self.update_snmp_read_community_v1(
                     comments=comments,
                     credentialType=credentialType,
@@ -3658,8 +3658,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_snmpv3_credentials(self,
                                      authPassword=None,
@@ -3711,7 +3711,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_snmpv3_credentials_v1 .
-        """ 
+        """
         return self.update_snmpv3_credentials_v1(
                     authPassword=authPassword,
                     authType=authType,
@@ -3730,8 +3730,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_global_credentials_by_id(self,
                                            global_credential_id,
@@ -3747,14 +3747,14 @@ class Discovery(object):
 
         Returns:
             This function returns the output of delete_global_credentials_by_id_v1 .
-        """ 
+        """
         return self.delete_global_credentials_by_id_v1(
                     global_credential_id=global_credential_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_list_of_discoveries_by_discovery_id(self,
                                                    id,
@@ -3776,7 +3776,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_list_of_discoveries_by_discovery_id_v1 .
-        """ 
+        """
         return self.get_list_of_discoveries_by_discovery_id_v1(
                     id=id,
                     ip_address=ip_address,
@@ -3785,8 +3785,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_discovery_by_id(self,
                                   id,
@@ -3802,14 +3802,14 @@ class Discovery(object):
 
         Returns:
             This function returns the output of delete_discovery_by_id_v1 .
-        """ 
+        """
         return self.delete_discovery_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_global_credentials(self,
                                      global_credential_id,
@@ -3833,7 +3833,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_global_credentials_v1 .
-        """ 
+        """
         return self.update_global_credentials_v1(
                     global_credential_id=global_credential_id,
                     siteUuids=siteUuids,
@@ -3842,8 +3842,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_credential_sub_type_by_credential_id(self,
                                                     id,
@@ -3859,14 +3859,14 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_credential_sub_type_by_credential_id_v1 .
-        """ 
+        """
         return self.get_credential_sub_type_by_credential_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_global_credentials(self,
                                      cliCredential=None,
@@ -3898,7 +3898,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_global_credentials_v2 .
-        """ 
+        """
         return self.create_global_credentials_v2(
                     cliCredential=cliCredential,
                     httpsRead=httpsRead,
@@ -3911,8 +3911,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all_global_credentials(self,
                                       headers=None,
@@ -3931,8 +3931,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_http_read_credentials(self,
                                         headers=None,
@@ -3952,15 +3952,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_http_read_credentials_v1 .
-        """ 
+        """
         return self.create_http_read_credentials_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_network_devices_from_discovery(self,
                                               id,
@@ -4002,7 +4002,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_network_devices_from_discovery_v1 .
-        """ 
+        """
         return self.get_network_devices_from_discovery_v1(
                     id=id,
                     clistatus=clistatus,
@@ -4017,8 +4017,8 @@ class Discovery(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_cli_credentials(self,
                                   comments=None,
@@ -4057,7 +4057,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_cli_credentials_v1 .
-        """ 
+        """
         return self.update_cli_credentials_v1(
                     comments=comments,
                     credentialType=credentialType,
@@ -4073,8 +4073,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def start_discovery(self,
                            cdpLevel=None,
@@ -4158,7 +4158,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of start_discovery_v1 .
-        """ 
+        """
         return self.start_discovery_v1(
                     cdpLevel=cdpLevel,
                     discoveryType=discoveryType,
@@ -4193,8 +4193,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_snmp_read_community(self,
                                       headers=None,
@@ -4214,15 +4214,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_snmp_read_community_v1 .
-        """ 
+        """
         return self.create_snmp_read_community_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_cli_credentials(self,
                                   headers=None,
@@ -4242,15 +4242,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_cli_credentials_v1 .
-        """ 
+        """
         return self.create_cli_credentials_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_http_read_credential(self,
                                        comments=None,
@@ -4291,7 +4291,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_http_read_credential_v1 .
-        """ 
+        """
         return self.update_http_read_credential_v1(
                     comments=comments,
                     credentialType=credentialType,
@@ -4308,8 +4308,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_http_write_credentials(self,
                                          comments=None,
@@ -4350,7 +4350,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_http_write_credentials_v1 .
-        """ 
+        """
         return self.update_http_write_credentials_v1(
                     comments=comments,
                     credentialType=credentialType,
@@ -4367,8 +4367,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_global_credential(self,
                                     id,
@@ -4384,14 +4384,14 @@ class Discovery(object):
 
         Returns:
             This function returns the output of delete_global_credential_v2 .
-        """ 
+        """
         return self.delete_global_credential_v2(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_http_write_credentials(self,
                                          headers=None,
@@ -4411,15 +4411,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_http_write_credentials_v1 .
-        """ 
+        """
         return self.create_http_write_credentials_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_discovery_by_id(self,
                                id,
@@ -4435,14 +4435,14 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_discovery_by_id_v1 .
-        """ 
+        """
         return self.get_discovery_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_update_snmp_properties(self,
                                          headers=None,
@@ -4462,15 +4462,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_update_snmp_properties_v1 .
-        """ 
+        """
         return self.create_update_snmp_properties_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_snmpv3_credentials(self,
                                      headers=None,
@@ -4490,15 +4490,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_snmpv3_credentials_v1 .
-        """ 
+        """
         return self.create_snmpv3_credentials_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_netconf_credentials(self,
                                       headers=None,
@@ -4518,15 +4518,15 @@ class Discovery(object):
 
         Returns:
             This function returns the output of create_netconf_credentials_v1 .
-        """ 
+        """
         return self.create_netconf_credentials_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_snmp_write_community(self,
                                        comments=None,
@@ -4557,7 +4557,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of update_snmp_write_community_v1 .
-        """ 
+        """
         return self.update_snmp_write_community_v1(
                     comments=comments,
                     credentialType=credentialType,
@@ -4569,8 +4569,8 @@ class Discovery(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_discovery_jobs_by_ip(self,
                                     ip_address,
@@ -4592,7 +4592,7 @@ class Discovery(object):
 
         Returns:
             This function returns the output of get_discovery_jobs_by_ip_v1 .
-        """ 
+        """
         return self.get_discovery_jobs_by_ip_v1(
                     ip_address=ip_address,
                     limit=limit,

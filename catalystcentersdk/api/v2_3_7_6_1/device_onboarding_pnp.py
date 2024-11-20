@@ -1888,7 +1888,7 @@ class DeviceOnboardingPnp(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-pn-p-server-profile
+            https://developer.cisco.com/docs/dna-center/#!update-pnp-server-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2555,8 +2555,8 @@ class DeviceOnboardingPnp(object):
 
         return self._object_factory('bpm_fdd2af215b9b8327a3e24a3dea89_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def add_device(self,
                    deviceInfo=None,
@@ -2579,7 +2579,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of add_device_v1.
-        """  
+        """
         return self.add_device_v1(
                     deviceInfo=deviceInfo,
                     headers=headers,
@@ -2587,8 +2587,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_workflows(self,
                          limit=None,
@@ -2615,7 +2615,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_workflows_v1.
-        """  
+        """
         return self.get_workflows_v1(
                     limit=limit,
                     name=name,
@@ -2626,8 +2626,8 @@ class DeviceOnboardingPnp(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_workflow_by_id(self,
                               id,
@@ -2644,14 +2644,14 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_workflow_by_id_v1.
-        """  
+        """
         return self.get_workflow_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def import_devices_in_bulk(self,
                                   headers=None,
@@ -2672,15 +2672,15 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of import_devices_in_bulk_v1.
-        """  
+        """
         return self.import_devices_in_bulk_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_virtual_account(self,
                                autoSyncPeriod=None,
@@ -2732,7 +2732,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of add_virtual_account_v1.
-        """  
+        """
         return self.add_virtual_account_v1(
                     autoSyncPeriod=autoSyncPeriod,
                     ccoUser=ccoUser,
@@ -2752,8 +2752,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_pnp_global_settings(self,
                                       acceptEula=None,
@@ -2782,7 +2782,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of update_pnp_global_settings_v1.
-        """  
+        """
         return self.update_pnp_global_settings_v1(
                     acceptEula=acceptEula,
                     defaultProfile=defaultProfile,
@@ -2793,8 +2793,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_virtual_account_list(self,
                                     domain,
@@ -2810,15 +2810,15 @@ class DeviceOnboardingPnp(object):
                 support for parameters that may be added in the future).
 
         Returns:
-            This function returns the output of get_virtual_account_list_v1. 
-        """  
+            This function returns the output of get_virtual_account_list_v1.
+        """
         return self.get_virtual_account_list_v1(
                     domain=domain,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def preview_config(self,
                           deviceId=None,
@@ -2857,8 +2857,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def reset_device(self,
                         deviceResetList=None,
@@ -2885,7 +2885,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of reset_device_v1.
-        """  
+        """
         return self.reset_device_v1(
                     deviceResetList=deviceResetList,
                     projectId=projectId,
@@ -2895,8 +2895,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_smart_account_list(self,
                                   headers=None,
@@ -2915,9 +2915,9 @@ class DeviceOnboardingPnp(object):
         return self.get_smart_account_list_v1(
                                 headers=headers,
                                 **request_parameters
-        )  
-                
-    
+        )
+
+
     # Alias Function
     def update_pnp_server_profile(self,
                                      ccoUser=None,
@@ -2945,8 +2945,8 @@ class DeviceOnboardingPnp(object):
                 support for parameters that may be added in the future).
 
         Returns:
-            This function returns the output of update_pnp_server_profile_v1. 
-        """  
+            This function returns the output of update_pnp_server_profile_v1.
+        """
         return self.update_pnp_server_profile_v1(
                     ccoUser=ccoUser,
                     profile=profile,
@@ -2957,8 +2957,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_device(self,
                          id,
@@ -2984,7 +2984,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of update_device_v1.
-        """  
+        """
         return self.update_device_v1(
                     id=id,
                     deviceInfo=deviceInfo,
@@ -2993,8 +2993,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def authorize_device(self,
                             deviceIdList=None,
@@ -3017,7 +3017,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of authorize_device_v1.
-        """  
+        """
         return self.authorize_device_v1(
                     deviceIdList=deviceIdList,
                     headers=headers,
@@ -3025,8 +3025,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_workflow_by_id(self,
                                  id,
@@ -3043,14 +3043,14 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of delete_workflow_by_id_v1.
-        """  
+        """
         return self.delete_workflow_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_history(self,
                               serial_number,
@@ -3071,7 +3071,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_device_history_v1.
-        """  
+        """
         return self.get_device_history_v1(
                     serial_number=serial_number,
                     sort=sort,
@@ -3079,8 +3079,8 @@ class DeviceOnboardingPnp(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_a_workflow(self,
                           _id=None,
@@ -3140,7 +3140,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of add_a_workflow_v1.
-        """  
+        """
         return self.add_a_workflow_v1(
                     _id=_id,
                     addToInventory=addToInventory,
@@ -3166,8 +3166,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_count(self,
                          last_contact=None,
@@ -3205,7 +3205,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_device_count_v1.
-        """  
+        """
         return self.get_device_count_v1(
                     last_contact=last_contact,
                     name=name,
@@ -3221,8 +3221,8 @@ class DeviceOnboardingPnp(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def claim_device(self,
                         authorizationNeeded=None,
@@ -3264,7 +3264,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of claim_device_v1.
-        """  
+        """
         return self.claim_device_v1(
                     authorizationNeeded=authorizationNeeded,
                     configFileUrl=configFileUrl,
@@ -3281,8 +3281,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_workflow(self,
                            id,
@@ -3344,7 +3344,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of update_workflow_v1.
-        """  
+        """
         return self.update_workflow_v1(
                     id=id,
                     _id=_id,
@@ -3371,8 +3371,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def sync_virtual_account_devices(self,
                                         autoSyncPeriod=None,
@@ -3420,7 +3420,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of sync_virtual_account_devices_v1.
-        """  
+        """
         return self.sync_virtual_account_devices_v1(
                     autoSyncPeriod=autoSyncPeriod,
                     ccoUser=ccoUser,
@@ -3440,8 +3440,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def un_claim_device(self,
                            deviceIdList=None,
@@ -3464,7 +3464,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of un_claim_device_v1.
-        """  
+        """
         return self.un_claim_device_v1(
                     deviceIdList=deviceIdList,
                     headers=headers,
@@ -3472,8 +3472,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_device_by_id_from_pnp(self,
                                         id,
@@ -3490,14 +3490,14 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of delete_device_by_id_from_pnp_v1.
-        """  
+        """
         return self.delete_device_by_id_from_pnp_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_sync_result_for_virtual_account(self,
                                                domain,
@@ -3523,8 +3523,8 @@ class DeviceOnboardingPnp(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def deregister_virtual_account(self,
                                       domain,
@@ -3543,15 +3543,15 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of deregister_virtual_account_v1.
-        """  
+        """
         return self.deregister_virtual_account_v1(
                     domain=domain,
                     name=name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_list(self,
                         hostname=None,
@@ -3603,7 +3603,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_device_list_v1.
-        """  
+        """
         return self.get_device_list_v1(
                     hostname=hostname,
                     last_contact=last_contact,
@@ -3626,8 +3626,8 @@ class DeviceOnboardingPnp(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_pnp_global_settings(self,
                                    headers=None,
@@ -3646,9 +3646,9 @@ class DeviceOnboardingPnp(object):
         return self.get_pnp_global_settings_v1(
                                 headers=headers,
                                 **request_parameters
-        ) 
-                
-    
+        )
+
+
     # Alias Function
     def get_device_by_id(self,
                             id,
@@ -3665,14 +3665,14 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_device_by_id_v1.
-        """  
+        """
         return self.get_device_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def claim_a_device_to_a_site(self,
                                     configInfo=None,
@@ -3720,7 +3720,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of claim_a_device_to_a_site_v1.
-        """  
+        """
         return self.claim_a_device_to_a_site_v1(
                     configInfo=configInfo,
                     deviceId=deviceId,
@@ -3740,8 +3740,8 @@ class DeviceOnboardingPnp(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_workflow_count(self,
                               name=None,
@@ -3758,7 +3758,7 @@ class DeviceOnboardingPnp(object):
 
         Returns:
             This function returns the output of get_workflow_count_v1.
-        """  
+        """
         return self.get_workflow_count_v1(
                     name=name,
                     headers=headers,

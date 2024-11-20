@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cisco Catalyst Center EoX API wrapper.
+"""Cisco Catalyst Center Authentication Management API wrapper.
 
 Copyright (c) 2024 Cisco Systems.
 
@@ -23,10 +23,7 @@ SOFTWARE.
 """
 
 
-
 from builtins import *
-
-
 
 from ...restsession import RestSession
 from ...utils import (
@@ -37,17 +34,17 @@ from ...utils import (
 )
 
 
-class EoX(object):
-    """Cisco Catalyst Center EoX API (version: 2.3.7.6).
+class AuthenticationManagement(object):
+    """Cisco Catalyst Center Authentication Management API (version: 2.3.7.6).
 
-    Wraps the Catalyst Center EoX
+    Wraps the Catalyst Center Authentication Management
     API and exposes the API as native Python
     methods that return native Python objects.
 
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new EoX
+        """Initialize a new AuthenticationManagement
         object with the provided RestSession.
 
         Args:
@@ -60,18 +57,24 @@ class EoX(object):
         """
         check_type(session, RestSession)
 
-        super(EoX, self).__init__()
+        super(AuthenticationManagement, self).__init__()
 
         self._session = session
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_eox_status_for_all_devices_v1(self,
-                                          headers=None,
-                                          **request_parameters):
-        """Retrieves EoX status for all devices in the network .
+    def import_certificate_v1(self,
+                              list_of_users=None,
+                              pk_password=None,
+                              headers=None,
+                              **request_parameters):
+        """This API enables a user to import a PEM certificate and its key for the controller and/or disaster recovery. .
 
         Args:
+            pk_password(str): pkPassword query parameter. Password for encrypted private key .
+            list_of_users(str, list, set, tuple): listOfUsers query parameter. Specify whether the
+                certificate will be used for controller ("server"), disaster recovery ("ipsec") or both
+                ("server, ipsec"). If no value is provided, the default value taken will be "server" .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -86,15 +89,24 @@ class EoX(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-eox-status-for-all-devices
+            https://developer.cisco.com/docs/dna-center/#!importcertificate
         """
         check_type(headers, dict)
+        check_type(pk_password, str)
+        check_type(list_of_users, (str, list, set, tuple))
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           str, may_be_none=False)
             if 'X-Auth-Token' in headers:
                 check_type(headers.get('X-Auth-Token'),
                            str, may_be_none=False)
 
         _params = {
+            'pkPassword':
+                pk_password,
+            'listOfUsers':
+                list_of_users,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
@@ -108,24 +120,30 @@ class EoX(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/eox-status/device')
+        e_url = ('/dna/intent/api/v1/certificate')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.post(endpoint_full_url, params=_params,
+                                           headers=_headers)
         else:
-            json_data = self._session.get(endpoint_full_url, params=_params)
+            json_data = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d5d27a53ac53258fa2183b7e93a7d5_v2_3_7_6_1', json_data)
+        return self._object_factory('bpm_b19d7e8de2ca5329930d06f041a4a173_v2_3_7_6_1', json_data)
 
-    def get_eox_details_per_device_v1(self,
-                                      device_id,
-                                      headers=None,
-                                      **request_parameters):
-        """Retrieves EoX details for a device  .
+    def import_certificate_p12_v1(self,
+                                  p12_password,
+                                  list_of_users=None,
+                                  pk_password=None,
+                                  headers=None,
+                                  **request_parameters):
+        """This API enables a user to import a PKCS12 certificate bundle for the controller and/or disaster recovery. .
 
         Args:
-            device_id(str): deviceId path parameter. Device instance UUID .
+            p12_password(str): p12Password query parameter. The password for PKCS12 certificate bundle .
+            pk_password(str): pkPassword query parameter. Password for encrypted private key .
+            list_of_users(str, list, set, tuple): listOfUsers query parameter. Specify whether the
+                certificate will be used for controller ("server"), disaster recovery ("ipsec") or both
+                ("server, ipsec"). If no value is provided, the default value taken will be "server" .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -140,23 +158,33 @@ class EoX(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-eox-details-per-device
+            https://developer.cisco.com/docs/dna-center/#!importcertificatep12
         """
         check_type(headers, dict)
-        check_type(device_id, str,
+        check_type(p12_password, str,
                    may_be_none=False)
+        check_type(pk_password, str)
+        check_type(list_of_users, (str, list, set, tuple))
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           str, may_be_none=False)
             if 'X-Auth-Token' in headers:
                 check_type(headers.get('X-Auth-Token'),
                            str, may_be_none=False)
 
         _params = {
+            'p12Password':
+                p12_password,
+            'pkPassword':
+                pk_password,
+            'listOfUsers':
+                list_of_users,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'deviceId': device_id,
         }
 
         with_custom_headers = False
@@ -165,20 +193,21 @@ class EoX(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/eox-status/device/{deviceId}')
+        e_url = ('/dna/intent/api/v1/certificate-p12')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.post(endpoint_full_url, params=_params,
+                                           headers=_headers)
         else:
-            json_data = self._session.get(endpoint_full_url, params=_params)
+            json_data = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ec048832853f8a63f34415d0e6fce_v2_3_7_6_1', json_data)
+        return self._object_factory('bpm_c80e660c2e36582f939a7403ef15de22_v2_3_7_6_1', json_data)
 
-    def get_eox_summary_v1(self,
-                           headers=None,
-                           **request_parameters):
-        """Retrieves EoX summary for all devices in the network .
+    def authentication_api_v1(self,
+                              headers=None,
+                              **request_parameters):
+        """API to obtain an access token, which remains valid for 1 hour. The token obtained using this API is required to
+        be set as value to the X-Auth-Token HTTP Header for all API calls to Cisco Catalyst Center. .
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -195,10 +224,16 @@ class EoX(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-eox-summary
+            https://developer.cisco.com/docs/dna-center/#!authentication-api
         """
         check_type(headers, dict)
         if headers is not None:
+            if 'Content-Type' in headers:
+                check_type(headers.get('Content-Type'),
+                           str, may_be_none=False)
+            if 'Authorization' in headers:
+                check_type(headers.get('Authorization'),
+                           str, may_be_none=False)
             if 'X-Auth-Token' in headers:
                 check_type(headers.get('X-Auth-Token'),
                            str, may_be_none=False)
@@ -217,76 +252,92 @@ class EoX(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/eox-status/summary')
+        e_url = ('/dna/system/api/v1/auth/token')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.post(endpoint_full_url, params=_params,
+                                           headers=_headers)
         else:
-            json_data = self._session.get(endpoint_full_url, params=_params)
+            json_data = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f0a0dfdaca465bdc91fc290d87476b89_v2_3_7_6_1', json_data)
+        return self._object_factory('bpm_a6bfcd88e22c5c138657b340870b4ebb_v2_3_7_6_1', json_data)
 
 
 
     # Alias Function
-    def get_eox_details_per_device(self,
-                                      device_id,
-                                      headers=None,
-                                      **request_parameters):
-        """ This function is an alias of get_eox_details_per_device_v1 .
+    def authentication_api(self,
+                              headers=None,
+                              **request_parameters):
+        """ This function is an alias of authentication_api_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device instance UUID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            This function returns the output of get_eox_details_per_device_v1 .
+            This function returns the output of authentication_api_v1 .
         """
-        return self.get_eox_details_per_device_v1(
-                    device_id=device_id,
+        return self.authentication_api_v1(
                     headers=headers,
                     **request_parameters
         )
 
 
     # Alias Function
-    def get_eox_status_for_all_devices(self,
-                                          headers=None,
-                                          **request_parameters):
-        """ This function is an alias of get_eox_status_for_all_devices_v1 .
+    def import_certificate_p12(self,
+                                  p12_password,
+                                  list_of_users=None,
+                                  pk_password=None,
+                                  headers=None,
+                                  **request_parameters):
+        """ This function is an alias of import_certificate_p12_v1 .
         Args:
+            p12_password(str): p12Password query parameter. The password for PKCS12 certificate bundle .
+            pk_password(str): pkPassword query parameter. Password for encrypted private key .
+            list_of_users(str, list, set, tuple): listOfUsers query parameter. Specify whether the
+                certificate will be used for controller ("server"), disaster recovery ("ipsec") or both
+                ("server, ipsec"). If no value is provided, the default value taken will be "server" .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            This function returns the output of get_eox_status_for_all_devices_v1 .
+            This function returns the output of import_certificate_p12_v1 .
         """
-        return self.get_eox_status_for_all_devices_v1(
+        return self.import_certificate_p12_v1(
+                    p12_password=p12_password,
+                    list_of_users=list_of_users,
+                    pk_password=pk_password,
                     headers=headers,
                     **request_parameters
         )
 
 
     # Alias Function
-    def get_eox_summary(self,
-                           headers=None,
-                           **request_parameters):
-        """ This function is an alias of get_eox_summary_v1 .
+    def import_certificate(self,
+                              list_of_users=None,
+                              pk_password=None,
+                              headers=None,
+                              **request_parameters):
+        """ This function is an alias of import_certificate_v1 .
         Args:
+            pk_password(str): pkPassword query parameter. Password for encrypted private key .
+            list_of_users(str, list, set, tuple): listOfUsers query parameter. Specify whether the
+                certificate will be used for controller ("server"), disaster recovery ("ipsec") or both
+                ("server, ipsec"). If no value is provided, the default value taken will be "server" .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            This function returns the output of get_eox_summary_v1 .
+            This function returns the output of import_certificate_v1 .
         """
-        return self.get_eox_summary_v1(
+        return self.import_certificate_v1(
+                    list_of_users=list_of_users,
+                    pk_password=pk_password,
                     headers=headers,
                     **request_parameters
         )

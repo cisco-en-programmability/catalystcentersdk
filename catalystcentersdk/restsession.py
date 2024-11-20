@@ -136,6 +136,7 @@ class RestSession(object):
                  single_request_timeout=DEFAULT_SINGLE_REQUEST_TIMEOUT,
                  wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
                  verify=DEFAULT_VERIFY,
+                 session=None,
                  version=None,
                  debug=False,
                  user_agent = None):
@@ -200,13 +201,16 @@ class RestSession(object):
         if verify is False:
             requests.packages.urllib3.disable_warnings()
 
-        # Initialize a new `requests` session
-        self._req_session = requests.session()
+        # Use the injected `requests` session, build a new one if not provided
+        self._req_session = session or requests.session()
+
+        if user_agent != "":
+            user_agent = "-"+ user_agent
 
         # Update the headers of the `requests` session
         self.update_headers({'X-Auth-Token': access_token,
                              'Content-type': 'application/json;charset=utf-8',
-                             'User-Agent': f'python-cisco-dnacsdk/{version}-{user_agent}'})
+                             'User-Agent': f'python-cisco-catalystcentersdk/{version}{user_agent}'})
 
     @property
     def version(self):

@@ -370,7 +370,7 @@ class Topology(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-v-l-a-n-details
+            https://developer.cisco.com/docs/dna-center/#!get-v-lan-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -402,8 +402,8 @@ class Topology(object):
 
         return self._object_factory('bpm_fb6000ce8d8854bc80be3803b8dee1b7_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def get_site_topology(self,
                              headers=None,
@@ -422,8 +422,8 @@ class Topology(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_physical_topology(self,
                                  node_type=None,
@@ -439,14 +439,14 @@ class Topology(object):
 
         Returns:
             This function returns the output of get_physical_topology_v1 .
-        """ 
+        """
         return self.get_physical_topology_v1(
                     node_type=node_type,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_topology_details(self,
                                 vlan_id,
@@ -462,14 +462,14 @@ class Topology(object):
 
         Returns:
             This function returns the output of get_topology_details_v1 .
-        """ 
+        """
         return self.get_topology_details_v1(
                     vlan_id=vlan_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_l3_topology_details(self,
                                    topology_type,
@@ -485,14 +485,14 @@ class Topology(object):
 
         Returns:
             This function returns the output of get_l3_topology_details_v1 .
-        """ 
+        """
         return self.get_l3_topology_details_v1(
                     topology_type=topology_type,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_vlan_details(self,
                             headers=None,
@@ -511,8 +511,8 @@ class Topology(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_overall_network_health(self,
                                       timestamp=None,
@@ -528,7 +528,7 @@ class Topology(object):
 
         Returns:
             This function returns the output of get_overall_network_health_v1 .
-        """ 
+        """
         return self.get_overall_network_health_v1(
                     timestamp=timestamp,
                     headers=headers,

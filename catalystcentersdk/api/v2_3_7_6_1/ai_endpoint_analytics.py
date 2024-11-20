@@ -209,7 +209,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-a-i-endpoint-analytics-attribute-dictionaries
+            https://developer.cisco.com/docs/dna-center/#!get-ai-endpoint-analytics-attribute-dictionaries
         """
         check_type(headers, dict)
         check_type(include_attributes, bool)
@@ -961,7 +961,7 @@ class AIEndpointAnalytics(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!apply-a-n-c-policy
+            https://developer.cisco.com/docs/dna-center/#!apply-anc-policy
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1773,8 +1773,8 @@ class AIEndpointAnalytics(object):
 
         return self._object_factory('bpm_a0d1d05fe582aa287acb470e3af1d_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def update_an_existing_profiling_rule(self,
                                              rule_id,
@@ -1836,7 +1836,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of the function update_an_existing_profiling_rule_v1.
-        """  
+        """
         return self.update_an_existing_profiling_rule_v1(
                     rule_id=rule_id,
                     clusterId=clusterId,
@@ -1859,8 +1859,8 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_a_registered_endpoint(self,
                                         ep_id,
@@ -1889,7 +1889,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of the function update_a_registered_endpoint_v1.
-        """  
+        """
         return self.update_a_registered_endpoint_v1(
                     ep_id=ep_id,
                     deviceType=deviceType,
@@ -1900,8 +1900,8 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def register_an_endpoint(self,
                                 deviceType=None,
@@ -1930,7 +1930,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of the function register_an_endpoint_v1.
-        """  
+        """
         return self.register_an_endpoint_v1(
                     deviceType=deviceType,
                     hardwareManufacturer=hardwareManufacturer,
@@ -1941,8 +1941,8 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def apply_anc_policy(self,
                             ep_id,
@@ -1951,7 +1951,7 @@ class AIEndpointAnalytics(object):
                             headers=None,
                             payload=None,
                             active_validation=True,
-                            **request_parameters):  
+                            **request_parameters):
         """This function is an alias of apply_anc_policy_v1. .
 
         Args:
@@ -1979,8 +1979,8 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def process_cmdb_endpoints(self,
                                   headers=None,
@@ -2008,13 +2008,13 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_details_of_a_single_profiling_rule(self,
                                                   rule_id,
                                                   headers=None,
-                                                  **request_parameters): 
+                                                  **request_parameters):
         """This function is an alias of get_details_of_a_single_profiling_rule_v1. .
 
         Args:
@@ -2026,14 +2026,14 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of the get_details_of_a_single_profiling_rule_v1.
-        """ 
+        """
         return self.get_details_of_a_single_profiling_rule_v1(
                     rule_id=rule_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_anc_policies(self,
                             headers=None,
@@ -2052,9 +2052,9 @@ class AIEndpointAnalytics(object):
         return self.get_anc_policies_v1(
                         headers=headers,
                         **request_parameters
-        )  
-                
-    
+        )
+
+
     # Alias Function
     def create_a_profiling_rule(self,
                                    clusterId=None,
@@ -2114,7 +2114,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of create_a_profiling_rule_v1.
-        """  
+        """
         return self.create_a_profiling_rule_v1(
                     clusterId=clusterId,
                     conditionGroups=conditionGroups,
@@ -2136,8 +2136,8 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def query_the_endpoints(self,
                                ai_spoofing_trust_level=None,
@@ -2232,7 +2232,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of query_the_endpoints_v1.
-        """  
+        """
         return self.query_the_endpoints_v1(
                     ai_spoofing_trust_level=ai_spoofing_trust_level,
                     anc_policy=anc_policy,
@@ -2263,8 +2263,8 @@ class AIEndpointAnalytics(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def revoke_anc_policy(self,
                              ep_id,
@@ -2281,14 +2281,14 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of revoke_anc_policy_v1.
-        """  
+        """
         return self.revoke_anc_policy_v1(
                     ep_id=ep_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_list_of_profiling_rules(self,
                                        include_deleted=None,
@@ -2320,7 +2320,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of get_list_of_profiling_rules_v1.
-        """  
+        """
         return self.get_list_of_profiling_rules_v1(
                     include_deleted=include_deleted,
                     limit=limit,
@@ -2331,8 +2331,8 @@ class AIEndpointAnalytics(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_task_details(self,
                             task_id,
@@ -2349,14 +2349,14 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of get_task_details_v1.
-        """ 
+        """
         return self.get_task_details_v1(
                     task_id=task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ai_endpoint_analytics_attribute_dictionaries(self,
                                                              include_attributes=None,
@@ -2374,14 +2374,14 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of get_ai_endpoint_analytics_attribute_dictionaries_v1.
-        """  
+        """
         return self.get_ai_endpoint_analytics_attribute_dictionaries_v1(
                     include_attributes=include_attributes,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def fetch_the_count_of_endpoints(self,
                                         ai_spoofing_trust_level=None,
@@ -2455,7 +2455,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of fetch_the_count_of_endpoints_v1.
-        """  
+        """
         return self.fetch_the_count_of_endpoints_v1(
                     ai_spoofing_trust_level=ai_spoofing_trust_level,
                     anc_policy=anc_policy,
@@ -2481,8 +2481,8 @@ class AIEndpointAnalytics(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def import_profiling_rules_in_bulk(self,
                                           profilingRules=None,
@@ -2505,7 +2505,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of import_profiling_rules_in_bulk_v1.
-        """  
+        """
         return self.import_profiling_rules_in_bulk_v1(
                     profilingRules=profilingRules,
                     headers=headers,
@@ -2513,8 +2513,8 @@ class AIEndpointAnalytics(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_an_existing_profiling_rule(self,
                                              rule_id,
@@ -2531,14 +2531,14 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of delete_an_existing_profiling_rule_v1.
-        """  
+        """
         return self.delete_an_existing_profiling_rule_v1(
                     rule_id=rule_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_endpoint_details(self,
                                 ep_id,
@@ -2563,15 +2563,15 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of get_endpoint_details_v1 .
-        """  
+        """
         return self.get_endpoint_details_v1(
                     ep_id=ep_id,
                     include=include,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_count_of_profiling_rules(self,
                                         include_deleted=None,
@@ -2592,15 +2592,15 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of get_count_of_profiling_rules_v1.
-        """  
+        """
         return self.get_count_of_profiling_rules_v1(
                     include_deleted=include_deleted,
                     rule_type=rule_type,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_an_endpoint(self,
                               ep_id,
@@ -2617,7 +2617,7 @@ class AIEndpointAnalytics(object):
 
         Returns:
             This function returns the output of delete_an_endpoint_v1.
-        """  
+        """
         return self.delete_an_endpoint_v1(
                     ep_id=ep_id,
                     headers=headers,

@@ -69,7 +69,7 @@ class Platform(object):
     def cisco_catalystcenter_packages_summary_v1(self,
                                              headers=None,
                                              **request_parameters):
-        """Provides information such as name, version of packages installed on the DNA center. .
+        """Provides information such as name, version of packages installed on the Catalyst center. .
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -86,7 +86,7 @@ class Platform(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-packages-summary
+            https://developer.cisco.com/docs/dna-center/#!cisco-dna-center-packages-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -139,7 +139,7 @@ class Platform(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-release-summary
+            https://developer.cisco.com/docs/dna-center/#!cisco-dna-center-release-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -193,7 +193,7 @@ class Platform(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!cisco-d-n-a-center-nodes-configuration-summary
+            https://developer.cisco.com/docs/dna-center/#!cisco-dna-center-nodes-configuration-summary
         """
         check_type(headers, dict)
         if headers is not None:
@@ -225,8 +225,8 @@ class Platform(object):
 
         return self._object_factory('bpm_f0c26c266e552d6b0f1f68da8e60e16_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def nodes_configuration_summary(self,
                                     headers=None,
@@ -245,8 +245,8 @@ class Platform(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def cisco_catalystcenter_packages_summary(self,
                                              headers=None,
@@ -265,8 +265,8 @@ class Platform(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def release_summary(self,
                         headers=None,

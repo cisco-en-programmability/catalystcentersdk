@@ -88,7 +88,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-business-a-p-i-execution-details
+            https://developer.cisco.com/docs/dna-center/#!get-business-api-execution-details
         """
         check_type(headers, dict)
         check_type(execution_id, str,
@@ -176,7 +176,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-tasks-operational-tasks
+            https://developer.cisco.com/docs/dna-center/#!task-get-tasks
         """
         check_type(headers, dict)
         check_type(start_time, str)
@@ -743,7 +743,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-tasks-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-tasks-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -800,7 +800,7 @@ class Task(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-task-details-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-task-details-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -835,8 +835,8 @@ class Task(object):
 
         return self._object_factory('bpm_a48eee2b20065722ba9688176af178c1_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def get_task_count(self,
                           data=None,
@@ -874,7 +874,7 @@ class Task(object):
 
         Returns:
             This function returns the output of get_task_count_v1 .
-        """ 
+        """
         return self.get_task_count_v1(
                     data=data,
                     end_time=end_time,
@@ -889,8 +889,8 @@ class Task(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_task_tree(self,
                          task_id,
@@ -906,14 +906,14 @@ class Task(object):
 
         Returns:
             This function returns the output of get_task_tree_v1 .
-        """ 
+        """
         return self.get_task_tree_v1(
                     task_id=task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tasks(self,
                      end_time=None,
@@ -950,7 +950,7 @@ class Task(object):
 
         Returns:
             This function returns the output of get_tasks_v1 .
-        """ 
+        """
         return self.get_tasks_v1(
                     end_time=end_time,
                     limit=limit,
@@ -964,8 +964,8 @@ class Task(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_task_details_by_id(self,
                                   id,
@@ -981,14 +981,14 @@ class Task(object):
 
         Returns:
             This function returns the output of get_task_details_by_id_v1 .
-        """ 
+        """
         return self.get_task_details_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tasks_operational_tasks(self,
                                        data=None,
@@ -1034,7 +1034,7 @@ class Task(object):
 
         Returns:
             This function returns the output of get_tasks_operational_tasks_v1 .
-        """ 
+        """
         return self.get_tasks_operational_tasks_v1(
                     data=data,
                     end_time=end_time,
@@ -1053,8 +1053,8 @@ class Task(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_task_by_id(self,
                           task_id,
@@ -1070,14 +1070,14 @@ class Task(object):
 
         Returns:
             This function returns the output of get_task_by_id_v1 .
-        """ 
+        """
         return self.get_task_by_id_v1(
                     task_id=task_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_business_api_execution_details(self,
                                               execution_id,
@@ -1093,14 +1093,14 @@ class Task(object):
 
         Returns:
             This function returns the output of get_business_api_execution_details_v1 .
-        """ 
+        """
         return self.get_business_api_execution_details_v1(
                     execution_id=execution_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tasks_count(self,
                            end_time=None,
@@ -1127,7 +1127,7 @@ class Task(object):
 
         Returns:
             This function returns the output of get_tasks_count_v1 .
-        """ 
+        """
         return self.get_tasks_count_v1(
                     end_time=end_time,
                     parent_id=parent_id,
@@ -1137,8 +1137,8 @@ class Task(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_task_by_operation_id(self,
                                 limit,
@@ -1159,7 +1159,7 @@ class Task(object):
 
         Returns:
             This function returns the output of get_task_by_operation_id_v1 .
-        """ 
+        """
         return self.get_task_by_operation_id_v1(
                     limit=limit,
                     offset=offset,
@@ -1167,8 +1167,8 @@ class Task(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tasks_by_id(self,
                            id,
@@ -1184,7 +1184,7 @@ class Task(object):
 
         Returns:
             This function returns the output of get_tasks_by_id_v1 .
-        """ 
+        """
         return self.get_tasks_by_id_v1(
                     id=id,
                     headers=headers,

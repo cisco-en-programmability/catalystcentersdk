@@ -124,7 +124,7 @@ class Clients(object):
                 supports wildcard (`*`) character-based search. If the value contains the (`*`)
                 character, please use the /query API for regex search.  Ex: `*BuildingName*` or
                 `BuildingName*` or `*BuildingName` Examples:
-                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested) 
+                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested)
                 `siteHierarchy=Global/AreaName/BuildingName1/FloorName1&siteHierarchy=Global/AreaName/Bu
                 ildingName1/FloorName2` (multiple siteHierarchy requested) .
             site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
@@ -341,7 +341,7 @@ class Clients(object):
                 supports wildcard (`*`) character-based search. If the value contains the (`*`)
                 character, please use the /query API for regex search.  Ex: `*BuildingName*` or
                 `BuildingName*` or `*BuildingName` Examples:
-                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested) 
+                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested)
                 `siteHierarchy=Global/AreaName/BuildingName1/FloorName1&siteHierarchy=Global/AreaName/Bu
                 ildingName1/FloorName2` (multiple siteHierarchy requested) .
             site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
@@ -1050,7 +1050,7 @@ class Clients(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-specific-client-information-matching-the-m-a-c-address
+            https://developer.cisco.com/docs/dna-center/#!retrieves-specific-client-information-matching-the-mac-address
         """
         check_type(headers, dict)
         check_type(start_time, int)
@@ -1486,8 +1486,8 @@ class Clients(object):
 
         return self._object_factory('bpm_c141467ea25ec0aa91cbcaff070354_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def get_client_detail(self,
                              mac_address,
@@ -1507,15 +1507,15 @@ class Clients(object):
 
         Returns:
             This function returns the output of get_client_detail_v1.
-        """  
+        """
         return self.get_client_detail_v1(
                     mac_address=mac_address,
                     timestamp=timestamp,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_client_enrichment_details(self,
                                          headers=None,
@@ -1534,9 +1534,9 @@ class Clients(object):
         return self.get_client_enrichment_details_v1(
                                          headers=headers,
                                          **request_parameters
-        ) 
-                
-    
+        )
+
+
     # Alias Function
     def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(self,
                                                                                                       attribute=None,
@@ -1593,7 +1593,7 @@ class Clients(object):
                 supports wildcard (`*`) character-based search. If the value contains the (`*`)
                 character, please use the /query API for regex search.  Ex: `*BuildingName*` or
                 `BuildingName*` or `*BuildingName` Examples:
-                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested) 
+                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested)
                 `siteHierarchy=Global/AreaName/BuildingName1/FloorName1&siteHierarchy=Global/AreaName/Bu
                 ildingName1/FloorName2` (multiple siteHierarchy requested) .
             site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
@@ -1684,8 +1684,8 @@ class Clients(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def client_proximity(self,
                             username,
@@ -1717,8 +1717,8 @@ class Clients(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_number_of_clients_by_applying_complex_filters(self,
                                                                        endTime=None,
@@ -1745,7 +1745,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_the_number_of_clients_by_applying_complex_filters_v1.
-        """  
+        """
         return self.retrieves_the_number_of_clients_by_applying_complex_filters_v1(
                     endTime=endTime,
                     filters=filters,
@@ -1755,8 +1755,8 @@ class Clients(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_summary_analytics_data_related_to_clients(self,
                                                                aggregateAttributes=None,
@@ -1791,7 +1791,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_summary_analytics_data_related_to_clients_v1.
-        """  
+        """
         return self.retrieves_summary_analytics_data_related_to_clients_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -1805,8 +1805,8 @@ class Clients(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_top_n_analytics_data_related_to_clients(self,
                                                                  aggregateAttributes=None,
@@ -1843,7 +1843,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_the_top_n_analytics_data_related_to_clients_v1.
-        """  
+        """
         return self.retrieves_the_top_n_analytics_data_related_to_clients_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -1858,8 +1858,8 @@ class Clients(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_specific_client_information_matching_the_macaddress(self,
                                                                          id,
@@ -1895,7 +1895,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_specific_client_information_matching_the_macaddress_v1.
-        """  
+        """
         return self.retrieves_specific_client_information_matching_the_macaddress_v1(
                     id=id,
                     attribute=attribute,
@@ -1905,8 +1905,8 @@ class Clients(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_specific_client_information_over_a_specified_period_of_time(self,
                                                                                  id,
@@ -1947,7 +1947,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_specific_client_information_over_a_specified_period_of_time_v1.
-        """  
+        """
         return self.retrieves_specific_client_information_over_a_specified_period_of_time_v1(
                     id=id,
                     aggregateAttributes=aggregateAttributes,
@@ -1963,8 +1963,8 @@ class Clients(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_trend_analytics_data_related_to_clients(self,
                                                                  aggregateAttributes=None,
@@ -2001,7 +2001,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_the_trend_analytics_data_related_to_clients_v1.
-        """  
+        """
         return self.retrieves_the_trend_analytics_data_related_to_clients_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -2016,8 +2016,8 @@ class Clients(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(self,
                                                                                                                 aggregateAttributes=None,
@@ -2052,7 +2052,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_v1.
-        """  
+        """
         return self.retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -2066,8 +2066,8 @@ class Clients(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_overall_client_health(self,
                                      timestamp=None,
@@ -2085,14 +2085,14 @@ class Clients(object):
 
         Returns:
             This function returns the output of get_overall_client_health_v1.
-        """  
+        """
         return self.get_overall_client_health_v1(
                     timestamp=timestamp,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieves_the_total_count_of_clients_by_applying_basic_filtering(self,
                                                                             band=None,
@@ -2138,7 +2138,7 @@ class Clients(object):
                 supports wildcard (`*`) character-based search. If the value contains the (`*`)
                 character, please use the /query API for regex search.  Ex: `*BuildingName*` or
                 `BuildingName*` or `*BuildingName` Examples:
-                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested) 
+                `siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy requested)
                 `siteHierarchy=Global/AreaName/BuildingName1/FloorName1&siteHierarchy=Global/AreaName/Bu
                 ildingName1/FloorName2` (multiple siteHierarchy requested) .
             site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
@@ -2195,7 +2195,7 @@ class Clients(object):
 
         Returns:
             This function returns the output of retrieves_the_total_count_of_clients_by_applying_basic_filtering_v1.
-        """  
+        """
         return self.retrieves_the_total_count_of_clients_by_applying_basic_filtering_v1(
                     band=band,
                     connected_network_device_name=connected_network_device_name,

@@ -2661,7 +2661,7 @@ class Devices(object):
                    start_time=None,
                    headers=None,
                    **request_parameters):
-        """Intent API for accessing DNA Assurance Device object for generating reports, creating dashboards or creating
+        """Intent API for accessing Catalyst Assurance Device object for generating reports, creating dashboards or creating
         additional value added services. .
 
         Args:
@@ -3618,7 +3618,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-i-s-i-s-interfaces
+            https://developer.cisco.com/docs/dna-center/#!get-isis-interfaces
         """
         check_type(headers, dict)
         if headers is not None:
@@ -3917,7 +3917,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-o-s-p-f-interfaces
+            https://developer.cisco.com/docs/dna-center/#!get-ospf-interfaces
         """
         check_type(headers, dict)
         if headers is not None:
@@ -5317,7 +5317,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-count-know-your-network
+            https://developer.cisco.com/docs/dna-center/#!get-device-count
         """
         check_type(headers, dict)
         check_type(hostname, (str, list, set, tuple))
@@ -5606,7 +5606,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!inventory-insight-device-link-mismatch-a-p-i
+            https://developer.cisco.com/docs/dna-center/#!inventory-insight-device-link-mismatch-api
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -5680,7 +5680,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-device-by-i-p
+            https://developer.cisco.com/docs/dna-center/#!get-network-device-by-ip
         """
         check_type(headers, dict)
         check_type(ip_address, str,
@@ -6096,7 +6096,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-devices-registered-for-w-s-a-notification
+            https://developer.cisco.com/docs/dna-center/#!get-devices-registered-for-wsa-notification
         """
         check_type(headers, dict)
         check_type(serial_number, str)
@@ -6756,7 +6756,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!returns-p-o-e-interface-details-for-the-device
+            https://developer.cisco.com/docs/dna-center/#!returns-poe-interface-details-for-the-device
         """
         check_type(headers, dict)
         check_type(interface_name_list, str)
@@ -6937,7 +6937,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!p-o-e-details
+            https://developer.cisco.com/docs/dna-center/#!poe-details
         """
         check_type(headers, dict)
         check_type(device_uuid, str,
@@ -7132,7 +7132,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-by-i-d
+            https://developer.cisco.com/docs/dna-center/#!get-device-by-id
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -7434,7 +7434,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-interface-v-l-a-ns
+            https://developer.cisco.com/docs/dna-center/#!get-device-interface-vlans
         """
         check_type(headers, dict)
         check_type(interface_type, str)
@@ -8148,7 +8148,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!start-wireless-rogue-a-p-containment
+            https://developer.cisco.com/docs/dna-center/#!start-wireless-rogue-ap-containment
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -8222,7 +8222,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!wireless-rogue-a-p-containment-status
+            https://developer.cisco.com/docs/dna-center/#!wireless-rogue-ap-containment-status
         """
         check_type(headers, dict)
         check_type(mac_address, str,
@@ -8295,7 +8295,7 @@ class Devices(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!stop-wireless-rogue-a-p-containment
+            https://developer.cisco.com/docs/dna-center/#!stop-wireless-rogue-ap-containment
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -9176,9 +9176,9 @@ class Devices(object):
 
         return self._object_factory('bpm_a51fd8467055ff1a69ade1ae8096993_v2_3_7_6_1', json_data)
 
-                
-    
-        
+
+
+
     # Alias Function
     def get_interface_by_ip(self,
                                ip_address,
@@ -9193,14 +9193,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_interface_by_ip_v1 .
-        """ 
+        """
         return self.get_interface_by_ip_v1(
                     ip_address=ip_address,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_supervisor_card_detail(self,
                                       device_uuid,
@@ -9215,14 +9215,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_supervisor_card_detail_v1 .
-        """ 
+        """
         return self.get_supervisor_card_detail_v1(
                     device_uuid=device_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def the_total_interfaces_count_across_the_network_devices(self,
                                                                  aggregateAttributes=None,
@@ -9256,7 +9256,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of the_total_interfaces_count_across_the_network_devices_v1 .
-        """ 
+        """
         return self.the_total_interfaces_count_across_the_network_devices_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -9270,8 +9270,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def threat_details(self,
                           endTime=None,
@@ -9307,7 +9307,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of threat_details_v1 .
-        """ 
+        """
         return self.threat_details_v1(
                     endTime=endTime,
                     isNewThreat=isNewThreat,
@@ -9322,8 +9322,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_total_network_device_counts_based_on_the_provided_query_parameters(self,
                                                                                        attribute=None,
@@ -9424,7 +9424,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_total_network_device_counts_based_on_the_provided_query_parameters_v1 .
-        """ 
+        """
         return self.gets_the_total_network_device_counts_based_on_the_provided_query_parameters_v1(
                     attribute=attribute,
                     end_time=end_time,
@@ -9446,8 +9446,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def poe_details(self,
                        device_uuid,
@@ -9463,14 +9463,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of poe_details_v1 .
-        """ 
+        """
         return self.poe_details_v1(
                     device_uuid=device_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_threat_levels(self,
                              headers=None,
@@ -9489,8 +9489,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_connected_device_detail(self,
                                        device_uuid,
@@ -9508,15 +9508,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_connected_device_detail_v1 .
-        """ 
+        """
         return self.get_connected_device_detail_v1(
                     device_uuid=device_uuid,
                     interface_uuid=interface_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def export_device_list(self,
                               deviceUuids=None,
@@ -9546,7 +9546,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of export_device_list_v1 .
-        """ 
+        """
         return self.export_device_list_v1(
                     deviceUuids=deviceUuids,
                     operationEnum=operationEnum,
@@ -9557,8 +9557,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_total_number_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions(self,
                                                                                                                  aggregateAttributes=None,
@@ -9592,7 +9592,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_total_number_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
-        """ 
+        """
         return self.gets_the_total_number_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -9606,8 +9606,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_organization_list_for_meraki(self,
                                             id,
@@ -9623,14 +9623,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_organization_list_for_meraki_v1 .
-        """ 
+        """
         return self.get_organization_list_for_meraki_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_wireless_lan_controller_details_by_id(self,
                                                      id,
@@ -9646,14 +9646,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_wireless_lan_controller_details_by_id_v1 .
-        """ 
+        """
         return self.get_wireless_lan_controller_details_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all_interfaces(self,
                               last_input_time=None,
@@ -9675,7 +9675,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_all_interfaces_v1 .
-        """ 
+        """
         return self.get_all_interfaces_v1(
                     last_input_time=last_input_time,
                     last_output_time=last_output_time,
@@ -9684,8 +9684,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_user_defined_field(self,
                                      id,
@@ -9711,7 +9711,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_user_defined_field_v1 .
-        """ 
+        """
         return self.update_user_defined_field_v1(
                     id=id,
                     description=description,
@@ -9721,8 +9721,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_interface_stats_info(self,
                                            device_id,
@@ -9750,7 +9750,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_interface_stats_info_v2 .
-        """ 
+        """
         return self.get_device_interface_stats_info_v2(
                     device_id=device_id,
                     endTime=endTime,
@@ -9761,8 +9761,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_network_device_by_pagination_range(self,
                                                   records_to_return,
@@ -9781,15 +9781,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_network_device_by_pagination_range_v1 .
-        """ 
+        """
         return self.get_network_device_by_pagination_range_v1(
                     records_to_return=records_to_return,
                     start_index=start_index,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def stop_wireless_rogue_ap_containment(self,
                                               macAddress=None,
@@ -9815,7 +9815,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of stop_wireless_rogue_ap_containment_v1 .
-        """ 
+        """
         return self.stop_wireless_rogue_ap_containment_v1(
                     macAddress=macAddress,
                     type=type,
@@ -9825,8 +9825,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def inventory_insight_device_link_mismatch(self,
                                                category,
@@ -9853,7 +9853,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of inventory_insight_device_link_mismatch_v1 .
-        """ 
+        """
         return self.inventory_insight_device_link_mismatch_v1(
                     category=category,
                     site_id=site_id,
@@ -9864,8 +9864,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_devices_registered_for_wsa_notification(self,
                                                        macaddress=None,
@@ -9883,15 +9883,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_devices_registered_for_wsa_notification_v1 .
-        """ 
+        """
         return self.get_devices_registered_for_wsa_notification_v1(
                     macaddress=macaddress,
                     serial_number=serial_number,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def threat_detail_count(self,
                                endTime=None,
@@ -9927,7 +9927,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of threat_detail_count_v1 .
-        """ 
+        """
         return self.threat_detail_count_v1(
                     endTime=endTime,
                     isNewThreat=isNewThreat,
@@ -9942,8 +9942,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_enrichment_details(self,
                                          headers=None,
@@ -9962,8 +9962,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_by_id(self,
                             id,
@@ -9979,14 +9979,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_by_id_v1 .
-        """ 
+        """
         return self.get_device_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_interface_vlans(self,
                                       id,
@@ -10006,15 +10006,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_interface_vlans_v1 .
-        """ 
+        """
         return self.get_device_interface_vlans_v1(
                     id=id,
                     interface_type=interface_type,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_summary_analytics_data_related_to_network_devices(self,
                                                                       aggregateAttributes=None,
@@ -10048,7 +10048,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_summary_analytics_data_related_to_network_devices_v1 .
-        """ 
+        """
         return self.gets_the_summary_analytics_data_related_to_network_devices_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -10062,8 +10062,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_linecard_details(self,
                                 device_uuid,
@@ -10079,14 +10079,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_linecard_details_v1 .
-        """ 
+        """
         return self.get_linecard_details_v1(
                     device_uuid=device_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_planned_access_point_for_floor(self,
                                                  floor_id,
@@ -10105,15 +10105,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of delete_planned_access_point_for_floor_v1 .
-        """ 
+        """
         return self.delete_planned_access_point_for_floor_v1(
                     floor_id=floor_id,
                     planned_access_point_uuid=planned_access_point_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def legit_operations_for_interface(self,
                                           interface_uuid,
@@ -10129,14 +10129,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of legit_operations_for_interface_v1 .
-        """ 
+        """
         return self.legit_operations_for_interface_v1(
                     interface_uuid=interface_uuid,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def override_resync_interval(self,
                                     headers=None,
@@ -10150,13 +10150,13 @@ class Devices(object):
 
         Returns:
             This function returns the output of override_resync_interval_v1 .
-        """ 
+        """
         return self.override_resync_interval_v1(
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_threat_types(self,
                             headers=None,
@@ -10175,8 +10175,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_modules(self,
                        device_id,
@@ -10204,7 +10204,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_modules_v1 .
-        """ 
+        """
         return self.get_modules_v1(
                     device_id=device_id,
                     limit=limit,
@@ -10216,8 +10216,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_planned_access_point_for_floor(self,
                                                  floor_id,
@@ -10251,7 +10251,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_planned_access_point_for_floor_v1 .
-        """ 
+        """
         return self.update_planned_access_point_for_floor_v1(
                     floor_id=floor_id,
                     attributes=attributes,
@@ -10265,8 +10265,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def sync_devices_using_forcesync(self,
                                      force_sync=None,
@@ -10288,7 +10288,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of sync_devices_using_forcesync_v1 .
-        """ 
+        """
         return self.sync_devices_using_forcesync_v1(
                     force_sync=force_sync,
                     headers=headers,
@@ -10296,8 +10296,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_planned_access_point_for_floor(self,
                                                  floor_id,
@@ -10331,7 +10331,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of create_planned_access_point_for_floor_v1 .
-        """ 
+        """
         return self.create_planned_access_point_for_floor_v1(
                     floor_id=floor_id,
                     attributes=attributes,
@@ -10345,8 +10345,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_list_of_interfaces_across_the_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions(self,
                                                                                                                                   aggregateAttributes=None,
@@ -10380,7 +10380,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_list_of_interfaces_across_the_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
-        """ 
+        """
         return self.gets_the_list_of_interfaces_across_the_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -10394,8 +10394,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_polling_interval_by_id(self,
                                       id,
@@ -10411,14 +10411,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_polling_interval_by_id_v1 .
-        """ 
+        """
         return self.get_polling_interval_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_the_count_of_health_score_definitions_based_on_provided_filters(self,
                                                                                device_type=None,
@@ -10445,7 +10445,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_the_count_of_health_score_definitions_based_on_provided_filters_v1 .
-        """ 
+        """
         return self.get_the_count_of_health_score_definitions_based_on_provided_filters_v1(
                     device_type=device_type,
                     id=id,
@@ -10453,8 +10453,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def threat_summary(self,
                           endTime=None,
@@ -10484,7 +10484,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of threat_summary_v1 .
-        """ 
+        """
         return self.threat_summary_v1(
                     endTime=endTime,
                     siteId=siteId,
@@ -10496,8 +10496,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_interface_info_by_id(self,
                                     device_id,
@@ -10513,14 +10513,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_interface_info_by_id_v1 .
-        """ 
+        """
         return self.get_interface_info_by_id_v1(
                     device_id=device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_health_score_definition_for_the_given_id(self,
                                                         id,
@@ -10536,14 +10536,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_health_score_definition_for_the_given_id_v1 .
-        """ 
+        """
         return self.get_health_score_definition_for_the_given_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def count_the_number_of_events_with_filters(self,
                                                    deviceFamily=None,
@@ -10571,7 +10571,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of count_the_number_of_events_with_filters_v1 .
-        """ 
+        """
         return self.count_the_number_of_events_with_filters_v1(
                     deviceFamily=deviceFamily,
                     endTime=endTime,
@@ -10582,8 +10582,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def remove_user_defined_field_from_device(self,
                                                  device_id,
@@ -10601,15 +10601,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of remove_user_defined_field_from_device_v1 .
-        """ 
+        """
         return self.remove_user_defined_field_from_device_v1(
                     device_id=device_id,
                     name=name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_user_defined_field(self,
                                      id,
@@ -10625,14 +10625,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of delete_user_defined_field_v1 .
-        """ 
+        """
         return self.delete_user_defined_field_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_device_by_id(self,
                                id,
@@ -10654,15 +10654,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of delete_device_by_id_v1 .
-        """ 
+        """
         return self.delete_device_by_id_v1(
                     id=id,
                     clean_config=clean_config,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_global_resync_interval(self,
                                          interval=None,
@@ -10684,7 +10684,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_global_resync_interval_v1 .
-        """ 
+        """
         return self.update_global_resync_interval_v1(
                     interval=interval,
                     headers=headers,
@@ -10692,8 +10692,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_module_info_by_id(self,
                                  id,
@@ -10709,14 +10709,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_module_info_by_id_v1 .
-        """ 
+        """
         return self.get_module_info_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_list(self,
                            associated_wlc_ip=None,
@@ -10801,7 +10801,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_list_v1 .
-        """ 
+        """
         return self.get_device_list_v1(
                     associated_wlc_ip=associated_wlc_ip,
                     collection_interval=collection_interval,
@@ -10840,8 +10840,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count(self,
                                                                                                                                                                               end_time=None,
@@ -10917,7 +10917,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count_v1 .
-        """ 
+        """
         return self.gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count_v1(
                     end_time=end_time,
                     interface_id=interface_id,
@@ -10932,8 +10932,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_device(self,
                    cliTransport=None,
@@ -11024,7 +11024,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of add_device_v1 .
-        """ 
+        """
         return self.add_device_v1(
                     cliTransport=cliTransport,
                     computeDevice=computeDevice,
@@ -11057,8 +11057,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_resync_interval_for_the_network_device(self,
                                                          id,
@@ -11083,7 +11083,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_resync_interval_for_the_network_device_v1 .
-        """ 
+        """
         return self.update_resync_interval_for_the_network_device_v1(
                     id=id,
                     interval=interval,
@@ -11092,8 +11092,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def the_trend_analytics_data_for_the_network_device_in_the_specified_time_range(self,
                                                                                        id,
@@ -11131,7 +11131,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of the_trend_analytics_data_for_the_network_device_in_the_specified_time_range_v1 .
-        """ 
+        """
         return self.the_trend_analytics_data_for_the_network_device_in_the_specified_time_range_v1(
                     id=id,
                     aggregateAttributes=aggregateAttributes,
@@ -11147,8 +11147,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_isis_interfaces(self,
                                headers=None,
@@ -11167,8 +11167,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_by_serial_number(self,
                                        serial_number,
@@ -11184,14 +11184,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_by_serial_number_v1 .
-        """ 
+        """
         return self.get_device_by_serial_number_v1(
                     serial_number=serial_number,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_config_count(self,
                                    headers=None,
@@ -11210,8 +11210,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_chassis_details_for_device(self,
                                           device_id,
@@ -11227,14 +11227,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_chassis_details_for_device_v1 .
-        """ 
+        """
         return self.get_chassis_details_for_device_v1(
                     device_id=device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_config_by_id(self,
                                    network_device_id,
@@ -11250,14 +11250,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_config_by_id_v1 .
-        """ 
+        """
         return self.get_device_config_by_id_v1(
                     network_device_id=network_device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def rogue_additional_details(self,
                                     endTime=None,
@@ -11296,7 +11296,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of rogue_additional_details_v1 .
-        """ 
+        """
         return self.rogue_additional_details_v1(
                     endTime=endTime,
                     limit=limit,
@@ -11310,8 +11310,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all_health_score_definitions_for_given_filters(self,
                                                               attribute=None,
@@ -11346,7 +11346,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_all_health_score_definitions_for_given_filters_v1 .
-        """ 
+        """
         return self.get_all_health_score_definitions_for_given_filters_v1(
                     attribute=attribute,
                     device_type=device_type,
@@ -11357,8 +11357,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_planned_access_points_for_building(self,
                                                   building_id,
@@ -11384,7 +11384,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_planned_access_points_for_building_v1 .
-        """ 
+        """
         return self.get_planned_access_points_for_building_v1(
                     building_id=building_id,
                     limit=limit,
@@ -11393,8 +11393,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def remove_allowed_mac_address(self,
                                       mac_address,
@@ -11413,14 +11413,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of remove_allowed_mac_address_v1 .
-        """ 
+        """
         return self.remove_allowed_mac_address_v1(
                     mac_address=mac_address,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def devices(self,
                    device_role=None,
@@ -11452,7 +11452,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of devices_v1 .
-        """ 
+        """
         return self.devices_v1(
                     device_role=device_role,
                     end_time=end_time,
@@ -11464,8 +11464,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_device_role(self,
                               id=None,
@@ -11491,7 +11491,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_device_role_v1 .
-        """ 
+        """
         return self.update_device_role_v1(
                     id=id,
                     role=role,
@@ -11501,8 +11501,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_network_device_details_based_on_the_provided_query_parameters(self,
                                                                                   attribute=None,
@@ -11612,7 +11612,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_network_device_details_based_on_the_provided_query_parameters_v1 .
-        """ 
+        """
         return self.gets_the_network_device_details_based_on_the_provided_query_parameters_v1(
                     attribute=attribute,
                     end_time=end_time,
@@ -11638,8 +11638,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_interface_count(self,
                                    headers=None,
@@ -11658,8 +11658,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_resync_interval_for_the_network_device(self,
                                                       id,
@@ -11675,14 +11675,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_resync_interval_for_the_network_device_v1 .
-        """ 
+        """
         return self.get_resync_interval_for_the_network_device_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_all_user_defined_fields(self,
                                        id=None,
@@ -11700,15 +11700,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_all_user_defined_fields_v1 .
-        """ 
+        """
         return self.get_all_user_defined_fields_v1(
                     id=id,
                     name=name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_list_of_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions(self,
                                                                                                             aggregateAttributes=None,
@@ -11742,7 +11742,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_list_of_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1 .
-        """ 
+        """
         return self.gets_the_list_of_network_devices_based_on_the_provided_complex_filters_and_aggregation_functions_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -11756,8 +11756,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_values_that_match_fully_or_partially_an_attribute(self,
                                                                         associated_wlc_ip=None,
@@ -11815,7 +11815,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_values_that_match_fully_or_partially_an_attribute_v1 .
-        """ 
+        """
         return self.get_device_values_that_match_fully_or_partially_an_attribute_v1(
                     associated_wlc_ip=associated_wlc_ip,
                     collection_interval=collection_interval,
@@ -11842,8 +11842,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def poe_interface_details(self,
                               device_uuid,
@@ -11861,15 +11861,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of poe_interface_details_v1 .
-        """ 
+        """
         return self.poe_interface_details_v1(
                     device_uuid=device_uuid,
                     interface_name_list=interface_name_list,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_module_count(self,
                             device_id,
@@ -11893,7 +11893,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_module_count_v1 .
-        """ 
+        """
         return self.get_module_count_v1(
                     device_id=device_id,
                     name_list=name_list,
@@ -11903,8 +11903,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_polling_interval_for_all_devices(self,
                                                 headers=None,
@@ -11923,8 +11923,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_planned_access_points_for_floor(self,
                                                floor_id,
@@ -11949,7 +11949,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_planned_access_points_for_floor_v1 .
-        """ 
+        """
         return self.get_planned_access_points_for_floor_v1(
                     floor_id=floor_id,
                     limit=limit,
@@ -11958,8 +11958,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def clear_mac_address_table(self,
                                    interface_uuid,
@@ -11988,7 +11988,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of clear_mac_address_table_v1 .
-        """ 
+        """
         return self.clear_mac_address_table_v1(
                     interface_uuid=interface_uuid,
                     deployment_mode=deployment_mode,
@@ -11998,8 +11998,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def wireless_rogue_ap_containment_status(self,
                                                 mac_address,
@@ -12015,14 +12015,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of wireless_rogue_ap_containment_status_v1 .
-        """ 
+        """
         return self.wireless_rogue_ap_containment_status_v1(
                     mac_address=mac_address,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_the_trend_analytics_data(self,
                                          aggregateAttributes=None,
@@ -12058,7 +12058,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_the_trend_analytics_data_v1 .
-        """ 
+        """
         return self.gets_the_trend_analytics_data_v1(
                     aggregateAttributes=aggregateAttributes,
                     attributes=attributes,
@@ -12073,8 +12073,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_config_for_all_devices(self,
                                              headers=None,
@@ -12093,8 +12093,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_user_defined_field_to_device(self,
                                             device_id,
@@ -12116,7 +12116,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of add_user_defined_field_to_device_v1 .
-        """ 
+        """
         return self.add_user_defined_field_to_device_v1(
                     device_id=device_id,
                     headers=headers,
@@ -12124,8 +12124,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_stack_details_for_device(self,
                                         device_id,
@@ -12141,14 +12141,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_stack_details_for_device_v1 .
-        """ 
+        """
         return self.get_stack_details_for_device_v1(
                     device_id=device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def rogue_additional_detail_count(self,
                                          endTime=None,
@@ -12183,7 +12183,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of rogue_additional_detail_count_v1 .
-        """ 
+        """
         return self.rogue_additional_detail_count_v1(
                     endTime=endTime,
                     siteId=siteId,
@@ -12195,8 +12195,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_list_of_child_events_for_the_given_wireless_client_event(self,
                                                                         id,
@@ -12212,14 +12212,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_list_of_child_events_for_the_given_wireless_client_event_v1 .
-        """ 
+        """
         return self.get_list_of_child_events_for_the_given_wireless_client_event_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_network_device_by_ip(self,
                                     ip_address,
@@ -12235,14 +12235,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_network_device_by_ip_v1 .
-        """ 
+        """
         return self.get_network_device_by_ip_v1(
                     ip_address=ip_address,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_summary(self,
                               id,
@@ -12258,14 +12258,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_summary_v1 .
-        """ 
+        """
         return self.get_device_summary_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def gets_interfaces_along_with_statistics_data_from_all_network_devices(self,
                                                                                attribute=None,
@@ -12376,7 +12376,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of gets_interfaces_along_with_statistics_data_from_all_network_devices_v1 .
-        """ 
+        """
         return self.gets_interfaces_along_with_statistics_data_from_all_network_devices_v1(
                     attribute=attribute,
                     end_time=end_time,
@@ -12397,8 +12397,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_allowed_mac_address(self,
                                    headers=None,
@@ -12418,15 +12418,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of add_allowed_mac_address_v1 .
-        """ 
+        """
         return self.add_allowed_mac_address_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_functional_capability_by_id(self,
                                            id,
@@ -12442,14 +12442,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_functional_capability_by_id_v1 .
-        """ 
+        """
         return self.get_functional_capability_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def query_assurance_events(self,
                                   device_family,
@@ -12549,7 +12549,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of query_assurance_events_v1 .
-        """ 
+        """
         return self.query_assurance_events_v1(
                     device_family=device_family,
                     ap_mac=ap_mac,
@@ -12571,8 +12571,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_allowed_mac_address_count(self,
                                          headers=None,
@@ -12591,8 +12591,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_health_score_definitions(self,
                                            headers=None,
@@ -12612,15 +12612,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_health_score_definitions_v1 .
-        """ 
+        """
         return self.update_health_score_definitions_v1(
                     headers=headers,
                     payload=payload,
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_interface_count_by_id(self,
                                          device_id,
@@ -12636,14 +12636,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_interface_count_by_id_v1 .
-        """ 
+        """
         return self.get_device_interface_count_by_id_v1(
                     device_id=device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_interface_by_id(self,
                                id,
@@ -12659,14 +12659,14 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_interface_by_id_v1 .
-        """ 
+        """
         return self.get_interface_by_id_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_allowed_mac_address(self,
                                    limit=None,
@@ -12685,15 +12685,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_allowed_mac_address_v1 .
-        """ 
+        """
         return self.get_allowed_mac_address_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_detail(self,
                              identifier,
@@ -12715,7 +12715,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_detail_v1 .
-        """ 
+        """
         return self.get_device_detail_v1(
                     identifier=identifier,
                     search_by=search_by,
@@ -12723,8 +12723,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_health_score_definition_for_the_given_id(self,
                                                            id,
@@ -12752,7 +12752,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_health_score_definition_for_the_given_id_v1 .
-        """ 
+        """
         return self.update_health_score_definition_for_the_given_id_v1(
                     id=id,
                     includeForOverallHealth=includeForOverallHealth,
@@ -12763,8 +12763,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_details_of_a_single_assurance_event(self,
                                                    id,
@@ -12791,7 +12791,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_details_of_a_single_assurance_event_v1 .
-        """ 
+        """
         return self.get_details_of_a_single_assurance_event_v1(
                     id=id,
                     attribute=attribute,
@@ -12799,8 +12799,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_interfaces_by_specified_range(self,
                                                     device_id,
@@ -12820,7 +12820,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_interfaces_by_specified_range_v1 .
-        """ 
+        """
         return self.get_device_interfaces_by_specified_range_v1(
                     device_id=device_id,
                     records_to_return=records_to_return,
@@ -12828,8 +12828,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def query_assurance_events_with_filters(self,
                                                attributes=None,
@@ -12863,7 +12863,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of query_assurance_events_with_filters_v1 .
-        """ 
+        """
         return self.query_assurance_events_with_filters_v1(
                     attributes=attributes,
                     deviceFamily=deviceFamily,
@@ -12877,8 +12877,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_device_count(self,
                          hostname=None,
@@ -12900,7 +12900,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_device_count_v1 .
-        """ 
+        """
         return self.get_device_count_v1(
                     hostname=hostname,
                     location_name=location_name,
@@ -12909,8 +12909,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def start_wireless_rogue_ap_containment(self,
                                                macAddress=None,
@@ -12934,7 +12934,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of start_wireless_rogue_ap_containment_v1 .
-        """ 
+        """
         return self.start_wireless_rogue_ap_containment_v1(
                     macAddress=macAddress,
                     type=type,
@@ -12943,8 +12943,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_user_defined_field(self,
                                      description=None,
@@ -12968,7 +12968,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of create_user_defined_field_v1 .
-        """ 
+        """
         return self.create_user_defined_field_v1(
                     description=description,
                     name=name,
@@ -12977,8 +12977,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_device_management_address(self,
                                             deviceid,
@@ -13003,7 +13003,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_device_management_address_v1 .
-        """ 
+        """
         return self.update_device_management_address_v1(
                     deviceid=deviceid,
                     newIP=newIP,
@@ -13012,8 +13012,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_interface_details(self,
                               device_id,
@@ -13031,15 +13031,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_interface_details_v1 .
-        """ 
+        """
         return self.get_interface_details_v1(
                     device_id=device_id,
                     name=name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def sync_devices(self,
                      cliTransport=None,
@@ -13141,7 +13141,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of sync_devices_v1 .
-        """ 
+        """
         return self.sync_devices_v1(
                     cliTransport=cliTransport,
                     computeDevice=computeDevice,
@@ -13175,8 +13175,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_the_details_of_physical_components_of_the_given_device(self,
                                                                       device_uuid,
@@ -13196,15 +13196,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_the_details_of_physical_components_of_the_given_device_v1 .
-        """ 
+        """
         return self.get_the_details_of_physical_components_of_the_given_device_v1(
                     device_uuid=device_uuid,
                     type=type,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_functional_capability_for_devices(self,
                                                  device_id,
@@ -13224,15 +13224,15 @@ class Devices(object):
 
         Returns:
             This function returns the output of get_functional_capability_for_devices_v1 .
-        """ 
+        """
         return self.get_functional_capability_for_devices_v1(
                     device_id=device_id,
                     function_name=function_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_interface_details(self,
                                     interface_uuid,
@@ -13266,7 +13266,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of update_interface_details_v1 .
-        """ 
+        """
         return self.update_interface_details_v1(
                     interface_uuid=interface_uuid,
                     adminStatus=adminStatus,
@@ -13279,8 +13279,8 @@ class Devices(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def count_the_number_of_events(self,
                                       device_family,
@@ -13360,7 +13360,7 @@ class Devices(object):
 
         Returns:
             This function returns the output of count_the_number_of_events_v1 .
-        """ 
+        """
         return self.count_the_number_of_events_v1(
                     device_family=device_family,
                     ap_mac=ap_mac,
@@ -13376,8 +13376,8 @@ class Devices(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_ospf_interfaces(self,
                                headers=None,
