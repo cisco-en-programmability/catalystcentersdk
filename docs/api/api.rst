@@ -26,6 +26,14 @@ v2.3.7.6 summary
 .. include:: api_structure_table_v2_3_7_6_1.rst
 
 
+.. _v2_3_7_9 summary:
+
+v2.3.7.9 summary
+------------------
+
+.. include:: api_structure_table_v2_3_7_9.rst
+
+
 CatalystCenterAPI Class
 =======================
 
@@ -428,6 +436,385 @@ wireless
 --------
 
 .. autoclass:: catalystcentersdk.api.v2_3_7_6_1.wireless.Wireless()
+
+
+.. _ai_endpoint_analytics_2_3_7_9:
+
+ai_endpoint_analytics
+----------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.ai_endpoint_analytics.AIEndpointAnalytics()
+
+
+
+.. _application_policy_2_3_7_9:
+
+application_policy
+------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.application_policy.ApplicationPolicy()
+
+
+
+.. _applications_2_3_7_9:
+
+applications
+------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.applications.Applications()
+
+
+
+.. _authentication_management_2_3_7_9:
+
+authentication_management
+-------------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.authentication_management.AuthenticationManagement()
+
+
+
+.. _cisco_trusted_certificates_2_3_7_9:
+
+cisco_trusted_certificates
+--------------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.cisco_trusted_certificates.CiscoTrustedCertificates()
+
+
+
+.. _clients_2_3_7_9:
+
+clients
+-------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.clients.Clients()
+
+
+
+.. _command_runner_2_3_7_9:
+
+command_runner
+--------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.command_runner.CommandRunner()
+
+
+
+.. _compliance_2_3_7_9:
+
+compliance
+----------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.compliance.Compliance()
+
+
+
+.. _configuration_archive_2_3_7_9:
+
+configuration_archive
+---------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.configuration_archive.ConfigurationArchive()
+
+
+
+.. _configuration_templates_2_3_7_9:
+
+configuration_templates
+-----------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.configuration_templates.ConfigurationTemplates()
+
+
+
+.. _device_onboarding_pnp_2_3_7_9:
+
+device_onboarding_pnp
+---------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.device_onboarding_pnp.DeviceOnboardingPnp()
+
+
+
+.. _device_replacement_2_3_7_9:
+
+device_replacement
+------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.device_replacement.DeviceReplacement()
+
+
+
+.. _devices_2_3_7_9:
+
+devices
+-------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.devices.Devices()
+
+
+
+.. _disaster_recovery_2_3_7_9:
+
+disaster_recovery
+-----------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.disaster_recovery.DisasterRecovery()
+
+
+
+.. _discovery_2_3_7_9:
+
+discovery
+---------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.discovery.Discovery()
+
+
+
+.. _eox_2_3_7_9:
+
+eox
+---
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.eox.EoX()
+
+
+
+.. _event_management_2_3_7_9:
+
+event_management
+----------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.event_management.EventManagement()
+
+
+
+.. _fabric_wireless_2_3_7_9:
+
+fabric_wireless
+---------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.fabric_wireless.FabricWireless()
+
+
+
+.. _file_2_3_7_9:
+
+file
+----
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.file.File()
+
+
+
+.. _health_and_performance_2_3_7_9:
+
+health_and_performance
+----------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.health_and_performance.HealthAndPerformance()
+
+
+
+.. _itsm_2_3_7_9:
+
+itsm
+----
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.itsm.Itsm()
+
+
+
+.. _itsm_integration_2_3_7_9:
+
+itsm_integration
+----------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.itsm_integration.ItsmIntegration()
+
+
+
+.. _issues_2_3_7_9:
+
+issues
+------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.issues.Issues()
+
+
+
+.. _lan_automation_2_3_7_9:
+
+lan_automation
+--------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.lan_automation.LanAutomation()
+
+
+
+.. _licenses_2_3_7_9:
+
+licenses
+--------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.licenses.Licenses()
+
+
+
+.. _network_settings_2_3_7_9:
+
+network_settings
+----------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.network_settings.NetworkSettings()
+
+
+
+.. _path_trace_2_3_7_9:
+
+path_trace
+----------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.path_trace.PathTrace()
+
+
+
+.. _platform_2_3_7_9:
+
+platform
+--------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.platform.Platform()
+
+
+
+.. _reports_2_3_7_9:
+
+reports
+-------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.reports.Reports()
+
+
+
+.. _sda_2_3_7_9:
+
+sda
+---
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.sda.Sda()
+
+
+
+.. _security_advisories_2_3_7_9:
+
+security_advisories
+-------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.security_advisories.SecurityAdvisories()
+
+
+
+.. _sensors_2_3_7_9:
+
+sensors
+-------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.sensors.Sensors()
+
+
+
+.. _site_design_2_3_7_9:
+
+site_design
+-----------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.site_design.SiteDesign()
+
+
+
+.. _sites_2_3_7_9:
+
+sites
+-----
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.sites.Sites()
+
+
+
+.. _software_image_management_swim_2_3_7_9:
+
+software_image_management_swim
+------------------------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.software_image_management_swim.SoftwareImageManagementSwim()
+
+
+
+.. _system_settings_2_3_7_9:
+
+system_settings
+---------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.system_settings.SystemSettings()
+
+
+
+.. _tag_2_3_7_9:
+
+tag
+---
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.tag.Tag()
+
+
+
+.. _task_2_3_7_9:
+
+task
+----
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.task.Task()
+
+
+
+.. _topology_2_3_7_9:
+
+topology
+--------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.topology.Topology()
+
+
+
+.. _user_and_roles_2_3_7_9:
+
+user_and_roles
+-------------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.user_and_roles.UserandRoles()
+
+
+
+.. _users_2_3_7_9:
+
+users
+-----
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.users.Users()
+
+
+
+.. _wireless_2_3_7_9:
+
+wireless
+--------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.wireless.Wireless()
+
+
 
 
 .. _Catalyst Center Data Object:
