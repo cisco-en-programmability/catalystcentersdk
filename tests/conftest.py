@@ -29,6 +29,7 @@ pytest_plugins = [
     'tests.test_catalystcentersdk',
     'tests.api',
     'tests.api.v2_3_7_6_1',
+    'tests.api.v2_3_7_9',
 ]
 
 

@@ -29,3 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add authentication_management module.
 ### Bug fix
 - The get_templates_details function was added because it was named incorrectly.There was an "s" missing from the word templates.
+
+## [2.3.7.9] - 2024-12-12
+### Added
+- Add support of Catalyst Center versions ('2.3.7.9')
+- Adds modules for v2_3_7_9
