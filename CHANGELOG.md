@@ -34,3 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add support of Catalyst Center versions ('2.3.7.9')
 - Adds modules for v2_3_7_9
+
+## [2.3.7.9.1] - 2025-01-14
+### Bug fix
+- removal of -v1 from reference urls in the documentation
+- Modification of validators in 2.3.7.9 and 2.3.7.6
+- Fixed a bug in site_design in the uploads_floor_image function in versions 2.3.7.6 and 2.3.7.9.

@@ -106,7 +106,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!assign-device-credential-to-site-v1
+            https://developer.cisco.com/docs/dna-center/#!assign-device-credential-to-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -194,7 +194,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-device-credentials-v1
+            https://developer.cisco.com/docs/dna-center/#!create-device-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -266,7 +266,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-credentials-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-credentials
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -333,7 +333,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-credential-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-credential-details
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -390,7 +390,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-device-credential-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-device-credential
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -450,7 +450,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-global-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!get-global-pool
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -516,7 +516,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-global-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!update-global-pool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -588,7 +588,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-global-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!create-global-pool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -654,7 +654,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-global-i-p-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-global-i-p-pool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -725,7 +725,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-a-global-i-p-address-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!create-a-global-i-p-address-pool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -808,7 +808,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-global-i-p-address-pools-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-global-i-p-address-pools
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -873,7 +873,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!counts-global-i-p-address-pools-v1
+            https://developer.cisco.com/docs/dna-center/#!counts-global-i-p-address-pools
         """
         check_type(headers, dict)
         if headers is not None:
@@ -935,7 +935,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-subpools-i-ds-of-a-global-i-p-address-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-subpools-i-ds-of-a-global-i-p-address-pool
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -1000,7 +1000,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!counts-subpools-of-a-global-i-p-address-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!counts-subpools-of-a-global-i-p-address-pool
         """
         check_type(headers, dict)
         check_type(global_ip_address_pool_id, str,
@@ -1059,7 +1059,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-a-global-i-p-address-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-a-global-i-p-address-pool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1132,7 +1132,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-a-global-i-p-address-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!updates-a-global-i-p-address-pool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1206,7 +1206,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-a-global-i-p-address-pool-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-a-global-i-p-address-pool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1289,7 +1289,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!reservecreate-i-p-address-subpools-v1
+            https://developer.cisco.com/docs/dna-center/#!reservecreate-i-p-address-subpools
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1381,7 +1381,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-i-p-address-subpools-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-i-p-address-subpools
         """
         check_type(headers, dict)
         check_type(offset, int)
@@ -1451,7 +1451,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!counts-i-p-address-subpools-v1
+            https://developer.cisco.com/docs/dna-center/#!counts-i-p-address-subpools
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -1510,7 +1510,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!release-an-i-p-address-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!release-an-i-p-address-subpool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1595,7 +1595,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!updates-an-i-p-address-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!updates-an-i-p-address-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1673,7 +1673,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieves-an-i-p-address-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieves-an-i-p-address-subpool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -1731,7 +1731,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -1798,7 +1798,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-network-v1
+            https://developer.cisco.com/docs/dna-center/#!create-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1880,7 +1880,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-network-v1
+            https://developer.cisco.com/docs/dna-center/#!update-network
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -1950,7 +1950,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-c-l-i-templates-attached-to-a-network-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-c-l-i-templates-attached-to-a-network-profile
         """
         check_type(headers, dict)
         check_type(profile_id, str,
@@ -2009,7 +2009,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-count-of-c-l-i-templates-attached-to-a-network-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-count-of-c-l-i-templates-attached-to-a-network-profile
         """
         check_type(headers, dict)
         check_type(profile_id, str,
@@ -2083,7 +2083,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!get-reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(site_id, str)
@@ -2155,7 +2155,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!release-reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!release-reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -2272,7 +2272,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2424,7 +2424,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-reserve-i-p-subpool-v1
+            https://developer.cisco.com/docs/dna-center/#!update-reserve-i-p-subpool
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2521,7 +2521,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-service-provider-details-v1
+            https://developer.cisco.com/docs/dna-center/#!get-service-provider-details
         """
         check_type(headers, dict)
         if headers is not None:
@@ -2581,7 +2581,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-s-p-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!create-s-p-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2653,7 +2653,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-s-p-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!update-s-p-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2731,7 +2731,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!sync-network-devices-credential-v1
+            https://developer.cisco.com/docs/dna-center/#!sync-network-devices-credential
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2813,7 +2813,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-a-a-a-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-a-a-a-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -2893,7 +2893,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-a-a-a-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-a-a-a-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -2959,7 +2959,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-banner-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-banner-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3028,7 +3028,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-banner-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-banner-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3105,7 +3105,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-device-credential-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!get-device-credential-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3186,7 +3186,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-device-credential-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!update-device-credential-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3265,7 +3265,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-network-devices-credentials-sync-status-v1
+            https://developer.cisco.com/docs/dna-center/#!get-network-devices-credentials-sync-status
         """
         check_type(headers, dict)
         check_type(id, str,
@@ -3331,7 +3331,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-dhcp-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-dhcp-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3409,7 +3409,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-d-h-c-p-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-d-h-c-p-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3475,7 +3475,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-d-n-s-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-d-n-s-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3544,7 +3544,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-d-n-s-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-d-n-s-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3622,7 +3622,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-image-distribution-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-image-distribution-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3700,7 +3700,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-image-distribution-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-image-distribution-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3769,7 +3769,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-n-t-p-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-n-t-p-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -3847,7 +3847,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-n-t-p-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-n-t-p-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3914,7 +3914,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-telemetry-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-telemetry-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -3992,7 +3992,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-telemetry-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-telemetry-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4078,7 +4078,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!set-time-zone-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!set-time-zone-for-a-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -4156,7 +4156,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!retrieve-time-zone-settings-for-a-site-v1
+            https://developer.cisco.com/docs/dna-center/#!retrieve-time-zone-settings-for-a-site
         """
         check_type(headers, dict)
         check_type(inherited, bool)
@@ -4216,7 +4216,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!delete-s-p-profile-v1
+            https://developer.cisco.com/docs/dna-center/#!delete-s-p-profile
         """
         check_type(headers, dict)
         check_type(sp_profile_name, str,
@@ -4281,7 +4281,7 @@ class NetworkSettings(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-a-devices-telemetry-settings-to-conform-to-the-telemetry-settings-for-its-site-v1
+            https://developer.cisco.com/docs/dna-center/#!update-a-devices-telemetry-settings-to-conform-to-the-telemetry-settings-for-its-site
         """
         check_type(headers, dict)
         check_type(payload, dict)
