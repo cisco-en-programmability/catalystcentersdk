@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cisco Catalyst Center RetrievesTheDevice'sCLIsOfTheICAPIntentV1 data model.
+"""Cisco Catalyst Center RetrievesTheDevicesCLIsOfTheICAPIntentV1 data model.
 
 Copyright (c) 2024 Cisco Systems.
 
@@ -33,7 +33,7 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorF657AE3D75Ecd87E97Be0A1571923(object):
-    """RetrievesTheDevice'sCLIsOfTheICAPIntentV1 request schema
+    """RetrievesTheDevicesCLIsOfTheICAPIntentV1 request schema
     definition."""
     def __init__(self):
         super(JSONSchemaValidatorF657AE3D75Ecd87E97Be0A1571923, self).__init__()
