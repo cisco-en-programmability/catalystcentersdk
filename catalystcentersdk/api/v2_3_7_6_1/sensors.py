@@ -622,8 +622,8 @@ class Sensors(object):
 
         return self._object_factory('bpm_a352f6280e445075b3ea7cbf868c2d94_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def create_sensor_test_template(self,
                                        apCoverage=None,
@@ -665,7 +665,7 @@ class Sensors(object):
 
         Returns:
             This function returns the output of create_sensor_test_template_v1 .
-        """ 
+        """
         return self.create_sensor_test_template_v1(
                     apCoverage=apCoverage,
                     connection=connection,
@@ -683,8 +683,8 @@ class Sensors(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def run_now_sensor_test(self,
                                templateName=None,
@@ -706,7 +706,7 @@ class Sensors(object):
 
         Returns:
             This function returns the output of run_now_sensor_test_v1 .
-        """ 
+        """
         return self.run_now_sensor_test_v1(
                     templateName=templateName,
                     headers=headers,
@@ -714,8 +714,8 @@ class Sensors(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_sensor_test(self,
                               template_name,
@@ -723,7 +723,7 @@ class Sensors(object):
                               **request_parameters):
         """ This function is an alias of delete_sensor_test_v1 .
         Args:
-            template_name(basestring): templateName query parameter.
+            template_name(str): templateName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -731,14 +731,14 @@ class Sensors(object):
 
         Returns:
             This function returns the output of delete_sensor_test_v1 .
-        """ 
+        """
         return self.delete_sensor_test_v1(
                     template_name=template_name,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def duplicate_sensor_test_template(self,
                                           newTemplateName=None,
@@ -762,7 +762,7 @@ class Sensors(object):
 
         Returns:
             This function returns the output of duplicate_sensor_test_template_v1 .
-        """ 
+        """
         return self.duplicate_sensor_test_template_v1(
                     newTemplateName=newTemplateName,
                     templateName=templateName,
@@ -771,8 +771,8 @@ class Sensors(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def sensors(self,
                    site_id=None,
@@ -780,7 +780,7 @@ class Sensors(object):
                    **request_parameters):
         """ This function is an alias of sensors_v1 .
         Args:
-            site_id(basestring): siteId query parameter.
+            site_id(str): siteId query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -788,14 +788,14 @@ class Sensors(object):
 
         Returns:
             This function returns the output of sensors_v1 .
-        """ 
+        """
         return self.sensors_v1(
                     site_id=site_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def edit_sensor_test_template(self,
                                      _id=None,
@@ -872,7 +872,7 @@ class Sensors(object):
 
         Returns:
             This function returns the output of edit_sensor_test_template_v1 .
-        """ 
+        """
         return self.edit_sensor_test_template_v1(
                     _id=_id,
                     actionInProgress=actionInProgress,

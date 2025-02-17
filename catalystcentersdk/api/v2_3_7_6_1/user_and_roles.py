@@ -1111,9 +1111,9 @@ class UserandRoles(object):
                          **request_parameters):
         """ This function is an alias of get_users_api_v1 .
         Args:
-            invoke_source(basestring): invokeSource query parameter. The source that invokes this API. The value of
+            invoke_source(str): invokeSource query parameter. The source that invokes this API. The value of
                 this query parameter must be set to "external". .
-            auth_source(basestring): authSource query parameter. The source that authenticates the user. The value
+            auth_source(str): authSource query parameter. The source that authenticates the user. The value
                 of this query parameter can be set to "internal" or "external". If not provided, then
                 all users will be returned in the response. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1139,7 +1139,7 @@ class UserandRoles(object):
                                                    **request_parameters):
         """ This function is an alias of get_external_authentication_servers_api_v1 .
         Args:
-            invoke_source(basestring): invokeSource query parameter. The source that invokes this API. The value of
+            invoke_source(str): invokeSource query parameter. The source that invokes this API. The value of
                 this query parameter must be set to "external". .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1229,7 +1229,7 @@ class UserandRoles(object):
                            **request_parameters):
         """ This function is an alias of delete_user_api_v1 .
         Args:
-            user_id(basestring): userId path parameter. The id of the user to be deleted .
+            user_id(str): userId path parameter. The id of the user to be deleted .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1446,7 +1446,7 @@ class UserandRoles(object):
                            **request_parameters):
         """ This function is an alias of delete_role_api_v1 .
         Args:
-            role_id(basestring): roleId path parameter. The Id of the role to be deleted .
+            role_id(str): roleId path parameter. The Id of the role to be deleted .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides

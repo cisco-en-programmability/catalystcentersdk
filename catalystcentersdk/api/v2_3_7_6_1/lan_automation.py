@@ -928,7 +928,7 @@ class LanAutomation(object):
                                        **request_parameters):
         """ This function is an alias of lan_automation_status_by_id_v1 .
         Args:
-            id(basestring): id path parameter. LAN Automation session identifier. .
+            id(str): id path parameter. LAN Automation session identifier. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -951,7 +951,7 @@ class LanAutomation(object):
                                **request_parameters):
         """ This function is an alias of lan_automation_stop_v1 .
         Args:
-            id(basestring): id path parameter. LAN Automation id can be obtained from /dna/intent/api/v1/lan-
+            id(str): id path parameter. LAN Automation id can be obtained from /dna/intent/api/v1/lan-
                 automation/status. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1002,7 +1002,7 @@ class LanAutomation(object):
                                     **request_parameters):
         """ This function is an alias of lan_automation_log_by_id_v1 .
         Args:
-            id(basestring): id path parameter. LAN Automation session identifier. .
+            id(str): id path parameter. LAN Automation session identifier. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1027,9 +1027,9 @@ class LanAutomation(object):
                                                       **request_parameters):
         """ This function is an alias of lan_automation_logs_for_individual_devices_v1 .
         Args:
-            id(basestring): id path parameter. LAN Automation session identifier. .
-            serial_number(basestring): serialNumber path parameter. Device serial number. .
-            log_level(basestring): logLevel query parameter. Supported levels are ERROR, INFO, WARNING, TRACE,
+            id(str): id path parameter. LAN Automation session identifier. .
+            serial_number(str): serialNumber path parameter. Device serial number. .
+            log_level(str): logLevel query parameter. Supported levels are ERROR, INFO, WARNING, TRACE,
                 CONFIG and ALL. Specifying ALL will display device specific logs with the exception of
                 CONFIG logs. In order to view CONFIG logs along with the remaining logs, please leave
                 the query parameter blank. .
@@ -1059,7 +1059,7 @@ class LanAutomation(object):
                                                   **request_parameters):
         """ This function is an alias of lan_automation_stop_and_update_devices_v1 .
         Args:
-            id(basestring): id path parameter. LAN Automation id can be obtained from /dna/intent/api/v1/lan-
+            id(str): id path parameter. LAN Automation id can be obtained from /dna/intent/api/v1/lan-
                 automation/status. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1152,7 +1152,7 @@ class LanAutomation(object):
             hostnameUpdateDevices(list): LAN Automation's hostnameUpdateDevices (list of objects).
             linkUpdate(object): LAN Automation's linkUpdate.
             loopbackUpdateDeviceList(list): LAN Automation's loopbackUpdateDeviceList (list of objects).
-            feature(basestring): feature query parameter. Feature ID for the update. Supported feature IDs include:
+            feature(str): feature query parameter. Feature ID for the update. Supported feature IDs include:
                 LOOPBACK0_IPADDRESS_UPDATE, HOSTNAME_UPDATE, LINK_ADD, and LINK_DELETE.  .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

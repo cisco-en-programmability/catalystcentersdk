@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cisco Catalyst Center GetAdvisoriesListV1 data model.
+"""Cisco Catalyst Center RetrievesCiscoIMCConfigurationsForCatalystCenterNodesV1 data model.
 
 Copyright (c) 2024 Cisco Systems.
 
@@ -32,10 +32,11 @@ import fastjsonschema
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorE6317A46C835F0881F08071959Bb026(object):
-    """GetAdvisoriesListV1 request schema definition."""
+class JSONSchemaValidatorB7Ed1910345A8B9B9AD88Aeee4F109(object):
+    """RetrievesCiscoIMCConfigurationsForCatalystCenterNodesV1 request
+    schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE6317A46C835F0881F08071959Bb026, self).__init__()
+        super(JSONSchemaValidatorB7Ed1910345A8B9B9AD88Aeee4F109, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -43,42 +44,16 @@ class JSONSchemaValidatorE6317A46C835F0881F08071959Bb026(object):
                 "response": {
                 "items": {
                 "properties": {
-                "advisoryId": {
+                "id": {
                 "type": "string"
                 },
-                "cves": {
-                "items": {
+                "ipAddress": {
                 "type": "string"
                 },
-                "type": "array"
-                },
-                "defaultConfigMatchPattern": {
+                "nodeId": {
                 "type": "string"
                 },
-                "defaultDetectionType": {
-                "type": "string"
-                },
-                "detectionType": {
-                "type": "string"
-                },
-                "deviceCount": {
-                "type": "integer"
-                },
-                "fixedVersions": {
-                "properties": {
-                "version": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "hiddenDeviceCount": {
-                "type": "number"
-                },
-                "publicationUrl": {
-                "type": "string"
-                },
-                "sir": {
+                "username": {
                 "type": "string"
                 }
                 },

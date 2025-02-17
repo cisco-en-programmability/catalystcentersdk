@@ -343,8 +343,8 @@ class SecurityAdvisories(object):
 
         return self._object_factory('bpm_cf75923b0c6575ead874f9d404d7355_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def get_advisories_summary(self,
                                   headers=None,
@@ -363,8 +363,8 @@ class SecurityAdvisories(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_advisory_device_detail(self,
                                       device_id,
@@ -372,7 +372,7 @@ class SecurityAdvisories(object):
                                       **request_parameters):
         """ This function is an alias of get_advisory_device_detail_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device instance UUID .
+            device_id(str): deviceId path parameter. Device instance UUID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -380,14 +380,14 @@ class SecurityAdvisories(object):
 
         Returns:
             This function returns the output of get_advisory_device_detail_v1 .
-        """ 
+        """
         return self.get_advisory_device_detail_v1(
                     device_id=device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_devices_per_advisory(self,
                                     advisory_id,
@@ -395,7 +395,7 @@ class SecurityAdvisories(object):
                                     **request_parameters):
         """ This function is an alias of get_devices_per_advisory_v1 .
         Args:
-            advisory_id(basestring): advisoryId path parameter. Advisory ID .
+            advisory_id(str): advisoryId path parameter. Advisory ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -403,14 +403,14 @@ class SecurityAdvisories(object):
 
         Returns:
             This function returns the output of get_devices_per_advisory_v1 .
-        """ 
+        """
         return self.get_devices_per_advisory_v1(
                     advisory_id=advisory_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_advisories_per_device(self,
                                      device_id,
@@ -418,7 +418,7 @@ class SecurityAdvisories(object):
                                      **request_parameters):
         """ This function is an alias of get_advisories_per_device_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device instance UUID .
+            device_id(str): deviceId path parameter. Device instance UUID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -426,14 +426,14 @@ class SecurityAdvisories(object):
 
         Returns:
             This function returns the output of get_advisories_per_device_v1 .
-        """ 
+        """
         return self.get_advisories_per_device_v1(
                     device_id=device_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_advisories_list(self,
                                headers=None,
@@ -451,7 +451,7 @@ class SecurityAdvisories(object):
         return self.get_advisories_list_v1(
                     headers=headers,
                     **request_parameters
-        )  
+        )
 
 
 

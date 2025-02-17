@@ -124,6 +124,8 @@ from catalystcentersdk.api.v2_3_7_9.applications import \
     Applications as Applications_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.authentication_management import \
     AuthenticationManagement as AuthenticationManagement_v2_3_7_9
+from catalystcentersdk.api.v2_3_7_9.cisco_i_m_c import \
+    CiscoIMC as CiscoIMC_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.cisco_trusted_certificates import \
     CiscoTrustedCertificates as CiscoTrustedCertificates_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.clients import \
@@ -147,7 +149,7 @@ from catalystcentersdk.api.v2_3_7_9.disaster_recovery import \
 from catalystcentersdk.api.v2_3_7_9.discovery import \
     Discovery as Discovery_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.eox import \
-    EoX as EoX_v2_3_7_9
+    EoX as Eox_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.event_management import \
     EventManagement as EventManagement_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.fabric_wireless import \
@@ -332,10 +334,11 @@ class TestCatalystCenterSDK:
             assert isinstance(api.wireless, Wireless_v2_3_7_6_1)
 
         if api.version == '2.3.7.9':
-            assert isinstance(api.ai_endpoint_analytics, AIEndpointAnalytics_v2_3_7_9)
+            assert isinstance(api.a_i_endpoint_analytics, AIEndpointAnalytics_v2_3_7_9)
             assert isinstance(api.application_policy, ApplicationPolicy_v2_3_7_9)
             assert isinstance(api.applications, Applications_v2_3_7_9)
             assert isinstance(api.authentication_management, AuthenticationManagement_v2_3_7_9)
+            assert isinstance(api.cisco_i_m_c, CiscoIMC_v2_3_7_9)
             assert isinstance(api.cisco_trusted_certificates, CiscoTrustedCertificates_v2_3_7_9)
             assert isinstance(api.clients, Clients_v2_3_7_9)
             assert isinstance(api.command_runner, CommandRunner_v2_3_7_9)
@@ -347,7 +350,7 @@ class TestCatalystCenterSDK:
             assert isinstance(api.devices, Devices_v2_3_7_9)
             assert isinstance(api.disaster_recovery, DisasterRecovery_v2_3_7_9)
             assert isinstance(api.discovery, Discovery_v2_3_7_9)
-            assert isinstance(api.eox, EoX_v2_3_7_9)
+            assert isinstance(api.eox, Eox_v2_3_7_9)
             assert isinstance(api.event_management, EventManagement_v2_3_7_9)
             assert isinstance(api.fabric_wireless, FabricWireless_v2_3_7_9)
             assert isinstance(api.file, File_v2_3_7_9)
@@ -371,6 +374,6 @@ class TestCatalystCenterSDK:
             assert isinstance(api.tag, Tag_v2_3_7_9)
             assert isinstance(api.task, Task_v2_3_7_9)
             assert isinstance(api.topology, Topology_v2_3_7_9)
-            assert isinstance(api.user_and_roles, UserandRoles_v2_3_7_9)
+            assert isinstance(api.userand_roles, UserandRoles_v2_3_7_9)
             assert isinstance(api.users, Users_v2_3_7_9)
             assert isinstance(api.wireless, Wireless_v2_3_7_9)

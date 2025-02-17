@@ -80,3 +80,26 @@ Bug fix
 -  Modification of validators in 2.3.7.9 and 2.3.7.6
 -  Fixed a bug in site_design in the uploads_floor_image function in
    versions 2.3.7.6 and 2.3.7.9.
+
+.. _section-5:
+
+[2.3.7.9.2] - 2025-02-17
+------------------------
+
+.. _bug-fix-1:
+
+Bug fix
+~~~~~~~
+
+-  Alias have been adjusted for backward compatibility.
+-  Some functions were changed in versions 2.3.7.6 and 2.3.7.9 to handle
+   files.
+-  fix in create_webhook_destination, update_webhook_destination,
+   get_webhook_destination functions. In versions 2.3.7.6 and 2.3.7.9.
+
+.. _added-4:
+
+Added
+~~~~~
+
+-  Cisco_IMC module added

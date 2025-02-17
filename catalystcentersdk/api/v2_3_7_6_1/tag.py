@@ -1384,8 +1384,8 @@ class Tag(object):
 
         return self._object_factory('bpm_e4d083d956805f63b970be543c34eb0e_v2_3_7_6_1', json_data)
 
-                
-    
+
+
     # Alias Function
     def get_tag_members_by_id(self,
                                  id,
@@ -1398,18 +1398,18 @@ class Tag(object):
                                  **request_parameters):
         """ This function is an alias of get_tag_members_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Tag ID .
-            member_type(basestring): memberType query parameter. Entity type of the member. Possible values can be
+            id(str): id path parameter. Tag ID .
+            member_type(str): memberType query parameter. Entity type of the member. Possible values can be
                 retrieved by using /tag/member/type API .
             offset(int): offset query parameter. Used for pagination. It indicates the starting row number out of
                 available member records .
             limit(int): limit query parameter. Used to Number of maximum members to return in the result .
-            member_association_type(basestring): memberAssociationType query parameter. Indicates how the member is
+            member_association_type(str): memberAssociationType query parameter. Indicates how the member is
                 associated with the tag. Possible values and description. 1) DYNAMIC : The member is
                 associated to the tag through rules. 2) STATIC – The member is associated to the tag
                 manually. 3) MIXED – The member is associated manually and also satisfies the rule
                 defined for the tag .
-            level(basestring): level query parameter.
+            level(str): level query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1417,7 +1417,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of get_tag_members_by_id_v1 .
-        """ 
+        """
         return self.get_tag_members_by_id_v1(
                     id=id,
                     member_type=member_type,
@@ -1428,8 +1428,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_tag(self,
                       description=None,
@@ -1461,7 +1461,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of update_tag_v1 .
-        """ 
+        """
         return self.update_tag_v1(
                     description=description,
                     dynamicRules=dynamicRules,
@@ -1474,8 +1474,8 @@ class Tag(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def delete_tag(self,
                       id,
@@ -1483,7 +1483,7 @@ class Tag(object):
                       **request_parameters):
         """ This function is an alias of delete_tag_v1 .
         Args:
-            id(basestring): id path parameter. Tag ID .
+            id(str): id path parameter. Tag ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1491,14 +1491,14 @@ class Tag(object):
 
         Returns:
             This function returns the output of delete_tag_v1 .
-        """ 
+        """
         return self.delete_tag_v1(
                     id=id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tag(self,
                    additional_info_attributes=None,
@@ -1516,19 +1516,19 @@ class Tag(object):
                    **request_parameters):
         """ This function is an alias of get_tag_v1 .
         Args:
-            name(basestring): name query parameter. Tag name is mandatory when filter operation is used. .
-            additional_info_name_space(basestring): additionalInfo.nameSpace query parameter.
-            additional_info_attributes(basestring): additionalInfo.attributes query parameter.
-            level(basestring): level query parameter.
+            name(str): name query parameter. Tag name is mandatory when filter operation is used. .
+            additional_info_name_space(str): additionalInfo.nameSpace query parameter.
+            additional_info_attributes(str): additionalInfo.attributes query parameter.
+            level(str): level query parameter.
             offset(int): offset query parameter.
             limit(int): limit query parameter.
-            size(basestring): size query parameter. size in kilobytes(KB) .
-            field(basestring): field query parameter. Available field names are
+            size(str): size query parameter. size in kilobytes(KB) .
+            field(str): field query parameter. Available field names are
                 :'name,id,parentId,type,additionalInfo.nameSpace,additionalInfo.attributes' .
-            sort_by(basestring): sortBy query parameter. Only supported attribute is name. SortyBy is mandatory when
+            sort_by(str): sortBy query parameter. Only supported attribute is name. SortyBy is mandatory when
                 order is used. .
-            order(basestring): order query parameter. Available values are asc and des .
-            system_tag(basestring): systemTag query parameter.
+            order(str): order query parameter. Available values are asc and des .
+            system_tag(str): systemTag query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1536,7 +1536,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of get_tag_v1 .
-        """ 
+        """
         return self.get_tag_v1(
                     additional_info_attributes=additional_info_attributes,
                     additional_info_name_space=additional_info_name_space,
@@ -1552,8 +1552,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def remove_tag_member(self,
                              id,
@@ -1562,8 +1562,8 @@ class Tag(object):
                              **request_parameters):
         """ This function is an alias of remove_tag_member_v1 .
         Args:
-            id(basestring): id path parameter. Tag ID .
-            member_id(basestring): memberId path parameter. TagMember id to be removed from tag .
+            id(str): id path parameter. Tag ID .
+            member_id(str): memberId path parameter. TagMember id to be removed from tag .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1571,15 +1571,15 @@ class Tag(object):
 
         Returns:
             This function returns the output of remove_tag_member_v1 .
-        """ 
+        """
         return self.remove_tag_member_v1(
                     id=id,
                     member_id=member_id,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_tags_associated_with_the_interfaces(self,
                                                         limit=None,
@@ -1599,15 +1599,15 @@ class Tag(object):
 
         Returns:
             This function returns the output of retrieve_tags_associated_with_the_interfaces_v1 .
-        """ 
+        """
         return self.retrieve_tags_associated_with_the_interfaces_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tag_resource_types(self,
                                   headers=None,
@@ -1626,8 +1626,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_the_count_of_network_devices_that_are_associated_with_at_least_one_tag(self,
                                                                                            headers=None,
@@ -1646,8 +1646,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def query_the_tags_associated_with_network_devices(self,
                                                           ids=None,
@@ -1670,7 +1670,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of query_the_tags_associated_with_network_devices_v1 .
-        """ 
+        """
         return self.query_the_tags_associated_with_network_devices_v1(
                     ids=ids,
                     headers=headers,
@@ -1678,8 +1678,8 @@ class Tag(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_the_count_of_interfaces_that_are_associated_with_at_least_one_tag(self,
                                                                                       headers=None,
@@ -1698,8 +1698,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def create_tag(self,
                       description=None,
@@ -1731,7 +1731,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of create_tag_v1 .
-        """ 
+        """
         return self.create_tag_v1(
                     description=description,
                     dynamicRules=dynamicRules,
@@ -1744,8 +1744,8 @@ class Tag(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def retrieve_tags_associated_with_network_devices(self,
                                                          limit=None,
@@ -1765,15 +1765,15 @@ class Tag(object):
 
         Returns:
             This function returns the output of retrieve_tags_associated_with_network_devices_v1 .
-        """ 
+        """
         return self.retrieve_tags_associated_with_network_devices_v1(
                     limit=limit,
                     offset=offset,
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tag_member_count(self,
                                 id,
@@ -1783,9 +1783,9 @@ class Tag(object):
                                 **request_parameters):
         """ This function is an alias of get_tag_member_count_v1 .
         Args:
-            id(basestring): id path parameter. Tag ID .
-            member_type(basestring): memberType query parameter.
-            member_association_type(basestring): memberAssociationType query parameter.
+            id(str): id path parameter. Tag ID .
+            member_type(str): memberType query parameter.
+            member_association_type(str): memberAssociationType query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1793,7 +1793,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of get_tag_member_count_v1 .
-        """ 
+        """
         return self.get_tag_member_count_v1(
                     id=id,
                     member_type=member_type,
@@ -1801,8 +1801,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def query_the_tags_associated_with_interfaces(self,
                                                      ids=None,
@@ -1825,7 +1825,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of query_the_tags_associated_with_interfaces_v1 .
-        """ 
+        """
         return self.query_the_tags_associated_with_interfaces_v1(
                     ids=ids,
                     headers=headers,
@@ -1833,8 +1833,8 @@ class Tag(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def update_tag_membership(self,
                                  memberToTags=None,
@@ -1858,7 +1858,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of update_tag_membership_v1 .
-        """ 
+        """
         return self.update_tag_membership_v1(
                     memberToTags=memberToTags,
                     memberType=memberType,
@@ -1867,8 +1867,8 @@ class Tag(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tag_count(self,
                          attribute_name=None,
@@ -1880,11 +1880,11 @@ class Tag(object):
                          **request_parameters):
         """ This function is an alias of get_tag_count_v1 .
         Args:
-            name(basestring): name query parameter.
-            name_space(basestring): nameSpace query parameter.
-            attribute_name(basestring): attributeName query parameter.
-            size(basestring): size query parameter. size in kilobytes(KB) .
-            system_tag(basestring): systemTag query parameter.
+            name(str): name query parameter.
+            name_space(str): nameSpace query parameter.
+            attribute_name(str): attributeName query parameter.
+            size(str): size query parameter. size in kilobytes(KB) .
+            system_tag(str): systemTag query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1892,7 +1892,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of get_tag_count_v1 .
-        """ 
+        """
         return self.get_tag_count_v1(
                     attribute_name=attribute_name,
                     name=name,
@@ -1902,8 +1902,8 @@ class Tag(object):
                     headers=headers,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def add_members_to_the_tag(self,
                                   id,
@@ -1915,7 +1915,7 @@ class Tag(object):
         """ This function is an alias of add_members_to_the_tag_v1 .
         Args:
             memberType(list): Tag's memberType (list of strings).
-            id(basestring): id path parameter. Tag ID .
+            id(str): id path parameter. Tag ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -1927,7 +1927,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of add_members_to_the_tag_v1 .
-        """ 
+        """
         return self.add_members_to_the_tag_v1(
                     id=id,
                     memberType=memberType,
@@ -1936,8 +1936,8 @@ class Tag(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-                
-    
+
+
     # Alias Function
     def get_tag_by_id(self,
                          id,
@@ -1945,7 +1945,7 @@ class Tag(object):
                          **request_parameters):
         """ This function is an alias of get_tag_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Tag ID .
+            id(str): id path parameter. Tag ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1953,7 +1953,7 @@ class Tag(object):
 
         Returns:
             This function returns the output of get_tag_by_id_v1 .
-        """ 
+        """
         return self.get_tag_by_id_v1(
                     id=id,
                     headers=headers,

@@ -236,7 +236,7 @@ class EoX(object):
                                       **request_parameters):
         """ This function is an alias of get_eox_details_per_device_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device instance UUID .
+            device_id(str): deviceId path parameter. Device instance UUID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides

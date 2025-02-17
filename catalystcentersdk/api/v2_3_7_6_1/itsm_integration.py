@@ -560,7 +560,7 @@ class ItsmIntegration(object):
             description(string): ITSM Integration's Description of the setting instance .
             dypName(string): ITSM Integration's It can be ServiceNowConnection .
             name(string): ITSM Integration's Name of the setting instance .
-            instance_id(basestring): instanceId path parameter. Instance Id of the Integration setting instance .
+            instance_id(str): instanceId path parameter. Instance Id of the Integration setting instance .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -593,7 +593,7 @@ class ItsmIntegration(object):
                                               **request_parameters):
         """ This function is an alias of get_itsm_integration_setting_by_id_v1 .
         Args:
-            instance_id(basestring): instanceId path parameter. Instance Id of the Integration setting instance .
+            instance_id(str): instanceId path parameter. Instance Id of the Integration setting instance .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -616,7 +616,7 @@ class ItsmIntegration(object):
                                            **request_parameters):
         """ This function is an alias of delete_itsm_integration_setting_v1 .
         Args:
-            instance_id(basestring): instanceId path parameter. Instance Id of the Integration setting instance .
+            instance_id(str): instanceId path parameter. Instance Id of the Integration setting instance .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
