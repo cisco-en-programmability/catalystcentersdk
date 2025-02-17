@@ -6290,7 +6290,7 @@ class Wireless(object):
             secondaryManagedAPLocationsSiteIds(list): Wireless's Site IDs of Secondary Managed AP Locations. These
                 values can be obtained by using the API call GET: /dna/intent/api/v1/site  (list of
                 strings).
-            device_id(basestring): deviceId path parameter. Network Device ID. This value can be obtained by using
+            device_id(str): deviceId path parameter. Network Device ID. This value can be obtained by using
                 the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress} .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -6398,7 +6398,7 @@ class Wireless(object):
                                     **request_parameters):
         """ This function is an alias of delete_dynamic_interface_v1 .
         Args:
-            interface_name(basestring): interfaceName query parameter. valid interface-name to be deleted .
+            interface_name(str): interfaceName query parameter. valid interface-name to be deleted .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -6421,7 +6421,7 @@ class Wireless(object):
                              **request_parameters):
         """ This function is an alias of delete_rf_profile_v1 .
         Args:
-            id(basestring): id path parameter. RF Profile ID .
+            id(str): id path parameter. RF Profile ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -6481,7 +6481,7 @@ class Wireless(object):
         Args:
             ssidDetails(list): Wireless's ssidDetails (list of objects).
             wirelessProfileName(string): Wireless's Wireless Network Profile Name .
-            id(basestring): id path parameter. Wireless Profile Id .
+            id(str): id path parameter. Wireless Profile Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -6514,7 +6514,7 @@ class Wireless(object):
                                                                             **request_parameters):
         """ This function is an alias of get_anchor_managed_ap_locations_for_specific_wireless_controller_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+            network_device_id(str): networkDeviceId path parameter. Obtain the network device ID value by
                 using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
             limit(int): limit query parameter. The number of records to show for this page. .
             offset(int): offset query parameter. The first record to show for this page; the first record is
@@ -6603,7 +6603,7 @@ class Wireless(object):
                                **request_parameters):
         """ This function is an alias of get_enterprise_ssid_v1 .
         Args:
-            ssid_name(basestring): ssidName query parameter. Enter the enterprise SSID name that needs to be
+            ssid_name(str): ssidName query parameter. Enter the enterprise SSID name that needs to be
                 retrieved. If not entered, all the enterprise SSIDs will be retrieved. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -6628,8 +6628,8 @@ class Wireless(object):
                           **request_parameters):
         """ This function is an alias of get_ssid_by_id_v1 .
         Args:
-            site_id(basestring): siteId path parameter. Site UUID .
-            id(basestring): id path parameter. SSID ID. .
+            site_id(str): siteId path parameter. Site UUID .
+            id(str): id path parameter. SSID ID. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -6653,7 +6653,7 @@ class Wireless(object):
                                 **request_parameters):
         """ This function is an alias of retrieve_rf_profiles_v1 .
         Args:
-            rf_profile_name(basestring): rf-profile-name query parameter. RF Profile Name .
+            rf_profile_name(str): rf-profile-name query parameter. RF Profile Name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -6787,7 +6787,7 @@ class Wireless(object):
                                 **request_parameters):
         """ This function is an alias of get_rf_profile_by_id_v1 .
         Args:
-            id(basestring): id path parameter. RF Profile ID .
+            id(str): id path parameter. RF Profile ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -6895,7 +6895,7 @@ class Wireless(object):
                                    **request_parameters):
         """ This function is an alias of delete_a80211be_profile_v1 .
         Args:
-            id(basestring): id path parameter. 802.11be Profile ID .
+            id(str): id path parameter. 802.11be Profile ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -6964,7 +6964,7 @@ class Wireless(object):
                                    **request_parameters):
         """ This function is an alias of get_all_mobility_groups_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId query parameter. Employ this query parameter to obtain
+            network_device_id(str): networkDeviceId query parameter. Employ this query parameter to obtain
                 the details of the Mobility Group corresponding to the provided networkDeviceId. Obtain
                 the network device ID value by using the API GET call /dna/intent/api/v1/network-
                 device/ip-address/${ipAddress}. .
@@ -6990,7 +6990,7 @@ class Wireless(object):
                                    **request_parameters):
         """ This function is an alias of delete_wireless_profile_v1 .
         Args:
-            wireless_profile_name(basestring): wirelessProfileName path parameter. Wireless Profile Name .
+            wireless_profile_name(str): wirelessProfileName path parameter. Wireless Profile Name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -7080,7 +7080,7 @@ class Wireless(object):
             ofdmaMultiRu(boolean): Wireless's OFDMA Multi-RU (Default: false) .
             ofdmaUpLink(boolean): Wireless's OFDMA Uplink (Default: true) .
             profileName(string): Wireless's 802.11be Profile Name .
-            id(basestring): id path parameter. 802.11be Profile ID .
+            id(str): id path parameter. 802.11be Profile ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -7115,7 +7115,7 @@ class Wireless(object):
                                  **request_parameters):
         """ This function is an alias of get_dynamic_interface_v1 .
         Args:
-            interface_name(basestring): interface-name query parameter. dynamic-interface name, if not specified all
+            interface_name(str): interface-name query parameter. dynamic-interface name, if not specified all
                 the existing dynamic interfaces will be retrieved .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -7131,6 +7131,28 @@ class Wireless(object):
                     **request_parameters
         )
 
+    #Alias Function
+    def get_access_points_factory_reset_status(self,
+                                                  task_id,
+                                                  headers=None,
+                                                  **request_parameters):
+        """ This function is an alias of get_access_points_factory_reset_status_v1 .
+        Args:
+            task_id(str): taskId query parameter. provide the task id which is returned in the response of ap
+                factory reset post api .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of get_access_points_factory_reset_status_v1 .
+        """
+        return self.get_access_points_factory_reset_status_v1(
+                                                  task_id,
+                                                  headers,
+                                                  **request_parameters)
+
+
 
     # Alias Function
     def get_interface_by_id(self,
@@ -7139,7 +7161,7 @@ class Wireless(object):
                                **request_parameters):
         """ This function is an alias of get_interface_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Interface ID .
+            id(str): id path parameter. Interface ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -7162,7 +7184,7 @@ class Wireless(object):
                                 **request_parameters):
         """ This function is an alias of get_wireless_profile_v1 .
         Args:
-            profile_name(basestring): profileName query parameter. Wireless Network Profile Name .
+            profile_name(str): profileName query parameter. Wireless Network Profile Name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -7384,7 +7406,7 @@ class Wireless(object):
             wlanBandSelectEnable(boolean): Wireless's Band select is allowed only when band options selected
                 contains at least 2.4 GHz and 5 GHz band .
             wlanType(string): Wireless's Wlan Type . Available values are 'Enterprise' and 'Guest'.
-            site_id(basestring): siteId path parameter. Site UUID of Global site .
+            site_id(str): siteId path parameter. Site UUID of Global site .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -7637,7 +7659,7 @@ class Wireless(object):
             radioTypeAProperties(object): Wireless's radioTypeAProperties.
             radioTypeBProperties(object): Wireless's radioTypeBProperties.
             rfProfileName(string): Wireless's RF Profile Name .
-            id(basestring): id path parameter. RF Profile ID .
+            id(str): id path parameter. RF Profile ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -7665,7 +7687,39 @@ class Wireless(object):
                     active_validation=active_validation,
                     **request_parameters
         )
-
+    # Alias Function
+    def factory_reset_access_points(self,
+                                       apMacAddresses=None,
+                                       keepStaticIPConfig=None,
+                                       headers=None,
+                                       payload=None,
+                                       active_validation=True,
+                                       **request_parameters):
+        """ This function is an alias of factory_reset_access_points_v1 .
+        Args:
+            apMacAddresses(list): Wireless's List of Access Point's Ethernet MAC addresses, set maximum 100 ethernet
+                MAC addresses per request.  (list of strings).
+            keepStaticIPConfig(boolean): Wireless's Set the value of keepStaticIPConfig to false, to clear all
+                configurations from Access Points and set the value of keepStaticIPConfig to true, to
+                clear all configurations from Access Points without clearing static IP configuration. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            payload(dict): A JSON serializable Python object to send in the
+                body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of factory_reset_access_points_v1 .
+        """
+        return self.factory_reset_access_points_v1(
+                                       apMacAddresses,
+                                       keepStaticIPConfig,
+                                       headers,
+                                       payload,
+                                       active_validation,
+                                       **request_parameters)
 
     # Alias Function
     def get_access_point_configuration_task_result(self,
@@ -7674,7 +7728,7 @@ class Wireless(object):
                                                       **request_parameters):
         """ This function is an alias of get_access_point_configuration_task_result_v1 .
         Args:
-            task_id(basestring): task_id path parameter. task id information of ap config .
+            task_id(str): task_id path parameter. task id information of ap config .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -7697,7 +7751,7 @@ class Wireless(object):
                                       **request_parameters):
         """ This function is an alias of get_wireless_profile_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Wireless Profile Id .
+            id(str): id path parameter. Wireless Profile Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -7720,7 +7774,7 @@ class Wireless(object):
                                     **request_parameters):
         """ This function is an alias of get80211be_profile_by_id_v1 .
         Args:
-            id(basestring): id path parameter. 802.11be Profile ID .
+            id(str): id path parameter. 802.11be Profile ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -7743,7 +7797,7 @@ class Wireless(object):
                                                                            **request_parameters):
         """ This function is an alias of get_managed_ap_locations_count_for_specific_wireless_controller_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+            network_device_id(str): networkDeviceId path parameter. Obtain the network device ID value by
                 using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -8002,7 +8056,7 @@ class Wireless(object):
                             **request_parameters):
         """ This function is an alias of get_ssid_by_site_v1 .
         Args:
-            site_id(basestring): siteId path parameter. Site UUID .
+            site_id(str): siteId path parameter. Site UUID .
             limit(int): limit query parameter.
             offset(int): offset query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -8032,10 +8086,10 @@ class Wireless(object):
                                **request_parameters):
         """ This function is an alias of sensor_test_results_v1 .
         Args:
-            site_id(basestring): siteId query parameter. Assurance site UUID .
+            site_id(str): siteId query parameter. Assurance site UUID .
             start_time(int): startTime query parameter. The epoch time in milliseconds .
             end_time(int): endTime query parameter. The epoch time in milliseconds .
-            test_failure_by(basestring): testFailureBy query parameter. Obtain failure statistics group by "area",
+            test_failure_by(str): testFailureBy query parameter. Obtain failure statistics group by "area",
                 "building", or "floor" (case insensitive) .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -8088,7 +8142,7 @@ class Wireless(object):
                             **request_parameters):
         """ This function is an alias of delete_interface_v1 .
         Args:
-            id(basestring): id path parameter. Interface ID .
+            id(str): id path parameter. Interface ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -8113,7 +8167,7 @@ class Wireless(object):
                                                            **request_parameters):
         """ This function is an alias of get_ssid_count_for_specific_wireless_controller_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+            network_device_id(str): networkDeviceId path parameter. Obtain the network device ID value by
                 using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
             admin_status(bool): adminStatus query parameter. Utilize this query parameter to obtain the number of
                 SSIDs according to their administrative status. A 'true' value signifies that the admin
@@ -8376,9 +8430,9 @@ class Wireless(object):
                                                              **request_parameters):
         """ This function is an alias of get_ssid_details_for_specific_wireless_controller_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+            network_device_id(str): networkDeviceId path parameter. Obtain the network device ID value by
                 using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
-            ssid_name(basestring): ssidName query parameter. Employ this query parameter to obtain the details of
+            ssid_name(str): ssidName query parameter. Employ this query parameter to obtain the details of
                 the SSID corresponding to the provided SSID name. .
             admin_status(bool): adminStatus query parameter. Utilize this query parameter to obtain the
                 administrative status. A 'true' value signifies that the admin status of the SSID is
@@ -8417,9 +8471,9 @@ class Wireless(object):
                                                    **request_parameters):
         """ This function is an alias of delete_ssid_and_provision_it_to_devices_v1 .
         Args:
-            ssid_name(basestring): ssidName path parameter. SSID Name. This parameter needs to be encoded as per
+            ssid_name(str): ssidName path parameter. SSID Name. This parameter needs to be encoded as per
                 UTF-8 encoding. .
-            managed_aplocations(basestring): managedAPLocations path parameter. List of managed AP locations (Site
+            managed_aplocations(str): managedAPLocations path parameter. List of managed AP locations (Site
                 Hierarchies). This parameter needs to be encoded as per UTF-8 encoding .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -8450,7 +8504,7 @@ class Wireless(object):
         Args:
             interfaceName(string): Wireless's Interface Name .
             vlanId(integer): Wireless's VLAN ID range is 1-4094 .
-            id(basestring): id path parameter. Interface ID .
+            id(str): id path parameter. Interface ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -8707,8 +8761,8 @@ class Wireless(object):
             wlanBandSelectEnable(boolean): Wireless's Band select is allowed only when band options selected
                 contains at least 2.4 GHz and 5 GHz band .
             wlanType(string): Wireless's Wlan Type . Available values are 'Enterprise' and 'Guest'.
-            site_id(basestring): siteId path parameter. Site UUID .
-            id(basestring): id path parameter. SSID ID. Inputs containing special characters should be encoded .
+            site_id(str): siteId path parameter. Site UUID .
+            id(str): id path parameter. SSID ID. Inputs containing special characters should be encoded .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -8870,7 +8924,7 @@ class Wireless(object):
                                           **request_parameters):
         """ This function is an alias of get_access_point_configuration_v1 .
         Args:
-            key(basestring): key query parameter. The ethernet MAC address of Access point .
+            key(str): key query parameter. The ethernet MAC address of Access point .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -8893,7 +8947,7 @@ class Wireless(object):
                               **request_parameters):
         """ This function is an alias of delete_rf_profiles_v1 .
         Args:
-            rf_profile_name(basestring): rfProfileName path parameter. RF profile name to be deleted(required) *non-
+            rf_profile_name(str): rfProfileName path parameter. RF profile name to be deleted(required) *non-
                 custom RF profile cannot be deleted .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -8918,8 +8972,8 @@ class Wireless(object):
                        **request_parameters):
         """ This function is an alias of delete_ssid_v1 .
         Args:
-            site_id(basestring): siteId path parameter. Site UUID where SSID is to be deleted .
-            id(basestring): id path parameter. SSID ID .
+            site_id(str): siteId path parameter. Site UUID where SSID is to be deleted .
+            id(str): id path parameter. SSID ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -8943,7 +8997,7 @@ class Wireless(object):
                                   **request_parameters):
         """ This function is an alias of delete_enterprise_ssid_v1 .
         Args:
-            ssid_name(basestring): ssidName path parameter. Enter the SSID name to be deleted .
+            ssid_name(str): ssidName path parameter. Enter the SSID name to be deleted .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -8966,7 +9020,7 @@ class Wireless(object):
                                                 **request_parameters):
         """ This function is an alias of delete_wireless_profile_connectivity_v1 .
         Args:
-            id(basestring): id path parameter. Wireless Profile Id .
+            id(str): id path parameter. Wireless Profile Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9009,7 +9063,7 @@ class Wireless(object):
                                   **request_parameters):
         """ This function is an alias of get_ssid_count_by_site_v1 .
         Args:
-            site_id(basestring): siteId path parameter. Site UUID .
+            site_id(str): siteId path parameter. Site UUID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9034,7 +9088,7 @@ class Wireless(object):
                                                                              **request_parameters):
         """ This function is an alias of get_primary_managed_ap_locations_for_specific_wireless_controller_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+            network_device_id(str): networkDeviceId path parameter. Obtain the network device ID value by
                 using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
             limit(int): limit query parameter. The number of records to show for this page. .
             offset(int): offset query parameter. The first record to show for this page; the first record is
@@ -9105,7 +9159,7 @@ class Wireless(object):
             interfaces(list): Wireless's interfaces (list of objects).
             rollingApUpgrade(object): Wireless's rollingApUpgrade.
             skipApProvision(boolean): Wireless's True if Skip AP Provision is enabled, else False .
-            device_id(basestring): deviceId path parameter. Network Device ID. This value can be obtained by using
+            device_id(str): deviceId path parameter. Network Device ID. This value can be obtained by using
                 the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress} .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -9138,7 +9192,7 @@ class Wireless(object):
                                                **request_parameters):
         """ This function is an alias of get_access_point_reboot_task_result_v1 .
         Args:
-            parent_task_id(basestring): parentTaskId query parameter. task id of ap reboot request .
+            parent_task_id(str): parentTaskId query parameter. task id of ap reboot request .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9163,7 +9217,7 @@ class Wireless(object):
                                                                                **request_parameters):
         """ This function is an alias of get_secondary_managed_ap_locations_for_specific_wireless_controller_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter. Obtain the network device ID value by
+            network_device_id(str): networkDeviceId path parameter. Obtain the network device ID value by
                 using the API call GET: /dna/intent/api/v1/network-device/ip-address/${ipAddress}. .
             limit(int): limit query parameter. The number of records to show for this page. .
             offset(int): offset query parameter. The first record to show for this page; the first record is

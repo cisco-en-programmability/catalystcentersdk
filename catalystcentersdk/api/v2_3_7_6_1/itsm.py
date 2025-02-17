@@ -270,9 +270,9 @@ class Itsm(object):
                                 **request_parameters):
         """ This function is an alias of get_cmdb_sync_status_v1 .
         Args:
-            status(basestring): status query parameter. Supported values are "Success","Failed" and "Unknown".
+            status(str): status query parameter. Supported values are "Success","Failed" and "Unknown".
                 Providing other values will result in all the available sync job status. .
-            date(basestring): date query parameter. Provide date in "YYYY-MM-DD" format .
+            date(str): date query parameter. Provide date in "YYYY-MM-DD" format .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -296,7 +296,7 @@ class Itsm(object):
                                   **request_parameters):
         """ This function is an alias of get_failed_itsm_events_v1 .
         Args:
-            instance_id(basestring): instanceId query parameter. Instance Id of the failed event as in the Runtime
+            instance_id(str): instanceId query parameter. Instance Id of the failed event as in the Runtime
                 Dashboard .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

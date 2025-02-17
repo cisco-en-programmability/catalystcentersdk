@@ -853,20 +853,20 @@ class Task(object):
                           **request_parameters):
         """ This function is an alias of get_task_count_v1 .
         Args:
-            start_time(basestring): startTime query parameter. This is the epoch start time from which tasks need to
+            start_time(str): startTime query parameter. This is the epoch start time from which tasks need to
                 be fetched .
-            end_time(basestring): endTime query parameter. This is the epoch end time upto which audit records need
+            end_time(str): endTime query parameter. This is the epoch end time upto which audit records need
                 to be fetched .
-            data(basestring): data query parameter. Fetch tasks that contains this data .
-            error_code(basestring): errorCode query parameter. Fetch tasks that have this error code .
-            service_type(basestring): serviceType query parameter. Fetch tasks with this service type .
-            username(basestring): username query parameter. Fetch tasks with this username .
-            progress(basestring): progress query parameter. Fetch tasks that contains this progress .
-            is_error(basestring): isError query parameter. Fetch tasks ended as success or failure. Valid values:
+            data(str): data query parameter. Fetch tasks that contains this data .
+            error_code(str): errorCode query parameter. Fetch tasks that have this error code .
+            service_type(str): serviceType query parameter. Fetch tasks with this service type .
+            username(str): username query parameter. Fetch tasks with this username .
+            progress(str): progress query parameter. Fetch tasks that contains this progress .
+            is_error(str): isError query parameter. Fetch tasks ended as success or failure. Valid values:
                 true, false .
-            failure_reason(basestring): failureReason query parameter. Fetch tasks that contains this failure reason
+            failure_reason(str): failureReason query parameter. Fetch tasks that contains this failure reason
                 .
-            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
+            parent_id(str): parentId query parameter. Fetch tasks that have this parent Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -898,7 +898,7 @@ class Task(object):
                          **request_parameters):
         """ This function is an alias of get_task_tree_v1 .
         Args:
-            task_id(basestring): taskId path parameter. UUID of the Task .
+            task_id(str): taskId path parameter. UUID of the Task .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -932,16 +932,16 @@ class Task(object):
             offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
             limit(int): limit query parameter. The number of records to show for this page. .
-            sort_by(basestring): sortBy query parameter. A property within the response to sort by. .
-            order(basestring): order query parameter. Whether ascending or descending order should be used to sort
+            sort_by(str): sortBy query parameter. A property within the response to sort by. .
+            order(str): order query parameter. Whether ascending or descending order should be used to sort
                 the response. .
             start_time(int): startTime query parameter. This is the epoch millisecond start time from which tasks
                 need to be fetched .
             end_time(int): endTime query parameter. This is the epoch millisecond end time upto which task records
                 need to be fetched .
-            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
-            root_id(basestring): rootId query parameter. Fetch tasks that have this root Id .
-            status(basestring): status query parameter. Fetch tasks that have this status. Available values :
+            parent_id(str): parentId query parameter. Fetch tasks that have this parent Id .
+            root_id(str): rootId query parameter. Fetch tasks that have this root Id .
+            status(str): status query parameter. Fetch tasks that have this status. Available values :
                 PENDING, FAILURE, SUCCESS .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -973,7 +973,7 @@ class Task(object):
                                   **request_parameters):
         """ This function is an alias of get_task_details_by_id_v1 .
         Args:
-            id(basestring): id path parameter. the `id` of the task to retrieve details for .
+            id(str): id path parameter. the `id` of the task to retrieve details for .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1009,24 +1009,24 @@ class Task(object):
                                        **request_parameters):
         """ This function is an alias of get_tasks_operational_tasks_v1 .
         Args:
-            start_time(basestring): startTime query parameter. This is the epoch start time from which tasks need to
+            start_time(str): startTime query parameter. This is the epoch start time from which tasks need to
                 be fetched .
-            end_time(basestring): endTime query parameter. This is the epoch end time upto which audit records need
+            end_time(str): endTime query parameter. This is the epoch end time upto which audit records need
                 to be fetched .
-            data(basestring): data query parameter. Fetch tasks that contains this data .
-            error_code(basestring): errorCode query parameter. Fetch tasks that have this error code .
-            service_type(basestring): serviceType query parameter. Fetch tasks with this service type .
-            username(basestring): username query parameter. Fetch tasks with this username .
-            progress(basestring): progress query parameter. Fetch tasks that contains this progress .
-            is_error(basestring): isError query parameter. Fetch tasks ended as success or failure. Valid values:
+            data(str): data query parameter. Fetch tasks that contains this data .
+            error_code(str): errorCode query parameter. Fetch tasks that have this error code .
+            service_type(str): serviceType query parameter. Fetch tasks with this service type .
+            username(str): username query parameter. Fetch tasks with this username .
+            progress(str): progress query parameter. Fetch tasks that contains this progress .
+            is_error(str): isError query parameter. Fetch tasks ended as success or failure. Valid values:
                 true, false .
-            failure_reason(basestring): failureReason query parameter. Fetch tasks that contains this failure reason
+            failure_reason(str): failureReason query parameter. Fetch tasks that contains this failure reason
                 .
-            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
+            parent_id(str): parentId query parameter. Fetch tasks that have this parent Id .
             offset(int): offset query parameter.
             limit(int): limit query parameter.
-            sort_by(basestring): sortBy query parameter. Sort results by this field .
-            order(basestring): order query parameter. Sort order asc or dsc .
+            sort_by(str): sortBy query parameter. Sort results by this field .
+            order(str): order query parameter. Sort order asc or dsc .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1062,7 +1062,7 @@ class Task(object):
                           **request_parameters):
         """ This function is an alias of get_task_by_id_v1 .
         Args:
-            task_id(basestring): taskId path parameter. UUID of the Task .
+            task_id(str): taskId path parameter. UUID of the Task .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1085,7 +1085,7 @@ class Task(object):
                                               **request_parameters):
         """ This function is an alias of get_business_api_execution_details_v1 .
         Args:
-            execution_id(basestring): executionId path parameter. Execution Id of API .
+            execution_id(str): executionId path parameter. Execution Id of API .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1116,9 +1116,9 @@ class Task(object):
                 need to be fetched .
             end_time(int): endTime query parameter. This is the epoch millisecond end time upto which task records
                 need to be fetched .
-            parent_id(basestring): parentId query parameter. Fetch tasks that have this parent Id .
-            root_id(basestring): rootId query parameter. Fetch tasks that have this root Id .
-            status(basestring): status query parameter. Fetch tasks that have this status. Available values :
+            parent_id(str): parentId query parameter. Fetch tasks that have this parent Id .
+            root_id(str): rootId query parameter. Fetch tasks that have this root Id .
+            status(str): status query parameter. Fetch tasks that have this status. Available values :
                 PENDING, FAILURE, SUCCESS .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1148,7 +1148,7 @@ class Task(object):
                                 **request_parameters):
         """ This function is an alias of get_task_by_operation_id_v1 .
         Args:
-            operation_id(basestring): operationId path parameter.
+            operation_id(str): operationId path parameter.
             offset(int): offset path parameter. Index, minimum value is 0 .
             limit(int): limit path parameter. The maximum value of {limit} supported is 500.               Base 1
                 indexing for {limit}, minimum value is 1 .
@@ -1168,6 +1168,33 @@ class Task(object):
                     **request_parameters
         )
 
+    # Alias Function
+    def get_task_by_operationid(self,
+                                limit,
+                                offset,
+                                operation_id,
+                                headers=None,
+                                **request_parameters):
+        """ This function is an alias of get_task_by_operation_id_v1 .
+        Args:
+            operation_id(str): operationId path parameter.
+            offset(int): offset path parameter. Index, minimum value is 0 .
+            limit(int): limit path parameter. The maximum value of {limit} supported is 500.               Base 1
+                indexing for {limit}, minimum value is 1 .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of get_task_by_operation_id_v1 .
+        """
+        return self.get_task_by_operation_id_v1(
+                    limit=limit,
+                    offset=offset,
+                    operation_id=operation_id,
+                    headers=headers,
+                    **request_parameters
+        )
 
     # Alias Function
     def get_tasks_by_id(self,
@@ -1176,7 +1203,7 @@ class Task(object):
                            **request_parameters):
         """ This function is an alias of get_tasks_by_id_v1 .
         Args:
-            id(basestring): id path parameter. the `id` of the task to retrieve .
+            id(str): id path parameter. the `id` of the task to retrieve .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides

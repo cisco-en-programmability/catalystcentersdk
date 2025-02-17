@@ -9186,7 +9186,7 @@ class Devices(object):
                                **request_parameters):
         """ This function is an alias of get_interface_by_ip_v1 .
         Args:
-            ip_address(basestring): ipAddress path parameter. IP address of the interface .
+            ip_address(str): ipAddress path parameter. IP address of the interface .
             headers(dict): Dictionary of HTTP Headers to send with the Request.
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
@@ -9208,7 +9208,7 @@ class Devices(object):
                                       **request_parameters):
         """ This function is an alias of get_supervisor_card_detail_v1 .
         Args:
-            device_uuid(basestring): deviceUuid path parameter. instanceuuid of device .
+            device_uuid(str): deviceUuid path parameter. instanceuuid of device .
             headers(dict): Dictionary of HTTP Headers to send with the Request.
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
@@ -9352,70 +9352,70 @@ class Devices(object):
                 inclusive. If `startTime` is not provided, API will default to current time. .
             end_time(int): endTime query parameter. End time to which API queries the data set related to the
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
-            id(basestring): id query parameter. The list of entity Uuids.
+            id(str): id query parameter. The list of entity Uuids.
                 (Ex."6bef213c-19ca-4170-8375-b694e251101c") Examples:
                 id=6bef213c-19ca-4170-8375-b694e251101c (single entity uuid requested) id=6bef213c-19ca-
                 4170-8375-b694e251101c&id=32219612-819e-4b5e-a96b-cf22aca13dd9&id=2541e9a7-b80d-4955-
                 8aa2-79b233318ba0 (multiple entity uuid with '&' separator) .
-            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+            site_hierarchy(str): siteHierarchy query parameter. The full hierarchical breakdown of the site
                 tree starting from Global site name and ending with the specific site name. The Root
                 site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
                 supports wildcard asterisk (*) character search support. E.g. */San*, */San, /San*
                 Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
                 requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
                 reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
-            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
                 tree in id form starting from Global site UUID and ending with the specific site UUID.
                 (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
                 (*) character search support. E.g. `*uuid*, *uuid, uuid* Examples:
                 `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
                 requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
                 globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
-            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
+            site_id(str): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
                 wildcard asterisk (*) character search support. E.g.*flooruuid*, *flooruuid, flooruuid*
                 Examples: `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3`
                 (multiple ids requested) .
-            management_ip_address(basestring): managementIpAddress query parameter. The list of entity management IP
+            management_ip_address(str): managementIpAddress query parameter. The list of entity management IP
                 Address. It can be either Ipv4 or Ipv6 address or combination of both(Ex. "121.1.1.10")
                 This field supports wildcard (`*`) character-based search.  Ex: `*1.1*` or `1.1*` or
                 `*1.1` Examples: managementIpAddresses=121.1.1.10 managementIpAddresses=121.1.1.10&manag
                 ementIpAddresses=172.20.1.10&managementIpAddresses=200:10&=managementIpAddresses172.20.3
                 .4 (multiple entity IP Address with & separator) .
-            mac_address(basestring): macAddress query parameter. The macAddress of the network device or client This
+            mac_address(str): macAddress query parameter. The macAddress of the network device or client This
                 field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
                 or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
                 `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
                 requested) .
-            family(basestring): family query parameter. The list of network device family names
+            family(str): family query parameter. The list of network device family names
                 Examples:family=Switches and Hubs (single network device family name )family=Switches
                 and Hubs&family=Router&family=Wireless Controller (multiple Network device family names
                 with & separator). This field is not case sensitive. .
-            type(basestring): type query parameter. The list of network device type This field supports wildcard
+            type(str): type query parameter. The list of network device type This field supports wildcard
                 (`*`) character-based search. Ex: `*9407R*` or `*9407R` or
                 `9407R*`Examples:type=SwitchesCisco Catalyst 9407R Switch (single network device types
                 )type=Cisco Catalyst 38xx stack-able ethernet switch&type=Cisco 3945 Integrated Services
                 Router G2 (multiple Network device types with & separator) .
-            role(basestring): role query parameter. The list of network device role. Examples:role=CORE,
+            role(str): role query parameter. The list of network device role. Examples:role=CORE,
                 role=CORE&role=ACCESS&role=ROUTER (multiple Network device roles with & separator). This
                 field is not case sensitive. .
-            serial_number(basestring): serialNumber query parameter. The list of network device serial numbers. This
+            serial_number(str): serialNumber query parameter. The list of network device serial numbers. This
                 field supports wildcard (`*`) character-based search.  Ex: `*MS1SV*` or `MS1SV*` or
                 `*MS1SV` Examples: serialNumber=9FUFMS1SVAX
                 serialNumber=9FUFMS1SVAX&FCW2333Q0BY&FJC240617JX(multiple Network device serial number
                 with & separator) .
             maintenance_mode(bool): maintenanceMode query parameter. The device maintenanceMode status true or false
                 .
-            software_version(basestring): softwareVersion query parameter. The list of network device software
+            software_version(str): softwareVersion query parameter. The list of network device software
                 version This field supports wildcard (`*`) character-based search. Ex: `*17.8*` or
                 `*17.8` or `17.8*` Examples: softwareVersion=2.3.4.0 (single network device software
                 version ) softwareVersion=17.9.3.23&softwareVersion=17.7.1.2&softwareVersion=*.17.7
                 (multiple Network device software versions with & separator) .
-            health_score(basestring): healthScore query parameter. The list of entity health score categories
+            health_score(str): healthScore query parameter. The list of entity health score categories
                 Examples:healthScore=good,healthScore=good&healthScore=fair (multiple entity healthscore
                 values with & separator). This field is not case sensitive. .
-            view(basestring): view query parameter. The List of Network Device model views. Please refer to
+            view(str): view query parameter. The List of Network Device model views. Please refer to
                 ```NetworkDeviceView``` for the supported list .
-            attribute(basestring): attribute query parameter. The List of Network Device model attributes. This is
+            attribute(str): attribute query parameter. The List of Network Device model attributes. This is
                 helps to specify the interested fields in the request. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -9455,7 +9455,7 @@ class Devices(object):
                        **request_parameters):
         """ This function is an alias of poe_details_v1 .
         Args:
-            device_uuid(basestring): deviceUuid path parameter. UUID of the device .
+            device_uuid(str): deviceUuid path parameter. UUID of the device .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9499,8 +9499,8 @@ class Devices(object):
                                        **request_parameters):
         """ This function is an alias of get_connected_device_detail_v1 .
         Args:
-            device_uuid(basestring): deviceUuid path parameter. instanceuuid of Device .
-            interface_uuid(basestring): interfaceUuid path parameter. instanceuuid of interface .
+            device_uuid(str): deviceUuid path parameter. instanceuuid of Device .
+            interface_uuid(str): interfaceUuid path parameter. instanceuuid of interface .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9615,7 +9615,7 @@ class Devices(object):
                                             **request_parameters):
         """ This function is an alias of get_organization_list_for_meraki_v1 .
         Args:
-            id(basestring): id path parameter. Device Id .
+            id(str): id path parameter. Device Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9638,7 +9638,7 @@ class Devices(object):
                                                      **request_parameters):
         """ This function is an alias of get_wireless_lan_controller_details_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Device ID .
+            id(str): id path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9666,8 +9666,8 @@ class Devices(object):
         Args:
             offset(int): offset query parameter.
             limit(int): limit query parameter.
-            last_input_time(basestring): lastInputTime query parameter. Last Input Time .
-            last_output_time(basestring): lastOutputTime query parameter. Last Output Time .
+            last_input_time(str): lastInputTime query parameter. Last Input Time .
+            last_output_time(str): lastOutputTime query parameter. Last Output Time .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9699,7 +9699,7 @@ class Devices(object):
         Args:
             description(string): Devices's Description of UDF .
             name(string): Devices's Name of UDF .
-            id(basestring): id path parameter. UDF id .
+            id(str): id path parameter. UDF id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -9738,7 +9738,7 @@ class Devices(object):
             endTime(integer): Devices's UTC epoch timestamp in milliseconds .
             query(object): Devices's query.
             startTime(integer): Devices's UTC epoch timestamp in milliseconds .
-            device_id(basestring): deviceId path parameter. Network Device Id .
+            device_id(str): deviceId path parameter. Network Device Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -9839,13 +9839,13 @@ class Devices(object):
                                                **request_parameters):
         """ This function is an alias of inventory_insight_device_link_mismatch_v1 .
         Args:
-            site_id(basestring): siteId path parameter.
+            site_id(str): siteId path parameter.
             offset(int): offset query parameter. Row Number.  Default value is 1 .
             limit(int): limit query parameter. Default value is 500 .
-            category(basestring): category query parameter. Links mismatch category.  Value can be speed-duplex or
+            category(str): category query parameter. Links mismatch category.  Value can be speed-duplex or
                 vlan. .
-            sort_by(basestring): sortBy query parameter. Sort By .
-            order(basestring): order query parameter. Order.  Value can be asc or desc.  Default value is asc .
+            sort_by(str): sortBy query parameter. Sort By .
+            order(str): order query parameter. Order.  Value can be asc or desc.  Default value is asc .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9874,8 +9874,8 @@ class Devices(object):
                                                        **request_parameters):
         """ This function is an alias of get_devices_registered_for_wsa_notification_v1 .
         Args:
-            serial_number(basestring): serialNumber query parameter. Serial number of the device .
-            macaddress(basestring): macaddress query parameter. Mac addres of the device .
+            serial_number(str): serialNumber query parameter. Serial number of the device .
+            macaddress(str): macaddress query parameter. Mac addres of the device .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9971,7 +9971,7 @@ class Devices(object):
                             **request_parameters):
         """ This function is an alias of get_device_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Device ID .
+            id(str): id path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9995,8 +9995,8 @@ class Devices(object):
                                       **request_parameters):
         """ This function is an alias of get_device_interface_vlans_v1 .
         Args:
-            id(basestring): id path parameter.
-            interface_type(basestring): interfaceType query parameter. Vlan associated with sub-interface. If no
+            id(str): id path parameter.
+            interface_type(str): interfaceType query parameter. Vlan associated with sub-interface. If no
                 interfaceType mentioned it will return all types of Vlan interfaces. If interfaceType is
                 selected but not specified then it will take default value. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -10071,7 +10071,7 @@ class Devices(object):
                                 **request_parameters):
         """ This function is an alias of get_linecard_details_v1 .
         Args:
-            device_uuid(basestring): deviceUuid path parameter. instanceuuid of device .
+            device_uuid(str): deviceUuid path parameter. instanceuuid of device .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10095,8 +10095,8 @@ class Devices(object):
                                                  **request_parameters):
         """ This function is an alias of delete_planned_access_point_for_floor_v1 .
         Args:
-            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
-            planned_access_point_uuid(basestring): plannedAccessPointUuid path parameter. The instance UUID of the
+            floor_id(str): floorId path parameter. The instance UUID of the floor hierarchy element .
+            planned_access_point_uuid(str): plannedAccessPointUuid path parameter. The instance UUID of the
                 planned access point to delete .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10121,7 +10121,7 @@ class Devices(object):
                                           **request_parameters):
         """ This function is an alias of legit_operations_for_interface_v1 .
         Args:
-            interface_uuid(basestring): interfaceUuid path parameter. Interface ID .
+            interface_uuid(str): interfaceUuid path parameter. Interface ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10190,13 +10190,13 @@ class Devices(object):
                        **request_parameters):
         """ This function is an alias of get_modules_v1 .
         Args:
-            device_id(basestring): deviceId query parameter.
+            device_id(str): deviceId query parameter.
             limit(int): limit query parameter.
             offset(int): offset query parameter.
-            name_list(basestring, list, set, tuple): nameList query parameter.
-            vendor_equipment_type_list(basestring, list, set, tuple): vendorEquipmentTypeList query parameter.
-            part_number_list(basestring, list, set, tuple): partNumberList query parameter.
-            operational_state_code_list(basestring, list, set, tuple): operationalStateCodeList query parameter.
+            name_list(str, list, set, tuple): nameList query parameter.
+            vendor_equipment_type_list(str, list, set, tuple): vendorEquipmentTypeList query parameter.
+            part_number_list(str, list, set, tuple): partNumberList query parameter.
+            operational_state_code_list(str, list, set, tuple): operationalStateCodeList query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10239,7 +10239,7 @@ class Devices(object):
             position(object): Devices's position.
             radioCount(integer): Devices's Number of radios of the planned access point .
             radios(list): Devices's radios (list of objects).
-            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            floor_id(str): floorId path parameter. The instance UUID of the floor hierarchy element .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -10319,7 +10319,7 @@ class Devices(object):
             position(object): Devices's position.
             radioCount(integer): Devices's Number of radios of the planned access point .
             radios(list): Devices's radios (list of objects).
-            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            floor_id(str): floorId path parameter. The instance UUID of the floor hierarchy element .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -10403,7 +10403,7 @@ class Devices(object):
                                       **request_parameters):
         """ This function is an alias of get_polling_interval_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Device ID .
+            id(str): id path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10428,10 +10428,10 @@ class Devices(object):
                                                                                **request_parameters):
         """ This function is an alias of get_the_count_of_health_score_definitions_based_on_provided_filters_v1 .
         Args:
-            device_type(basestring): deviceType query parameter. These are the device families supported for health
+            device_type(str): deviceType query parameter. These are the device families supported for health
                 score definitions. If no input is made on device family, all device families are
                 considered. .
-            id(basestring): id query parameter. The definition identifier. Examples:
+            id(str): id query parameter. The definition identifier. Examples:
                 id=015d9cba-4f53-4087-8317-7e49e5ffef46 (single entity id request)
                 id=015d9cba-4f53-4087-8317-7e49e5ffef46&id=015d9cba-4f53-4087-8317-7e49e5ffef47
                 (multiple ids in the query param) .
@@ -10505,7 +10505,7 @@ class Devices(object):
                                     **request_parameters):
         """ This function is an alias of get_interface_info_by_id_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device ID .
+            device_id(str): deviceId path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10528,7 +10528,7 @@ class Devices(object):
                                                         **request_parameters):
         """ This function is an alias of get_health_score_definition_for_the_given_id_v1 .
         Args:
-            id(basestring): id path parameter. Health score definition id. .
+            id(str): id path parameter. Health score definition id. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10592,8 +10592,8 @@ class Devices(object):
                                                  **request_parameters):
         """ This function is an alias of remove_user_defined_field_from_device_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. UUID of device from which UDF has to be removed .
-            name(basestring): name query parameter. Name of UDF to be removed .
+            device_id(str): deviceId path parameter. UUID of device from which UDF has to be removed .
+            name(str): name query parameter. Name of UDF to be removed .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10617,7 +10617,7 @@ class Devices(object):
                                      **request_parameters):
         """ This function is an alias of delete_user_defined_field_v1 .
         Args:
-            id(basestring): id path parameter. UDF id .
+            id(str): id path parameter. UDF id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10641,7 +10641,7 @@ class Devices(object):
                                **request_parameters):
         """ This function is an alias of delete_device_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Device ID .
+            id(str): id path parameter. Device ID .
             clean_config(bool): cleanConfig query parameter. Selecting the clean up configuration option will
                 attempt to remove device settings that were configured during the addition of the device
                 to the inventory and site assignment. Please note that this operation is different from
@@ -10701,7 +10701,7 @@ class Devices(object):
                                  **request_parameters):
         """ This function is an alias of get_module_info_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Module id .
+            id(str): id path parameter. Module id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10757,40 +10757,40 @@ class Devices(object):
                            **request_parameters):
         """ This function is an alias of get_device_list_v1 .
         Args:
-            hostname(basestring, list, set, tuple): hostname query parameter.
-            management_ip_address(basestring, list, set, tuple): managementIpAddress query parameter.
-            mac_address(basestring, list, set, tuple): macAddress query parameter.
-            location_name(basestring, list, set, tuple): locationName query parameter.
-            serial_number(basestring, list, set, tuple): serialNumber query parameter.
-            location(basestring, list, set, tuple): location query parameter.
-            family(basestring, list, set, tuple): family query parameter.
-            type(basestring, list, set, tuple): type query parameter.
-            series(basestring, list, set, tuple): series query parameter.
-            collection_status(basestring, list, set, tuple): collectionStatus query parameter.
-            collection_interval(basestring, list, set, tuple): collectionInterval query parameter.
-            not_synced_for_minutes(basestring, list, set, tuple): notSyncedForMinutes query parameter.
-            error_code(basestring, list, set, tuple): errorCode query parameter.
-            error_description(basestring, list, set, tuple): errorDescription query parameter.
-            software_version(basestring, list, set, tuple): softwareVersion query parameter.
-            software_type(basestring, list, set, tuple): softwareType query parameter.
-            platform_id(basestring, list, set, tuple): platformId query parameter.
-            role(basestring, list, set, tuple): role query parameter.
-            reachability_status(basestring, list, set, tuple): reachabilityStatus query parameter.
-            up_time(basestring, list, set, tuple): upTime query parameter.
-            associated_wlc_ip(basestring, list, set, tuple): associatedWlcIp query parameter.
-            license_name(basestring, list, set, tuple): license.name query parameter.
-            license_type(basestring, list, set, tuple): license.type query parameter.
-            license_status(basestring, list, set, tuple): license.status query parameter.
-            module_name(basestring, list, set, tuple): module+name query parameter.
-            module_equpimenttype(basestring, list, set, tuple): module+equpimenttype query parameter.
-            module_servicestate(basestring, list, set, tuple): module+servicestate query parameter.
-            module_vendorequipmenttype(basestring, list, set, tuple): module+vendorequipmenttype query parameter.
-            module_partnumber(basestring, list, set, tuple): module+partnumber query parameter.
-            module_operationstatecode(basestring, list, set, tuple): module+operationstatecode query parameter.
-            id(basestring): id query parameter. Accepts comma separated ids and return list of network-devices for
+            hostname(str, list, set, tuple): hostname query parameter.
+            management_ip_address(str, list, set, tuple): managementIpAddress query parameter.
+            mac_address(str, list, set, tuple): macAddress query parameter.
+            location_name(str, list, set, tuple): locationName query parameter.
+            serial_number(str, list, set, tuple): serialNumber query parameter.
+            location(str, list, set, tuple): location query parameter.
+            family(str, list, set, tuple): family query parameter.
+            type(str, list, set, tuple): type query parameter.
+            series(str, list, set, tuple): series query parameter.
+            collection_status(str, list, set, tuple): collectionStatus query parameter.
+            collection_interval(str, list, set, tuple): collectionInterval query parameter.
+            not_synced_for_minutes(str, list, set, tuple): notSyncedForMinutes query parameter.
+            error_code(str, list, set, tuple): errorCode query parameter.
+            error_description(str, list, set, tuple): errorDescription query parameter.
+            software_version(str, list, set, tuple): softwareVersion query parameter.
+            software_type(str, list, set, tuple): softwareType query parameter.
+            platform_id(str, list, set, tuple): platformId query parameter.
+            role(str, list, set, tuple): role query parameter.
+            reachability_status(str, list, set, tuple): reachabilityStatus query parameter.
+            up_time(str, list, set, tuple): upTime query parameter.
+            associated_wlc_ip(str, list, set, tuple): associatedWlcIp query parameter.
+            license_name(str, list, set, tuple): license.name query parameter.
+            license_type(str, list, set, tuple): license.type query parameter.
+            license_status(str, list, set, tuple): license.status query parameter.
+            module_name(str, list, set, tuple): module+name query parameter.
+            module_equpimenttype(str, list, set, tuple): module+equpimenttype query parameter.
+            module_servicestate(str, list, set, tuple): module+servicestate query parameter.
+            module_vendorequipmenttype(str, list, set, tuple): module+vendorequipmenttype query parameter.
+            module_partnumber(str, list, set, tuple): module+partnumber query parameter.
+            module_operationstatecode(str, list, set, tuple): module+operationstatecode query parameter.
+            id(str): id query parameter. Accepts comma separated ids and return list of network-devices for
                 the given ids. If invalid or not-found ids are provided, null entry will be returned in
                 the list. .
-            device_support_level(basestring): deviceSupportLevel query parameter.
+            device_support_level(str): deviceSupportLevel query parameter.
             offset(int): offset query parameter. offset >= 1 [X gives results from Xth device onwards] .
             limit(int): limit query parameter. 1 <= limit <= 500 [max. no. of devices to be returned in the result]
                 .
@@ -10863,48 +10863,48 @@ class Devices(object):
                 inclusive. If `startTime` is not provided, API will default to current time. .
             end_time(int): endTime query parameter. End time to which API queries the data set related to the
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
-            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+            site_hierarchy(str): siteHierarchy query parameter. The full hierarchical breakdown of the site
                 tree starting from Global site name and ending with the specific site name. The Root
                 site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
                 supports wildcard asterisk (`*`) character search support. E.g. `*/San*, */San, /San*`
                 Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
                 requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
                 reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
-            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
                 tree in id form starting from Global site UUID and ending with the specific site UUID.
                 (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
                 (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
                 `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
                 requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
                 globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
-            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+            site_id(str): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
                 `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple ids
                 requested) .
-            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+            network_device_id(str): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
                 `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
                 `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
                 requested) `networkDeviceId=6bef213c-19ca-4170-8375-
                 b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
                 cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
                 networkDeviceIds with & separator) .
-            network_device_ip_address(basestring): networkDeviceIpAddress query parameter. The list of Network
+            network_device_ip_address(str): networkDeviceIpAddress query parameter. The list of Network
                 Device management IP Address. (Ex. `121.1.1.10`) This field supports wildcard (`*`)
                 character-based search.  Ex: `*1.1*` or `1.1*` or `*1.1` Examples:
                 `networkDeviceIpAddress=121.1.1.10` `networkDeviceIpAddress=121.1.1.10&networkDeviceIpAd
                 dress=172.20.1.10&networkDeviceIpAddress=10.10.20.10` (multiple networkDevice IP Address
                 with & separator) .
-            network_device_mac_address(basestring): networkDeviceMacAddress query parameter. The list of Network
+            network_device_mac_address(str): networkDeviceMacAddress query parameter. The list of Network
                 Device MAC Address. (Ex. `64:f6:9d:07:9a:00`) This field supports wildcard (`*`)
                 character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*` or `*AB:AB:AB` Examples:
                 `networkDeviceMacAddress=64:f6:9d:07:9a:00`
                 `networkDeviceMacAddress=64:f6:9d:07:9a:00&networkDeviceMacAddress=70:56:9d:07:ac:77`
                 (multiple networkDevice MAC addresses with & separator) .
-            interface_id(basestring): interfaceId query parameter. The list of Interface Uuids. (Ex.
+            interface_id(str): interfaceId query parameter. The list of Interface Uuids. (Ex.
                 `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
                 `interfaceId=6bef213c-19ca-4170-8375-b694e251101c` (single interface uuid ) `interfaceId
                 =6bef213c-19ca-4170-8375-b694e251101c&32219612-819e-4b5e-a96b-cf22aca13dd9&2541e9a7-
                 b80d-4955-8aa2-79b233318ba0` (multiple Interface uuid with & separator) .
-            interface_name(basestring): interfaceName query parameter. The list of Interface name (Ex.
+            interface_name(str): interfaceName query parameter. The list of Interface name (Ex.
                 `GigabitEthernet1/0/1`) This field supports wildcard (`*`) character-based search.  Ex:
                 `*1/0/1*` or `1/0/1*` or `*1/0/1` Examples: `interfaceNames=GigabitEthernet1/0/1`
                 (single interface name)
@@ -11071,7 +11071,7 @@ class Devices(object):
         Args:
             interval(integer): Devices's Resync interval in minutes. To disable periodic resync, set interval as
                 `0`. To use global settings, set interval as `null`. .
-            id(basestring): id path parameter. The id of the network device. .
+            id(str): id path parameter. The id of the network device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -11119,7 +11119,7 @@ class Devices(object):
             page(object): Devices's page.
             startTime(integer): Devices's Start Time.
             trendIntervalInMinutes(integer): Devices's Trend Interval In Minutes.
-            id(basestring): id path parameter. The device Uuid .
+            id(str): id path parameter. The device Uuid .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -11176,7 +11176,7 @@ class Devices(object):
                                        **request_parameters):
         """ This function is an alias of get_device_by_serial_number_v1 .
         Args:
-            serial_number(basestring): serialNumber path parameter. Device serial number .
+            serial_number(str): serialNumber path parameter. Device serial number .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11219,7 +11219,7 @@ class Devices(object):
                                           **request_parameters):
         """ This function is an alias of get_chassis_details_for_device_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device ID .
+            device_id(str): deviceId path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11242,7 +11242,7 @@ class Devices(object):
                                    **request_parameters):
         """ This function is an alias of get_device_config_by_id_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId path parameter.
+            network_device_id(str): networkDeviceId path parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11324,17 +11324,17 @@ class Devices(object):
                                                               **request_parameters):
         """ This function is an alias of get_all_health_score_definitions_for_given_filters_v1 .
         Args:
-            device_type(basestring): deviceType query parameter. These are the device families supported for health
+            device_type(str): deviceType query parameter. These are the device families supported for health
                 score definitions. If no input is made on device family, all device families are
                 considered. .
-            id(basestring): id query parameter. The definition identifier. Examples:
+            id(str): id query parameter. The definition identifier. Examples:
                 id=015d9cba-4f53-4087-8317-7e49e5ffef46 (single entity id request)
                 id=015d9cba-4f53-4087-8317-7e49e5ffef46&id=015d9cba-4f53-4087-8317-7e49e5ffef47
                 (multiple ids in the query param) .
             include_for_overall_health(bool): includeForOverallHealth query parameter. The inclusion status of the
                 issue definition, either true or false. true indicates that particular health metric is
                 included in overall health computation, otherwise false. By default it's set to true.  .
-            attribute(basestring): attribute query parameter. These are the attributes supported in health score
+            attribute(str): attribute query parameter. These are the attributes supported in health score
                 definitions response. By default, all properties are sent in response. .
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
@@ -11369,7 +11369,7 @@ class Devices(object):
                                                   **request_parameters):
         """ This function is an alias of get_planned_access_points_for_building_v1 .
         Args:
-            building_id(basestring): buildingId path parameter. The instance UUID of the building hierarchy element
+            building_id(str): buildingId path parameter. The instance UUID of the building hierarchy element
                 .
             limit(int): limit query parameter. The page size limit for the response, e.g. limit=100 will return a
                 maximum of 100 records .
@@ -11402,7 +11402,7 @@ class Devices(object):
                                       **request_parameters):
         """ This function is an alias of remove_allowed_mac_address_v1 .
         Args:
-            mac_address(basestring): macAddress path parameter. Threat mac address which needs to be removed from
+            mac_address(str): macAddress path parameter. Threat mac address which needs to be removed from
                 the allowed list. Multiple mac addresses will be removed if provided as comma separated
                 values (example: 00:2A:10:51:22:43,00:2A:10:51:22:44). Note: In one request, maximum 100
                 mac addresses can be removed.  .
@@ -11434,10 +11434,10 @@ class Devices(object):
                    **request_parameters):
         """ This function is an alias of devices_v1 .
         Args:
-            device_role(basestring): deviceRole query parameter. CORE, ACCESS, DISTRIBUTION, ROUTER, WLC, or AP
+            device_role(str): deviceRole query parameter. CORE, ACCESS, DISTRIBUTION, ROUTER, WLC, or AP
                 (case insensitive) .
-            site_id(basestring): siteId query parameter. DNAC site UUID .
-            health(basestring): health query parameter. DNAC health catagory: POOR, FAIR, or GOOD (case insensitive)
+            site_id(str): siteId query parameter. DNAC site UUID .
+            health(str): health query parameter. DNAC health catagory: POOR, FAIR, or GOOD (case insensitive)
                 .
             start_time(int): startTime query parameter. UTC epoch time in milliseconds .
             end_time(int): endTime query parameter. UTC epoch time in milliseconds .
@@ -11538,72 +11538,72 @@ class Devices(object):
             limit(int): limit query parameter. Maximum number of records to return .
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
-            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
-            order(basestring): order query parameter. The sort order of the field ascending or descending. .
-            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+            sort_by(str): sortBy query parameter. A field within the response to sort by. .
+            order(str): order query parameter. The sort order of the field ascending or descending. .
+            site_hierarchy(str): siteHierarchy query parameter. The full hierarchical breakdown of the site
                 tree starting from Global site name and ending with the specific site name. The Root
                 site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
                 supports wildcard asterisk (*) character search support. E.g. */San*, */San, /San*
                 Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
                 requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
                 reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
-            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
                 tree in id form starting from Global site UUID and ending with the specific site UUID.
                 (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
                 (*) character search support. E.g. `*uuid*, *uuid, uuid* Examples:
                 `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
                 requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
                 globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
-            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
+            site_id(str): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) This field supports
                 wildcard asterisk (*) character search support. E.g.*flooruuid*, *flooruuid, flooruuid*
                 Examples: `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3`
                 (multiple ids requested) .
-            id(basestring): id query parameter. The list of entity Uuids.
+            id(str): id query parameter. The list of entity Uuids.
                 (Ex."6bef213c-19ca-4170-8375-b694e251101c") Examples:
                 id=6bef213c-19ca-4170-8375-b694e251101c (single entity uuid requested) id=6bef213c-19ca-
                 4170-8375-b694e251101c&id=32219612-819e-4b5e-a96b-cf22aca13dd9&id=2541e9a7-b80d-4955-
                 8aa2-79b233318ba0 (multiple entity uuid with '&' separator) .
-            management_ip_address(basestring): managementIpAddress query parameter. The list of entity management IP
+            management_ip_address(str): managementIpAddress query parameter. The list of entity management IP
                 Address. It can be either Ipv4 or Ipv6 address or combination of both(Ex. "121.1.1.10")
                 This field supports wildcard (`*`) character-based search.  Ex: `*1.1*` or `1.1*` or
                 `*1.1` Examples: managementIpAddresses=121.1.1.10 managementIpAddresses=121.1.1.10&manag
                 ementIpAddresses=172.20.1.10&managementIpAddresses=200:10&=managementIpAddresses172.20.3
                 .4 (multiple entity IP Address with & separator) .
-            mac_address(basestring): macAddress query parameter. The macAddress of the network device or client This
+            mac_address(str): macAddress query parameter. The macAddress of the network device or client This
                 field supports wildcard (`*`) character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*`
                 or `*AB:AB:AB` Examples: `macAddress=AB:AB:AB:CD:CD:CD` (single macAddress requested)
                 `macAddress=AB:AB:AB:CD:CD:DC&macAddress=AB:AB:AB:CD:CD:FE` (multiple macAddress
                 requested) .
-            family(basestring): family query parameter. The list of network device family names
+            family(str): family query parameter. The list of network device family names
                 Examples:family=Switches and Hubs (single network device family name )family=Switches
                 and Hubs&family=Router&family=Wireless Controller (multiple Network device family names
                 with & separator). This field is not case sensitive. .
-            type(basestring): type query parameter. The list of network device type This field supports wildcard
+            type(str): type query parameter. The list of network device type This field supports wildcard
                 (`*`) character-based search. Ex: `*9407R*` or `*9407R` or `9407R*` Examples:
                 type=SwitchesCisco Catalyst 9407R Switch (single network device types ) type=Cisco
                 Catalyst 38xx stack-able ethernet switch&type=Cisco 3945 Integrated Services Router G2
                 (multiple Network device types with & separator) .
-            role(basestring): role query parameter. The list of network device role. Examples:role=CORE,
+            role(str): role query parameter. The list of network device role. Examples:role=CORE,
                 role=CORE&role=ACCESS&role=ROUTER (multiple Network device roles with & separator). This
                 field is not case sensitive. .
-            serial_number(basestring): serialNumber query parameter. The list of network device serial numbers. This
+            serial_number(str): serialNumber query parameter. The list of network device serial numbers. This
                 field supports wildcard (`*`) character-based search.  Ex: `*MS1SV*` or `MS1SV*` or
                 `*MS1SV` Examples: serialNumber=9FUFMS1SVAX
                 serialNumber=9FUFMS1SVAX&FCW2333Q0BY&FJC240617JX(multiple Network device serial number
                 with & separator) .
             maintenance_mode(bool): maintenanceMode query parameter. The device maintenanceMode status true or false
                 .
-            software_version(basestring): softwareVersion query parameter. The list of network device software
+            software_version(str): softwareVersion query parameter. The list of network device software
                 version This field supports wildcard (`*`) character-based search. Ex: `*17.8*` or
                 `*17.8` or `17.8*` Examples: softwareVersion=2.3.4.0 (single network device software
                 version ) softwareVersion=17.9.3.23&softwareVersion=17.7.1.2&softwareVersion=*.17.7
                 (multiple Network device software versions with & separator) .
-            health_score(basestring): healthScore query parameter. The list of entity health score categories
+            health_score(str): healthScore query parameter. The list of entity health score categories
                 Examples: healthScore=good, healthScore=good&healthScore=fair (multiple entity
                 healthscore values with & separator). This field is not case sensitive. .
-            view(basestring): view query parameter. The List of Network Device model views. Please refer to
+            view(str): view query parameter. The List of Network Device model views. Please refer to
                 ```NetworkDeviceView``` for the supported list .
-            attribute(basestring): attribute query parameter. The List of Network Device model attributes. This is
+            attribute(str): attribute query parameter. The List of Network Device model attributes. This is
                 helps to specify the interested fields in the request. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -11667,7 +11667,7 @@ class Devices(object):
                                                       **request_parameters):
         """ This function is an alias of get_resync_interval_for_the_network_device_v1 .
         Args:
-            id(basestring): id path parameter. The id of the network device. .
+            id(str): id path parameter. The id of the network device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11691,8 +11691,8 @@ class Devices(object):
                                        **request_parameters):
         """ This function is an alias of get_all_user_defined_fields_v1 .
         Args:
-            id(basestring): id query parameter. Comma-seperated id(s) used for search/filtering .
-            name(basestring): name query parameter. Comma-seperated name(s) used for search/filtering .
+            id(str): id query parameter. Comma-seperated id(s) used for search/filtering .
+            name(str): name query parameter. Comma-seperated name(s) used for search/filtering .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11786,26 +11786,26 @@ class Devices(object):
                                                                         **request_parameters):
         """ This function is an alias of get_device_values_that_match_fully_or_partially_an_attribute_v1 .
         Args:
-            vrf_name(basestring): vrfName query parameter.
-            management_ip_address(basestring): managementIpAddress query parameter.
-            hostname(basestring): hostname query parameter.
-            mac_address(basestring): macAddress query parameter.
-            family(basestring): family query parameter.
-            collection_status(basestring): collectionStatus query parameter.
-            collection_interval(basestring): collectionInterval query parameter.
-            software_version(basestring): softwareVersion query parameter.
-            software_type(basestring): softwareType query parameter.
-            reachability_status(basestring): reachabilityStatus query parameter.
-            reachability_failure_reason(basestring): reachabilityFailureReason query parameter.
-            error_code(basestring): errorCode query parameter.
-            platform_id(basestring): platformId query parameter.
-            series(basestring): series query parameter.
-            type(basestring): type query parameter.
-            serial_number(basestring): serialNumber query parameter.
-            up_time(basestring): upTime query parameter.
-            role(basestring): role query parameter.
-            role_source(basestring): roleSource query parameter.
-            associated_wlc_ip(basestring): associatedWlcIp query parameter.
+            vrf_name(str): vrfName query parameter.
+            management_ip_address(str): managementIpAddress query parameter.
+            hostname(str): hostname query parameter.
+            mac_address(str): macAddress query parameter.
+            family(str): family query parameter.
+            collection_status(str): collectionStatus query parameter.
+            collection_interval(str): collectionInterval query parameter.
+            software_version(str): softwareVersion query parameter.
+            software_type(str): softwareType query parameter.
+            reachability_status(str): reachabilityStatus query parameter.
+            reachability_failure_reason(str): reachabilityFailureReason query parameter.
+            error_code(str): errorCode query parameter.
+            platform_id(str): platformId query parameter.
+            series(str): series query parameter.
+            type(str): type query parameter.
+            serial_number(str): serialNumber query parameter.
+            up_time(str): upTime query parameter.
+            role(str): role query parameter.
+            role_source(str): roleSource query parameter.
+            associated_wlc_ip(str): associatedWlcIp query parameter.
             offset(int): offset query parameter.
             limit(int): limit query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -11852,8 +11852,8 @@ class Devices(object):
                               **request_parameters):
         """ This function is an alias of poe_interface_details_v1 .
         Args:
-            device_uuid(basestring): deviceUuid path parameter. uuid of the device .
-            interface_name_list(basestring): interfaceNameList query parameter. comma seperated interface names .
+            device_uuid(str): deviceUuid path parameter. uuid of the device .
+            interface_name_list(str): interfaceNameList query parameter. comma seperated interface names .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11881,11 +11881,11 @@ class Devices(object):
                             **request_parameters):
         """ This function is an alias of get_module_count_v1 .
         Args:
-            device_id(basestring): deviceId query parameter.
-            name_list(basestring, list, set, tuple): nameList query parameter.
-            vendor_equipment_type_list(basestring, list, set, tuple): vendorEquipmentTypeList query parameter.
-            part_number_list(basestring, list, set, tuple): partNumberList query parameter.
-            operational_state_code_list(basestring, list, set, tuple): operationalStateCodeList query parameter.
+            device_id(str): deviceId query parameter.
+            name_list(str, list, set, tuple): nameList query parameter.
+            vendor_equipment_type_list(str, list, set, tuple): vendorEquipmentTypeList query parameter.
+            part_number_list(str, list, set, tuple): partNumberList query parameter.
+            operational_state_code_list(str, list, set, tuple): operationalStateCodeList query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11935,7 +11935,7 @@ class Devices(object):
                                                **request_parameters):
         """ This function is an alias of get_planned_access_points_for_floor_v1 .
         Args:
-            floor_id(basestring): floorId path parameter. The instance UUID of the floor hierarchy element .
+            floor_id(str): floorId path parameter. The instance UUID of the floor hierarchy element .
             limit(int): limit query parameter. The page size limit for the response, e.g. limit=100 will return a
                 maximum of 100 records .
             offset(int): offset query parameter. The page offset for the response. E.g. if limit=100, offset=0 will
@@ -11973,8 +11973,8 @@ class Devices(object):
         Args:
             operation(string): Devices's Operation needs to be specified as 'ClearMacAddress'. .
             payload(object): Devices's Payload is not applicable .
-            interface_uuid(basestring): interfaceUuid path parameter. Interface Id .
-            deployment_mode(basestring): deploymentMode query parameter. Preview/Deploy ['Preview' means the
+            interface_uuid(str): interfaceUuid path parameter. Interface Id .
+            deployment_mode(str): deploymentMode query parameter. Preview/Deploy ['Preview' means the
                 configuration is not pushed to the device. 'Deploy' makes the configuration pushed to
                 the device] .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -12007,7 +12007,7 @@ class Devices(object):
                                                 **request_parameters):
         """ This function is an alias of wireless_rogue_ap_containment_status_v1 .
         Args:
-            mac_address(basestring): macAddress path parameter. MAC Address of the Wireless Rogue AP .
+            mac_address(str): macAddress path parameter. MAC Address of the Wireless Rogue AP .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12104,7 +12104,7 @@ class Devices(object):
                                             **request_parameters):
         """ This function is an alias of add_user_defined_field_to_device_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. UUID of device to which UDF has to be added .
+            device_id(str): deviceId path parameter. UUID of device to which UDF has to be added .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -12133,7 +12133,7 @@ class Devices(object):
                                         **request_parameters):
         """ This function is an alias of get_stack_details_for_device_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device ID .
+            device_id(str): deviceId path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12204,7 +12204,7 @@ class Devices(object):
                                                                         **request_parameters):
         """ This function is an alias of get_list_of_child_events_for_the_given_wireless_client_event_v1 .
         Args:
-            id(basestring): id path parameter. Unique identifier for the event .
+            id(str): id path parameter. Unique identifier for the event .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12227,7 +12227,7 @@ class Devices(object):
                                     **request_parameters):
         """ This function is an alias of get_network_device_by_ip_v1 .
         Args:
-            ip_address(basestring): ipAddress path parameter. Device IP address .
+            ip_address(str): ipAddress path parameter. Device IP address .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12250,7 +12250,7 @@ class Devices(object):
                               **request_parameters):
         """ This function is an alias of get_device_summary_v1 .
         Args:
-            id(basestring): id path parameter. Device ID .
+            id(str): id path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12296,26 +12296,26 @@ class Devices(object):
             limit(int): limit query parameter. Maximum number of records to return .
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
-            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
-            order(basestring): order query parameter. The sort order of the field ascending or descending. .
-            site_hierarchy(basestring): siteHierarchy query parameter. The full hierarchical breakdown of the site
+            sort_by(str): sortBy query parameter. A field within the response to sort by. .
+            order(str): order query parameter. The sort order of the field ascending or descending. .
+            site_hierarchy(str): siteHierarchy query parameter. The full hierarchical breakdown of the site
                 tree starting from Global site name and ending with the specific site name. The Root
                 site is named "Global" (Ex. `Global/AreaName/BuildingName/FloorName`) This field
                 supports wildcard asterisk (`*`) character search support. E.g. `*/San*, */San, /San*`
                 Examples: `?siteHierarchy=Global/AreaName/BuildingName/FloorName` (single siteHierarchy
                 requested) `?siteHierarchy=Global/AreaName/BuildingName/FloorName&siteHierarchy=Global/A
                 reaName2/BuildingName2/FloorName2` (multiple siteHierarchies requested) .
-            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
                 tree in id form starting from Global site UUID and ending with the specific site UUID.
                 (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
                 (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
                 `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
                 requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
                 globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyIds requested) .
-            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+            site_id(str): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
                 `?siteId=id1` (single id requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple ids
                 requested) .
-            view(basestring): view query parameter. The specific summary view being requested. This is an optional
+            view(str): view query parameter. The specific summary view being requested. This is an optional
                 parameter which can be passed to get one or more of the specific view associated fields.
                 The default view is ``configuration``. ### Response data proviced by each view:   1.
                 **configuration** [id,adminStatus,description,duplexConfig,duplexOper,interfaceIfIndex,i
@@ -12330,7 +12330,7 @@ class Devices(object):
                 additional view, simply include the view name in the query parameter. Examples:
                 view=configuration (single view requested) view=configuration&view=statistic&stackPort
                 (multiple views requested) .
-            attribute(basestring): attribute query parameter. The following list of attributes can be provided in
+            attribute(str): attribute query parameter. The following list of attributes can be provided in
                 the attribute field [id,adminStatus, description,duplexConfig,duplexOper,interfaceIfInde
                 x,interfaceType,ipv4Address,ipv6AddressList,isL3Interface,isWan,macAddress,mediaType,nam
                 e,operStatus,peerStackMember,peerStackPort, portChannelId,portMode, portType,rxDiscards,
@@ -12339,31 +12339,31 @@ class Devices(object):
                 e,siteHierarchy,siteHierarchyId] If length of attribute list is too long, please use
                 'views' param instead. Examples: attributes=name (single attribute requested)
                 attributes=name,description,duplexOper (multiple attributes with comma separator) .
-            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+            network_device_id(str): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
                 `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
                 `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
                 requested) `networkDeviceId=6bef213c-19ca-4170-8375-
                 b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
                 cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
                 networkDeviceIds with & separator) .
-            network_device_ip_address(basestring): networkDeviceIpAddress query parameter. The list of Network
+            network_device_ip_address(str): networkDeviceIpAddress query parameter. The list of Network
                 Device management IP Address. (Ex. `121.1.1.10`) This field supports wildcard (`*`)
                 character-based search.  Ex: `*1.1*` or `1.1*` or `*1.1` Examples:
                 `networkDeviceIpAddress=121.1.1.10` `networkDeviceIpAddress=121.1.1.10&networkDeviceIpAd
                 dress=172.20.1.10&networkDeviceIpAddress=10.10.20.10` (multiple networkDevice IP Address
                 with & separator) .
-            network_device_mac_address(basestring): networkDeviceMacAddress query parameter. The list of Network
+            network_device_mac_address(str): networkDeviceMacAddress query parameter. The list of Network
                 Device MAC Address. (Ex. `64:f6:9d:07:9a:00`) This field supports wildcard (`*`)
                 character-based search.  Ex: `*AB:AB:AB*` or `AB:AB:AB*` or `*AB:AB:AB` Examples:
                 `networkDeviceMacAddress=64:f6:9d:07:9a:00`
                 `networkDeviceMacAddress=64:f6:9d:07:9a:00&networkDeviceMacAddress=70:56:9d:07:ac:77`
                 (multiple networkDevice MAC addresses with & separator) .
-            interface_id(basestring): interfaceId query parameter. The list of Interface Uuids. (Ex.
+            interface_id(str): interfaceId query parameter. The list of Interface Uuids. (Ex.
                 `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
                 `interfaceId=6bef213c-19ca-4170-8375-b694e251101c` (single interface uuid ) `interfaceId
                 =6bef213c-19ca-4170-8375-b694e251101c&32219612-819e-4b5e-a96b-cf22aca13dd9&2541e9a7-
                 b80d-4955-8aa2-79b233318ba0` (multiple Interface uuid with & separator) .
-            interface_name(basestring): interfaceName query parameter. The list of Interface name (Ex.
+            interface_name(str): interfaceName query parameter. The list of Interface name (Ex.
                 `GigabitEthernet1/0/1`) This field supports wildcard (`*`) character-based search.  Ex:
                 `*1/0/1*` or `1/0/1*` or `*1/0/1` Examples: `interfaceNames=GigabitEthernet1/0/1`
                 (single interface name)
@@ -12434,7 +12434,7 @@ class Devices(object):
                                            **request_parameters):
         """ This function is an alias of get_functional_capability_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Functional Capability UUID .
+            id(str): id path parameter. Functional Capability UUID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12473,7 +12473,7 @@ class Devices(object):
                                   **request_parameters):
         """ This function is an alias of query_assurance_events_v1 .
         Args:
-            device_family(basestring): deviceFamily query parameter. Device family. Please note that multiple
+            device_family(str): deviceFamily query parameter. Device family. Please note that multiple
                 families across network device type and client type is not allowed. For example,
                 choosing `Routers` along with `Wireless Client` or `Unified AP` is not supported.
                 Examples: `deviceFamily=Switches and Hubs` (single deviceFamily requested)
@@ -12486,7 +12486,7 @@ class Devices(object):
             end_time(int): endTime query parameter. End time to which API queries the data set related to the
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. If
                 `endTime` is not provided, API will default to current time. .
-            message_type(basestring): messageType query parameter. Message type for the event. Examples:
+            message_type(str): messageType query parameter. Message type for the event. Examples:
                 `messageType=Syslog` (single messageType requested)
                 `messageType=Trap&messageType=Syslog` (multiple messageType requested) .
             severity(int): severity query parameter. Severity of the event between 0 and 6. This is applicable only
@@ -12494,54 +12494,54 @@ class Devices(object):
                 Severity: 0: Emergency: 1: Alert: 2: Critical: 3: Error: 4: Warning: 5: Notice: 6:
                 Info),  Examples: `severity=0` (single severity requested) `severity=0&severity=1`
                 (multiple severity requested) .
-            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+            site_id(str): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
                 `?siteId=id1` (single siteId requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple
                 siteId requested) .
-            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
                 tree in id form starting from Global site UUID and ending with the specific site UUID.
                 (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
                 (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
                 `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
                 requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
                 globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyId requested) .
-            network_device_name(basestring): networkDeviceName query parameter. Network device name. This parameter
+            network_device_name(str): networkDeviceName query parameter. Network device name. This parameter
                 is applicable for network device related families. This field supports wildcard (`*`)
                 character-based search. Ex: `*Branch*` or `Branch*` or `*Branch` Examples:
                 `networkDeviceName=Branch-3-Gateway` (single networkDeviceName requested)
                 `networkDeviceName=Branch-3-Gateway&networkDeviceName=Branch-3-Switch` (multiple
                 networkDeviceName requested) .
-            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+            network_device_id(str): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
                 `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
                 `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
                 requested) `networkDeviceId=6bef213c-19ca-4170-8375-
                 b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
                 cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
                 networkDeviceId with & separator) .
-            ap_mac(basestring): apMac query parameter. MAC address of the access point. This parameter is applicable
+            ap_mac(str): apMac query parameter. MAC address of the access point. This parameter is applicable
                 for `Unified AP` and `Wireless Client` events. This field supports wildcard (`*`)
                 character-based search. Ex: `*50:0F*` or `50:0F*` or `*50:0F` Examples:
                 `apMac=50:0F:80:0F:F7:E0` (single apMac requested)
                 `apMac=50:0F:80:0F:F7:E0&apMac=18:80:90:AB:7E:A0` (multiple apMac requested) .
-            client_mac(basestring): clientMac query parameter. MAC address of the client. This parameter is
+            client_mac(str): clientMac query parameter. MAC address of the client. This parameter is
                 applicable for `Wired Client` and `Wireless Client` events. This field supports wildcard
                 (`*`) character-based search. Ex: `*66:2B*` or `66:2B*` or `*66:2B` Examples:
                 `clientMac=66:2B:B8:D2:01:56` (single clientMac requested)
                 `clientMac=66:2B:B8:D2:01:56&clientMac=DC:A6:32:F5:5A:89` (multiple clientMac requested)
                 .
-            attribute(basestring): attribute query parameter. The list of attributes that needs to be included in
+            attribute(str): attribute query parameter. The list of attributes that needs to be included in
                 the response. If this parameter is not provided, then basic attributes (`id`, `name`,
                 `timestamp`, `details`, `messageType`, `siteHierarchyId`, `siteHierarchy`,
                 `deviceFamily`, `networkDeviceId`, `networkDeviceName`, `managementIpAddress`) would be
                 part of the response.  Examples: `attribute=name` (single attribute requested)
                 `attribute=name&attribute=networkDeviceName` (multiple attribute requested) .
-            view(basestring): view query parameter. The list of events views. Please refer to `EventViews` for the
+            view(str): view query parameter. The list of events views. Please refer to `EventViews` for the
                 supported list  Examples: `view=network` (single view requested) `view=network&view=ap`
                 (multiple view requested) .
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
             limit(int): limit query parameter. Maximum number of records to return .
-            sort_by(basestring): sortBy query parameter. A field within the response to sort by. .
-            order(basestring): order query parameter. The sort order of the field ascending or descending. .
+            sort_by(str): sortBy query parameter. A field within the response to sort by. .
+            order(str): order query parameter. The sort order of the field ascending or descending. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12628,7 +12628,7 @@ class Devices(object):
                                          **request_parameters):
         """ This function is an alias of get_device_interface_count_by_id_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device ID .
+            device_id(str): deviceId path parameter. Device ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12651,7 +12651,7 @@ class Devices(object):
                                **request_parameters):
         """ This function is an alias of get_interface_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Interface ID .
+            id(str): id path parameter. Interface ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12704,9 +12704,9 @@ class Devices(object):
         """ This function is an alias of get_device_detail_v1 .
         Args:
             timestamp(int): timestamp query parameter. UTC timestamp of device data in milliseconds .
-            identifier(basestring): identifier query parameter. One of "macAddress", "nwDeviceName", "uuid" (case
+            identifier(str): identifier query parameter. One of "macAddress", "nwDeviceName", "uuid" (case
                 insensitive) .
-            search_by(basestring): searchBy query parameter. MAC Address, device name, or UUID of the network device
+            search_by(str): searchBy query parameter. MAC Address, device name, or UUID of the network device
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -12740,7 +12740,7 @@ class Devices(object):
             includeForOverallHealth(boolean): Devices's Include For Overall Health.
             synchronizeToIssueThreshold(boolean): Devices's Synchronize To Issue Threshold.
             thresholdValue(number): Devices's Thresehold Value.
-            id(basestring): id path parameter. Health score definition id. .
+            id(str): id path parameter. Health score definition id. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -12774,14 +12774,14 @@ class Devices(object):
                                                    **request_parameters):
         """ This function is an alias of get_details_of_a_single_assurance_event_v1 .
         Args:
-            id(basestring): id path parameter. Unique identifier for the event .
-            attribute(basestring): attribute query parameter. The list of attributes that needs to be included in
+            id(str): id path parameter. Unique identifier for the event .
+            attribute(str): attribute query parameter. The list of attributes that needs to be included in
                 the response. If this parameter is not provided, then basic attributes (`id`, `name`,
                 `timestamp`, `details`, `messageType`, `siteHierarchyId`, `siteHierarchy`,
                 `deviceFamily`, `networkDeviceId`, `networkDeviceName`, `managementIpAddress`) would be
                 part of the response.  Examples: `attribute=name` (single attribute requested)
                 `attribute=name&attribute=networkDeviceName` (multiple attribute requested) .
-            view(basestring): view query parameter. The list of events views. Please refer to `EventViews` for the
+            view(str): view query parameter. The list of events views. Please refer to `EventViews` for the
                 supported list  Examples: `view=network` (single view requested) `view=network&view=ap`
                 (multiple view requested) .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -12810,7 +12810,7 @@ class Devices(object):
                                                     **request_parameters):
         """ This function is an alias of get_device_interfaces_by_specified_range_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device ID .
+            device_id(str): deviceId path parameter. Device ID .
             start_index(int): startIndex path parameter. Start index .
             records_to_return(int): recordsToReturn path parameter. Number of records to return .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -12889,10 +12889,10 @@ class Devices(object):
                          **request_parameters):
         """ This function is an alias of get_device_count_v1 .
         Args:
-            hostname(basestring, list, set, tuple): hostname query parameter.
-            management_ip_address(basestring, list, set, tuple): managementIpAddress query parameter.
-            mac_address(basestring, list, set, tuple): macAddress query parameter.
-            location_name(basestring, list, set, tuple): locationName query parameter.
+            hostname(str, list, set, tuple): hostname query parameter.
+            management_ip_address(str, list, set, tuple): managementIpAddress query parameter.
+            mac_address(str, list, set, tuple): macAddress query parameter.
+            location_name(str, list, set, tuple): locationName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12990,7 +12990,7 @@ class Devices(object):
         """ This function is an alias of update_device_management_address_v1 .
         Args:
             newIP(string): Devices's New IP Address of the device to be Updated .
-            deviceid(basestring): deviceid path parameter. The UUID of the device whose management IP address is to
+            deviceid(str): deviceid path parameter. The UUID of the device whose management IP address is to
                 be updated. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -13022,8 +13022,8 @@ class Devices(object):
                               **request_parameters):
         """ This function is an alias of get_interface_details_v1 .
         Args:
-            device_id(basestring): deviceId path parameter. Device ID .
-            name(basestring): name query parameter. Interface name .
+            device_id(str): deviceId path parameter. Device ID .
+            name(str): name query parameter. Interface name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -13185,8 +13185,8 @@ class Devices(object):
                                                                       **request_parameters):
         """ This function is an alias of get_the_details_of_physical_components_of_the_given_device_v1 .
         Args:
-            device_uuid(basestring): deviceUuid path parameter.
-            type(basestring): type query parameter. Type value can be PowerSupply, Fan, Chassis, Backplane, Module,
+            device_uuid(str): deviceUuid path parameter.
+            type(str): type query parameter. Type value can be PowerSupply, Fan, Chassis, Backplane, Module,
                 PROCESSOR, Other, SFP. If no type is mentioned, All equipments are fetched for the
                 device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -13213,10 +13213,10 @@ class Devices(object):
                                                  **request_parameters):
         """ This function is an alias of get_functional_capability_for_devices_v1 .
         Args:
-            device_id(basestring): deviceId query parameter. Accepts comma separated deviceid's and return list of
+            device_id(str): deviceId query parameter. Accepts comma separated deviceid's and return list of
                 functional-capabilities for the given id's. If invalid or not-found id's are provided,
                 null entry will be returned in the list. .
-            function_name(basestring, list, set, tuple): functionName query parameter.
+            function_name(str, list, set, tuple): functionName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -13251,8 +13251,8 @@ class Devices(object):
             description(string): Devices's Description for the Interface .
             vlanId(integer): Devices's VLAN Id to be Updated .
             voiceVlanId(integer): Devices's Voice Vlan Id to be Updated .
-            interface_uuid(basestring): interfaceUuid path parameter. Interface ID .
-            deployment_mode(basestring): deploymentMode query parameter. Preview/Deploy ['Preview' means the
+            interface_uuid(str): interfaceUuid path parameter. Interface ID .
+            deployment_mode(str): deploymentMode query parameter. Preview/Deploy ['Preview' means the
                 configuration is not pushed to the device. 'Deploy' makes the configuration pushed to
                 the device] .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -13298,56 +13298,56 @@ class Devices(object):
                                       **request_parameters):
         """ This function is an alias of count_the_number_of_events_v1 .
         Args:
-            device_family(basestring): deviceFamily query parameter. Device family. Please note that multiple
+            device_family(str): deviceFamily query parameter. Device family. Please note that multiple
                 families across network device type and client type is not allowed. For example,
                 choosing `Routers` along with `Wireless Client` or `Unified AP` is not supported.
                 Examples: `deviceFamily=Switches and Hubs` (single deviceFamily requested)
                 `deviceFamily=Switches and Hubs&deviceFamily=Routers` (multiple deviceFamily requested)
                 .
-            start_time(basestring): startTime query parameter. Start time from which API queries the data set
+            start_time(str): startTime query parameter. Start time from which API queries the data set
                 related to the resource. It must be specified in UNIX epochtime in milliseconds. Value
                 is inclusive. If `startTime` is not provided, API will default to current time minus 24
                 hours. .
-            end_time(basestring): endTime query parameter. End time to which API queries the data set related to the
+            end_time(str): endTime query parameter. End time to which API queries the data set related to the
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. If
                 `endTime` is not provided, API will default to current time. .
-            message_type(basestring): messageType query parameter. Message type for the event. Examples:
+            message_type(str): messageType query parameter. Message type for the event. Examples:
                 `messageType=Syslog` (single messageType requested)
                 `messageType=Trap&messageType=Syslog` (multiple messageType requested) .
-            severity(basestring): severity query parameter. Severity of the event between 0 and 6. This is
+            severity(str): severity query parameter. Severity of the event between 0 and 6. This is
                 applicable only for events related to network devices (other than AP) and `Wired Client`
                 events. (Value: Severity: 0: Emergency: 1: Alert: 2: Critical: 3: Error: 4: Warning: 5:
                 Notice: 6: Info),  Examples: `severity=0` (single severity requested)
                 `severity=0&severity=1` (multiple severity requested) .
-            site_id(basestring): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
+            site_id(str): siteId query parameter. The UUID of the site. (Ex. `flooruuid`) Examples:
                 `?siteId=id1` (single siteId requested) `?siteId=id1&siteId=id2&siteId=id3` (multiple
                 siteId requested) .
-            site_hierarchy_id(basestring): siteHierarchyId query parameter. The full hierarchy breakdown of the site
+            site_hierarchy_id(str): siteHierarchyId query parameter. The full hierarchy breakdown of the site
                 tree in id form starting from Global site UUID and ending with the specific site UUID.
                 (Ex. `globalUuid/areaUuid/buildingUuid/floorUuid`) This field supports wildcard asterisk
                 (`*`) character search support. E.g. `*uuid*, *uuid, uuid*` Examples:
                 `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid `(single siteHierarchyId
                 requested) `?siteHierarchyId=globalUuid/areaUuid/buildingUuid/floorUuid&siteHierarchyId=
                 globalUuid/areaUuid2/buildingUuid2/floorUuid2` (multiple siteHierarchyId requested) .
-            network_device_name(basestring): networkDeviceName query parameter. Network device name. This parameter
+            network_device_name(str): networkDeviceName query parameter. Network device name. This parameter
                 is applicable for network device related families. This field supports wildcard (`*`)
                 character-based search. Ex: `*Branch*` or `Branch*` or `*Branch` Examples:
                 `networkDeviceName=Branch-3-Gateway` (single networkDeviceName requested)
                 `networkDeviceName=Branch-3-Gateway&networkDeviceName=Branch-3-Switch` (multiple
                 networkDeviceName requested) .
-            network_device_id(basestring): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
+            network_device_id(str): networkDeviceId query parameter. The list of Network Device Uuids. (Ex.
                 `6bef213c-19ca-4170-8375-b694e251101c`) Examples:
                 `networkDeviceId=6bef213c-19ca-4170-8375-b694e251101c` (single networkDeviceId
                 requested) `networkDeviceId=6bef213c-19ca-4170-8375-
                 b694e251101c&networkDeviceId=32219612-819e-4b5e-a96b-
                 cf22aca13dd9&networkDeviceId=2541e9a7-b80d-4955-8aa2-79b233318ba0` (multiple
                 networkDeviceId requested) .
-            ap_mac(basestring): apMac query parameter. MAC address of the access point. This parameter is applicable
+            ap_mac(str): apMac query parameter. MAC address of the access point. This parameter is applicable
                 for `Unified AP` and `Wireless Client` events. This field supports wildcard (`*`)
                 character-based search. Ex: `*50:0F*` or `50:0F*` or `*50:0F` Examples:
                 `apMac=50:0F:80:0F:F7:E0` (single apMac requested)
                 `apMac=50:0F:80:0F:F7:E0&apMac=18:80:90:AB:7E:A0` (multiple apMac requested) .
-            client_mac(basestring): clientMac query parameter. MAC address of the client. This parameter is
+            client_mac(str): clientMac query parameter. MAC address of the client. This parameter is
                 applicable for `Wired Client` and `Wireless Client` events. This field supports wildcard
                 (`*`) character-based search. Ex: `*66:2B*` or `66:2B*` or `*66:2B` Examples:
                 `clientMac=66:2B:B8:D2:01:56` (single clientMac requested)

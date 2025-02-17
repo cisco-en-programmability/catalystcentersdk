@@ -3265,8 +3265,8 @@ class Discovery(object):
                                                           **request_parameters):
         """ This function is an alias of get_discovered_network_devices_by_discovery_id_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
-            task_id(basestring): taskId query parameter.
+            id(str): id path parameter. Discovery ID .
+            task_id(str): taskId query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3292,12 +3292,12 @@ class Discovery(object):
                                   **request_parameters):
         """ This function is an alias of get_global_credentials_v1 .
         Args:
-            credential_sub_type(basestring): credentialSubType query parameter. Credential type as CLI /
+            credential_sub_type(str): credentialSubType query parameter. Credential type as CLI /
                 SNMPV2_READ_COMMUNITY / SNMPV2_WRITE_COMMUNITY / SNMPV3 / HTTP_WRITE / HTTP_READ /
                 NETCONF .
-            sort_by(basestring): sortBy query parameter. Field to sort the results by. Sorts by 'instanceId' if no
+            sort_by(str): sortBy query parameter. Field to sort the results by. Sorts by 'instanceId' if no
                 value is provided .
-            order(basestring): order query parameter. Order of sorting. 'asc' or 'des' .
+            order(str): order query parameter. Order of sorting. 'asc' or 'des' .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3323,8 +3323,8 @@ class Discovery(object):
                                         **request_parameters):
         """ This function is an alias of get_devices_discovered_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
-            task_id(basestring): taskId query parameter.
+            id(str): id path parameter. Discovery ID .
+            task_id(str): taskId query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3429,11 +3429,11 @@ class Discovery(object):
                                            **request_parameters):
         """ This function is an alias of get_discovered_devices_by_range_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
+            id(str): id path parameter. Discovery ID .
             start_index(int): startIndex path parameter. Starting index for the records .
             records_to_return(int): recordsToReturn path parameter. Number of records to fetch from the start index
                 .
-            task_id(basestring): taskId query parameter.
+            task_id(str): taskId query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3739,7 +3739,7 @@ class Discovery(object):
                                            **request_parameters):
         """ This function is an alias of delete_global_credentials_by_id_v1 .
         Args:
-            global_credential_id(basestring): globalCredentialId path parameter. ID of global-credential .
+            global_credential_id(str): globalCredentialId path parameter. ID of global-credential .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3765,10 +3765,10 @@ class Discovery(object):
                                                    **request_parameters):
         """ This function is an alias of get_list_of_discoveries_by_discovery_id_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
+            id(str): id path parameter. Discovery ID .
             offset(int): offset query parameter. Starting index for the records .
             limit(int): limit query parameter. Number of records to fetch from the starting index .
-            ip_address(basestring): ipAddress query parameter. Filter records based on IP address .
+            ip_address(str): ipAddress query parameter. Filter records based on IP address .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3794,7 +3794,7 @@ class Discovery(object):
                                   **request_parameters):
         """ This function is an alias of delete_discovery_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
+            id(str): id path parameter. Discovery ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3821,7 +3821,7 @@ class Discovery(object):
         """ This function is an alias of update_global_credentials_v1 .
         Args:
             siteUuids(list): Discovery's List of siteUuids where credential is to be updated  (list of strings).
-            global_credential_id(basestring): globalCredentialId path parameter. Global credential Uuid .
+            global_credential_id(str): globalCredentialId path parameter. Global credential Uuid .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -3851,7 +3851,7 @@ class Discovery(object):
                                                     **request_parameters):
         """ This function is an alias of get_credential_sub_type_by_credential_id_v1 .
         Args:
-            id(basestring): id path parameter. Global Credential ID .
+            id(str): id path parameter. Global Credential ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3977,23 +3977,23 @@ class Discovery(object):
                                               **request_parameters):
         """ This function is an alias of get_network_devices_from_discovery_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
-            task_id(basestring): taskId query parameter.
-            sort_by(basestring): sortBy query parameter. Sort by field. Available values are pingStatus,
+            id(str): id path parameter. Discovery ID .
+            task_id(str): taskId query parameter.
+            sort_by(str): sortBy query parameter. Sort by field. Available values are pingStatus,
                 cliStatus,snmpStatus, httpStatus and netconfStatus .
-            sort_order(basestring): sortOrder query parameter. Order of sorting based on sortBy. Available values
+            sort_order(str): sortOrder query parameter. Order of sorting based on sortBy. Available values
                 are 'asc' and 'des' .
-            ip_address(basestring, list, set, tuple): ipAddress query parameter. IP Address of the device .
-            ping_status(basestring, list, set, tuple): pingStatus query parameter. Ping status for the IP during the
+            ip_address(str, list, set, tuple): ipAddress query parameter. IP Address of the device .
+            ping_status(str, list, set, tuple): pingStatus query parameter. Ping status for the IP during the
                 job run. Available values are 'SUCCESS', 'FAILURE', 'NOT-PROVIDED' and 'NOT-VALIDATED' .
-            snmp_status(basestring, list, set, tuple): snmpStatus query parameter. SNMP status for the IP during the
+            snmp_status(str, list, set, tuple): snmpStatus query parameter. SNMP status for the IP during the
                 job run. Available values are 'SUCCESS', 'FAILURE', 'NOT-PROVIDED' and 'NOT-VALIDATED' .
-            clistatus(basestring, list, set, tuple): cliStatus query parameter. CLI status for the IP during the job
+            clistatus(str, list, set, tuple): cliStatus query parameter. CLI status for the IP during the job
                 run. Available values are 'SUCCESS', 'FAILURE', 'NOT-PROVIDED' and 'NOT-VALIDATED' .
-            netconf_status(basestring, list, set, tuple): netconfStatus query parameter. NETCONF status for the IP
+            netconf_status(str, list, set, tuple): netconfStatus query parameter. NETCONF status for the IP
                 during the job run. Available values are 'SUCCESS', 'FAILURE', 'NOT-PROVIDED' and 'NOT-
                 VALIDATED' .
-            http_status(basestring, list, set, tuple): httpStatus query parameter. HTTP staus for the IP during the
+            http_status(str, list, set, tuple): httpStatus query parameter. HTTP staus for the IP during the
                 job run. Available values are 'SUCCESS', 'FAILURE', 'NOT-PROVIDED' and 'NOT-VALIDATED' .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4376,7 +4376,7 @@ class Discovery(object):
                                     **request_parameters):
         """ This function is an alias of delete_global_credential_v2 .
         Args:
-            id(basestring): id path parameter. Global Credential id  .
+            id(str): id path parameter. Global Credential id  .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4427,7 +4427,7 @@ class Discovery(object):
                                **request_parameters):
         """ This function is an alias of get_discovery_by_id_v1 .
         Args:
-            id(basestring): id path parameter. Discovery ID .
+            id(str): id path parameter. Discovery ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4583,8 +4583,8 @@ class Discovery(object):
         Args:
             offset(int): offset query parameter.
             limit(int): limit query parameter.
-            ip_address(basestring): ipAddress query parameter.
-            name(basestring): name query parameter.
+            ip_address(str): ipAddress query parameter.
+            name(str): name query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides

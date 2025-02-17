@@ -464,6 +464,12 @@ applications
 .. autoclass:: catalystcentersdk.api.v2_3_7_9.applications.Applications()
 
 
+.. _cisco_i_m_c_2_3_7_9:
+
+cisco_i_m_c
+-----------
+
+.. autoclass:: catalystcentersdk.api.v2_3_7_9.cisco_i_m_c.CiscoIMC()
 
 .. _authentication_management_2_3_7_9:
 

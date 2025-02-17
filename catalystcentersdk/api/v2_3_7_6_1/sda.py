@@ -9016,8 +9016,8 @@ class Sda(object):
                                            **request_parameters):
         """ This function is an alias of get_default_authentication_profile_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
-            authenticate_template_name(basestring): authenticateTemplateName query parameter.
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
+            authenticate_template_name(str): authenticateTemplateName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9041,7 +9041,7 @@ class Sda(object):
                         **request_parameters):
         """ This function is an alias of get_device_info_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9092,7 +9092,7 @@ class Sda(object):
                  **request_parameters):
         """ This function is an alias of get_site_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Site Name Hierarchy .
+            site_name_hierarchy(str): siteNameHierarchy query parameter. Site Name Hierarchy .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9193,9 +9193,9 @@ class Sda(object):
                                                 **request_parameters):
         """ This function is an alias of get_ip_pool_from_sda_virtual_network_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
-            virtual_network_name(basestring): virtualNetworkName query parameter.
-            ip_pool_name(basestring): ipPoolName query parameter. ipPoolName. Note: Use vlanName as a value for this
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
+            virtual_network_name(str): virtualNetworkName query parameter.
+            ip_pool_name(str): ipPoolName query parameter. ipPoolName. Note: Use vlanName as a value for this
                 parameter if same ip pool is assigned to multiple virtual networks (e.g..
                 ipPoolName=vlan1021) .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -9280,9 +9280,9 @@ class Sda(object):
                                                    **request_parameters):
         """ This function is an alias of delete_ip_pool_from_sda_virtual_network_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
-            virtual_network_name(basestring): virtualNetworkName query parameter.
-            ip_pool_name(basestring): ipPoolName query parameter.
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
+            virtual_network_name(str): virtualNetworkName query parameter.
+            ip_pool_name(str): ipPoolName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9393,8 +9393,8 @@ class Sda(object):
                                                 **request_parameters):
         """ This function is an alias of delete_fabric_device_layer2_handoffs_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -9422,9 +9422,9 @@ class Sda(object):
                                        **request_parameters):
         """ This function is an alias of get_authentication_profiles_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the authentication profile is assigned
+            fabric_id(str): fabricId query parameter. ID of the fabric the authentication profile is assigned
                 to. .
-            authentication_profile_name(basestring): authenticationProfileName query parameter. Return only the
+            authentication_profile_name(str): authenticationProfileName query parameter. Return only the
                 authentication profiles with this specified name. Note that 'No Authentication' is not a
                 valid option for this parameter. .
             offset(int): offset query parameter. Starting record for pagination. .
@@ -9455,8 +9455,8 @@ class Sda(object):
                                                                     **request_parameters):
         """ This function is an alias of get_fabric_devices_layer3_handoffs_with_ip_transit_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -9510,9 +9510,9 @@ class Sda(object):
                                              **request_parameters):
         """ This function is an alias of get_layer3_virtual_networks_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 3 virtual network is
+            fabric_id(str): fabricId query parameter. ID of the fabric the layer 3 virtual network is
                 assigned to. .
-            anchored_site_id(basestring): anchoredSiteId query parameter. Fabric ID of the fabric site the layer 3
+            anchored_site_id(str): anchoredSiteId query parameter. Fabric ID of the fabric site the layer 3
                 virtual network is anchored at. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -9565,7 +9565,7 @@ class Sda(object):
                                                **request_parameters):
         """ This function is an alias of delete_layer2_virtual_network_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the layer 2 virtual network. .
+            id(str): id path parameter. ID of the layer 2 virtual network. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9588,7 +9588,7 @@ class Sda(object):
                                     **request_parameters):
         """ This function is an alias of delete_extranet_policies_v1 .
         Args:
-            extranet_policy_name(basestring): extranetPolicyName query parameter. Name of the extranet policy. .
+            extranet_policy_name(str): extranetPolicyName query parameter. Name of the extranet policy. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9614,8 +9614,8 @@ class Sda(object):
                             **request_parameters):
         """ This function is an alias of get_fabric_sites_v1 .
         Args:
-            id(basestring): id query parameter. ID of the fabric site. .
-            site_id(basestring): siteId query parameter. ID of the network hierarchy associated with the fabric
+            id(str): id query parameter. ID of the fabric site. .
+            site_id(str): siteId query parameter. ID of the network hierarchy associated with the fabric
                 site. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -9685,8 +9685,8 @@ class Sda(object):
                                                 **request_parameters):
         """ This function is an alias of delete_port_assignment_for_access_point_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
-            interface_name(basestring): interfaceName query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
+            interface_name(str): interfaceName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9779,7 +9779,7 @@ class Sda(object):
                                                                      **request_parameters):
         """ This function is an alias of delete_fabric_device_layer3_handoff_with_ip_transit_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the layer 3 handoff with ip transit of a fabric device. .
+            id(str): id path parameter. ID of the layer 3 handoff with ip transit of a fabric device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9830,7 +9830,7 @@ class Sda(object):
                                     **request_parameters):
         """ This function is an alias of delete_fabric_site_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the fabric site. .
+            id(str): id path parameter. ID of the fabric site. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9856,8 +9856,8 @@ class Sda(object):
                                               **request_parameters):
         """ This function is an alias of get_fabric_devices_layer2_handoffs_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -9888,10 +9888,10 @@ class Sda(object):
                                     **request_parameters):
         """ This function is an alias of get_fabric_devices_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
-            device_roles(basestring): deviceRoles query parameter. Device roles of the fabric device. Allowed values
+            device_roles(str): deviceRoles query parameter. Device roles of the fabric device. Allowed values
                 are [CONTROL_PLANE_NODE, EDGE_NODE, BORDER_NODE, WIRELESS_CONTROLLER_NODE,
                 EXTENDED_NODE]. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -9918,7 +9918,7 @@ class Sda(object):
                                                      **request_parameters):
         """ This function is an alias of delete_fabric_device_layer2_handoff_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the layer 2 handoff of a fabric device. .
+            id(str): id path parameter. ID of the layer 2 handoff of a fabric device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -9946,10 +9946,10 @@ class Sda(object):
                              **request_parameters):
         """ This function is an alias of get_port_channels_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
-            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
-            port_channel_name(basestring): portChannelName query parameter. Name of the port channel. .
-            connected_device_type(basestring): connectedDeviceType query parameter. Connected device type of the
+            fabric_id(str): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(str): networkDeviceId query parameter. ID of the network device. .
+            port_channel_name(str): portChannelName query parameter. Name of the port channel. .
+            connected_device_type(str): connectedDeviceType query parameter. Connected device type of the
                 port channel. The allowed values are [TRUNK, EXTENDED_NODE]. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -10016,7 +10016,7 @@ class Sda(object):
                                          **request_parameters):
         """ This function is an alias of get_device_role_in_sda_fabric_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter. Device Management
+            device_management_ip_address(str): deviceManagementIpAddress query parameter. Device Management
                 IP Address .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10040,7 +10040,7 @@ class Sda(object):
                                      **request_parameters):
         """ This function is an alias of delete_port_channel_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the port channel. .
+            id(str): id path parameter. ID of the port channel. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10119,7 +10119,7 @@ class Sda(object):
                                       **request_parameters):
         """ This function is an alias of get_transit_networks_count_v1 .
         Args:
-            type(basestring): type query parameter. Type of the transit network. Allowed values are
+            type(str): type query parameter. Type of the transit network. Allowed values are
                 [IP_BASED_TRANSIT, SDA_LISP_PUB_SUB_TRANSIT, SDA_LISP_BGP_TRANSIT]. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10175,11 +10175,11 @@ class Sda(object):
                                        **request_parameters):
         """ This function is an alias of get_layer3_virtual_networks_v1 .
         Args:
-            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the layer 3 virtual
+            virtual_network_name(str): virtualNetworkName query parameter. Name of the layer 3 virtual
                 network. .
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 3 virtual network is
+            fabric_id(str): fabricId query parameter. ID of the fabric the layer 3 virtual network is
                 assigned to. .
-            anchored_site_id(basestring): anchoredSiteId query parameter. Fabric ID of the fabric site the layer 3
+            anchored_site_id(str): anchoredSiteId query parameter. Fabric ID of the fabric site the layer 3
                 virtual network is anchored at. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -10213,12 +10213,12 @@ class Sda(object):
                                      **request_parameters):
         """ This function is an alias of get_port_assignment_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the port
+            fabric_id(str): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the port
                 assignment. .
-            interface_name(basestring): interfaceName query parameter. Interface name of the port assignment. .
-            data_vlan_name(basestring): dataVlanName query parameter. Data VLAN name of the port assignment. .
-            voice_vlan_name(basestring): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
+            interface_name(str): interfaceName query parameter. Interface name of the port assignment. .
+            data_vlan_name(str): dataVlanName query parameter. Data VLAN name of the port assignment. .
+            voice_vlan_name(str): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10245,7 +10245,7 @@ class Sda(object):
                                         **request_parameters):
         """ This function is an alias of delete_extranet_policy_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the extranet policy. .
+            id(str): id path parameter. ID of the extranet policy. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10268,7 +10268,7 @@ class Sda(object):
                                                   **request_parameters):
         """ This function is an alias of delete_multicast_virtual_network_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the multicast configuration. .
+            id(str): id path parameter. ID of the multicast configuration. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10291,7 +10291,7 @@ class Sda(object):
                                                        **request_parameters):
         """ This function is an alias of delete_virtual_network_with_scalable_groups_v1 .
         Args:
-            virtual_network_name(basestring): virtualNetworkName query parameter.
+            virtual_network_name(str): virtualNetworkName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10315,8 +10315,8 @@ class Sda(object):
                                       **request_parameters):
         """ This function is an alias of delete_provisioned_devices_v1 .
         Args:
-            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
-            site_id(basestring): siteId query parameter. ID of the site hierarchy. .
+            network_device_id(str): networkDeviceId query parameter. ID of the network device. .
+            site_id(str): siteId query parameter. ID of the site hierarchy. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10340,7 +10340,7 @@ class Sda(object):
                                                **request_parameters):
         """ This function is an alias of delete_layer3_virtual_network_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the layer 3 virtual network. .
+            id(str): id path parameter. ID of the layer 3 virtual network. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10363,7 +10363,7 @@ class Sda(object):
                                        **request_parameters):
         """ This function is an alias of delete_transit_peer_network_v1 .
         Args:
-            transit_peer_network_name(basestring): transitPeerNetworkName query parameter. Transit Peer Network Name
+            transit_peer_network_name(str): transitPeerNetworkName query parameter. Transit Peer Network Name
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10387,7 +10387,7 @@ class Sda(object):
                                            **request_parameters):
         """ This function is an alias of delete_provisioned_device_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the provisioned device. .
+            id(str): id path parameter. ID of the provisioned device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10414,10 +10414,10 @@ class Sda(object):
                               **request_parameters):
         """ This function is an alias of get_fabric_devices_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
-            device_roles(basestring): deviceRoles query parameter. Device roles of the fabric device. Allowed values
+            device_roles(str): deviceRoles query parameter. Device roles of the fabric device. Allowed values
                 are [CONTROL_PLANE_NODE, EDGE_NODE, BORDER_NODE, WIRELESS_CONTROLLER_NODE,
                 EXTENDED_NODE]. .
             offset(int): offset query parameter. Starting record for pagination. .
@@ -10480,9 +10480,9 @@ class Sda(object):
                                 **request_parameters):
         """ This function is an alias of get_transit_networks_v1 .
         Args:
-            id(basestring): id query parameter. ID of the transit network. .
-            name(basestring): name query parameter. Name of the transit network. .
-            type(basestring): type query parameter. Type of the transit network. Allowed values are
+            id(str): id query parameter. ID of the transit network. .
+            name(str): name query parameter. Name of the transit network. .
+            type(str): type query parameter. Type of the transit network. Allowed values are
                 [IP_BASED_TRANSIT, SDA_LISP_PUB_SUB_TRANSIT, SDA_LISP_BGP_TRANSIT]. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -10513,8 +10513,8 @@ class Sda(object):
                   **request_parameters):
         """ This function is an alias of delete_vn_v1 .
         Args:
-            virtual_network_name(basestring): virtualNetworkName query parameter.
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            virtual_network_name(str): virtualNetworkName query parameter.
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10594,7 +10594,7 @@ class Sda(object):
                                   **request_parameters):
         """ This function is an alias of gets_border_device_detail_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10637,7 +10637,7 @@ class Sda(object):
                                          **request_parameters):
         """ This function is an alias of get_transit_peer_network_info_v1 .
         Args:
-            transit_peer_network_name(basestring): transitPeerNetworkName query parameter. Transit or Peer Network
+            transit_peer_network_name(str): transitPeerNetworkName query parameter. Transit or Peer Network
                 Name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10661,7 +10661,7 @@ class Sda(object):
                                       **request_parameters):
         """ This function is an alias of delete_fabric_device_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the fabric device. .
+            id(str): id path parameter. ID of the fabric device. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10690,12 +10690,12 @@ class Sda(object):
                                 **request_parameters):
         """ This function is an alias of get_port_assignments_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the port
+            fabric_id(str): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the port
                 assignment. .
-            interface_name(basestring): interfaceName query parameter. Interface name of the port assignment. .
-            data_vlan_name(basestring): dataVlanName query parameter. Data VLAN name of the port assignment. .
-            voice_vlan_name(basestring): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
+            interface_name(str): interfaceName query parameter. Interface name of the port assignment. .
+            data_vlan_name(str): dataVlanName query parameter. Data VLAN name of the port assignment. .
+            voice_vlan_name(str): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -10726,7 +10726,7 @@ class Sda(object):
                                                     **request_parameters):
         """ This function is an alias of get_virtual_network_with_scalable_groups_v1 .
         Args:
-            virtual_network_name(basestring): virtualNetworkName query parameter.
+            virtual_network_name(str): virtualNetworkName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10749,7 +10749,7 @@ class Sda(object):
                                                  **request_parameters):
         """ This function is an alias of get_multicast_details_from_sda_fabric_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter. fabric site name hierarchy .
+            site_name_hierarchy(str): siteNameHierarchy query parameter. fabric site name hierarchy .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10772,7 +10772,7 @@ class Sda(object):
                                            **request_parameters):
         """ This function is an alias of delete_provisioned_wired_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter. Valid IP address of
+            device_management_ip_address(str): deviceManagementIpAddress query parameter. Valid IP address of
                 the device currently provisioned in a fabric site .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10796,7 +10796,7 @@ class Sda(object):
                                         **request_parameters):
         """ This function is an alias of delete_anycast_gateway_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the anycast gateway. .
+            id(str): id path parameter. ID of the anycast gateway. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10819,7 +10819,7 @@ class Sda(object):
                                        **request_parameters):
         """ This function is an alias of get_virtual_network_summary_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Complete fabric siteNameHierarchy
+            site_name_hierarchy(str): siteNameHierarchy query parameter. Complete fabric siteNameHierarchy
                 Path .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10871,7 +10871,7 @@ class Sda(object):
                            **request_parameters):
         """ This function is an alias of delete_edge_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -10896,10 +10896,10 @@ class Sda(object):
                                  **request_parameters):
         """ This function is an alias of delete_fabric_devices_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
-            device_roles(basestring): deviceRoles query parameter. Device roles of the fabric device. Allowed values
+            device_roles(str): deviceRoles query parameter. Device roles of the fabric device. Allowed values
                 are [CONTROL_PLANE_NODE, EDGE_NODE, BORDER_NODE, WIRELESS_CONTROLLER_NODE]. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -10928,8 +10928,8 @@ class Sda(object):
                             **request_parameters):
         """ This function is an alias of get_fabric_zones_v1 .
         Args:
-            id(basestring): id query parameter. ID of the fabric zone. .
-            site_id(basestring): siteId query parameter. ID of the network hierarchy associated with the fabric
+            id(str): id query parameter. ID of the fabric zone. .
+            site_id(str): siteId query parameter. ID of the network hierarchy associated with the fabric
                 zone. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -11014,7 +11014,7 @@ class Sda(object):
                                     **request_parameters):
         """ This function is an alias of delete_control_plane_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11040,8 +11040,8 @@ class Sda(object):
                                           **request_parameters):
         """ This function is an alias of get_multicast_virtual_networks_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric site where multicast is configured. .
-            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the virtual network
+            fabric_id(str): fabricId query parameter. ID of the fabric site where multicast is configured. .
+            virtual_network_name(str): virtualNetworkName query parameter. Name of the virtual network
                 associated to the multicast configuration. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -11101,8 +11101,8 @@ class Sda(object):
                                                                **request_parameters):
         """ This function is an alias of get_fabric_devices_layer3_handoffs_with_sda_transit_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -11132,8 +11132,8 @@ class Sda(object):
                                                                  **request_parameters):
         """ This function is an alias of delete_fabric_device_layer3_handoffs_with_sda_transit_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -11215,8 +11215,8 @@ class Sda(object):
                                                **request_parameters):
         """ This function is an alias of delete_port_assignment_for_user_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
-            interface_name(basestring): interfaceName query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
+            interface_name(str): interfaceName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11241,8 +11241,8 @@ class Sda(object):
                                                     **request_parameters):
         """ This function is an alias of get_fabric_devices_layer2_handoffs_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -11323,7 +11323,7 @@ class Sda(object):
                                         **request_parameters):
         """ This function is an alias of delete_transit_network_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the transit network. .
+            id(str): id path parameter. ID of the transit network. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11346,7 +11346,7 @@ class Sda(object):
                                     **request_parameters):
         """ This function is an alias of delete_fabric_zone_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the fabric zone. .
+            id(str): id path parameter. ID of the fabric zone. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11369,7 +11369,7 @@ class Sda(object):
                                          **request_parameters):
         """ This function is an alias of get_provisioned_devices_count_v1 .
         Args:
-            site_id(basestring): siteId query parameter. ID of the site hierarchy. .
+            site_id(str): siteId query parameter. ID of the site hierarchy. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11392,7 +11392,7 @@ class Sda(object):
                     **request_parameters):
         """ This function is an alias of delete_site_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Site Name Hierarchy .
+            site_name_hierarchy(str): siteNameHierarchy query parameter. Site Name Hierarchy .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11443,7 +11443,7 @@ class Sda(object):
                                           **request_parameters):
         """ This function is an alias of delete_layer3_virtual_networks_v1 .
         Args:
-            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the layer 3 virtual
+            virtual_network_name(str): virtualNetworkName query parameter. Name of the layer 3 virtual
                 network. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -11497,7 +11497,7 @@ class Sda(object):
                          **request_parameters):
         """ This function is an alias of get_multicast_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric site where multicast is configured. .
+            fabric_id(str): fabricId query parameter. ID of the fabric site where multicast is configured. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -11586,7 +11586,7 @@ class Sda(object):
                                         **request_parameters):
         """ This function is an alias of delete_port_assignment_by_id_v1 .
         Args:
-            id(basestring): id path parameter. ID of the port assignment. .
+            id(str): id path parameter. ID of the port assignment. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11610,8 +11610,8 @@ class Sda(object):
                                                                 **request_parameters):
         """ This function is an alias of delete_fabric_device_layer3_handoffs_with_ip_transit_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -11677,7 +11677,7 @@ class Sda(object):
                                  **request_parameters):
         """ This function is an alias of get_control_plane_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11704,13 +11704,13 @@ class Sda(object):
                                           **request_parameters):
         """ This function is an alias of delete_layer2_virtual_networks_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 2 virtual network is
+            fabric_id(str): fabricId query parameter. ID of the fabric the layer 2 virtual network is
                 assigned to. .
-            vlan_name(basestring): vlanName query parameter. The vlan name of the layer 2 virtual network. .
+            vlan_name(str): vlanName query parameter. The vlan name of the layer 2 virtual network. .
             vlan_id(int): vlanId query parameter. The vlan ID of the layer 2 virtual network. .
-            traffic_type(basestring): trafficType query parameter. The traffic type of the layer 2 virtual network.
+            traffic_type(str): trafficType query parameter. The traffic type of the layer 2 virtual network.
                 .
-            associated_layer3_virtual_network_name(basestring): associatedLayer3VirtualNetworkName query parameter.
+            associated_layer3_virtual_network_name(str): associatedLayer3VirtualNetworkName query parameter.
                 Name of the associated layer 3 virtual network. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -11847,8 +11847,8 @@ class Sda(object):
                **request_parameters):
         """ This function is an alias of get_vn_v1 .
         Args:
-            virtual_network_name(basestring): virtualNetworkName query parameter.
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            virtual_network_name(str): virtualNetworkName query parameter.
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -11875,8 +11875,8 @@ class Sda(object):
                                                               **request_parameters):
         """ This function is an alias of get_fabric_devices_layer3_handoffs_with_ip_transit_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -11982,13 +11982,13 @@ class Sda(object):
                                 **request_parameters):
         """ This function is an alias of get_anycast_gateways_v1 .
         Args:
-            id(basestring): id query parameter. ID of the anycast gateway. .
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the anycast gateway is assigned to. .
-            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the virtual network
+            id(str): id query parameter. ID of the anycast gateway. .
+            fabric_id(str): fabricId query parameter. ID of the fabric the anycast gateway is assigned to. .
+            virtual_network_name(str): virtualNetworkName query parameter. Name of the virtual network
                 associated with the anycast gateways. .
-            ip_pool_name(basestring): ipPoolName query parameter. Name of the IP pool associated with the anycast
+            ip_pool_name(str): ipPoolName query parameter. Name of the IP pool associated with the anycast
                 gateways. .
-            vlan_name(basestring): vlanName query parameter. VLAN name of the anycast gateways. .
+            vlan_name(str): vlanName query parameter. VLAN name of the anycast gateways. .
             vlan_id(int): vlanId query parameter. VLAN ID of the anycast gateways. The allowed range for vlanId is
                 [2-4093] except for reserved VLANs [1002-1005], 2046, and 4094. .
             offset(int): offset query parameter. Starting record for pagination. .
@@ -12078,7 +12078,7 @@ class Sda(object):
                                             **request_parameters):
         """ This function is an alias of delete_multicast_from_sda_fabric_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12145,12 +12145,12 @@ class Sda(object):
                                    **request_parameters):
         """ This function is an alias of delete_port_assignments_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the port
+            fabric_id(str): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the port
                 assignment. .
-            interface_name(basestring): interfaceName query parameter. Interface name of the port assignment. .
-            data_vlan_name(basestring): dataVlanName query parameter. Data VLAN name of the port assignment. .
-            voice_vlan_name(basestring): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
+            interface_name(str): interfaceName query parameter. Interface name of the port assignment. .
+            data_vlan_name(str): dataVlanName query parameter. Data VLAN name of the port assignment. .
+            voice_vlan_name(str): voiceVlanName query parameter. Voice VLAN name of the port assignment. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12177,7 +12177,7 @@ class Sda(object):
                                                **request_parameters):
         """ This function is an alias of get_multicast_virtual_network_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric site the multicast configuration is
+            fabric_id(str): fabricId query parameter. ID of the fabric site the multicast configuration is
                 associated with. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -12230,8 +12230,8 @@ class Sda(object):
                                                                      **request_parameters):
         """ This function is an alias of get_fabric_devices_layer3_handoffs_with_sda_transit_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric this device belongs to. .
-            network_device_id(basestring): networkDeviceId query parameter. Network device ID of the fabric device.
+            fabric_id(str): fabricId query parameter. ID of the fabric this device belongs to. .
+            network_device_id(str): networkDeviceId query parameter. Network device ID of the fabric device.
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -12288,9 +12288,9 @@ class Sda(object):
                                    **request_parameters):
         """ This function is an alias of get_provisioned_devices_v1 .
         Args:
-            id(basestring): id query parameter. ID of the provisioned device. .
-            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
-            site_id(basestring): siteId query parameter. ID of the site hierarchy. .
+            id(str): id query parameter. ID of the provisioned device. .
+            network_device_id(str): networkDeviceId query parameter. ID of the network device. .
+            site_id(str): siteId query parameter. ID of the site hierarchy. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of devices to return. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -12323,13 +12323,13 @@ class Sda(object):
                                             **request_parameters):
         """ This function is an alias of get_layer2_virtual_network_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 2 virtual network is
+            fabric_id(str): fabricId query parameter. ID of the fabric the layer 2 virtual network is
                 assigned to. .
-            vlan_name(basestring): vlanName query parameter. The vlan name of the layer 2 virtual network. .
+            vlan_name(str): vlanName query parameter. The vlan name of the layer 2 virtual network. .
             vlan_id(int): vlanId query parameter. The vlan ID of the layer 2 virtual network. .
-            traffic_type(basestring): trafficType query parameter. The traffic type of the layer 2 virtual network.
+            traffic_type(str): trafficType query parameter. The traffic type of the layer 2 virtual network.
                 .
-            associated_layer3_virtual_network_name(basestring): associatedLayer3VirtualNetworkName query parameter.
+            associated_layer3_virtual_network_name(str): associatedLayer3VirtualNetworkName query parameter.
                 Name of the associated layer 3 virtual network. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -12361,12 +12361,12 @@ class Sda(object):
                                      **request_parameters):
         """ This function is an alias of get_anycast_gateway_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the anycast gateway is assigned to. .
-            virtual_network_name(basestring): virtualNetworkName query parameter. Name of the virtual network
+            fabric_id(str): fabricId query parameter. ID of the fabric the anycast gateway is assigned to. .
+            virtual_network_name(str): virtualNetworkName query parameter. Name of the virtual network
                 associated with the anycast gateways. .
-            ip_pool_name(basestring): ipPoolName query parameter. Name of the IP pool associated with the anycast
+            ip_pool_name(str): ipPoolName query parameter. Name of the IP pool associated with the anycast
                 gateways. .
-            vlan_name(basestring): vlanName query parameter. VLAN name of the anycast gateways. .
+            vlan_name(str): vlanName query parameter. VLAN name of the anycast gateways. .
             vlan_id(int): vlanId query parameter. VLAN ID of the anycast gateways. The allowed range for vlanId is
                 [2-4093] except for reserved VLANs [1002-1005], 2046, and 4094. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -12398,10 +12398,10 @@ class Sda(object):
                                   **request_parameters):
         """ This function is an alias of get_port_channel_count_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
-            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
-            port_channel_name(basestring): portChannelName query parameter. Name of the port channel. .
-            connected_device_type(basestring): connectedDeviceType query parameter. Connected device type of the
+            fabric_id(str): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(str): networkDeviceId query parameter. ID of the network device. .
+            port_channel_name(str): portChannelName query parameter. Name of the port channel. .
+            connected_device_type(str): connectedDeviceType query parameter. Connected device type of the
                 port channel. The allowed values are [TRUNK, EXTENDED_NODE]. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -12428,7 +12428,7 @@ class Sda(object):
                         **request_parameters):
         """ This function is an alias of get_edge_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12533,7 +12533,7 @@ class Sda(object):
                                         **request_parameters):
         """ This function is an alias of get_provisioned_wired_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12557,8 +12557,8 @@ class Sda(object):
                                             **request_parameters):
         """ This function is an alias of get_port_assignment_for_user_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
-            interface_name(basestring): interfaceName query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
+            interface_name(str): interfaceName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12582,7 +12582,7 @@ class Sda(object):
                                               **request_parameters):
         """ This function is an alias of delete_default_authentication_profile_v1 .
         Args:
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter.
+            site_name_hierarchy(str): siteNameHierarchy query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12674,7 +12674,7 @@ class Sda(object):
                               **request_parameters):
         """ This function is an alias of deletes_border_device_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12704,14 +12704,14 @@ class Sda(object):
                                        **request_parameters):
         """ This function is an alias of get_layer2_virtual_networks_v1 .
         Args:
-            id(basestring): id query parameter. ID of the layer 2 virtual network. .
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the layer 2 virtual network is
+            id(str): id query parameter. ID of the layer 2 virtual network. .
+            fabric_id(str): fabricId query parameter. ID of the fabric the layer 2 virtual network is
                 assigned to. .
-            vlan_name(basestring): vlanName query parameter. The vlan name of the layer 2 virtual network. .
+            vlan_name(str): vlanName query parameter. The vlan name of the layer 2 virtual network. .
             vlan_id(int): vlanId query parameter. The vlan ID of the layer 2 virtual network. .
-            traffic_type(basestring): trafficType query parameter. The traffic type of the layer 2 virtual network.
+            traffic_type(str): trafficType query parameter. The traffic type of the layer 2 virtual network.
                 .
-            associated_layer3_virtual_network_name(basestring): associatedLayer3VirtualNetworkName query parameter.
+            associated_layer3_virtual_network_name(str): associatedLayer3VirtualNetworkName query parameter.
                 Name of the associated layer 3 virtual network. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
@@ -12746,7 +12746,7 @@ class Sda(object):
                                  **request_parameters):
         """ This function is an alias of get_extranet_policies_v1 .
         Args:
-            extranet_policy_name(basestring): extranetPolicyName query parameter. Name of the extranet policy. .
+            extranet_policy_name(str): extranetPolicyName query parameter. Name of the extranet policy. .
             offset(int): offset query parameter. Starting record for pagination. .
             limit(int): limit query parameter. Maximum number of records to return. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -12774,8 +12774,8 @@ class Sda(object):
                                              **request_parameters):
         """ This function is an alias of get_port_assignment_for_access_point_v1 .
         Args:
-            device_management_ip_address(basestring): deviceManagementIpAddress query parameter.
-            interface_name(basestring): interfaceName query parameter.
+            device_management_ip_address(str): deviceManagementIpAddress query parameter.
+            interface_name(str): interfaceName query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -12802,10 +12802,10 @@ class Sda(object):
                                 **request_parameters):
         """ This function is an alias of delete_port_channels_v1 .
         Args:
-            fabric_id(basestring): fabricId query parameter. ID of the fabric the device is assigned to. .
-            network_device_id(basestring): networkDeviceId query parameter. ID of the network device. .
-            port_channel_name(basestring): portChannelName query parameter. Name of the port channel. .
-            connected_device_type(basestring): connectedDeviceType query parameter. Connected device type of the
+            fabric_id(str): fabricId query parameter. ID of the fabric the device is assigned to. .
+            network_device_id(str): networkDeviceId query parameter. ID of the network device. .
+            port_channel_name(str): portChannelName query parameter. Name of the port channel. .
+            connected_device_type(str): connectedDeviceType query parameter. Connected device type of the
                 port channel. The allowed values are [TRUNK, EXTENDED_NODE]. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

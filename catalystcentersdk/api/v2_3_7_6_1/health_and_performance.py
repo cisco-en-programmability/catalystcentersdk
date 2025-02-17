@@ -840,8 +840,8 @@ class HealthAndPerformance(object):
                            **request_parameters):
         """ This function is an alias of system_performance_v1 .
         Args:
-            kpi(basestring): kpi query parameter. Valid values: cpu,memory,network .
-            function(basestring): function query parameter. Valid values: sum,average,max .
+            kpi(str): kpi query parameter. Valid values: cpu,memory,network .
+            function(str): function query parameter. Valid values: sum,average,max .
             start_time(int): startTime query parameter. This is the epoch start time in milliseconds from which
                 performance indicator need to be fetched .
             end_time(int): endTime query parameter. This is the epoch end time in milliseconds upto which
@@ -873,7 +873,7 @@ class HealthAndPerformance(object):
                                       **request_parameters):
         """ This function is an alias of system_performance_historical_v1 .
         Args:
-            kpi(basestring): kpi query parameter. Fetch historical data for this kpi. Valid values:
+            kpi(str): kpi query parameter. Fetch historical data for this kpi. Valid values:
                 cpu,memory,network .
             start_time(int): startTime query parameter. This is the epoch start time in milliseconds from which
                 performance indicator need to be fetched .
@@ -908,9 +908,9 @@ class HealthAndPerformance(object):
         """ This function is an alias of system_health_v1 .
         Args:
             summary(bool): summary query parameter. Fetch the latest high severity event .
-            domain(basestring): domain query parameter. Fetch system events with this domain. Possible values of
+            domain(str): domain query parameter. Fetch system events with this domain. Possible values of
                 domain are listed here : /dna/platform/app/consumer-portal/developer-toolkit/events .
-            subdomain(basestring): subdomain query parameter. Fetch system events with this subdomain. Possible
+            subdomain(str): subdomain query parameter. Fetch system events with this subdomain. Possible
                 values of subdomain are listed here : /dna/platform/app/consumer-portal/developer-
                 toolkit/events .
             limit(int): limit query parameter.
@@ -941,7 +941,7 @@ class HealthAndPerformance(object):
                                          **request_parameters):
         """ This function is an alias of deletes_a_validation_workflow_v1 .
         Args:
-            id(basestring): id path parameter. Workflow id .
+            id(str): id path parameter. Workflow id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -964,7 +964,7 @@ class HealthAndPerformance(object):
                                                              **request_parameters):
         """ This function is an alias of retrieves_validation_details_for_a_validation_set_v1 .
         Args:
-            id(basestring): id path parameter. Validation set id .
+            id(str): id path parameter. Validation set id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -993,7 +993,7 @@ class HealthAndPerformance(object):
                 since UNIX epoch). .
             end_time(int): endTime query parameter. Workflows started before the given time (as milliseconds since
                 UNIX epoch). .
-            run_status(basestring): runStatus query parameter. Execution status of the workflow. If the workflow is
+            run_status(str): runStatus query parameter. Execution status of the workflow. If the workflow is
                 successfully submitted, runStatus is `PENDING`. If the workflow execution has started,
                 runStatus is `IN_PROGRESS`. If the workflow executed is completed with all validations
                 executed, runStatus is `COMPLETED`. If the workflow execution fails while running
@@ -1030,7 +1030,7 @@ class HealthAndPerformance(object):
                 since UNIX epoch). .
             end_time(int): endTime query parameter. Workflows started before the given time (as milliseconds since
                 UNIX epoch). .
-            run_status(basestring): runStatus query parameter. Execution status of the workflow. If the workflow is
+            run_status(str): runStatus query parameter. Execution status of the workflow. If the workflow is
                 successfully submitted, runStatus is `PENDING`. If the workflow execution has started,
                 runStatus is `IN_PROGRESS`. If the workflow executed is completed with all validations
                 executed, runStatus is `COMPLETED`. If the workflow execution fails while running
@@ -1065,9 +1065,9 @@ class HealthAndPerformance(object):
                             **request_parameters):
         """ This function is an alias of system_health_count_v1 .
         Args:
-            domain(basestring): domain query parameter. Fetch system events with this domain. Possible values of
+            domain(str): domain query parameter. Fetch system events with this domain. Possible values of
                 domain are listed here : /dna/platform/app/consumer-portal/developer-toolkit/events .
-            subdomain(basestring): subdomain query parameter. Fetch system events with this subdomain. Possible
+            subdomain(str): subdomain query parameter. Fetch system events with this subdomain. Possible
                 values of subdomain are listed here : /dna/platform/app/consumer-portal/developer-
                 toolkit/events .
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1093,7 +1093,7 @@ class HealthAndPerformance(object):
                                                  **request_parameters):
         """ This function is an alias of retrieves_validation_workflow_details_v1 .
         Args:
-            id(basestring): id path parameter. Workflow id .
+            id(str): id path parameter. Workflow id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1153,7 +1153,7 @@ class HealthAndPerformance(object):
                                              **request_parameters):
         """ This function is an alias of retrieves_all_the_validation_sets_v1 .
         Args:
-            view(basestring): view query parameter. When the query parameter `view=DETAIL` is passed, all validation
+            view(str): view query parameter. When the query parameter `view=DETAIL` is passed, all validation
                 sets and associated validations will be returned. When the query parameter
                 `view=DEFAULT` is passed, only validation sets metadata will be returned. .
             headers(dict): Dictionary of HTTP Headers to send with the Request

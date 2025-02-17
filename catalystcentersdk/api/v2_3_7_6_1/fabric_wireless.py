@@ -775,7 +775,7 @@ class FabricWireless(object):
                                            **request_parameters):
         """ This function is an alias of remove_w_l_c_from_fabric_domain_v1 .
         Args:
-            device_ipaddress(basestring): deviceIPAddress query parameter. Device Management IP Address .
+            device_ipaddress(str): deviceIPAddress query parameter. Device Management IP Address .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -940,7 +940,7 @@ class FabricWireless(object):
                                                        **request_parameters):
         """ This function is an alias of add_update_or_remove_ssid_mapping_to_a_vlan_v1 .
         Args:
-            fabric_id(basestring): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
+            fabric_id(str): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
                 Fabric Site .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -970,7 +970,7 @@ class FabricWireless(object):
                                                                        **request_parameters):
         """ This function is an alias of returns_the_count_of_vlans_mapped_to_ssids_in_a_fabric_site_v1 .
         Args:
-            fabric_id(basestring): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
+            fabric_id(str): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
                 Fabric Site .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1015,8 +1015,8 @@ class FabricWireless(object):
                                        **request_parameters):
         """ This function is an alias of get_ssid_to_ip_pool_mapping_v1 .
         Args:
-            vlan_name(basestring): vlanName query parameter. VLAN Name .
-            site_name_hierarchy(basestring): siteNameHierarchy query parameter. Site Name Heirarchy .
+            vlan_name(str): vlanName query parameter. VLAN Name .
+            site_name_hierarchy(str): siteNameHierarchy query parameter. Site Name Heirarchy .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1042,7 +1042,7 @@ class FabricWireless(object):
                                                                                 **request_parameters):
         """ This function is an alias of retrieve_the_vlans_and_ssids_mapped_to_the_vlan_within_a_fabric_site_v1 .
         Args:
-            fabric_id(basestring): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
+            fabric_id(str): fabricId path parameter. The 'fabricId' represents the Fabric ID of a particular
                 Fabric Site .
             limit(int): limit query parameter. The number of records to show for this page. .
             offset(int): offset query parameter. The first record to show for this page; the first record is

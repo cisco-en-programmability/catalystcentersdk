@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cisco Catalyst Center GetAdvisoriesListV1 data model.
+"""Cisco Catalyst Center UpdatesTheCiscoIMCConfigurationForACatalystCenterNodeV1 data model.
 
 Copyright (c) 2024 Cisco Systems.
 
@@ -32,59 +32,25 @@ import fastjsonschema
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorE6317A46C835F0881F08071959Bb026(object):
-    """GetAdvisoriesListV1 request schema definition."""
+class JSONSchemaValidatorF2562A2D8E5Ec287738032961762Ed(object):
+    """UpdatesTheCiscoIMCConfigurationForACatalystCenterNodeV1 request
+    schema definition."""
     def __init__(self):
-        super(JSONSchemaValidatorE6317A46C835F0881F08071959Bb026, self).__init__()
+        super(JSONSchemaValidatorF2562A2D8E5Ec287738032961762Ed, self).__init__()
         self._validator = fastjsonschema.compile(json.loads(
             '''{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
-                "items": {
                 "properties": {
-                "advisoryId": {
+                "taskId": {
                 "type": "string"
                 },
-                "cves": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "defaultConfigMatchPattern": {
-                "type": "string"
-                },
-                "defaultDetectionType": {
-                "type": "string"
-                },
-                "detectionType": {
-                "type": "string"
-                },
-                "deviceCount": {
-                "type": "integer"
-                },
-                "fixedVersions": {
-                "properties": {
-                "version": {
+                "url": {
                 "type": "string"
                 }
                 },
                 "type": "object"
-                },
-                "hiddenDeviceCount": {
-                "type": "number"
-                },
-                "publicationUrl": {
-                "type": "string"
-                },
-                "sir": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
                 },
                 "version": {
                 "type": "string"

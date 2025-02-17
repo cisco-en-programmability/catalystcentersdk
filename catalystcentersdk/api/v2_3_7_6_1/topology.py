@@ -431,7 +431,7 @@ class Topology(object):
                                  **request_parameters):
         """ This function is an alias of get_physical_topology_v1 .
         Args:
-            node_type(basestring): nodeType query parameter.
+            node_type(str): nodeType query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -454,7 +454,7 @@ class Topology(object):
                                 **request_parameters):
         """ This function is an alias of get_topology_details_v1 .
         Args:
-            vlan_id(basestring): vlanID path parameter. Vlan Name for e.g Vlan1, Vlan23 etc .
+            vlan_id(str): vlanID path parameter. Vlan Name for e.g Vlan1, Vlan23 etc .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -477,7 +477,7 @@ class Topology(object):
                                    **request_parameters):
         """ This function is an alias of get_l3_topology_details_v1 .
         Args:
-            topology_type(basestring): topologyType path parameter. Type of topology(OSPF,ISIS,etc) .
+            topology_type(str): topologyType path parameter. Type of topology(OSPF,ISIS,etc) .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides

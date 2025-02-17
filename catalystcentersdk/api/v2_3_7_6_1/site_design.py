@@ -3008,7 +3008,7 @@ class SiteDesign(object):
                            **request_parameters):
         """ This function is an alias of get_sites_count_v1 .
         Args:
-            name(basestring): name query parameter. Site name. .
+            name(str): name query parameter. Site name. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3031,7 +3031,7 @@ class SiteDesign(object):
                                                                                  **request_parameters):
         """ This function is an alias of retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_v1 .
         Args:
-            site_id(basestring): siteId path parameter. The `id` of the site, retrievable from
+            site_id(str): siteId path parameter. The `id` of the site, retrievable from
                 `/dna/intent/api/v1/sites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3062,10 +3062,10 @@ class SiteDesign(object):
             offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
             limit(int): limit query parameter. The number of records to show for this page. .
-            sort_by(basestring): sortBy query parameter. A property within the response to sort by. .
-            order(basestring): order query parameter. Whether ascending or descending order should be used to sort
+            sort_by(str): sortBy query parameter. A property within the response to sort by. .
+            order(str): order query parameter. Whether ascending or descending order should be used to sort
                 the response. .
-            type(basestring): type query parameter. Filter responses to only include profiles of a given type .
+            type(str): type query parameter. Filter responses to only include profiles of a given type .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3198,7 +3198,7 @@ class SiteDesign(object):
         Args:
             name(string): Site Design's Area name .
             parentId(string): Site Design's Parent Id .
-            id(basestring): id path parameter. Area Id .
+            id(str): id path parameter. Area Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -3231,7 +3231,7 @@ class SiteDesign(object):
                                **request_parameters):
         """ This function is an alias of uploads_floor_image_v2 .
         Args:
-            id(basestring): id path parameter. Floor Id .
+            id(str): id path parameter. Floor Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request.
             multipart_fields(dict,list): form data values.
             create_callback(function): function that creates a function that
@@ -3292,7 +3292,7 @@ class SiteDesign(object):
                                                                                                 **request_parameters):
         """ This function is an alias of retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1 .
         Args:
-            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+            profile_id(str): profileId path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3335,7 +3335,7 @@ class SiteDesign(object):
                 'Cubes And Walled Offices', 'Indoor High Ceiling' and 'Drywall Office Only'.
             unitsOfMeasure(string): Site Design's Units Of Measure. Available values are 'feet' and 'meters'.
             width(number): Site Design's Floor width. Example : 100.5 .
-            id(basestring): id path parameter. Floor Id .
+            id(str): id path parameter. Floor Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -3372,7 +3372,7 @@ class SiteDesign(object):
                                                **request_parameters):
         """ This function is an alias of deletes_a_network_profile_for_sites_v1 .
         Args:
-            id(basestring): id path parameter. The `id` of the network profile, retrievable from `GET
+            id(str): id path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3396,7 +3396,7 @@ class SiteDesign(object):
                                             **request_parameters):
         """ This function is an alias of get_site_assigned_network_device_v1 .
         Args:
-            id(basestring): id path parameter. Network Device Id. .
+            id(str): id path parameter. Network Device Id. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3423,7 +3423,7 @@ class SiteDesign(object):
         """ This function is an alias of assign_a_network_profile_for_sites_to_the_given_site_v1 .
         Args:
             id(string): Site Design's Id.
-            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+            profile_id(str): profileId path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3501,7 +3501,7 @@ class SiteDesign(object):
                            **request_parameters):
         """ This function is an alias of deletes_an_area_v1 .
         Args:
-            id(basestring): id path parameter. Area ID .
+            id(str): id path parameter. Area ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3524,7 +3524,7 @@ class SiteDesign(object):
                                                       **request_parameters):
         """ This function is an alias of retrieve_a_network_profile_for_sites_by_id_v1 .
         Args:
-            id(basestring): id path parameter. The `id` of the network profile, retrievable from `GET
+            id(str): id path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3549,8 +3549,8 @@ class SiteDesign(object):
                         **request_parameters):
         """ This function is an alias of gets_a_floor_v2 .
         Args:
-            id(basestring): id path parameter. Floor Id .
-            units_of_measure(basestring): _unitsOfMeasure query parameter. Floor units of measure .
+            id(str): id path parameter. Floor Id .
+            units_of_measure(str): _unitsOfMeasure query parameter. Floor units of measure .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3576,7 +3576,7 @@ class SiteDesign(object):
                                                                                                **request_parameters):
         """ This function is an alias of retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_v1 .
         Args:
-            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+            profile_id(str): profileId path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
             offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
@@ -3609,7 +3609,7 @@ class SiteDesign(object):
         """ This function is an alias of assign_a_network_profile_for_sites_to_a_list_of_sites_v1 .
         Args:
             type(object): Site Design's type.
-            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+            profile_id(str): profileId path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3655,7 +3655,7 @@ class SiteDesign(object):
             longitude(number): Site Design's Building Longitude. Example: -121.971063 .
             name(string): Site Design's Building name .
             parentId(string): Site Design's Parent Id .
-            id(basestring): id path parameter. Building Id .
+            id(str): id path parameter. Building Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -3690,7 +3690,7 @@ class SiteDesign(object):
                                                              **request_parameters):
         """ This function is an alias of retrieves_the_count_of_network_profiles_for_sites_v1 .
         Args:
-            type(basestring): type query parameter. Filter the response to only count profiles of a given type .
+            type(str): type query parameter. Filter the response to only count profiles of a given type .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3714,9 +3714,9 @@ class SiteDesign(object):
                                                                      **request_parameters):
         """ This function is an alias of unassigns_a_network_profile_for_sites_from_multiple_sites_v1 .
         Args:
-            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+            profile_id(str): profileId path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
-            site_id(basestring): siteId query parameter. The `id` of the site, retrievable from `GET
+            site_id(str): siteId query parameter. The `id` of the site, retrievable from `GET
                 /intent/api/v1/sites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3773,9 +3773,9 @@ class SiteDesign(object):
                                                              **request_parameters):
         """ This function is an alias of unassigns_a_network_profile_for_sites_from_a_site_v1 .
         Args:
-            profile_id(basestring): profileId path parameter. The `id` of the network profile, retrievable from `GET
+            profile_id(str): profileId path parameter. The `id` of the network profile, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites` .
-            id(basestring): id path parameter. The `id` of the site, retrievable from `GET
+            id(str): id path parameter. The `id` of the site, retrievable from `GET
                 /intent/api/v1/networkProfilesForSites/{id}/siteAssignments` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -3800,7 +3800,7 @@ class SiteDesign(object):
                         **request_parameters):
         """ This function is an alias of gets_an_area_v1 .
         Args:
-            id(basestring): id path parameter. Area Id .
+            id(str): id path parameter. Area Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3823,7 +3823,7 @@ class SiteDesign(object):
                               **request_parameters):
         """ This function is an alias of deletes_a_building_v2 .
         Args:
-            id(basestring): id path parameter. Building ID .
+            id(str): id path parameter. Building ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3866,7 +3866,7 @@ class SiteDesign(object):
                                                    **request_parameters):
         """ This function is an alias of get_site_assigned_network_devices_count_v1 .
         Args:
-            site_id(basestring): siteId query parameter. Site Id. It must be area Id or building Id or floor Id. .
+            site_id(str): siteId query parameter. Site Id. It must be area Id or building Id or floor Id. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3889,7 +3889,7 @@ class SiteDesign(object):
                            **request_parameters):
         """ This function is an alias of gets_a_building_v2 .
         Args:
-            id(basestring): id path parameter. Building Id .
+            id(str): id path parameter. Building Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3950,7 +3950,7 @@ class SiteDesign(object):
                                                                                         **request_parameters):
         """ This function is an alias of retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_v1 .
         Args:
-            site_id(basestring): siteId path parameter. The `id` of the site, retrievable from
+            site_id(str): siteId path parameter. The `id` of the site, retrievable from
                 `/dna/intent/api/v1/sites` .
             offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
@@ -4007,7 +4007,7 @@ class SiteDesign(object):
                            **request_parameters):
         """ This function is an alias of deletes_a_floor_v2 .
         Args:
-            id(basestring): id path parameter. Floor ID .
+            id(str): id path parameter. Floor ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4089,7 +4089,7 @@ class SiteDesign(object):
                                              **request_parameters):
         """ This function is an alias of get_site_assigned_network_devices_v1 .
         Args:
-            site_id(basestring): siteId query parameter. Site Id. It must be area Id or building Id or floor Id. .
+            site_id(str): siteId query parameter. Site Id. It must be area Id or building Id or floor Id. .
             offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
             limit(int): limit query parameter. The number of records to show for this page. .
@@ -4122,10 +4122,10 @@ class SiteDesign(object):
                      **request_parameters):
         """ This function is an alias of get_sites_v1 .
         Args:
-            name(basestring): name query parameter. Site name. .
-            name_hierarchy(basestring): nameHierarchy query parameter. Site name hierarchy. .
-            type(basestring): type query parameter. Site type. .
-            units_of_measure(basestring): _unitsOfMeasure query parameter. Floor units of measure .
+            name(str): name query parameter. Site name. .
+            name_hierarchy(str): nameHierarchy query parameter. Site name hierarchy. .
+            type(str): type query parameter. Site type. .
+            units_of_measure(str): _unitsOfMeasure query parameter. Floor units of measure .
             offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
             limit(int): limit query parameter. The number of records to show for this page. .
@@ -4157,8 +4157,8 @@ class SiteDesign(object):
                      **request_parameters):
         """ This function is an alias of associate_v1 .
         Args:
-            network_profile_id(basestring): networkProfileId path parameter. Network-Profile Id to be associated .
-            site_id(basestring): siteId path parameter. Site Id to be associated .
+            network_profile_id(str): networkProfileId path parameter. Network-Profile Id to be associated .
+            site_id(str): siteId path parameter. Site Id to be associated .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4183,8 +4183,8 @@ class SiteDesign(object):
                         **request_parameters):
         """ This function is an alias of disassociate_v1 .
         Args:
-            network_profile_id(basestring): networkProfileId path parameter. Network-Profile Id to be associated .
-            site_id(basestring): siteId path parameter. Site Id to be associated .
+            network_profile_id(str): networkProfileId path parameter. Network-Profile Id to be associated .
+            site_id(str): siteId path parameter. Site Id to be associated .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides

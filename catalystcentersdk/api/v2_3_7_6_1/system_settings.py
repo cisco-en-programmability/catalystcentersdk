@@ -1258,7 +1258,7 @@ class SystemSettings(object):
                                                                         **request_parameters):
         """ This function is an alias of delete_authentication_and_policy_server_access_configuration_v1 .
         Args:
-            id(basestring): id path parameter. Authentication and Policy Server Identifier. Use 'Get Authentication
+            id(str): id path parameter. Authentication and Policy Server Identifier. Use 'Get Authentication
                 and Policy Servers' intent API to find the identifier. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1509,7 +1509,7 @@ class SystemSettings(object):
         Args:
             isCertAcceptedByUser(boolean): System Settings's Value true for accept, false for deny. Remove this
                 field and send empty request payload ( {} ) to retry the failed integration .
-            id(basestring): id path parameter. Cisco ISE Server Identifier. Use 'Get Authentication and Policy
+            id(str): id path parameter. Cisco ISE Server Identifier. Use 'Get Authentication and Policy
                 Servers' intent API to find the identifier. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1628,7 +1628,7 @@ class SystemSettings(object):
                 authentication and policy server. The range is from 2 to 20 .
             useDnacCertForPxgrid(boolean): System Settings's Value true to use DNAC certificate for Pxgrid. Default
                 value is false .
-            id(basestring): id path parameter. Authentication and Policy Server Identifier. Use 'Get Authentication
+            id(str): id path parameter. Authentication and Policy Server Identifier. Use 'Get Authentication
                 and Policy Servers' intent API to find the identifier. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1726,9 +1726,9 @@ class SystemSettings(object):
         """ This function is an alias of get_authentication_and_policy_servers_v1 .
         Args:
             is_ise_enabled(bool): isIseEnabled query parameter. Valid values are : true, false .
-            state(basestring): state query parameter. Valid values are: ACTIVE, INACTIVE, RBAC_SUCCESS,
+            state(str): state query parameter. Valid values are: ACTIVE, INACTIVE, RBAC_SUCCESS,
                 RBAC_FAILURE, DELETED, FAILED, INPROGRESS .
-            role(basestring): role query parameter. Authentication and Policy Server Role (Example: primary,
+            role(str): role query parameter. Authentication and Policy Server Role (Example: primary,
                 secondary) .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

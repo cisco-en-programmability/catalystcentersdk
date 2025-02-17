@@ -3776,7 +3776,7 @@ class NetworkSettings(object):
         """ This function is an alias of set_image_distribution_settings_for_a_site_v1 .
         Args:
             imageDistribution(object): Network Settings's imageDistribution.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -3806,7 +3806,7 @@ class NetworkSettings(object):
                              **request_parameters):
         """ This function is an alias of delete_sp_profile_v1 .
         Args:
-            sp_profile_name(basestring): spProfileName path parameter. sp profile name .
+            sp_profile_name(str): spProfileName path parameter. sp profile name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3833,7 +3833,7 @@ class NetworkSettings(object):
         """ This function is an alias of set_dhcp_settings_for_a_site_v1 .
         Args:
             dhcp(object): Network Settings's dhcp.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -3864,7 +3864,7 @@ class NetworkSettings(object):
                                                      **request_parameters):
         """ This function is an alias of get_device_credential_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+            id(str): id path parameter. Site Id, retrievable from the `id` attribute in
                 `/dna/intent/api/v1/sites` .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
@@ -3894,7 +3894,7 @@ class NetworkSettings(object):
                                                 **request_parameters):
         """ This function is an alias of retrieve_d_h_c_p_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site
@@ -3922,7 +3922,7 @@ class NetworkSettings(object):
                                       **request_parameters):
         """ This function is an alias of release_reserve_ip_subpool_v1 .
         Args:
-            id(basestring): id path parameter. Id of reserve ip subpool to be deleted. .
+            id(str): id path parameter. Id of reserve ip subpool to be deleted. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3945,7 +3945,7 @@ class NetworkSettings(object):
                                     **request_parameters):
         """ This function is an alias of delete_device_credential_v1 .
         Args:
-            id(basestring): id path parameter. global credential id .
+            id(str): id path parameter. global credential id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4020,7 +4020,7 @@ class NetworkSettings(object):
                                                **request_parameters):
         """ This function is an alias of retrieve_banner_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site
@@ -4048,7 +4048,7 @@ class NetworkSettings(object):
                        **request_parameters):
         """ This function is an alias of get_network_v1 .
         Args:
-            site_id(basestring): siteId query parameter. Site id to get the network settings associated with the
+            site_id(str): siteId query parameter. Site id to get the network settings associated with the
                 site. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4078,7 +4078,7 @@ class NetworkSettings(object):
         Args:
             aaaClient(object): Network Settings's aaaClient.
             aaaNetwork(object): Network Settings's aaaNetwork.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -4110,7 +4110,7 @@ class NetworkSettings(object):
                                                            **request_parameters):
         """ This function is an alias of retrieve_image_distribution_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site
@@ -4173,7 +4173,7 @@ class NetworkSettings(object):
         """ This function is an alias of set_time_zone_for_a_site_v1 .
         Args:
             timeZone(object): Network Settings's timeZone.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -4282,7 +4282,7 @@ class NetworkSettings(object):
             snmpV2ReadId(string): Network Settings's Snmp V2 Read Id.
             snmpV2WriteId(string): Network Settings's Snmp V2 Write Id.
             snmpV3Id(string): Network Settings's Snmp V3 Id.
-            site_id(basestring): siteId path parameter. site id to assign credential. .
+            site_id(str): siteId path parameter. site id to assign credential. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -4321,7 +4321,7 @@ class NetworkSettings(object):
         """ This function is an alias of create_network_v1 .
         Args:
             settings(object): Network Settings's settings.
-            site_id(basestring): siteId path parameter. Site id to which site details to associate with the network
+            site_id(str): siteId path parameter. Site id to which site details to associate with the network
                 settings. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4366,7 +4366,7 @@ class NetworkSettings(object):
             snmpv2cReadCredentialsId(object): Network Settings's snmpv2cReadCredentialsId.
             snmpv2cWriteCredentialsId(object): Network Settings's snmpv2cWriteCredentialsId.
             snmpv3CredentialsId(object): Network Settings's snmpv3CredentialsId.
-            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+            id(str): id path parameter. Site Id, retrievable from the `id` attribute in
                 `/dna/intent/api/v1/sites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4461,7 +4461,7 @@ class NetworkSettings(object):
                                                   **request_parameters):
         """ This function is an alias of retrieve_time_zone_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site
@@ -4521,7 +4521,7 @@ class NetworkSettings(object):
                                               **request_parameters):
         """ This function is an alias of retrieve_d_n_s_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site
@@ -4553,7 +4553,7 @@ class NetworkSettings(object):
         """ This function is an alias of set_n_t_p_settings_for_a_site_v1 .
         Args:
             ntp(object): Network Settings's ntp.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -4583,7 +4583,7 @@ class NetworkSettings(object):
                                          **request_parameters):
         """ This function is an alias of get_device_credential_details_v1 .
         Args:
-            site_id(basestring): siteId query parameter. Site id to retrieve the credential details associated with
+            site_id(str): siteId query parameter. Site id to retrieve the credential details associated with
                 the site. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4608,7 +4608,7 @@ class NetworkSettings(object):
                                                   **request_parameters):
         """ This function is an alias of retrieve_telemetry_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+            id(str): id path parameter. Site Id, retrievable from the `id` attribute in
                 `/dna/intent/api/v1/sites` .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
@@ -4638,7 +4638,7 @@ class NetworkSettings(object):
                                               **request_parameters):
         """ This function is an alias of retrieve_aaa_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site
@@ -4666,7 +4666,7 @@ class NetworkSettings(object):
                                  **request_parameters):
         """ This function is an alias of delete_global_ip_pool_v1 .
         Args:
-            id(basestring): id path parameter. global pool id .
+            id(str): id path parameter. global pool id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4701,7 +4701,7 @@ class NetworkSettings(object):
             syslogs(object): Network Settings's syslogs.
             wiredDataCollection(object): Network Settings's wiredDataCollection.
             wirelessTelemetry(object): Network Settings's wirelessTelemetry.
-            id(basestring): id path parameter. Site Id, retrievable from the `id` attribute in
+            id(str): id path parameter. Site Id, retrievable from the `id` attribute in
                 `/dna/intent/api/v1/sites` .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4741,18 +4741,18 @@ class NetworkSettings(object):
                                   **request_parameters):
         """ This function is an alias of get_reserve_ip_subpool_v1 .
         Args:
-            site_id(basestring): siteId query parameter. site id of site from which to retrieve associated reserve
+            site_id(str): siteId query parameter. site id of site from which to retrieve associated reserve
                 pools. Either siteId (per site queries) or ignoreInheritedGroups must be used. They can
                 also be used together.  .
             offset(int): offset query parameter. offset/starting row. Indexed from 1. .
             limit(int): limit query parameter. Number of reserve pools to be retrieved. Default is 25 if not
                 specified. Maximum allowed limit is 500. .
-            ignore_inherited_groups(basestring): ignoreInheritedGroups query parameter. Ignores pools inherited from
+            ignore_inherited_groups(str): ignoreInheritedGroups query parameter. Ignores pools inherited from
                 parent site. Either siteId or ignoreInheritedGroups must be passed. They can also be
                 used together. .
-            pool_usage(basestring): poolUsage query parameter. Can take values empty, partially-full or empty-
+            pool_usage(str): poolUsage query parameter. Can take values empty, partially-full or empty-
                 partially-full .
-            group_name(basestring): groupName query parameter. Name of the group .
+            group_name(str): groupName query parameter. Name of the group .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4836,7 +4836,7 @@ class NetworkSettings(object):
             slaacSupport(boolean): Network Settings's Slaac Support.
             type(string): Network Settings's Type of the reserve ip sub pool . Available values are 'Generic',
                 'LAN', 'WAN', 'management' and 'service'.
-            site_id(basestring): siteId path parameter. Site id to reserve the ip sub pool. .
+            site_id(str): siteId path parameter. Site id to reserve the ip sub pool. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -4889,7 +4889,7 @@ class NetworkSettings(object):
         """ This function is an alias of set_d_n_s_settings_for_a_site_v1 .
         Args:
             dns(object): Network Settings's dns.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -4959,8 +4959,8 @@ class NetworkSettings(object):
                 required when ipv6prefix value is false. .
             name(string): Network Settings's Name of the reserve ip sub pool .
             slaacSupport(boolean): Network Settings's Slaac Support.
-            site_id(basestring): siteId path parameter. Site id of site to update sub pool. .
-            id(basestring): id query parameter. Id of subpool group .
+            site_id(str): siteId path parameter. Site id of site to update sub pool. .
+            id(str): id query parameter. Id of subpool group .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -5008,7 +5008,7 @@ class NetworkSettings(object):
         """ This function is an alias of update_network_v1 .
         Args:
             settings(object): Network Settings's settings.
-            site_id(basestring): siteId path parameter. Site id to update the network settings which is associated
+            site_id(str): siteId path parameter. Site id to update the network settings which is associated
                 with the site .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -5043,7 +5043,7 @@ class NetworkSettings(object):
         """ This function is an alias of set_banner_settings_for_a_site_v1 .
         Args:
             banner(object): Network Settings's banner.
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
@@ -5073,7 +5073,7 @@ class NetworkSettings(object):
                                                        **request_parameters):
         """ This function is an alias of get_network_devices_credentials_sync_status_v1 .
         Args:
-            id(basestring): id path parameter. Site Id. .
+            id(str): id path parameter. Site Id. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -5097,7 +5097,7 @@ class NetworkSettings(object):
                                               **request_parameters):
         """ This function is an alias of retrieve_n_t_p_settings_for_a_site_v1 .
         Args:
-            id(basestring): id path parameter. Site Id .
+            id(str): id path parameter. Site Id .
             inherited(bool): _inherited query parameter. Include settings explicitly set for this site and settings
                 inherited from sites higher in the site hierarchy; when `false`, `null` values indicate
                 that the site inherits that setting from the parent site or a site higher in the site

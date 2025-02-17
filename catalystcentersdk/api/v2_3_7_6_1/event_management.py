@@ -3012,6 +3012,7 @@ class EventManagement(object):
                                       url=None,
                                       webhookId=None,
                                       payload=None,
+                                      customHeaders=None,
                                       active_validation=True,
                                       **request_parameters):
         """Create Webhook Destination .
@@ -3025,7 +3026,7 @@ class EventManagement(object):
             trustCert(boolean): Event Management's Trust Cert.
             url(string): Event Management's Url.
             webhookId(string): Event Management's Required only for update webhook configuration .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
+            customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
                 body of the Request.
@@ -3041,18 +3042,18 @@ class EventManagement(object):
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
-            ApiError: If the Catalyst Center cloud returns an error.
+            ApiError: If the DNA Center cloud returns an error.
         Documentation Link:
             https://developer.cisco.com/docs/dna-center/#!create-webhook-destination
         """
-        check_type(headers, dict)
+        check_type(customHeaders, dict)
         check_type(payload, dict)
-        if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
+        if customHeaders is not None:
+            if 'Content-Type' in customHeaders:
+                check_type(customHeaders.get('Content-Type'),
                            str, may_be_none=False)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
+            if 'X-Auth-Token' in customHeaders:
+                check_type(customHeaders.get('X-Auth-Token'),
                            str, may_be_none=False)
 
         _params = {
@@ -3088,8 +3089,8 @@ class EventManagement(object):
 
         with_custom_headers = False
         _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
+        if customHeaders:
+            _headers.update(dict_of_str(customHeaders))
             with_custom_headers = True
 
         e_url = ('/dna/intent/api/v1/event/webhook')
@@ -3114,6 +3115,7 @@ class EventManagement(object):
                                       url=None,
                                       webhookId=None,
                                       payload=None,
+                                      customHeaders=None,
                                       active_validation=True,
                                       **request_parameters):
         """Update Webhook Destination .
@@ -3127,7 +3129,7 @@ class EventManagement(object):
             trustCert(boolean): Event Management's Trust Cert.
             url(string): Event Management's Url.
             webhookId(string): Event Management's Required only for update webhook configuration .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
+            customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
                 body of the Request.
@@ -3143,15 +3145,15 @@ class EventManagement(object):
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
-            ApiError: If the Catalyst Center cloud returns an error.
+            ApiError: If the DNA Center cloud returns an error.
         Documentation Link:
             https://developer.cisco.com/docs/dna-center/#!update-webhook-destination
         """
-        check_type(headers, dict)
+        check_type(customHeaders, dict)
         check_type(payload, dict)
-        if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
+        if customHeaders is not None:
+            if 'X-Auth-Token' in customHeaders:
+                check_type(customHeaders.get('X-Auth-Token'),
                            str, may_be_none=False)
 
         _params = {
@@ -3187,8 +3189,8 @@ class EventManagement(object):
 
         with_custom_headers = False
         _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
+        if customHeaders:
+            _headers.update(dict_of_str(customHeaders))
             with_custom_headers = True
 
         e_url = ('/dna/intent/api/v1/event/webhook')
@@ -3209,7 +3211,7 @@ class EventManagement(object):
                                    order=None,
                                    sort_by=None,
                                    webhook_ids=None,
-                                   headers=None,
+                                   customHeaders=None,
                                    **request_parameters):
         """Get Webhook Destination .
 
@@ -3221,7 +3223,7 @@ class EventManagement(object):
                 default value 10 .
             sort_by(str): sortBy query parameter. SortBy field name .
             order(str): order query parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
+            customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
@@ -3233,19 +3235,19 @@ class EventManagement(object):
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
-            ApiError: If the Catalyst Center cloud returns an error.
+            ApiError: If the DNA Center cloud returns an error.
         Documentation Link:
             https://developer.cisco.com/docs/dna-center/#!get-webhook-destination
         """
-        check_type(headers, dict)
+        check_type(customHeaders, dict)
         check_type(webhook_ids, str)
         check_type(offset, int)
         check_type(limit, int)
         check_type(sort_by, str)
         check_type(order, str)
-        if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
+        if customHeaders is not None:
+            if 'X-Auth-Token' in customHeaders:
+                check_type(customHeaders.get('X-Auth-Token'),
                            str, may_be_none=False)
 
         _params = {
@@ -3268,8 +3270,8 @@ class EventManagement(object):
 
         with_custom_headers = False
         _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
+        if customHeaders:
+            _headers.update(dict_of_str(customHeaders))
             with_custom_headers = True
 
         e_url = ('/dna/intent/api/v1/event/webhook')
@@ -3638,14 +3640,14 @@ class EventManagement(object):
                                    **request_parameters):
         """ This function is an alias of get_event_subscriptions_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+            event_ids(str): eventIds query parameter. List of subscriptions related to the respective
                 eventIds .
             offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
                 default value 0 .
             limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
                 value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3797,14 +3799,14 @@ class EventManagement(object):
                                                  **request_parameters):
         """ This function is an alias of get_rest_webhook_subscription_details_v1 .
         Args:
-            name(basestring): name query parameter. Name of the specific configuration .
-            instance_id(basestring): instanceId query parameter. Instance Id of the specific configuration .
+            name(str): name query parameter. Name of the specific configuration .
+            instance_id(str): instanceId query parameter. Instance Id of the specific configuration .
             offset(int): offset query parameter. The number of Rest/Webhook Subscription detail's to offset in the
                 resultset whose default value 0 .
             limit(int): limit query parameter. The number of Rest/Webhook Subscription detail's to limit in the
                 resultset whose default value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3841,21 +3843,21 @@ class EventManagement(object):
                                                 **request_parameters):
         """ This function is an alias of get_rest_webhook_event_subscriptions_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+            event_ids(str): eventIds query parameter. List of subscriptions related to the respective
                 eventIds (Comma separated event ids) .
             offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
                 default value 0 .
             limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
                 value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
-            domain(basestring): domain query parameter. List of subscriptions related to the respective domain .
-            sub_domain(basestring): subDomain query parameter. List of subscriptions related to the respective sub-
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
+            domain(str): domain query parameter. List of subscriptions related to the respective domain .
+            sub_domain(str): subDomain query parameter. List of subscriptions related to the respective sub-
                 domain .
-            category(basestring): category query parameter. List of subscriptions related to the respective category
+            category(str): category query parameter. List of subscriptions related to the respective category
                 .
-            type(basestring): type query parameter. List of subscriptions related to the respective type .
-            name(basestring): name query parameter. List of subscriptions related to the respective name .
+            type(str): type query parameter. List of subscriptions related to the respective type .
+            name(str): name query parameter. List of subscriptions related to the respective name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -3887,7 +3889,7 @@ class EventManagement(object):
                                       **request_parameters):
         """ This function is an alias of delete_event_subscriptions_v1 .
         Args:
-            subscriptions(basestring): subscriptions query parameter. List of EventSubscriptionId's for removal .
+            subscriptions(str): subscriptions query parameter. List of EventSubscriptionId's for removal .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4035,6 +4037,25 @@ class EventManagement(object):
                     headers=headers,
                     **request_parameters
         )
+        # Alias Function
+    def eventartifact_count(self,
+                            headers=None,
+                            **request_parameters):
+        """ This function is an alias of event_artifact_count_v1 .
+        Args:
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of event_artifact_count_v1 .
+        """
+        return self.event_artifact_count_v1(
+                    headers=headers,
+                    **request_parameters
+        )
+
+
 
 
     # Alias Function
@@ -4048,13 +4069,13 @@ class EventManagement(object):
                                 **request_parameters):
         """ This function is an alias of get_snmp_destination_v1 .
         Args:
-            config_id(basestring): configId query parameter. List of SNMP configurations .
+            config_id(str): configId query parameter. List of SNMP configurations .
             offset(int): offset query parameter. The number of SNMP configuration's to offset in the resultset whose
                 default value 0 .
             limit(int): limit query parameter. The number of SNMP configuration's to limit in the resultset whose
                 default value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4109,7 +4130,7 @@ class EventManagement(object):
                                         **request_parameters):
         """ This function is an alias of count_of_event_subscriptions_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+            event_ids(str): eventIds query parameter. List of subscriptions related to the respective
                 eventIds .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4137,6 +4158,7 @@ class EventManagement(object):
                                       url=None,
                                       webhookId=None,
                                       payload=None,
+                                      customHeaders=None,
                                       active_validation=True,
                                       **request_parameters):
         """ This function is an alias of create_webhook_destination_v1 .
@@ -4149,7 +4171,7 @@ class EventManagement(object):
             trustCert(boolean): Event Management's Trust Cert.
             url(string): Event Management's Url.
             webhookId(string): Event Management's Required only for update webhook configuration .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
+            customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
                 body of the Request.
@@ -4171,6 +4193,7 @@ class EventManagement(object):
                     url=url,
                     webhookId=webhookId,
                     payload=payload,
+                    customHeaders=customHeaders,
                     active_validation=active_validation,
                     **request_parameters
         )
@@ -4188,14 +4211,14 @@ class EventManagement(object):
                                           **request_parameters):
         """ This function is an alias of get_email_subscription_details_v1 .
         Args:
-            name(basestring): name query parameter. Name of the specific configuration .
-            instance_id(basestring): instanceId query parameter. Instance Id of the specific configuration .
+            name(str): name query parameter. Name of the specific configuration .
+            instance_id(str): instanceId query parameter. Instance Id of the specific configuration .
             offset(int): offset query parameter. The number of Email Subscription detail's to offset in the
                 resultset whose default value 0 .
             limit(int): limit query parameter. The number of Email Subscription detail's to limit in the resultset
                 whose default value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4223,7 +4246,7 @@ class EventManagement(object):
                                      **request_parameters):
         """ This function is an alias of get_status_api_for_events_v1 .
         Args:
-            execution_id(basestring): executionId path parameter. Execution ID .
+            execution_id(str): executionId path parameter. Execution ID .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4251,14 +4274,14 @@ class EventManagement(object):
                       **request_parameters):
         """ This function is an alias of get_events_v1 .
         Args:
-            event_id(basestring): eventId query parameter. The registered EventId should be provided .
-            tags(basestring): tags query parameter. The registered Tags should be provided .
+            event_id(str): eventId query parameter. The registered EventId should be provided .
+            tags(str): tags query parameter. The registered Tags should be provided .
             offset(int): offset query parameter. The number of Registries to offset in the resultset whose default
                 value 0 .
             limit(int): limit query parameter. The number of Registries to limit in the resultset whose default
                 value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4489,6 +4512,7 @@ class EventManagement(object):
                                       url=None,
                                       webhookId=None,
                                       payload=None,
+                                      customHeaders=None,
                                       active_validation=True,
                                       **request_parameters):
         """ This function is an alias of update_webhook_destination_v1 .
@@ -4501,7 +4525,7 @@ class EventManagement(object):
             trustCert(boolean): Event Management's Trust Cert.
             url(string): Event Management's Url.
             webhookId(string): Event Management's Required only for update webhook configuration .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
+            customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(): A JSON serializable Python object to send in the
                 body of the Request.
@@ -4523,6 +4547,7 @@ class EventManagement(object):
                     url=url,
                     webhookId=webhookId,
                     payload=payload,
+                    customHeaders=customHeaders,
                     active_validation=active_validation,
                     **request_parameters
         )
@@ -4541,15 +4566,15 @@ class EventManagement(object):
                                   **request_parameters):
         """ This function is an alias of get_syslog_destination_v1 .
         Args:
-            config_id(basestring): configId query parameter. Config id of syslog server .
-            name(basestring): name query parameter. Name of syslog server .
-            protocol(basestring): protocol query parameter. Protocol of syslog server .
+            config_id(str): configId query parameter. Config id of syslog server .
+            name(str): name query parameter. Name of syslog server .
+            protocol(str): protocol query parameter. Protocol of syslog server .
             offset(int): offset query parameter. The number of syslog configuration's to offset in the resultset
                 whose default value 0 .
             limit(int): limit query parameter. The number of syslog configuration's to limit in the resultset whose
                 default value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4621,22 +4646,22 @@ class EventManagement(object):
                              **request_parameters):
         """ This function is an alias of get_notifications_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. The registered EventId should be provided .
+            event_ids(str): eventIds query parameter. The registered EventId should be provided .
             start_time(int): startTime query parameter. Start Time in milliseconds .
             end_time(int): endTime query parameter. End Time in milliseconds .
-            category(basestring): category query parameter.
-            type(basestring): type query parameter.
-            severity(basestring): severity query parameter.
-            domain(basestring): domain query parameter.
-            sub_domain(basestring): subDomain query parameter. Sub Domain .
-            source(basestring): source query parameter.
+            category(str): category query parameter.
+            type(str): type query parameter.
+            severity(str): severity query parameter.
+            domain(str): domain query parameter.
+            sub_domain(str): subDomain query parameter. Sub Domain .
+            source(str): source query parameter.
             offset(int): offset query parameter. Start Offset .
             limit(int): limit query parameter. # of records .
-            sort_by(basestring): sortBy query parameter. Sort By column .
-            order(basestring): order query parameter. Ascending/Descending order [asc/desc] .
-            tags(basestring): tags query parameter.
-            namespace(basestring): namespace query parameter.
-            site_id(basestring): siteId query parameter. Site Id .
+            sort_by(str): sortBy query parameter. Sort By column .
+            order(str): order query parameter. Ascending/Descending order [asc/desc] .
+            tags(str): tags query parameter.
+            namespace(str): namespace query parameter.
+            site_id(str): siteId query parameter. Site Id .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4679,14 +4704,14 @@ class EventManagement(object):
                                            **request_parameters):
         """ This function is an alias of get_syslog_subscription_details_v1 .
         Args:
-            name(basestring): name query parameter. Name of the specific configuration .
-            instance_id(basestring): instanceId query parameter. Instance Id of the specific configuration .
+            name(str): name query parameter. Name of the specific configuration .
+            instance_id(str): instanceId query parameter. Instance Id of the specific configuration .
             offset(int): offset query parameter. The number of Syslog Subscription detail's to offset in the
                 resultset whose default value 0 .
             limit(int): limit query parameter. The number of Syslog Subscription detail's to limit in the resultset
                 whose default value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4743,22 +4768,22 @@ class EventManagement(object):
                                          **request_parameters):
         """ This function is an alias of get_email_event_subscriptions_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. List of email subscriptions related to the respective
+            event_ids(str): eventIds query parameter. List of email subscriptions related to the respective
                 eventIds (Comma separated event ids) .
             offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
                 default value 0 .
             limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
                 value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
-            domain(basestring): domain query parameter. List of email subscriptions related to the respective domain
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
+            domain(str): domain query parameter. List of email subscriptions related to the respective domain
                 .
-            sub_domain(basestring): subDomain query parameter. List of email subscriptions related to the respective
+            sub_domain(str): subDomain query parameter. List of email subscriptions related to the respective
                 sub-domain .
-            category(basestring): category query parameter. List of email subscriptions related to the respective
+            category(str): category query parameter. List of email subscriptions related to the respective
                 category .
-            type(basestring): type query parameter. List of email subscriptions related to the respective type .
-            name(basestring): name query parameter. List of email subscriptions related to the respective name .
+            type(str): type query parameter. List of email subscriptions related to the respective type .
+            name(str): name query parameter. List of email subscriptions related to the respective name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -4778,6 +4803,102 @@ class EventManagement(object):
                     sort_by=sort_by,
                     sub_domain=sub_domain,
                     type=type,
+                    headers=headers,
+                    **request_parameters
+        )
+
+    # Alias Function
+    def get_auditlog_records(self,
+                             category=None,
+                             context=None,
+                             description=None,
+                             device_id=None,
+                             domain=None,
+                             end_time=None,
+                             event_hierarchy=None,
+                             event_id=None,
+                             instance_id=None,
+                             is_system_events=None,
+                             limit=None,
+                             name=None,
+                             offset=None,
+                             order=None,
+                             parent_instance_id=None,
+                             severity=None,
+                             site_id=None,
+                             sort_by=None,
+                             source=None,
+                             start_time=None,
+                             sub_domain=None,
+                             user_id=None,
+                             headers=None,
+                             **request_parameters):
+        """ This function is an alias of get_audit_log_records_v1 .
+        Args:
+            parent_instance_id(str): parentInstanceId query parameter. Parent Audit Log record's instanceID.
+                .
+            instance_id(str): instanceId query parameter. InstanceID of the Audit Log. .
+            name(str): name query parameter. Audit Log notification event name. .
+            event_id(str): eventId query parameter. Audit Log notification's event ID.  .
+            category(str): category query parameter. Audit Log notification's event category. Supported
+                values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
+                QUERY, CONVERSATION .
+            severity(str): severity query parameter. Audit Log notification's event severity. Supported
+                values: 1, 2, 3, 4, 5. .
+            domain(str): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(str): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(str): source query parameter. Audit Log notification's event source. .
+            user_id(str): userId query parameter. Audit Log notification's event userId. .
+            context(str): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(str): eventHierarchy query parameter. Audit Log notification's event
+                eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
+                hierarchy separation is ".". .
+            site_id(str): siteId query parameter. Audit Log notification's siteId. .
+            device_id(str): deviceId query parameter. Audit Log notification's deviceId. .
+            is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
+                .
+            description(str): description query parameter. String full/partial search (Provided input string
+                is case insensitively matched for records). .
+            offset(int): offset query parameter. Position of a particular Audit Log record in the data.  .
+            limit(int): limit query parameter. Number of Audit Log records to be returned per page. .
+            start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
+                (when provided endTime is mandatory) .
+            end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
+                provided startTime is mandatory) .
+            sort_by(str): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
+                event notification header attributes. .
+            order(str): order query parameter. Order of the sorted Audit Log records. Default value is desc
+                by timestamp. Supported values: asc, desc. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of get_audit_log_records_v1 .
+        """
+        return self.get_audit_log_records_v1(
+                    category=category,
+                    context=context,
+                    description=description,
+                    device_id=device_id,
+                    domain=domain,
+                    end_time=end_time,
+                    event_hierarchy=event_hierarchy,
+                    event_id=event_id,
+                    instance_id=instance_id,
+                    is_system_events=is_system_events,
+                    limit=limit,
+                    name=name,
+                    offset=offset,
+                    order=order,
+                    parent_instance_id=parent_instance_id,
+                    severity=severity,
+                    site_id=site_id,
+                    sort_by=sort_by,
+                    source=source,
+                    start_time=start_time,
+                    sub_domain=sub_domain,
+                    user_id=user_id,
                     headers=headers,
                     **request_parameters
         )
@@ -4811,29 +4932,29 @@ class EventManagement(object):
                              **request_parameters):
         """ This function is an alias of get_audit_log_records_v1 .
         Args:
-            parent_instance_id(basestring): parentInstanceId query parameter. Parent Audit Log record's instanceID.
+            parent_instance_id(str): parentInstanceId query parameter. Parent Audit Log record's instanceID.
                 .
-            instance_id(basestring): instanceId query parameter. InstanceID of the Audit Log. .
-            name(basestring): name query parameter. Audit Log notification event name. .
-            event_id(basestring): eventId query parameter. Audit Log notification's event ID.  .
-            category(basestring): category query parameter. Audit Log notification's event category. Supported
+            instance_id(str): instanceId query parameter. InstanceID of the Audit Log. .
+            name(str): name query parameter. Audit Log notification event name. .
+            event_id(str): eventId query parameter. Audit Log notification's event ID.  .
+            category(str): category query parameter. Audit Log notification's event category. Supported
                 values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
                 QUERY, CONVERSATION .
-            severity(basestring): severity query parameter. Audit Log notification's event severity. Supported
+            severity(str): severity query parameter. Audit Log notification's event severity. Supported
                 values: 1, 2, 3, 4, 5. .
-            domain(basestring): domain query parameter. Audit Log notification's event domain. .
-            sub_domain(basestring): subDomain query parameter. Audit Log notification's event sub-domain. .
-            source(basestring): source query parameter. Audit Log notification's event source. .
-            user_id(basestring): userId query parameter. Audit Log notification's event userId. .
-            context(basestring): context query parameter. Audit Log notification's event correlationId. .
-            event_hierarchy(basestring): eventHierarchy query parameter. Audit Log notification's event
+            domain(str): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(str): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(str): source query parameter. Audit Log notification's event source. .
+            user_id(str): userId query parameter. Audit Log notification's event userId. .
+            context(str): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(str): eventHierarchy query parameter. Audit Log notification's event
                 eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
                 hierarchy separation is ".". .
-            site_id(basestring): siteId query parameter. Audit Log notification's siteId. .
-            device_id(basestring): deviceId query parameter. Audit Log notification's deviceId. .
+            site_id(str): siteId query parameter. Audit Log notification's siteId. .
+            device_id(str): deviceId query parameter. Audit Log notification's deviceId. .
             is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
                 .
-            description(basestring): description query parameter. String full/partial search (Provided input string
+            description(str): description query parameter. String full/partial search (Provided input string
                 is case insensitively matched for records). .
             offset(int): offset query parameter. Position of a particular Audit Log record in the data.  .
             limit(int): limit query parameter. Number of Audit Log records to be returned per page. .
@@ -4841,9 +4962,9 @@ class EventManagement(object):
                 (when provided endTime is mandatory) .
             end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
                 provided startTime is mandatory) .
-            sort_by(basestring): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
+            sort_by(str): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
                 event notification header attributes. .
-            order(basestring): order query parameter. Order of the sorted Audit Log records. Default value is desc
+            order(str): order query parameter. Order of the sorted Audit Log records. Default value is desc
                 by timestamp. Supported values: asc, desc. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -4924,15 +5045,15 @@ class EventManagement(object):
                                   **request_parameters):
         """ This function is an alias of count_of_notifications_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. The registered EventId should be provided .
+            event_ids(str): eventIds query parameter. The registered EventId should be provided .
             start_time(int): startTime query parameter. Start Time in milliseconds .
             end_time(int): endTime query parameter. End Time in milliseconds .
-            category(basestring): category query parameter.
-            type(basestring): type query parameter.
-            severity(basestring): severity query parameter.
-            domain(basestring): domain query parameter.
-            sub_domain(basestring): subDomain query parameter. Sub Domain .
-            source(basestring): source query parameter.
+            category(str): category query parameter.
+            type(str): type query parameter.
+            severity(str): severity query parameter.
+            domain(str): domain query parameter.
+            sub_domain(str): subDomain query parameter. Sub Domain .
+            source(str): source query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -5018,21 +5139,21 @@ class EventManagement(object):
                                           **request_parameters):
         """ This function is an alias of get_syslog_event_subscriptions_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. List of subscriptions related to the respective
+            event_ids(str): eventIds query parameter. List of subscriptions related to the respective
                 eventIds (Comma separated event ids) .
             offset(int): offset query parameter. The number of Subscriptions's to offset in the resultset whose
                 default value 0 .
             limit(int): limit query parameter. The number of Subscriptions's to limit in the resultset whose default
                 value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
-            domain(basestring): domain query parameter. List of subscriptions related to the respective domain .
-            sub_domain(basestring): subDomain query parameter. List of subscriptions related to the respective sub-
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
+            domain(str): domain query parameter. List of subscriptions related to the respective domain .
+            sub_domain(str): subDomain query parameter. List of subscriptions related to the respective sub-
                 domain .
-            category(basestring): category query parameter. List of subscriptions related to the respective category
+            category(str): category query parameter. List of subscriptions related to the respective category
                 .
-            type(basestring): type query parameter. List of subscriptions related to the respective type .
-            name(basestring): name query parameter. List of subscriptions related to the respective name .
+            type(str): type query parameter. List of subscriptions related to the respective type .
+            name(str): name query parameter. List of subscriptions related to the respective name .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -5056,6 +5177,90 @@ class EventManagement(object):
                     **request_parameters
         )
 
+    # Alias Function
+    def get_auditlog_summary(self,
+                             category=None,
+                             context=None,
+                             description=None,
+                             device_id=None,
+                             domain=None,
+                             end_time=None,
+                             event_hierarchy=None,
+                             event_id=None,
+                             instance_id=None,
+                             is_parent_only=None,
+                             is_system_events=None,
+                             name=None,
+                             parent_instance_id=None,
+                             severity=None,
+                             site_id=None,
+                             source=None,
+                             start_time=None,
+                             sub_domain=None,
+                             user_id=None,
+                             headers=None,
+                             **request_parameters):
+        """ This function is an alias of get_audit_log_summary_v1 .
+        Args:
+            parent_instance_id(str): parentInstanceId query parameter. Parent Audit Log record's instanceID.
+                .
+            is_parent_only(bool): isParentOnly query parameter. Parameter to filter parent only audit-logs. .
+            instance_id(str): instanceId query parameter. InstanceID of the Audit Log. .
+            name(str): name query parameter. Audit Log notification event name. .
+            event_id(str): eventId query parameter. Audit Log notification's event ID.  .
+            category(str): category query parameter. Audit Log notification's event category. Supported
+                values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
+                QUERY, CONVERSATION .
+            severity(str): severity query parameter. Audit Log notification's event severity. Supported
+                values: 1, 2, 3, 4, 5. .
+            domain(str): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(str): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(str): source query parameter. Audit Log notification's event source. .
+            user_id(str): userId query parameter. Audit Log notification's event userId. .
+            context(str): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(str): eventHierarchy query parameter. Audit Log notification's event
+                eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
+                hierarchy separation is ".". .
+            site_id(str): siteId query parameter. Audit Log notification's siteId. .
+            device_id(str): deviceId query parameter. Audit Log notification's deviceId. .
+            is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
+                .
+            description(str): description query parameter. String full/partial search (Provided input string
+                is case insensitively matched for records). .
+            start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
+                (when provided endTime is mandatory) .
+            end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
+                provided startTime is mandatory) .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of get_audit_log_summary_v1 .
+        """
+        return self.get_audit_log_summary_v1(
+                    category=category,
+                    context=context,
+                    description=description,
+                    device_id=device_id,
+                    domain=domain,
+                    end_time=end_time,
+                    event_hierarchy=event_hierarchy,
+                    event_id=event_id,
+                    instance_id=instance_id,
+                    is_parent_only=is_parent_only,
+                    is_system_events=is_system_events,
+                    name=name,
+                    parent_instance_id=parent_instance_id,
+                    severity=severity,
+                    site_id=site_id,
+                    source=source,
+                    start_time=start_time,
+                    sub_domain=sub_domain,
+                    user_id=user_id,
+                    headers=headers,
+                    **request_parameters
+        )
 
     # Alias Function
     def get_audit_log_summary(self,
@@ -5082,30 +5287,30 @@ class EventManagement(object):
                              **request_parameters):
         """ This function is an alias of get_audit_log_summary_v1 .
         Args:
-            parent_instance_id(basestring): parentInstanceId query parameter. Parent Audit Log record's instanceID.
+            parent_instance_id(str): parentInstanceId query parameter. Parent Audit Log record's instanceID.
                 .
             is_parent_only(bool): isParentOnly query parameter. Parameter to filter parent only audit-logs. .
-            instance_id(basestring): instanceId query parameter. InstanceID of the Audit Log. .
-            name(basestring): name query parameter. Audit Log notification event name. .
-            event_id(basestring): eventId query parameter. Audit Log notification's event ID.  .
-            category(basestring): category query parameter. Audit Log notification's event category. Supported
+            instance_id(str): instanceId query parameter. InstanceID of the Audit Log. .
+            name(str): name query parameter. Audit Log notification event name. .
+            event_id(str): eventId query parameter. Audit Log notification's event ID.  .
+            category(str): category query parameter. Audit Log notification's event category. Supported
                 values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
                 QUERY, CONVERSATION .
-            severity(basestring): severity query parameter. Audit Log notification's event severity. Supported
+            severity(str): severity query parameter. Audit Log notification's event severity. Supported
                 values: 1, 2, 3, 4, 5. .
-            domain(basestring): domain query parameter. Audit Log notification's event domain. .
-            sub_domain(basestring): subDomain query parameter. Audit Log notification's event sub-domain. .
-            source(basestring): source query parameter. Audit Log notification's event source. .
-            user_id(basestring): userId query parameter. Audit Log notification's event userId. .
-            context(basestring): context query parameter. Audit Log notification's event correlationId. .
-            event_hierarchy(basestring): eventHierarchy query parameter. Audit Log notification's event
+            domain(str): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(str): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(str): source query parameter. Audit Log notification's event source. .
+            user_id(str): userId query parameter. Audit Log notification's event userId. .
+            context(str): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(str): eventHierarchy query parameter. Audit Log notification's event
                 eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
                 hierarchy separation is ".". .
-            site_id(basestring): siteId query parameter. Audit Log notification's siteId. .
-            device_id(basestring): deviceId query parameter. Audit Log notification's deviceId. .
+            site_id(str): siteId query parameter. Audit Log notification's siteId. .
+            device_id(str): deviceId query parameter. Audit Log notification's deviceId. .
             is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
                 .
-            description(basestring): description query parameter. String full/partial search (Provided input string
+            description(str): description query parameter. String full/partial search (Provided input string
                 is case insensitively matched for records). .
             start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
                 (when provided endTime is mandatory) .
@@ -5157,13 +5362,13 @@ class EventManagement(object):
                            **request_parameters):
         """ This function is an alias of get_event_artifacts_v1 .
         Args:
-            event_ids(basestring): eventIds query parameter. List of eventIds .
-            tags(basestring): tags query parameter. Tags defined .
+            event_ids(str): eventIds query parameter. List of eventIds .
+            tags(str): tags query parameter. Tags defined .
             offset(int): offset query parameter. Record start offset .
             limit(int): limit query parameter. # of records to return in result set .
-            sort_by(basestring): sortBy query parameter. Sort by field .
-            order(basestring): order query parameter. sorting order (asc/desc) .
-            search(basestring): search query parameter. findd matches in name, description, eventId, type, category
+            sort_by(str): sortBy query parameter. Sort by field .
+            order(str): order query parameter. sorting order (asc/desc) .
+            search(str): search query parameter. findd matches in name, description, eventId, type, category
                 .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -5185,6 +5390,138 @@ class EventManagement(object):
                     **request_parameters
         )
 
+        # Alias Function
+    def get_eventartifacts(self,
+                           event_ids=None,
+                           limit=None,
+                           offset=None,
+                           order=None,
+                           search=None,
+                           sort_by=None,
+                           tags=None,
+                           headers=None,
+                           **request_parameters):
+        """ This function is an alias of get_event_artifacts_v1 .
+        Args:
+            event_ids(str): eventIds query parameter. List of eventIds .
+            tags(str): tags query parameter. Tags defined .
+            offset(int): offset query parameter. Record start offset .
+            limit(int): limit query parameter. # of records to return in result set .
+            sort_by(str): sortBy query parameter. Sort by field .
+            order(str): order query parameter. sorting order (asc/desc) .
+            search(str): search query parameter. findd matches in name, description, eventId, type, category
+                .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of get_event_artifacts_v1 .
+        """
+        return self.get_event_artifacts_v1(
+                    event_ids=event_ids,
+                    limit=limit,
+                    offset=offset,
+                    order=order,
+                    search=search,
+                    sort_by=sort_by,
+                    tags=tags,
+                    headers=headers,
+                    **request_parameters
+        )
+
+
+    # Alias Function
+    def get_auditlog_parent_records(self,
+                                    category=None,
+                                    context=None,
+                                    description=None,
+                                    device_id=None,
+                                    domain=None,
+                                    end_time=None,
+                                    event_hierarchy=None,
+                                    event_id=None,
+                                    instance_id=None,
+                                    is_system_events=None,
+                                    limit=None,
+                                    name=None,
+                                    offset=None,
+                                    order=None,
+                                    severity=None,
+                                    site_id=None,
+                                    sort_by=None,
+                                    source=None,
+                                    start_time=None,
+                                    sub_domain=None,
+                                    user_id=None,
+                                    headers=None,
+                                    **request_parameters):
+        """ This function is an alias of get_audit_log_parent_records_v1 .
+        Args:
+            instance_id(str): instanceId query parameter. InstanceID of the Audit Log. .
+            name(str): name query parameter. Audit Log notification event name. .
+            event_id(str): eventId query parameter. Audit Log notification's event ID.  .
+            category(str): category query parameter. Audit Log notification's event category. Supported
+                values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
+                QUERY, CONVERSATION .
+            severity(str): severity query parameter. Audit Log notification's event severity. Supported
+                values: 1, 2, 3, 4, 5. .
+            domain(str): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(str): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(str): source query parameter. Audit Log notification's event source. .
+            user_id(str): userId query parameter. Audit Log notification's event userId. .
+            context(str): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(str): eventHierarchy query parameter. Audit Log notification's event
+                eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
+                hierarchy separation is ".". .
+            site_id(str): siteId query parameter. Audit Log notification's siteId. .
+            device_id(str): deviceId query parameter. Audit Log notification's deviceId. .
+            is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
+                .
+            description(str): description query parameter. String full/partial search (Provided input string
+                is case insensitively matched for records). .
+            offset(int): offset query parameter. Position of a particular Audit Log record in the data.  .
+            limit(int): limit query parameter. Number of Audit Log records to be returned per page. .
+            start_time(int): startTime query parameter. Start Time in milliseconds since Epoch Eg. 1597950637211
+                (when provided endTime is mandatory) .
+            end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
+                provided startTime is mandatory) .
+            sort_by(str): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
+                event notification header attributes. .
+            order(str): order query parameter. Order of the sorted Audit Log records. Default value is desc
+                by timestamp. Supported values: asc, desc. .
+            headers(dict): Dictionary of HTTP Headers to send with the Request
+                .
+            **request_parameters: Additional request parameters (provides
+                support for parameters that may be added in the future).
+        Returns:
+            This function returns the output of get_audit_log_parent_records_v1 .
+        """
+        return self.get_audit_log_parent_records_v1(
+                    category=category,
+                    context=context,
+                    description=description,
+                    device_id=device_id,
+                    domain=domain,
+                    end_time=end_time,
+                    event_hierarchy=event_hierarchy,
+                    event_id=event_id,
+                    instance_id=instance_id,
+                    is_system_events=is_system_events,
+                    limit=limit,
+                    name=name,
+                    offset=offset,
+                    order=order,
+                    severity=severity,
+                    site_id=site_id,
+                    sort_by=sort_by,
+                    source=source,
+                    start_time=start_time,
+                    sub_domain=sub_domain,
+                    user_id=user_id,
+                    headers=headers,
+                    **request_parameters
+        )
 
     # Alias Function
     def get_audit_log_parent_records(self,
@@ -5213,27 +5550,27 @@ class EventManagement(object):
                                     **request_parameters):
         """ This function is an alias of get_audit_log_parent_records_v1 .
         Args:
-            instance_id(basestring): instanceId query parameter. InstanceID of the Audit Log. .
-            name(basestring): name query parameter. Audit Log notification event name. .
-            event_id(basestring): eventId query parameter. Audit Log notification's event ID.  .
-            category(basestring): category query parameter. Audit Log notification's event category. Supported
+            instance_id(str): instanceId query parameter. InstanceID of the Audit Log. .
+            name(str): name query parameter. Audit Log notification event name. .
+            event_id(str): eventId query parameter. Audit Log notification's event ID.  .
+            category(str): category query parameter. Audit Log notification's event category. Supported
                 values: INFO, WARN, ERROR, ALERT, TASK_PROGRESS, TASK_FAILURE, TASK_COMPLETE, COMMAND,
                 QUERY, CONVERSATION .
-            severity(basestring): severity query parameter. Audit Log notification's event severity. Supported
+            severity(str): severity query parameter. Audit Log notification's event severity. Supported
                 values: 1, 2, 3, 4, 5. .
-            domain(basestring): domain query parameter. Audit Log notification's event domain. .
-            sub_domain(basestring): subDomain query parameter. Audit Log notification's event sub-domain. .
-            source(basestring): source query parameter. Audit Log notification's event source. .
-            user_id(basestring): userId query parameter. Audit Log notification's event userId. .
-            context(basestring): context query parameter. Audit Log notification's event correlationId. .
-            event_hierarchy(basestring): eventHierarchy query parameter. Audit Log notification's event
+            domain(str): domain query parameter. Audit Log notification's event domain. .
+            sub_domain(str): subDomain query parameter. Audit Log notification's event sub-domain. .
+            source(str): source query parameter. Audit Log notification's event source. .
+            user_id(str): userId query parameter. Audit Log notification's event userId. .
+            context(str): context query parameter. Audit Log notification's event correlationId. .
+            event_hierarchy(str): eventHierarchy query parameter. Audit Log notification's event
                 eventHierarchy. Example: "US.CA.San Jose" OR "US.CA" OR "CA.San Jose" Delimiter for
                 hierarchy separation is ".". .
-            site_id(basestring): siteId query parameter. Audit Log notification's siteId. .
-            device_id(basestring): deviceId query parameter. Audit Log notification's deviceId. .
+            site_id(str): siteId query parameter. Audit Log notification's siteId. .
+            device_id(str): deviceId query parameter. Audit Log notification's deviceId. .
             is_system_events(bool): isSystemEvents query parameter. Parameter to filter system generated audit-logs.
                 .
-            description(basestring): description query parameter. String full/partial search (Provided input string
+            description(str): description query parameter. String full/partial search (Provided input string
                 is case insensitively matched for records). .
             offset(int): offset query parameter. Position of a particular Audit Log record in the data.  .
             limit(int): limit query parameter. Number of Audit Log records to be returned per page. .
@@ -5241,9 +5578,9 @@ class EventManagement(object):
                 (when provided endTime is mandatory) .
             end_time(int): endTime query parameter. End Time in milliseconds since Epoch Eg. 1597961437211 (when
                 provided startTime is mandatory) .
-            sort_by(basestring): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
+            sort_by(str): sortBy query parameter. Sort the Audit Logs by certain fields. Supported values are
                 event notification header attributes. .
-            order(basestring): order query parameter. Order of the sorted Audit Log records. Default value is desc
+            order(str): order query parameter. Order of the sorted Audit Log records. Default value is desc
                 by timestamp. Supported values: asc, desc. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -5288,8 +5625,8 @@ class EventManagement(object):
                            **request_parameters):
         """ This function is an alias of count_of_events_v1 .
         Args:
-            event_id(basestring): eventId query parameter. The registered EventId should be provided .
-            tags(basestring): tags query parameter. The registered Tags should be provided .
+            event_id(str): eventId query parameter. The registered EventId should be provided .
+            tags(str): tags query parameter. The registered Tags should be provided .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -5313,18 +5650,18 @@ class EventManagement(object):
                                    order=None,
                                    sort_by=None,
                                    webhook_ids=None,
-                                   headers=None,
+                                   customHeaders=None,
                                    **request_parameters):
         """ This function is an alias of get_webhook_destination_v1 .
         Args:
-            webhook_ids(basestring): webhookIds query parameter. List of webhook configurations .
+            webhook_ids(str): webhookIds query parameter. List of webhook configurations .
             offset(int): offset query parameter. The number of webhook configuration's to offset in the resultset
                 whose default value 0 .
             limit(int): limit query parameter. The number of webhook configuration's to limit in the resultset whose
                 default value 10 .
-            sort_by(basestring): sortBy query parameter. SortBy field name .
-            order(basestring): order query parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
+            sort_by(str): sortBy query parameter. SortBy field name .
+            order(str): order query parameter.
+            customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
@@ -5338,7 +5675,7 @@ class EventManagement(object):
                     order=order,
                     sort_by=sort_by,
                     webhook_ids=webhook_ids,
-                    headers=headers,
+                    customHeaders=customHeaders,
                     **request_parameters
         )
 
