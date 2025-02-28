@@ -53,3 +53,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.3.7.9.3] - 2025-02-24
 ### Bug fix
 - Correction in the request validation structures. In the deploy_template functions in version 1 and 2. In 2.3.5.3, 2.3.7.6 and 2.3.7.9.
+
+
+## [2.3.7.9.4] - 2025-02-28
+### Added
+- Add support of DNA Center versions ('2.3.7.7')

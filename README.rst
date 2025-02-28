@@ -151,6 +151,8 @@ The following table shows the supported versions.
      - Python "catalystcentersdk" version
    * - 2.3.7.6
      - 2.3.7.6.x
+   * - 2.3.7.7
+     - 2.3.7.9.4
    * - 2.3.7.9
      - 2.3.7.9.x
 
