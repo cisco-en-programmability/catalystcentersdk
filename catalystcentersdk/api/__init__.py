@@ -310,7 +310,7 @@ class CatalystCenterAPI(object):
             VersionError: If the version is not provided via the version
                 argument or an environment variable, or it is not a
                 Catalyst Center API supported version
-                ['2.3.7.6'].
+                ['2.3.7.6' and '2.3.7.9'].
 
         """
         username = username or catalystcenter_environment.get_env_username()
@@ -329,6 +329,8 @@ class CatalystCenterAPI(object):
             verify = catalystcenter_environment.get_env_verify() or DEFAULT_VERIFY
 
         version = version or catalystcenter_environment.get_env_version() or DEFAULT_VERSION
+        if version == "2.3.7.7":
+            version = "2.3.7.6"
 
         if debug is None:
             debug = catalystcenter_environment.get_env_debug() or DEFAULT_DEBUG
