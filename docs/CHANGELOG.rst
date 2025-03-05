@@ -117,3 +117,27 @@ Bug fix
 -  Correction in the request validation structures. In the
    deploy_template functions in version 1 and 2. In 2.3.5.3, 2.3.7.6 and
    2.3.7.9.
+
+.. _section-7:
+
+[2.3.7.9.4] - 2025-02-28
+------------------------
+
+.. _added-5:
+
+Added
+~~~~~
+
+-  Add support of DNA Center versions (‘2.3.7.7’)
+
+.. _section-8:
+
+[2.3.7.9.5] - 2025-03-05
+------------------------
+
+.. _bug-fix-3:
+
+Bug fix
+~~~~~~~
+
+-  Error, correction in the user_and_roles module.
