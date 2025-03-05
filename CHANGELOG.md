@@ -62,3 +62,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.3.7.9.5] - 2025-03-05
 ### Bug fix
 - Error, correction in the user_and_roles module.
+
