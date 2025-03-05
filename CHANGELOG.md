@@ -58,3 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.3.7.9.4] - 2025-02-28
 ### Added
 - Add support of DNA Center versions ('2.3.7.7')
+
+## [2.3.7.9.5] - 2025-03-05
+### Bug fix
+- Error, correction in the user_and_roles module.
