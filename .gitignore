@@ -128,3 +128,6 @@ dmypy.json
 
 # Custom
 test.py
+
+# Code
+.vscode/
