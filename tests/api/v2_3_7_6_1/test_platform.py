@@ -29,24 +29,24 @@ from tests.environment import CATALYST_CENTER_VERSION
 pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
 
 
-def is_valid_cisco_catalystcenter_packages_summary_v1(json_schema_validate, obj):
+def is_valid_cisco_catalystcenter_packages_summary(json_schema_validate, obj):
     json_schema_validate('jsd_0c3bdcd996dd5d988d0d77ce8f732014_v2_3_7_6_1').validate(obj)
     return True
 
 
-def cisco_catalystcenter_packages_summary_v1(api):
-    endpoint_result = api.platform.cisco_catalystcenter_packages_summary_v1(
+def cisco_catalystcenter_packages_summary(api):
+    endpoint_result = api.platform.cisco_catalystcenter_packages_summary(
 
     )
     return endpoint_result
 
 
 @pytest.mark.platform
-def test_cisco_catalystcenter_packages_summary_v1(api, validator):
+def test_cisco_catalystcenter_packages_summary(api, validator):
     try:
-        assert is_valid_cisco_catalystcenter_packages_summary_v1(
+        assert is_valid_cisco_catalystcenter_packages_summary(
             validator,
-            cisco_catalystcenter_packages_summary_v1(api)
+            cisco_catalystcenter_packages_summary(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -54,19 +54,19 @@ def test_cisco_catalystcenter_packages_summary_v1(api, validator):
             raise original_e
 
 
-def cisco_catalystcenter_packages_summary_v1_default_val(api):
-    endpoint_result = api.platform.cisco_catalystcenter_packages_summary_v1(
+def cisco_catalystcenter_packages_summary_default_val(api):
+    endpoint_result = api.platform.cisco_catalystcenter_packages_summary(
 
     )
     return endpoint_result
 
 
 @pytest.mark.platform
-def test_cisco_catalystcenter_packages_summary_v1_default_val(api, validator):
+def test_cisco_catalystcenter_packages_summary_default_val(api, validator):
     try:
-        assert is_valid_cisco_catalystcenter_packages_summary_v1(
+        assert is_valid_cisco_catalystcenter_packages_summary(
             validator,
-            cisco_catalystcenter_packages_summary_v1_default_val(api)
+            cisco_catalystcenter_packages_summary_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -29,13 +29,13 @@ from tests.environment import CATALYST_CENTER_VERSION
 pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
 
 
-def is_valid_applications_v1(json_schema_validate, obj):
+def is_valid_applications(json_schema_validate, obj):
     json_schema_validate('jsd_1b85e4ce533d5ff49ddd3b2f9657cfa5_v2_3_7_6_1').validate(obj)
     return True
 
 
-def applications_v1(api):
-    endpoint_result = api.applications.applications_v1(
+def applications(api):
+    endpoint_result = api.applications.applications(
         application_health='string',
         application_name='string',
         device_id='string',
@@ -50,11 +50,11 @@ def applications_v1(api):
 
 
 @pytest.mark.applications
-def test_applications_v1(api, validator):
+def test_applications(api, validator):
     try:
-        assert is_valid_applications_v1(
+        assert is_valid_applications(
             validator,
-            applications_v1(api)
+            applications(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -62,8 +62,8 @@ def test_applications_v1(api, validator):
             raise original_e
 
 
-def applications_v1_default_val(api):
-    endpoint_result = api.applications.applications_v1(
+def applications_default_val(api):
+    endpoint_result = api.applications.applications(
         application_health=None,
         application_name=None,
         device_id=None,
@@ -78,11 +78,11 @@ def applications_v1_default_val(api):
 
 
 @pytest.mark.applications
-def test_applications_v1_default_val(api, validator):
+def test_applications_default_val(api, validator):
     try:
-        assert is_valid_applications_v1(
+        assert is_valid_applications(
             validator,
-            applications_v1_default_val(api)
+            applications_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

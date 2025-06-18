@@ -29,13 +29,13 @@ from tests.environment import CATALYST_CENTER_VERSION
 pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
 
 
-def is_valid_trigger_software_image_activation_v1(json_schema_validate, obj):
+def is_valid_trigger_software_image_activation(json_schema_validate, obj):
     json_schema_validate('jsd_22891a9136d5513985f15e91a19da66c_v2_3_7_6_1').validate(obj)
     return True
 
 
-def trigger_software_image_activation_v1(api):
-    endpoint_result = api.software_image_management_swim.trigger_software_image_activation_v1(
+def trigger_software_image_activation(api):
+    endpoint_result = api.software_image_management_swim.trigger_software_image_activation(
         active_validation=True,
         payload=None,
         schedule_validate=True
@@ -44,11 +44,11 @@ def trigger_software_image_activation_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_trigger_software_image_activation_v1(api, validator):
+def test_trigger_software_image_activation(api, validator):
     try:
-        assert is_valid_trigger_software_image_activation_v1(
+        assert is_valid_trigger_software_image_activation(
             validator,
-            trigger_software_image_activation_v1(api)
+            trigger_software_image_activation(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -56,8 +56,8 @@ def test_trigger_software_image_activation_v1(api, validator):
             raise original_e
 
 
-def trigger_software_image_activation_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.trigger_software_image_activation_v1(
+def trigger_software_image_activation_default_val(api):
+    endpoint_result = api.software_image_management_swim.trigger_software_image_activation(
         active_validation=True,
         payload=None,
         schedule_validate=None
@@ -66,24 +66,24 @@ def trigger_software_image_activation_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_trigger_software_image_activation_v1_default_val(api, validator):
+def test_trigger_software_image_activation_default_val(api, validator):
     try:
-        assert is_valid_trigger_software_image_activation_v1(
+        assert is_valid_trigger_software_image_activation(
             validator,
-            trigger_software_image_activation_v1_default_val(api)
+            trigger_software_image_activation_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_trigger_software_image_distribution_v1(json_schema_validate, obj):
+def is_valid_trigger_software_image_distribution(json_schema_validate, obj):
     json_schema_validate('jsd_6c8d11fb9fc752ab8bb8e2b1413ccc92_v2_3_7_6_1').validate(obj)
     return True
 
 
-def trigger_software_image_distribution_v1(api):
-    endpoint_result = api.software_image_management_swim.trigger_software_image_distribution_v1(
+def trigger_software_image_distribution(api):
+    endpoint_result = api.software_image_management_swim.trigger_software_image_distribution(
         active_validation=True,
         payload=None
     )
@@ -91,11 +91,11 @@ def trigger_software_image_distribution_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_trigger_software_image_distribution_v1(api, validator):
+def test_trigger_software_image_distribution(api, validator):
     try:
-        assert is_valid_trigger_software_image_distribution_v1(
+        assert is_valid_trigger_software_image_distribution(
             validator,
-            trigger_software_image_distribution_v1(api)
+            trigger_software_image_distribution(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -103,8 +103,8 @@ def test_trigger_software_image_distribution_v1(api, validator):
             raise original_e
 
 
-def trigger_software_image_distribution_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.trigger_software_image_distribution_v1(
+def trigger_software_image_distribution_default_val(api):
+    endpoint_result = api.software_image_management_swim.trigger_software_image_distribution(
         active_validation=True,
         payload=None
     )
@@ -112,24 +112,24 @@ def trigger_software_image_distribution_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_trigger_software_image_distribution_v1_default_val(api, validator):
+def test_trigger_software_image_distribution_default_val(api, validator):
     try:
-        assert is_valid_trigger_software_image_distribution_v1(
+        assert is_valid_trigger_software_image_distribution(
             validator,
-            trigger_software_image_distribution_v1_default_val(api)
+            trigger_software_image_distribution_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_software_image_details_v1(json_schema_validate, obj):
+def is_valid_get_software_image_details(json_schema_validate, obj):
     json_schema_validate('jsd_039f73101d5d5e409f571084ab4c6049_v2_3_7_6_1').validate(obj)
     return True
 
 
-def get_software_image_details_v1(api):
-    endpoint_result = api.software_image_management_swim.get_software_image_details_v1(
+def get_software_image_details(api):
+    endpoint_result = api.software_image_management_swim.get_software_image_details(
         application_type='string',
         created_time=0,
         family='string',
@@ -153,11 +153,11 @@ def get_software_image_details_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_get_software_image_details_v1(api, validator):
+def test_get_software_image_details(api, validator):
     try:
-        assert is_valid_get_software_image_details_v1(
+        assert is_valid_get_software_image_details(
             validator,
-            get_software_image_details_v1(api)
+            get_software_image_details(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -165,8 +165,8 @@ def test_get_software_image_details_v1(api, validator):
             raise original_e
 
 
-def get_software_image_details_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.get_software_image_details_v1(
+def get_software_image_details_default_val(api):
+    endpoint_result = api.software_image_management_swim.get_software_image_details(
         application_type=None,
         created_time=None,
         family=None,
@@ -190,35 +190,35 @@ def get_software_image_details_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_get_software_image_details_v1_default_val(api, validator):
+def test_get_software_image_details_default_val(api, validator):
     try:
-        assert is_valid_get_software_image_details_v1(
+        assert is_valid_get_software_image_details(
             validator,
-            get_software_image_details_v1_default_val(api)
+            get_software_image_details_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_device_family_identifiers_v1(json_schema_validate, obj):
+def is_valid_get_device_family_identifiers(json_schema_validate, obj):
     json_schema_validate('jsd_b5c47f316ff058eb979bdea047f9d5b5_v2_3_7_6_1').validate(obj)
     return True
 
 
-def get_device_family_identifiers_v1(api):
-    endpoint_result = api.software_image_management_swim.get_device_family_identifiers_v1(
+def get_device_family_identifiers(api):
+    endpoint_result = api.software_image_management_swim.get_device_family_identifiers(
 
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_get_device_family_identifiers_v1(api, validator):
+def test_get_device_family_identifiers(api, validator):
     try:
-        assert is_valid_get_device_family_identifiers_v1(
+        assert is_valid_get_device_family_identifiers(
             validator,
-            get_device_family_identifiers_v1(api)
+            get_device_family_identifiers(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -226,32 +226,32 @@ def test_get_device_family_identifiers_v1(api, validator):
             raise original_e
 
 
-def get_device_family_identifiers_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.get_device_family_identifiers_v1(
+def get_device_family_identifiers_default_val(api):
+    endpoint_result = api.software_image_management_swim.get_device_family_identifiers(
 
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_get_device_family_identifiers_v1_default_val(api, validator):
+def test_get_device_family_identifiers_default_val(api, validator):
     try:
-        assert is_valid_get_device_family_identifiers_v1(
+        assert is_valid_get_device_family_identifiers(
             validator,
-            get_device_family_identifiers_v1_default_val(api)
+            get_device_family_identifiers_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_tag_as_golden_image_v1(json_schema_validate, obj):
+def is_valid_tag_as_golden_image(json_schema_validate, obj):
     json_schema_validate('jsd_a9b864257b965fe4bd8b0293f41f1537_v2_3_7_6_1').validate(obj)
     return True
 
 
-def tag_as_golden_image_v1(api):
-    endpoint_result = api.software_image_management_swim.tag_as_golden_image_v1(
+def tag_as_golden_image(api):
+    endpoint_result = api.software_image_management_swim.tag_as_golden_image(
         active_validation=True,
         deviceFamilyIdentifier='string',
         deviceRole='string',
@@ -263,11 +263,11 @@ def tag_as_golden_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_tag_as_golden_image_v1(api, validator):
+def test_tag_as_golden_image(api, validator):
     try:
-        assert is_valid_tag_as_golden_image_v1(
+        assert is_valid_tag_as_golden_image(
             validator,
-            tag_as_golden_image_v1(api)
+            tag_as_golden_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -275,8 +275,8 @@ def test_tag_as_golden_image_v1(api, validator):
             raise original_e
 
 
-def tag_as_golden_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.tag_as_golden_image_v1(
+def tag_as_golden_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.tag_as_golden_image(
         active_validation=True,
         deviceFamilyIdentifier=None,
         deviceRole=None,
@@ -288,24 +288,24 @@ def tag_as_golden_image_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_tag_as_golden_image_v1_default_val(api, validator):
+def test_tag_as_golden_image_default_val(api, validator):
     try:
-        assert is_valid_tag_as_golden_image_v1(
+        assert is_valid_tag_as_golden_image(
             validator,
-            tag_as_golden_image_v1_default_val(api)
+            tag_as_golden_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_remove_golden_tag_for_image_v1(json_schema_validate, obj):
+def is_valid_remove_golden_tag_for_image(json_schema_validate, obj):
     json_schema_validate('jsd_2405e9dd960c5378ab442f235c8135d0_v2_3_7_6_1').validate(obj)
     return True
 
 
-def remove_golden_tag_for_image_v1(api):
-    endpoint_result = api.software_image_management_swim.remove_golden_tag_for_image_v1(
+def remove_golden_tag_for_image(api):
+    endpoint_result = api.software_image_management_swim.remove_golden_tag_for_image(
         device_family_identifier='string',
         device_role='string',
         image_id='string',
@@ -315,11 +315,11 @@ def remove_golden_tag_for_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_remove_golden_tag_for_image_v1(api, validator):
+def test_remove_golden_tag_for_image(api, validator):
     try:
-        assert is_valid_remove_golden_tag_for_image_v1(
+        assert is_valid_remove_golden_tag_for_image(
             validator,
-            remove_golden_tag_for_image_v1(api)
+            remove_golden_tag_for_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -327,8 +327,8 @@ def test_remove_golden_tag_for_image_v1(api, validator):
             raise original_e
 
 
-def remove_golden_tag_for_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.remove_golden_tag_for_image_v1(
+def remove_golden_tag_for_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.remove_golden_tag_for_image(
         device_family_identifier='string',
         device_role='string',
         image_id='string',
@@ -338,24 +338,24 @@ def remove_golden_tag_for_image_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_remove_golden_tag_for_image_v1_default_val(api, validator):
+def test_remove_golden_tag_for_image_default_val(api, validator):
     try:
-        assert is_valid_remove_golden_tag_for_image_v1(
+        assert is_valid_remove_golden_tag_for_image(
             validator,
-            remove_golden_tag_for_image_v1_default_val(api)
+            remove_golden_tag_for_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_golden_tag_status_of_an_image_v1(json_schema_validate, obj):
+def is_valid_get_golden_tag_status_of_an_image(json_schema_validate, obj):
     json_schema_validate('jsd_97ab6266cac654d394cf943a161fcc7b_v2_3_7_6_1').validate(obj)
     return True
 
 
-def get_golden_tag_status_of_an_image_v1(api):
-    endpoint_result = api.software_image_management_swim.get_golden_tag_status_of_an_image_v1(
+def get_golden_tag_status_of_an_image(api):
+    endpoint_result = api.software_image_management_swim.get_golden_tag_status_of_an_image(
         device_family_identifier='string',
         device_role='string',
         image_id='string',
@@ -365,11 +365,11 @@ def get_golden_tag_status_of_an_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_get_golden_tag_status_of_an_image_v1(api, validator):
+def test_get_golden_tag_status_of_an_image(api, validator):
     try:
-        assert is_valid_get_golden_tag_status_of_an_image_v1(
+        assert is_valid_get_golden_tag_status_of_an_image(
             validator,
-            get_golden_tag_status_of_an_image_v1(api)
+            get_golden_tag_status_of_an_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -377,8 +377,8 @@ def test_get_golden_tag_status_of_an_image_v1(api, validator):
             raise original_e
 
 
-def get_golden_tag_status_of_an_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.get_golden_tag_status_of_an_image_v1(
+def get_golden_tag_status_of_an_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.get_golden_tag_status_of_an_image(
         device_family_identifier='string',
         device_role='string',
         image_id='string',
@@ -388,24 +388,24 @@ def get_golden_tag_status_of_an_image_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_get_golden_tag_status_of_an_image_v1_default_val(api, validator):
+def test_get_golden_tag_status_of_an_image_default_val(api, validator):
     try:
-        assert is_valid_get_golden_tag_status_of_an_image_v1(
+        assert is_valid_get_golden_tag_status_of_an_image(
             validator,
-            get_golden_tag_status_of_an_image_v1_default_val(api)
+            get_golden_tag_status_of_an_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_import_local_software_image_v1(json_schema_validate, obj):
+def is_valid_import_local_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_2399c1cf6d5d5f0fa2e92539134b6c1d_v2_3_7_6_1').validate(obj)
     return True
 
 
-def import_local_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.import_local_software_image_v1(
+def import_local_software_image(api):
+    endpoint_result = api.software_image_management_swim.import_local_software_image(
         active_validation=True,
         is_third_party=True,
         payload=None,
@@ -417,11 +417,11 @@ def import_local_software_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_import_local_software_image_v1(api, validator):
+def test_import_local_software_image(api, validator):
     try:
-        assert is_valid_import_local_software_image_v1(
+        assert is_valid_import_local_software_image(
             validator,
-            import_local_software_image_v1(api)
+            import_local_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -429,8 +429,8 @@ def test_import_local_software_image_v1(api, validator):
             raise original_e
 
 
-def import_local_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.import_local_software_image_v1(
+def import_local_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.import_local_software_image(
         active_validation=True,
         is_third_party=None,
         payload=None,
@@ -442,24 +442,24 @@ def import_local_software_image_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_import_local_software_image_v1_default_val(api, validator):
+def test_import_local_software_image_default_val(api, validator):
     try:
-        assert is_valid_import_local_software_image_v1(
+        assert is_valid_import_local_software_image(
             validator,
-            import_local_software_image_v1_default_val(api)
+            import_local_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_import_software_image_via_url_v1(json_schema_validate, obj):
+def is_valid_import_software_image_via_url(json_schema_validate, obj):
     json_schema_validate('jsd_7be8cdb967555fcca03a4c1f796eee56_v2_3_7_6_1').validate(obj)
     return True
 
 
-def import_software_image_via_url_v1(api):
-    endpoint_result = api.software_image_management_swim.import_software_image_via_url_v1(
+def import_software_image_via_url(api):
+    endpoint_result = api.software_image_management_swim.import_software_image_via_url(
         active_validation=True,
         payload=None,
         schedule_at='string',
@@ -470,11 +470,11 @@ def import_software_image_via_url_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_import_software_image_via_url_v1(api, validator):
+def test_import_software_image_via_url(api, validator):
     try:
-        assert is_valid_import_software_image_via_url_v1(
+        assert is_valid_import_software_image_via_url(
             validator,
-            import_software_image_via_url_v1(api)
+            import_software_image_via_url(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -482,8 +482,8 @@ def test_import_software_image_via_url_v1(api, validator):
             raise original_e
 
 
-def import_software_image_via_url_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.import_software_image_via_url_v1(
+def import_software_image_via_url_default_val(api):
+    endpoint_result = api.software_image_management_swim.import_software_image_via_url(
         active_validation=True,
         payload=None,
         schedule_at=None,
@@ -494,24 +494,24 @@ def import_software_image_via_url_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_import_software_image_via_url_v1_default_val(api, validator):
+def test_import_software_image_via_url_default_val(api, validator):
     try:
-        assert is_valid_import_software_image_via_url_v1(
+        assert is_valid_import_software_image_via_url(
             validator,
-            import_software_image_via_url_v1_default_val(api)
+            import_software_image_via_url_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_returns_list_of_software_images_v1(json_schema_validate, obj):
+def is_valid_returns_list_of_software_images(json_schema_validate, obj):
     json_schema_validate('jsd_17eb239c565c57d59cd6d6f7d193a993_v2_3_7_6_1').validate(obj)
     return True
 
 
-def returns_list_of_software_images_v1(api):
-    endpoint_result = api.software_image_management_swim.returns_list_of_software_images_v1(
+def returns_list_of_software_images(api):
+    endpoint_result = api.software_image_management_swim.returns_list_of_software_images(
         golden=True,
         has_addon_images=True,
         imported=True,
@@ -529,11 +529,11 @@ def returns_list_of_software_images_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_list_of_software_images_v1(api, validator):
+def test_returns_list_of_software_images(api, validator):
     try:
-        assert is_valid_returns_list_of_software_images_v1(
+        assert is_valid_returns_list_of_software_images(
             validator,
-            returns_list_of_software_images_v1(api)
+            returns_list_of_software_images(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -541,8 +541,8 @@ def test_returns_list_of_software_images_v1(api, validator):
             raise original_e
 
 
-def returns_list_of_software_images_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.returns_list_of_software_images_v1(
+def returns_list_of_software_images_default_val(api):
+    endpoint_result = api.software_image_management_swim.returns_list_of_software_images(
         golden=None,
         has_addon_images=None,
         imported=None,
@@ -560,24 +560,24 @@ def returns_list_of_software_images_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_list_of_software_images_v1_default_val(api, validator):
+def test_returns_list_of_software_images_default_val(api, validator):
     try:
-        assert is_valid_returns_list_of_software_images_v1(
+        assert is_valid_returns_list_of_software_images(
             validator,
-            returns_list_of_software_images_v1_default_val(api)
+            returns_list_of_software_images_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_returns_count_of_software_images_v1(json_schema_validate, obj):
+def is_valid_returns_count_of_software_images(json_schema_validate, obj):
     json_schema_validate('jsd_bdcd5a6fab705566a60c7885a18bf1ac_v2_3_7_6_1').validate(obj)
     return True
 
 
-def returns_count_of_software_images_v1(api):
-    endpoint_result = api.software_image_management_swim.returns_count_of_software_images_v1(
+def returns_count_of_software_images(api):
+    endpoint_result = api.software_image_management_swim.returns_count_of_software_images(
         golden='string',
         has_addon_images=True,
         imported=True,
@@ -593,11 +593,11 @@ def returns_count_of_software_images_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_count_of_software_images_v1(api, validator):
+def test_returns_count_of_software_images(api, validator):
     try:
-        assert is_valid_returns_count_of_software_images_v1(
+        assert is_valid_returns_count_of_software_images(
             validator,
-            returns_count_of_software_images_v1(api)
+            returns_count_of_software_images(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -605,8 +605,8 @@ def test_returns_count_of_software_images_v1(api, validator):
             raise original_e
 
 
-def returns_count_of_software_images_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.returns_count_of_software_images_v1(
+def returns_count_of_software_images_default_val(api):
+    endpoint_result = api.software_image_management_swim.returns_count_of_software_images(
         golden=None,
         has_addon_images=None,
         imported=None,
@@ -622,24 +622,24 @@ def returns_count_of_software_images_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_count_of_software_images_v1_default_val(api, validator):
+def test_returns_count_of_software_images_default_val(api, validator):
     try:
-        assert is_valid_returns_count_of_software_images_v1(
+        assert is_valid_returns_count_of_software_images(
             validator,
-            returns_count_of_software_images_v1_default_val(api)
+            returns_count_of_software_images_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_add_image_distribution_server_v1(json_schema_validate, obj):
+def is_valid_add_image_distribution_server(json_schema_validate, obj):
     json_schema_validate('jsd_db0f8e07ae0d5ecc83e34d29e5e57b41_v2_3_7_6_1').validate(obj)
     return True
 
 
-def add_image_distribution_server_v1(api):
-    endpoint_result = api.software_image_management_swim.add_image_distribution_server_v1(
+def add_image_distribution_server(api):
+    endpoint_result = api.software_image_management_swim.add_image_distribution_server(
         active_validation=True,
         password='string',
         payload=None,
@@ -652,11 +652,11 @@ def add_image_distribution_server_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_add_image_distribution_server_v1(api, validator):
+def test_add_image_distribution_server(api, validator):
     try:
-        assert is_valid_add_image_distribution_server_v1(
+        assert is_valid_add_image_distribution_server(
             validator,
-            add_image_distribution_server_v1(api)
+            add_image_distribution_server(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -664,8 +664,8 @@ def test_add_image_distribution_server_v1(api, validator):
             raise original_e
 
 
-def add_image_distribution_server_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.add_image_distribution_server_v1(
+def add_image_distribution_server_default_val(api):
+    endpoint_result = api.software_image_management_swim.add_image_distribution_server(
         active_validation=True,
         password=None,
         payload=None,
@@ -678,35 +678,35 @@ def add_image_distribution_server_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_add_image_distribution_server_v1_default_val(api, validator):
+def test_add_image_distribution_server_default_val(api, validator):
     try:
-        assert is_valid_add_image_distribution_server_v1(
+        assert is_valid_add_image_distribution_server(
             validator,
-            add_image_distribution_server_v1_default_val(api)
+            add_image_distribution_server_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieve_image_distribution_servers_v1(json_schema_validate, obj):
+def is_valid_retrieve_image_distribution_servers(json_schema_validate, obj):
     json_schema_validate('jsd_e2c81db557e753178af3bec81caa7a02_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieve_image_distribution_servers_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieve_image_distribution_servers_v1(
+def retrieve_image_distribution_servers(api):
+    endpoint_result = api.software_image_management_swim.retrieve_image_distribution_servers(
 
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_image_distribution_servers_v1(api, validator):
+def test_retrieve_image_distribution_servers(api, validator):
     try:
-        assert is_valid_retrieve_image_distribution_servers_v1(
+        assert is_valid_retrieve_image_distribution_servers(
             validator,
-            retrieve_image_distribution_servers_v1(api)
+            retrieve_image_distribution_servers(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -714,32 +714,32 @@ def test_retrieve_image_distribution_servers_v1(api, validator):
             raise original_e
 
 
-def retrieve_image_distribution_servers_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieve_image_distribution_servers_v1(
+def retrieve_image_distribution_servers_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieve_image_distribution_servers(
 
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_image_distribution_servers_v1_default_val(api, validator):
+def test_retrieve_image_distribution_servers_default_val(api, validator):
     try:
-        assert is_valid_retrieve_image_distribution_servers_v1(
+        assert is_valid_retrieve_image_distribution_servers(
             validator,
-            retrieve_image_distribution_servers_v1_default_val(api)
+            retrieve_image_distribution_servers_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_remote_image_distribution_server_v1(json_schema_validate, obj):
+def is_valid_update_remote_image_distribution_server(json_schema_validate, obj):
     json_schema_validate('jsd_89c49a8488cd52158790aac513e7184a_v2_3_7_6_1').validate(obj)
     return True
 
 
-def update_remote_image_distribution_server_v1(api):
-    endpoint_result = api.software_image_management_swim.update_remote_image_distribution_server_v1(
+def update_remote_image_distribution_server(api):
+    endpoint_result = api.software_image_management_swim.update_remote_image_distribution_server(
         active_validation=True,
         id='string',
         password='string',
@@ -751,11 +751,11 @@ def update_remote_image_distribution_server_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_update_remote_image_distribution_server_v1(api, validator):
+def test_update_remote_image_distribution_server(api, validator):
     try:
-        assert is_valid_update_remote_image_distribution_server_v1(
+        assert is_valid_update_remote_image_distribution_server(
             validator,
-            update_remote_image_distribution_server_v1(api)
+            update_remote_image_distribution_server(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -763,8 +763,8 @@ def test_update_remote_image_distribution_server_v1(api, validator):
             raise original_e
 
 
-def update_remote_image_distribution_server_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.update_remote_image_distribution_server_v1(
+def update_remote_image_distribution_server_default_val(api):
+    endpoint_result = api.software_image_management_swim.update_remote_image_distribution_server(
         active_validation=True,
         id='string',
         password=None,
@@ -776,35 +776,35 @@ def update_remote_image_distribution_server_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_update_remote_image_distribution_server_v1_default_val(api, validator):
+def test_update_remote_image_distribution_server_default_val(api, validator):
     try:
-        assert is_valid_update_remote_image_distribution_server_v1(
+        assert is_valid_update_remote_image_distribution_server(
             validator,
-            update_remote_image_distribution_server_v1_default_val(api)
+            update_remote_image_distribution_server_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieve_specific_image_distribution_server_v1(json_schema_validate, obj):
+def is_valid_retrieve_specific_image_distribution_server(json_schema_validate, obj):
     json_schema_validate('jsd_fe1411fc463c506591c20a0d6fbabca9_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieve_specific_image_distribution_server_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieve_specific_image_distribution_server_v1(
+def retrieve_specific_image_distribution_server(api):
+    endpoint_result = api.software_image_management_swim.retrieve_specific_image_distribution_server(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_specific_image_distribution_server_v1(api, validator):
+def test_retrieve_specific_image_distribution_server(api, validator):
     try:
-        assert is_valid_retrieve_specific_image_distribution_server_v1(
+        assert is_valid_retrieve_specific_image_distribution_server(
             validator,
-            retrieve_specific_image_distribution_server_v1(api)
+            retrieve_specific_image_distribution_server(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -812,43 +812,43 @@ def test_retrieve_specific_image_distribution_server_v1(api, validator):
             raise original_e
 
 
-def retrieve_specific_image_distribution_server_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieve_specific_image_distribution_server_v1(
+def retrieve_specific_image_distribution_server_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieve_specific_image_distribution_server(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_specific_image_distribution_server_v1_default_val(api, validator):
+def test_retrieve_specific_image_distribution_server_default_val(api, validator):
     try:
-        assert is_valid_retrieve_specific_image_distribution_server_v1(
+        assert is_valid_retrieve_specific_image_distribution_server(
             validator,
-            retrieve_specific_image_distribution_server_v1_default_val(api)
+            retrieve_specific_image_distribution_server_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_remove_image_distribution_server_v1(json_schema_validate, obj):
+def is_valid_remove_image_distribution_server(json_schema_validate, obj):
     json_schema_validate('jsd_8832ba08e3af5db79aaef9e2909aa312_v2_3_7_6_1').validate(obj)
     return True
 
 
-def remove_image_distribution_server_v1(api):
-    endpoint_result = api.software_image_management_swim.remove_image_distribution_server_v1(
+def remove_image_distribution_server(api):
+    endpoint_result = api.software_image_management_swim.remove_image_distribution_server(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_remove_image_distribution_server_v1(api, validator):
+def test_remove_image_distribution_server(api, validator):
     try:
-        assert is_valid_remove_image_distribution_server_v1(
+        assert is_valid_remove_image_distribution_server(
             validator,
-            remove_image_distribution_server_v1(api)
+            remove_image_distribution_server(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -856,43 +856,43 @@ def test_remove_image_distribution_server_v1(api, validator):
             raise original_e
 
 
-def remove_image_distribution_server_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.remove_image_distribution_server_v1(
+def remove_image_distribution_server_default_val(api):
+    endpoint_result = api.software_image_management_swim.remove_image_distribution_server(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_remove_image_distribution_server_v1_default_val(api, validator):
+def test_remove_image_distribution_server_default_val(api, validator):
     try:
-        assert is_valid_remove_image_distribution_server_v1(
+        assert is_valid_remove_image_distribution_server(
             validator,
-            remove_image_distribution_server_v1_default_val(api)
+            remove_image_distribution_server_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieve_applicable_add_on_images_for_the_given_software_image_v1(json_schema_validate, obj):
+def is_valid_retrieve_applicable_add_on_images_for_the_given_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_991f6787ea025b02b69de4030f36cc5c_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieve_applicable_add_on_images_for_the_given_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieve_applicable_add_on_images_for_the_given_software_image_v1(
+def retrieve_applicable_add_on_images_for_the_given_software_image(api):
+    endpoint_result = api.software_image_management_swim.retrieve_applicable_add_on_images_for_the_given_software_image(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_applicable_add_on_images_for_the_given_software_image_v1(api, validator):
+def test_retrieve_applicable_add_on_images_for_the_given_software_image(api, validator):
     try:
-        assert is_valid_retrieve_applicable_add_on_images_for_the_given_software_image_v1(
+        assert is_valid_retrieve_applicable_add_on_images_for_the_given_software_image(
             validator,
-            retrieve_applicable_add_on_images_for_the_given_software_image_v1(api)
+            retrieve_applicable_add_on_images_for_the_given_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -900,43 +900,43 @@ def test_retrieve_applicable_add_on_images_for_the_given_software_image_v1(api, 
             raise original_e
 
 
-def retrieve_applicable_add_on_images_for_the_given_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieve_applicable_add_on_images_for_the_given_software_image_v1(
+def retrieve_applicable_add_on_images_for_the_given_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieve_applicable_add_on_images_for_the_given_software_image(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_applicable_add_on_images_for_the_given_software_image_v1_default_val(api, validator):
+def test_retrieve_applicable_add_on_images_for_the_given_software_image_default_val(api, validator):
     try:
-        assert is_valid_retrieve_applicable_add_on_images_for_the_given_software_image_v1(
+        assert is_valid_retrieve_applicable_add_on_images_for_the_given_software_image(
             validator,
-            retrieve_applicable_add_on_images_for_the_given_software_image_v1_default_val(api)
+            retrieve_applicable_add_on_images_for_the_given_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_returns_count_of_add_on_images_v1(json_schema_validate, obj):
+def is_valid_returns_count_of_add_on_images(json_schema_validate, obj):
     json_schema_validate('jsd_77d86809df17513dbe211ec7c5591a5f_v2_3_7_6_1').validate(obj)
     return True
 
 
-def returns_count_of_add_on_images_v1(api):
-    endpoint_result = api.software_image_management_swim.returns_count_of_add_on_images_v1(
+def returns_count_of_add_on_images(api):
+    endpoint_result = api.software_image_management_swim.returns_count_of_add_on_images(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_count_of_add_on_images_v1(api, validator):
+def test_returns_count_of_add_on_images(api, validator):
     try:
-        assert is_valid_returns_count_of_add_on_images_v1(
+        assert is_valid_returns_count_of_add_on_images(
             validator,
-            returns_count_of_add_on_images_v1(api)
+            returns_count_of_add_on_images(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -944,32 +944,32 @@ def test_returns_count_of_add_on_images_v1(api, validator):
             raise original_e
 
 
-def returns_count_of_add_on_images_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.returns_count_of_add_on_images_v1(
+def returns_count_of_add_on_images_default_val(api):
+    endpoint_result = api.software_image_management_swim.returns_count_of_add_on_images(
         id='string'
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_count_of_add_on_images_v1_default_val(api, validator):
+def test_returns_count_of_add_on_images_default_val(api, validator):
     try:
-        assert is_valid_returns_count_of_add_on_images_v1(
+        assert is_valid_returns_count_of_add_on_images(
             validator,
-            returns_count_of_add_on_images_v1_default_val(api)
+            returns_count_of_add_on_images_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_download_the_software_image_v1(json_schema_validate, obj):
+def is_valid_download_the_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_cd82233a8af55e49ba9a202607561de9_v2_3_7_6_1').validate(obj)
     return True
 
 
-def download_the_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.download_the_software_image_v1(
+def download_the_software_image(api):
+    endpoint_result = api.software_image_management_swim.download_the_software_image(
         active_validation=True,
         id='string',
         payload=None
@@ -978,11 +978,11 @@ def download_the_software_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_download_the_software_image_v1(api, validator):
+def test_download_the_software_image(api, validator):
     try:
-        assert is_valid_download_the_software_image_v1(
+        assert is_valid_download_the_software_image(
             validator,
-            download_the_software_image_v1(api)
+            download_the_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -990,8 +990,8 @@ def test_download_the_software_image_v1(api, validator):
             raise original_e
 
 
-def download_the_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.download_the_software_image_v1(
+def download_the_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.download_the_software_image(
         active_validation=True,
         id='string',
         payload=None
@@ -1000,24 +1000,24 @@ def download_the_software_image_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_download_the_software_image_v1_default_val(api, validator):
+def test_download_the_software_image_default_val(api, validator):
     try:
-        assert is_valid_download_the_software_image_v1(
+        assert is_valid_download_the_software_image(
             validator,
-            download_the_software_image_v1_default_val(api)
+            download_the_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_assign_network_device_product_name_to_the_given_software_image_v1(json_schema_validate, obj):
+def is_valid_assign_network_device_product_name_to_the_given_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_eb4a05f61e475ad0b9e74f963f27ea1d_v2_3_7_6_1').validate(obj)
     return True
 
 
-def assign_network_device_product_name_to_the_given_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.assign_network_device_product_name_to_the_given_software_image_v1(
+def assign_network_device_product_name_to_the_given_software_image(api):
+    endpoint_result = api.software_image_management_swim.assign_network_device_product_name_to_the_given_software_image(
         active_validation=True,
         image_id='string',
         payload=None,
@@ -1028,11 +1028,11 @@ def assign_network_device_product_name_to_the_given_software_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_assign_network_device_product_name_to_the_given_software_image_v1(api, validator):
+def test_assign_network_device_product_name_to_the_given_software_image(api, validator):
     try:
-        assert is_valid_assign_network_device_product_name_to_the_given_software_image_v1(
+        assert is_valid_assign_network_device_product_name_to_the_given_software_image(
             validator,
-            assign_network_device_product_name_to_the_given_software_image_v1(api)
+            assign_network_device_product_name_to_the_given_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1040,8 +1040,8 @@ def test_assign_network_device_product_name_to_the_given_software_image_v1(api, 
             raise original_e
 
 
-def assign_network_device_product_name_to_the_given_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.assign_network_device_product_name_to_the_given_software_image_v1(
+def assign_network_device_product_name_to_the_given_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.assign_network_device_product_name_to_the_given_software_image(
         active_validation=True,
         image_id='string',
         payload=None,
@@ -1052,24 +1052,24 @@ def assign_network_device_product_name_to_the_given_software_image_v1_default_va
 
 
 @pytest.mark.software_image_management_swim
-def test_assign_network_device_product_name_to_the_given_software_image_v1_default_val(api, validator):
+def test_assign_network_device_product_name_to_the_given_software_image_default_val(api, validator):
     try:
-        assert is_valid_assign_network_device_product_name_to_the_given_software_image_v1(
+        assert is_valid_assign_network_device_product_name_to_the_given_software_image(
             validator,
-            assign_network_device_product_name_to_the_given_software_image_v1_default_val(api)
+            assign_network_device_product_name_to_the_given_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_network_device_product_names_assigned_to_a_software_image_v1(json_schema_validate, obj):
+def is_valid_retrieves_network_device_product_names_assigned_to_a_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_fb538ce59b945302bfaf521c6794691e_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieves_network_device_product_names_assigned_to_a_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieves_network_device_product_names_assigned_to_a_software_image_v1(
+def retrieves_network_device_product_names_assigned_to_a_software_image(api):
+    endpoint_result = api.software_image_management_swim.retrieves_network_device_product_names_assigned_to_a_software_image(
         assigned='string',
         image_id='string',
         limit=0,
@@ -1082,11 +1082,11 @@ def retrieves_network_device_product_names_assigned_to_a_software_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieves_network_device_product_names_assigned_to_a_software_image_v1(api, validator):
+def test_retrieves_network_device_product_names_assigned_to_a_software_image(api, validator):
     try:
-        assert is_valid_retrieves_network_device_product_names_assigned_to_a_software_image_v1(
+        assert is_valid_retrieves_network_device_product_names_assigned_to_a_software_image(
             validator,
-            retrieves_network_device_product_names_assigned_to_a_software_image_v1(api)
+            retrieves_network_device_product_names_assigned_to_a_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1094,8 +1094,8 @@ def test_retrieves_network_device_product_names_assigned_to_a_software_image_v1(
             raise original_e
 
 
-def retrieves_network_device_product_names_assigned_to_a_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieves_network_device_product_names_assigned_to_a_software_image_v1(
+def retrieves_network_device_product_names_assigned_to_a_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieves_network_device_product_names_assigned_to_a_software_image(
         assigned=None,
         image_id='string',
         limit=None,
@@ -1108,24 +1108,24 @@ def retrieves_network_device_product_names_assigned_to_a_software_image_v1_defau
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieves_network_device_product_names_assigned_to_a_software_image_v1_default_val(api, validator):
+def test_retrieves_network_device_product_names_assigned_to_a_software_image_default_val(api, validator):
     try:
-        assert is_valid_retrieves_network_device_product_names_assigned_to_a_software_image_v1(
+        assert is_valid_retrieves_network_device_product_names_assigned_to_a_software_image(
             validator,
-            retrieves_network_device_product_names_assigned_to_a_software_image_v1_default_val(api)
+            retrieves_network_device_product_names_assigned_to_a_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_count_of_assigned_network_device_products_v1(json_schema_validate, obj):
+def is_valid_retrieves_the_count_of_assigned_network_device_products(json_schema_validate, obj):
     json_schema_validate('jsd_febd252a9e4d5411bfbb98d538210ea3_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieves_the_count_of_assigned_network_device_products_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieves_the_count_of_assigned_network_device_products_v1(
+def retrieves_the_count_of_assigned_network_device_products(api):
+    endpoint_result = api.software_image_management_swim.retrieves_the_count_of_assigned_network_device_products(
         assigned='string',
         image_id='string',
         product_id='string',
@@ -1136,11 +1136,11 @@ def retrieves_the_count_of_assigned_network_device_products_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieves_the_count_of_assigned_network_device_products_v1(api, validator):
+def test_retrieves_the_count_of_assigned_network_device_products(api, validator):
     try:
-        assert is_valid_retrieves_the_count_of_assigned_network_device_products_v1(
+        assert is_valid_retrieves_the_count_of_assigned_network_device_products(
             validator,
-            retrieves_the_count_of_assigned_network_device_products_v1(api)
+            retrieves_the_count_of_assigned_network_device_products(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1148,8 +1148,8 @@ def test_retrieves_the_count_of_assigned_network_device_products_v1(api, validat
             raise original_e
 
 
-def retrieves_the_count_of_assigned_network_device_products_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieves_the_count_of_assigned_network_device_products_v1(
+def retrieves_the_count_of_assigned_network_device_products_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieves_the_count_of_assigned_network_device_products(
         assigned=None,
         image_id='string',
         product_id=None,
@@ -1160,24 +1160,24 @@ def retrieves_the_count_of_assigned_network_device_products_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieves_the_count_of_assigned_network_device_products_v1_default_val(api, validator):
+def test_retrieves_the_count_of_assigned_network_device_products_default_val(api, validator):
     try:
-        assert is_valid_retrieves_the_count_of_assigned_network_device_products_v1(
+        assert is_valid_retrieves_the_count_of_assigned_network_device_products(
             validator,
-            retrieves_the_count_of_assigned_network_device_products_v1_default_val(api)
+            retrieves_the_count_of_assigned_network_device_products_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_unassign_network_device_product_name_from_the_given_software_image_v1(json_schema_validate, obj):
+def is_valid_unassign_network_device_product_name_from_the_given_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_1ecf7c4398475f279abe95abdf5500f2_v2_3_7_6_1').validate(obj)
     return True
 
 
-def unassign_network_device_product_name_from_the_given_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.unassign_network_device_product_name_from_the_given_software_image_v1(
+def unassign_network_device_product_name_from_the_given_software_image(api):
+    endpoint_result = api.software_image_management_swim.unassign_network_device_product_name_from_the_given_software_image(
         image_id='string',
         product_name_ordinal=0
     )
@@ -1185,11 +1185,11 @@ def unassign_network_device_product_name_from_the_given_software_image_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_unassign_network_device_product_name_from_the_given_software_image_v1(api, validator):
+def test_unassign_network_device_product_name_from_the_given_software_image(api, validator):
     try:
-        assert is_valid_unassign_network_device_product_name_from_the_given_software_image_v1(
+        assert is_valid_unassign_network_device_product_name_from_the_given_software_image(
             validator,
-            unassign_network_device_product_name_from_the_given_software_image_v1(api)
+            unassign_network_device_product_name_from_the_given_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1197,8 +1197,8 @@ def test_unassign_network_device_product_name_from_the_given_software_image_v1(a
             raise original_e
 
 
-def unassign_network_device_product_name_from_the_given_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.unassign_network_device_product_name_from_the_given_software_image_v1(
+def unassign_network_device_product_name_from_the_given_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.unassign_network_device_product_name_from_the_given_software_image(
         image_id='string',
         product_name_ordinal=0
     )
@@ -1206,24 +1206,24 @@ def unassign_network_device_product_name_from_the_given_software_image_v1_defaul
 
 
 @pytest.mark.software_image_management_swim
-def test_unassign_network_device_product_name_from_the_given_software_image_v1_default_val(api, validator):
+def test_unassign_network_device_product_name_from_the_given_software_image_default_val(api, validator):
     try:
-        assert is_valid_unassign_network_device_product_name_from_the_given_software_image_v1(
+        assert is_valid_unassign_network_device_product_name_from_the_given_software_image(
             validator,
-            unassign_network_device_product_name_from_the_given_software_image_v1_default_val(api)
+            unassign_network_device_product_name_from_the_given_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(json_schema_validate, obj):
+def is_valid_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(json_schema_validate, obj):
     json_schema_validate('jsd_2c224ae3007d5486bbc5abb1f88e95e6_v2_3_7_6_1').validate(obj)
     return True
 
 
-def update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(api):
-    endpoint_result = api.software_image_management_swim.update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(
+def update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(api):
+    endpoint_result = api.software_image_management_swim.update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(
         active_validation=True,
         image_id='string',
         payload=None,
@@ -1234,11 +1234,11 @@ def update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the
 
 
 @pytest.mark.software_image_management_swim
-def test_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(api, validator):
+def test_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(api, validator):
     try:
-        assert is_valid_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(
+        assert is_valid_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(
             validator,
-            update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(api)
+            update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1246,8 +1246,8 @@ def test_update_the_list_of_sites_for_the_network_device_product_name_assigned_t
             raise original_e
 
 
-def update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(
+def update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_default_val(api):
+    endpoint_result = api.software_image_management_swim.update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(
         active_validation=True,
         image_id='string',
         payload=None,
@@ -1258,24 +1258,24 @@ def update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the
 
 
 @pytest.mark.software_image_management_swim
-def test_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1_default_val(api, validator):
+def test_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_default_val(api, validator):
     try:
-        assert is_valid_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1(
+        assert is_valid_update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image(
             validator,
-            update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_v1_default_val(api)
+            update_the_list_of_sites_for_the_network_device_product_name_assigned_to_the_software_image_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_network_device_image_updates_v1(json_schema_validate, obj):
+def is_valid_get_network_device_image_updates(json_schema_validate, obj):
     json_schema_validate('jsd_8581ab118a78541c9b7e3f3857d6d1f5_v2_3_7_6_1').validate(obj)
     return True
 
 
-def get_network_device_image_updates_v1(api):
-    endpoint_result = api.software_image_management_swim.get_network_device_image_updates_v1(
+def get_network_device_image_updates(api):
+    endpoint_result = api.software_image_management_swim.get_network_device_image_updates(
         end_time=0,
         host_name='string',
         id='string',
@@ -1294,11 +1294,11 @@ def get_network_device_image_updates_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_get_network_device_image_updates_v1(api, validator):
+def test_get_network_device_image_updates(api, validator):
     try:
-        assert is_valid_get_network_device_image_updates_v1(
+        assert is_valid_get_network_device_image_updates(
             validator,
-            get_network_device_image_updates_v1(api)
+            get_network_device_image_updates(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1306,8 +1306,8 @@ def test_get_network_device_image_updates_v1(api, validator):
             raise original_e
 
 
-def get_network_device_image_updates_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.get_network_device_image_updates_v1(
+def get_network_device_image_updates_default_val(api):
+    endpoint_result = api.software_image_management_swim.get_network_device_image_updates(
         end_time=None,
         host_name=None,
         id=None,
@@ -1326,24 +1326,24 @@ def get_network_device_image_updates_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_get_network_device_image_updates_v1_default_val(api, validator):
+def test_get_network_device_image_updates_default_val(api, validator):
     try:
-        assert is_valid_get_network_device_image_updates_v1(
+        assert is_valid_get_network_device_image_updates(
             validator,
-            get_network_device_image_updates_v1_default_val(api)
+            get_network_device_image_updates_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_count_of_network_device_image_updates_v1(json_schema_validate, obj):
+def is_valid_count_of_network_device_image_updates(json_schema_validate, obj):
     json_schema_validate('jsd_9138034de19e56c5aab0f9d10589871d_v2_3_7_6_1').validate(obj)
     return True
 
 
-def count_of_network_device_image_updates_v1(api):
-    endpoint_result = api.software_image_management_swim.count_of_network_device_image_updates_v1(
+def count_of_network_device_image_updates(api):
+    endpoint_result = api.software_image_management_swim.count_of_network_device_image_updates(
         end_time=0,
         host_name='string',
         id='string',
@@ -1358,11 +1358,11 @@ def count_of_network_device_image_updates_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_count_of_network_device_image_updates_v1(api, validator):
+def test_count_of_network_device_image_updates(api, validator):
     try:
-        assert is_valid_count_of_network_device_image_updates_v1(
+        assert is_valid_count_of_network_device_image_updates(
             validator,
-            count_of_network_device_image_updates_v1(api)
+            count_of_network_device_image_updates(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1370,8 +1370,8 @@ def test_count_of_network_device_image_updates_v1(api, validator):
             raise original_e
 
 
-def count_of_network_device_image_updates_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.count_of_network_device_image_updates_v1(
+def count_of_network_device_image_updates_default_val(api):
+    endpoint_result = api.software_image_management_swim.count_of_network_device_image_updates(
         end_time=None,
         host_name=None,
         id=None,
@@ -1386,24 +1386,24 @@ def count_of_network_device_image_updates_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_count_of_network_device_image_updates_v1_default_val(api, validator):
+def test_count_of_network_device_image_updates_default_val(api, validator):
     try:
-        assert is_valid_count_of_network_device_image_updates_v1(
+        assert is_valid_count_of_network_device_image_updates(
             validator,
-            count_of_network_device_image_updates_v1_default_val(api)
+            count_of_network_device_image_updates_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_list_of_network_device_product_names_v1(json_schema_validate, obj):
+def is_valid_retrieves_the_list_of_network_device_product_names(json_schema_validate, obj):
     json_schema_validate('jsd_73b13b416b145acba7f74764f49364cd_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieves_the_list_of_network_device_product_names_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieves_the_list_of_network_device_product_names_v1(
+def retrieves_the_list_of_network_device_product_names(api):
+    endpoint_result = api.software_image_management_swim.retrieves_the_list_of_network_device_product_names(
         limit=0,
         offset=0,
         product_id='string',
@@ -1413,11 +1413,11 @@ def retrieves_the_list_of_network_device_product_names_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieves_the_list_of_network_device_product_names_v1(api, validator):
+def test_retrieves_the_list_of_network_device_product_names(api, validator):
     try:
-        assert is_valid_retrieves_the_list_of_network_device_product_names_v1(
+        assert is_valid_retrieves_the_list_of_network_device_product_names(
             validator,
-            retrieves_the_list_of_network_device_product_names_v1(api)
+            retrieves_the_list_of_network_device_product_names(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1425,8 +1425,8 @@ def test_retrieves_the_list_of_network_device_product_names_v1(api, validator):
             raise original_e
 
 
-def retrieves_the_list_of_network_device_product_names_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieves_the_list_of_network_device_product_names_v1(
+def retrieves_the_list_of_network_device_product_names_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieves_the_list_of_network_device_product_names(
         limit=None,
         offset=None,
         product_id=None,
@@ -1436,24 +1436,24 @@ def retrieves_the_list_of_network_device_product_names_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieves_the_list_of_network_device_product_names_v1_default_val(api, validator):
+def test_retrieves_the_list_of_network_device_product_names_default_val(api, validator):
     try:
-        assert is_valid_retrieves_the_list_of_network_device_product_names_v1(
+        assert is_valid_retrieves_the_list_of_network_device_product_names(
             validator,
-            retrieves_the_list_of_network_device_product_names_v1_default_val(api)
+            retrieves_the_list_of_network_device_product_names_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_count_of_network_product_names_v1(json_schema_validate, obj):
+def is_valid_count_of_network_product_names(json_schema_validate, obj):
     json_schema_validate('jsd_09f933fdff7c5744a163227040d0367b_v2_3_7_6_1').validate(obj)
     return True
 
 
-def count_of_network_product_names_v1(api):
-    endpoint_result = api.software_image_management_swim.count_of_network_product_names_v1(
+def count_of_network_product_names(api):
+    endpoint_result = api.software_image_management_swim.count_of_network_product_names(
         product_id='string',
         product_name='string'
     )
@@ -1461,11 +1461,11 @@ def count_of_network_product_names_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_count_of_network_product_names_v1(api, validator):
+def test_count_of_network_product_names(api, validator):
     try:
-        assert is_valid_count_of_network_product_names_v1(
+        assert is_valid_count_of_network_product_names(
             validator,
-            count_of_network_product_names_v1(api)
+            count_of_network_product_names(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1473,8 +1473,8 @@ def test_count_of_network_product_names_v1(api, validator):
             raise original_e
 
 
-def count_of_network_product_names_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.count_of_network_product_names_v1(
+def count_of_network_product_names_default_val(api):
+    endpoint_result = api.software_image_management_swim.count_of_network_product_names(
         product_id=None,
         product_name=None
     )
@@ -1482,35 +1482,35 @@ def count_of_network_product_names_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_count_of_network_product_names_v1_default_val(api, validator):
+def test_count_of_network_product_names_default_val(api, validator):
     try:
-        assert is_valid_count_of_network_product_names_v1(
+        assert is_valid_count_of_network_product_names(
             validator,
-            count_of_network_product_names_v1_default_val(api)
+            count_of_network_product_names_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieve_network_device_product_name_v1(json_schema_validate, obj):
+def is_valid_retrieve_network_device_product_name(json_schema_validate, obj):
     json_schema_validate('jsd_a6c00bdb02675408b8f0fb0107dcb7ed_v2_3_7_6_1').validate(obj)
     return True
 
 
-def retrieve_network_device_product_name_v1(api):
-    endpoint_result = api.software_image_management_swim.retrieve_network_device_product_name_v1(
+def retrieve_network_device_product_name(api):
+    endpoint_result = api.software_image_management_swim.retrieve_network_device_product_name(
         product_name_ordinal=0
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_network_device_product_name_v1(api, validator):
+def test_retrieve_network_device_product_name(api, validator):
     try:
-        assert is_valid_retrieve_network_device_product_name_v1(
+        assert is_valid_retrieve_network_device_product_name(
             validator,
-            retrieve_network_device_product_name_v1(api)
+            retrieve_network_device_product_name(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1518,32 +1518,32 @@ def test_retrieve_network_device_product_name_v1(api, validator):
             raise original_e
 
 
-def retrieve_network_device_product_name_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.retrieve_network_device_product_name_v1(
+def retrieve_network_device_product_name_default_val(api):
+    endpoint_result = api.software_image_management_swim.retrieve_network_device_product_name(
         product_name_ordinal=0
     )
     return endpoint_result
 
 
 @pytest.mark.software_image_management_swim
-def test_retrieve_network_device_product_name_v1_default_val(api, validator):
+def test_retrieve_network_device_product_name_default_val(api, validator):
     try:
-        assert is_valid_retrieve_network_device_product_name_v1(
+        assert is_valid_retrieve_network_device_product_name(
             validator,
-            retrieve_network_device_product_name_v1_default_val(api)
+            retrieve_network_device_product_name_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_returns_network_device_product_names_for_a_site_v1(json_schema_validate, obj):
+def is_valid_returns_network_device_product_names_for_a_site(json_schema_validate, obj):
     json_schema_validate('jsd_9293a2ca9a4f55d0b44d7041186b9bab_v2_3_7_6_1').validate(obj)
     return True
 
 
-def returns_network_device_product_names_for_a_site_v1(api):
-    endpoint_result = api.software_image_management_swim.returns_network_device_product_names_for_a_site_v1(
+def returns_network_device_product_names_for_a_site(api):
+    endpoint_result = api.software_image_management_swim.returns_network_device_product_names_for_a_site(
         limit=0,
         offset=0,
         product_name='string',
@@ -1553,11 +1553,11 @@ def returns_network_device_product_names_for_a_site_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_network_device_product_names_for_a_site_v1(api, validator):
+def test_returns_network_device_product_names_for_a_site(api, validator):
     try:
-        assert is_valid_returns_network_device_product_names_for_a_site_v1(
+        assert is_valid_returns_network_device_product_names_for_a_site(
             validator,
-            returns_network_device_product_names_for_a_site_v1(api)
+            returns_network_device_product_names_for_a_site(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1565,8 +1565,8 @@ def test_returns_network_device_product_names_for_a_site_v1(api, validator):
             raise original_e
 
 
-def returns_network_device_product_names_for_a_site_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.returns_network_device_product_names_for_a_site_v1(
+def returns_network_device_product_names_for_a_site_default_val(api):
+    endpoint_result = api.software_image_management_swim.returns_network_device_product_names_for_a_site(
         limit=None,
         offset=None,
         product_name=None,
@@ -1576,24 +1576,24 @@ def returns_network_device_product_names_for_a_site_v1_default_val(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_network_device_product_names_for_a_site_v1_default_val(api, validator):
+def test_returns_network_device_product_names_for_a_site_default_val(api, validator):
     try:
-        assert is_valid_returns_network_device_product_names_for_a_site_v1(
+        assert is_valid_returns_network_device_product_names_for_a_site(
             validator,
-            returns_network_device_product_names_for_a_site_v1_default_val(api)
+            returns_network_device_product_names_for_a_site_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_returns_the_count_of_network_device_product_names_for_a_site_v1(json_schema_validate, obj):
+def is_valid_returns_the_count_of_network_device_product_names_for_a_site(json_schema_validate, obj):
     json_schema_validate('jsd_241ade3fee0a5a8eb0a7ced03126d560_v2_3_7_6_1').validate(obj)
     return True
 
 
-def returns_the_count_of_network_device_product_names_for_a_site_v1(api):
-    endpoint_result = api.software_image_management_swim.returns_the_count_of_network_device_product_names_for_a_site_v1(
+def returns_the_count_of_network_device_product_names_for_a_site(api):
+    endpoint_result = api.software_image_management_swim.returns_the_count_of_network_device_product_names_for_a_site(
         product_name='string',
         site_id='string'
     )
@@ -1601,11 +1601,11 @@ def returns_the_count_of_network_device_product_names_for_a_site_v1(api):
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_the_count_of_network_device_product_names_for_a_site_v1(api, validator):
+def test_returns_the_count_of_network_device_product_names_for_a_site(api, validator):
     try:
-        assert is_valid_returns_the_count_of_network_device_product_names_for_a_site_v1(
+        assert is_valid_returns_the_count_of_network_device_product_names_for_a_site(
             validator,
-            returns_the_count_of_network_device_product_names_for_a_site_v1(api)
+            returns_the_count_of_network_device_product_names_for_a_site(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1613,8 +1613,8 @@ def test_returns_the_count_of_network_device_product_names_for_a_site_v1(api, va
             raise original_e
 
 
-def returns_the_count_of_network_device_product_names_for_a_site_v1_default_val(api):
-    endpoint_result = api.software_image_management_swim.returns_the_count_of_network_device_product_names_for_a_site_v1(
+def returns_the_count_of_network_device_product_names_for_a_site_default_val(api):
+    endpoint_result = api.software_image_management_swim.returns_the_count_of_network_device_product_names_for_a_site(
         product_name=None,
         site_id=None
     )
@@ -1622,11 +1622,11 @@ def returns_the_count_of_network_device_product_names_for_a_site_v1_default_val(
 
 
 @pytest.mark.software_image_management_swim
-def test_returns_the_count_of_network_device_product_names_for_a_site_v1_default_val(api, validator):
+def test_returns_the_count_of_network_device_product_names_for_a_site_default_val(api, validator):
     try:
-        assert is_valid_returns_the_count_of_network_device_product_names_for_a_site_v1(
+        assert is_valid_returns_the_count_of_network_device_product_names_for_a_site(
             validator,
-            returns_the_count_of_network_device_product_names_for_a_site_v1_default_val(api)
+            returns_the_count_of_network_device_product_names_for_a_site_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
