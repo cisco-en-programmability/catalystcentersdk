@@ -66,7 +66,7 @@ class Compliance(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_compliance_status_v1(self,
+    def get_compliance_status(self,
                                  compliance_status=None,
                                  device_uuid=None,
                                  headers=None,
@@ -130,7 +130,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_a1de7ff46fa5da09c5051c06ad07f2c_v2_3_7_6_1', json_data)
 
-    def run_compliance_v1(self,
+    def run_compliance(self,
                           categories=None,
                           deviceUuids=None,
                           triggerFull=None,
@@ -217,7 +217,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_a0a8d545698d1d59a9be90e51_v2_3_7_6_1', json_data)
 
-    def get_compliance_status_count_v1(self,
+    def get_compliance_status_count(self,
                                        compliance_status=None,
                                        headers=None,
                                        **request_parameters):
@@ -276,7 +276,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_c37ce8136584f9e2ed471fc896ef9_v2_3_7_6_1', json_data)
 
-    def get_compliance_detail_v1(self,
+    def get_compliance_detail(self,
                                  compliance_status=None,
                                  compliance_type=None,
                                  device_uuid=None,
@@ -357,7 +357,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_adeaeb8157da972efb7b91e1e2cb_v2_3_7_6_1', json_data)
 
-    def get_compliance_detail_count_v1(self,
+    def get_compliance_detail_count(self,
                                        compliance_status=None,
                                        compliance_type=None,
                                        headers=None,
@@ -423,7 +423,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_d3d38fed534f5aeaa80f5a8c63694708_v2_3_7_6_1', json_data)
 
-    def compliance_remediation_v1(self,
+    def compliance_remediation(self,
                                   id,
                                   headers=None,
                                   **request_parameters):
@@ -486,7 +486,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_a233477d86a459eab3c5e9352c1c9d3e_v2_3_7_6_1', json_data)
 
-    def device_compliance_status_v1(self,
+    def device_compliance_status(self,
                                     device_uuid,
                                     headers=None,
                                     **request_parameters):
@@ -543,7 +543,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_da8e5cdd435db0b1da1684be8f15b8_v2_3_7_6_1', json_data)
 
-    def compliance_details_of_device_v1(self,
+    def compliance_details_of_device(self,
                                         device_uuid,
                                         category=None,
                                         compliance_type=None,
@@ -618,7 +618,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_b70e1b6a2f51a59690669a4b2fd3f0_v2_3_7_6_1', json_data)
 
-    def get_config_task_details_v1(self,
+    def get_config_task_details(self,
                                    parent_task_id,
                                    headers=None,
                                    **request_parameters):
@@ -676,7 +676,7 @@ class Compliance(object):
 
         return self._object_factory('bpm_cb73c1c44665d1ebbe934dd380f4f5e_v2_3_7_6_1', json_data)
 
-    def commit_device_configuration_v1(self,
+    def commit_device_configuration(self,
                                        deviceId=None,
                                        headers=None,
                                        payload=None,
@@ -750,314 +750,3 @@ class Compliance(object):
                                            json=_payload)
 
         return self._object_factory('bpm_ba40975123ed50daa2f9f599cdf2d911_v2_3_7_6_1', json_data)
-
-                
-    
-    # Alias Function
-    def get_compliance_detail_count(self,
-                                       compliance_status=None,
-                                       compliance_type=None,
-                                       headers=None,
-                                       **request_parameters):
-        """This function is an alias of get_compliance_detail_count_v1 .
-
-        Args:
-            compliance_type(str): complianceType query parameter. Specify "Compliance type(s)" separated by
-                commas. The Compliance type can be 'APPLICATION_VISIBILITY', 'EOX', 'FABRIC', 'IMAGE',
-                'NETWORK_PROFILE', 'NETWORK_SETTINGS', 'PSIRT', 'RUNNING_CONFIG', 'WORKFLOW'.  .
-            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)"
-                separated by commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT',
-                'IN_PROGRESS', 'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_compliance_detail_count_v1.
-        """  
-        return self.get_compliance_detail_count_v1(
-                    compliance_status=compliance_status,
-                    compliance_type=compliance_type,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def compliance_remediation(self,
-                                  id,
-                                  headers=None,
-                                  **request_parameters):
-        """This function is an alias of compliance_remediation_v1. .
-
-        Args:
-            id(str): id path parameter. Network device identifier .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of compliance_remediation_v1.
-        """  
-        return self.compliance_remediation_v1(
-                    id=id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_compliance_detail(self,
-                                 compliance_status=None,
-                                 compliance_type=None,
-                                 device_uuid=None,
-                                 limit=None,
-                                 offset=None,
-                                 headers=None,
-                                 **request_parameters):
-        """This function is an alias of get_compliance_detail_v1  .
-
-        Args:
-            compliance_type(str): complianceType query parameter. Specify "Compliance type(s)" in commas. The
-                Compliance type can be 'NETWORK_PROFILE', 'IMAGE', 'FABRIC', 'APPLICATION_VISIBILITY',
-                'FABRIC', RUNNING_CONFIG', 'NETWORK_SETTINGS', 'WORKFLOW' , 'EOX'. .
-            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)" in
-                commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT', 'IN_PROGRESS',
-                'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
-            device_uuid(str): deviceUuid query parameter. Comma separated "Device Id(s)" .
-            offset(int): offset query parameter. offset/starting row .
-            limit(int): limit query parameter. Number of records to be retrieved .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_compliance_detail_v1.
-        """  
-        return self.get_compliance_detail_v1(
-                    compliance_status=compliance_status,
-                    compliance_type=compliance_type,
-                    device_uuid=device_uuid,
-                    limit=limit,
-                    offset=offset,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_config_task_details(self,
-                                   parent_task_id,
-                                   headers=None,
-                                   **request_parameters):
-        """This function is an alias of get_config_task_details_v1 .
-
-        Args:
-            parent_task_id(str): parentTaskId query parameter. task Id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_config_task_details_v1.
-        """  
-        return self.get_config_task_details_v1(
-                    parent_task_id=parent_task_id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_compliance_status(self,
-                                 compliance_status=None,
-                                 device_uuid=None,
-                                 headers=None,
-                                 **request_parameters):
-        """This function is an alias of get_compliance_status_v1. .
-
-        Args:
-            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)"
-                separated by commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT',
-                'IN_PROGRESS', 'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
-            device_uuid(str): deviceUuid query parameter. Comma separated 'Device Ids' .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_compliance_status_v1.
-        """  
-        return self.get_compliance_status_v1(
-                    compliance_status=compliance_status,
-                    device_uuid=device_uuid,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def device_compliance_status(self,
-                                    device_uuid,
-                                    headers=None,
-                                    **request_parameters):
-        """This function is an alias of device_compliance_status_v1. .
-
-        Args:
-            device_uuid(str): deviceUuid path parameter. Device Id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of device_compliance_status_v1.
-        """
-        return self.device_compliance_status_v1(
-                    device_uuid=device_uuid,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def commit_device_configuration(self,
-                                       deviceId=None,
-                                       headers=None,
-                                       payload=None,
-                                       active_validation=True,
-                                       **request_parameters):
-        """This function is an alias of commit_device_configuration_v1 .
-
-        Args:
-            deviceId(list): Compliance's UUID of the device.  (list of strings).
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of commit_device_configuration_v1.
-        """  
-        return self.commit_device_configuration_v1(
-                    deviceId=deviceId,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def compliance_details_of_device(self,
-                                        device_uuid,
-                                        category=None,
-                                        compliance_type=None,
-                                        diff_list=None,
-                                        headers=None,
-                                        **request_parameters):
-        """This function is an alias of compliance_details_of_device_v1. .
-
-        Args:
-            device_uuid(str): deviceUuid path parameter. Device Id .
-            category(str): category query parameter. category can have any value among 'INTENT',
-                'RUNNING_CONFIG' , 'IMAGE' , 'PSIRT' , 'DESIGN_OOD' , 'EOX' , 'NETWORK_SETTINGS' .
-            compliance_type(str): complianceType query parameter. Specify "Compliance type(s)" separated by
-                commas. The Compliance type can be 'APPLICATION_VISIBILITY', 'EOX', 'FABRIC', 'IMAGE',
-                'NETWORK_PROFILE', 'NETWORK_SETTINGS', 'PSIRT', 'RUNNING_CONFIG', 'WORKFLOW'.  .
-            diff_list(bool): diffList query parameter. diff list [ pass true to fetch the diff list ] .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of compliance_details_of_device_v1.
-        """
-        return self.compliance_details_of_device_v1(
-                    device_uuid=device_uuid,
-                    category=category,
-                    compliance_type=compliance_type,
-                    diff_list=diff_list,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_compliance_status_count(self,
-                                       compliance_status=None,
-                                       headers=None,
-                                       **request_parameters):
-        """This function is an alias of get_compliance_status_count_v1 .
-
-        Args:
-            compliance_status(str): complianceStatus query parameter. Specify "Compliance status(es)"
-                separated by commas. The Compliance status can be 'COMPLIANT', 'NON_COMPLIANT',
-                'IN_PROGRESS', 'NOT_AVAILABLE', 'NOT_APPLICABLE', 'ERROR'. .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_compliance_status_count_v1.
-        """  
-        return self.get_compliance_status_count_v1(
-                    compliance_status=compliance_status,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def run_compliance(self,
-                          categories=None,
-                          deviceUuids=None,
-                          triggerFull=None,
-                          headers=None,
-                          payload=None,
-                          active_validation=True,
-                          **request_parameters):
-        """This function is an alias of run_compliance_v1. .
-
-        Args:
-            categories(list): Compliance's Category can have any value among 'INTENT'(mapped to compliance types:
-                NETWORK_SETTINGS,NETWORK_PROFILE,WORKFLOW,FABRIC,APPLICATION_VISIBILITY),
-                'RUNNING_CONFIG' , 'IMAGE' , 'PSIRT' , 'EOX' , 'NETWORK_SETTINGS'  (list of strings).
-            deviceUuids(list): Compliance's UUID of the device.  (list of strings).
-            triggerFull(boolean): Compliance's if it is true then compliance will be triggered for all categories.
-                If it is false then compliance will be triggered for categories mentioned in categories
-                section . .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of run_compliance_v1.
-        """  
-        return self.run_compliance_v1(
-                    categories=categories,
-                    deviceUuids=deviceUuids,
-                    triggerFull=triggerFull,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-

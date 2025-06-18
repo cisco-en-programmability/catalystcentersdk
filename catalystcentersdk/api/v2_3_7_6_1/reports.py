@@ -66,7 +66,7 @@ class Reports(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def download_flexible_report_v1(self,
+    def download_flexible_report(self,
                                     execution_id,
                                     report_id,
                                     headers=None,
@@ -135,7 +135,7 @@ class Reports(object):
 
         return self._object_factory('bpm_fc4acf45953f5b68be682c3c5906bf14_v2_3_7_6_1', json_data)
 
-    def executing_the_flexible_report_v1(self,
+    def executing_the_flexible_report(self,
                                          report_id,
                                          headers=None,
                                          **request_parameters):
@@ -196,7 +196,7 @@ class Reports(object):
 
         return self._object_factory('bpm_c2c0c5f9fa208985865f05eca_v2_3_7_6_1', json_data)
 
-    def get_execution_id_by_report_id_v1(self,
+    def get_execution_id_by_report_id(self,
                                          report_id,
                                          headers=None,
                                          **request_parameters):
@@ -257,7 +257,7 @@ class Reports(object):
 
         return self._object_factory('bpm_edf3c4d58586fb15a5b62256f94a6_v2_3_7_6_1', json_data)
 
-    def update_schedule_of_flexible_report_v1(self,
+    def update_schedule_of_flexible_report(self,
                                               report_id,
                                               schedule=None,
                                               headers=None,
@@ -337,7 +337,7 @@ class Reports(object):
 
         return self._object_factory('bpm_a93d01238de0537dbb3d358f9cce0bd2_v2_3_7_6_1', json_data)
 
-    def get_flexible_report_schedule_by_report_id_v1(self,
+    def get_flexible_report_schedule_by_report_id(self,
                                                      report_id,
                                                      headers=None,
                                                      **request_parameters):
@@ -394,7 +394,7 @@ class Reports(object):
 
         return self._object_factory('bpm_a2a4b5bdcace5b55a5962ae85ff59d87_v2_3_7_6_1', json_data)
 
-    def get_all_flexible_report_schedules_v1(self,
+    def get_all_flexible_report_schedules(self,
                                              headers=None,
                                              **request_parameters):
         """Get all flexible report schedules .
@@ -450,7 +450,7 @@ class Reports(object):
 
         return self._object_factory('bpm_dfd5cfd8a985505aaa606be4599319f_v2_3_7_6_1', json_data)
 
-    def create_or_schedule_a_report_v1(self,
+    def create_or_schedule_a_report(self,
                                        dataCategory=None,
                                        deliveries=None,
                                        name=None,
@@ -554,7 +554,7 @@ class Reports(object):
 
         return self._object_factory('bpm_fa310ab095148bdb00d7d3d5e1676_v2_3_7_6_1', json_data)
 
-    def get_list_of_scheduled_reports_v1(self,
+    def get_list_of_scheduled_reports(self,
                                          view_group_id=None,
                                          view_id=None,
                                          headers=None,
@@ -617,7 +617,7 @@ class Reports(object):
 
         return self._object_factory('bpm_d89e1c3e150ef9faaff44fa483de5_v2_3_7_6_1', json_data)
 
-    def get_a_scheduled_report_v1(self,
+    def get_a_scheduled_report(self,
                                   report_id,
                                   headers=None,
                                   **request_parameters):
@@ -674,7 +674,7 @@ class Reports(object):
 
         return self._object_factory('bpm_f9cb7c424b5502b4ad54ccbb1ca4f4_v2_3_7_6_1', json_data)
 
-    def delete_a_scheduled_report_v1(self,
+    def delete_a_scheduled_report(self,
                                      report_id,
                                      headers=None,
                                      **request_parameters):
@@ -731,7 +731,7 @@ class Reports(object):
 
         return self._object_factory('bpm_a6a151b68d450dfaf1e8a92e0f5cc68_v2_3_7_6_1', json_data)
 
-    def get_all_execution_details_for_a_given_report_v1(self,
+    def get_all_execution_details_for_a_given_report(self,
                                                         report_id,
                                                         headers=None,
                                                         **request_parameters):
@@ -788,7 +788,7 @@ class Reports(object):
 
         return self._object_factory('bpm_a4b1ca0320185570bc12da238f0e88bb_v2_3_7_6_1', json_data)
 
-    def download_report_content_v1(self,
+    def download_report_content(self,
                                    execution_id,
                                    report_id,
                                    headers=None,
@@ -853,7 +853,7 @@ class Reports(object):
 
         return self._object_factory('bpm_b2790cdb5abf98c8e00011de86a4_v2_3_7_6_1', json_data)
 
-    def get_all_view_groups_v1(self,
+    def get_all_view_groups(self,
                                headers=None,
                                **request_parameters):
         """Gives a list of summary of all view groups. .
@@ -906,7 +906,7 @@ class Reports(object):
 
         return self._object_factory('bpm_bbff833d5d5756698f4764a9d488cc98_v2_3_7_6_1', json_data)
 
-    def get_views_for_a_given_view_group_v1(self,
+    def get_views_for_a_given_view_group(self,
                                             view_group_id,
                                             headers=None,
                                             **request_parameters):
@@ -1027,370 +1027,3 @@ class Reports(object):
             json_data = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_d1944177c95598ebd1986582dc8069a_v2_3_7_6_1', json_data)
-
-
-
-    # Alias Function
-    def create_or_schedule_a_report(self,
-                                       dataCategory=None,
-                                       deliveries=None,
-                                       name=None,
-                                       schedule=None,
-                                       tags=None,
-                                       view=None,
-                                       viewGroupId=None,
-                                       viewGroupVersion=None,
-                                       headers=None,
-                                       payload=None,
-                                       active_validation=True,
-                                       **request_parameters):
-        """ This function is an alias of create_or_schedule_a_report_v1 .
-        Args:
-            dataCategory(string): Reports's category of viewgroup for the report .
-            deliveries(list): Reports's Array of available delivery channels  (list of objects).
-            name(string): Reports's report name .
-            schedule(object): Reports's schedule.
-            tags(list): Reports's array of tags for report  (list of strings).
-            view(object): Reports's view.
-            viewGroupId(string): Reports's viewGroupId of the viewgroup for the report .
-            viewGroupVersion(string): Reports's version of viewgroup for the report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_or_schedule_a_report_v1 .
-        """
-        return self.create_or_schedule_a_report_v1(
-                    dataCategory=dataCategory,
-                    deliveries=deliveries,
-                    name=name,
-                    schedule=schedule,
-                    tags=tags,
-                    view=view,
-                    viewGroupId=viewGroupId,
-                    viewGroupVersion=viewGroupVersion,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_execution_id_by_report_id(self,
-                                         report_id,
-                                         headers=None,
-                                         **request_parameters):
-        """ This function is an alias of get_execution_id_by_report_id_v1 .
-        Args:
-            report_id(str): reportId path parameter. Id of the report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_execution_id_by_report_id_v1 .
-        """
-        return self.get_execution_id_by_report_id_v1(
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_all_view_groups(self,
-                               headers=None,
-                               **request_parameters):
-        """ This function is an alias of get_all_view_groups_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_all_view_groups_v1 .
-        """
-        return self.get_all_view_groups_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def executing_the_flexible_report(self,
-                                         report_id,
-                                         headers=None,
-                                         **request_parameters):
-        """ This function is an alias of executing_the_flexible_report_v1 .
-        Args:
-            report_id(str): reportId path parameter. Id of the Report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of executing_the_flexible_report_v1 .
-        """
-        return self.executing_the_flexible_report_v1(
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_a_scheduled_report(self,
-                                  report_id,
-                                  headers=None,
-                                  **request_parameters):
-        """ This function is an alias of get_a_scheduled_report_v1 .
-        Args:
-            report_id(str): reportId path parameter. reportId of report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_a_scheduled_report_v1 .
-        """
-        return self.get_a_scheduled_report_v1(
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def update_schedule_of_flexible_report(self,
-                                              report_id,
-                                              schedule=None,
-                                              headers=None,
-                                              payload=None,
-                                              active_validation=True,
-                                              **request_parameters):
-        """ This function is an alias of update_schedule_of_flexible_report_v1 .
-        Args:
-            schedule(object): Reports's Schedule information .
-            report_id(str): reportId path parameter. Id of the report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of update_schedule_of_flexible_report_v1 .
-        """
-        return self.update_schedule_of_flexible_report_v1(
-                    report_id=report_id,
-                    schedule=schedule,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_all_execution_details_for_a_given_report(self,
-                                                        report_id,
-                                                        headers=None,
-                                                        **request_parameters):
-        """ This function is an alias of get_all_execution_details_for_a_given_report_v1 .
-        Args:
-            report_id(str): reportId path parameter. reportId of report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_all_execution_details_for_a_given_report_v1 .
-        """
-        return self.get_all_execution_details_for_a_given_report_v1(
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_all_flexible_report_schedules(self,
-                                             headers=None,
-                                             **request_parameters):
-        """ This function is an alias of get_all_flexible_report_schedules_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_all_flexible_report_schedules_v1 .
-        """
-        return self.get_all_flexible_report_schedules_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def download_flexible_report(self,
-                                    execution_id,
-                                    report_id,
-                                    headers=None,
-                                    **request_parameters):
-        """ This function is an alias of download_flexible_report_v1 .
-        Args:
-            report_id(str): reportId path parameter. Id of the report .
-            execution_id(str): executionId path parameter. Id of execution .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of download_flexible_report_v1 .
-        """
-        return self.download_flexible_report_v1(
-                    execution_id=execution_id,
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_list_of_scheduled_reports(self,
-                                         view_group_id=None,
-                                         view_id=None,
-                                         headers=None,
-                                         **request_parameters):
-        """ This function is an alias of get_list_of_scheduled_reports_v1 .
-        Args:
-            view_group_id(str): viewGroupId query parameter. viewGroupId of viewgroup for report .
-            view_id(str): viewId query parameter. viewId of view for report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_list_of_scheduled_reports_v1 .
-        """
-        return self.get_list_of_scheduled_reports_v1(
-                    view_group_id=view_group_id,
-                    view_id=view_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def download_report_content(self,
-                                   execution_id,
-                                   report_id,
-                                   headers=None,
-                                   **request_parameters):
-        """ This function is an alias of download_report_content_v1 .
-        Args:
-            report_id(str): reportId path parameter. reportId of report .
-            execution_id(str): executionId path parameter. executionId of report execution .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of download_report_content_v1 .
-        """
-        return self.download_report_content_v1(
-                    execution_id=execution_id,
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_views_for_a_given_view_group(self,
-                                            view_group_id,
-                                            headers=None,
-                                            **request_parameters):
-        """ This function is an alias of get_views_for_a_given_view_group_v1 .
-        Args:
-            view_group_id(str): viewGroupId path parameter. viewGroupId of viewgroup. .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_views_for_a_given_view_group_v1 .
-        """
-        return self.get_views_for_a_given_view_group_v1(
-                    view_group_id=view_group_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def delete_a_scheduled_report(self,
-                                     report_id,
-                                     headers=None,
-                                     **request_parameters):
-        """ This function is an alias of delete_a_scheduled_report_v1 .
-        Args:
-            report_id(str): reportId path parameter. reportId of report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of delete_a_scheduled_report_v1 .
-        """
-        return self.delete_a_scheduled_report_v1(
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_flexible_report_schedule_by_report_id(self,
-                                                     report_id,
-                                                     headers=None,
-                                                     **request_parameters):
-        """ This function is an alias of get_flexible_report_schedule_by_report_id_v1 .
-        Args:
-            report_id(str): reportId path parameter. Id of the report .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_flexible_report_schedule_by_report_id_v1 .
-        """
-        return self.get_flexible_report_schedule_by_report_id_v1(
-                    report_id=report_id,
-                    headers=headers,
-                    **request_parameters
-        )
-

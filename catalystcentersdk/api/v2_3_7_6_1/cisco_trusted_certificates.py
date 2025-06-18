@@ -66,7 +66,7 @@ class CiscoTrustedCertificates(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def import_trusted_certificate_v1(self,
+    def import_trusted_certificate(self,
                                       headers=None,
                                       **request_parameters):
         """Imports trusted certificate into a truststore. Accepts .pem or .der file as input. .
@@ -120,27 +120,3 @@ class CiscoTrustedCertificates(object):
             json_data = self._session.post(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ebe0eab8e1785bec83a1e155112fb70e_v2_3_7_6_1', json_data)
-
-                
-    
-    # Alias Function
-    def import_trusted_certificate(self,
-                                      headers=None,
-                                      **request_parameters):
-        """This function is an alias of import_trusted_certificate_v1. .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of import_trusted_certificate_v1.
-        """  
-        return self.import_trusted_certificate_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-

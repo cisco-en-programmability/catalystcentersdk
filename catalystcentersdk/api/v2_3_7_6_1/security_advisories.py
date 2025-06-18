@@ -66,7 +66,7 @@ class SecurityAdvisories(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_advisories_list_v1(self,
+    def get_advisories_list(self,
                                headers=None,
                                **request_parameters):
         """Retrieves list of advisories on the network .
@@ -118,7 +118,7 @@ class SecurityAdvisories(object):
 
         return self._object_factory('bpm_e6317a46c835f0881f08071959bb026_v2_3_7_6_1', json_data)
 
-    def get_advisories_summary_v1(self,
+    def get_advisories_summary(self,
                                   headers=None,
                                   **request_parameters):
         """Retrieves summary of advisories on the network. .
@@ -170,7 +170,7 @@ class SecurityAdvisories(object):
 
         return self._object_factory('bpm_b24a5127510a8070b0f893494543_v2_3_7_6_1', json_data)
 
-    def get_devices_per_advisory_v1(self,
+    def get_devices_per_advisory(self,
                                     advisory_id,
                                     headers=None,
                                     **request_parameters):
@@ -228,7 +228,7 @@ class SecurityAdvisories(object):
 
         return self._object_factory('bpm_cbdf8887b29b5f0ea87113d2ae17d6df_v2_3_7_6_1', json_data)
 
-    def get_advisory_device_detail_v1(self,
+    def get_advisory_device_detail(self,
                                       device_id,
                                       headers=None,
                                       **request_parameters):
@@ -285,7 +285,7 @@ class SecurityAdvisories(object):
 
         return self._object_factory('bpm_b1c03688485b44b1547c428a887c5d_v2_3_7_6_1', json_data)
 
-    def get_advisories_per_device_v1(self,
+    def get_advisories_per_device(self,
                                      device_id,
                                      headers=None,
                                      **request_parameters):
@@ -342,116 +342,3 @@ class SecurityAdvisories(object):
             json_data = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_cf75923b0c6575ead874f9d404d7355_v2_3_7_6_1', json_data)
-
-
-
-    # Alias Function
-    def get_advisories_summary(self,
-                                  headers=None,
-                                  **request_parameters):
-        """ This function is an alias of get_advisories_summary_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_advisories_summary_v1 .
-        """
-        return self.get_advisories_summary_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_advisory_device_detail(self,
-                                      device_id,
-                                      headers=None,
-                                      **request_parameters):
-        """ This function is an alias of get_advisory_device_detail_v1 .
-        Args:
-            device_id(str): deviceId path parameter. Device instance UUID .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_advisory_device_detail_v1 .
-        """
-        return self.get_advisory_device_detail_v1(
-                    device_id=device_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_devices_per_advisory(self,
-                                    advisory_id,
-                                    headers=None,
-                                    **request_parameters):
-        """ This function is an alias of get_devices_per_advisory_v1 .
-        Args:
-            advisory_id(str): advisoryId path parameter. Advisory ID .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_devices_per_advisory_v1 .
-        """
-        return self.get_devices_per_advisory_v1(
-                    advisory_id=advisory_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_advisories_per_device(self,
-                                     device_id,
-                                     headers=None,
-                                     **request_parameters):
-        """ This function is an alias of get_advisories_per_device_v1 .
-        Args:
-            device_id(str): deviceId path parameter. Device instance UUID .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_advisories_per_device_v1 .
-        """
-        return self.get_advisories_per_device_v1(
-                    device_id=device_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_advisories_list(self,
-                               headers=None,
-                               **request_parameters):
-        """ This function is an alias of get_advisories_list_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_advisories_list_v1 .
-        """
-        return self.get_advisories_list_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-
