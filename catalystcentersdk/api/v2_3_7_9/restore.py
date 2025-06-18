@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Cisco Catalyst Center Command Runner API wrapper.
+"""Cisco Catalyst Center Restore API wrapper.
 
 Copyright (c) 2025 Cisco Systems.
 
@@ -36,17 +36,17 @@ from ...utils import (
 )
 
 
-class CommandRunner(object):
-    """Cisco Catalyst Center Command Runner API (version: 2.3.7.9).
+class Restore(object):
+    """Cisco Catalyst Center Restore API (version: 2.3.7.9).
 
-    Wraps the Catalyst Center Command Runner
+    Wraps the Catalyst Center Restore
     API and exposes the API as native Python
     methods that return native Python objects.
 
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new CommandRunner
+        """Initialize a new Restore
         object with the provided RestSession.
 
         Args:
@@ -59,83 +59,28 @@ class CommandRunner(object):
         """
         check_type(session, RestSession)
 
-        super(CommandRunner, self).__init__()
+        super(Restore, self).__init__()
 
         self._session = session
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_keywords_of_clis_accepted(self,
-                                          headers=None,
-                                          **request_parameters):
-        """Get valid keywords .
+    def restore_backup(self,
+                       id,
+                       encryptionPassphrase=None,
+                       headers=None,
+                       payload=None,
+                       active_validation=True,
+                       **request_parameters):
+        """This api is used to trigger restore workflow of a specific backup. Obtain the `id` from the id attribute in the
+        response of the `/dna/system/api/v1/backups` API. To monitor the progress and completion of the backup
+        deletion , please call `/dna/system/api/v1/backupRestoreExecutions/{id}` api , where id is the taskId
+        attribute from the response of the curent endpoint. .
 
         Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            MyDict: JSON response. Access the object's properties by using
-            the dot notation or the bracket notation.
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Catalyst Center cloud returns an error.
-        Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!get-all-keywords-of-clis-accepted-by-command-runner
-        """
-        check_type(headers, dict)
-        if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
-
-        _params = {
-        }
-        _params.update(request_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-        }
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-
-        e_url = ('/dna/intent/api/v1/network-device-poller/cli/legit-reads')
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
-        else:
-            json_data = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory('bpm_e946adf864590082fe3111a2a2fa74_v2_3_7_9', json_data)
-
-    def run_read_only_commands_on_devices(self,
-                                          commands=None,
-                                          description=None,
-                                          deviceUuids=None,
-                                          name=None,
-                                          timeout=None,
-                                          headers=None,
-                                          payload=None,
-                                          active_validation=True,
-                                          **request_parameters):
-        """Submit request for read-only CLIs .
-
-        Args:
-            commands(list): Command Runner's Commands to be executed  (list of strings).
-            description(string): Command Runner's Describe the details about the command request .
-            deviceUuids(list): Command Runner's Device Id of the device  (list of strings).
-            name(string): Command Runner's Name of the the request like getshowrun , deviceinterfacestatusCli. .
-            timeout(integer): Command Runner's The timeout value in unit of second. If no timeout provided wait till
-                300sec .
+            encryptionPassphrase(string): Restore's Passphrase to restore backup .
+            id(str): id path parameter. The `id` of the backup to be restored.Obtain the `id` from the id attribute
+                in the response of the `/dna/system/api/v1/backups` API. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -154,10 +99,12 @@ class CommandRunner(object):
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!run-read-only-commands-on-devices-to-get-their-real-time-configuration
+            https://developer.cisco.com/docs/dna-center/#!restore-backup
         """
         check_type(headers, dict)
         check_type(payload, dict)
+        check_type(id, str,
+                   may_be_none=False)
         if headers is not None:
             if 'Content-Type' in headers:
                 check_type(headers.get('Content-Type'),
@@ -172,23 +119,16 @@ class CommandRunner(object):
         _params = dict_from_items_with_values(_params)
 
         path_params = {
+            'id': id,
         }
         _payload = {
-            'commands':
-                commands,
-            'description':
-                description,
-            'deviceUuids':
-                deviceUuids,
-            'name':
-                name,
-            'timeout':
-                timeout,
+            'encryptionPassphrase':
+                encryptionPassphrase,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_b2dae3b41636596aa02c3ad0a4bcb8d7_v2_3_7_9')\
+            self._request_validator('jsd_b5a94fd2d97514b8a9cf73df4e154b8_v2_3_7_9')\
                 .validate(_payload)
 
         with_custom_headers = False
@@ -197,8 +137,7 @@ class CommandRunner(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/network-device-poller/cli/read-'
-                 + 'request')
+        e_url = ('/dna/system/api/v1/backups/{id}/restore')
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             json_data = self._session.post(endpoint_full_url, params=_params,
@@ -208,6 +147,6 @@ class CommandRunner(object):
             json_data = self._session.post(endpoint_full_url, params=_params,
                                            json=_payload)
 
-        return self._object_factory('bpm_b2dae3b41636596aa02c3ad0a4bcb8d7_v2_3_7_9', json_data)
+        return self._object_factory('bpm_b5a94fd2d97514b8a9cf73df4e154b8_v2_3_7_9', json_data)
 
 
