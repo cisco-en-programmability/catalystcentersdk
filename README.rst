@@ -18,7 +18,7 @@ catalystcentersdk
     catalyst = api.CatalystCenterAPI(username="devnetuser",
                             password="Cisco123!",
                             base_url="https://sandboxdnac.cisco.com:443",
-                            version='2.3.7.9',
+                            version='3.1.3.0',
                             verify=True)
 
     # Find all devices that have 'Switches and Hubs' in their family
@@ -151,10 +151,10 @@ The following table shows the supported versions.
      - Python "catalystcentersdk" version
    * - 2.3.7.6
      - 2.3.7.6.x
-   * - 2.3.7.7
-     - 2.3.7.9.4
    * - 2.3.7.9
      - 2.3.7.9.x
+   * - 3.1.3.0
+     - 3.1.3.0.x
 
 
 

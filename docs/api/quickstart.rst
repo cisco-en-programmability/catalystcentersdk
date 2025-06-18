@@ -27,7 +27,7 @@ By default, catalystcentersdk will look for the following environment variables 
 
     * ``CATALYST_CENTER_DEBUG`` - Tells the SDK whether to log request and response information. Useful for debugging and seeing what is going on under the hood. Defaults to False.
 
-    * ``CATALYST_CENTER_VERSION`` - CatalystCenter API version to use. Defaults to '2.3.7.6'.
+    * ``CATALYST_CENTER_VERSION`` - CatalystCenter API version to use. Defaults to '3.1.3.0'.
 
     * ``CATALYST_CENTER_ENCODED_AUTH`` - It takes priority. It is the `username:password` encoded in base 64.
       For example 'ZGV2bmV0dXNlcjpDaXNjbzEyMyEK' which decoded is 'devnetuser:Cisco123!'
@@ -126,12 +126,12 @@ If you don't provide a known version and try to create a new :class:`CatalystCen
 .. code-block:: python
 
     >>> from catalystcentersdk import CatalystCenterAPI
-    >>> api = CatalystCenterAPI(username='devnetuser', password='Cisco123!', base_url='https://sandboxdnac.cisco.com:443', version='0.1.12')
+    >>> api = CatalystCenterAPI(username='devnetuser', password='Cisco123!', base_url='https://sandboxdnac.cisco.com:443', version='3.1.3.0')
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
       File "catalystcentersdk/__init__.py", line 209, in __init__
         raise VersionError(error_message)
-    VersionError: Unknown API version, known versions are  2.2.2.3, 2.2.3.3, 2.3.3.0, 2.3.5.3 and 2.3.7.6.
+    VersionError: Unknown API version, known versions are  2.3.7.6, 2.3.7.9 and 3.1.3.0.
 
 
 Use the arguments to manually provide enough information for the HTTP Basic Auth process,
@@ -140,15 +140,15 @@ when creating a new :class:`CatalystCenterAPI` connection object.
 .. code-block:: python
 
     >>> from catalystcentersdk import CatalystCenterAPI
-    >>> # Create a CatalystCenterAPI connection object; it uses CatalystCenter sandbox URL and encoded_auth, with CatalystCenter API version 2.3.7.6
-    >>> api = CatalystCenterAPI(encoded_auth='ZGV2bmV0dXNlcjpDaXNjbzEyMyEK', base_url="https://sandboxdnac.cisco.com:443", version='2.3.7.6')
+    >>> # Create a CatalystCenterAPI connection object; it uses CatalystCenter sandbox URL and encoded_auth, with CatalystCenter API version 3.1.3.0
+    >>> api = CatalystCenterAPI(encoded_auth='ZGV2bmV0dXNlcjpDaXNjbzEyMyEK', base_url="https://sandboxdnac.cisco.com:443", version='3.1.3.0')
 
 .. code-block:: python
 
     >>> from catalystcentersdk import CatalystCenterAPI
-    >>> # Create a CatalystCenterAPI connection object; it uses CatalystCenter username and password, with CatalystCenter API version 2.3.7.6
+    >>> # Create a CatalystCenterAPI connection object; it uses CatalystCenter username and password, with CatalystCenter API version 3.1.3.0
     >>> # The base_url used by default is `from catalystcentersdk.config import DEFAULT_BASE_URL`
-    >>> api = CatalystCenterAPI(username='devnetuser', password='Cisco123!', base_url="https://sandboxdnac.cisco.com:443", version='2.3.7.6')
+    >>> api = CatalystCenterAPI(username='devnetuser', password='Cisco123!', base_url="https://sandboxdnac.cisco.com:443", version='3.1.3.0')
 
 Note that this can be very useful if you are reading authentication credentials
 from a file or database and/or when you want to create more than one connection object.
@@ -158,8 +158,8 @@ from a file or database and/or when you want to create more than one connection 
     >>> from catalystcentersdk import CatalystCenterAPI
     >>> kingston_auth = 'ZG5hY2VudGVydXNlcjpDaXNjbzEyMyEK'
     >>> london_auth = ('london', 'rcx0cf43!')
-    >>> kingston_api = CatalystCenterAPI(encoded_auth=kingston_auth, base_url="https://sandboxdnac.cisco.com:443", version='2.3.7.6')
-    >>> london_api = CatalystCenterAPI(*london_auth, base_url="https://128.107.71.199:443", version='2.3.7.6')  # * Unpacks tuple
+    >>> kingston_api = CatalystCenterAPI(encoded_auth=kingston_auth, base_url="https://sandboxdnac.cisco.com:443", version='3.1.3.0')
+    >>> london_api = CatalystCenterAPI(*london_auth, base_url="https://128.107.71.199:443", version='3.1.3.0')  # * Unpacks tuple
 
 
 Certificates
@@ -175,7 +175,7 @@ To avoid getting errors like the following:
 
     >>> from catalystcentersdk import CatalystCenterAPI
     >>> own_api = CatalystCenterAPI(encoded_auth='dXNlcm5hbWU6cGFzc3dvcmQK',
-    ... base_url="https://128.107.71.199:443", version='2.3.7.6')
+    ... base_url="https://128.107.71.199:443", version='3.1.3.0')
     requests.exceptions.SLError: HTTPSConnectionPool(host='128.107.71.199', port=443):
     Max retries exceeded with url: /dna/system/api/v1/auth/token (Caused by
     SSLError (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate
@@ -276,7 +276,11 @@ A summary of the structure is available for each version supported
 
 
 
-+ :ref:`v2.3.7.6 <v2_3_7_6 summary>`
++ :ref:`v2.3.7.6 <v2_3_7_6_1 summary>`
+
++ :ref:`v2.3.7.9 <v2_3_7_9 summary>`
+
++ :ref:`v3.1.3.0 <v3_1_3_0 summary>`
 
 You can easily access and call any of these methods directly from your
 :class:`CatalystCenterAPI` connection object:
@@ -542,12 +546,12 @@ Custom caller functions help you:
     from catalystcentersdk import api
 
     # Create a CatalystCenterAPI connection object;
-    # it uses CatalystCenter sandbox URL, username and password, with CatalystCenter API version 2.3.7.6.,
+    # it uses CatalystCenter sandbox URL, username and password, with CatalystCenter API version 3.1.3.0.,
     # and requests to verify the server's TLS certificate with verify=True.
     api_ = api.CatalystCenterAPI(username="devnetuser",
                             password="Cisco123!",
                             base_url="https://sandboxdnac.cisco.com:443",
-                            version='2.3.7.6',
+                            version='3.1.3.0',
                             verify=True)
 
     # Add your custom API call to the connection object.

@@ -32,8 +32,7 @@ from tests.environment import (
 
 from catalystcentersdk.api.authentication import Authentication
 
-
-from catalystcentersdk.catalystcentersdk.api.v2_3_7_6_1.ai_endpoint_analytics import \
+from catalystcentersdk.api.v2_3_7_6_1.ai_endpoint_analytics import \
     AIEndpointAnalytics as AIEndpointAnalytics_v2_3_7_6_1
 from catalystcentersdk.api.v2_3_7_6_1.application_policy import \
     ApplicationPolicy as ApplicationPolicy_v2_3_7_6_1
@@ -202,6 +201,103 @@ from catalystcentersdk.api.v2_3_7_9.users import \
     Users as Users_v2_3_7_9
 from catalystcentersdk.api.v2_3_7_9.wireless import \
     Wireless as Wireless_v2_3_7_9
+
+from catalystcentersdk.api.v3_1_3_0.ai_endpoint_analytics import \
+    AIEndpointAnalytics as AIEndpointAnalytics_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.application_policy import \
+    ApplicationPolicy as ApplicationPolicy_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.applications import \
+    Applications as Applications_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.authentication_management import \
+    AuthenticationManagement as AuthenticationManagement_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.backup import \
+    Backup as Backup_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.cisco_i_m_c import \
+    CiscoIMC as CiscoIMC_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.cisco_trusted_certificates import \
+    CiscoTrustedCertificates as CiscoTrustedCertificates_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.clients import \
+    Clients as Clients_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.command_runner import \
+    CommandRunner as CommandRunner_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.compliance import \
+    Compliance as Compliance_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.configuration_archive import \
+    ConfigurationArchive as ConfigurationArchive_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.configuration_templates import \
+    ConfigurationTemplates as ConfigurationTemplates_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.device_onboarding_pnp import \
+    DeviceOnboardingPnp as DeviceOnboardingPnp_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.device_replacement import \
+    DeviceReplacement as DeviceReplacement_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.devices import \
+    Devices as Devices_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.disaster_recovery import \
+    DisasterRecovery as DisasterRecovery_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.discovery import \
+    Discovery as Discovery_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.eox import \
+    EoX as Eox_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.event_management import \
+    EventManagement as EventManagement_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.fabric_wireless import \
+    FabricWireless as FabricWireless_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.file import \
+    File as File_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.health_and_performance import \
+    HealthAndPerformance as HealthAndPerformance_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.itsm import \
+    Itsm as Itsm_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.itsm_integration import \
+    ItsmIntegration as ItsmIntegration_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.industrial_configuration import \
+    IndustrialConfiguration as IndustrialConfiguration_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.issues import \
+    Issues as Issues_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.know_your_network import \
+    KnowYourNetwork as KnowYourNetwork_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.lan_automation import \
+    LanAutomation as LanAutomation_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.licenses import \
+    Licenses as Licenses_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.network_settings import \
+    NetworkSettings as NetworkSettings_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.path_trace import \
+    PathTrace as PathTrace_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.platform import \
+    Platform as Platform_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.reports import \
+    Reports as Reports_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.restore import \
+    Restore as Restore_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.sda import \
+    Sda as Sda_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.security_advisories import \
+    SecurityAdvisories as SecurityAdvisories_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.sensors import \
+    Sensors as Sensors_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.site_design import \
+    SiteDesign as SiteDesign_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.sites import \
+    Sites as Sites_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.software_image_management_swim import \
+    SoftwareImageManagementSwim as SoftwareImageManagementSwim_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.system_settings import \
+    SystemSettings as SystemSettings_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.tag import \
+    Tag as Tag_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.task import \
+    Task as Task_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.topology import \
+    Topology as Topology_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.user_and_roles import \
+    UserandRoles as UserandRoles_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.users import \
+    Users as Users_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.wired import \
+    Wired as Wired_v3_1_3_0
+from catalystcentersdk.api.v3_1_3_0.wireless import \
+    Wireless as Wireless_v3_1_3_0
 
 from catalystcentersdk.api.custom_caller import CustomCaller
 
@@ -377,3 +473,53 @@ class TestCatalystCenterSDK:
             assert isinstance(api.userand_roles, UserandRoles_v2_3_7_9)
             assert isinstance(api.users, Users_v2_3_7_9)
             assert isinstance(api.wireless, Wireless_v2_3_7_9)
+
+        if api.version == '3.1.3.0':
+            assert isinstance(api.a_i_endpoint_analytics, AIEndpointAnalytics_v3_1_3_0)
+            assert isinstance(api.application_policy, ApplicationPolicy_v3_1_3_0)
+            assert isinstance(api.applications, Applications_v3_1_3_0)
+            assert isinstance(api.authentication_management, AuthenticationManagement_v3_1_3_0)
+            assert isinstance(api.backup, Backup_v3_1_3_0)
+            assert isinstance(api.cisco_i_m_c, CiscoIMC_v3_1_3_0)
+            assert isinstance(api.cisco_trusted_certificates, CiscoTrustedCertificates_v3_1_3_0)
+            assert isinstance(api.clients, Clients_v3_1_3_0)
+            assert isinstance(api.command_runner, CommandRunner_v3_1_3_0)
+            assert isinstance(api.compliance, Compliance_v3_1_3_0)
+            assert isinstance(api.configuration_archive, ConfigurationArchive_v3_1_3_0)
+            assert isinstance(api.configuration_templates, ConfigurationTemplates_v3_1_3_0)
+            assert isinstance(api.device_onboarding_pnp, DeviceOnboardingPnp_v3_1_3_0)
+            assert isinstance(api.device_replacement, DeviceReplacement_v3_1_3_0)
+            assert isinstance(api.devices, Devices_v3_1_3_0)
+            assert isinstance(api.disaster_recovery, DisasterRecovery_v3_1_3_0)
+            assert isinstance(api.discovery, Discovery_v3_1_3_0)
+            assert isinstance(api.eox, Eox_v3_1_3_0)
+            assert isinstance(api.event_management, EventManagement_v3_1_3_0)
+            assert isinstance(api.fabric_wireless, FabricWireless_v3_1_3_0)
+            assert isinstance(api.file, File_v3_1_3_0)
+            assert isinstance(api.health_and_performance, HealthAndPerformance_v3_1_3_0)
+            assert isinstance(api.itsm, Itsm_v3_1_3_0)
+            assert isinstance(api.itsm_integration, ItsmIntegration_v3_1_3_0)
+            assert isinstance(api.industrial_configuration, IndustrialConfiguration_v3_1_3_0)
+            assert isinstance(api.issues, Issues_v3_1_3_0)
+            assert isinstance(api.know_your_network, KnowYourNetwork_v3_1_3_0)
+            assert isinstance(api.lan_automation, LanAutomation_v3_1_3_0)
+            assert isinstance(api.licenses, Licenses_v3_1_3_0)
+            assert isinstance(api.network_settings, NetworkSettings_v3_1_3_0)
+            assert isinstance(api.path_trace, PathTrace_v3_1_3_0)
+            assert isinstance(api.platform, Platform_v3_1_3_0)
+            assert isinstance(api.reports, Reports_v3_1_3_0)
+            assert isinstance(api.restore, Restore_v3_1_3_0)
+            assert isinstance(api.sda, Sda_v3_1_3_0)
+            assert isinstance(api.security_advisories, SecurityAdvisories_v3_1_3_0)
+            assert isinstance(api.sensors, Sensors_v3_1_3_0)
+            assert isinstance(api.site_design, SiteDesign_v3_1_3_0)
+            assert isinstance(api.sites, Sites_v3_1_3_0)
+            assert isinstance(api.software_image_management_swim, SoftwareImageManagementSwim_v3_1_3_0)
+            assert isinstance(api.system_settings, SystemSettings_v3_1_3_0)
+            assert isinstance(api.tag, Tag_v3_1_3_0)
+            assert isinstance(api.task, Task_v3_1_3_0)
+            assert isinstance(api.topology, Topology_v3_1_3_0)
+            assert isinstance(api.user_and_roles, UserandRoles_v3_1_3_0)
+            assert isinstance(api.users, Users_v3_1_3_0)
+            assert isinstance(api.wired, Wired_v3_1_3_0)
+            assert isinstance(api.wireless, Wireless_v3_1_3_0)

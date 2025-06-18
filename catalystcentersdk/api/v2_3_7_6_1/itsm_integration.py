@@ -66,7 +66,7 @@ class ItsmIntegration(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def create_itsm_integration_setting_v1(self,
+    def create_itsm_integration_setting(self,
                                            data=None,
                                            description=None,
                                            dypName=None,
@@ -150,7 +150,7 @@ class ItsmIntegration(object):
 
         return self._object_factory('bpm_bb01b6bd31b53bfb12bbe327320392e_v2_3_7_6_1', json_data)
 
-    def update_itsm_integration_setting_v1(self,
+    def update_itsm_integration_setting(self,
                                            instance_id,
                                            data=None,
                                            description=None,
@@ -240,7 +240,7 @@ class ItsmIntegration(object):
 
         return self._object_factory('bpm_c9b5b83e67195b649077a05e42897cc4_v2_3_7_6_1', json_data)
 
-    def get_itsm_integration_setting_by_id_v1(self,
+    def get_itsm_integration_setting_by_id(self,
                                               instance_id,
                                               headers=None,
                                               **request_parameters):
@@ -298,7 +298,7 @@ class ItsmIntegration(object):
 
         return self._object_factory('bpm_ca7a97d4665bca9634b6fb41cd7d29_v2_3_7_6_1', json_data)
 
-    def delete_itsm_integration_setting_v1(self,
+    def delete_itsm_integration_setting(self,
                                            instance_id,
                                            headers=None,
                                            **request_parameters):
@@ -356,7 +356,7 @@ class ItsmIntegration(object):
 
         return self._object_factory('bpm_ae71ae83f7f530c81e650c1455567e8_v2_3_7_6_1', json_data)
 
-    def get_all_itsm_integration_settings_v1(self,
+    def get_all_itsm_integration_settings(self,
                                              headers=None,
                                              **request_parameters):
         """Fetches all ITSM Integration settings .
@@ -409,7 +409,7 @@ class ItsmIntegration(object):
 
         return self._object_factory('bpm_ac54638bea4157f2bbd03f329ac25e27_v2_3_7_6_1', json_data)
 
-    def get_itsm_integration_status_v1(self,
+    def get_itsm_integration_status(self,
                                        headers=None,
                                        **request_parameters):
         """Fetches ITSM Integration status .
@@ -460,175 +460,3 @@ class ItsmIntegration(object):
             json_data = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_e8398520e0aa5a549ddb60c11581b93d_v2_3_7_6_1', json_data)
-
-
-
-    # Alias Function
-    def create_itsm_integration_setting(self,
-                                           data=None,
-                                           description=None,
-                                           dypName=None,
-                                           name=None,
-                                           headers=None,
-                                           payload=None,
-                                           active_validation=True,
-                                           **request_parameters):
-        """ This function is an alias of create_itsm_integration_setting_v1 .
-        Args:
-            data(object): ITSM Integration's data.
-            description(string): ITSM Integration's Description of the setting instance .
-            dypName(string): ITSM Integration's It can be ServiceNowConnection .
-            name(string): ITSM Integration's Name of the setting instance .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_itsm_integration_setting_v1 .
-        """
-        return self.create_itsm_integration_setting_v1(
-                    data=data,
-                    description=description,
-                    dypName=dypName,
-                    name=name,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_all_itsm_integration_settings(self,
-                                             headers=None,
-                                             **request_parameters):
-        """ This function is an alias of get_all_itsm_integration_settings_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_all_itsm_integration_settings_v1 .
-        """
-        return self.get_all_itsm_integration_settings_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_itsm_integration_status(self,
-                                       headers=None,
-                                       **request_parameters):
-        """ This function is an alias of get_itsm_integration_status_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_itsm_integration_status_v1 .
-        """
-        return self.get_itsm_integration_status_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def update_itsm_integration_setting(self,
-                                           instance_id,
-                                           data=None,
-                                           description=None,
-                                           dypName=None,
-                                           name=None,
-                                           headers=None,
-                                           payload=None,
-                                           active_validation=True,
-                                           **request_parameters):
-        """ This function is an alias of update_itsm_integration_setting_v1 .
-        Args:
-            data(object): ITSM Integration's data.
-            description(string): ITSM Integration's Description of the setting instance .
-            dypName(string): ITSM Integration's It can be ServiceNowConnection .
-            name(string): ITSM Integration's Name of the setting instance .
-            instance_id(str): instanceId path parameter. Instance Id of the Integration setting instance .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of update_itsm_integration_setting_v1 .
-        """
-        return self.update_itsm_integration_setting_v1(
-                    instance_id=instance_id,
-                    data=data,
-                    description=description,
-                    dypName=dypName,
-                    name=name,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_itsm_integration_setting_by_id(self,
-                                              instance_id,
-                                              headers=None,
-                                              **request_parameters):
-        """ This function is an alias of get_itsm_integration_setting_by_id_v1 .
-        Args:
-            instance_id(str): instanceId path parameter. Instance Id of the Integration setting instance .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_itsm_integration_setting_by_id_v1 .
-        """
-        return self.get_itsm_integration_setting_by_id_v1(
-                    instance_id=instance_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def delete_itsm_integration_setting(self,
-                                           instance_id,
-                                           headers=None,
-                                           **request_parameters):
-        """ This function is an alias of delete_itsm_integration_setting_v1 .
-        Args:
-            instance_id(str): instanceId path parameter. Instance Id of the Integration setting instance .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of delete_itsm_integration_setting_v1 .
-        """
-        return self.delete_itsm_integration_setting_v1(
-                    instance_id=instance_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-

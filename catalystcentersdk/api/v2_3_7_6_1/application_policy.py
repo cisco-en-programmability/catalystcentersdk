@@ -66,7 +66,7 @@ class ApplicationPolicy(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_application_policy_v1(self,
+    def get_application_policy(self,
                                   policy_scope=None,
                                   headers=None,
                                   **request_parameters):
@@ -123,7 +123,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_fae4378ef4e2503f9fef4f3a4ddd4de4_v2_3_7_6_1', json_data)
 
-    def get_application_policy_default_v1(self,
+    def get_application_policy_default(self,
                                           headers=None,
                                           **request_parameters):
         """Get default application policy .
@@ -175,7 +175,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_d1b2e541bb85dea8192cd474be4e3ad_v2_3_7_6_1', json_data)
 
-    def application_policy_intent_v1(self,
+    def application_policy_intent(self,
                                      createList=None,
                                      deleteList=None,
                                      updateList=None,
@@ -258,7 +258,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_fa27ccbaf55711849381a707e1edfa_v2_3_7_6_1', json_data)
 
-    def get_application_policy_queuing_profile_v1(self,
+    def get_application_policy_queuing_profile(self,
                                                   name=None,
                                                   headers=None,
                                                   **request_parameters):
@@ -315,7 +315,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_d47102747c9e50ed9e365b1297e4188d_v2_3_7_6_1', json_data)
 
-    def update_application_policy_queuing_profile_v1(self,
+    def update_application_policy_queuing_profile(self,
                                                      headers=None,
                                                      payload=None,
                                                      active_validation=True,
@@ -380,7 +380,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_b11aa4de387251c794665e030fa815da_v2_3_7_6_1', json_data)
 
-    def create_application_policy_queuing_profile_v1(self,
+    def create_application_policy_queuing_profile(self,
                                                      headers=None,
                                                      payload=None,
                                                      active_validation=True,
@@ -445,7 +445,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_bd31fcbd1ecd5a2c8b812088b27bfcea_v2_3_7_6_1', json_data)
 
-    def get_application_policy_queuing_profile_count_v1(self,
+    def get_application_policy_queuing_profile_count(self,
                                                         headers=None,
                                                         **request_parameters):
         """Get the number of all existing  application policy queuing profile .
@@ -497,7 +497,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_a22faef865d55fe48dd2467bee214518_v2_3_7_6_1', json_data)
 
-    def delete_application_policy_queuing_profile_v1(self,
+    def delete_application_policy_queuing_profile(self,
                                                      id,
                                                      headers=None,
                                                      **request_parameters):
@@ -554,7 +554,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_ac547ee07c2c5aff983d90cf4306619d_v2_3_7_6_1', json_data)
 
-    def get_application_sets_v1(self,
+    def get_application_sets(self,
                                 limit=None,
                                 name=None,
                                 offset=None,
@@ -621,7 +621,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_b60dbd805b95030bc2caf345a44b504_v2_3_7_6_1', json_data)
 
-    def delete_application_set_v1(self,
+    def delete_application_set(self,
                                   id,
                                   headers=None,
                                   **request_parameters):
@@ -679,7 +679,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_a59a448c5c25f1e8246d6827e6e3215_v2_3_7_6_1', json_data)
 
-    def create_application_set_v1(self,
+    def create_application_set(self,
                                   headers=None,
                                   payload=None,
                                   active_validation=True,
@@ -744,7 +744,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_cb7563a5058c4801eb842a74ff61c_v2_3_7_6_1', json_data)
 
-    def get_application_sets_count_v1(self,
+    def get_application_sets_count(self,
                                       headers=None,
                                       **request_parameters):
         """Get the number of existing application-sets  .
@@ -797,7 +797,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_ebc5880945305adb41253c6e4ffec_v2_3_7_6_1', json_data)
 
-    def create_application_v1(self,
+    def create_application(self,
                               headers=None,
                               payload=None,
                               active_validation=True,
@@ -862,7 +862,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_e1781a990c6b5a4b895d56bcfda2b7cb_v2_3_7_6_1', json_data)
 
-    def edit_application_v1(self,
+    def edit_application(self,
                             headers=None,
                             payload=None,
                             active_validation=True,
@@ -927,7 +927,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_a3b37dcbe2a150bea06d9dcde1837281_v2_3_7_6_1', json_data)
 
-    def delete_application_v1(self,
+    def delete_application(self,
                               id,
                               headers=None,
                               **request_parameters):
@@ -985,7 +985,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_d11d35f3505652b68905ddf1ee2f7e66_v2_3_7_6_1', json_data)
 
-    def get_applications_v1(self,
+    def get_applications(self,
                             limit=None,
                             name=None,
                             offset=None,
@@ -1053,7 +1053,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_b12cdd3a75c51258c9e051e84189f92_v2_3_7_6_1', json_data)
 
-    def get_applications_count_v1(self,
+    def get_applications_count(self,
                                   headers=None,
                                   **request_parameters):
         """Get the number of all existing applications .
@@ -1105,7 +1105,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_af5f0aa1ed56ab9b98eb602dbd8366_v2_3_7_6_1', json_data)
 
-    def get_qos_device_interface_info_v1(self,
+    def get_qos_device_interface_info(self,
                                          network_device_id=None,
                                          headers=None,
                                          **request_parameters):
@@ -1162,7 +1162,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_c37a46857f0bee5eba0a514091c_v2_3_7_6_1', json_data)
 
-    def update_qos_device_interface_info_v1(self,
+    def update_qos_device_interface_info(self,
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
@@ -1227,7 +1227,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_ea59df3daf2a57a0b48044cc49c8a1ca_v2_3_7_6_1', json_data)
 
-    def create_qos_device_interface_info_v1(self,
+    def create_qos_device_interface_info(self,
                                             headers=None,
                                             payload=None,
                                             active_validation=True,
@@ -1294,7 +1294,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_d045d18062ad5ae59c6f446beb17d675_v2_3_7_6_1', json_data)
 
-    def get_qos_device_interface_info_count_v1(self,
+    def get_qos_device_interface_info_count(self,
                                                headers=None,
                                                **request_parameters):
         """Get the number of all existing qos device interface infos group by network device id .
@@ -1346,7 +1346,7 @@ class ApplicationPolicy(object):
 
         return self._object_factory('bpm_b98fe15b531dbb7e20c0f5fa61ab_v2_3_7_6_1', json_data)
 
-    def delete_qos_device_interface_info_v1(self,
+    def delete_qos_device_interface_info(self,
                                             id,
                                             headers=None,
                                             **request_parameters):
@@ -1992,717 +1992,3 @@ class ApplicationPolicy(object):
             json_data = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_ef849b2f5415501086635693a458e69b_v2_3_7_6_1', json_data)
-
-                
-    
-    # Alias Function
-    def get_application_policy_default(self,
-                                          headers=None,
-                                          **request_parameters):
-        """This function is an alias of get_application_policy_default_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_policy_default_v1.
-        """
-        return self.get_application_policy_default_v1(
-                                        headers=headers,
-                                        **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_qos_device_interface_info(self,
-                                         network_device_id=None,
-                                         headers=None,
-                                         **request_parameters):
-        """This function is an alias of get_qos_device_interface_info_v1 .
-
-        Args:
-            network_device_id(str): networkDeviceId query parameter. network device id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_qos_device_interface_info_v1.
-        """  
-        return self.get_qos_device_interface_info_v1(
-                    network_device_id=network_device_id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def create_application(self,
-                              headers=None,
-                              payload=None,
-                              active_validation=True,
-                              **request_parameters):
-        """This function is an alias of create_application_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_application_v1.
-        """  
-        return self.create_application_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def delete_application(self,
-                              id,
-                              headers=None,
-                              **request_parameters):
-        """This function is an alias of delete_application_v1 .
-
-        Args:
-            id(str): id query parameter. Application's Id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of delete_application_v1.
-        """  
-        return self.delete_application_v1(
-                    id=id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_policy(self,
-                                  policy_scope=None,
-                                  headers=None,
-                                  **request_parameters):
-        """This function is an alias of get_application_policy_v1 .
-
-        Args:
-            policy_scope(str): policyScope query parameter. policy scope name .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_policy_v1.
-        """  
-        return self.get_application_policy_v1(
-                    policy_scope=policy_scope,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_count(self,
-                                 scalable_group_type,
-                                 headers=None,
-                                 **request_parameters):
-        """This function is an alias of get_application_count_v2 .
-
-        Args:
-            scalable_group_type(str): scalableGroupType query parameter. scalable group type to retrieve,
-                valid value APPLICATION .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_count_v2.
-        """  
-        return self.get_application_count_v2(
-                    scalable_group_type=scalable_group_type,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_sets_count(self,
-                                      headers=None,
-                                      **request_parameters):
-        """This function is an alias of  get_application_sets_count_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_sets_count_v1.
-        """
-        return self.get_application_sets_count_v1(
-                                headers=headers,
-                                **request_parameters
-        )
-                
-    
-    # Alias Function
-    def edit_application(self,
-                            headers=None,
-                            payload=None,
-                            active_validation=True,
-                            **request_parameters):
-        """This function is an alias of edit_application_v1  .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of edit_application_v1.
-        """  
-        return self.edit_application_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_policy_queuing_profile_count(self,
-                                                        headers=None,
-                                                        **request_parameters):
-        """This function is an alias of get_application_policy_queuing_profile_count_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_policy_queuing_profile_count_v1.
-        """
-        return self.get_application_policy_queuing_profile_count_v1(
-                                                        headers=headers,
-                                                        **request_parameters
-        )
-                
-    
-    # Alias Function
-    def create_application_sets(self,
-                                   headers=None,
-                                   payload=None,
-                                   active_validation=True,
-                                   **request_parameters):
-        """This function is an alias of create_application_sets_v2 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_application_sets_v2.
-        """  
-        return self.create_application_sets_v2(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def edit_applications(self,
-                             headers=None,
-                             payload=None,
-                             active_validation=True,
-                             **request_parameters):
-        """This function is an alias of edit_applications_v2 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of edit_applications_v2.
-        """  
-        return self.edit_applications_v2(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_set_count(self,
-                                     scalable_group_type,
-                                     headers=None,
-                                     **request_parameters):
-        """This function is an alias of get_application_set_count_v2 .
-
-        Args:
-            scalable_group_type(str): scalableGroupType query parameter. Scalable group type to retrieve,
-                valid value APPLICATION_GROUP .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_set_count_v2.
-        """  
-        return self.get_application_set_count_v2(
-                    scalable_group_type=scalable_group_type,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def create_applications(self,
-                               headers=None,
-                               payload=None,
-                               active_validation=True,
-                               **request_parameters):
-        """This function is an alias of create_applications_v2 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_applications_v2.
-        """  
-        return self.create_applications_v2(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_applications(self,
-                            limit=None,
-                            name=None,
-                            offset=None,
-                            headers=None,
-                            **request_parameters):
-        """This function is an alias of get_applications_v1 .
-
-        Args:
-            offset(int): offset query parameter. The offset of the first application to be returned .
-            limit(int): limit query parameter. The maximum number of applications to be returned .
-            name(str): name query parameter. Application's name .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_applications_v1.
-        """  
-        return self.get_applications_v1(
-                    limit=limit,
-                    name=name,
-                    offset=offset,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def delete_qos_device_interface_info(self,
-                                            id,
-                                            headers=None,
-                                            **request_parameters):
-        """This function is an alias of delete_qos_device_interface_info_v1 .
-
-        Args:
-            id(str): id path parameter. Id of the qos device info, this object holds all qos device interface
-                infos associate with network device id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of delete_qos_device_interface_info_v1.
-        """  
-        return self.delete_qos_device_interface_info_v1(
-                    id=id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_qos_device_interface_info_count(self,
-                                               headers=None,
-                                               **request_parameters):
-        """This function is an alias of get_qos_device_interface_info_count_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_qos_device_interface_info_count_v1.
-        """
-        return self.get_qos_device_interface_info_count_v1(
-                                            headers=headers,
-                                            **request_parameters
-        )
-                
-    
-    # Alias Function
-    def application_policy_intent(self,
-                                     createList=None,
-                                     deleteList=None,
-                                     updateList=None,
-                                     headers=None,
-                                     payload=None,
-                                     active_validation=True,
-                                     **request_parameters):
-        """This function is an alias of application_policy_intent_v1 .
-
-        Args:
-            createList(list): Application Policy's createList (list of objects).
-            deleteList(list): Application Policy's Delete list of Group Based Policy ids  (list of strings).
-            updateList(list): Application Policy's updateList (list of objects).
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of application_policy_intent_v1.
-        """  
-        return self.application_policy_intent_v1(
-                    createList=createList,
-                    deleteList=deleteList,
-                    updateList=updateList,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_policy_queuing_profile(self,
-                                                  name=None,
-                                                  headers=None,
-                                                  **request_parameters):
-        """This function is an alias of get_application_policy_queuing_profile_v1 .
-
-        Args:
-            name(str): name query parameter. queuing profile name .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_policy_queuing_profile_v1.
-        """  
-        return self.get_application_policy_queuing_profile_v1(
-                    name=name,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def update_application_policy_queuing_profile(self,
-                                                     headers=None,
-                                                     payload=None,
-                                                     active_validation=True,
-                                                     **request_parameters):
-        """This function is an alias of update_application_policy_queuing_profile_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of update_application_policy_queuing_profile_v1.
-        """  
-        return self.update_application_policy_queuing_profile_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def delete_application_set(self,
-                                  id,
-                                  headers=None,
-                                  **request_parameters):
-        """This function is an alias of delete_application_set_v1 .
-
-        Args:
-            id(str): id query parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of delete_application_set_v1.
-        """  
-        return self.delete_application_set_v1(
-                    id=id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_application_sets(self,
-                                limit=None,
-                                name=None,
-                                offset=None,
-                                headers=None,
-                                **request_parameters):
-        """This function is an alias of get_application_sets_v1 .
-
-        Args:
-            offset(int): offset query parameter.
-            limit(int): limit query parameter.
-            name(str): name query parameter.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_application_sets_v1.
-        """  
-        return self.get_application_sets_v1(
-                    limit=limit,
-                    name=name,
-                    offset=offset,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def update_qos_device_interface_info(self,
-                                            headers=None,
-                                            payload=None,
-                                            active_validation=True,
-                                            **request_parameters):
-        """This function is an alias of update_qos_device_interface_info_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of update_qos_device_interface_info_v1.
-        """  
-        return self.update_qos_device_interface_info_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def get_applications_count(self,
-                                headers=None,
-                                **request_parameters):
-        """This function is an alias of get_applications_count_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_applications_count_v1.
-        """
-        return self.get_applications_count_v1(
-                                headers=headers,
-                                **request_parameters
-        )
-                
-    
-    # Alias Function
-    def create_qos_device_interface_info(self,
-                                            headers=None,
-                                            payload=None,
-                                            active_validation=True,
-                                            **request_parameters):
-        """This function is an alias of create_qos_device_interface_info_v1.
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_qos_device_interface_info_v1.
-        """  
-        return self.create_qos_device_interface_info_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def create_application_policy_queuing_profile(self,
-                                                     headers=None,
-                                                     payload=None,
-                                                     active_validation=True,
-                                                     **request_parameters):
-        """This function is an alias of create_application_policy_queuing_profile_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_application_policy_queuing_profile_v1.
-        """
-        return self.create_application_policy_queuing_profile_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def delete_application_policy_queuing_profile(self,
-                                                     id,
-                                                     headers=None,
-                                                     **request_parameters):
-        """This function is an alias of delete_application_policy_queuing_profile_v1 .
-
-        Args:
-            id(str): id path parameter. Id of custom queuing profile to delete .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of delete_application_policy_queuing_profile_v1.
-        """  
-        return self.delete_application_policy_queuing_profile_v1(
-                    id=id,
-                    headers=headers,
-                    **request_parameters
-        )
-                
-    
-    # Alias Function
-    def create_application_set(self,
-                                  headers=None,
-                                  payload=None,
-                                  active_validation=True,
-                                  **request_parameters):
-        """This function is an alias of create_application_set_v1 .
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(list): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of create_application_set_v1.
-        """  
-        return self.create_application_set_v1(
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-

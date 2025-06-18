@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "catalystcentersdk"
-version = "2.3.7.9.5"
+version = "3.1.3.0.0"
 description = "Cisco CatalystCenter Platform SDK"
-authors = ["Jose Bogarin Solano <jbogarin@altus.cr>", "William Astorga <wastorga@altus.cr>", "Francisco Muñoz <fmunoz@altus.cr>", "Francisco Muñoz <fmunoz@altus.cr>", "Bryan Vargas <bvargas@altus.cr>"]
+authors = ["Jose Bogarin Solano <jbogarin@cloverhound.com>", "William Astorga <wastorga@cloverhound.com>", "Francisco Muñoz <fmunoz@cloverhound.com>", "Francisco Muñoz <fmunoz@cloverhound.com>", "Bryan Vargas <bvargas@cloverhound.com>"]
 license = "MIT"
 homepage = "https://catalystcentersdk.readthedocs.io/en/latest/"
 repository = "https://github.com/cisco-en-programmability/catalystcentersdk"

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center Platform API wrapper.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,9 +23,7 @@ SOFTWARE.
 """
 
 
-
 from builtins import *
-
 
 
 from ...restsession import RestSession
@@ -34,6 +32,7 @@ from ...utils import (
     check_type,
     dict_from_items_with_values,
     dict_of_str,
+    deprecated,
 )
 
 
@@ -66,9 +65,9 @@ class Platform(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def cisco_catalyst_center_packages_summary_v1(self,
-                                                  headers=None,
-                                                  **request_parameters):
+    def cisco_catalyst_center_packages_summary(self,
+                                               headers=None,
+                                               **request_parameters):
         """Provides information such as name, version of packages installed on the Catalyst center. .
 
         Args:
@@ -118,7 +117,7 @@ class Platform(object):
 
         return self._object_factory('bpm_c3bdcd996dd5d988d0d77ce8f732014_v2_3_7_9', json_data)
 
-    def cisco_catalyst_center_release_summary_v1(self,
+    def release_summary(self,
                         headers=None,
                         **request_parameters):
         """Provides information such as API version, mandatory core packages for installation or upgrade, optional
@@ -171,7 +170,7 @@ class Platform(object):
 
         return self._object_factory('bpm_c9b144b5dc2ba26e51798f8bede_v2_3_7_9', json_data)
 
-    def cisco_catalyst_center_nodes_configuration_summary_v1(self,
+    def nodes_configuration_summary(self,
                                     headers=None,
                                     **request_parameters):
         """Provides details about the current Cisco Catalyst Center node configuration, such as API version, node name, NTP
@@ -226,64 +225,9 @@ class Platform(object):
         return self._object_factory('bpm_f0c26c266e552d6b0f1f68da8e60e16_v2_3_7_9', json_data)
 
 
-
-    # Alias Function
-    def cisco_catalyst_center_nodes_configuration_summary(self,
-                                    headers=None,
-                                    **request_parameters):
-        """ This function is an alias of cisco_catalyst_center_nodes_configuration_summary_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of cisco_catalyst_center_nodes_configuration_summary_v1 .
-        """
-        return self.cisco_catalyst_center_nodes_configuration_summary_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def cisco_catalyst_center_packages_summary(self,
-                                                  headers=None,
-                                                  **request_parameters):
-        """ This function is an alias of cisco_catalyst_center_packages_summary_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of cisco_catalyst_center_packages_summary_v1 .
-        """
-        return self.cisco_catalyst_center_packages_summary_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def cisco_catalyst_center_release_summary(self,
-                        headers=None,
-                        **request_parameters):
-        """ This function is an alias of cisco_catalyst_center_release_summary_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of cisco_catalyst_center_release_summary_v1 .
-        """
-        return self.cisco_catalyst_center_release_summary_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
+    @deprecated
+    def cisco_dna_center_packages_summary(self,
+                                            headers=None,
+                                            **request_parameters):
+        """alias for cisco_catalyst_center_packages_summary"""
+        return self.cisco_catalyst_center_packages_summary(headers=headers, **request_parameters)

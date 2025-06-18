@@ -66,7 +66,7 @@ class EoX(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_eox_status_for_all_devices_v1(self,
+    def get_eox_status_for_all_devices(self,
                                           headers=None,
                                           **request_parameters):
         """Retrieves EoX status for all devices in the network .
@@ -118,7 +118,7 @@ class EoX(object):
 
         return self._object_factory('bpm_d5d27a53ac53258fa2183b7e93a7d5_v2_3_7_6_1', json_data)
 
-    def get_eox_details_per_device_v1(self,
+    def get_eox_details_per_device(self,
                                       device_id,
                                       headers=None,
                                       **request_parameters):
@@ -175,7 +175,7 @@ class EoX(object):
 
         return self._object_factory('bpm_ec048832853f8a63f34415d0e6fce_v2_3_7_6_1', json_data)
 
-    def get_eox_summary_v1(self,
+    def get_eox_summary(self,
                            headers=None,
                            **request_parameters):
         """Retrieves EoX summary for all devices in the network .
@@ -226,69 +226,3 @@ class EoX(object):
             json_data = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f0a0dfdaca465bdc91fc290d87476b89_v2_3_7_6_1', json_data)
-
-
-
-    # Alias Function
-    def get_eox_details_per_device(self,
-                                      device_id,
-                                      headers=None,
-                                      **request_parameters):
-        """ This function is an alias of get_eox_details_per_device_v1 .
-        Args:
-            device_id(str): deviceId path parameter. Device instance UUID .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_eox_details_per_device_v1 .
-        """
-        return self.get_eox_details_per_device_v1(
-                    device_id=device_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_eox_status_for_all_devices(self,
-                                          headers=None,
-                                          **request_parameters):
-        """ This function is an alias of get_eox_status_for_all_devices_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_eox_status_for_all_devices_v1 .
-        """
-        return self.get_eox_status_for_all_devices_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def get_eox_summary(self,
-                           headers=None,
-                           **request_parameters):
-        """ This function is an alias of get_eox_summary_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_eox_summary_v1 .
-        """
-        return self.get_eox_summary_v1(
-                    headers=headers,
-                    **request_parameters
-        )
-
-

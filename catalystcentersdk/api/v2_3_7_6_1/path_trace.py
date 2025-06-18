@@ -66,7 +66,7 @@ class PathTrace(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def retrieves_all_previous_pathtraces_summary_v1(self,
+    def retrieves_all_previous_pathtraces_summary(self,
                                                      dest_ip=None,
                                                      dest_port=None,
                                                      gt_create_time=None,
@@ -193,7 +193,7 @@ class PathTrace(object):
 
         return self._object_factory('bpm_a75e4b27171c5c6782e84f902da9e5be_v2_3_7_6_1', json_data)
 
-    def initiate_a_new_pathtrace_v1(self,
+    def initiate_a_new_pathtrace(self,
                                     controlPath=None,
                                     destIP=None,
                                     destPort=None,
@@ -295,7 +295,7 @@ class PathTrace(object):
 
         return self._object_factory('bpm_a54fce1a0c305bdabfe91a8a6161e539_v2_3_7_6_1', json_data)
 
-    def retrieves_previous_pathtrace_v1(self,
+    def retrieves_previous_pathtrace(self,
                                         flow_analysis_id,
                                         headers=None,
                                         **request_parameters):
@@ -352,7 +352,7 @@ class PathTrace(object):
 
         return self._object_factory('bpm_ed5cbafc332a5efa97547736ba8b6044_v2_3_7_6_1', json_data)
 
-    def deletes_pathtrace_by_id_v1(self,
+    def deletes_pathtrace_by_id(self,
                                    flow_analysis_id,
                                    headers=None,
                                    **request_parameters):
@@ -408,170 +408,3 @@ class PathTrace(object):
             json_data = self._session.delete(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_a7ae984f943507ba621abe155e6e744_v2_3_7_6_1', json_data)
-
-
-
-    # Alias Function
-    def retrieves_previous_pathtrace(self,
-                                        flow_analysis_id,
-                                        headers=None,
-                                        **request_parameters):
-        """ This function is an alias of retrieves_previous_pathtrace_v1 .
-        Args:
-            flow_analysis_id(str): flowAnalysisId path parameter. Flow analysis request id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of retrieves_previous_pathtrace_v1 .
-        """
-        return self.retrieves_previous_pathtrace_v1(
-                    flow_analysis_id=flow_analysis_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def deletes_pathtrace_by_id(self,
-                                   flow_analysis_id,
-                                   headers=None,
-                                   **request_parameters):
-        """ This function is an alias of deletes_pathtrace_by_id_v1 .
-        Args:
-            flow_analysis_id(str): flowAnalysisId path parameter. Flow analysis request id .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of deletes_pathtrace_by_id_v1 .
-        """
-        return self.deletes_pathtrace_by_id_v1(
-                    flow_analysis_id=flow_analysis_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def retrieves_all_previous_pathtraces_summary(self,
-                                                     dest_ip=None,
-                                                     dest_port=None,
-                                                     gt_create_time=None,
-                                                     last_update_time=None,
-                                                     limit=None,
-                                                     lt_create_time=None,
-                                                     offset=None,
-                                                     order=None,
-                                                     periodic_refresh=None,
-                                                     protocol=None,
-                                                     sort_by=None,
-                                                     source_ip=None,
-                                                     source_port=None,
-                                                     status=None,
-                                                     task_id=None,
-                                                     headers=None,
-                                                     **request_parameters):
-        """ This function is an alias of retrieves_all_previous_pathtraces_summary_v1 .
-        Args:
-            periodic_refresh(bool): periodicRefresh query parameter. Is analysis periodically refreshed? .
-            source_ip(str): sourceIP query parameter. Source IP address .
-            dest_ip(str): destIP query parameter. Destination IP address .
-            source_port(int): sourcePort query parameter. Source port .
-            dest_port(int): destPort query parameter. Destination port .
-            gt_create_time(int): gtCreateTime query parameter. Analyses requested after this time .
-            lt_create_time(int): ltCreateTime query parameter. Analyses requested before this time .
-            protocol(str): protocol query parameter.
-            status(str): status query parameter.
-            task_id(str): taskId query parameter. Task ID .
-            last_update_time(int): lastUpdateTime query parameter. Last update time .
-            limit(int): limit query parameter. Number of resources returned .
-            offset(int): offset query parameter. Start index of resources returned (1-based) .
-            order(str): order query parameter. Order by this field .
-            sort_by(str): sortBy query parameter. Sort by this field .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of retrieves_all_previous_pathtraces_summary_v1 .
-        """
-        return self.retrieves_all_previous_pathtraces_summary_v1(
-                    dest_ip=dest_ip,
-                    dest_port=dest_port,
-                    gt_create_time=gt_create_time,
-                    last_update_time=last_update_time,
-                    limit=limit,
-                    lt_create_time=lt_create_time,
-                    offset=offset,
-                    order=order,
-                    periodic_refresh=periodic_refresh,
-                    protocol=protocol,
-                    sort_by=sort_by,
-                    source_ip=source_ip,
-                    source_port=source_port,
-                    status=status,
-                    task_id=task_id,
-                    headers=headers,
-                    **request_parameters
-        )
-
-
-    # Alias Function
-    def initiate_a_new_pathtrace(self,
-                                    controlPath=None,
-                                    destIP=None,
-                                    destPort=None,
-                                    inclusions=None,
-                                    periodicRefresh=None,
-                                    protocol=None,
-                                    sourceIP=None,
-                                    sourcePort=None,
-                                    headers=None,
-                                    payload=None,
-                                    active_validation=True,
-                                    **request_parameters):
-        """ This function is an alias of initiate_a_new_pathtrace_v1 .
-        Args:
-            controlPath(boolean): Path Trace's Control path tracing .
-            destIP(string): Path Trace's Destination IP address .
-            destPort(string): Path Trace's Destination Port, range: 1-65535 .
-            inclusions(list): Path Trace's Subset of {INTERFACE-STATS, QOS-STATS, DEVICE-STATS, PERFORMANCE-STATS,
-                ACL-TRACE}  (list of strings).
-            periodicRefresh(boolean): Path Trace's Periodic refresh of path for every 30 sec .
-            protocol(string): Path Trace's Protocol one of [TCP, UDP] checks both when left blank .
-            sourceIP(string): Path Trace's Source IP address .
-            sourcePort(string): Path Trace's Source Port, range: 1-65535 .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of initiate_a_new_pathtrace_v1 .
-        """
-        return self.initiate_a_new_pathtrace_v1(
-                    controlPath=controlPath,
-                    destIP=destIP,
-                    destPort=destPort,
-                    inclusions=inclusions,
-                    periodicRefresh=periodicRefresh,
-                    protocol=protocol,
-                    sourceIP=sourceIP,
-                    sourcePort=sourcePort,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-

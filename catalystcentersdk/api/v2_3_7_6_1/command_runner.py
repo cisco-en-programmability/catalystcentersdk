@@ -66,7 +66,7 @@ class CommandRunner(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_keywords_of_clis_accepted_v1(self,
+    def get_all_keywords_of_clis_accepted(self,
                                           headers=None,
                                           **request_parameters):
         """Get valid keywords .
@@ -118,7 +118,7 @@ class CommandRunner(object):
 
         return self._object_factory('bpm_e946adf864590082fe3111a2a2fa74_v2_3_7_6_1', json_data)
 
-    def run_read_only_commands_on_devices_v1(self,
+    def run_read_only_commands_on_devices(self,
                                           commands=None,
                                           description=None,
                                           deviceUuids=None,
@@ -210,72 +210,3 @@ class CommandRunner(object):
                                            json=_payload)
 
         return self._object_factory('bpm_b2dae3b41636596aa02c3ad0a4bcb8d7_v2_3_7_6_1', json_data)
-
-                
-    
-    # Alias Function
-    def get_all_keywords_of_clis_accepted(self,
-                                          headers=None,
-                                          **request_parameters):
-        """This function is an alias of  get_all_keywords_of_clis_accepted_v1.
-
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_all_keywords_of_clis_accepted_v1.
-        """
-        return  self.get_all_keywords_of_clis_accepted_v1(
-                                        headers=headers,
-                                        **request_parameters
-        )
-                
-    
-    # Alias Function
-    def run_read_only_commands_on_devices(self,
-                                          commands=None,
-                                          description=None,
-                                          deviceUuids=None,
-                                          name=None,
-                                          timeout=None,
-                                          headers=None,
-                                          payload=None,
-                                          active_validation=True,
-                                          **request_parameters):
-        """This function is an alias of run_read_only_commands_on_devices_v1.
-
-        Args:
-            commands(list): Command Runner's Commands to be executed  (list of strings).
-            description(string): Command Runner's Describe the details about the command request .
-            deviceUuids(list): Command Runner's Device Id of the device  (list of strings).
-            name(string): Command Runner's Name of the the request like getshowrun , deviceinterfacestatusCli. .
-            timeout(integer): Command Runner's The timeout value in unit of second. If no timeout provided wait till
-                300sec .
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            payload(dict): A JSON serializable Python object to send in the
-                body of the Request.
-            active_validation(bool): Enable/Disable payload validation.
-                Defaults to True.
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of run_read_only_commands_on_devices_v1.
-        """  
-        return self.run_read_only_commands_on_devices_v1(
-                    commands=commands,
-                    description=description,
-                    deviceUuids=deviceUuids,
-                    name=name,
-                    timeout=timeout,
-                    headers=headers,
-                    payload=payload,
-                    active_validation=active_validation,
-                    **request_parameters
-        )
-
-

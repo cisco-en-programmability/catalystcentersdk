@@ -66,7 +66,7 @@ class Users(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_user_enrichment_details_v1(self,
+    def get_user_enrichment_details(self,
                                        headers=None,
                                        **request_parameters):
         """Enriches a given network End User context (a network user-id or end user’s device Mac Address) with details
@@ -128,26 +128,3 @@ class Users(object):
             json_data = self._session.get(endpoint_full_url, params=_params)
 
         return self._object_factory('bpm_f9c1d861a051b4a4928f2e6d84b2e3_v2_3_7_6_1', json_data)
-
-                
-    
-    # Alias Function
-    def get_user_enrichment_details(self,
-                                       headers=None,
-                                       **request_parameters):
-        """ This function is an alias of get_user_enrichment_details_v1 .
-        Args:
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            This function returns the output of get_user_enrichment_details_v1 .
-        """
-        return self.get_user_enrichment_details_v1(
-                    headers=headers,
-                    **request_parameters
-        ) 
-
-
