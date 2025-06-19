@@ -25,19 +25,17 @@ SOFTWARE.
 import pytest
 
 from tests.environment import (
-    CATALYST_CENTER_USERNAME, CATALYST_CENTER_PASSWORD,
-    CATALYST_CENTER_ENCODED_AUTH, CATALYST_CENTER_VERSION,
+    CATALYST_CENTER_USERNAME,
+    CATALYST_CENTER_PASSWORD,
+    CATALYST_CENTER_ENCODED_AUTH,
+    CATALYST_CENTER_VERSION,
 )
 from tests.config import (
     DEFAULT_VERIFY,
     DEFAULT_SINGLE_REQUEST_TIMEOUT,
-    DEFAULT_WAIT_ON_RATE_LIMIT
+    DEFAULT_WAIT_ON_RATE_LIMIT,
 )
-from tests.mock.mock import (
-    get_free_port,
-    get_mock_url,
-    start_mock_server
-)
+from tests.mock.mock import get_free_port, get_mock_url, start_mock_server
 from tests.models.schema_validator import SchemaValidator
 
 
@@ -61,14 +59,17 @@ def mock_catalyst_center_server(free_port):
 @pytest.fixture(scope="session")
 def api(mock_catalyst_center_server, base_url):
     from catalystcentersdk import CatalystCenterAPI
-    return CatalystCenterAPI(username=CATALYST_CENTER_USERNAME,
-                             password=CATALYST_CENTER_PASSWORD,
-                             encoded_auth=CATALYST_CENTER_ENCODED_AUTH,
-                             base_url=base_url,
-                             single_request_timeout=DEFAULT_SINGLE_REQUEST_TIMEOUT,
-                             wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
-                             verify=DEFAULT_VERIFY,
-                             version=CATALYST_CENTER_VERSION)
+
+    return CatalystCenterAPI(
+        username=CATALYST_CENTER_USERNAME,
+        password=CATALYST_CENTER_PASSWORD,
+        encoded_auth=CATALYST_CENTER_ENCODED_AUTH,
+        base_url=base_url,
+        single_request_timeout=DEFAULT_SINGLE_REQUEST_TIMEOUT,
+        wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
+        verify=DEFAULT_VERIFY,
+        version=CATALYST_CENTER_VERSION,
+    )
 
 
 @pytest.fixture(scope="session")

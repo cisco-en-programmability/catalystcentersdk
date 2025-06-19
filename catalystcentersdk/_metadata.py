@@ -23,11 +23,11 @@ SOFTWARE.
 """
 
 
-__title__ = 'catalystcentersdk'
-__description__ = 'Community-developed Python SDK for the CatalystCenter APIs'
-__url__ = 'https://github.com/cisco-en-programmability/catalystcentersdk'
-__download_url__ = 'https://pypi.python.org/pypi/catalystcentersdk'
-__author__ = 'Jose Bogarín'
-__author_email__ = 'jbogarin@cloverhound.com'
+__title__ = "catalystcentersdk"
+__description__ = "Community-developed Python SDK for the CatalystCenter APIs"
+__url__ = "https://github.com/cisco-en-programmability/catalystcentersdk"
+__download_url__ = "https://pypi.python.org/pypi/catalystcentersdk"
+__author__ = "Jose Bogarín"
+__author_email__ = "jbogarin@cloverhound.com"
 __copyright__ = "Copyright (c) 2024 Cisco Systems, Inc."
 __license__ = "MIT"

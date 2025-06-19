@@ -45,5 +45,6 @@ logger = logging.getLogger(__name__)
 
 
 from importlib.metadata import version
-release = version('catalystcentersdk')
-__version__ = '.'.join(release.split('.')[:3])
+
+release = version("catalystcentersdk")
+__version__ = ".".join(release.split(".")[:3])

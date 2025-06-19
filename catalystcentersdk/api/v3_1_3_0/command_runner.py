@@ -32,7 +32,6 @@ from ...utils import (
     check_type,
     dict_from_items_with_values,
     dict_of_str,
-    
 )
 
 
@@ -65,10 +64,8 @@ class CommandRunner(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_all_keywords_of_clis_accepted(self,
-                                          headers=None,
-                                          **request_parameters):
-        """Get valid keywords .
+    def get_all_keywords_of_clis_accepted(self, headers=None, **request_parameters):
+        """Get valid keywords.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -89,17 +86,14 @@ class CommandRunner(object):
         """
         check_type(headers, dict)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -107,35 +101,40 @@ class CommandRunner(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/network-device-poller/cli/legit-reads')
+        e_url = "/dna/intent/api/v1/network-device-poller/cli/legit-reads"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_e946adf864590082fe3111a2a2fa74_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_e946adf864590082fe3111a2a2fa74_v3_1_3_0", json_data
+        )
 
-    def run_read_only_commands_on_devices(self,
-                                          commands=None,
-                                          description=None,
-                                          deviceUuids=None,
-                                          name=None,
-                                          timeout=None,
-                                          headers=None,
-                                          payload=None,
-                                          active_validation=True,
-                                          **request_parameters):
-        """Submit request for read-only CLIs .
+    def run_read_only_commands_on_devices(
+        self,
+        commands=None,
+        description=None,
+        deviceUuids=None,
+        name=None,
+        timeout=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
+        """Submit request for read-only CLIs.
 
         Args:
             commands(list): Command Runner's Commands to be executed  (list of strings).
-            description(string): Command Runner's Describe the details about the command request .
+            description(string): Command Runner's Describe the details about the command request.
             deviceUuids(list): Command Runner's Device Id of the device  (list of strings).
             name(string): Command Runner's Name of the the request like getshowrun , deviceinterfacestatusCli. .
             timeout(integer): Command Runner's The timeout value in unit of second. If no timeout provided wait till
-                300sec .
+                300sec.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -159,37 +158,29 @@ class CommandRunner(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'commands':
-                commands,
-            'description':
-                description,
-            'deviceUuids':
-                deviceUuids,
-            'name':
-                name,
-            'timeout':
-                timeout,
+            "commands": commands,
+            "description": description,
+            "deviceUuids": deviceUuids,
+            "name": name,
+            "timeout": timeout,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_b2dae3b41636596aa02c3ad0a4bcb8d7_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_b2dae3b41636596aa02c3ad0a4bcb8d7_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -197,16 +188,20 @@ class CommandRunner(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/network-device-poller/cli/read-'
-                 + 'request')
+        e_url = "/dna/intent/api/v1/network-device-poller/cli/read-" + "request"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_b2dae3b41636596aa02c3ad0a4bcb8d7_v3_1_3_0', json_data)
-
+        return self._object_factory(
+            "bpm_b2dae3b41636596aa02c3ad0a4bcb8d7_v3_1_3_0", json_data
+        )

@@ -3,6 +3,7 @@ import pytest
 
 class TestImportSDK:
     """Set the sdk-level variables."""
+
     def setup(self, base_url):
         self.username = "username"
         self.password = "password"
@@ -35,6 +36,7 @@ def test_get_enviroment_before_import_1(monkeypatch, reset_env_vars, import_fixt
     monkeypatch.setenv("CATALYST_CENTER_PASSWORD", import_fixture.password)
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
     from catalystcentersdk import CatalystCenterAPI
+
     CatalystCenterAPI(verify=import_fixture.verify, debug=import_fixture.debug)
     return True
 
@@ -45,6 +47,7 @@ def test_get_enviroment_before_import_2(monkeypatch, reset_env_vars, import_fixt
     monkeypatch.setenv("CATALYST_CENTER_ENCODED_AUTH", import_fixture.encoded_auth)
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
     from catalystcentersdk import CatalystCenterAPI
+
     CatalystCenterAPI(verify=import_fixture.verify, debug=import_fixture.debug)
     return True
 
@@ -53,6 +56,7 @@ def test_get_enviroment_before_import_2(monkeypatch, reset_env_vars, import_fixt
 def test_get_enviroment_after_import_1(monkeypatch, reset_env_vars, import_fixture):
     """Tests if the package gets the values of the env variables after import."""
     from catalystcentersdk import CatalystCenterAPI
+
     monkeypatch.setenv("CATALYST_CENTER_USERNAME", import_fixture.username)
     monkeypatch.setenv("CATALYST_CENTER_PASSWORD", import_fixture.password)
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
@@ -64,6 +68,7 @@ def test_get_enviroment_after_import_1(monkeypatch, reset_env_vars, import_fixtu
 def test_get_enviroment_after_import_2(monkeypatch, reset_env_vars, import_fixture):
     """Tests if the package gets the values of the env variables after import."""
     from catalystcentersdk import CatalystCenterAPI
+
     monkeypatch.setenv("CATALYST_CENTER_ENCODED_AUTH", import_fixture.encoded_auth)
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
     CatalystCenterAPI(verify=import_fixture.verify, debug=import_fixture.debug)
@@ -77,6 +82,7 @@ def test_get_enviroment_exception_1(monkeypatch, reset_env_vars, import_fixture)
     # missing password or encoded_auth
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
     from catalystcentersdk import CatalystCenterAPI, AccessTokenError
+
     with pytest.raises(AccessTokenError):
         CatalystCenterAPI(verify=import_fixture.verify, debug=import_fixture.debug)
 
@@ -88,6 +94,7 @@ def test_get_enviroment_exception_2(monkeypatch, reset_env_vars, import_fixture)
     monkeypatch.setenv("CATALYST_CENTER_PASSWORD", import_fixture.password)
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
     from catalystcentersdk import CatalystCenterAPI, AccessTokenError
+
     with pytest.raises(AccessTokenError):
         CatalystCenterAPI(verify=import_fixture.verify, debug=import_fixture.debug)
 
@@ -98,5 +105,6 @@ def test_get_enviroment_exception_3(monkeypatch, reset_env_vars, import_fixture)
     # missing encoded_auth or (username and password)
     monkeypatch.setenv("CATALYST_CENTER_BASE_URL", import_fixture.base_url)
     from catalystcentersdk import CatalystCenterAPI, AccessTokenError
+
     with pytest.raises(AccessTokenError):
         CatalystCenterAPI(verify=import_fixture.verify, debug=import_fixture.debug)

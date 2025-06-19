@@ -26,47 +26,57 @@ from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '3.1.3.0', reason='version does not match')
+pytestmark = pytest.mark.skipif(
+    CATALYST_CENTER_VERSION != "3.1.3.0", reason="version does not match"
+)
 
 
-def is_valid_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(json_schema_validate, obj):
-    json_schema_validate('jsd_dfcf64acc1815459acc146cd924e9877_v3_1_3_0').validate(obj)
+def is_valid_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_dfcf64acc1815459acc146cd924e9877_v3_1_3_0").validate(obj)
     return True
 
 
-def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(api):
+def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
+    api,
+):
     endpoint_result = api.clients.retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
-        attribute='string',
-        band='string',
-        connected_network_device_name='string',
+        attribute="string",
+        band="string",
+        connected_network_device_name="string",
         end_time=0,
-        ipv4_address='string',
-        ipv6_address='string',
+        ipv4_address="string",
+        ipv6_address="string",
         limit=0,
-        mac_address='string',
+        mac_address="string",
         offset=0,
-        order='string',
-        os_type='string',
-        os_version='string',
-        site_hierarchy='string',
-        site_hierarchy_id='string',
-        site_id='string',
-        sort_by='string',
-        ssid='string',
+        order="string",
+        os_type="string",
+        os_version="string",
+        site_hierarchy="string",
+        site_hierarchy_id="string",
+        site_id="string",
+        sort_by="string",
+        ssid="string",
         start_time=0,
-        type='string',
-        view='string',
-        wlc_name='string'
+        type="string",
+        view="string",
+        wlc_name="string",
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(api, validator):
+def test_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
             validator,
-            retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(api)
+            retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -74,7 +84,9 @@ def test_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_s
             raise original_e
 
 
-def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_default_val(api):
+def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_default_val(
+    api,
+):
     endpoint_result = api.clients.retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
         attribute=None,
         band=None,
@@ -96,55 +108,67 @@ def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sortin
         start_time=None,
         type=None,
         view=None,
-        wlc_name=None
+        wlc_name=None,
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_default_val(api, validator):
+def test_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
             validator,
-            retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_default_val(api)
+            retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_total_count_of_clients_by_applying_basic_filtering(json_schema_validate, obj):
-    json_schema_validate('jsd_110ed18d78d455f9a51049a09ae12d48_v3_1_3_0').validate(obj)
+def is_valid_retrieves_the_total_count_of_clients_by_applying_basic_filtering(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_110ed18d78d455f9a51049a09ae12d48_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_the_total_count_of_clients_by_applying_basic_filtering(api):
-    endpoint_result = api.clients.retrieves_the_total_count_of_clients_by_applying_basic_filtering(
-        band='string',
-        connected_network_device_name='string',
-        end_time=0,
-        ipv4_address='string',
-        ipv6_address='string',
-        mac_address='string',
-        os_type='string',
-        os_version='string',
-        site_hierarchy='string',
-        site_hierarchy_id='string',
-        site_id='string',
-        ssid='string',
-        start_time=0,
-        type='string',
-        wlc_name='string'
+    endpoint_result = (
+        api.clients.retrieves_the_total_count_of_clients_by_applying_basic_filtering(
+            band="string",
+            connected_network_device_name="string",
+            end_time=0,
+            ipv4_address="string",
+            ipv6_address="string",
+            mac_address="string",
+            os_type="string",
+            os_version="string",
+            site_hierarchy="string",
+            site_hierarchy_id="string",
+            site_id="string",
+            ssid="string",
+            start_time=0,
+            type="string",
+            wlc_name="string",
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_total_count_of_clients_by_applying_basic_filtering(api, validator):
+def test_retrieves_the_total_count_of_clients_by_applying_basic_filtering(
+    api, validator
+):
     try:
-        assert is_valid_retrieves_the_total_count_of_clients_by_applying_basic_filtering(
-            validator,
-            retrieves_the_total_count_of_clients_by_applying_basic_filtering(api)
+        assert (
+            is_valid_retrieves_the_total_count_of_clients_by_applying_basic_filtering(
+                validator,
+                retrieves_the_total_count_of_clients_by_applying_basic_filtering(api),
+            )
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -152,65 +176,85 @@ def test_retrieves_the_total_count_of_clients_by_applying_basic_filtering(api, v
             raise original_e
 
 
-def retrieves_the_total_count_of_clients_by_applying_basic_filtering_default_val(api):
-    endpoint_result = api.clients.retrieves_the_total_count_of_clients_by_applying_basic_filtering(
-        band=None,
-        connected_network_device_name=None,
-        end_time=None,
-        ipv4_address=None,
-        ipv6_address=None,
-        mac_address=None,
-        os_type=None,
-        os_version=None,
-        site_hierarchy=None,
-        site_hierarchy_id=None,
-        site_id=None,
-        ssid=None,
-        start_time=None,
-        type=None,
-        wlc_name=None
+def retrieves_the_total_count_of_clients_by_applying_basic_filtering_default_val(
+    api,
+):
+    endpoint_result = (
+        api.clients.retrieves_the_total_count_of_clients_by_applying_basic_filtering(
+            band=None,
+            connected_network_device_name=None,
+            end_time=None,
+            ipv4_address=None,
+            ipv6_address=None,
+            mac_address=None,
+            os_type=None,
+            os_version=None,
+            site_hierarchy=None,
+            site_hierarchy_id=None,
+            site_id=None,
+            ssid=None,
+            start_time=None,
+            type=None,
+            wlc_name=None,
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_total_count_of_clients_by_applying_basic_filtering_default_val(api, validator):
+def test_retrieves_the_total_count_of_clients_by_applying_basic_filtering_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_total_count_of_clients_by_applying_basic_filtering(
             validator,
-            retrieves_the_total_count_of_clients_by_applying_basic_filtering_default_val(api)
+            retrieves_the_total_count_of_clients_by_applying_basic_filtering_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(json_schema_validate, obj):
-    json_schema_validate('jsd_ea5f116c0cd152bbb4a92c043738ea57_v3_1_3_0').validate(obj)
+def is_valid_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_ea5f116c0cd152bbb4a92c043738ea57_v3_1_3_0").validate(obj)
     return True
 
 
-def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(api):
+def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
+    api,
+):
     endpoint_result = api.clients.retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'key': 'string', 'operator': 'string', 'value': 0}],
-        page={'limit': 0, 'offset': 0, 'sortBy': [{'name': 'string', 'order': 'string'}]},
+        filters=[{"key": "string", "operator": "string", "value": 0}],
+        page={
+            "limit": 0,
+            "offset": 0,
+            "sortBy": [{"name": "string", "order": "string"}],
+        },
         payload=None,
         startTime=0,
-        views=['string']
+        views=["string"],
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(api, validator):
+def test_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
             validator,
-            retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(api)
+            retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -218,7 +262,9 @@ def test_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_su
             raise original_e
 
 
-def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_default_val(api):
+def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_default_val(
+    api,
+):
     endpoint_result = api.clients.retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
         active_validation=True,
         aggregateAttributes=None,
@@ -228,35 +274,43 @@ def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_support
         page=None,
         payload=None,
         startTime=None,
-        views=None
+        views=None,
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_default_val(api, validator):
+def test_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
             validator,
-            retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_default_val(api)
+            retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_number_of_clients_by_applying_complex_filters(json_schema_validate, obj):
-    json_schema_validate('jsd_1628a2131eae5c1d8e73cd55eebf6a83_v3_1_3_0').validate(obj)
+def is_valid_retrieves_the_number_of_clients_by_applying_complex_filters(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_1628a2131eae5c1d8e73cd55eebf6a83_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_the_number_of_clients_by_applying_complex_filters(api):
-    endpoint_result = api.clients.retrieves_the_number_of_clients_by_applying_complex_filters(
-        active_validation=True,
-        endTime=0,
-        filters=[{'key': 'string', 'operator': 'string', 'value': 0}],
-        payload=None,
-        startTime=0
+    endpoint_result = (
+        api.clients.retrieves_the_number_of_clients_by_applying_complex_filters(
+            active_validation=True,
+            endTime=0,
+            filters=[{"key": "string", "operator": "string", "value": 0}],
+            payload=None,
+            startTime=0,
+        )
     )
     return endpoint_result
 
@@ -266,7 +320,7 @@ def test_retrieves_the_number_of_clients_by_applying_complex_filters(api, valida
     try:
         assert is_valid_retrieves_the_number_of_clients_by_applying_complex_filters(
             validator,
-            retrieves_the_number_of_clients_by_applying_complex_filters(api)
+            retrieves_the_number_of_clients_by_applying_complex_filters(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -274,45 +328,59 @@ def test_retrieves_the_number_of_clients_by_applying_complex_filters(api, valida
             raise original_e
 
 
-def retrieves_the_number_of_clients_by_applying_complex_filters_default_val(api):
-    endpoint_result = api.clients.retrieves_the_number_of_clients_by_applying_complex_filters(
-        active_validation=True,
-        endTime=None,
-        filters=None,
-        payload=None,
-        startTime=None
+def retrieves_the_number_of_clients_by_applying_complex_filters_default_val(
+    api,
+):
+    endpoint_result = (
+        api.clients.retrieves_the_number_of_clients_by_applying_complex_filters(
+            active_validation=True,
+            endTime=None,
+            filters=None,
+            payload=None,
+            startTime=None,
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_number_of_clients_by_applying_complex_filters_default_val(api, validator):
+def test_retrieves_the_number_of_clients_by_applying_complex_filters_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_number_of_clients_by_applying_complex_filters(
             validator,
-            retrieves_the_number_of_clients_by_applying_complex_filters_default_val(api)
+            retrieves_the_number_of_clients_by_applying_complex_filters_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_summary_analytics_data_related_to_clients(json_schema_validate, obj):
-    json_schema_validate('jsd_f210ff2d89425b4790ce56f19da7be92_v3_1_3_0').validate(obj)
+def is_valid_retrieves_summary_analytics_data_related_to_clients(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_f210ff2d89425b4790ce56f19da7be92_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_summary_analytics_data_related_to_clients(api):
     endpoint_result = api.clients.retrieves_summary_analytics_data_related_to_clients(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'key': 'string', 'operator': 'string', 'value': 0}],
-        groupBy=['string'],
-        page={'limit': 0, 'cursor': 'string', 'sortBy': [{'name': 'string', 'order': 'string'}]},
+        filters=[{"key": "string", "operator": "string", "value": 0}],
+        groupBy=["string"],
+        page={
+            "limit": 0,
+            "cursor": "string",
+            "sortBy": [{"name": "string", "order": "string"}],
+        },
         payload=None,
-        startTime=0
+        startTime=0,
     )
     return endpoint_result
 
@@ -321,8 +389,7 @@ def retrieves_summary_analytics_data_related_to_clients(api):
 def test_retrieves_summary_analytics_data_related_to_clients(api, validator):
     try:
         assert is_valid_retrieves_summary_analytics_data_related_to_clients(
-            validator,
-            retrieves_summary_analytics_data_related_to_clients(api)
+            validator, retrieves_summary_analytics_data_related_to_clients(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -340,40 +407,48 @@ def retrieves_summary_analytics_data_related_to_clients_default_val(api):
         groupBy=None,
         page=None,
         payload=None,
-        startTime=None
+        startTime=None,
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_summary_analytics_data_related_to_clients_default_val(api, validator):
+def test_retrieves_summary_analytics_data_related_to_clients_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_summary_analytics_data_related_to_clients(
             validator,
-            retrieves_summary_analytics_data_related_to_clients_default_val(api)
+            retrieves_summary_analytics_data_related_to_clients_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_top_n_analytics_data_related_to_clients(json_schema_validate, obj):
-    json_schema_validate('jsd_0f44ddd3c38c5a9484f5cb4e125447bc_v3_1_3_0').validate(obj)
+def is_valid_retrieves_the_top_n_analytics_data_related_to_clients(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_0f44ddd3c38c5a9484f5cb4e125447bc_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_the_top_n_analytics_data_related_to_clients(api):
     endpoint_result = api.clients.retrieves_the_top_n_analytics_data_related_to_clients(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'key': 'string', 'operator': 'string', 'value': 0}],
-        groupBy=['string'],
-        page={'limit': 0, 'cursor': 'string', 'sortBy': [{'name': 'string', 'order': 'string'}]},
+        filters=[{"key": "string", "operator": "string", "value": 0}],
+        groupBy=["string"],
+        page={
+            "limit": 0,
+            "cursor": "string",
+            "sortBy": [{"name": "string", "order": "string"}],
+        },
         payload=None,
         startTime=0,
-        topN=0
+        topN=0,
     )
     return endpoint_result
 
@@ -383,7 +458,7 @@ def test_retrieves_the_top_n_analytics_data_related_to_clients(api, validator):
     try:
         assert is_valid_retrieves_the_top_n_analytics_data_related_to_clients(
             validator,
-            retrieves_the_top_n_analytics_data_related_to_clients(api)
+            retrieves_the_top_n_analytics_data_related_to_clients(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -402,40 +477,44 @@ def retrieves_the_top_n_analytics_data_related_to_clients_default_val(api):
         page=None,
         payload=None,
         startTime=None,
-        topN=None
+        topN=None,
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_top_n_analytics_data_related_to_clients_default_val(api, validator):
+def test_retrieves_the_top_n_analytics_data_related_to_clients_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_top_n_analytics_data_related_to_clients(
             validator,
-            retrieves_the_top_n_analytics_data_related_to_clients_default_val(api)
+            retrieves_the_top_n_analytics_data_related_to_clients_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_trend_analytics_data_related_to_clients(json_schema_validate, obj):
-    json_schema_validate('jsd_ffd2fefb57d5523c87a5d941eb93ddc3_v3_1_3_0').validate(obj)
+def is_valid_retrieves_the_trend_analytics_data_related_to_clients(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_ffd2fefb57d5523c87a5d941eb93ddc3_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_the_trend_analytics_data_related_to_clients(api):
     endpoint_result = api.clients.retrieves_the_trend_analytics_data_related_to_clients(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'key': 'string', 'operator': 'string', 'value': 0}],
-        groupBy=['string'],
-        page={'limit': 0, 'cursor': 'string', 'timeSortOrder': 'string'},
+        filters=[{"key": "string", "operator": "string", "value": 0}],
+        groupBy=["string"],
+        page={"limit": 0, "cursor": "string", "timeSortOrder": "string"},
         payload=None,
         startTime=0,
-        trendInterval='string'
+        trendInterval="string",
     )
     return endpoint_result
 
@@ -445,7 +524,7 @@ def test_retrieves_the_trend_analytics_data_related_to_clients(api, validator):
     try:
         assert is_valid_retrieves_the_trend_analytics_data_related_to_clients(
             validator,
-            retrieves_the_trend_analytics_data_related_to_clients(api)
+            retrieves_the_trend_analytics_data_related_to_clients(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -464,35 +543,41 @@ def retrieves_the_trend_analytics_data_related_to_clients_default_val(api):
         page=None,
         payload=None,
         startTime=None,
-        trendInterval=None
+        trendInterval=None,
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_the_trend_analytics_data_related_to_clients_default_val(api, validator):
+def test_retrieves_the_trend_analytics_data_related_to_clients_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_trend_analytics_data_related_to_clients(
             validator,
-            retrieves_the_trend_analytics_data_related_to_clients_default_val(api)
+            retrieves_the_trend_analytics_data_related_to_clients_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_specific_client_information_matching_the_macaddress(json_schema_validate, obj):
-    json_schema_validate('jsd_ee00176282fd54ef90fc96a2c23d50ec_v3_1_3_0').validate(obj)
+def is_valid_retrieves_specific_client_information_matching_the_macaddress(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_ee00176282fd54ef90fc96a2c23d50ec_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_specific_client_information_matching_the_macaddress(api):
-    endpoint_result = api.clients.retrieves_specific_client_information_matching_the_macaddress(
-        attribute='string',
-        end_time=0,
-        id='string',
-        start_time=0,
-        view='string'
+    endpoint_result = (
+        api.clients.retrieves_specific_client_information_matching_the_macaddress(
+            attribute="string",
+            end_time=0,
+            id="string",
+            start_time=0,
+            view="string",
+        )
     )
     return endpoint_result
 
@@ -502,7 +587,7 @@ def test_retrieves_specific_client_information_matching_the_macaddress(api, vali
     try:
         assert is_valid_retrieves_specific_client_information_matching_the_macaddress(
             validator,
-            retrieves_specific_client_information_matching_the_macaddress(api)
+            retrieves_specific_client_information_matching_the_macaddress(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -510,57 +595,65 @@ def test_retrieves_specific_client_information_matching_the_macaddress(api, vali
             raise original_e
 
 
-def retrieves_specific_client_information_matching_the_macaddress_default_val(api):
-    endpoint_result = api.clients.retrieves_specific_client_information_matching_the_macaddress(
-        attribute=None,
-        end_time=None,
-        id='string',
-        start_time=None,
-        view=None
+def retrieves_specific_client_information_matching_the_macaddress_default_val(
+    api,
+):
+    endpoint_result = (
+        api.clients.retrieves_specific_client_information_matching_the_macaddress(
+            attribute=None, end_time=None, id="string", start_time=None, view=None
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_specific_client_information_matching_the_macaddress_default_val(api, validator):
+def test_retrieves_specific_client_information_matching_the_macaddress_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_specific_client_information_matching_the_macaddress(
             validator,
-            retrieves_specific_client_information_matching_the_macaddress_default_val(api)
+            retrieves_specific_client_information_matching_the_macaddress_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_specific_client_information_over_a_specified_period_of_time(json_schema_validate, obj):
-    json_schema_validate('jsd_311806d9a13d575abdc26d485af708e7_v3_1_3_0').validate(obj)
+def is_valid_retrieves_specific_client_information_over_a_specified_period_of_time(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_311806d9a13d575abdc26d485af708e7_v3_1_3_0").validate(obj)
     return True
 
 
 def retrieves_specific_client_information_over_a_specified_period_of_time(api):
     endpoint_result = api.clients.retrieves_specific_client_information_over_a_specified_period_of_time(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'key': 'string', 'operator': 'string', 'value': 0}],
-        groupBy=['string'],
-        id='string',
-        page={'limit': 0, 'cursor': 'string', 'timeSortOrder': 'string'},
+        filters=[{"key": "string", "operator": "string", "value": 0}],
+        groupBy=["string"],
+        id="string",
+        page={"limit": 0, "cursor": "string", "timeSortOrder": "string"},
         payload=None,
         startTime=0,
-        trendInterval='string'
+        trendInterval="string",
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_specific_client_information_over_a_specified_period_of_time(api, validator):
+def test_retrieves_specific_client_information_over_a_specified_period_of_time(
+    api, validator
+):
     try:
         assert is_valid_retrieves_specific_client_information_over_a_specified_period_of_time(
             validator,
-            retrieves_specific_client_information_over_a_specified_period_of_time(api)
+            retrieves_specific_client_information_over_a_specified_period_of_time(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -568,7 +661,9 @@ def test_retrieves_specific_client_information_over_a_specified_period_of_time(a
             raise original_e
 
 
-def retrieves_specific_client_information_over_a_specified_period_of_time_default_val(api):
+def retrieves_specific_client_information_over_a_specified_period_of_time_default_val(
+    api,
+):
     endpoint_result = api.clients.retrieves_specific_client_information_over_a_specified_period_of_time(
         active_validation=True,
         aggregateAttributes=None,
@@ -576,21 +671,25 @@ def retrieves_specific_client_information_over_a_specified_period_of_time_defaul
         endTime=None,
         filters=None,
         groupBy=None,
-        id='string',
+        id="string",
         page=None,
         payload=None,
         startTime=None,
-        trendInterval=None
+        trendInterval=None,
     )
     return endpoint_result
 
 
 @pytest.mark.clients
-def test_retrieves_specific_client_information_over_a_specified_period_of_time_default_val(api, validator):
+def test_retrieves_specific_client_information_over_a_specified_period_of_time_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_specific_client_information_over_a_specified_period_of_time(
             validator,
-            retrieves_specific_client_information_over_a_specified_period_of_time_default_val(api)
+            retrieves_specific_client_information_over_a_specified_period_of_time_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -598,26 +697,26 @@ def test_retrieves_specific_client_information_over_a_specified_period_of_time_d
 
 
 def is_valid_get_clients_energy(json_schema_validate, obj):
-    json_schema_validate('jsd_74dddfb3bc2f59f1905e64f5905e2296_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_74dddfb3bc2f59f1905e64f5905e2296_v3_1_3_0").validate(obj)
     return True
 
 
 def get_clients_energy(api):
     endpoint_result = api.clients.get_clients_energy(
-        attribute='string',
-        cursor='string',
-        device_category='string',
-        device_sub_category='string',
+        attribute="string",
+        cursor="string",
+        device_category="string",
+        device_sub_category="string",
         end_time=0,
-        id='string',
+        id="string",
         limit=0,
-        order='string',
-        site_hierarchy='string',
-        site_hierarchy_id='string',
-        site_id='string',
-        sort_by='string',
+        order="string",
+        site_hierarchy="string",
+        site_hierarchy_id="string",
+        site_id="string",
+        sort_by="string",
         start_time=0,
-        view='string'
+        view="string",
     )
     return endpoint_result
 
@@ -625,10 +724,7 @@ def get_clients_energy(api):
 @pytest.mark.clients
 def test_get_clients_energy(api, validator):
     try:
-        assert is_valid_get_clients_energy(
-            validator,
-            get_clients_energy(api)
-        )
+        assert is_valid_get_clients_energy(validator, get_clients_energy(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -650,7 +746,7 @@ def get_clients_energy_default_val(api):
         site_id=None,
         sort_by=None,
         start_time=None,
-        view=None
+        view=None,
     )
     return endpoint_result
 
@@ -659,8 +755,7 @@ def get_clients_energy_default_val(api):
 def test_get_clients_energy_default_val(api, validator):
     try:
         assert is_valid_get_clients_energy(
-            validator,
-            get_clients_energy_default_val(api)
+            validator, get_clients_energy_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -668,20 +763,20 @@ def test_get_clients_energy_default_val(api, validator):
 
 
 def is_valid_count_clients_energy(json_schema_validate, obj):
-    json_schema_validate('jsd_1460bc8798815ab89147f2054720da4d_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_1460bc8798815ab89147f2054720da4d_v3_1_3_0").validate(obj)
     return True
 
 
 def count_clients_energy(api):
     endpoint_result = api.clients.count_clients_energy(
-        device_category='string',
-        device_sub_category='string',
+        device_category="string",
+        device_sub_category="string",
         end_time=0,
-        id='string',
-        site_hierarchy='string',
-        site_hierarchy_id='string',
-        site_id='string',
-        start_time=0
+        id="string",
+        site_hierarchy="string",
+        site_hierarchy_id="string",
+        site_id="string",
+        start_time=0,
     )
     return endpoint_result
 
@@ -689,10 +784,7 @@ def count_clients_energy(api):
 @pytest.mark.clients
 def test_count_clients_energy(api, validator):
     try:
-        assert is_valid_count_clients_energy(
-            validator,
-            count_clients_energy(api)
-        )
+        assert is_valid_count_clients_energy(validator, count_clients_energy(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -708,7 +800,7 @@ def count_clients_energy_default_val(api):
         site_hierarchy=None,
         site_hierarchy_id=None,
         site_id=None,
-        start_time=None
+        start_time=None,
     )
     return endpoint_result
 
@@ -717,8 +809,7 @@ def count_clients_energy_default_val(api):
 def test_count_clients_energy_default_val(api, validator):
     try:
         assert is_valid_count_clients_energy(
-            validator,
-            count_clients_energy_default_val(api)
+            validator, count_clients_energy_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -726,21 +817,36 @@ def test_count_clients_energy_default_val(api, validator):
 
 
 def is_valid_query_clients_energy(json_schema_validate, obj):
-    json_schema_validate('jsd_712464c536ac5a318629fc3d6b3dc236_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_712464c536ac5a318629fc3d6b3dc236_v3_1_3_0").validate(obj)
     return True
 
 
 def query_clients_energy(api):
     endpoint_result = api.clients.query_clients_energy(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'logicalOperator': 'string', 'filters': [{'key': 'string', 'operator': 'string', 'value': ['string']}]}],
-        page={'limit': 0, 'cursor': 'string', 'sortBy': [{'name': 'string', 'order': 'string', 'function': 'string'}]},
+        filters=[
+            {
+                "logicalOperator": "string",
+                "filters": [
+                    {
+                        "key": "string",
+                        "operator": "string",
+                        "value": ["string"],
+                    }
+                ],
+            }
+        ],
+        page={
+            "limit": 0,
+            "cursor": "string",
+            "sortBy": [{"name": "string", "order": "string", "function": "string"}],
+        },
         payload=None,
         startTime=0,
-        views=['string']
+        views=["string"],
     )
     return endpoint_result
 
@@ -748,10 +854,7 @@ def query_clients_energy(api):
 @pytest.mark.clients
 def test_query_clients_energy(api, validator):
     try:
-        assert is_valid_query_clients_energy(
-            validator,
-            query_clients_energy(api)
-        )
+        assert is_valid_query_clients_energy(validator, query_clients_energy(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -768,7 +871,7 @@ def query_clients_energy_default_val(api):
         page=None,
         payload=None,
         startTime=None,
-        views=None
+        views=None,
     )
     return endpoint_result
 
@@ -777,8 +880,7 @@ def query_clients_energy_default_val(api):
 def test_query_clients_energy_default_val(api, validator):
     try:
         assert is_valid_query_clients_energy(
-            validator,
-            query_clients_energy_default_val(api)
+            validator, query_clients_energy_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -786,21 +888,36 @@ def test_query_clients_energy_default_val(api, validator):
 
 
 def is_valid_count_clients_energy_from_query(json_schema_validate, obj):
-    json_schema_validate('jsd_201c765afc72581d862cd61f5139d224_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_201c765afc72581d862cd61f5139d224_v3_1_3_0").validate(obj)
     return True
 
 
 def count_clients_energy_from_query(api):
     endpoint_result = api.clients.count_clients_energy_from_query(
         active_validation=True,
-        aggregateAttributes=[{'name': 'string', 'function': 'string'}],
-        attributes=['string'],
+        aggregateAttributes=[{"name": "string", "function": "string"}],
+        attributes=["string"],
         endTime=0,
-        filters=[{'logicalOperator': 'string', 'filters': [{'key': 'string', 'operator': 'string', 'value': ['string']}]}],
-        page={'limit': 0, 'offset': 0, 'sortBy': [{'name': 'string', 'order': 'string', 'function': 'string'}]},
+        filters=[
+            {
+                "logicalOperator": "string",
+                "filters": [
+                    {
+                        "key": "string",
+                        "operator": "string",
+                        "value": ["string"],
+                    }
+                ],
+            }
+        ],
+        page={
+            "limit": 0,
+            "offset": 0,
+            "sortBy": [{"name": "string", "order": "string", "function": "string"}],
+        },
         payload=None,
         startTime=0,
-        views=['string']
+        views=["string"],
     )
     return endpoint_result
 
@@ -809,8 +926,7 @@ def count_clients_energy_from_query(api):
 def test_count_clients_energy_from_query(api, validator):
     try:
         assert is_valid_count_clients_energy_from_query(
-            validator,
-            count_clients_energy_from_query(api)
+            validator, count_clients_energy_from_query(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -828,7 +944,7 @@ def count_clients_energy_from_query_default_val(api):
         page=None,
         payload=None,
         startTime=None,
-        views=None
+        views=None,
     )
     return endpoint_result
 
@@ -837,8 +953,7 @@ def count_clients_energy_from_query_default_val(api):
 def test_count_clients_energy_from_query_default_val(api, validator):
     try:
         assert is_valid_count_clients_energy_from_query(
-            validator,
-            count_clients_energy_from_query_default_val(api)
+            validator, count_clients_energy_from_query_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -846,17 +961,17 @@ def test_count_clients_energy_from_query_default_val(api, validator):
 
 
 def is_valid_get_client_energy_by_id(json_schema_validate, obj):
-    json_schema_validate('jsd_6f090c2a6b325d32be55209cd6839f30_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_6f090c2a6b325d32be55209cd6839f30_v3_1_3_0").validate(obj)
     return True
 
 
 def get_client_energy_by_id(api):
     endpoint_result = api.clients.get_client_energy_by_id(
-        attribute='string',
+        attribute="string",
         end_time=0,
-        id='string',
+        id="string",
         start_time=0,
-        view='string'
+        view="string",
     )
     return endpoint_result
 
@@ -864,10 +979,7 @@ def get_client_energy_by_id(api):
 @pytest.mark.clients
 def test_get_client_energy_by_id(api, validator):
     try:
-        assert is_valid_get_client_energy_by_id(
-            validator,
-            get_client_energy_by_id(api)
-        )
+        assert is_valid_get_client_energy_by_id(validator, get_client_energy_by_id(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -876,11 +988,7 @@ def test_get_client_energy_by_id(api, validator):
 
 def get_client_energy_by_id_default_val(api):
     endpoint_result = api.clients.get_client_energy_by_id(
-        attribute=None,
-        end_time=None,
-        id='string',
-        start_time=None,
-        view=None
+        attribute=None, end_time=None, id="string", start_time=None, view=None
     )
     return endpoint_result
 
@@ -889,8 +997,7 @@ def get_client_energy_by_id_default_val(api):
 def test_get_client_energy_by_id_default_val(api, validator):
     try:
         assert is_valid_get_client_energy_by_id(
-            validator,
-            get_client_energy_by_id_default_val(api)
+            validator, get_client_energy_by_id_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -898,25 +1005,19 @@ def test_get_client_energy_by_id_default_val(api, validator):
 
 
 def is_valid_get_client_detail(json_schema_validate, obj):
-    json_schema_validate('jsd_f2c6333d8eb05491a16c2d32095e4352_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_f2c6333d8eb05491a16c2d32095e4352_v3_1_3_0").validate(obj)
     return True
 
 
 def get_client_detail(api):
-    endpoint_result = api.clients.get_client_detail(
-        mac_address='string',
-        timestamp=0
-    )
+    endpoint_result = api.clients.get_client_detail(mac_address="string", timestamp=0)
     return endpoint_result
 
 
 @pytest.mark.clients
 def test_get_client_detail(api, validator):
     try:
-        assert is_valid_get_client_detail(
-            validator,
-            get_client_detail(api)
-        )
+        assert is_valid_get_client_detail(validator, get_client_detail(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -924,34 +1025,26 @@ def test_get_client_detail(api, validator):
 
 
 def get_client_detail_default_val(api):
-    endpoint_result = api.clients.get_client_detail(
-        mac_address=None,
-        timestamp=None
-    )
+    endpoint_result = api.clients.get_client_detail(mac_address=None, timestamp=None)
     return endpoint_result
 
 
 @pytest.mark.clients
 def test_get_client_detail_default_val(api, validator):
     try:
-        assert is_valid_get_client_detail(
-            validator,
-            get_client_detail_default_val(api)
-        )
+        assert is_valid_get_client_detail(validator, get_client_detail_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_get_client_enrichment_details(json_schema_validate, obj):
-    json_schema_validate('jsd_991dfd2751065bfb8c2367dd726df316_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_991dfd2751065bfb8c2367dd726df316_v3_1_3_0").validate(obj)
     return True
 
 
 def get_client_enrichment_details(api):
-    endpoint_result = api.clients.get_client_enrichment_details(
-
-    )
+    endpoint_result = api.clients.get_client_enrichment_details()
     return endpoint_result
 
 
@@ -959,8 +1052,7 @@ def get_client_enrichment_details(api):
 def test_get_client_enrichment_details(api, validator):
     try:
         assert is_valid_get_client_enrichment_details(
-            validator,
-            get_client_enrichment_details(api)
+            validator, get_client_enrichment_details(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -969,9 +1061,7 @@ def test_get_client_enrichment_details(api, validator):
 
 
 def get_client_enrichment_details_default_val(api):
-    endpoint_result = api.clients.get_client_enrichment_details(
-
-    )
+    endpoint_result = api.clients.get_client_enrichment_details()
     return endpoint_result
 
 
@@ -979,8 +1069,7 @@ def get_client_enrichment_details_default_val(api):
 def test_get_client_enrichment_details_default_val(api, validator):
     try:
         assert is_valid_get_client_enrichment_details(
-            validator,
-            get_client_enrichment_details_default_val(api)
+            validator, get_client_enrichment_details_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -988,14 +1077,12 @@ def test_get_client_enrichment_details_default_val(api, validator):
 
 
 def is_valid_get_overall_client_health(json_schema_validate, obj):
-    json_schema_validate('jsd_f58ddf5cee095688aed79a9bb26e21e8_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_f58ddf5cee095688aed79a9bb26e21e8_v3_1_3_0").validate(obj)
     return True
 
 
 def get_overall_client_health(api):
-    endpoint_result = api.clients.get_overall_client_health(
-        timestamp=0
-    )
+    endpoint_result = api.clients.get_overall_client_health(timestamp=0)
     return endpoint_result
 
 
@@ -1003,8 +1090,7 @@ def get_overall_client_health(api):
 def test_get_overall_client_health(api, validator):
     try:
         assert is_valid_get_overall_client_health(
-            validator,
-            get_overall_client_health(api)
+            validator, get_overall_client_health(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1013,9 +1099,7 @@ def test_get_overall_client_health(api, validator):
 
 
 def get_overall_client_health_default_val(api):
-    endpoint_result = api.clients.get_overall_client_health(
-        timestamp=None
-    )
+    endpoint_result = api.clients.get_overall_client_health(timestamp=None)
     return endpoint_result
 
 
@@ -1023,8 +1107,7 @@ def get_overall_client_health_default_val(api):
 def test_get_overall_client_health_default_val(api, validator):
     try:
         assert is_valid_get_overall_client_health(
-            validator,
-            get_overall_client_health_default_val(api)
+            validator, get_overall_client_health_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1032,15 +1115,13 @@ def test_get_overall_client_health_default_val(api, validator):
 
 
 def is_valid_client_proximity(json_schema_validate, obj):
-    json_schema_validate('jsd_23c141467ea25ec0aa91cbcaff070354_v3_1_3_0').validate(obj)
+    json_schema_validate("jsd_23c141467ea25ec0aa91cbcaff070354_v3_1_3_0").validate(obj)
     return True
 
 
 def client_proximity(api):
     endpoint_result = api.clients.client_proximity(
-        number_days=0,
-        time_resolution=0,
-        username='string'
+        number_days=0, time_resolution=0, username="string"
     )
     return endpoint_result
 
@@ -1048,10 +1129,7 @@ def client_proximity(api):
 @pytest.mark.clients
 def test_client_proximity(api, validator):
     try:
-        assert is_valid_client_proximity(
-            validator,
-            client_proximity(api)
-        )
+        assert is_valid_client_proximity(validator, client_proximity(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1060,9 +1138,7 @@ def test_client_proximity(api, validator):
 
 def client_proximity_default_val(api):
     endpoint_result = api.clients.client_proximity(
-        number_days=None,
-        time_resolution=None,
-        username=None
+        number_days=None, time_resolution=None, username=None
     )
     return endpoint_result
 
@@ -1070,10 +1146,7 @@ def client_proximity_default_val(api):
 @pytest.mark.clients
 def test_client_proximity_default_val(api, validator):
     try:
-        assert is_valid_client_proximity(
-            validator,
-            client_proximity_default_val(api)
-        )
+        assert is_valid_client_proximity(validator, client_proximity_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e

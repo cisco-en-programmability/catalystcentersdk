@@ -32,7 +32,6 @@ from ...utils import (
     check_type,
     dict_from_items_with_values,
     dict_of_str,
-    
 )
 
 
@@ -65,18 +64,16 @@ class Eox(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_eox_status_for_all_devices(self,
-                                       limit=None,
-                                       offset=None,
-                                       headers=None,
-                                       **request_parameters):
-        """Retrieves EoX status for all devices in the network .
+    def get_eox_status_for_all_devices(
+        self, limit=None, offset=None, headers=None, **request_parameters
+    ):
+        """Retrieves EoX status for all devices in the network.
 
         Args:
             limit(int): limit query parameter. The number of records to show for this page. Default is 500 if not
                 specified. Maximum allowed limit is 500. .
             offset(int): offset query parameter. The first record to show for this page, the first record is
-                numbered 1 .
+                numbered 1.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -97,21 +94,17 @@ class Eox(object):
         check_type(limit, int)
         check_type(offset, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'limit':
-                limit,
-            'offset':
-                offset,
+            "limit": limit,
+            "offset": offset,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -119,24 +112,24 @@ class Eox(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/eox-status/device')
+        e_url = "/dna/intent/api/v1/eox-status/device"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d5d27a53ac53258fa2183b7e93a7d5_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_d5d27a53ac53258fa2183b7e93a7d5_v3_1_3_0", json_data
+        )
 
-    def get_eox_details_per_device(self,
-                                   device_id,
-                                   headers=None,
-                                   **request_parameters):
-        """Retrieves EoX details for a device .
+    def get_eox_details_per_device(self, device_id, headers=None, **request_parameters):
+        """Retrieves EoX details for a device.
 
         Args:
-            device_id(str): deviceId path parameter. Device instance UUID .
+            device_id(str): deviceId path parameter. Device instance UUID.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -154,20 +147,17 @@ class Eox(object):
             https://developer.cisco.com/docs/dna-center/#!get-eo-x-details-per-device
         """
         check_type(headers, dict)
-        check_type(device_id, str,
-                   may_be_none=False)
+        check_type(device_id, str, may_be_none=False)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'deviceId': device_id,
+            "deviceId": device_id,
         }
 
         with_custom_headers = False
@@ -176,20 +166,21 @@ class Eox(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/eox-status/device/{deviceId}')
+        e_url = "/dna/intent/api/v1/eox-status/device/{deviceId}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ec048832853f8a63f34415d0e6fce_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_ec048832853f8a63f34415d0e6fce_v3_1_3_0", json_data
+        )
 
-    def get_eox_summary(self,
-                        headers=None,
-                        **request_parameters):
-        """Retrieves EoX summary for all devices in the network .
+    def get_eox_summary(self, headers=None, **request_parameters):
+        """Retrieves EoX summary for all devices in the network.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -210,17 +201,14 @@ class Eox(object):
         """
         check_type(headers, dict)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -228,13 +216,15 @@ class Eox(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/eox-status/summary')
+        e_url = "/dna/intent/api/v1/eox-status/summary"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f0a0dfdaca465bdc91fc290d87476b89_v3_1_3_0', json_data)
-
+        return self._object_factory(
+            "bpm_f0a0dfdaca465bdc91fc290d87476b89_v3_1_3_0", json_data
+        )

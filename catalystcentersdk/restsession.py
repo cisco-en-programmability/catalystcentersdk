@@ -132,14 +132,19 @@ class DownloadResponse(HTTPResponse):
 class RestSession(object):
     """RESTful HTTP session class for making calls to the Catalyst Center APIs."""
 
-    def __init__(self, get_access_token, access_token, base_url,
-                 single_request_timeout=DEFAULT_SINGLE_REQUEST_TIMEOUT,
-                 wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
-                 verify=DEFAULT_VERIFY,
-                 session=None,
-                 version=None,
-                 debug=False,
-                 user_agent = None):
+    def __init__(
+        self,
+        get_access_token,
+        access_token,
+        base_url,
+        single_request_timeout=DEFAULT_SINGLE_REQUEST_TIMEOUT,
+        wait_on_rate_limit=DEFAULT_WAIT_ON_RATE_LIMIT,
+        verify=DEFAULT_VERIFY,
+        session=None,
+        version=None,
+        debug=False,
+        user_agent=None,
+    ):
         """Initialize a new RestSession object.
 
         Args:
@@ -205,12 +210,16 @@ class RestSession(object):
         self._req_session = session or requests.session()
 
         if user_agent != "":
-            user_agent = "-"+ user_agent
+            user_agent = "-" + user_agent
 
         # Update the headers of the `requests` session
-        self.update_headers({'X-Auth-Token': access_token,
-                             'Content-type': 'application/json;charset=utf-8',
-                             'User-Agent': f'python-cisco-catalystcentersdk/{version}{user_agent}'})
+        self.update_headers(
+            {
+                "X-Auth-Token": access_token,
+                "Content-type": "application/json;charset=utf-8",
+                "User-Agent": f"python-cisco-catalystcentersdk/{version}{user_agent}",
+            }
+        )
 
     @property
     def version(self):
@@ -231,8 +240,8 @@ class RestSession(object):
     def user_string(self, value):
         check_type(value, str, may_be_none=False)
         self._user_string = value
-        temp_user_agent = self._user_agent.split('-')
-        self._user_agent = temp_user_agent[0] + '-' + value
+        temp_user_agent = self._user_agent.split("-")
+        self._user_agent = temp_user_agent[0] + "-" + value
 
     @property
     def verify(self):
@@ -321,7 +330,7 @@ class RestSession(object):
         auth header with the new token.
         """
         self._access_token = self._get_access_token()
-        self.update_headers({'X-Auth-Token': self.access_token})
+        self.update_headers({"X-Auth-Token": self.access_token})
 
     def abs_url(self, url):
         """Given a relative or absolute URL; return an absolute URL.
@@ -353,9 +362,9 @@ class RestSession(object):
         Raises:
             Exception: If was not able to find the header's filename value.
         """
-        content_file_list = re.findall('filename=(.*)', content)
+        content_file_list = re.findall("filename=(.*)", content)
         if len(content_file_list) > 0:
-            content_file_name = content_file_list[0].replace('"', '')
+            content_file_name = content_file_list[0].replace('"', "")
         else:
             raise Exception("Could not find the header's filename value")
         return content_file_name
@@ -387,35 +396,37 @@ class RestSession(object):
             DownloadFailure: If was not able to download the raw
             response to a file.
         """
-        save_file = kwargs.pop('save_file', False)
-        dirpath = kwargs.pop('dirpath', None)
-        filename = kwargs.pop('filename', None)
+        save_file = kwargs.pop("save_file", False)
+        dirpath = kwargs.pop("dirpath", None)
+        filename = kwargs.pop("filename", None)
         filepath = None
         collected_data = bytes()
 
-        if not(dirpath) or not(os.path.isdir(dirpath)):
+        if not (dirpath) or not (os.path.isdir(dirpath)):
             dirpath = os.getcwd()
 
         with self.request(method, url, erc, 0, **kwargs) as resp:
-            if resp.headers and resp.headers.get('Content-Disposition'):
+            if resp.headers and resp.headers.get("Content-Disposition"):
                 try:
-                    content = resp.headers.get('Content-Disposition')
+                    content = resp.headers.get("Content-Disposition")
                     filename = filename or self.get_filename(content)
                     filepath = os.path.join(dirpath, filename)
                 except Exception as e:
                     raise DownloadFailure(resp, e)
             if save_file and filepath:
                 try:
-                    with open(filepath, 'wb') as f:
-                        logger.debug('Downloading {0}'.format(filepath))
+                    with open(filepath, "wb") as f:
+                        logger.debug("Downloading {0}".format(filepath))
                         for chunk in resp.iter_content(chunk_size=1024):
                             if chunk:
                                 collected_data += chunk
                                 f.write(chunk)
                 except Exception as e:
                     raise DownloadFailure(resp, e)
-                logger.debug('Downloaded {0}'.format(filepath))
-            final_response = DownloadResponse(resp, filepath, filename, dirpath, collected_data)
+                logger.debug("Downloaded {0}".format(filepath))
+            final_response = DownloadResponse(
+                resp, filepath, filename, dirpath, collected_data
+            )
             return final_response
 
     def request(self, method, url, erc, custom_refresh, **kwargs):
@@ -448,47 +459,47 @@ class RestSession(object):
         abs_url = self.abs_url(url)
 
         # Update request kwargs with session defaults
-        kwargs.setdefault('timeout', self.single_request_timeout)
-        kwargs.setdefault('verify', self.verify)
+        kwargs.setdefault("timeout", self.single_request_timeout)
+        kwargs.setdefault("verify", self.verify)
 
         # Fixes requests inconsistent behavior with additional parameters
-        if not kwargs.get('json'):
-            kwargs.pop('json', None)
+        if not kwargs.get("json"):
+            kwargs.pop("json", None)
 
-        if not kwargs.get('data'):
-            kwargs.pop('data', None)
+        if not kwargs.get("data"):
+            kwargs.pop("data", None)
 
         c = custom_refresh
         while True:
             c += 1
             # Make the HTTP request to the API endpoint
             try:
-                logger.debug('Attempt {}'.format(c))
-                logger.debug(pprint_request_info(abs_url, method,
-                                                 _headers=self.headers,
-                                                 **kwargs))
+                logger.debug("Attempt {}".format(c))
+                logger.debug(
+                    pprint_request_info(
+                        abs_url, method, _headers=self.headers, **kwargs
+                    )
+                )
                 response = self._req_session.request(method, abs_url, **kwargs)
             except socket.error:
                 # A socket error
                 try:
                     c += 1
-                    logger.debug('Attempt {}'.format(c))
-                    response = self._req_session.request(method, abs_url,
-                                                         **kwargs)
+                    logger.debug("Attempt {}".format(c))
+                    response = self._req_session.request(method, abs_url, **kwargs)
                 except Exception as e:
-                    raise catalystcentersdkException('Socket error {}'.format(e))
+                    raise catalystcentersdkException("Socket error {}".format(e))
             except IOError as e:
                 if e.errno == errno.EPIPE:
                     # EPIPE error
                     try:
                         c += 1
-                        logger.debug('Attempt {}'.format(c))
-                        response = self._req_session.request(method, abs_url,
-                                                             **kwargs)
+                        logger.debug("Attempt {}".format(c))
+                        response = self._req_session.request(method, abs_url, **kwargs)
                     except Exception as e:
-                        raise catalystcentersdkException('PipeError {}'.format(e))
+                        raise catalystcentersdkException("PipeError {}".format(e))
                 else:
-                    raise catalystcentersdkException('IOError {}'.format(e))
+                    raise catalystcentersdkException("IOError {}".format(e))
             try:
                 # Check the response code for error conditions
                 check_response_code(response, erc)
@@ -505,9 +516,9 @@ class RestSession(object):
             except ApiError as e:
                 if e.status_code == 401 and custom_refresh < 1:
                     logger.debug(pprint_response_info(response))
-                    logger.debug('Refreshing access token')
+                    logger.debug("Refreshing access token")
                     self.refresh_token()
-                    logger.debug('Refreshed token.')
+                    logger.debug("Refreshed token.")
                     return self.request(method, url, erc, 1, **kwargs)
                 else:
                     # Re-raise the ApiError
@@ -530,9 +541,7 @@ class RestSession(object):
                 Default value: utf-8.
         """
         if fields is not None:
-            e = encoder.MultipartEncoder(
-                fields=fields
-            )
+            e = encoder.MultipartEncoder(fields=fields)
             if create_callback is not None:
                 callback = create_callback(e)
                 m = encoder.MultipartEncoderMonitor(e, callback)
@@ -565,12 +574,12 @@ class RestSession(object):
         check_type(params, dict)
 
         # Expected response code
-        erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['GET'])
-        stream = kwargs.get('stream', None)
+        erc = kwargs.pop("erc", EXPECTED_RESPONSE_CODE["GET"])
+        stream = kwargs.get("stream", None)
         if stream:
-            return self.download('GET', url, erc, 0, params=params, **kwargs)
+            return self.download("GET", url, erc, 0, params=params, **kwargs)
         else:
-            response = self.request('GET', url, erc, 0, params=params, **kwargs)
+            response = self.request("GET", url, erc, 0, params=params, **kwargs)
             return extract_and_parse_json(response)
 
     def patch(self, url, params=None, json=None, data=None, **kwargs):
@@ -597,15 +606,31 @@ class RestSession(object):
         check_type(params, dict)
 
         # Expected response code
-        erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['PATCH'])
+        erc = kwargs.pop("erc", EXPECTED_RESPONSE_CODE["PATCH"])
 
-        stream = kwargs.get('stream', None)
+        stream = kwargs.get("stream", None)
         if stream:
-            return self.download('PATCH', url, erc, 0, params=params,
-                                 json=json, data=data, **kwargs)
+            return self.download(
+                "PATCH",
+                url,
+                erc,
+                0,
+                params=params,
+                json=json,
+                data=data,
+                **kwargs,
+            )
         else:
-            response = self.request('PATCH', url, erc, 0, params=params,
-                                    json=json, data=data, **kwargs)
+            response = self.request(
+                "PATCH",
+                url,
+                erc,
+                0,
+                params=params,
+                json=json,
+                data=data,
+                **kwargs,
+            )
             return extract_and_parse_json(response)
 
     def post(self, url, params=None, json=None, data=None, **kwargs):
@@ -632,15 +657,31 @@ class RestSession(object):
         check_type(params, dict)
 
         # Expected response code
-        erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['POST'])
+        erc = kwargs.pop("erc", EXPECTED_RESPONSE_CODE["POST"])
 
-        stream = kwargs.get('stream', None)
+        stream = kwargs.get("stream", None)
         if stream:
-            return self.download('POST', url, erc, 0, params=params,
-                                 json=json, data=data, **kwargs)
+            return self.download(
+                "POST",
+                url,
+                erc,
+                0,
+                params=params,
+                json=json,
+                data=data,
+                **kwargs,
+            )
         else:
-            response = self.request('POST', url, erc, 0, params=params,
-                                    json=json, data=data, **kwargs)
+            response = self.request(
+                "POST",
+                url,
+                erc,
+                0,
+                params=params,
+                json=json,
+                data=data,
+                **kwargs,
+            )
             return extract_and_parse_json(response)
 
     def put(self, url, params=None, json=None, data=None, **kwargs):
@@ -668,15 +709,31 @@ class RestSession(object):
         check_type(params, dict)
 
         # Expected response code
-        erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['PUT'])
+        erc = kwargs.pop("erc", EXPECTED_RESPONSE_CODE["PUT"])
 
-        stream = kwargs.get('stream', None)
+        stream = kwargs.get("stream", None)
         if stream:
-            return self.download('PUT', url, erc, 0, params=params,
-                                 json=json, data=data, **kwargs)
+            return self.download(
+                "PUT",
+                url,
+                erc,
+                0,
+                params=params,
+                json=json,
+                data=data,
+                **kwargs,
+            )
         else:
-            response = self.request('PUT', url, erc, 0, params=params,
-                                    json=json, data=data, **kwargs)
+            response = self.request(
+                "PUT",
+                url,
+                erc,
+                0,
+                params=params,
+                json=json,
+                data=data,
+                **kwargs,
+            )
             return extract_and_parse_json(response)
 
     def delete(self, url, params=None, **kwargs):
@@ -697,7 +754,7 @@ class RestSession(object):
         check_type(params, dict)
 
         # Expected response code
-        erc = kwargs.pop('erc', EXPECTED_RESPONSE_CODE['DELETE'])
+        erc = kwargs.pop("erc", EXPECTED_RESPONSE_CODE["DELETE"])
 
-        response = self.request('DELETE', url, erc, 0, params=params, **kwargs)
+        response = self.request("DELETE", url, erc, 0, params=params, **kwargs)
         return extract_and_parse_json(response)
