@@ -32,7 +32,6 @@ from ...utils import (
     check_type,
     dict_from_items_with_values,
     dict_of_str,
-    
 )
 
 
@@ -65,14 +64,11 @@ class HealthAndPerformance(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def retrieves_diagnostic_task_by_id(self,
-                                        id,
-                                        headers=None,
-                                        **request_parameters):
+    def retrieves_diagnostic_task_by_id(self, id, headers=None, **request_parameters):
         """This API retrieves the diagnostic task identified by the specified `id`. .
 
         Args:
-            id(str): id path parameter. The `id` of the diagnostic task to be retrieved .
+            id(str): id path parameter. The `id` of the diagnostic task to be retrieved.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -90,20 +86,17 @@ class HealthAndPerformance(object):
             https://developer.cisco.com/docs/dna-center/#!retrieves-diagnostic-task-by-i-d
         """
         check_type(headers, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -112,24 +105,26 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticTasks/{id}')
+        e_url = "/dna/intent/api/v1/diagnosticTasks/{id}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f1144e25e659d1aedcfe02afca97cc_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_f1144e25e659d1aedcfe02afca97cc_v2_3_7_9", json_data
+        )
 
-    def retrieves_diagnostic_task_details_by_id(self,
-                                                id,
-                                                headers=None,
-                                                **request_parameters):
+    def retrieves_diagnostic_task_details_by_id(
+        self, id, headers=None, **request_parameters
+    ):
         """This API retrieves the details of the diagnostic task identified by the specified `id`. .
 
         Args:
-            id(str): id path parameter. The `id` of the diagnostic task to be retrieved .
+            id(str): id path parameter. The `id` of the diagnostic task to be retrieved.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -147,20 +142,17 @@ class HealthAndPerformance(object):
             https://developer.cisco.com/docs/dna-center/#!retrieves-diagnostic-task-details-by-i-d
         """
         check_type(headers, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -169,21 +161,23 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticTasks/{id}/detail')
+        e_url = "/dna/intent/api/v1/diagnosticTasks/{id}/detail"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a656639f78625002805a9ad1257f9cde_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_a656639f78625002805a9ad1257f9cde_v2_3_7_9", json_data
+        )
 
-    def retrieves_all_the_validation_sets(self,
-                                          view=None,
-                                          headers=None,
-                                          **request_parameters):
-        """Retrieves all the validation sets and optionally the contained validations .
+    def retrieves_all_the_validation_sets(
+        self, view=None, headers=None, **request_parameters
+    ):
+        """Retrieves all the validation sets and optionally the contained validations.
 
         Args:
             view(str): view query parameter. When the query parameter `view=DETAIL` is passed, all validation sets
@@ -208,19 +202,16 @@ class HealthAndPerformance(object):
         check_type(headers, dict)
         check_type(view, str)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'view':
-                view,
+            "view": view,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -228,24 +219,26 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationSets')
+        e_url = "/dna/intent/api/v1/diagnosticValidationSets"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d6fc1397d48d52449923716aff009d3c_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_d6fc1397d48d52449923716aff009d3c_v2_3_7_9", json_data
+        )
 
-    def retrieves_validation_details_for_a_validation_set(self,
-                                                          id,
-                                                          headers=None,
-                                                          **request_parameters):
-        """Retrieves validation details for the given validation set id .
+    def retrieves_validation_details_for_a_validation_set(
+        self, id, headers=None, **request_parameters
+    ):
+        """Retrieves validation details for the given validation set id.
 
         Args:
-            id(str): id path parameter. Validation set id .
+            id(str): id path parameter. Validation set id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -263,20 +256,17 @@ class HealthAndPerformance(object):
             https://developer.cisco.com/docs/dna-center/#!retrieves-validation-details-for-a-validation-set
         """
         check_type(headers, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -285,24 +275,29 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationSets/{id}')
+        e_url = "/dna/intent/api/v1/diagnosticValidationSets/{id}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d95307fdbf5b169d9d05e3151f61ac_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_d95307fdbf5b169d9d05e3151f61ac_v2_3_7_9", json_data
+        )
 
-    def retrieves_the_list_of_validation_workflows(self,
-                                                   end_time=None,
-                                                   limit=None,
-                                                   offset=None,
-                                                   run_status=None,
-                                                   start_time=None,
-                                                   headers=None,
-                                                   **request_parameters):
+    def retrieves_the_list_of_validation_workflows(
+        self,
+        end_time=None,
+        limit=None,
+        offset=None,
+        run_status=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the workflows that have been successfully submitted and are currently available. This is sorted by
         `submitTime` .
 
@@ -343,27 +338,20 @@ class HealthAndPerformance(object):
         check_type(offset, int)
         check_type(limit, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'runStatus':
-                run_status,
-            'offset':
-                offset,
-            'limit':
-                limit,
+            "startTime": start_time,
+            "endTime": end_time,
+            "runStatus": run_status,
+            "offset": offset,
+            "limit": limit,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -371,28 +359,33 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationWorkflows')
+        e_url = "/dna/intent/api/v1/diagnosticValidationWorkflows"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a53d325f85e5549b7c5957c6ecbd891_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_a53d325f85e5549b7c5957c6ecbd891_v2_3_7_9", json_data
+        )
 
-    def submits_the_workflow_for_executing_validations(self,
-                                                       description=None,
-                                                       name=None,
-                                                       validationSetIds=None,
-                                                       headers=None,
-                                                       payload=None,
-                                                       active_validation=True,
-                                                       **request_parameters):
-        """Submits the workflow for executing the validations for the given validation specifications .
+    def submits_the_workflow_for_executing_validations(
+        self,
+        description=None,
+        name=None,
+        validationSetIds=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
+        """Submits the workflow for executing the validations for the given validation specifications.
 
         Args:
-            description(string): Health and Performance's Description of the workflow to run .
+            description(string): Health and Performance's Description of the workflow to run.
             name(string): Health and Performance's Name of the workflow to run. It must be unique. .
             validationSetIds(list): Health and Performance's List of validation set ids  (list of strings).
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -418,30 +411,25 @@ class HealthAndPerformance(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'name':
-                name,
-            'description':
-                description,
-            'validationSetIds':
-                validationSetIds,
+            "name": name,
+            "description": description,
+            "validationSetIds": validationSetIds,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_cf9d39cef5e95bb9bd48d5f86e094c99_v2_3_7_9')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_cf9d39cef5e95bb9bd48d5f86e094c99_v2_3_7_9"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -449,24 +437,32 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationWorkflows')
+        e_url = "/dna/intent/api/v1/diagnosticValidationWorkflows"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_cf9d39cef5e95bb9bd48d5f86e094c99_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_cf9d39cef5e95bb9bd48d5f86e094c99_v2_3_7_9", json_data
+        )
 
-    def retrieves_the_count_of_validation_workflows(self,
-                                                    end_time=None,
-                                                    run_status=None,
-                                                    start_time=None,
-                                                    headers=None,
-                                                    **request_parameters):
+    def retrieves_the_count_of_validation_workflows(
+        self,
+        end_time=None,
+        run_status=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the count of workflows that have been successfully submitted and are currently available. .
 
         Args:
@@ -500,23 +496,18 @@ class HealthAndPerformance(object):
         check_type(end_time, int)
         check_type(run_status, str)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'runStatus':
-                run_status,
+            "startTime": start_time,
+            "endTime": end_time,
+            "runStatus": run_status,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -524,24 +515,24 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationWorkflows/count')
+        e_url = "/dna/intent/api/v1/diagnosticValidationWorkflows/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b174a2fc5171520d9423c9a50f7394e7_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_b174a2fc5171520d9423c9a50f7394e7_v2_3_7_9", json_data
+        )
 
-    def deletes_a_validation_workflow(self,
-                                      id,
-                                      headers=None,
-                                      **request_parameters):
-        """Deletes the workflow for the given id .
+    def deletes_a_validation_workflow(self, id, headers=None, **request_parameters):
+        """Deletes the workflow for the given id.
 
         Args:
-            id(str): id path parameter. Workflow id .
+            id(str): id path parameter. Workflow id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -559,20 +550,17 @@ class HealthAndPerformance(object):
             https://developer.cisco.com/docs/dna-center/#!deletes-a-validation-workflow
         """
         check_type(headers, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -581,24 +569,26 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationWorkflows/{id}')
+        e_url = "/dna/intent/api/v1/diagnosticValidationWorkflows/{id}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.delete(endpoint_full_url, params=_params,
-                                             headers=_headers)
+            json_data = self._session.delete(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.delete(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b3ab76a74dae51fabf39b2ad85c3c58f_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_b3ab76a74dae51fabf39b2ad85c3c58f_v2_3_7_9", json_data
+        )
 
-    def retrieves_validation_workflow_details(self,
-                                              id,
-                                              headers=None,
-                                              **request_parameters):
-        """Retrieves workflow details for a workflow id .
+    def retrieves_validation_workflow_details(
+        self, id, headers=None, **request_parameters
+    ):
+        """Retrieves workflow details for a workflow id.
 
         Args:
-            id(str): id path parameter. Workflow id .
+            id(str): id path parameter. Workflow id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -616,20 +606,17 @@ class HealthAndPerformance(object):
             https://developer.cisco.com/docs/dna-center/#!retrieves-validation-workflow-details
         """
         check_type(headers, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -638,36 +625,41 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnosticValidationWorkflows/{id}')
+        e_url = "/dna/intent/api/v1/diagnosticValidationWorkflows/{id}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c36c30b8c5ddfbf9ccf36db5dd68a_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_c36c30b8c5ddfbf9ccf36db5dd68a_v2_3_7_9", json_data
+        )
 
-    def system_health(self,
-                      domain=None,
-                      limit=None,
-                      offset=None,
-                      subdomain=None,
-                      summary=None,
-                      headers=None,
-                      **request_parameters):
-        """This API retrieves the latest system events .
+    def system_health(
+        self,
+        domain=None,
+        limit=None,
+        offset=None,
+        subdomain=None,
+        summary=None,
+        headers=None,
+        **request_parameters
+    ):
+        """This API retrieves the latest system events.
 
         Args:
-            summary(bool): summary query parameter. Fetch the latest high severity event .
+            summary(bool): summary query parameter. Fetch the latest high severity event.
             domain(str): domain query parameter. Fetch system events with this domain. Possible values of domain are
-                listed here : /dna/platform/app/consumer-portal/developer-toolkit/events .
+                listed here : /dna/platform/app/consumer-portal/developer-toolkit/events.
             subdomain(str): subdomain query parameter. Fetch system events with this subdomain. Possible values of
-                subdomain are listed here : /dna/platform/app/consumer-portal/developer-toolkit/events .
+                subdomain are listed here : /dna/platform/app/consumer-portal/developer-toolkit/events.
             limit(int): limit query parameter. Specifies the maximum number of system health events to return per
-                page. Must be an integer between 1 and 50, inclusive .
+                page. Must be an integer between 1 and 50, inclusive.
             offset(int): offset query parameter. Specifies the starting point for the list of system health events
-                to return. Must be an integer greater than or equal to 0 .
+                to return. Must be an integer greater than or equal to 0.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -691,27 +683,20 @@ class HealthAndPerformance(object):
         check_type(limit, int)
         check_type(offset, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'summary':
-                summary,
-            'domain':
-                domain,
-            'subdomain':
-                subdomain,
-            'limit':
-                limit,
-            'offset':
-                offset,
+            "summary": summary,
+            "domain": domain,
+            "subdomain": subdomain,
+            "limit": limit,
+            "offset": offset,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -719,28 +704,29 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnostics/system/health')
+        e_url = "/dna/intent/api/v1/diagnostics/system/health"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_d0acccfae6885bc28f8f39c67f4acfc1_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_d0acccfae6885bc28f8f39c67f4acfc1_v2_3_7_9", json_data
+        )
 
-    def system_health_count(self,
-                            domain=None,
-                            subdomain=None,
-                            headers=None,
-                            **request_parameters):
-        """This API gives the count of the latest system events .
+    def system_health_count(
+        self, domain=None, subdomain=None, headers=None, **request_parameters
+    ):
+        """This API gives the count of the latest system events.
 
         Args:
             domain(str): domain query parameter. Fetch system events with this domain. Possible values of domain are
-                listed here : /dna/platform/app/consumer-portal/developer-toolkit/events .
+                listed here : /dna/platform/app/consumer-portal/developer-toolkit/events.
             subdomain(str): subdomain query parameter. Fetch system events with this subdomain. Possible values of
-                subdomain are listed here : /dna/platform/app/consumer-portal/developer-toolkit/events .
+                subdomain are listed here : /dna/platform/app/consumer-portal/developer-toolkit/events.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -761,21 +747,17 @@ class HealthAndPerformance(object):
         check_type(domain, str)
         check_type(subdomain, str)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'domain':
-                domain,
-            'subdomain':
-                subdomain,
+            "domain": domain,
+            "subdomain": subdomain,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -783,34 +765,39 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnostics/system/health/count')
+        e_url = "/dna/intent/api/v1/diagnostics/system/health/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f6dd603bc35db1948f31c782a37647_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_f6dd603bc35db1948f31c782a37647_v2_3_7_9", json_data
+        )
 
-    def system_performance(self,
-                           end_time=None,
-                           function=None,
-                           kpi=None,
-                           start_time=None,
-                           headers=None,
-                           **request_parameters):
+    def system_performance(
+        self,
+        end_time=None,
+        function=None,
+        kpi=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the aggregated metrics (total, average or maximum) of cluster key performance indicators (KPIs), such
         as CPU utilization, memory utilization or network rates recorded within a specified time period. The
         data will be available from the past 24 hours. .
 
         Args:
-            kpi(str): kpi query parameter. Valid values: cpu,memory,network .
-            function(str): function query parameter. Valid values: sum,average,max .
+            kpi(str): kpi query parameter. Valid values: cpu,memory,network.
+            function(str): function query parameter. Valid values: sum,average,max.
             start_time(int): startTime query parameter. This is the epoch start time in milliseconds from which
-                performance indicator need to be fetched .
+                performance indicator need to be fetched.
             end_time(int): endTime query parameter. This is the epoch end time in milliseconds upto which
-                performance indicator need to be fetched .
+                performance indicator need to be fetched.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -833,25 +820,19 @@ class HealthAndPerformance(object):
         check_type(start_time, int)
         check_type(end_time, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'kpi':
-                kpi,
-            'function':
-                function,
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
+            "kpi": kpi,
+            "function": function,
+            "startTime": start_time,
+            "endTime": end_time,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -859,32 +840,37 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnostics/system/performance')
+        e_url = "/dna/intent/api/v1/diagnostics/system/performance"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_cfcb7a875f215cb4ba59be38abb871e6_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_cfcb7a875f215cb4ba59be38abb871e6_v2_3_7_9", json_data
+        )
 
-    def system_performance_historical(self,
-                                      end_time=None,
-                                      kpi=None,
-                                      start_time=None,
-                                      headers=None,
-                                      **request_parameters):
+    def system_performance_historical(
+        self,
+        end_time=None,
+        kpi=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the average values of cluster key performance indicators (KPIs), like CPU utilization, memory
         utilization or network rates grouped by time intervals within a specified time range. The data will be
         available from the past 24 hours. .
 
         Args:
-            kpi(str): kpi query parameter. Fetch historical data for this kpi. Valid values: cpu,memory,network .
+            kpi(str): kpi query parameter. Fetch historical data for this kpi. Valid values: cpu,memory,network.
             start_time(int): startTime query parameter. This is the epoch start time in milliseconds from which
-                performance indicator need to be fetched .
+                performance indicator need to be fetched.
             end_time(int): endTime query parameter. This is the epoch end time in milliseconds upto which
-                performance indicator need to be fetched .
+                performance indicator need to be fetched.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -906,23 +892,18 @@ class HealthAndPerformance(object):
         check_type(start_time, int)
         check_type(end_time, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'kpi':
-                kpi,
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
+            "kpi": kpi,
+            "startTime": start_time,
+            "endTime": end_time,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -930,15 +911,15 @@ class HealthAndPerformance(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/diagnostics/system/performance/histor'
-                 + 'y')
+        e_url = "/dna/intent/api/v1/diagnostics/system/performance/histor" + "y"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f131d712dc253dca528c0298b3e41c6_v2_3_7_9', json_data)
-
-
+        return self._object_factory(
+            "bpm_f131d712dc253dca528c0298b3e41c6_v2_3_7_9", json_data
+        )

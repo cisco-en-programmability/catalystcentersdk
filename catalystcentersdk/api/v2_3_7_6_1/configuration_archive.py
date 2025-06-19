@@ -23,9 +23,7 @@ SOFTWARE.
 """
 
 
-
 from builtins import *
-
 
 
 from ...restsession import RestSession
@@ -66,18 +64,20 @@ class ConfigurationArchive(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def export_device_configurations(self,
-                                        deviceId=None,
-                                        password=None,
-                                        headers=None,
-                                        payload=None,
-                                        active_validation=True,
-                                        **request_parameters):
-        """Export Device configurations to an encrypted zip file .
+    def export_device_configurations(
+        self,
+        deviceId=None,
+        password=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
+        """Export Device configurations to an encrypted zip file.
 
         Args:
             deviceId(string): Configuration Archive's UUIDs of the devices for which configurations need to be
-                exported.  .
+                exported.
             password(string): Configuration Archive's Password for the zip file to protect exported configurations.
                 Must contain, at minimum 8 characters, one lowercase letter, one uppercase letter, one
                 number, one special character(-=[];,./~!@#$%^&*()_+{}|:?). It may not contain white
@@ -105,31 +105,26 @@ class ConfigurationArchive(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'password':
-                password,
-            'deviceId':
-                deviceId,
+            "password": password,
+            "deviceId": deviceId,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_e85b40c5ca055f4c82281617a8f95644_v2_3_7_6_1')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_e85b40c5ca055f4c82281617a8f95644_v2_3_7_6_1"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -137,40 +132,48 @@ class ConfigurationArchive(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/network-device-archive/cleartext')
+        e_url = "/dna/intent/api/v1/network-device-archive/cleartext"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_e85b40c5ca055f4c82281617a8f95644_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_e85b40c5ca055f4c82281617a8f95644_v2_3_7_6_1", json_data
+        )
 
-    def get_configuration_archive_details(self,
-                                             created_by=None,
-                                             created_time=None,
-                                             device_id=None,
-                                             file_type=None,
-                                             limit=None,
-                                             offset=None,
-                                             headers=None,
-                                             **request_parameters):
+    def get_configuration_archive_details(
+        self,
+        created_by=None,
+        created_time=None,
+        device_id=None,
+        file_type=None,
+        limit=None,
+        offset=None,
+        headers=None,
+        **request_parameters
+    ):
         """Returns the historical device configurations (running configuration , startup configuration , vlan if
-        applicable) by specified criteria .
+        applicable) by specified criteria.
 
         Args:
             device_id(str): deviceId query parameter. comma separated device id for example
                 cf35b0a1-407f-412f-b2f4-f0c3156695f9,aaa38191-0c22-4158-befd-779a09d7cec1 . if device id
-                is not provided it will fetch for all devices .
+                is not provided it will fetch for all devices.
             file_type(str): fileType query parameter. Config File Type can be RUNNINGCONFIG or STARTUPCONFIG
                 .
             created_time(str): createdTime query parameter. Supported with logical filters GT,GTE,LT,LTE & BT
                 : time in milliseconds (epoc format) .
             created_by(str): createdBy query parameter. Comma separated values for createdBy SCHEDULED, USER,
-                CONFIG_CHANGE_EVENT, SCHEDULED_FIRST_TIME, DR_CALL_BACK, PRE_DEPLOY .
+                CONFIG_CHANGE_EVENT, SCHEDULED_FIRST_TIME, DR_CALL_BACK, PRE_DEPLOY.
             offset(int): offset query parameter.
             limit(int): limit query parameter.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -198,29 +201,21 @@ class ConfigurationArchive(object):
         check_type(offset, int)
         check_type(limit, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'deviceId':
-                device_id,
-            'fileType':
-                file_type,
-            'createdTime':
-                created_time,
-            'createdBy':
-                created_by,
-            'offset':
-                offset,
-            'limit':
-                limit,
+            "deviceId": device_id,
+            "fileType": file_type,
+            "createdTime": created_time,
+            "createdBy": created_by,
+            "offset": offset,
+            "limit": limit,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -228,12 +223,15 @@ class ConfigurationArchive(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/network-device-config')
+        e_url = "/dna/intent/api/v1/network-device-config"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ff699112d3854d99557dc1f48987f09_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_ff699112d3854d99557dc1f48987f09_v2_3_7_6_1", json_data
+        )

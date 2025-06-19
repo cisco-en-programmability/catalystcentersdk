@@ -32,7 +32,6 @@ from ...utils import (
     check_type,
     dict_from_items_with_values,
     dict_of_str,
-    
 )
 
 
@@ -65,34 +64,36 @@ class Clients(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(self,
-                                                                                                   attribute=None,
-                                                                                                   band=None,
-                                                                                                   connected_network_device_name=None,
-                                                                                                   end_time=None,
-                                                                                                   ipv4_address=None,
-                                                                                                   ipv6_address=None,
-                                                                                                   limit=None,
-                                                                                                   mac_address=None,
-                                                                                                   offset=None,
-                                                                                                   order=None,
-                                                                                                   os_type=None,
-                                                                                                   os_version=None,
-                                                                                                   site_hierarchy=None,
-                                                                                                   site_hierarchy_id=None,
-                                                                                                   site_id=None,
-                                                                                                   sort_by=None,
-                                                                                                   ssid=None,
-                                                                                                   start_time=None,
-                                                                                                   type=None,
-                                                                                                   view=None,
-                                                                                                   wlc_name=None,
-                                                                                                   headers=None,
-                                                                                                   **request_parameters):
+    def retrieves_the_list_of_clients_while_also_offering_basic_filtering_and_sorting_capabilities(
+        self,
+        attribute=None,
+        band=None,
+        connected_network_device_name=None,
+        end_time=None,
+        ipv4_address=None,
+        ipv6_address=None,
+        limit=None,
+        mac_address=None,
+        offset=None,
+        order=None,
+        os_type=None,
+        os_version=None,
+        site_hierarchy=None,
+        site_hierarchy_id=None,
+        site_id=None,
+        sort_by=None,
+        ssid=None,
+        start_time=None,
+        type=None,
+        view=None,
+        wlc_name=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the list of clients, while also offering basic filtering and sorting capabilities. For detailed
         information about the usage of the API, please refer to the Open API specification document
         https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml.
 
         Args:
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
@@ -100,7 +101,7 @@ class Clients(object):
                 inclusive. If `startTime` is not provided, API will default to current time. .
             end_time(int): endTime query parameter. End time to which API queries the data set related to the
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
-            limit(int): limit query parameter. Maximum number of records to return .
+            limit(int): limit query parameter. Maximum number of records to return.
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
             sort_by(str): sortBy query parameter. A field within the response to sort by. .
@@ -217,62 +218,38 @@ class Clients(object):
         check_type(view, str)
         check_type(attribute, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'limit':
-                limit,
-            'offset':
-                offset,
-            'sortBy':
-                sort_by,
-            'order':
-                order,
-            'type':
-                type,
-            'osType':
-                os_type,
-            'osVersion':
-                os_version,
-            'siteHierarchy':
-                site_hierarchy,
-            'siteHierarchyId':
-                site_hierarchy_id,
-            'siteId':
-                site_id,
-            'ipv4Address':
-                ipv4_address,
-            'ipv6Address':
-                ipv6_address,
-            'macAddress':
-                mac_address,
-            'wlcName':
-                wlc_name,
-            'connectedNetworkDeviceName':
-                connected_network_device_name,
-            'ssid':
-                ssid,
-            'band':
-                band,
-            'view':
-                view,
-            'attribute':
-                attribute,
+            "startTime": start_time,
+            "endTime": end_time,
+            "limit": limit,
+            "offset": offset,
+            "sortBy": sort_by,
+            "order": order,
+            "type": type,
+            "osType": os_type,
+            "osVersion": os_version,
+            "siteHierarchy": site_hierarchy,
+            "siteHierarchyId": site_hierarchy_id,
+            "siteId": site_id,
+            "ipv4Address": ipv4_address,
+            "ipv6Address": ipv6_address,
+            "macAddress": mac_address,
+            "wlcName": wlc_name,
+            "connectedNetworkDeviceName": connected_network_device_name,
+            "ssid": ssid,
+            "band": band,
+            "view": view,
+            "attribute": attribute,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -280,38 +257,42 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients')
+        e_url = "/dna/data/api/v1/clients"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dfcf64acc1815459acc146cd924e9877_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_dfcf64acc1815459acc146cd924e9877_v3_1_3_0", json_data
+        )
 
-    def retrieves_the_total_count_of_clients_by_applying_basic_filtering(self,
-                                                                         band=None,
-                                                                         connected_network_device_name=None,
-                                                                         end_time=None,
-                                                                         ipv4_address=None,
-                                                                         ipv6_address=None,
-                                                                         mac_address=None,
-                                                                         os_type=None,
-                                                                         os_version=None,
-                                                                         site_hierarchy=None,
-                                                                         site_hierarchy_id=None,
-                                                                         site_id=None,
-                                                                         ssid=None,
-                                                                         start_time=None,
-                                                                         type=None,
-                                                                         wlc_name=None,
-                                                                         headers=None,
-                                                                         **request_parameters):
+    def retrieves_the_total_count_of_clients_by_applying_basic_filtering(
+        self,
+        band=None,
+        connected_network_device_name=None,
+        end_time=None,
+        ipv4_address=None,
+        ipv6_address=None,
+        mac_address=None,
+        os_type=None,
+        os_version=None,
+        site_hierarchy=None,
+        site_hierarchy_id=None,
+        site_id=None,
+        ssid=None,
+        start_time=None,
+        type=None,
+        wlc_name=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the number of clients by applying basic filtering. For detailed information about the usage of the
-        API, please refer to the Open API specification document https://github.com/cisco-en-
-        programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-
-        clients1-1.0.0-resolved.yaml .
+        API, please refer to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
@@ -417,50 +398,32 @@ class Clients(object):
         check_type(ssid, str)
         check_type(band, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'type':
-                type,
-            'osType':
-                os_type,
-            'osVersion':
-                os_version,
-            'siteHierarchy':
-                site_hierarchy,
-            'siteHierarchyId':
-                site_hierarchy_id,
-            'siteId':
-                site_id,
-            'ipv4Address':
-                ipv4_address,
-            'ipv6Address':
-                ipv6_address,
-            'macAddress':
-                mac_address,
-            'wlcName':
-                wlc_name,
-            'connectedNetworkDeviceName':
-                connected_network_device_name,
-            'ssid':
-                ssid,
-            'band':
-                band,
+            "startTime": start_time,
+            "endTime": end_time,
+            "type": type,
+            "osType": os_type,
+            "osVersion": os_version,
+            "siteHierarchy": site_hierarchy,
+            "siteHierarchyId": site_hierarchy_id,
+            "siteId": site_id,
+            "ipv4Address": ipv4_address,
+            "ipv6Address": ipv6_address,
+            "macAddress": mac_address,
+            "wlcName": wlc_name,
+            "connectedNetworkDeviceName": connected_network_device_name,
+            "ssid": ssid,
+            "band": band,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -468,32 +431,37 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/count')
+        e_url = "/dna/data/api/v1/clients/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ed18d78d455f9a51049a09ae12d48_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_ed18d78d455f9a51049a09ae12d48_v3_1_3_0", json_data
+        )
 
-    def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(self,
-                                                                                                             aggregateAttributes=None,
-                                                                                                             attributes=None,
-                                                                                                             endTime=None,
-                                                                                                             filters=None,
-                                                                                                             page=None,
-                                                                                                             startTime=None,
-                                                                                                             views=None,
-                                                                                                             headers=None,
-                                                                                                             payload=None,
-                                                                                                             active_validation=True,
-                                                                                                             **request_parameters):
+    def retrieves_the_list_of_clients_by_applying_complex_filters_while_also_supporting_aggregate_attributes(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        page=None,
+        startTime=None,
+        views=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the list of clients by applying complex filters while also supporting aggregate attributes. For
         detailed information about the usage of the API, please refer to the Open API specification document
         https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -526,44 +494,33 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'views':
-                views,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "views": views,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_ea5f116c0cd152bbb4a92c043738ea57_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_ea5f116c0cd152bbb4a92c043738ea57_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -571,30 +528,37 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/query')
+        e_url = "/dna/data/api/v1/clients/query"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_ea5f116c0cd152bbb4a92c043738ea57_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_ea5f116c0cd152bbb4a92c043738ea57_v3_1_3_0", json_data
+        )
 
-    def retrieves_the_number_of_clients_by_applying_complex_filters(self,
-                                                                    endTime=None,
-                                                                    filters=None,
-                                                                    startTime=None,
-                                                                    headers=None,
-                                                                    payload=None,
-                                                                    active_validation=True,
-                                                                    **request_parameters):
+    def retrieves_the_number_of_clients_by_applying_complex_filters(
+        self,
+        endTime=None,
+        filters=None,
+        startTime=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the number of clients by applying complex filters. For detailed information about the usage of the
-        API, please refer to the Open API specification document https://github.com/cisco-en-
-        programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-
-        clients1-1.0.0-resolved.yaml .
+        API, please refer to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             endTime(integer): Clients's End Time.
@@ -623,36 +587,29 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'filters':
-                filters,
+            "startTime": startTime,
+            "endTime": endTime,
+            "filters": filters,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_a2131eae5c1d8e73cd55eebf6a83_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_a2131eae5c1d8e73cd55eebf6a83_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -660,35 +617,43 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/query/count')
+        e_url = "/dna/data/api/v1/clients/query/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_a2131eae5c1d8e73cd55eebf6a83_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_a2131eae5c1d8e73cd55eebf6a83_v3_1_3_0", json_data
+        )
 
-    def retrieves_summary_analytics_data_related_to_clients(self,
-                                                            aggregateAttributes=None,
-                                                            attributes=None,
-                                                            endTime=None,
-                                                            filters=None,
-                                                            groupBy=None,
-                                                            page=None,
-                                                            startTime=None,
-                                                            headers=None,
-                                                            payload=None,
-                                                            active_validation=True,
-                                                            **request_parameters):
+    def retrieves_summary_analytics_data_related_to_clients(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        groupBy=None,
+        page=None,
+        startTime=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves summary analytics data related to clients while applying complex filtering, aggregate functions, and
         grouping. This API facilitates obtaining consolidated insights into the performance and status of the
         clients. For detailed information about the usage of the API, please refer to the Open API specification
         document https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -721,44 +686,33 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'groupBy':
-                groupBy,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "groupBy": groupBy,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_f210ff2d89425b4790ce56f19da7be92_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_f210ff2d89425b4790ce56f19da7be92_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -766,36 +720,43 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/summaryAnalytics')
+        e_url = "/dna/data/api/v1/clients/summaryAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_f210ff2d89425b4790ce56f19da7be92_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_f210ff2d89425b4790ce56f19da7be92_v3_1_3_0", json_data
+        )
 
-    def retrieves_the_top_n_analytics_data_related_to_clients(self,
-                                                              aggregateAttributes=None,
-                                                              attributes=None,
-                                                              endTime=None,
-                                                              filters=None,
-                                                              groupBy=None,
-                                                              page=None,
-                                                              startTime=None,
-                                                              topN=None,
-                                                              headers=None,
-                                                              payload=None,
-                                                              active_validation=True,
-                                                              **request_parameters):
+    def retrieves_the_top_n_analytics_data_related_to_clients(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        groupBy=None,
+        page=None,
+        startTime=None,
+        topN=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the top N analytics data related to clients based on the provided input data. This API facilitates
         obtaining insights into the top-performing or most impacted clients. For detailed information about the
-        usage of the API, please refer to the Open API specification document https://github.com/cisco-en-
-        programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-
-        clients1-1.0.0-resolved.yaml .
+        usage of the API, please refer to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -829,46 +790,34 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'topN':
-                topN,
-            'groupBy':
-                groupBy,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "topN": topN,
+            "groupBy": groupBy,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_f44ddd3c38c5a9484f5cb4e125447bc_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_f44ddd3c38c5a9484f5cb4e125447bc_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -876,37 +825,44 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/topNAnalytics')
+        e_url = "/dna/data/api/v1/clients/topNAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_f44ddd3c38c5a9484f5cb4e125447bc_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_f44ddd3c38c5a9484f5cb4e125447bc_v3_1_3_0", json_data
+        )
 
-    def retrieves_the_trend_analytics_data_related_to_clients(self,
-                                                              aggregateAttributes=None,
-                                                              attributes=None,
-                                                              endTime=None,
-                                                              filters=None,
-                                                              groupBy=None,
-                                                              page=None,
-                                                              startTime=None,
-                                                              trendInterval=None,
-                                                              headers=None,
-                                                              payload=None,
-                                                              active_validation=True,
-                                                              **request_parameters):
+    def retrieves_the_trend_analytics_data_related_to_clients(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        groupBy=None,
+        page=None,
+        startTime=None,
+        trendInterval=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the trend analytics of client data for the specified time range. The data will be grouped based on the
         given trend time interval. This API facilitates obtaining consolidated insights into the performance and
         status of the clients over the specified start and end time. For detailed information about the usage of
-        the API, please refer to the Open API specification document https://github.com/cisco-en-
-        programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-
-        clients1-1.0.0-resolved.yaml .
+        the API, please refer to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -940,46 +896,34 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'trendInterval':
-                trendInterval,
-            'groupBy':
-                groupBy,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "trendInterval": trendInterval,
+            "groupBy": groupBy,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_ffd2fefb57d5523c87a5d941eb93ddc3_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_ffd2fefb57d5523c87a5d941eb93ddc3_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -987,35 +931,42 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/trendAnalytics')
+        e_url = "/dna/data/api/v1/clients/trendAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_ffd2fefb57d5523c87a5d941eb93ddc3_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_ffd2fefb57d5523c87a5d941eb93ddc3_v3_1_3_0", json_data
+        )
 
-    def retrieves_specific_client_information_matching_the_macaddress(self,
-                                                                      id,
-                                                                      attribute=None,
-                                                                      end_time=None,
-                                                                      start_time=None,
-                                                                      view=None,
-                                                                      headers=None,
-                                                                      **request_parameters):
+    def retrieves_specific_client_information_matching_the_macaddress(
+        self,
+        id,
+        attribute=None,
+        end_time=None,
+        start_time=None,
+        view=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves specific client information matching the MAC address. For detailed information about the usage of the
-        API, please refer to the Open API specification document https://github.com/cisco-en-
-        programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-
-        clients1-1.0.0-resolved.yaml .
+        API, please refer to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             id(str): id path parameter. id is the client mac address. It can be specified is any notational
                 conventions 01:23:45:67:89:AB or 01-23-45-67-89-AB or 0123.4567.89AB and is case
-                insensitive .
+                insensitive.
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
                 the resource. It must be specified in UNIX epochtime in milliseconds. Value is
                 inclusive. If `startTime` is not provided, API will default to current time. .
@@ -1050,31 +1001,24 @@ class Clients(object):
         check_type(end_time, int)
         check_type(view, str)
         check_type(attribute, str)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'view':
-                view,
-            'attribute':
-                attribute,
+            "startTime": start_time,
+            "endTime": end_time,
+            "view": view,
+            "attribute": attribute,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -1083,35 +1027,40 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/{id}')
+        e_url = "/dna/data/api/v1/clients/{id}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ee00176282fd54ef90fc96a2c23d50ec_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_ee00176282fd54ef90fc96a2c23d50ec_v3_1_3_0", json_data
+        )
 
-    def retrieves_specific_client_information_over_a_specified_period_of_time(self,
-                                                                              id,
-                                                                              aggregateAttributes=None,
-                                                                              attributes=None,
-                                                                              endTime=None,
-                                                                              filters=None,
-                                                                              groupBy=None,
-                                                                              page=None,
-                                                                              startTime=None,
-                                                                              trendInterval=None,
-                                                                              headers=None,
-                                                                              payload=None,
-                                                                              active_validation=True,
-                                                                              **request_parameters):
+    def retrieves_specific_client_information_over_a_specified_period_of_time(
+        self,
+        id,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        groupBy=None,
+        page=None,
+        startTime=None,
+        trendInterval=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the time series information of a specific client by applying complex filters, aggregate functions, and
         grouping. The data will be grouped based on the specified trend time interval. For detailed information
         about the usage of the API, please refer to the Open API specification document
         https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-clients1-1.0.0-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -1124,7 +1073,7 @@ class Clients(object):
             trendInterval(string): Clients's Trend Interval.
             id(str): id path parameter. id is the client mac address. It can be specified in one of the notational
                 conventions 01:23:45:67:89:AB or 01-23-45-67-89-AB or 0123.4567.89AB and is case
-                insensitive .
+                insensitive.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -1147,50 +1096,38 @@ class Clients(object):
         """
         check_type(headers, dict)
         check_type(payload, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'trendInterval':
-                trendInterval,
-            'groupBy':
-                groupBy,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "trendInterval": trendInterval,
+            "groupBy": groupBy,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_d9a13d575abdc26d485af708e7_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator("jsd_d9a13d575abdc26d485af708e7_v3_1_3_0").validate(
+                _payload
+            )
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1198,39 +1135,47 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/clients/{id}/trendAnalytics')
+        e_url = "/dna/data/api/v1/clients/{id}/trendAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_d9a13d575abdc26d485af708e7_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_d9a13d575abdc26d485af708e7_v3_1_3_0", json_data
+        )
 
-    def get_clients_energy(self,
-                           attribute=None,
-                           cursor=None,
-                           device_category=None,
-                           device_sub_category=None,
-                           end_time=None,
-                           id=None,
-                           limit=None,
-                           order=None,
-                           site_hierarchy=None,
-                           site_hierarchy_id=None,
-                           site_id=None,
-                           sort_by=None,
-                           start_time=None,
-                           view=None,
-                           headers=None,
-                           **request_parameters):
+    def get_clients_energy(
+        self,
+        attribute=None,
+        cursor=None,
+        device_category=None,
+        device_sub_category=None,
+        end_time=None,
+        id=None,
+        limit=None,
+        order=None,
+        site_hierarchy=None,
+        site_hierarchy_id=None,
+        site_id=None,
+        sort_by=None,
+        start_time=None,
+        view=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves a list of client devices with energy data based on the specified query parameters. For detailed
         information about the usage of the API, please refer to the Open API specification document
         - https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml.
 
         Args:
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
@@ -1241,7 +1186,7 @@ class Clients(object):
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. If
                 `endTime` is not provided, API will default to one day after `startTime`. If `startTime`
                 is not provided either, API will default to current time. .
-            limit(int): limit query parameter. Maximum number of records to return .
+            limit(int): limit query parameter. Maximum number of records to return.
             cursor(str): cursor query parameter. It's an opaque string field that indicates the next record in the
                 requested collection. If no records remain, the API returns a response with a count of
                 zero. The default value is an empty string, and the initial value must be an empty
@@ -1315,48 +1260,31 @@ class Clients(object):
         check_type(view, str)
         check_type(attribute, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'limit':
-                limit,
-            'cursor':
-                cursor,
-            'sortBy':
-                sort_by,
-            'order':
-                order,
-            'id':
-                id,
-            'siteId':
-                site_id,
-            'siteHierarchy':
-                site_hierarchy,
-            'siteHierarchyId':
-                site_hierarchy_id,
-            'deviceCategory':
-                device_category,
-            'deviceSubCategory':
-                device_sub_category,
-            'view':
-                view,
-            'attribute':
-                attribute,
+            "startTime": start_time,
+            "endTime": end_time,
+            "limit": limit,
+            "cursor": cursor,
+            "sortBy": sort_by,
+            "order": order,
+            "id": id,
+            "siteId": site_id,
+            "siteHierarchy": site_hierarchy,
+            "siteHierarchyId": site_hierarchy_id,
+            "deviceCategory": device_category,
+            "deviceSubCategory": device_sub_category,
+            "view": view,
+            "attribute": attribute,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1364,31 +1292,36 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/energy/clients')
+        e_url = "/dna/data/api/v1/energy/clients"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dddfb3bc2f59f1905e64f5905e2296_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_dddfb3bc2f59f1905e64f5905e2296_v3_1_3_0", json_data
+        )
 
-    def count_clients_energy(self,
-                             device_category=None,
-                             device_sub_category=None,
-                             end_time=None,
-                             id=None,
-                             site_hierarchy=None,
-                             site_hierarchy_id=None,
-                             site_id=None,
-                             start_time=None,
-                             headers=None,
-                             **request_parameters):
+    def count_clients_energy(
+        self,
+        device_category=None,
+        device_sub_category=None,
+        end_time=None,
+        id=None,
+        site_hierarchy=None,
+        site_hierarchy_id=None,
+        site_id=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the total count of client devices that provide energy data, filtered according to the specified query
         parameters. For detailed information about the usage of the API, please refer to the Open API
         specification document - https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml.
 
         Args:
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
@@ -1451,36 +1384,25 @@ class Clients(object):
         check_type(device_category, str)
         check_type(device_sub_category, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'id':
-                id,
-            'siteId':
-                site_id,
-            'siteHierarchy':
-                site_hierarchy,
-            'siteHierarchyId':
-                site_hierarchy_id,
-            'deviceCategory':
-                device_category,
-            'deviceSubCategory':
-                device_sub_category,
+            "startTime": start_time,
+            "endTime": end_time,
+            "id": id,
+            "siteId": site_id,
+            "siteHierarchy": site_hierarchy,
+            "siteHierarchyId": site_hierarchy_id,
+            "deviceCategory": device_category,
+            "deviceSubCategory": device_sub_category,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1488,32 +1410,37 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/energy/clients/count')
+        e_url = "/dna/data/api/v1/energy/clients/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_bc8798815ab89147f2054720da4d_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_bc8798815ab89147f2054720da4d_v3_1_3_0", json_data
+        )
 
-    def query_clients_energy(self,
-                             aggregateAttributes=None,
-                             attributes=None,
-                             endTime=None,
-                             filters=None,
-                             page=None,
-                             startTime=None,
-                             views=None,
-                             headers=None,
-                             payload=None,
-                             active_validation=True,
-                             **request_parameters):
+    def query_clients_energy(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        page=None,
+        startTime=None,
+        views=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves a list of client devices along with their energy data for a specified time range, based on the filters
         provided in the request body. For detailed information about the usage of the API, please refer to the
         Open API specification document - https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -1546,44 +1473,33 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'filters':
-                filters,
-            'views':
-                views,
-            'attributes':
-                attributes,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "filters": filters,
+            "views": views,
+            "attributes": attributes,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_c536ac5a318629fc3d6b3dc236_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator("jsd_c536ac5a318629fc3d6b3dc236_v3_1_3_0").validate(
+                _payload
+            )
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1591,34 +1507,42 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/energy/clients/query')
+        e_url = "/dna/data/api/v1/energy/clients/query"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_c536ac5a318629fc3d6b3dc236_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_c536ac5a318629fc3d6b3dc236_v3_1_3_0", json_data
+        )
 
-    def count_clients_energy_from_query(self,
-                                        aggregateAttributes=None,
-                                        attributes=None,
-                                        endTime=None,
-                                        filters=None,
-                                        page=None,
-                                        startTime=None,
-                                        views=None,
-                                        headers=None,
-                                        payload=None,
-                                        active_validation=True,
-                                        **request_parameters):
+    def count_clients_energy_from_query(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        page=None,
+        startTime=None,
+        views=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the total count of client devices based on the specified complex filters. For detailed information
         about the usage of the API, please refer to the Open API specification document
         - https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Clients's aggregateAttributes (list of objects).
@@ -1651,44 +1575,33 @@ class Clients(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'filters':
-                filters,
-            'views':
-                views,
-            'attributes':
-                attributes,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "filters": filters,
+            "views": views,
+            "attributes": attributes,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_c765afc72581d862cd61f5139d224_v3_1_3_0')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_c765afc72581d862cd61f5139d224_v3_1_3_0"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1696,30 +1609,38 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/energy/clients/query/count')
+        e_url = "/dna/data/api/v1/energy/clients/query/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_c765afc72581d862cd61f5139d224_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_c765afc72581d862cd61f5139d224_v3_1_3_0", json_data
+        )
 
-    def get_client_energy_by_id(self,
-                                id,
-                                attribute=None,
-                                end_time=None,
-                                start_time=None,
-                                view=None,
-                                headers=None,
-                                **request_parameters):
+    def get_client_energy_by_id(
+        self,
+        id,
+        attribute=None,
+        end_time=None,
+        start_time=None,
+        view=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves client device energy data for a specified time range based on the client ID. For detailed information
         about the usage of the API, please refer to the Open API specification document
         - https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-deviceEnergy_1.0-1.0.1-resolved.yaml.
 
         Args:
             id(str): id path parameter. Mac address of a client device (e.g., 54:9F:C6:43:FF:80). It can be
@@ -1761,31 +1682,24 @@ class Clients(object):
         check_type(end_time, int)
         check_type(view, str)
         check_type(attribute, str)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'view':
-                view,
-            'attribute':
-                attribute,
+            "startTime": start_time,
+            "endTime": end_time,
+            "view": view,
+            "attribute": attribute,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
 
         with_custom_headers = False
@@ -1794,27 +1708,28 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/energy/clients/{id}')
+        e_url = "/dna/data/api/v1/energy/clients/{id}"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f090c2a6b325d32be55209cd6839f30_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_f090c2a6b325d32be55209cd6839f30_v3_1_3_0", json_data
+        )
 
-    def get_client_detail(self,
-                          mac_address,
-                          timestamp=None,
-                          headers=None,
-                          **request_parameters):
+    def get_client_detail(
+        self, mac_address, timestamp=None, headers=None, **request_parameters
+    ):
         """Returns detailed Client information retrieved by Mac Address for any given point of time. .
 
         Args:
-            mac_address(str): macAddress query parameter. MAC Address of the client .
+            mac_address(str): macAddress query parameter. MAC Address of the client.
             timestamp(int): timestamp query parameter. Epoch time(in milliseconds) when the Client health data is
-                required .
+                required.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1832,28 +1747,23 @@ class Clients(object):
             https://developer.cisco.com/docs/dna-center/#!get-client-detail
         """
         check_type(headers, dict)
-        check_type(mac_address, str,
-                   may_be_none=False)
+        check_type(mac_address, str, may_be_none=False)
         check_type(timestamp, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'macAddress':
-                mac_address,
-            'timestamp':
-                timestamp,
+            "macAddress": mac_address,
+            "timestamp": timestamp,
         }
 
-        if _params['timestamp'] is None:
-            _params['timestamp'] = ''
+        if _params["timestamp"] is None:
+            _params["timestamp"] = ""
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1861,22 +1771,23 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/client-detail')
+        e_url = "/dna/intent/api/v1/client-detail"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f2c6333d8eb05491a16c2d32095e4352_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_f2c6333d8eb05491a16c2d32095e4352_v3_1_3_0", json_data
+        )
 
-    def get_client_enrichment_details(self,
-                                      headers=None,
-                                      **request_parameters):
+    def get_client_enrichment_details(self, headers=None, **request_parameters):
         """Enriches a given network End User context (a network user-id or end user’s device Mac Address) with details
         about the user, the devices that the user is connected to and the assurance issues that the user is
-        impacted by .
+        impacted by.
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -1898,29 +1809,22 @@ class Clients(object):
         """
         check_type(headers, dict)
         if headers is not None:
-            if 'entity_type' in headers:
-                check_type(headers.get('entity_type'),
-                           str, may_be_none=False)
-            if 'entity_value' in headers:
-                check_type(headers.get('entity_value'),
-                           str, may_be_none=False)
-            if 'issueCategory' in headers:
-                check_type(headers.get('issueCategory'),
-                           str)
-            if '__persistbapioutput' in headers:
-                check_type(headers.get('__persistbapioutput'),
-                           bool)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "entity_type" in headers:
+                check_type(headers.get("entity_type"), str, may_be_none=False)
+            if "entity_value" in headers:
+                check_type(headers.get("entity_value"), str, may_be_none=False)
+            if "issueCategory" in headers:
+                check_type(headers.get("issueCategory"), str)
+            if "__persistbapioutput" in headers:
+                check_type(headers.get("__persistbapioutput"), bool)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1928,25 +1832,27 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/client-enrichment-details')
+        e_url = "/dna/intent/api/v1/client-enrichment-details"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_dfd2751065bfb8c2367dd726df316_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_dfd2751065bfb8c2367dd726df316_v3_1_3_0", json_data
+        )
 
-    def get_overall_client_health(self,
-                                  timestamp=None,
-                                  headers=None,
-                                  **request_parameters):
-        """Returns Overall Client Health information by Client type (Wired and Wireless) for any given point of time .
+    def get_overall_client_health(
+        self, timestamp=None, headers=None, **request_parameters
+    ):
+        """Returns Overall Client Health information by Client type (Wired and Wireless) for any given point of time.
 
         Args:
             timestamp(int): timestamp query parameter. Epoch time(in milliseconds) when the Client health data is
-                required .
+                required.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1966,22 +1872,19 @@ class Clients(object):
         check_type(headers, dict)
         check_type(timestamp, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'timestamp':
-                timestamp,
+            "timestamp": timestamp,
         }
 
-        if _params['timestamp'] is None:
-            _params['timestamp'] = ''
+        if _params["timestamp"] is None:
+            _params["timestamp"] = ""
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1989,22 +1892,27 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/client-health')
+        e_url = "/dna/intent/api/v1/client-health"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_f58ddf5cee095688aed79a9bb26e21e8_v3_1_3_0', json_data)
+        return self._object_factory(
+            "bpm_f58ddf5cee095688aed79a9bb26e21e8_v3_1_3_0", json_data
+        )
 
-    def client_proximity(self,
-                         username,
-                         number_days=None,
-                         time_resolution=None,
-                         headers=None,
-                         **request_parameters):
+    def client_proximity(
+        self,
+        username,
+        number_days=None,
+        time_resolution=None,
+        headers=None,
+        **request_parameters
+    ):
         """This intent API will provide client proximity information for a specific wireless user. Proximity is defined as
         presence on the same floor at the same time as the specified wireless user. The Proximity workflow
         requires the subscription to the following event (via the Event Notification workflow) prior to making
@@ -2012,7 +1920,7 @@ class Clients(object):
 
         Args:
             username(str): username query parameter. Wireless client username for which proximity information is
-                required .
+                required.
             number_days(int): number_days query parameter. Number of days to track proximity until current date.
                 Defaults and maximum up to 14 days. .
             time_resolution(int): time_resolution query parameter. Time interval (in minutes) to measure proximity.
@@ -2034,28 +1942,22 @@ class Clients(object):
             https://developer.cisco.com/docs/dna-center/#!client-proximity
         """
         check_type(headers, dict)
-        check_type(username, str,
-                   may_be_none=False)
+        check_type(username, str, may_be_none=False)
         check_type(number_days, int)
         check_type(time_resolution, int)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'username':
-                username,
-            'number_days':
-                number_days,
-            'time_resolution':
-                time_resolution,
+            "username": username,
+            "number_days": number_days,
+            "time_resolution": time_resolution,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -2063,13 +1965,15 @@ class Clients(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/client-proximity')
+        e_url = "/dna/intent/api/v1/client-proximity"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c141467ea25ec0aa91cbcaff070354_v3_1_3_0', json_data)
-
+        return self._object_factory(
+            "bpm_c141467ea25ec0aa91cbcaff070354_v3_1_3_0", json_data
+        )

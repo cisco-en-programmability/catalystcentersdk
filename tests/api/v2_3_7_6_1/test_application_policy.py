@@ -26,17 +26,21 @@ from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
+pytestmark = pytest.mark.skipif(
+    CATALYST_CENTER_VERSION != "2.3.7.6", reason="version does not match"
+)
 
 
 def is_valid_get_application_policy(json_schema_validate, obj):
-    json_schema_validate('jsd_fae4378ef4e2503f9fef4f3a4ddd4de4_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_fae4378ef4e2503f9fef4f3a4ddd4de4_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_policy(api):
     endpoint_result = api.application_policy.get_application_policy(
-        policy_scope='string'
+        policy_scope="string"
     )
     return endpoint_result
 
@@ -44,10 +48,7 @@ def get_application_policy(api):
 @pytest.mark.application_policy
 def test_get_application_policy(api, validator):
     try:
-        assert is_valid_get_application_policy(
-            validator,
-            get_application_policy(api)
-        )
+        assert is_valid_get_application_policy(validator, get_application_policy(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -55,9 +56,7 @@ def test_get_application_policy(api, validator):
 
 
 def get_application_policy_default_val(api):
-    endpoint_result = api.application_policy.get_application_policy(
-        policy_scope=None
-    )
+    endpoint_result = api.application_policy.get_application_policy(policy_scope=None)
     return endpoint_result
 
 
@@ -65,8 +64,7 @@ def get_application_policy_default_val(api):
 def test_get_application_policy_default_val(api, validator):
     try:
         assert is_valid_get_application_policy(
-            validator,
-            get_application_policy_default_val(api)
+            validator, get_application_policy_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -74,14 +72,14 @@ def test_get_application_policy_default_val(api, validator):
 
 
 def is_valid_get_application_policy_default(json_schema_validate, obj):
-    json_schema_validate('jsd_9d1b2e541bb85dea8192cd474be4e3ad_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_9d1b2e541bb85dea8192cd474be4e3ad_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_policy_default(api):
-    endpoint_result = api.application_policy.get_application_policy_default(
-
-    )
+    endpoint_result = api.application_policy.get_application_policy_default()
     return endpoint_result
 
 
@@ -89,8 +87,7 @@ def get_application_policy_default(api):
 def test_get_application_policy_default(api, validator):
     try:
         assert is_valid_get_application_policy_default(
-            validator,
-            get_application_policy_default(api)
+            validator, get_application_policy_default(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -99,9 +96,7 @@ def test_get_application_policy_default(api, validator):
 
 
 def get_application_policy_default_default_val(api):
-    endpoint_result = api.application_policy.get_application_policy_default(
-
-    )
+    endpoint_result = api.application_policy.get_application_policy_default()
     return endpoint_result
 
 
@@ -109,8 +104,7 @@ def get_application_policy_default_default_val(api):
 def test_get_application_policy_default_default_val(api, validator):
     try:
         assert is_valid_get_application_policy_default(
-            validator,
-            get_application_policy_default_default_val(api)
+            validator, get_application_policy_default_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -118,17 +112,85 @@ def test_get_application_policy_default_default_val(api, validator):
 
 
 def is_valid_application_policy_intent(json_schema_validate, obj):
-    json_schema_validate('jsd_72fa27ccbaf55711849381a707e1edfa_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_72fa27ccbaf55711849381a707e1edfa_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def application_policy_intent(api):
     endpoint_result = api.application_policy.application_policy_intent(
         active_validation=True,
-        createList=[{'name': 'string', 'deletePolicyStatus': 'string', 'policyScope': 'string', 'priority': 'string', 'advancedPolicyScope': {'name': 'string', 'advancedPolicyScopeElement': [{'groupId': ['string'], 'ssid': ['string']}]}, 'exclusiveContract': {'clause': [{'type': 'string', 'relevanceLevel': 'string', 'deviceRemovalBehavior': 'string', 'hostTrackingEnabled': True}]}, 'contract': {'idRef': 'string'}, 'producer': {'scalableGroup': [{'idRef': 'string'}]}, 'consumer': {'scalableGroup': [{'idRef': 'string'}]}}],
-        deleteList=['string'],
+        createList=[
+            {
+                "name": "string",
+                "deletePolicyStatus": "string",
+                "policyScope": "string",
+                "priority": "string",
+                "advancedPolicyScope": {
+                    "name": "string",
+                    "advancedPolicyScopeElement": [
+                        {"groupId": ["string"], "ssid": ["string"]}
+                    ],
+                },
+                "exclusiveContract": {
+                    "clause": [
+                        {
+                            "type": "string",
+                            "relevanceLevel": "string",
+                            "deviceRemovalBehavior": "string",
+                            "hostTrackingEnabled": True,
+                        }
+                    ]
+                },
+                "contract": {"idRef": "string"},
+                "producer": {"scalableGroup": [{"idRef": "string"}]},
+                "consumer": {"scalableGroup": [{"idRef": "string"}]},
+            }
+        ],
+        deleteList=["string"],
         payload=None,
-        updateList=[{'id': 'string', 'name': 'string', 'deletePolicyStatus': 'string', 'policyScope': 'string', 'priority': 'string', 'advancedPolicyScope': {'id': 'string', 'name': 'string', 'advancedPolicyScopeElement': [{'id': 'string', 'groupId': ['string'], 'ssid': ['string']}]}, 'exclusiveContract': {'id': 'string', 'clause': [{'id': 'string', 'type': 'string', 'relevanceLevel': 'string', 'deviceRemovalBehavior': 'string', 'hostTrackingEnabled': True}]}, 'contract': {'idRef': 'string'}, 'producer': {'id': 'string', 'scalableGroup': [{'idRef': 'string'}]}, 'consumer': {'id': 'string', 'scalableGroup': [{'idRef': 'string'}]}}]
+        updateList=[
+            {
+                "id": "string",
+                "name": "string",
+                "deletePolicyStatus": "string",
+                "policyScope": "string",
+                "priority": "string",
+                "advancedPolicyScope": {
+                    "id": "string",
+                    "name": "string",
+                    "advancedPolicyScopeElement": [
+                        {
+                            "id": "string",
+                            "groupId": ["string"],
+                            "ssid": ["string"],
+                        }
+                    ],
+                },
+                "exclusiveContract": {
+                    "id": "string",
+                    "clause": [
+                        {
+                            "id": "string",
+                            "type": "string",
+                            "relevanceLevel": "string",
+                            "deviceRemovalBehavior": "string",
+                            "hostTrackingEnabled": True,
+                        }
+                    ],
+                },
+                "contract": {"idRef": "string"},
+                "producer": {
+                    "id": "string",
+                    "scalableGroup": [{"idRef": "string"}],
+                },
+                "consumer": {
+                    "id": "string",
+                    "scalableGroup": [{"idRef": "string"}],
+                },
+            }
+        ],
     )
     return endpoint_result
 
@@ -137,8 +199,7 @@ def application_policy_intent(api):
 def test_application_policy_intent(api, validator):
     try:
         assert is_valid_application_policy_intent(
-            validator,
-            application_policy_intent(api)
+            validator, application_policy_intent(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -152,7 +213,7 @@ def application_policy_intent_default_val(api):
         createList=None,
         deleteList=None,
         payload=None,
-        updateList=None
+        updateList=None,
     )
     return endpoint_result
 
@@ -161,8 +222,7 @@ def application_policy_intent_default_val(api):
 def test_application_policy_intent_default_val(api, validator):
     try:
         assert is_valid_application_policy_intent(
-            validator,
-            application_policy_intent_default_val(api)
+            validator, application_policy_intent_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -170,13 +230,15 @@ def test_application_policy_intent_default_val(api, validator):
 
 
 def is_valid_get_application_policy_queuing_profile(json_schema_validate, obj):
-    json_schema_validate('jsd_d47102747c9e50ed9e365b1297e4188d_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_d47102747c9e50ed9e365b1297e4188d_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_policy_queuing_profile(api):
     endpoint_result = api.application_policy.get_application_policy_queuing_profile(
-        name='string'
+        name="string"
     )
     return endpoint_result
 
@@ -185,8 +247,7 @@ def get_application_policy_queuing_profile(api):
 def test_get_application_policy_queuing_profile(api, validator):
     try:
         assert is_valid_get_application_policy_queuing_profile(
-            validator,
-            get_application_policy_queuing_profile(api)
+            validator, get_application_policy_queuing_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -205,8 +266,7 @@ def get_application_policy_queuing_profile_default_val(api):
 def test_get_application_policy_queuing_profile_default_val(api, validator):
     try:
         assert is_valid_get_application_policy_queuing_profile(
-            validator,
-            get_application_policy_queuing_profile_default_val(api)
+            validator, get_application_policy_queuing_profile_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -214,14 +274,15 @@ def test_get_application_policy_queuing_profile_default_val(api, validator):
 
 
 def is_valid_update_application_policy_queuing_profile(json_schema_validate, obj):
-    json_schema_validate('jsd_b11aa4de387251c794665e030fa815da_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_b11aa4de387251c794665e030fa815da_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def update_application_policy_queuing_profile(api):
     endpoint_result = api.application_policy.update_application_policy_queuing_profile(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -230,8 +291,7 @@ def update_application_policy_queuing_profile(api):
 def test_update_application_policy_queuing_profile(api, validator):
     try:
         assert is_valid_update_application_policy_queuing_profile(
-            validator,
-            update_application_policy_queuing_profile(api)
+            validator, update_application_policy_queuing_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -241,8 +301,7 @@ def test_update_application_policy_queuing_profile(api, validator):
 
 def update_application_policy_queuing_profile_default_val(api):
     endpoint_result = api.application_policy.update_application_policy_queuing_profile(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -252,7 +311,7 @@ def test_update_application_policy_queuing_profile_default_val(api, validator):
     try:
         assert is_valid_update_application_policy_queuing_profile(
             validator,
-            update_application_policy_queuing_profile_default_val(api)
+            update_application_policy_queuing_profile_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -260,14 +319,15 @@ def test_update_application_policy_queuing_profile_default_val(api, validator):
 
 
 def is_valid_create_application_policy_queuing_profile(json_schema_validate, obj):
-    json_schema_validate('jsd_bd31fcbd1ecd5a2c8b812088b27bfcea_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_bd31fcbd1ecd5a2c8b812088b27bfcea_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def create_application_policy_queuing_profile(api):
     endpoint_result = api.application_policy.create_application_policy_queuing_profile(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -276,8 +336,7 @@ def create_application_policy_queuing_profile(api):
 def test_create_application_policy_queuing_profile(api, validator):
     try:
         assert is_valid_create_application_policy_queuing_profile(
-            validator,
-            create_application_policy_queuing_profile(api)
+            validator, create_application_policy_queuing_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -287,8 +346,7 @@ def test_create_application_policy_queuing_profile(api, validator):
 
 def create_application_policy_queuing_profile_default_val(api):
     endpoint_result = api.application_policy.create_application_policy_queuing_profile(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -298,7 +356,7 @@ def test_create_application_policy_queuing_profile_default_val(api, validator):
     try:
         assert is_valid_create_application_policy_queuing_profile(
             validator,
-            create_application_policy_queuing_profile_default_val(api)
+            create_application_policy_queuing_profile_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -306,13 +364,15 @@ def test_create_application_policy_queuing_profile_default_val(api, validator):
 
 
 def is_valid_get_application_policy_queuing_profile_count(json_schema_validate, obj):
-    json_schema_validate('jsd_a22faef865d55fe48dd2467bee214518_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_a22faef865d55fe48dd2467bee214518_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_policy_queuing_profile_count(api):
-    endpoint_result = api.application_policy.get_application_policy_queuing_profile_count(
-
+    endpoint_result = (
+        api.application_policy.get_application_policy_queuing_profile_count()
     )
     return endpoint_result
 
@@ -321,8 +381,7 @@ def get_application_policy_queuing_profile_count(api):
 def test_get_application_policy_queuing_profile_count(api, validator):
     try:
         assert is_valid_get_application_policy_queuing_profile_count(
-            validator,
-            get_application_policy_queuing_profile_count(api)
+            validator, get_application_policy_queuing_profile_count(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -331,8 +390,8 @@ def test_get_application_policy_queuing_profile_count(api, validator):
 
 
 def get_application_policy_queuing_profile_count_default_val(api):
-    endpoint_result = api.application_policy.get_application_policy_queuing_profile_count(
-
+    endpoint_result = (
+        api.application_policy.get_application_policy_queuing_profile_count()
     )
     return endpoint_result
 
@@ -342,7 +401,7 @@ def test_get_application_policy_queuing_profile_count_default_val(api, validator
     try:
         assert is_valid_get_application_policy_queuing_profile_count(
             validator,
-            get_application_policy_queuing_profile_count_default_val(api)
+            get_application_policy_queuing_profile_count_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -350,13 +409,15 @@ def test_get_application_policy_queuing_profile_count_default_val(api, validator
 
 
 def is_valid_delete_application_policy_queuing_profile(json_schema_validate, obj):
-    json_schema_validate('jsd_ac547ee07c2c5aff983d90cf4306619d_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_ac547ee07c2c5aff983d90cf4306619d_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def delete_application_policy_queuing_profile(api):
     endpoint_result = api.application_policy.delete_application_policy_queuing_profile(
-        id='string'
+        id="string"
     )
     return endpoint_result
 
@@ -365,8 +426,7 @@ def delete_application_policy_queuing_profile(api):
 def test_delete_application_policy_queuing_profile(api, validator):
     try:
         assert is_valid_delete_application_policy_queuing_profile(
-            validator,
-            delete_application_policy_queuing_profile(api)
+            validator, delete_application_policy_queuing_profile(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -376,7 +436,7 @@ def test_delete_application_policy_queuing_profile(api, validator):
 
 def delete_application_policy_queuing_profile_default_val(api):
     endpoint_result = api.application_policy.delete_application_policy_queuing_profile(
-        id='string'
+        id="string"
     )
     return endpoint_result
 
@@ -386,7 +446,7 @@ def test_delete_application_policy_queuing_profile_default_val(api, validator):
     try:
         assert is_valid_delete_application_policy_queuing_profile(
             validator,
-            delete_application_policy_queuing_profile_default_val(api)
+            delete_application_policy_queuing_profile_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -394,15 +454,15 @@ def test_delete_application_policy_queuing_profile_default_val(api, validator):
 
 
 def is_valid_get_application_sets(json_schema_validate, obj):
-    json_schema_validate('jsd_8b60dbd805b95030bc2caf345a44b504_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_8b60dbd805b95030bc2caf345a44b504_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_sets(api):
     endpoint_result = api.application_policy.get_application_sets(
-        limit=0,
-        name='string',
-        offset=0
+        limit=0, name="string", offset=0
     )
     return endpoint_result
 
@@ -410,10 +470,7 @@ def get_application_sets(api):
 @pytest.mark.application_policy
 def test_get_application_sets(api, validator):
     try:
-        assert is_valid_get_application_sets(
-            validator,
-            get_application_sets(api)
-        )
+        assert is_valid_get_application_sets(validator, get_application_sets(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -422,9 +479,7 @@ def test_get_application_sets(api, validator):
 
 def get_application_sets_default_val(api):
     endpoint_result = api.application_policy.get_application_sets(
-        limit=None,
-        name=None,
-        offset=None
+        limit=None, name=None, offset=None
     )
     return endpoint_result
 
@@ -433,8 +488,7 @@ def get_application_sets_default_val(api):
 def test_get_application_sets_default_val(api, validator):
     try:
         assert is_valid_get_application_sets(
-            validator,
-            get_application_sets_default_val(api)
+            validator, get_application_sets_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -442,24 +496,21 @@ def test_get_application_sets_default_val(api, validator):
 
 
 def is_valid_delete_application_set(json_schema_validate, obj):
-    json_schema_validate('jsd_0a59a448c5c25f1e8246d6827e6e3215_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_0a59a448c5c25f1e8246d6827e6e3215_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def delete_application_set(api):
-    endpoint_result = api.application_policy.delete_application_set(
-        id='string'
-    )
+    endpoint_result = api.application_policy.delete_application_set(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
 def test_delete_application_set(api, validator):
     try:
-        assert is_valid_delete_application_set(
-            validator,
-            delete_application_set(api)
-        )
+        assert is_valid_delete_application_set(validator, delete_application_set(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -467,9 +518,7 @@ def test_delete_application_set(api, validator):
 
 
 def delete_application_set_default_val(api):
-    endpoint_result = api.application_policy.delete_application_set(
-        id=None
-    )
+    endpoint_result = api.application_policy.delete_application_set(id=None)
     return endpoint_result
 
 
@@ -477,8 +526,7 @@ def delete_application_set_default_val(api):
 def test_delete_application_set_default_val(api, validator):
     try:
         assert is_valid_delete_application_set(
-            validator,
-            delete_application_set_default_val(api)
+            validator, delete_application_set_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -486,14 +534,15 @@ def test_delete_application_set_default_val(api, validator):
 
 
 def is_valid_create_application_set(json_schema_validate, obj):
-    json_schema_validate('jsd_636cb7563a5058c4801eb842a74ff61c_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_636cb7563a5058c4801eb842a74ff61c_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def create_application_set(api):
     endpoint_result = api.application_policy.create_application_set(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -501,10 +550,7 @@ def create_application_set(api):
 @pytest.mark.application_policy
 def test_create_application_set(api, validator):
     try:
-        assert is_valid_create_application_set(
-            validator,
-            create_application_set(api)
-        )
+        assert is_valid_create_application_set(validator, create_application_set(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -513,8 +559,7 @@ def test_create_application_set(api, validator):
 
 def create_application_set_default_val(api):
     endpoint_result = api.application_policy.create_application_set(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -523,8 +568,7 @@ def create_application_set_default_val(api):
 def test_create_application_set_default_val(api, validator):
     try:
         assert is_valid_create_application_set(
-            validator,
-            create_application_set_default_val(api)
+            validator, create_application_set_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -532,14 +576,14 @@ def test_create_application_set_default_val(api, validator):
 
 
 def is_valid_get_application_sets_count(json_schema_validate, obj):
-    json_schema_validate('jsd_968ebc5880945305adb41253c6e4ffec_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_968ebc5880945305adb41253c6e4ffec_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_sets_count(api):
-    endpoint_result = api.application_policy.get_application_sets_count(
-
-    )
+    endpoint_result = api.application_policy.get_application_sets_count()
     return endpoint_result
 
 
@@ -547,8 +591,7 @@ def get_application_sets_count(api):
 def test_get_application_sets_count(api, validator):
     try:
         assert is_valid_get_application_sets_count(
-            validator,
-            get_application_sets_count(api)
+            validator, get_application_sets_count(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -557,9 +600,7 @@ def test_get_application_sets_count(api, validator):
 
 
 def get_application_sets_count_default_val(api):
-    endpoint_result = api.application_policy.get_application_sets_count(
-
-    )
+    endpoint_result = api.application_policy.get_application_sets_count()
     return endpoint_result
 
 
@@ -567,8 +608,7 @@ def get_application_sets_count_default_val(api):
 def test_get_application_sets_count_default_val(api, validator):
     try:
         assert is_valid_get_application_sets_count(
-            validator,
-            get_application_sets_count_default_val(api)
+            validator, get_application_sets_count_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -576,14 +616,15 @@ def test_get_application_sets_count_default_val(api, validator):
 
 
 def is_valid_create_application(json_schema_validate, obj):
-    json_schema_validate('jsd_e1781a990c6b5a4b895d56bcfda2b7cb_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_e1781a990c6b5a4b895d56bcfda2b7cb_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def create_application(api):
     endpoint_result = api.application_policy.create_application(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -591,10 +632,7 @@ def create_application(api):
 @pytest.mark.application_policy
 def test_create_application(api, validator):
     try:
-        assert is_valid_create_application(
-            validator,
-            create_application(api)
-        )
+        assert is_valid_create_application(validator, create_application(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -603,8 +641,7 @@ def test_create_application(api, validator):
 
 def create_application_default_val(api):
     endpoint_result = api.application_policy.create_application(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -613,8 +650,7 @@ def create_application_default_val(api):
 def test_create_application_default_val(api, validator):
     try:
         assert is_valid_create_application(
-            validator,
-            create_application_default_val(api)
+            validator, create_application_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -622,14 +658,15 @@ def test_create_application_default_val(api, validator):
 
 
 def is_valid_edit_application(json_schema_validate, obj):
-    json_schema_validate('jsd_a3b37dcbe2a150bea06d9dcde1837281_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_a3b37dcbe2a150bea06d9dcde1837281_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def edit_application(api):
     endpoint_result = api.application_policy.edit_application(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -637,10 +674,7 @@ def edit_application(api):
 @pytest.mark.application_policy
 def test_edit_application(api, validator):
     try:
-        assert is_valid_edit_application(
-            validator,
-            edit_application(api)
-        )
+        assert is_valid_edit_application(validator, edit_application(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -649,8 +683,7 @@ def test_edit_application(api, validator):
 
 def edit_application_default_val(api):
     endpoint_result = api.application_policy.edit_application(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -658,34 +691,28 @@ def edit_application_default_val(api):
 @pytest.mark.application_policy
 def test_edit_application_default_val(api, validator):
     try:
-        assert is_valid_edit_application(
-            validator,
-            edit_application_default_val(api)
-        )
+        assert is_valid_edit_application(validator, edit_application_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_delete_application(json_schema_validate, obj):
-    json_schema_validate('jsd_d11d35f3505652b68905ddf1ee2f7e66_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_d11d35f3505652b68905ddf1ee2f7e66_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def delete_application(api):
-    endpoint_result = api.application_policy.delete_application(
-        id='string'
-    )
+    endpoint_result = api.application_policy.delete_application(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
 def test_delete_application(api, validator):
     try:
-        assert is_valid_delete_application(
-            validator,
-            delete_application(api)
-        )
+        assert is_valid_delete_application(validator, delete_application(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -693,9 +720,7 @@ def test_delete_application(api, validator):
 
 
 def delete_application_default_val(api):
-    endpoint_result = api.application_policy.delete_application(
-        id=None
-    )
+    endpoint_result = api.application_policy.delete_application(id=None)
     return endpoint_result
 
 
@@ -703,8 +728,7 @@ def delete_application_default_val(api):
 def test_delete_application_default_val(api, validator):
     try:
         assert is_valid_delete_application(
-            validator,
-            delete_application_default_val(api)
+            validator, delete_application_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -712,15 +736,15 @@ def test_delete_application_default_val(api, validator):
 
 
 def is_valid_get_applications(json_schema_validate, obj):
-    json_schema_validate('jsd_5b12cdd3a75c51258c9e051e84189f92_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_5b12cdd3a75c51258c9e051e84189f92_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_applications(api):
     endpoint_result = api.application_policy.get_applications(
-        limit=0,
-        name='string',
-        offset=0
+        limit=0, name="string", offset=0
     )
     return endpoint_result
 
@@ -728,10 +752,7 @@ def get_applications(api):
 @pytest.mark.application_policy
 def test_get_applications(api, validator):
     try:
-        assert is_valid_get_applications(
-            validator,
-            get_applications(api)
-        )
+        assert is_valid_get_applications(validator, get_applications(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -740,9 +761,7 @@ def test_get_applications(api, validator):
 
 def get_applications_default_val(api):
     endpoint_result = api.application_policy.get_applications(
-        limit=None,
-        name=None,
-        offset=None
+        limit=None, name=None, offset=None
     )
     return endpoint_result
 
@@ -750,34 +769,28 @@ def get_applications_default_val(api):
 @pytest.mark.application_policy
 def test_get_applications_default_val(api, validator):
     try:
-        assert is_valid_get_applications(
-            validator,
-            get_applications_default_val(api)
-        )
+        assert is_valid_get_applications(validator, get_applications_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_get_applications_count(json_schema_validate, obj):
-    json_schema_validate('jsd_30af5f0aa1ed56ab9b98eb602dbd8366_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_30af5f0aa1ed56ab9b98eb602dbd8366_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_applications_count(api):
-    endpoint_result = api.application_policy.get_applications_count(
-
-    )
+    endpoint_result = api.application_policy.get_applications_count()
     return endpoint_result
 
 
 @pytest.mark.application_policy
 def test_get_applications_count(api, validator):
     try:
-        assert is_valid_get_applications_count(
-            validator,
-            get_applications_count(api)
-        )
+        assert is_valid_get_applications_count(validator, get_applications_count(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -785,9 +798,7 @@ def test_get_applications_count(api, validator):
 
 
 def get_applications_count_default_val(api):
-    endpoint_result = api.application_policy.get_applications_count(
-
-    )
+    endpoint_result = api.application_policy.get_applications_count()
     return endpoint_result
 
 
@@ -795,8 +806,7 @@ def get_applications_count_default_val(api):
 def test_get_applications_count_default_val(api, validator):
     try:
         assert is_valid_get_applications_count(
-            validator,
-            get_applications_count_default_val(api)
+            validator, get_applications_count_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -804,13 +814,15 @@ def test_get_applications_count_default_val(api, validator):
 
 
 def is_valid_get_qos_device_interface_info(json_schema_validate, obj):
-    json_schema_validate('jsd_56001c37a46857f0bee5eba0a514091c_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_56001c37a46857f0bee5eba0a514091c_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_qos_device_interface_info(api):
     endpoint_result = api.application_policy.get_qos_device_interface_info(
-        network_device_id='string'
+        network_device_id="string"
     )
     return endpoint_result
 
@@ -819,8 +831,7 @@ def get_qos_device_interface_info(api):
 def test_get_qos_device_interface_info(api, validator):
     try:
         assert is_valid_get_qos_device_interface_info(
-            validator,
-            get_qos_device_interface_info(api)
+            validator, get_qos_device_interface_info(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -839,8 +850,7 @@ def get_qos_device_interface_info_default_val(api):
 def test_get_qos_device_interface_info_default_val(api, validator):
     try:
         assert is_valid_get_qos_device_interface_info(
-            validator,
-            get_qos_device_interface_info_default_val(api)
+            validator, get_qos_device_interface_info_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -848,14 +858,15 @@ def test_get_qos_device_interface_info_default_val(api, validator):
 
 
 def is_valid_update_qos_device_interface_info(json_schema_validate, obj):
-    json_schema_validate('jsd_ea59df3daf2a57a0b48044cc49c8a1ca_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_ea59df3daf2a57a0b48044cc49c8a1ca_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def update_qos_device_interface_info(api):
     endpoint_result = api.application_policy.update_qos_device_interface_info(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -864,8 +875,7 @@ def update_qos_device_interface_info(api):
 def test_update_qos_device_interface_info(api, validator):
     try:
         assert is_valid_update_qos_device_interface_info(
-            validator,
-            update_qos_device_interface_info(api)
+            validator, update_qos_device_interface_info(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -875,8 +885,7 @@ def test_update_qos_device_interface_info(api, validator):
 
 def update_qos_device_interface_info_default_val(api):
     endpoint_result = api.application_policy.update_qos_device_interface_info(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -885,8 +894,7 @@ def update_qos_device_interface_info_default_val(api):
 def test_update_qos_device_interface_info_default_val(api, validator):
     try:
         assert is_valid_update_qos_device_interface_info(
-            validator,
-            update_qos_device_interface_info_default_val(api)
+            validator, update_qos_device_interface_info_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -894,14 +902,15 @@ def test_update_qos_device_interface_info_default_val(api, validator):
 
 
 def is_valid_create_qos_device_interface_info(json_schema_validate, obj):
-    json_schema_validate('jsd_d045d18062ad5ae59c6f446beb17d675_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_d045d18062ad5ae59c6f446beb17d675_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def create_qos_device_interface_info(api):
     endpoint_result = api.application_policy.create_qos_device_interface_info(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -910,8 +919,7 @@ def create_qos_device_interface_info(api):
 def test_create_qos_device_interface_info(api, validator):
     try:
         assert is_valid_create_qos_device_interface_info(
-            validator,
-            create_qos_device_interface_info(api)
+            validator, create_qos_device_interface_info(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -921,8 +929,7 @@ def test_create_qos_device_interface_info(api, validator):
 
 def create_qos_device_interface_info_default_val(api):
     endpoint_result = api.application_policy.create_qos_device_interface_info(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -931,8 +938,7 @@ def create_qos_device_interface_info_default_val(api):
 def test_create_qos_device_interface_info_default_val(api, validator):
     try:
         assert is_valid_create_qos_device_interface_info(
-            validator,
-            create_qos_device_interface_info_default_val(api)
+            validator, create_qos_device_interface_info_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -940,14 +946,14 @@ def test_create_qos_device_interface_info_default_val(api, validator):
 
 
 def is_valid_get_qos_device_interface_info_count(json_schema_validate, obj):
-    json_schema_validate('jsd_6349b98fe15b531dbb7e20c0f5fa61ab_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_6349b98fe15b531dbb7e20c0f5fa61ab_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_qos_device_interface_info_count(api):
-    endpoint_result = api.application_policy.get_qos_device_interface_info_count(
-
-    )
+    endpoint_result = api.application_policy.get_qos_device_interface_info_count()
     return endpoint_result
 
 
@@ -955,8 +961,7 @@ def get_qos_device_interface_info_count(api):
 def test_get_qos_device_interface_info_count(api, validator):
     try:
         assert is_valid_get_qos_device_interface_info_count(
-            validator,
-            get_qos_device_interface_info_count(api)
+            validator, get_qos_device_interface_info_count(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -965,9 +970,7 @@ def test_get_qos_device_interface_info_count(api, validator):
 
 
 def get_qos_device_interface_info_count_default_val(api):
-    endpoint_result = api.application_policy.get_qos_device_interface_info_count(
-
-    )
+    endpoint_result = api.application_policy.get_qos_device_interface_info_count()
     return endpoint_result
 
 
@@ -975,8 +978,7 @@ def get_qos_device_interface_info_count_default_val(api):
 def test_get_qos_device_interface_info_count_default_val(api, validator):
     try:
         assert is_valid_get_qos_device_interface_info_count(
-            validator,
-            get_qos_device_interface_info_count_default_val(api)
+            validator, get_qos_device_interface_info_count_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -984,13 +986,15 @@ def test_get_qos_device_interface_info_count_default_val(api, validator):
 
 
 def is_valid_delete_qos_device_interface_info(json_schema_validate, obj):
-    json_schema_validate('jsd_629a6a5bb5935709b03d0fc37a1d47d4_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_629a6a5bb5935709b03d0fc37a1d47d4_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def delete_qos_device_interface_info(api):
     endpoint_result = api.application_policy.delete_qos_device_interface_info(
-        id='string'
+        id="string"
     )
     return endpoint_result
 
@@ -999,8 +1003,7 @@ def delete_qos_device_interface_info(api):
 def test_delete_qos_device_interface_info(api, validator):
     try:
         assert is_valid_delete_qos_device_interface_info(
-            validator,
-            delete_qos_device_interface_info(api)
+            validator, delete_qos_device_interface_info(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1010,7 +1013,7 @@ def test_delete_qos_device_interface_info(api, validator):
 
 def delete_qos_device_interface_info_default_val(api):
     endpoint_result = api.application_policy.delete_qos_device_interface_info(
-        id='string'
+        id="string"
     )
     return endpoint_result
 
@@ -1019,8 +1022,7 @@ def delete_qos_device_interface_info_default_val(api):
 def test_delete_qos_device_interface_info_default_val(api, validator):
     try:
         assert is_valid_delete_qos_device_interface_info(
-            validator,
-            delete_qos_device_interface_info_default_val(api)
+            validator, delete_qos_device_interface_info_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1028,14 +1030,15 @@ def test_delete_qos_device_interface_info_default_val(api, validator):
 
 
 def is_valid_create_application_sets_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_01e4d208b5545f66bf0f94a155c81f46_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_01e4d208b5545f66bf0f94a155c81f46_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def create_application_sets_v2(api):
     endpoint_result = api.application_policy.create_application_sets_v2(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -1044,8 +1047,7 @@ def create_application_sets_v2(api):
 def test_create_application_sets_v2(api, validator):
     try:
         assert is_valid_create_application_sets_v2(
-            validator,
-            create_application_sets_v2(api)
+            validator, create_application_sets_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1055,8 +1057,7 @@ def test_create_application_sets_v2(api, validator):
 
 def create_application_sets_v2_default_val(api):
     endpoint_result = api.application_policy.create_application_sets_v2(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -1065,8 +1066,7 @@ def create_application_sets_v2_default_val(api):
 def test_create_application_sets_v2_default_val(api, validator):
     try:
         assert is_valid_create_application_sets_v2(
-            validator,
-            create_application_sets_v2_default_val(api)
+            validator, create_application_sets_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1074,16 +1074,15 @@ def test_create_application_sets_v2_default_val(api, validator):
 
 
 def is_valid_get_application_sets_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_b399a8f895b65f3d91926da8508a9295_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_b399a8f895b65f3d91926da8508a9295_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_sets_v2(api):
     endpoint_result = api.application_policy.get_application_sets_v2(
-        attributes='string',
-        limit=0,
-        name='string',
-        offset=0
+        attributes="string", limit=0, name="string", offset=0
     )
     return endpoint_result
 
@@ -1091,10 +1090,7 @@ def get_application_sets_v2(api):
 @pytest.mark.application_policy
 def test_get_application_sets_v2(api, validator):
     try:
-        assert is_valid_get_application_sets_v2(
-            validator,
-            get_application_sets_v2(api)
-        )
+        assert is_valid_get_application_sets_v2(validator, get_application_sets_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1103,10 +1099,7 @@ def test_get_application_sets_v2(api, validator):
 
 def get_application_sets_v2_default_val(api):
     endpoint_result = api.application_policy.get_application_sets_v2(
-        attributes=None,
-        limit=None,
-        name=None,
-        offset=None
+        attributes=None, limit=None, name=None, offset=None
     )
     return endpoint_result
 
@@ -1115,8 +1108,7 @@ def get_application_sets_v2_default_val(api):
 def test_get_application_sets_v2_default_val(api, validator):
     try:
         assert is_valid_get_application_sets_v2(
-            validator,
-            get_application_sets_v2_default_val(api)
+            validator, get_application_sets_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1124,13 +1116,15 @@ def test_get_application_sets_v2_default_val(api, validator):
 
 
 def is_valid_get_application_set_count_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_8c3f0e5c233a5cc39969fdcff6e0288e_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_8c3f0e5c233a5cc39969fdcff6e0288e_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_set_count_v2(api):
     endpoint_result = api.application_policy.get_application_set_count_v2(
-        scalable_group_type='string'
+        scalable_group_type="string"
     )
     return endpoint_result
 
@@ -1139,8 +1133,7 @@ def get_application_set_count_v2(api):
 def test_get_application_set_count_v2(api, validator):
     try:
         assert is_valid_get_application_set_count_v2(
-            validator,
-            get_application_set_count_v2(api)
+            validator, get_application_set_count_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1159,8 +1152,7 @@ def get_application_set_count_v2_default_val(api):
 def test_get_application_set_count_v2_default_val(api, validator):
     try:
         assert is_valid_get_application_set_count_v2(
-            validator,
-            get_application_set_count_v2_default_val(api)
+            validator, get_application_set_count_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1168,14 +1160,14 @@ def test_get_application_set_count_v2_default_val(api, validator):
 
 
 def is_valid_delete_application_set_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_1fbef625d3225c1eb6db93289a11a33e_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_1fbef625d3225c1eb6db93289a11a33e_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def delete_application_set_v2(api):
-    endpoint_result = api.application_policy.delete_application_set_v2(
-        id='string'
-    )
+    endpoint_result = api.application_policy.delete_application_set_v2(id="string")
     return endpoint_result
 
 
@@ -1183,8 +1175,7 @@ def delete_application_set_v2(api):
 def test_delete_application_set_v2(api, validator):
     try:
         assert is_valid_delete_application_set_v2(
-            validator,
-            delete_application_set_v2(api)
+            validator, delete_application_set_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1193,9 +1184,7 @@ def test_delete_application_set_v2(api, validator):
 
 
 def delete_application_set_v2_default_val(api):
-    endpoint_result = api.application_policy.delete_application_set_v2(
-        id='string'
-    )
+    endpoint_result = api.application_policy.delete_application_set_v2(id="string")
     return endpoint_result
 
 
@@ -1203,8 +1192,7 @@ def delete_application_set_v2_default_val(api):
 def test_delete_application_set_v2_default_val(api, validator):
     try:
         assert is_valid_delete_application_set_v2(
-            validator,
-            delete_application_set_v2_default_val(api)
+            validator, delete_application_set_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1212,14 +1200,15 @@ def test_delete_application_set_v2_default_val(api, validator):
 
 
 def is_valid_edit_applications_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_3662b46a141650debf5946262e8a0961_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_3662b46a141650debf5946262e8a0961_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def edit_applications_v2(api):
     endpoint_result = api.application_policy.edit_applications_v2(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -1227,10 +1216,7 @@ def edit_applications_v2(api):
 @pytest.mark.application_policy
 def test_edit_applications_v2(api, validator):
     try:
-        assert is_valid_edit_applications_v2(
-            validator,
-            edit_applications_v2(api)
-        )
+        assert is_valid_edit_applications_v2(validator, edit_applications_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1239,8 +1225,7 @@ def test_edit_applications_v2(api, validator):
 
 def edit_applications_v2_default_val(api):
     endpoint_result = api.application_policy.edit_applications_v2(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -1249,8 +1234,7 @@ def edit_applications_v2_default_val(api):
 def test_edit_applications_v2_default_val(api, validator):
     try:
         assert is_valid_edit_applications_v2(
-            validator,
-            edit_applications_v2_default_val(api)
+            validator, edit_applications_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1258,14 +1242,15 @@ def test_edit_applications_v2_default_val(api, validator):
 
 
 def is_valid_create_applications_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_a14e71c1b98e51eea41255720025b519_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_a14e71c1b98e51eea41255720025b519_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def create_applications_v2(api):
     endpoint_result = api.application_policy.create_applications_v2(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -1273,10 +1258,7 @@ def create_applications_v2(api):
 @pytest.mark.application_policy
 def test_create_applications_v2(api, validator):
     try:
-        assert is_valid_create_applications_v2(
-            validator,
-            create_applications_v2(api)
-        )
+        assert is_valid_create_applications_v2(validator, create_applications_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1285,8 +1267,7 @@ def test_create_applications_v2(api, validator):
 
 def create_applications_v2_default_val(api):
     endpoint_result = api.application_policy.create_applications_v2(
-        active_validation=True,
-        payload=None
+        active_validation=True, payload=None
     )
     return endpoint_result
 
@@ -1295,8 +1276,7 @@ def create_applications_v2_default_val(api):
 def test_create_applications_v2_default_val(api, validator):
     try:
         assert is_valid_create_applications_v2(
-            validator,
-            create_applications_v2_default_val(api)
+            validator, create_applications_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1304,16 +1284,15 @@ def test_create_applications_v2_default_val(api, validator):
 
 
 def is_valid_get_applications_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_645981f8a81055328e2c77f0dcb60a68_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_645981f8a81055328e2c77f0dcb60a68_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_applications_v2(api):
     endpoint_result = api.application_policy.get_applications_v2(
-        attributes='string',
-        limit=0,
-        name='string',
-        offset=0
+        attributes="string", limit=0, name="string", offset=0
     )
     return endpoint_result
 
@@ -1321,10 +1300,7 @@ def get_applications_v2(api):
 @pytest.mark.application_policy
 def test_get_applications_v2(api, validator):
     try:
-        assert is_valid_get_applications_v2(
-            validator,
-            get_applications_v2(api)
-        )
+        assert is_valid_get_applications_v2(validator, get_applications_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1333,10 +1309,7 @@ def test_get_applications_v2(api, validator):
 
 def get_applications_v2_default_val(api):
     endpoint_result = api.application_policy.get_applications_v2(
-        attributes=None,
-        limit=None,
-        name=None,
-        offset=None
+        attributes=None, limit=None, name=None, offset=None
     )
     return endpoint_result
 
@@ -1345,8 +1318,7 @@ def get_applications_v2_default_val(api):
 def test_get_applications_v2_default_val(api, validator):
     try:
         assert is_valid_get_applications_v2(
-            validator,
-            get_applications_v2_default_val(api)
+            validator, get_applications_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1354,13 +1326,15 @@ def test_get_applications_v2_default_val(api, validator):
 
 
 def is_valid_get_application_count_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_d4d0a63b02ed518a95fe297b2a566f1d_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_d4d0a63b02ed518a95fe297b2a566f1d_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def get_application_count_v2(api):
     endpoint_result = api.application_policy.get_application_count_v2(
-        scalable_group_type='string'
+        scalable_group_type="string"
     )
     return endpoint_result
 
@@ -1369,8 +1343,7 @@ def get_application_count_v2(api):
 def test_get_application_count_v2(api, validator):
     try:
         assert is_valid_get_application_count_v2(
-            validator,
-            get_application_count_v2(api)
+            validator, get_application_count_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1389,8 +1362,7 @@ def get_application_count_v2_default_val(api):
 def test_get_application_count_v2_default_val(api, validator):
     try:
         assert is_valid_get_application_count_v2(
-            validator,
-            get_application_count_v2_default_val(api)
+            validator, get_application_count_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1398,24 +1370,21 @@ def test_get_application_count_v2_default_val(api, validator):
 
 
 def is_valid_delete_application_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_ef849b2f5415501086635693a458e69b_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_ef849b2f5415501086635693a458e69b_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def delete_application_v2(api):
-    endpoint_result = api.application_policy.delete_application_v2(
-        id='string'
-    )
+    endpoint_result = api.application_policy.delete_application_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
 def test_delete_application_v2(api, validator):
     try:
-        assert is_valid_delete_application_v2(
-            validator,
-            delete_application_v2(api)
-        )
+        assert is_valid_delete_application_v2(validator, delete_application_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1423,9 +1392,7 @@ def test_delete_application_v2(api, validator):
 
 
 def delete_application_v2_default_val(api):
-    endpoint_result = api.application_policy.delete_application_v2(
-        id='string'
-    )
+    endpoint_result = api.application_policy.delete_application_v2(id="string")
     return endpoint_result
 
 
@@ -1433,8 +1400,7 @@ def delete_application_v2_default_val(api):
 def test_delete_application_v2_default_val(api, validator):
     try:
         assert is_valid_delete_application_v2(
-            validator,
-            delete_application_v2_default_val(api)
+            validator, delete_application_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

@@ -35,16 +35,19 @@ logger = logging.getLogger(__name__)
 
 class catalystcentersdkException(Exception):
     """Base class for all catalystcentersdk package exceptions."""
+
     pass
 
 
 class AccessTokenError(catalystcentersdkException):
     """Raised when an incorrect CatalystCenter Access Token has been provided."""
+
     pass
 
 
 class VersionError(catalystcentersdkException):
     """Raised when an incorrect CatalystCenter version has been provided."""
+
     pass
 
 
@@ -54,6 +57,7 @@ class DownloadFailure(catalystcentersdkException):
 
     Several data attributes are available for inspection.
     """
+
     def __init__(self, response, exception):
         assert isinstance(response, requests.Response)
         assert isinstance(exception, Exception)
@@ -119,17 +123,19 @@ class ApiError(catalystcentersdkException):
 
         self.details = None
         """The parsed JSON details from the API response."""
-        if "application/json" in \
-                self.response.headers.get("Content-Type", "").lower():
+        if "application/json" in self.response.headers.get("Content-Type", "").lower():
             try:
                 self.details = self.response.json()
             except ValueError:
                 logger.warning("Error parsing JSON response body")
 
-        self.message = self.details.get("message") or\
-            self.details.get("response", {}).get("message")\
-            or self.details.get("description")\
-            if self.details and isinstance(self.details, dict) else None
+        self.message = (
+            self.details.get("message")
+            or self.details.get("response", {}).get("message")
+            or self.details.get("description")
+            if self.details and isinstance(self.details, dict)
+            else None
+        )
         """The error message from the parsed API response."""
 
         self.description = RESPONSE_CODES.get(self.status_code)
@@ -161,7 +167,7 @@ class RateLimitError(ApiError):
         assert isinstance(response, requests.Response)
 
         # Extended exception attributes
-        self.retry_after = max(1, int(response.headers.get('Retry-After', 15)))
+        self.retry_after = max(1, int(response.headers.get("Retry-After", 15)))
         """The `Retry-After` time period (in seconds) provided by CatalystCenter.
 
         Defaults to 15 seconds if the response `Retry-After` header isn't
@@ -183,7 +189,7 @@ class RateLimitWarning(UserWarning):
         assert isinstance(response, requests.Response)
 
         # Extended warning attributes
-        self.retry_after = max(1, int(response.headers.get('Retry-After', 15)))
+        self.retry_after = max(1, int(response.headers.get("Retry-After", 15)))
         """The `Retry-After` time period (in seconds) provided by CatalystCenter.
 
         Defaults to 15 seconds if the response `Retry-After` header isn't
@@ -196,4 +202,5 @@ class RateLimitWarning(UserWarning):
 
 class MalformedRequest(catalystcentersdkException):
     """Raised when a malformed request is received from CatalystCenter user."""
+
     pass

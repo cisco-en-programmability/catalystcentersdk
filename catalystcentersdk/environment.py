@@ -25,40 +25,40 @@ SOFTWARE.
 import os
 
 #: name of the environment debug variable
-DEBUG_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_DEBUG'
+DEBUG_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_DEBUG"
 
 # CatalystCenter API version. Format: MAJOR.MINOR.PATCH
 #: name of the environment version variable
-VERSION_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_VERSION'
+VERSION_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_VERSION"
 
 #: name of the environment username variable
-USERNAME_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_USERNAME'
+USERNAME_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_USERNAME"
 
 #: name of the environment password variable
-PASSWORD_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_PASSWORD'
+PASSWORD_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_PASSWORD"
 
 #: name of the environment encoded_auth variable
-ENCODED_AUTH_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_ENCODED_AUTH'
+ENCODED_AUTH_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_ENCODED_AUTH"
 
 #: name of the environment base_url variable
-BASE_URL_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_BASE_URL'
+BASE_URL_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_BASE_URL"
 
 #: name of the environment single_request_timeout variable
-SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE = \
-    'CATALYST_CENTER_SINGLE_REQUEST_TIMEOUT'
+SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_SINGLE_REQUEST_TIMEOUT"
 
 #: name of the environment wait_on_rate_limit variable
-WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_WAIT_ON_RATE_LIMIT'
+WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_WAIT_ON_RATE_LIMIT"
 
 #: name of the environment verify variable
-VERIFY_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_VERIFY'
+VERIFY_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_VERIFY"
 
 #: name of the environment user agent variable
-USER_AGENT_ENVIRONMENT_VARIABLE = 'CATALYST_CENTER_USER_AGENT'
+USER_AGENT_ENVIRONMENT_VARIABLE = "CATALYST_CENTER_USER_AGENT"
+
 
 def _is_bool(value):
     if isinstance(value, str):
-        return 'true' in value.lower()
+        return "true" in value.lower()
     else:
         return bool(value)
 
@@ -77,6 +77,7 @@ def get_env_username():
     CATALYST_CENTER_USERNAME = os.getenv(USERNAME_ENVIRONMENT_VARIABLE)
     return CATALYST_CENTER_USERNAME
 
+
 def get_env_user_agent():
     CATALYST_CENTER_USER_AGENT = os.getenv(USER_AGENT_ENVIRONMENT_VARIABLE)
     return CATALYST_CENTER_USER_AGENT
@@ -93,35 +94,31 @@ def get_env_encoded_auth():
 
 
 def get_env_debug():
-    CATALYST_CENTER_DEBUG = _get_env_value(
-        DEBUG_ENVIRONMENT_VARIABLE,
-        str, _is_bool)
+    CATALYST_CENTER_DEBUG = _get_env_value(DEBUG_ENVIRONMENT_VARIABLE, str, _is_bool)
     return CATALYST_CENTER_DEBUG
 
 
 def get_env_version():
-    CATALYST_CENTER_VERSION = _get_env_value(
-        VERSION_ENVIRONMENT_VARIABLE, str, str)
+    CATALYST_CENTER_VERSION = _get_env_value(VERSION_ENVIRONMENT_VARIABLE, str, str)
     return CATALYST_CENTER_VERSION
 
 
 def get_env_base_url():
-    CATALYST_CENTER_BASE_URL = _get_env_value(
-        BASE_URL_ENVIRONMENT_VARIABLE, str, str)
+    CATALYST_CENTER_BASE_URL = _get_env_value(BASE_URL_ENVIRONMENT_VARIABLE, str, str)
     return CATALYST_CENTER_BASE_URL
 
 
 def get_env_single_request_timeout():
     CATALYST_CENTER_SINGLE_REQUEST_TIMEOUT = _get_env_value(
-        SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE,
-        int, int)
+        SINGLE_REQUEST_TIMEOUT_ENVIRONMENT_VARIABLE, int, int
+    )
     return CATALYST_CENTER_SINGLE_REQUEST_TIMEOUT
 
 
 def get_env_wait_on_rate_limit():
     CATALYST_CENTER_WAIT_ON_RATE_LIMIT = _get_env_value(
-        WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE,
-        bool, _is_bool)
+        WAIT_ON_RATE_LIMIT_ENVIRONMENT_VARIABLE, bool, _is_bool
+    )
     return CATALYST_CENTER_WAIT_ON_RATE_LIMIT
 
 

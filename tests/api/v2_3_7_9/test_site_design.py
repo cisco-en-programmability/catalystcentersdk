@@ -26,20 +26,19 @@ from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.9', reason='version does not match')
+pytestmark = pytest.mark.skipif(
+    CATALYST_CENTER_VERSION != "2.3.7.9", reason="version does not match"
+)
 
 
 def is_valid_creates_an_area(json_schema_validate, obj):
-    json_schema_validate('jsd_f6a4086c00f45dc5a634f0b8db5cdfd3_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_f6a4086c00f45dc5a634f0b8db5cdfd3_v2_3_7_9").validate(obj)
     return True
 
 
 def creates_an_area(api):
     endpoint_result = api.site_design.creates_an_area(
-        active_validation=True,
-        name='string',
-        parentId='string',
-        payload=None
+        active_validation=True, name="string", parentId="string", payload=None
     )
     return endpoint_result
 
@@ -47,10 +46,7 @@ def creates_an_area(api):
 @pytest.mark.site_design
 def test_creates_an_area(api, validator):
     try:
-        assert is_valid_creates_an_area(
-            validator,
-            creates_an_area(api)
-        )
+        assert is_valid_creates_an_area(validator, creates_an_area(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -59,10 +55,7 @@ def test_creates_an_area(api, validator):
 
 def creates_an_area_default_val(api):
     endpoint_result = api.site_design.creates_an_area(
-        active_validation=True,
-        name=None,
-        parentId=None,
-        payload=None
+        active_validation=True, name=None, parentId=None, payload=None
     )
     return endpoint_result
 
@@ -70,27 +63,24 @@ def creates_an_area_default_val(api):
 @pytest.mark.site_design
 def test_creates_an_area_default_val(api, validator):
     try:
-        assert is_valid_creates_an_area(
-            validator,
-            creates_an_area_default_val(api)
-        )
+        assert is_valid_creates_an_area(validator, creates_an_area_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_updates_an_area(json_schema_validate, obj):
-    json_schema_validate('jsd_55f50f8c552f5d2eb68d715e1318976e_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_55f50f8c552f5d2eb68d715e1318976e_v2_3_7_9").validate(obj)
     return True
 
 
 def updates_an_area(api):
     endpoint_result = api.site_design.updates_an_area(
         active_validation=True,
-        id='string',
-        name='string',
-        parentId='string',
-        payload=None
+        id="string",
+        name="string",
+        parentId="string",
+        payload=None,
     )
     return endpoint_result
 
@@ -98,10 +88,7 @@ def updates_an_area(api):
 @pytest.mark.site_design
 def test_updates_an_area(api, validator):
     try:
-        assert is_valid_updates_an_area(
-            validator,
-            updates_an_area(api)
-        )
+        assert is_valid_updates_an_area(validator, updates_an_area(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -111,10 +98,10 @@ def test_updates_an_area(api, validator):
 def updates_an_area_default_val(api):
     endpoint_result = api.site_design.updates_an_area(
         active_validation=True,
-        id='string',
+        id="string",
         name=None,
         parentId=None,
-        payload=None
+        payload=None,
     )
     return endpoint_result
 
@@ -122,34 +109,26 @@ def updates_an_area_default_val(api):
 @pytest.mark.site_design
 def test_updates_an_area_default_val(api, validator):
     try:
-        assert is_valid_updates_an_area(
-            validator,
-            updates_an_area_default_val(api)
-        )
+        assert is_valid_updates_an_area(validator, updates_an_area_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_deletes_an_area(json_schema_validate, obj):
-    json_schema_validate('jsd_e3604000c24755bd855c3124712ed10f_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_e3604000c24755bd855c3124712ed10f_v2_3_7_9").validate(obj)
     return True
 
 
 def deletes_an_area(api):
-    endpoint_result = api.site_design.deletes_an_area(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_an_area(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_deletes_an_area(api, validator):
     try:
-        assert is_valid_deletes_an_area(
-            validator,
-            deletes_an_area(api)
-        )
+        assert is_valid_deletes_an_area(validator, deletes_an_area(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -157,43 +136,33 @@ def test_deletes_an_area(api, validator):
 
 
 def deletes_an_area_default_val(api):
-    endpoint_result = api.site_design.deletes_an_area(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_an_area(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_deletes_an_area_default_val(api, validator):
     try:
-        assert is_valid_deletes_an_area(
-            validator,
-            deletes_an_area_default_val(api)
-        )
+        assert is_valid_deletes_an_area(validator, deletes_an_area_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_gets_an_area(json_schema_validate, obj):
-    json_schema_validate('jsd_608d4479806c54eb89c4214f716731fc_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_608d4479806c54eb89c4214f716731fc_v2_3_7_9").validate(obj)
     return True
 
 
 def gets_an_area(api):
-    endpoint_result = api.site_design.gets_an_area(
-        id='string'
-    )
+    endpoint_result = api.site_design.gets_an_area(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_gets_an_area(api, validator):
     try:
-        assert is_valid_gets_an_area(
-            validator,
-            gets_an_area(api)
-        )
+        assert is_valid_gets_an_area(validator, gets_an_area(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -201,35 +170,30 @@ def test_gets_an_area(api, validator):
 
 
 def gets_an_area_default_val(api):
-    endpoint_result = api.site_design.gets_an_area(
-        id='string'
-    )
+    endpoint_result = api.site_design.gets_an_area(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_gets_an_area_default_val(api, validator):
     try:
-        assert is_valid_gets_an_area(
-            validator,
-            gets_an_area_default_val(api)
-        )
+        assert is_valid_gets_an_area(validator, gets_an_area_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_assign_network_devices_to_a_site(json_schema_validate, obj):
-    json_schema_validate('jsd_31c279ba052250d883ef87775a415089_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_31c279ba052250d883ef87775a415089_v2_3_7_9").validate(obj)
     return True
 
 
 def assign_network_devices_to_a_site(api):
     endpoint_result = api.site_design.assign_network_devices_to_a_site(
         active_validation=True,
-        deviceIds=['string'],
+        deviceIds=["string"],
         payload=None,
-        siteId='string'
+        siteId="string",
     )
     return endpoint_result
 
@@ -238,8 +202,7 @@ def assign_network_devices_to_a_site(api):
 def test_assign_network_devices_to_a_site(api, validator):
     try:
         assert is_valid_assign_network_devices_to_a_site(
-            validator,
-            assign_network_devices_to_a_site(api)
+            validator, assign_network_devices_to_a_site(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -249,10 +212,7 @@ def test_assign_network_devices_to_a_site(api, validator):
 
 def assign_network_devices_to_a_site_default_val(api):
     endpoint_result = api.site_design.assign_network_devices_to_a_site(
-        active_validation=True,
-        deviceIds=None,
-        payload=None,
-        siteId=None
+        active_validation=True, deviceIds=None, payload=None, siteId=None
     )
     return endpoint_result
 
@@ -261,8 +221,7 @@ def assign_network_devices_to_a_site_default_val(api):
 def test_assign_network_devices_to_a_site_default_val(api, validator):
     try:
         assert is_valid_assign_network_devices_to_a_site(
-            validator,
-            assign_network_devices_to_a_site_default_val(api)
+            validator, assign_network_devices_to_a_site_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -270,15 +229,13 @@ def test_assign_network_devices_to_a_site_default_val(api, validator):
 
 
 def is_valid_get_site_assigned_network_devices(json_schema_validate, obj):
-    json_schema_validate('jsd_0c8f7e2eddc752739209482b6386e2d5_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_0c8f7e2eddc752739209482b6386e2d5_v2_3_7_9").validate(obj)
     return True
 
 
 def get_site_assigned_network_devices(api):
     endpoint_result = api.site_design.get_site_assigned_network_devices(
-        limit=0,
-        offset=0,
-        site_id='string'
+        limit=0, offset=0, site_id="string"
     )
     return endpoint_result
 
@@ -287,8 +244,7 @@ def get_site_assigned_network_devices(api):
 def test_get_site_assigned_network_devices(api, validator):
     try:
         assert is_valid_get_site_assigned_network_devices(
-            validator,
-            get_site_assigned_network_devices(api)
+            validator, get_site_assigned_network_devices(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -298,9 +254,7 @@ def test_get_site_assigned_network_devices(api, validator):
 
 def get_site_assigned_network_devices_default_val(api):
     endpoint_result = api.site_design.get_site_assigned_network_devices(
-        limit=None,
-        offset=None,
-        site_id=None
+        limit=None, offset=None, site_id=None
     )
     return endpoint_result
 
@@ -309,8 +263,7 @@ def get_site_assigned_network_devices_default_val(api):
 def test_get_site_assigned_network_devices_default_val(api, validator):
     try:
         assert is_valid_get_site_assigned_network_devices(
-            validator,
-            get_site_assigned_network_devices_default_val(api)
+            validator, get_site_assigned_network_devices_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -318,13 +271,13 @@ def test_get_site_assigned_network_devices_default_val(api, validator):
 
 
 def is_valid_get_site_assigned_network_devices_count(json_schema_validate, obj):
-    json_schema_validate('jsd_72ac24397435521da0a2feaf8af96162_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_72ac24397435521da0a2feaf8af96162_v2_3_7_9").validate(obj)
     return True
 
 
 def get_site_assigned_network_devices_count(api):
     endpoint_result = api.site_design.get_site_assigned_network_devices_count(
-        site_id='string'
+        site_id="string"
     )
     return endpoint_result
 
@@ -333,8 +286,7 @@ def get_site_assigned_network_devices_count(api):
 def test_get_site_assigned_network_devices_count(api, validator):
     try:
         assert is_valid_get_site_assigned_network_devices_count(
-            validator,
-            get_site_assigned_network_devices_count(api)
+            validator, get_site_assigned_network_devices_count(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -353,8 +305,7 @@ def get_site_assigned_network_devices_count_default_val(api):
 def test_get_site_assigned_network_devices_count_default_val(api, validator):
     try:
         assert is_valid_get_site_assigned_network_devices_count(
-            validator,
-            get_site_assigned_network_devices_count_default_val(api)
+            validator, get_site_assigned_network_devices_count_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -362,14 +313,12 @@ def test_get_site_assigned_network_devices_count_default_val(api, validator):
 
 
 def is_valid_get_device_controllability_settings(json_schema_validate, obj):
-    json_schema_validate('jsd_751818a9b27c573ea0530ce2858a1c1d_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_751818a9b27c573ea0530ce2858a1c1d_v2_3_7_9").validate(obj)
     return True
 
 
 def get_device_controllability_settings(api):
-    endpoint_result = api.site_design.get_device_controllability_settings(
-
-    )
+    endpoint_result = api.site_design.get_device_controllability_settings()
     return endpoint_result
 
 
@@ -377,8 +326,7 @@ def get_device_controllability_settings(api):
 def test_get_device_controllability_settings(api, validator):
     try:
         assert is_valid_get_device_controllability_settings(
-            validator,
-            get_device_controllability_settings(api)
+            validator, get_device_controllability_settings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -387,9 +335,7 @@ def test_get_device_controllability_settings(api, validator):
 
 
 def get_device_controllability_settings_default_val(api):
-    endpoint_result = api.site_design.get_device_controllability_settings(
-
-    )
+    endpoint_result = api.site_design.get_device_controllability_settings()
     return endpoint_result
 
 
@@ -397,8 +343,7 @@ def get_device_controllability_settings_default_val(api):
 def test_get_device_controllability_settings_default_val(api, validator):
     try:
         assert is_valid_get_device_controllability_settings(
-            validator,
-            get_device_controllability_settings_default_val(api)
+            validator, get_device_controllability_settings_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -406,7 +351,7 @@ def test_get_device_controllability_settings_default_val(api, validator):
 
 
 def is_valid_update_device_controllability_settings(json_schema_validate, obj):
-    json_schema_validate('jsd_c7f28c3d23ba5384be5e769ae0505d00_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_c7f28c3d23ba5384be5e769ae0505d00_v2_3_7_9").validate(obj)
     return True
 
 
@@ -415,7 +360,7 @@ def update_device_controllability_settings(api):
         active_validation=True,
         autocorrectTelemetryConfig=True,
         deviceControllability=True,
-        payload=None
+        payload=None,
     )
     return endpoint_result
 
@@ -424,8 +369,7 @@ def update_device_controllability_settings(api):
 def test_update_device_controllability_settings(api, validator):
     try:
         assert is_valid_update_device_controllability_settings(
-            validator,
-            update_device_controllability_settings(api)
+            validator, update_device_controllability_settings(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -438,7 +382,7 @@ def update_device_controllability_settings_default_val(api):
         active_validation=True,
         autocorrectTelemetryConfig=None,
         deviceControllability=None,
-        payload=None
+        payload=None,
     )
     return endpoint_result
 
@@ -447,8 +391,7 @@ def update_device_controllability_settings_default_val(api):
 def test_update_device_controllability_settings_default_val(api, validator):
     try:
         assert is_valid_update_device_controllability_settings(
-            validator,
-            update_device_controllability_settings_default_val(api)
+            validator, update_device_controllability_settings_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -456,14 +399,13 @@ def test_update_device_controllability_settings_default_val(api, validator):
 
 
 def is_valid_get_site_not_assigned_network_devices(json_schema_validate, obj):
-    json_schema_validate('jsd_abb50ef5853d5772a8c7184b972af6d5_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_abb50ef5853d5772a8c7184b972af6d5_v2_3_7_9").validate(obj)
     return True
 
 
 def get_site_not_assigned_network_devices(api):
     endpoint_result = api.site_design.get_site_not_assigned_network_devices(
-        limit=0,
-        offset=0
+        limit=0, offset=0
     )
     return endpoint_result
 
@@ -472,8 +414,7 @@ def get_site_not_assigned_network_devices(api):
 def test_get_site_not_assigned_network_devices(api, validator):
     try:
         assert is_valid_get_site_not_assigned_network_devices(
-            validator,
-            get_site_not_assigned_network_devices(api)
+            validator, get_site_not_assigned_network_devices(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -483,8 +424,7 @@ def test_get_site_not_assigned_network_devices(api, validator):
 
 def get_site_not_assigned_network_devices_default_val(api):
     endpoint_result = api.site_design.get_site_not_assigned_network_devices(
-        limit=None,
-        offset=None
+        limit=None, offset=None
     )
     return endpoint_result
 
@@ -493,8 +433,7 @@ def get_site_not_assigned_network_devices_default_val(api):
 def test_get_site_not_assigned_network_devices_default_val(api, validator):
     try:
         assert is_valid_get_site_not_assigned_network_devices(
-            validator,
-            get_site_not_assigned_network_devices_default_val(api)
+            validator, get_site_not_assigned_network_devices_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -502,14 +441,12 @@ def test_get_site_not_assigned_network_devices_default_val(api, validator):
 
 
 def is_valid_get_site_not_assigned_network_devices_count(json_schema_validate, obj):
-    json_schema_validate('jsd_f0f95023b5e85d68916757f62ebe3a39_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_f0f95023b5e85d68916757f62ebe3a39_v2_3_7_9").validate(obj)
     return True
 
 
 def get_site_not_assigned_network_devices_count(api):
-    endpoint_result = api.site_design.get_site_not_assigned_network_devices_count(
-
-    )
+    endpoint_result = api.site_design.get_site_not_assigned_network_devices_count()
     return endpoint_result
 
 
@@ -517,8 +454,7 @@ def get_site_not_assigned_network_devices_count(api):
 def test_get_site_not_assigned_network_devices_count(api, validator):
     try:
         assert is_valid_get_site_not_assigned_network_devices_count(
-            validator,
-            get_site_not_assigned_network_devices_count(api)
+            validator, get_site_not_assigned_network_devices_count(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -527,9 +463,7 @@ def test_get_site_not_assigned_network_devices_count(api, validator):
 
 
 def get_site_not_assigned_network_devices_count_default_val(api):
-    endpoint_result = api.site_design.get_site_not_assigned_network_devices_count(
-
-    )
+    endpoint_result = api.site_design.get_site_not_assigned_network_devices_count()
     return endpoint_result
 
 
@@ -538,7 +472,7 @@ def test_get_site_not_assigned_network_devices_count_default_val(api, validator)
     try:
         assert is_valid_get_site_not_assigned_network_devices_count(
             validator,
-            get_site_not_assigned_network_devices_count_default_val(api)
+            get_site_not_assigned_network_devices_count_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -546,15 +480,13 @@ def test_get_site_not_assigned_network_devices_count_default_val(api, validator)
 
 
 def is_valid_unassign_network_devices_from_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_a41113bc28515538af4fe4d2ff707f60_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_a41113bc28515538af4fe4d2ff707f60_v2_3_7_9").validate(obj)
     return True
 
 
 def unassign_network_devices_from_sites(api):
     endpoint_result = api.site_design.unassign_network_devices_from_sites(
-        active_validation=True,
-        deviceIds=['string'],
-        payload=None
+        active_validation=True, deviceIds=["string"], payload=None
     )
     return endpoint_result
 
@@ -563,8 +495,7 @@ def unassign_network_devices_from_sites(api):
 def test_unassign_network_devices_from_sites(api, validator):
     try:
         assert is_valid_unassign_network_devices_from_sites(
-            validator,
-            unassign_network_devices_from_sites(api)
+            validator, unassign_network_devices_from_sites(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -574,9 +505,7 @@ def test_unassign_network_devices_from_sites(api, validator):
 
 def unassign_network_devices_from_sites_default_val(api):
     endpoint_result = api.site_design.unassign_network_devices_from_sites(
-        active_validation=True,
-        deviceIds=None,
-        payload=None
+        active_validation=True, deviceIds=None, payload=None
     )
     return endpoint_result
 
@@ -585,8 +514,7 @@ def unassign_network_devices_from_sites_default_val(api):
 def test_unassign_network_devices_from_sites_default_val(api, validator):
     try:
         assert is_valid_unassign_network_devices_from_sites(
-            validator,
-            unassign_network_devices_from_sites_default_val(api)
+            validator, unassign_network_devices_from_sites_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -594,14 +522,12 @@ def test_unassign_network_devices_from_sites_default_val(api, validator):
 
 
 def is_valid_get_site_assigned_network_device(json_schema_validate, obj):
-    json_schema_validate('jsd_f439c50a9743505a89dd01b099ae2ac2_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_f439c50a9743505a89dd01b099ae2ac2_v2_3_7_9").validate(obj)
     return True
 
 
 def get_site_assigned_network_device(api):
-    endpoint_result = api.site_design.get_site_assigned_network_device(
-        id='string'
-    )
+    endpoint_result = api.site_design.get_site_assigned_network_device(id="string")
     return endpoint_result
 
 
@@ -609,8 +535,7 @@ def get_site_assigned_network_device(api):
 def test_get_site_assigned_network_device(api, validator):
     try:
         assert is_valid_get_site_assigned_network_device(
-            validator,
-            get_site_assigned_network_device(api)
+            validator, get_site_assigned_network_device(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -619,9 +544,7 @@ def test_get_site_assigned_network_device(api, validator):
 
 
 def get_site_assigned_network_device_default_val(api):
-    endpoint_result = api.site_design.get_site_assigned_network_device(
-        id='string'
-    )
+    endpoint_result = api.site_design.get_site_assigned_network_device(id="string")
     return endpoint_result
 
 
@@ -629,26 +552,23 @@ def get_site_assigned_network_device_default_val(api):
 def test_get_site_assigned_network_device_default_val(api, validator):
     try:
         assert is_valid_get_site_assigned_network_device(
-            validator,
-            get_site_assigned_network_device_default_val(api)
+            validator, get_site_assigned_network_device_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_list_of_network_profiles_for_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_1f98e2b2923855879acfcb06c5723add_v2_3_7_9').validate(obj)
+def is_valid_retrieves_the_list_of_network_profiles_for_sites(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_1f98e2b2923855879acfcb06c5723add_v2_3_7_9").validate(obj)
     return True
 
 
 def retrieves_the_list_of_network_profiles_for_sites(api):
     endpoint_result = api.site_design.retrieves_the_list_of_network_profiles_for_sites(
-        limit=0,
-        offset=0,
-        order='string',
-        sort_by='string',
-        type='string'
+        limit=0, offset=0, order="string", sort_by="string", type="string"
     )
     return endpoint_result
 
@@ -657,8 +577,7 @@ def retrieves_the_list_of_network_profiles_for_sites(api):
 def test_retrieves_the_list_of_network_profiles_for_sites(api, validator):
     try:
         assert is_valid_retrieves_the_list_of_network_profiles_for_sites(
-            validator,
-            retrieves_the_list_of_network_profiles_for_sites(api)
+            validator, retrieves_the_list_of_network_profiles_for_sites(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -668,11 +587,7 @@ def test_retrieves_the_list_of_network_profiles_for_sites(api, validator):
 
 def retrieves_the_list_of_network_profiles_for_sites_default_val(api):
     endpoint_result = api.site_design.retrieves_the_list_of_network_profiles_for_sites(
-        limit=None,
-        offset=None,
-        order=None,
-        sort_by=None,
-        type=None
+        limit=None, offset=None, order=None, sort_by=None, type=None
     )
     return endpoint_result
 
@@ -682,21 +597,23 @@ def test_retrieves_the_list_of_network_profiles_for_sites_default_val(api, valid
     try:
         assert is_valid_retrieves_the_list_of_network_profiles_for_sites(
             validator,
-            retrieves_the_list_of_network_profiles_for_sites_default_val(api)
+            retrieves_the_list_of_network_profiles_for_sites_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_count_of_network_profiles_for_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_ee735f82a2d9552097c69352326c3630_v2_3_7_9').validate(obj)
+def is_valid_retrieves_the_count_of_network_profiles_for_sites(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_ee735f82a2d9552097c69352326c3630_v2_3_7_9").validate(obj)
     return True
 
 
 def retrieves_the_count_of_network_profiles_for_sites(api):
     endpoint_result = api.site_design.retrieves_the_count_of_network_profiles_for_sites(
-        type='string'
+        type="string"
     )
     return endpoint_result
 
@@ -705,8 +622,7 @@ def retrieves_the_count_of_network_profiles_for_sites(api):
 def test_retrieves_the_count_of_network_profiles_for_sites(api, validator):
     try:
         assert is_valid_retrieves_the_count_of_network_profiles_for_sites(
-            validator,
-            retrieves_the_count_of_network_profiles_for_sites(api)
+            validator, retrieves_the_count_of_network_profiles_for_sites(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -726,7 +642,7 @@ def test_retrieves_the_count_of_network_profiles_for_sites_default_val(api, vali
     try:
         assert is_valid_retrieves_the_count_of_network_profiles_for_sites(
             validator,
-            retrieves_the_count_of_network_profiles_for_sites_default_val(api)
+            retrieves_the_count_of_network_profiles_for_sites_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -734,14 +650,12 @@ def test_retrieves_the_count_of_network_profiles_for_sites_default_val(api, vali
 
 
 def is_valid_deletes_a_network_profile_for_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_e753f36584d75677a7076577f36dd515_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_e753f36584d75677a7076577f36dd515_v2_3_7_9").validate(obj)
     return True
 
 
 def deletes_a_network_profile_for_sites(api):
-    endpoint_result = api.site_design.deletes_a_network_profile_for_sites(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_a_network_profile_for_sites(id="string")
     return endpoint_result
 
 
@@ -749,8 +663,7 @@ def deletes_a_network_profile_for_sites(api):
 def test_deletes_a_network_profile_for_sites(api, validator):
     try:
         assert is_valid_deletes_a_network_profile_for_sites(
-            validator,
-            deletes_a_network_profile_for_sites(api)
+            validator, deletes_a_network_profile_for_sites(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -759,9 +672,7 @@ def test_deletes_a_network_profile_for_sites(api, validator):
 
 
 def deletes_a_network_profile_for_sites_default_val(api):
-    endpoint_result = api.site_design.deletes_a_network_profile_for_sites(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_a_network_profile_for_sites(id="string")
     return endpoint_result
 
 
@@ -769,8 +680,7 @@ def deletes_a_network_profile_for_sites_default_val(api):
 def test_deletes_a_network_profile_for_sites_default_val(api, validator):
     try:
         assert is_valid_deletes_a_network_profile_for_sites(
-            validator,
-            deletes_a_network_profile_for_sites_default_val(api)
+            validator, deletes_a_network_profile_for_sites_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -778,13 +688,13 @@ def test_deletes_a_network_profile_for_sites_default_val(api, validator):
 
 
 def is_valid_retrieve_a_network_profile_for_sites_by_id(json_schema_validate, obj):
-    json_schema_validate('jsd_e67cf4ec83635f318184f32dff700aa7_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_e67cf4ec83635f318184f32dff700aa7_v2_3_7_9").validate(obj)
     return True
 
 
 def retrieve_a_network_profile_for_sites_by_id(api):
     endpoint_result = api.site_design.retrieve_a_network_profile_for_sites_by_id(
-        id='string'
+        id="string"
     )
     return endpoint_result
 
@@ -793,8 +703,7 @@ def retrieve_a_network_profile_for_sites_by_id(api):
 def test_retrieve_a_network_profile_for_sites_by_id(api, validator):
     try:
         assert is_valid_retrieve_a_network_profile_for_sites_by_id(
-            validator,
-            retrieve_a_network_profile_for_sites_by_id(api)
+            validator, retrieve_a_network_profile_for_sites_by_id(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -804,7 +713,7 @@ def test_retrieve_a_network_profile_for_sites_by_id(api, validator):
 
 def retrieve_a_network_profile_for_sites_by_id_default_val(api):
     endpoint_result = api.site_design.retrieve_a_network_profile_for_sites_by_id(
-        id='string'
+        id="string"
     )
     return endpoint_result
 
@@ -814,24 +723,28 @@ def test_retrieve_a_network_profile_for_sites_by_id_default_val(api, validator):
     try:
         assert is_valid_retrieve_a_network_profile_for_sites_by_id(
             validator,
-            retrieve_a_network_profile_for_sites_by_id_default_val(api)
+            retrieve_a_network_profile_for_sites_by_id_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_assign_a_network_profile_for_sites_to_the_given_site(json_schema_validate, obj):
-    json_schema_validate('jsd_b350fb0876a25879973b0840fbb690bb_v2_3_7_9').validate(obj)
+def is_valid_assign_a_network_profile_for_sites_to_the_given_site(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_b350fb0876a25879973b0840fbb690bb_v2_3_7_9").validate(obj)
     return True
 
 
 def assign_a_network_profile_for_sites_to_the_given_site(api):
-    endpoint_result = api.site_design.assign_a_network_profile_for_sites_to_the_given_site(
-        active_validation=True,
-        id='string',
-        payload=None,
-        profile_id='string'
+    endpoint_result = (
+        api.site_design.assign_a_network_profile_for_sites_to_the_given_site(
+            active_validation=True,
+            id="string",
+            payload=None,
+            profile_id="string",
+        )
     )
     return endpoint_result
 
@@ -841,7 +754,7 @@ def test_assign_a_network_profile_for_sites_to_the_given_site(api, validator):
     try:
         assert is_valid_assign_a_network_profile_for_sites_to_the_given_site(
             validator,
-            assign_a_network_profile_for_sites_to_the_given_site(api)
+            assign_a_network_profile_for_sites_to_the_given_site(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -850,47 +763,54 @@ def test_assign_a_network_profile_for_sites_to_the_given_site(api, validator):
 
 
 def assign_a_network_profile_for_sites_to_the_given_site_default_val(api):
-    endpoint_result = api.site_design.assign_a_network_profile_for_sites_to_the_given_site(
-        active_validation=True,
-        id=None,
-        payload=None,
-        profile_id='string'
+    endpoint_result = (
+        api.site_design.assign_a_network_profile_for_sites_to_the_given_site(
+            active_validation=True, id=None, payload=None, profile_id="string"
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_assign_a_network_profile_for_sites_to_the_given_site_default_val(api, validator):
+def test_assign_a_network_profile_for_sites_to_the_given_site_default_val(
+    api, validator
+):
     try:
         assert is_valid_assign_a_network_profile_for_sites_to_the_given_site(
             validator,
-            assign_a_network_profile_for_sites_to_the_given_site_default_val(api)
+            assign_a_network_profile_for_sites_to_the_given_site_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(json_schema_validate, obj):
-    json_schema_validate('jsd_c5786cf2e69852a1aefbcd9f06a0366d_v2_3_7_9').validate(obj)
+def is_valid_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_c5786cf2e69852a1aefbcd9f06a0366d_v2_3_7_9").validate(obj)
     return True
 
 
-def retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(api):
+def retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
-        limit=0,
-        offset=0,
-        profile_id='string'
+        limit=0, offset=0, profile_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(api, validator):
+def test_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
             validator,
-            retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(api)
+            retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -898,38 +818,46 @@ def test_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is
             raise original_e
 
 
-def retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(api):
+def retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
-        limit=None,
-        offset=None,
-        profile_id='string'
+        limit=None, offset=None, profile_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(api, validator):
+def test_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
             validator,
-            retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(api)
+            retrieves_the_list_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_assign_a_network_profile_for_sites_to_a_list_of_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_796eea0014365ef78d30d9ba8f1752e8_v2_3_7_9').validate(obj)
+def is_valid_assign_a_network_profile_for_sites_to_a_list_of_sites(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_796eea0014365ef78d30d9ba8f1752e8_v2_3_7_9").validate(obj)
     return True
 
 
 def assign_a_network_profile_for_sites_to_a_list_of_sites(api):
-    endpoint_result = api.site_design.assign_a_network_profile_for_sites_to_a_list_of_sites(
-        active_validation=True,
-        items=[[{'id': 'string'}]],
-        payload=None,
-        profile_id='string'
+    endpoint_result = (
+        api.site_design.assign_a_network_profile_for_sites_to_a_list_of_sites(
+            active_validation=True,
+            items=[[{"id": "string"}]],
+            payload=None,
+            profile_id="string",
+        )
     )
     return endpoint_result
 
@@ -939,7 +867,7 @@ def test_assign_a_network_profile_for_sites_to_a_list_of_sites(api, validator):
     try:
         assert is_valid_assign_a_network_profile_for_sites_to_a_list_of_sites(
             validator,
-            assign_a_network_profile_for_sites_to_a_list_of_sites(api)
+            assign_a_network_profile_for_sites_to_a_list_of_sites(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -948,36 +876,43 @@ def test_assign_a_network_profile_for_sites_to_a_list_of_sites(api, validator):
 
 
 def assign_a_network_profile_for_sites_to_a_list_of_sites_default_val(api):
-    endpoint_result = api.site_design.assign_a_network_profile_for_sites_to_a_list_of_sites(
-        active_validation=True,
-        items=None,
-        payload=None,
-        profile_id='string'
+    endpoint_result = (
+        api.site_design.assign_a_network_profile_for_sites_to_a_list_of_sites(
+            active_validation=True,
+            items=None,
+            payload=None,
+            profile_id="string",
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_assign_a_network_profile_for_sites_to_a_list_of_sites_default_val(api, validator):
+def test_assign_a_network_profile_for_sites_to_a_list_of_sites_default_val(
+    api, validator
+):
     try:
         assert is_valid_assign_a_network_profile_for_sites_to_a_list_of_sites(
             validator,
-            assign_a_network_profile_for_sites_to_a_list_of_sites_default_val(api)
+            assign_a_network_profile_for_sites_to_a_list_of_sites_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_unassigns_a_network_profile_for_sites_from_multiple_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_1821d9b6dfe95d348865dfe1710ad9a9_v2_3_7_9').validate(obj)
+def is_valid_unassigns_a_network_profile_for_sites_from_multiple_sites(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_1821d9b6dfe95d348865dfe1710ad9a9_v2_3_7_9").validate(obj)
     return True
 
 
 def unassigns_a_network_profile_for_sites_from_multiple_sites(api):
-    endpoint_result = api.site_design.unassigns_a_network_profile_for_sites_from_multiple_sites(
-        profile_id='string',
-        site_id='string'
+    endpoint_result = (
+        api.site_design.unassigns_a_network_profile_for_sites_from_multiple_sites(
+            profile_id="string", site_id="string"
+        )
     )
     return endpoint_result
 
@@ -987,7 +922,7 @@ def test_unassigns_a_network_profile_for_sites_from_multiple_sites(api, validato
     try:
         assert is_valid_unassigns_a_network_profile_for_sites_from_multiple_sites(
             validator,
-            unassigns_a_network_profile_for_sites_from_multiple_sites(api)
+            unassigns_a_network_profile_for_sites_from_multiple_sites(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -996,43 +931,54 @@ def test_unassigns_a_network_profile_for_sites_from_multiple_sites(api, validato
 
 
 def unassigns_a_network_profile_for_sites_from_multiple_sites_default_val(api):
-    endpoint_result = api.site_design.unassigns_a_network_profile_for_sites_from_multiple_sites(
-        profile_id='string',
-        site_id=None
+    endpoint_result = (
+        api.site_design.unassigns_a_network_profile_for_sites_from_multiple_sites(
+            profile_id="string", site_id=None
+        )
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_unassigns_a_network_profile_for_sites_from_multiple_sites_default_val(api, validator):
+def test_unassigns_a_network_profile_for_sites_from_multiple_sites_default_val(
+    api, validator
+):
     try:
         assert is_valid_unassigns_a_network_profile_for_sites_from_multiple_sites(
             validator,
-            unassigns_a_network_profile_for_sites_from_multiple_sites_default_val(api)
+            unassigns_a_network_profile_for_sites_from_multiple_sites_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(json_schema_validate, obj):
-    json_schema_validate('jsd_475c26aa98f05665962c91a1d780b943_v2_3_7_9').validate(obj)
+def is_valid_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_475c26aa98f05665962c91a1d780b943_v2_3_7_9").validate(obj)
     return True
 
 
-def retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(api):
+def retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
-        profile_id='string'
+        profile_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(api, validator):
+def test_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
             validator,
-            retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(api)
+            retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1040,34 +986,41 @@ def test_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_i
             raise original_e
 
 
-def retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(api):
+def retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
-        profile_id='string'
+        profile_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(api, validator):
+def test_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to(
             validator,
-            retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(api)
+            retrieves_the_count_of_sites_that_the_given_network_profile_for_sites_is_assigned_to_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_unassigns_a_network_profile_for_sites_from_a_site(json_schema_validate, obj):
-    json_schema_validate('jsd_60a1e170a11d519b88cadd674fa2ea31_v2_3_7_9').validate(obj)
+def is_valid_unassigns_a_network_profile_for_sites_from_a_site(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_60a1e170a11d519b88cadd674fa2ea31_v2_3_7_9").validate(obj)
     return True
 
 
 def unassigns_a_network_profile_for_sites_from_a_site(api):
     endpoint_result = api.site_design.unassigns_a_network_profile_for_sites_from_a_site(
-        id='string',
-        profile_id='string'
+        id="string", profile_id="string"
     )
     return endpoint_result
 
@@ -1076,8 +1029,7 @@ def unassigns_a_network_profile_for_sites_from_a_site(api):
 def test_unassigns_a_network_profile_for_sites_from_a_site(api, validator):
     try:
         assert is_valid_unassigns_a_network_profile_for_sites_from_a_site(
-            validator,
-            unassigns_a_network_profile_for_sites_from_a_site(api)
+            validator, unassigns_a_network_profile_for_sites_from_a_site(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1087,8 +1039,7 @@ def test_unassigns_a_network_profile_for_sites_from_a_site(api, validator):
 
 def unassigns_a_network_profile_for_sites_from_a_site_default_val(api):
     endpoint_result = api.site_design.unassigns_a_network_profile_for_sites_from_a_site(
-        id='string',
-        profile_id='string'
+        id="string", profile_id="string"
     )
     return endpoint_result
 
@@ -1098,7 +1049,7 @@ def test_unassigns_a_network_profile_for_sites_from_a_site_default_val(api, vali
     try:
         assert is_valid_unassigns_a_network_profile_for_sites_from_a_site(
             validator,
-            unassigns_a_network_profile_for_sites_from_a_site_default_val(api)
+            unassigns_a_network_profile_for_sites_from_a_site_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1106,16 +1057,16 @@ def test_unassigns_a_network_profile_for_sites_from_a_site_default_val(api, vali
 
 
 def is_valid_associate(json_schema_validate, obj):
-    json_schema_validate('jsd_378a1800508058e4b82a08ea5637b794_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_378a1800508058e4b82a08ea5637b794_v2_3_7_9").validate(obj)
     return True
 
 
 def associate(api):
     endpoint_result = api.site_design.associate(
         active_validation=True,
-        network_profile_id='string',
+        network_profile_id="string",
         payload=None,
-        site_id='string'
+        site_id="string",
     )
     return endpoint_result
 
@@ -1123,10 +1074,7 @@ def associate(api):
 @pytest.mark.site_design
 def test_associate(api, validator):
     try:
-        assert is_valid_associate(
-            validator,
-            associate(api)
-        )
+        assert is_valid_associate(validator, associate(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1136,9 +1084,9 @@ def test_associate(api, validator):
 def associate_default_val(api):
     endpoint_result = api.site_design.associate(
         active_validation=True,
-        network_profile_id='string',
+        network_profile_id="string",
         payload=None,
-        site_id='string'
+        site_id="string",
     )
     return endpoint_result
 
@@ -1146,24 +1094,20 @@ def associate_default_val(api):
 @pytest.mark.site_design
 def test_associate_default_val(api, validator):
     try:
-        assert is_valid_associate(
-            validator,
-            associate_default_val(api)
-        )
+        assert is_valid_associate(validator, associate_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_disassociate(json_schema_validate, obj):
-    json_schema_validate('jsd_21c8936d6a0c54e89b471fe36bf28de8_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_21c8936d6a0c54e89b471fe36bf28de8_v2_3_7_9").validate(obj)
     return True
 
 
 def disassociate(api):
     endpoint_result = api.site_design.disassociate(
-        network_profile_id='string',
-        site_id='string'
+        network_profile_id="string", site_id="string"
     )
     return endpoint_result
 
@@ -1171,10 +1115,7 @@ def disassociate(api):
 @pytest.mark.site_design
 def test_disassociate(api, validator):
     try:
-        assert is_valid_disassociate(
-            validator,
-            disassociate(api)
-        )
+        assert is_valid_disassociate(validator, disassociate(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1183,8 +1124,7 @@ def test_disassociate(api, validator):
 
 def disassociate_default_val(api):
     endpoint_result = api.site_design.disassociate(
-        network_profile_id='string',
-        site_id='string'
+        network_profile_id="string", site_id="string"
     )
     return endpoint_result
 
@@ -1192,28 +1132,25 @@ def disassociate_default_val(api):
 @pytest.mark.site_design
 def test_disassociate_default_val(api, validator):
     try:
-        assert is_valid_disassociate(
-            validator,
-            disassociate_default_val(api)
-        )
+        assert is_valid_disassociate(validator, disassociate_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_get_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_a36b1e624416553eb72d8f1c9461c938_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_a36b1e624416553eb72d8f1c9461c938_v2_3_7_9").validate(obj)
     return True
 
 
 def get_sites(api):
     endpoint_result = api.site_design.get_sites(
         limit=0,
-        name='string',
-        name_hierarchy='string',
+        name="string",
+        name_hierarchy="string",
         offset=0,
-        type='string',
-        units_of_measure='string'
+        type="string",
+        units_of_measure="string",
     )
     return endpoint_result
 
@@ -1221,10 +1158,7 @@ def get_sites(api):
 @pytest.mark.site_design
 def test_get_sites(api, validator):
     try:
-        assert is_valid_get_sites(
-            validator,
-            get_sites(api)
-        )
+        assert is_valid_get_sites(validator, get_sites(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1238,7 +1172,7 @@ def get_sites_default_val(api):
         name_hierarchy=None,
         offset=None,
         type=None,
-        units_of_measure=None
+        units_of_measure=None,
     )
     return endpoint_result
 
@@ -1246,35 +1180,26 @@ def get_sites_default_val(api):
 @pytest.mark.site_design
 def test_get_sites_default_val(api, validator):
     try:
-        assert is_valid_get_sites(
-            validator,
-            get_sites_default_val(api)
-        )
+        assert is_valid_get_sites(validator, get_sites_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_create_sites(json_schema_validate, obj):
-    json_schema_validate('jsd_39d292147221524a96616d982b0147c0_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_39d292147221524a96616d982b0147c0_v2_3_7_9").validate(obj)
     return True
 
 
 def create_sites(api):
-    endpoint_result = api.site_design.create_sites(
-        active_validation=True,
-        payload=None
-    )
+    endpoint_result = api.site_design.create_sites(active_validation=True, payload=None)
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_create_sites(api, validator):
     try:
-        assert is_valid_create_sites(
-            validator,
-            create_sites(api)
-        )
+        assert is_valid_create_sites(validator, create_sites(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1282,44 +1207,33 @@ def test_create_sites(api, validator):
 
 
 def create_sites_default_val(api):
-    endpoint_result = api.site_design.create_sites(
-        active_validation=True,
-        payload=None
-    )
+    endpoint_result = api.site_design.create_sites(active_validation=True, payload=None)
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_create_sites_default_val(api, validator):
     try:
-        assert is_valid_create_sites(
-            validator,
-            create_sites_default_val(api)
-        )
+        assert is_valid_create_sites(validator, create_sites_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_get_sites_count(json_schema_validate, obj):
-    json_schema_validate('jsd_837486c2d6e954468a7300d9ff8b2e22_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_837486c2d6e954468a7300d9ff8b2e22_v2_3_7_9").validate(obj)
     return True
 
 
 def get_sites_count(api):
-    endpoint_result = api.site_design.get_sites_count(
-        name='string'
-    )
+    endpoint_result = api.site_design.get_sites_count(name="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_get_sites_count(api, validator):
     try:
-        assert is_valid_get_sites_count(
-            validator,
-            get_sites_count(api)
-        )
+        assert is_valid_get_sites_count(validator, get_sites_count(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1327,44 +1241,45 @@ def test_get_sites_count(api, validator):
 
 
 def get_sites_count_default_val(api):
-    endpoint_result = api.site_design.get_sites_count(
-        name=None
-    )
+    endpoint_result = api.site_design.get_sites_count(name=None)
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_get_sites_count_default_val(api, validator):
     try:
-        assert is_valid_get_sites_count(
-            validator,
-            get_sites_count_default_val(api)
-        )
+        assert is_valid_get_sites_count(validator, get_sites_count_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(json_schema_validate, obj):
-    json_schema_validate('jsd_f12eba75e472591490a014a7335e1e9b_v2_3_7_9').validate(obj)
+def is_valid_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_f12eba75e472591490a014a7335e1e9b_v2_3_7_9").validate(obj)
     return True
 
 
-def retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(api):
+def retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
-        limit=0,
-        offset=0,
-        site_id='string'
+        limit=0, offset=0, site_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(api, validator):
+def test_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
             validator,
-            retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(api)
+            retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1372,45 +1287,53 @@ def test_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_ass
             raise original_e
 
 
-def retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_default_val(api):
+def retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_default_val(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
-        limit=None,
-        offset=None,
-        site_id='string'
+        limit=None, offset=None, site_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_default_val(api, validator):
+def test_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned(
             validator,
-            retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_default_val(api)
+            retrieves_the_list_of_network_profiles_that_the_given_site_has_been_assigned_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(json_schema_validate, obj):
-    json_schema_validate('jsd_dc2361873bf7553c8fa5c7cb2024e5bb_v2_3_7_9').validate(obj)
+def is_valid_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_dc2361873bf7553c8fa5c7cb2024e5bb_v2_3_7_9").validate(obj)
     return True
 
 
 def retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(api):
     endpoint_result = api.site_design.retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(
-        site_id='string'
+        site_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(api, validator):
+def test_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(
             validator,
-            retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(api)
+            retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1418,19 +1341,25 @@ def test_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(a
             raise original_e
 
 
-def retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_default_val(api):
+def retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_default_val(
+    api,
+):
     endpoint_result = api.site_design.retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(
-        site_id='string'
+        site_id="string"
     )
     return endpoint_result
 
 
 @pytest.mark.site_design
-def test_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_default_val(api, validator):
+def test_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_default_val(
+    api, validator
+):
     try:
         assert is_valid_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned(
             validator,
-            retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_default_val(api)
+            retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_default_val(
+                api
+            ),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1438,20 +1367,20 @@ def test_retrieves_the_count_of_profiles_that_the_given_site_has_been_assigned_d
 
 
 def is_valid_creates_a_building_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_549fc95c917352ad8410ffe6d6e522ed_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_549fc95c917352ad8410ffe6d6e522ed_v2_3_7_9").validate(obj)
     return True
 
 
 def creates_a_building_v2(api):
     endpoint_result = api.site_design.creates_a_building_v2(
         active_validation=True,
-        address='string',
-        country='string',
+        address="string",
+        country="string",
         latitude=0,
         longitude=0,
-        name='string',
-        parentId='string',
-        payload=None
+        name="string",
+        parentId="string",
+        payload=None,
     )
     return endpoint_result
 
@@ -1459,10 +1388,7 @@ def creates_a_building_v2(api):
 @pytest.mark.site_design
 def test_creates_a_building_v2(api, validator):
     try:
-        assert is_valid_creates_a_building_v2(
-            validator,
-            creates_a_building_v2(api)
-        )
+        assert is_valid_creates_a_building_v2(validator, creates_a_building_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1478,7 +1404,7 @@ def creates_a_building_v2_default_val(api):
         longitude=None,
         name=None,
         parentId=None,
-        payload=None
+        payload=None,
     )
     return endpoint_result
 
@@ -1487,8 +1413,7 @@ def creates_a_building_v2_default_val(api):
 def test_creates_a_building_v2_default_val(api, validator):
     try:
         assert is_valid_creates_a_building_v2(
-            validator,
-            creates_a_building_v2_default_val(api)
+            validator, creates_a_building_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1496,21 +1421,21 @@ def test_creates_a_building_v2_default_val(api, validator):
 
 
 def is_valid_updates_a_building_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_105cd16daa50533eb0f5873b7601abb2_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_105cd16daa50533eb0f5873b7601abb2_v2_3_7_9").validate(obj)
     return True
 
 
 def updates_a_building_v2(api):
     endpoint_result = api.site_design.updates_a_building_v2(
         active_validation=True,
-        address='string',
-        country='string',
-        id='string',
+        address="string",
+        country="string",
+        id="string",
         latitude=0,
         longitude=0,
-        name='string',
-        parentId='string',
-        payload=None
+        name="string",
+        parentId="string",
+        payload=None,
     )
     return endpoint_result
 
@@ -1518,10 +1443,7 @@ def updates_a_building_v2(api):
 @pytest.mark.site_design
 def test_updates_a_building_v2(api, validator):
     try:
-        assert is_valid_updates_a_building_v2(
-            validator,
-            updates_a_building_v2(api)
-        )
+        assert is_valid_updates_a_building_v2(validator, updates_a_building_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1533,12 +1455,12 @@ def updates_a_building_v2_default_val(api):
         active_validation=True,
         address=None,
         country=None,
-        id='string',
+        id="string",
         latitude=None,
         longitude=None,
         name=None,
         parentId=None,
-        payload=None
+        payload=None,
     )
     return endpoint_result
 
@@ -1547,8 +1469,7 @@ def updates_a_building_v2_default_val(api):
 def test_updates_a_building_v2_default_val(api, validator):
     try:
         assert is_valid_updates_a_building_v2(
-            validator,
-            updates_a_building_v2_default_val(api)
+            validator, updates_a_building_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1556,24 +1477,19 @@ def test_updates_a_building_v2_default_val(api, validator):
 
 
 def is_valid_deletes_a_building_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_303203592e5b54d99d30ea084daf36dc_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_303203592e5b54d99d30ea084daf36dc_v2_3_7_9").validate(obj)
     return True
 
 
 def deletes_a_building_v2(api):
-    endpoint_result = api.site_design.deletes_a_building_v2(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_a_building_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_deletes_a_building_v2(api, validator):
     try:
-        assert is_valid_deletes_a_building_v2(
-            validator,
-            deletes_a_building_v2(api)
-        )
+        assert is_valid_deletes_a_building_v2(validator, deletes_a_building_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1581,9 +1497,7 @@ def test_deletes_a_building_v2(api, validator):
 
 
 def deletes_a_building_v2_default_val(api):
-    endpoint_result = api.site_design.deletes_a_building_v2(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_a_building_v2(id="string")
     return endpoint_result
 
 
@@ -1591,8 +1505,7 @@ def deletes_a_building_v2_default_val(api):
 def test_deletes_a_building_v2_default_val(api, validator):
     try:
         assert is_valid_deletes_a_building_v2(
-            validator,
-            deletes_a_building_v2_default_val(api)
+            validator, deletes_a_building_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1600,24 +1513,19 @@ def test_deletes_a_building_v2_default_val(api, validator):
 
 
 def is_valid_gets_a_building_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_90ab03e8addf5c7e98475769ae1a97a8_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_90ab03e8addf5c7e98475769ae1a97a8_v2_3_7_9").validate(obj)
     return True
 
 
 def gets_a_building_v2(api):
-    endpoint_result = api.site_design.gets_a_building_v2(
-        id='string'
-    )
+    endpoint_result = api.site_design.gets_a_building_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_gets_a_building_v2(api, validator):
     try:
-        assert is_valid_gets_a_building_v2(
-            validator,
-            gets_a_building_v2(api)
-        )
+        assert is_valid_gets_a_building_v2(validator, gets_a_building_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1625,9 +1533,7 @@ def test_gets_a_building_v2(api, validator):
 
 
 def gets_a_building_v2_default_val(api):
-    endpoint_result = api.site_design.gets_a_building_v2(
-        id='string'
-    )
+    endpoint_result = api.site_design.gets_a_building_v2(id="string")
     return endpoint_result
 
 
@@ -1635,8 +1541,7 @@ def gets_a_building_v2_default_val(api):
 def test_gets_a_building_v2_default_val(api, validator):
     try:
         assert is_valid_gets_a_building_v2(
-            validator,
-            gets_a_building_v2_default_val(api)
+            validator, gets_a_building_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1644,7 +1549,7 @@ def test_gets_a_building_v2_default_val(api, validator):
 
 
 def is_valid_creates_a_floor_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_bfb1005f4d265f8bb340637175a5841f_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_bfb1005f4d265f8bb340637175a5841f_v2_3_7_9").validate(obj)
     return True
 
 
@@ -1654,12 +1559,12 @@ def creates_a_floor_v2(api):
         floorNumber=0,
         height=0,
         length=0,
-        name='string',
-        parentId='string',
+        name="string",
+        parentId="string",
         payload=None,
-        rfModel='string',
-        unitsOfMeasure='string',
-        width=0
+        rfModel="string",
+        unitsOfMeasure="string",
+        width=0,
     )
     return endpoint_result
 
@@ -1667,10 +1572,7 @@ def creates_a_floor_v2(api):
 @pytest.mark.site_design
 def test_creates_a_floor_v2(api, validator):
     try:
-        assert is_valid_creates_a_floor_v2(
-            validator,
-            creates_a_floor_v2(api)
-        )
+        assert is_valid_creates_a_floor_v2(validator, creates_a_floor_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1688,7 +1590,7 @@ def creates_a_floor_v2_default_val(api):
         payload=None,
         rfModel=None,
         unitsOfMeasure=None,
-        width=None
+        width=None,
     )
     return endpoint_result
 
@@ -1697,8 +1599,7 @@ def creates_a_floor_v2_default_val(api):
 def test_creates_a_floor_v2_default_val(api, validator):
     try:
         assert is_valid_creates_a_floor_v2(
-            validator,
-            creates_a_floor_v2_default_val(api)
+            validator, creates_a_floor_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1706,15 +1607,13 @@ def test_creates_a_floor_v2_default_val(api, validator):
 
 
 def is_valid_updates_floor_settings_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_ad936677c99a58f6b532359d66fe98a7_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_ad936677c99a58f6b532359d66fe98a7_v2_3_7_9").validate(obj)
     return True
 
 
 def updates_floor_settings_v2(api):
     endpoint_result = api.site_design.updates_floor_settings_v2(
-        active_validation=True,
-        payload=None,
-        unitsOfMeasure='string'
+        active_validation=True, payload=None, unitsOfMeasure="string"
     )
     return endpoint_result
 
@@ -1723,8 +1622,7 @@ def updates_floor_settings_v2(api):
 def test_updates_floor_settings_v2(api, validator):
     try:
         assert is_valid_updates_floor_settings_v2(
-            validator,
-            updates_floor_settings_v2(api)
+            validator, updates_floor_settings_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1734,9 +1632,7 @@ def test_updates_floor_settings_v2(api, validator):
 
 def updates_floor_settings_v2_default_val(api):
     endpoint_result = api.site_design.updates_floor_settings_v2(
-        active_validation=True,
-        payload=None,
-        unitsOfMeasure=None
+        active_validation=True, payload=None, unitsOfMeasure=None
     )
     return endpoint_result
 
@@ -1745,8 +1641,7 @@ def updates_floor_settings_v2_default_val(api):
 def test_updates_floor_settings_v2_default_val(api, validator):
     try:
         assert is_valid_updates_floor_settings_v2(
-            validator,
-            updates_floor_settings_v2_default_val(api)
+            validator, updates_floor_settings_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1754,24 +1649,19 @@ def test_updates_floor_settings_v2_default_val(api, validator):
 
 
 def is_valid_get_floor_settings_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_01a774ea6dda56adb3fc81df221f62c8_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_01a774ea6dda56adb3fc81df221f62c8_v2_3_7_9").validate(obj)
     return True
 
 
 def get_floor_settings_v2(api):
-    endpoint_result = api.site_design.get_floor_settings_v2(
-
-    )
+    endpoint_result = api.site_design.get_floor_settings_v2()
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_get_floor_settings_v2(api, validator):
     try:
-        assert is_valid_get_floor_settings_v2(
-            validator,
-            get_floor_settings_v2(api)
-        )
+        assert is_valid_get_floor_settings_v2(validator, get_floor_settings_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -1779,9 +1669,7 @@ def test_get_floor_settings_v2(api, validator):
 
 
 def get_floor_settings_v2_default_val(api):
-    endpoint_result = api.site_design.get_floor_settings_v2(
-
-    )
+    endpoint_result = api.site_design.get_floor_settings_v2()
     return endpoint_result
 
 
@@ -1789,8 +1677,7 @@ def get_floor_settings_v2_default_val(api):
 def test_get_floor_settings_v2_default_val(api, validator):
     try:
         assert is_valid_get_floor_settings_v2(
-            validator,
-            get_floor_settings_v2_default_val(api)
+            validator, get_floor_settings_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1798,19 +1685,19 @@ def test_get_floor_settings_v2_default_val(api, validator):
 
 
 def is_valid_get_access_points_positions_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_7d14db5a10475721b140fc9257282d29_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_7d14db5a10475721b140fc9257282d29_v2_3_7_9").validate(obj)
     return True
 
 
 def get_access_points_positions_v2(api):
     endpoint_result = api.site_design.get_access_points_positions_v2(
-        floor_id='string',
+        floor_id="string",
         limit=0,
-        mac_address='string',
-        model='string',
-        name='string',
+        mac_address="string",
+        model="string",
+        name="string",
         offset=0,
-        type='string'
+        type="string",
     )
     return endpoint_result
 
@@ -1819,8 +1706,7 @@ def get_access_points_positions_v2(api):
 def test_get_access_points_positions_v2(api, validator):
     try:
         assert is_valid_get_access_points_positions_v2(
-            validator,
-            get_access_points_positions_v2(api)
+            validator, get_access_points_positions_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1830,13 +1716,13 @@ def test_get_access_points_positions_v2(api, validator):
 
 def get_access_points_positions_v2_default_val(api):
     endpoint_result = api.site_design.get_access_points_positions_v2(
-        floor_id='string',
+        floor_id="string",
         limit=None,
         mac_address=None,
         model=None,
         name=None,
         offset=None,
-        type=None
+        type=None,
     )
     return endpoint_result
 
@@ -1845,8 +1731,7 @@ def get_access_points_positions_v2_default_val(api):
 def test_get_access_points_positions_v2_default_val(api, validator):
     try:
         assert is_valid_get_access_points_positions_v2(
-            validator,
-            get_access_points_positions_v2_default_val(api)
+            validator, get_access_points_positions_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1854,15 +1739,13 @@ def test_get_access_points_positions_v2_default_val(api, validator):
 
 
 def is_valid_edit_the_access_points_positions_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_7cba0eecfc555390935cebd13e6bcb90_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_7cba0eecfc555390935cebd13e6bcb90_v2_3_7_9").validate(obj)
     return True
 
 
 def edit_the_access_points_positions_v2(api):
     endpoint_result = api.site_design.edit_the_access_points_positions_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+        active_validation=True, floor_id="string", payload=None
     )
     return endpoint_result
 
@@ -1871,8 +1754,7 @@ def edit_the_access_points_positions_v2(api):
 def test_edit_the_access_points_positions_v2(api, validator):
     try:
         assert is_valid_edit_the_access_points_positions_v2(
-            validator,
-            edit_the_access_points_positions_v2(api)
+            validator, edit_the_access_points_positions_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1882,9 +1764,7 @@ def test_edit_the_access_points_positions_v2(api, validator):
 
 def edit_the_access_points_positions_v2_default_val(api):
     endpoint_result = api.site_design.edit_the_access_points_positions_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+        active_validation=True, floor_id="string", payload=None
     )
     return endpoint_result
 
@@ -1893,8 +1773,7 @@ def edit_the_access_points_positions_v2_default_val(api):
 def test_edit_the_access_points_positions_v2_default_val(api, validator):
     try:
         assert is_valid_edit_the_access_points_positions_v2(
-            validator,
-            edit_the_access_points_positions_v2_default_val(api)
+            validator, edit_the_access_points_positions_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1902,17 +1781,17 @@ def test_edit_the_access_points_positions_v2_default_val(api, validator):
 
 
 def is_valid_get_access_points_positions_count_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_0ad228e486dd5f57840e1668699f28c6_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_0ad228e486dd5f57840e1668699f28c6_v2_3_7_9").validate(obj)
     return True
 
 
 def get_access_points_positions_count_v2(api):
     endpoint_result = api.site_design.get_access_points_positions_count_v2(
-        floor_id='string',
-        mac_address='string',
-        model='string',
-        name='string',
-        type='string'
+        floor_id="string",
+        mac_address="string",
+        model="string",
+        name="string",
+        type="string",
     )
     return endpoint_result
 
@@ -1921,8 +1800,7 @@ def get_access_points_positions_count_v2(api):
 def test_get_access_points_positions_count_v2(api, validator):
     try:
         assert is_valid_get_access_points_positions_count_v2(
-            validator,
-            get_access_points_positions_count_v2(api)
+            validator, get_access_points_positions_count_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1932,11 +1810,7 @@ def test_get_access_points_positions_count_v2(api, validator):
 
 def get_access_points_positions_count_v2_default_val(api):
     endpoint_result = api.site_design.get_access_points_positions_count_v2(
-        floor_id='string',
-        mac_address=None,
-        model=None,
-        name=None,
-        type=None
+        floor_id="string", mac_address=None, model=None, name=None, type=None
     )
     return endpoint_result
 
@@ -1945,8 +1819,7 @@ def get_access_points_positions_count_v2_default_val(api):
 def test_get_access_points_positions_count_v2_default_val(api, validator):
     try:
         assert is_valid_get_access_points_positions_count_v2(
-            validator,
-            get_access_points_positions_count_v2_default_val(api)
+            validator, get_access_points_positions_count_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1954,18 +1827,18 @@ def test_get_access_points_positions_count_v2_default_val(api, validator):
 
 
 def is_valid_get_planned_access_points_positions_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_d37c716018de59689125cab5c7832a38_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_d37c716018de59689125cab5c7832a38_v2_3_7_9").validate(obj)
     return True
 
 
 def get_planned_access_points_positions_v2(api):
     endpoint_result = api.site_design.get_planned_access_points_positions_v2(
-        floor_id='string',
+        floor_id="string",
         limit=0,
-        mac_address='string',
-        name='string',
+        mac_address="string",
+        name="string",
         offset=0,
-        type='string'
+        type="string",
     )
     return endpoint_result
 
@@ -1974,8 +1847,7 @@ def get_planned_access_points_positions_v2(api):
 def test_get_planned_access_points_positions_v2(api, validator):
     try:
         assert is_valid_get_planned_access_points_positions_v2(
-            validator,
-            get_planned_access_points_positions_v2(api)
+            validator, get_planned_access_points_positions_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -1985,12 +1857,12 @@ def test_get_planned_access_points_positions_v2(api, validator):
 
 def get_planned_access_points_positions_v2_default_val(api):
     endpoint_result = api.site_design.get_planned_access_points_positions_v2(
-        floor_id='string',
+        floor_id="string",
         limit=None,
         mac_address=None,
         name=None,
         offset=None,
-        type=None
+        type=None,
     )
     return endpoint_result
 
@@ -1999,24 +1871,25 @@ def get_planned_access_points_positions_v2_default_val(api):
 def test_get_planned_access_points_positions_v2_default_val(api, validator):
     try:
         assert is_valid_get_planned_access_points_positions_v2(
-            validator,
-            get_planned_access_points_positions_v2_default_val(api)
+            validator, get_planned_access_points_positions_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_assign_planned_access_points_to_operations_ones_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_3555f624469d5e448e9eba137fe533e8_v2_3_7_9').validate(obj)
+def is_valid_assign_planned_access_points_to_operations_ones_v2(
+    json_schema_validate, obj
+):
+    json_schema_validate("jsd_3555f624469d5e448e9eba137fe533e8_v2_3_7_9").validate(obj)
     return True
 
 
 def assign_planned_access_points_to_operations_ones_v2(api):
-    endpoint_result = api.site_design.assign_planned_access_points_to_operations_ones_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+    endpoint_result = (
+        api.site_design.assign_planned_access_points_to_operations_ones_v2(
+            active_validation=True, floor_id="string", payload=None
+        )
     )
     return endpoint_result
 
@@ -2025,8 +1898,7 @@ def assign_planned_access_points_to_operations_ones_v2(api):
 def test_assign_planned_access_points_to_operations_ones_v2(api, validator):
     try:
         assert is_valid_assign_planned_access_points_to_operations_ones_v2(
-            validator,
-            assign_planned_access_points_to_operations_ones_v2(api)
+            validator, assign_planned_access_points_to_operations_ones_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -2035,10 +1907,10 @@ def test_assign_planned_access_points_to_operations_ones_v2(api, validator):
 
 
 def assign_planned_access_points_to_operations_ones_v2_default_val(api):
-    endpoint_result = api.site_design.assign_planned_access_points_to_operations_ones_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+    endpoint_result = (
+        api.site_design.assign_planned_access_points_to_operations_ones_v2(
+            active_validation=True, floor_id="string", payload=None
+        )
     )
     return endpoint_result
 
@@ -2048,7 +1920,7 @@ def test_assign_planned_access_points_to_operations_ones_v2_default_val(api, val
     try:
         assert is_valid_assign_planned_access_points_to_operations_ones_v2(
             validator,
-            assign_planned_access_points_to_operations_ones_v2_default_val(api)
+            assign_planned_access_points_to_operations_ones_v2_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2056,15 +1928,13 @@ def test_assign_planned_access_points_to_operations_ones_v2_default_val(api, val
 
 
 def is_valid_add_planned_access_points_positions_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_5fccc089e04b557aa7478de3d8fe472f_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_5fccc089e04b557aa7478de3d8fe472f_v2_3_7_9").validate(obj)
     return True
 
 
 def add_planned_access_points_positions_v2(api):
     endpoint_result = api.site_design.add_planned_access_points_positions_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+        active_validation=True, floor_id="string", payload=None
     )
     return endpoint_result
 
@@ -2073,8 +1943,7 @@ def add_planned_access_points_positions_v2(api):
 def test_add_planned_access_points_positions_v2(api, validator):
     try:
         assert is_valid_add_planned_access_points_positions_v2(
-            validator,
-            add_planned_access_points_positions_v2(api)
+            validator, add_planned_access_points_positions_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -2084,9 +1953,7 @@ def test_add_planned_access_points_positions_v2(api, validator):
 
 def add_planned_access_points_positions_v2_default_val(api):
     endpoint_result = api.site_design.add_planned_access_points_positions_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+        active_validation=True, floor_id="string", payload=None
     )
     return endpoint_result
 
@@ -2095,8 +1962,7 @@ def add_planned_access_points_positions_v2_default_val(api):
 def test_add_planned_access_points_positions_v2_default_val(api, validator):
     try:
         assert is_valid_add_planned_access_points_positions_v2(
-            validator,
-            add_planned_access_points_positions_v2_default_val(api)
+            validator, add_planned_access_points_positions_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2104,15 +1970,13 @@ def test_add_planned_access_points_positions_v2_default_val(api, validator):
 
 
 def is_valid_edit_planned_access_points_positions_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_93eb209544555e43ae2bc909499f3900_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_93eb209544555e43ae2bc909499f3900_v2_3_7_9").validate(obj)
     return True
 
 
 def edit_planned_access_points_positions_v2(api):
     endpoint_result = api.site_design.edit_planned_access_points_positions_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+        active_validation=True, floor_id="string", payload=None
     )
     return endpoint_result
 
@@ -2121,8 +1985,7 @@ def edit_planned_access_points_positions_v2(api):
 def test_edit_planned_access_points_positions_v2(api, validator):
     try:
         assert is_valid_edit_planned_access_points_positions_v2(
-            validator,
-            edit_planned_access_points_positions_v2(api)
+            validator, edit_planned_access_points_positions_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -2132,9 +1995,7 @@ def test_edit_planned_access_points_positions_v2(api, validator):
 
 def edit_planned_access_points_positions_v2_default_val(api):
     endpoint_result = api.site_design.edit_planned_access_points_positions_v2(
-        active_validation=True,
-        floor_id='string',
-        payload=None
+        active_validation=True, floor_id="string", payload=None
     )
     return endpoint_result
 
@@ -2143,8 +2004,7 @@ def edit_planned_access_points_positions_v2_default_val(api):
 def test_edit_planned_access_points_positions_v2_default_val(api, validator):
     try:
         assert is_valid_edit_planned_access_points_positions_v2(
-            validator,
-            edit_planned_access_points_positions_v2_default_val(api)
+            validator, edit_planned_access_points_positions_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2152,16 +2012,16 @@ def test_edit_planned_access_points_positions_v2_default_val(api, validator):
 
 
 def is_valid_get_planned_access_points_positions_count_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_603f338468c45ffb95051819e7620fb5_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_603f338468c45ffb95051819e7620fb5_v2_3_7_9").validate(obj)
     return True
 
 
 def get_planned_access_points_positions_count_v2(api):
     endpoint_result = api.site_design.get_planned_access_points_positions_count_v2(
-        floor_id='string',
-        mac_address='string',
-        name='string',
-        type='string'
+        floor_id="string",
+        mac_address="string",
+        name="string",
+        type="string",
     )
     return endpoint_result
 
@@ -2170,8 +2030,7 @@ def get_planned_access_points_positions_count_v2(api):
 def test_get_planned_access_points_positions_count_v2(api, validator):
     try:
         assert is_valid_get_planned_access_points_positions_count_v2(
-            validator,
-            get_planned_access_points_positions_count_v2(api)
+            validator, get_planned_access_points_positions_count_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -2181,10 +2040,7 @@ def test_get_planned_access_points_positions_count_v2(api, validator):
 
 def get_planned_access_points_positions_count_v2_default_val(api):
     endpoint_result = api.site_design.get_planned_access_points_positions_count_v2(
-        floor_id='string',
-        mac_address=None,
-        name=None,
-        type=None
+        floor_id="string", mac_address=None, name=None, type=None
     )
     return endpoint_result
 
@@ -2194,7 +2050,7 @@ def test_get_planned_access_points_positions_count_v2_default_val(api, validator
     try:
         assert is_valid_get_planned_access_points_positions_count_v2(
             validator,
-            get_planned_access_points_positions_count_v2_default_val(api)
+            get_planned_access_points_positions_count_v2_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2202,14 +2058,13 @@ def test_get_planned_access_points_positions_count_v2_default_val(api, validator
 
 
 def is_valid_delete_planned_access_points_position_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_bb00708b816e5972b71a33a67e607a72_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_bb00708b816e5972b71a33a67e607a72_v2_3_7_9").validate(obj)
     return True
 
 
 def delete_planned_access_points_position_v2(api):
     endpoint_result = api.site_design.delete_planned_access_points_position_v2(
-        floor_id='string',
-        id='string'
+        floor_id="string", id="string"
     )
     return endpoint_result
 
@@ -2218,8 +2073,7 @@ def delete_planned_access_points_position_v2(api):
 def test_delete_planned_access_points_position_v2(api, validator):
     try:
         assert is_valid_delete_planned_access_points_position_v2(
-            validator,
-            delete_planned_access_points_position_v2(api)
+            validator, delete_planned_access_points_position_v2(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -2229,8 +2083,7 @@ def test_delete_planned_access_points_position_v2(api, validator):
 
 def delete_planned_access_points_position_v2_default_val(api):
     endpoint_result = api.site_design.delete_planned_access_points_position_v2(
-        floor_id='string',
-        id='string'
+        floor_id="string", id="string"
     )
     return endpoint_result
 
@@ -2240,7 +2093,7 @@ def test_delete_planned_access_points_position_v2_default_val(api, validator):
     try:
         assert is_valid_delete_planned_access_points_position_v2(
             validator,
-            delete_planned_access_points_position_v2_default_val(api)
+            delete_planned_access_points_position_v2_default_val(api),
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2248,7 +2101,7 @@ def test_delete_planned_access_points_position_v2_default_val(api, validator):
 
 
 def is_valid_updates_a_floor_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_07236d5da0365e31972173f015ed3614_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_07236d5da0365e31972173f015ed3614_v2_3_7_9").validate(obj)
     return True
 
 
@@ -2257,14 +2110,14 @@ def updates_a_floor_v2(api):
         active_validation=True,
         floorNumber=0,
         height=0,
-        id='string',
+        id="string",
         length=0,
-        name='string',
-        parentId='string',
+        name="string",
+        parentId="string",
         payload=None,
-        rfModel='string',
-        unitsOfMeasure='string',
-        width=0
+        rfModel="string",
+        unitsOfMeasure="string",
+        width=0,
     )
     return endpoint_result
 
@@ -2272,10 +2125,7 @@ def updates_a_floor_v2(api):
 @pytest.mark.site_design
 def test_updates_a_floor_v2(api, validator):
     try:
-        assert is_valid_updates_a_floor_v2(
-            validator,
-            updates_a_floor_v2(api)
-        )
+        assert is_valid_updates_a_floor_v2(validator, updates_a_floor_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -2287,14 +2137,14 @@ def updates_a_floor_v2_default_val(api):
         active_validation=True,
         floorNumber=None,
         height=None,
-        id='string',
+        id="string",
         length=None,
         name=None,
         parentId=None,
         payload=None,
         rfModel=None,
         unitsOfMeasure=None,
-        width=None
+        width=None,
     )
     return endpoint_result
 
@@ -2303,8 +2153,7 @@ def updates_a_floor_v2_default_val(api):
 def test_updates_a_floor_v2_default_val(api, validator):
     try:
         assert is_valid_updates_a_floor_v2(
-            validator,
-            updates_a_floor_v2_default_val(api)
+            validator, updates_a_floor_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2312,14 +2161,13 @@ def test_updates_a_floor_v2_default_val(api, validator):
 
 
 def is_valid_gets_a_floor_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_8f2f085a136a55e6a03f75ca03de17bd_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_8f2f085a136a55e6a03f75ca03de17bd_v2_3_7_9").validate(obj)
     return True
 
 
 def gets_a_floor_v2(api):
     endpoint_result = api.site_design.gets_a_floor_v2(
-        id='string',
-        units_of_measure='string'
+        id="string", units_of_measure="string"
     )
     return endpoint_result
 
@@ -2327,10 +2175,7 @@ def gets_a_floor_v2(api):
 @pytest.mark.site_design
 def test_gets_a_floor_v2(api, validator):
     try:
-        assert is_valid_gets_a_floor_v2(
-            validator,
-            gets_a_floor_v2(api)
-        )
+        assert is_valid_gets_a_floor_v2(validator, gets_a_floor_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -2339,8 +2184,7 @@ def test_gets_a_floor_v2(api, validator):
 
 def gets_a_floor_v2_default_val(api):
     endpoint_result = api.site_design.gets_a_floor_v2(
-        id='string',
-        units_of_measure=None
+        id="string", units_of_measure=None
     )
     return endpoint_result
 
@@ -2348,34 +2192,26 @@ def gets_a_floor_v2_default_val(api):
 @pytest.mark.site_design
 def test_gets_a_floor_v2_default_val(api, validator):
     try:
-        assert is_valid_gets_a_floor_v2(
-            validator,
-            gets_a_floor_v2_default_val(api)
-        )
+        assert is_valid_gets_a_floor_v2(validator, gets_a_floor_v2_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
 def is_valid_deletes_a_floor_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_071ec0e563f25f44bbe568527ea87fd6_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_071ec0e563f25f44bbe568527ea87fd6_v2_3_7_9").validate(obj)
     return True
 
 
 def deletes_a_floor_v2(api):
-    endpoint_result = api.site_design.deletes_a_floor_v2(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_a_floor_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.site_design
 def test_deletes_a_floor_v2(api, validator):
     try:
-        assert is_valid_deletes_a_floor_v2(
-            validator,
-            deletes_a_floor_v2(api)
-        )
+        assert is_valid_deletes_a_floor_v2(validator, deletes_a_floor_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -2383,9 +2219,7 @@ def test_deletes_a_floor_v2(api, validator):
 
 
 def deletes_a_floor_v2_default_val(api):
-    endpoint_result = api.site_design.deletes_a_floor_v2(
-        id='string'
-    )
+    endpoint_result = api.site_design.deletes_a_floor_v2(id="string")
     return endpoint_result
 
 
@@ -2393,8 +2227,7 @@ def deletes_a_floor_v2_default_val(api):
 def test_deletes_a_floor_v2_default_val(api, validator):
     try:
         assert is_valid_deletes_a_floor_v2(
-            validator,
-            deletes_a_floor_v2_default_val(api)
+            validator, deletes_a_floor_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -2402,15 +2235,13 @@ def test_deletes_a_floor_v2_default_val(api, validator):
 
 
 def is_valid_uploads_floor_image_v2(json_schema_validate, obj):
-    json_schema_validate('jsd_520df8448b465a0abdc9bb7ee17aac9f_v2_3_7_9').validate(obj)
+    json_schema_validate("jsd_520df8448b465a0abdc9bb7ee17aac9f_v2_3_7_9").validate(obj)
     return True
 
 
 def uploads_floor_image_v2(api):
     endpoint_result = api.site_design.uploads_floor_image_v2(
-        active_validation=True,
-        id='string',
-        payload=None
+        active_validation=True, id="string", payload=None
     )
     return endpoint_result
 
@@ -2418,10 +2249,7 @@ def uploads_floor_image_v2(api):
 @pytest.mark.site_design
 def test_uploads_floor_image_v2(api, validator):
     try:
-        assert is_valid_uploads_floor_image_v2(
-            validator,
-            uploads_floor_image_v2(api)
-        )
+        assert is_valid_uploads_floor_image_v2(validator, uploads_floor_image_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -2430,9 +2258,7 @@ def test_uploads_floor_image_v2(api, validator):
 
 def uploads_floor_image_v2_default_val(api):
     endpoint_result = api.site_design.uploads_floor_image_v2(
-        active_validation=True,
-        id='string',
-        payload=None
+        active_validation=True, id="string", payload=None
     )
     return endpoint_result
 
@@ -2441,8 +2267,7 @@ def uploads_floor_image_v2_default_val(api):
 def test_uploads_floor_image_v2_default_val(api, validator):
     try:
         assert is_valid_uploads_floor_image_v2(
-            validator,
-            uploads_floor_image_v2_default_val(api)
+            validator, uploads_floor_image_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

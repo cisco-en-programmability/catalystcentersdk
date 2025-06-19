@@ -22,7 +22,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from __future__ import absolute_import, division, print_function, unicode_literals
+from __future__ import (
+    absolute_import,
+    division,
+    print_function,
+    unicode_literals,
+)
 
 import json
 from builtins import *
@@ -34,10 +39,12 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorE1C353Aa15463Bf2867D0716712Ca(object):
     """GetAnchorCapableDevicesV1 request schema definition."""
+
     def __init__(self):
         super(JSONSchemaValidatorE1C353Aa15463Bf2867D0716712Ca, self).__init__()
-        self._validator = fastjsonschema.compile(json.loads(
-            '''{
+        self._validator = fastjsonschema.compile(
+            json.loads(
+                """{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "deviceIp": {
@@ -51,13 +58,16 @@ class JSONSchemaValidatorE1C353Aa15463Bf2867D0716712Ca(object):
                 }
                 },
                 "type": "object"
-                }'''.replace("\n" + ' ' * 16, '')
-        ))
+                }""".replace(
+                    "\n" + " " * 16, ""
+                )
+            )
+        )
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                '{} is invalid. Reason: {}'.format(request, e.message)
+                "{} is invalid. Reason: {}".format(request, e.message)
             )

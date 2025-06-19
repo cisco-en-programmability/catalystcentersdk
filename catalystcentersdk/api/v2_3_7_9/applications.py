@@ -32,7 +32,6 @@ from ...utils import (
     check_type,
     dict_from_items_with_values,
     dict_of_str,
-    
 )
 
 
@@ -65,25 +64,27 @@ class Applications(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def retrieves_the_list_of_network_applications_along_with_experience_and_health_metrics(self,
-                                                                                            site_id,
-                                                                                            application_name=None,
-                                                                                            attribute=None,
-                                                                                            business_relevance=None,
-                                                                                            end_time=None,
-                                                                                            limit=None,
-                                                                                            offset=None,
-                                                                                            order=None,
-                                                                                            sort_by=None,
-                                                                                            ssid=None,
-                                                                                            start_time=None,
-                                                                                            headers=None,
-                                                                                            **request_parameters):
+    def retrieves_the_list_of_network_applications_along_with_experience_and_health_metrics(
+        self,
+        site_id,
+        application_name=None,
+        attribute=None,
+        business_relevance=None,
+        end_time=None,
+        limit=None,
+        offset=None,
+        order=None,
+        sort_by=None,
+        ssid=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the list of network applications along with experience and health metrics. If startTime and endTime
         are not provided, the API defaults to the last 24 hours. `siteId` is mandatory. `siteId` must be a site
         UUID of a building. For detailed information about the usage of the API, please refer to the Open API
         specification document https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.0-resolved.yaml.
 
         Args:
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
@@ -91,7 +92,7 @@ class Applications(object):
                 inclusive. .
             end_time(int): endTime query parameter. End time to which API queries the data set related to the
                 resource. It must be specified in UNIX epochtime in milliseconds. Value is inclusive. .
-            limit(int): limit query parameter. Maximum number of records to return .
+            limit(int): limit query parameter. Maximum number of records to return.
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
             sort_by(str): sortBy query parameter. A field within the response to sort by. .
@@ -142,49 +143,34 @@ class Applications(object):
         check_type(offset, int)
         check_type(sort_by, str)
         check_type(order, str)
-        check_type(site_id, str,
-                   may_be_none=False)
+        check_type(site_id, str, may_be_none=False)
         check_type(ssid, str)
         check_type(application_name, str)
         check_type(business_relevance, str)
         check_type(attribute, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'limit':
-                limit,
-            'offset':
-                offset,
-            'sortBy':
-                sort_by,
-            'order':
-                order,
-            'siteId':
-                site_id,
-            'ssid':
-                ssid,
-            'applicationName':
-                application_name,
-            'businessRelevance':
-                business_relevance,
-            'attribute':
-                attribute,
+            "startTime": start_time,
+            "endTime": end_time,
+            "limit": limit,
+            "offset": offset,
+            "sortBy": sort_by,
+            "order": order,
+            "siteId": site_id,
+            "ssid": ssid,
+            "applicationName": application_name,
+            "businessRelevance": business_relevance,
+            "attribute": attribute,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -192,30 +178,35 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/networkApplications')
+        e_url = "/dna/data/api/v1/networkApplications"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_fb02436a6c935d5d8a536b86de8b2846_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_fb02436a6c935d5d8a536b86de8b2846_v2_3_7_9", json_data
+        )
 
-    def retrieves_the_total_count_of_network_applications_by_applying_basic_filtering(self,
-                                                                                      site_id,
-                                                                                      application_name=None,
-                                                                                      business_relevance=None,
-                                                                                      end_time=None,
-                                                                                      ssid=None,
-                                                                                      start_time=None,
-                                                                                      headers=None,
-                                                                                      **request_parameters):
+    def retrieves_the_total_count_of_network_applications_by_applying_basic_filtering(
+        self,
+        site_id,
+        application_name=None,
+        business_relevance=None,
+        end_time=None,
+        ssid=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the number of network applications by applying basic filtering. If startTime and endTime are not
         provided, the API defaults to the last 24 hours. `siteId` is mandatory. `siteId` must be a site UUID of
         a building. For detailed information about the usage of the API, please refer to the Open API
         specification document https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.0-resolved.yaml.
 
         Args:
             start_time(int): startTime query parameter. Start time from which API queries the data set related to
@@ -258,38 +249,28 @@ class Applications(object):
         check_type(headers, dict)
         check_type(start_time, int)
         check_type(end_time, int)
-        check_type(site_id, str,
-                   may_be_none=False)
+        check_type(site_id, str, may_be_none=False)
         check_type(ssid, str)
         check_type(application_name, str)
         check_type(business_relevance, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'siteId':
-                site_id,
-            'ssid':
-                ssid,
-            'applicationName':
-                application_name,
-            'businessRelevance':
-                business_relevance,
+            "startTime": start_time,
+            "endTime": end_time,
+            "siteId": site_id,
+            "ssid": ssid,
+            "applicationName": application_name,
+            "businessRelevance": business_relevance,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -297,34 +278,39 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/networkApplications/count')
+        e_url = "/dna/data/api/v1/networkApplications/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c50def6b3a58e5acab3ae592a57da8_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_c50def6b3a58e5acab3ae592a57da8_v2_3_7_9", json_data
+        )
 
-    def retrieves_summary_analytics_data_related_to_network_applications_along_with_health_metrics(self,
-                                                                                                   aggregateAttributes=None,
-                                                                                                   attributes=None,
-                                                                                                   endTime=None,
-                                                                                                   filters=None,
-                                                                                                   page=None,
-                                                                                                   siteIds=None,
-                                                                                                   startTime=None,
-                                                                                                   headers=None,
-                                                                                                   payload=None,
-                                                                                                   active_validation=True,
-                                                                                                   **request_parameters):
+    def retrieves_summary_analytics_data_related_to_network_applications_along_with_health_metrics(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        page=None,
+        siteIds=None,
+        startTime=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves summary analytics data related to network applications while applying complex filtering, aggregate
         functions, and grouping.  This API facilitates obtaining consolidated insights into the performance and
         status of the network applications. If startTime and endTime are not provided, the API defaults to the
         last 24 hours. For detailed information about the usage of the API, please refer to the Open API
         specification document https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.1-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Applications's aggregateAttributes (list of objects).
@@ -357,44 +343,33 @@ class Applications(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'siteIds':
-                siteIds,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "siteIds": siteIds,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_ded95db0af275081801b54e0ce105c71_v2_3_7_9')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_ded95db0af275081801b54e0ce105c71_v2_3_7_9"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -402,32 +377,40 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/networkApplications/summaryAnalytics')
+        e_url = "/dna/data/api/v1/networkApplications/summaryAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_ded95db0af275081801b54e0ce105c71_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_ded95db0af275081801b54e0ce105c71_v2_3_7_9", json_data
+        )
 
-    def retrieves_the_trend_analytics_data_related_to_network_applications(self,
-                                                                           aggregateAttributes=None,
-                                                                           attributes=None,
-                                                                           endTime=None,
-                                                                           filters=None,
-                                                                           groupBy=None,
-                                                                           page=None,
-                                                                           siteIds=None,
-                                                                           startTime=None,
-                                                                           trendInterval=None,
-                                                                           headers=None,
-                                                                           payload=None,
-                                                                           active_validation=True,
-                                                                           **request_parameters):
+    def retrieves_the_trend_analytics_data_related_to_network_applications(
+        self,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        groupBy=None,
+        page=None,
+        siteIds=None,
+        startTime=None,
+        trendInterval=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the trend analytics of applications experience data for the specified time range. The data will be
         grouped based on the given trend time interval. This API facilitates obtaining consolidated insights
         into the performance and status of the network applications over the specified start and end time. If
@@ -435,7 +418,7 @@ class Applications(object):
         `trendInterval` are mandatory. `siteId` must be a site UUID of a building. For detailed information
         about the usage of the API, please refer to the Open API specification document
         https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.0-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Applications's aggregateAttributes (list of objects).
@@ -470,48 +453,35 @@ class Applications(object):
         check_type(headers, dict)
         check_type(payload, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'siteIds':
-                siteIds,
-            'trendInterval':
-                trendInterval,
-            'groupBy':
-                groupBy,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "siteIds": siteIds,
+            "trendInterval": trendInterval,
+            "groupBy": groupBy,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_6ce35f19bc4c1d058aa01536_v2_3_7_9')\
-                .validate(_payload)
+            self._request_validator("jsd_6ce35f19bc4c1d058aa01536_v2_3_7_9").validate(
+                _payload
+            )
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -519,32 +489,38 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/networkApplications/trendAnalytics')
+        e_url = "/dna/data/api/v1/networkApplications/trendAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_6ce35f19bc4c1d058aa01536_v2_3_7_9', json_data)
+        return self._object_factory("bpm_6ce35f19bc4c1d058aa01536_v2_3_7_9", json_data)
 
-    def retrieves_the_trend_analytics_related_to_specific_network_application(self,
-                                                                              id,
-                                                                              aggregateAttributes=None,
-                                                                              attributes=None,
-                                                                              endTime=None,
-                                                                              filters=None,
-                                                                              page=None,
-                                                                              siteIds=None,
-                                                                              startTime=None,
-                                                                              trendInterval=None,
-                                                                              headers=None,
-                                                                              payload=None,
-                                                                              active_validation=True,
-                                                                              **request_parameters):
+    def retrieves_the_trend_analytics_related_to_specific_network_application(
+        self,
+        id,
+        aggregateAttributes=None,
+        attributes=None,
+        endTime=None,
+        filters=None,
+        page=None,
+        siteIds=None,
+        startTime=None,
+        trendInterval=None,
+        headers=None,
+        payload=None,
+        active_validation=True,
+        **request_parameters
+    ):
         """Retrieves the trend analytics of applications experience data to specific network application for the specified
         time range. The data will be grouped based on the given trend time interval. This API facilitates
         obtaining consolidated insights into the performance and status of the network applications over the
@@ -552,7 +528,7 @@ class Applications(object):
         hours.`siteId` and `trendInterval` are mandatory. `siteId` must be a site UUID of a building.For
         detailed information about the usage of the API, please refer to the Open API specification document
         https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.1-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-NetworkApplications-1.0.1-resolved.yaml.
 
         Args:
             aggregateAttributes(list): Applications's aggregateAttributes (list of objects).
@@ -586,50 +562,38 @@ class Applications(object):
         """
         check_type(headers, dict)
         check_type(payload, dict)
-        check_type(id, str,
-                   may_be_none=False)
+        check_type(id, str, may_be_none=False)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
         path_params = {
-            'id': id,
+            "id": id,
         }
         _payload = {
-            'startTime':
-                startTime,
-            'endTime':
-                endTime,
-            'siteIds':
-                siteIds,
-            'trendInterval':
-                trendInterval,
-            'attributes':
-                attributes,
-            'filters':
-                filters,
-            'aggregateAttributes':
-                aggregateAttributes,
-            'page':
-                page,
+            "startTime": startTime,
+            "endTime": endTime,
+            "siteIds": siteIds,
+            "trendInterval": trendInterval,
+            "attributes": attributes,
+            "filters": filters,
+            "aggregateAttributes": aggregateAttributes,
+            "page": page,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
         if active_validation:
-            self._request_validator('jsd_b33956f3e56c6b8d234e7ed6a20e6_v2_3_7_9')\
-                .validate(_payload)
+            self._request_validator(
+                "jsd_b33956f3e56c6b8d234e7ed6a20e6_v2_3_7_9"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -637,39 +601,47 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/networkApplications/{id}/trendAnalytics')
+        e_url = "/dna/data/api/v1/networkApplications/{id}/trendAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+            )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           json=_payload)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, json=_payload
+            )
 
-        return self._object_factory('bpm_b33956f3e56c6b8d234e7ed6a20e6_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_b33956f3e56c6b8d234e7ed6a20e6_v2_3_7_9", json_data
+        )
 
-    def retrieves_the_list_of_thousand_eyes_test_results_along_with_related_metrics(self,
-                                                                                    agent_id=None,
-                                                                                    attribute=None,
-                                                                                    end_time=None,
-                                                                                    limit=None,
-                                                                                    network_device_name=None,
-                                                                                    offset=None,
-                                                                                    order=None,
-                                                                                    site_id=None,
-                                                                                    sort_by=None,
-                                                                                    start_time=None,
-                                                                                    test_id=None,
-                                                                                    test_name=None,
-                                                                                    test_type=None,
-                                                                                    headers=None,
-                                                                                    **request_parameters):
+    def retrieves_the_list_of_thousand_eyes_test_results_along_with_related_metrics(
+        self,
+        agent_id=None,
+        attribute=None,
+        end_time=None,
+        limit=None,
+        network_device_name=None,
+        offset=None,
+        order=None,
+        site_id=None,
+        sort_by=None,
+        start_time=None,
+        test_id=None,
+        test_name=None,
+        test_type=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the list of ThousandEyes test results along with related metrics. If `startTime` and `endTime` are not
         provided, the API defaults to the last 24 hours. Please note that `siteId` filter (if used) should be
         using only site UUIDs of buildings.   For detailed information about the usage of the API, please refer
-        to the Open API specification document https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-thousandEyesTestResults-1.0.0-resolved.yaml .
+        to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             site_id(str): siteId query parameter. The site UUID without the top level hierarchy. `siteId` must be a
@@ -699,10 +671,10 @@ class Applications(object):
                 `attribute=testName` (single attribute requested)
                 `attribute=testId&attribute=testName&attribute=averageLatency` (multiple attributes
                 requested) . For valid attributes, verify the documentation. .
-            limit(int): limit query parameter. Maximum number of records to return .
+            limit(int): limit query parameter. Maximum number of records to return.
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
-            sort_by(str): sortBy query parameter. Attribute name by which the results should be sorted .
+            sort_by(str): sortBy query parameter. Attribute name by which the results should be sorted.
             order(str): order query parameter. The sort order of the field ascending or descending. .
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -735,46 +707,30 @@ class Applications(object):
         check_type(sort_by, str)
         check_type(order, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'siteId':
-                site_id,
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'testId':
-                test_id,
-            'testName':
-                test_name,
-            'testType':
-                test_type,
-            'agentId':
-                agent_id,
-            'networkDeviceName':
-                network_device_name,
-            'attribute':
-                attribute,
-            'limit':
-                limit,
-            'offset':
-                offset,
-            'sortBy':
-                sort_by,
-            'order':
-                order,
+            "siteId": site_id,
+            "startTime": start_time,
+            "endTime": end_time,
+            "testId": test_id,
+            "testName": test_name,
+            "testType": test_type,
+            "agentId": agent_id,
+            "networkDeviceName": network_device_name,
+            "attribute": attribute,
+            "limit": limit,
+            "offset": offset,
+            "sortBy": sort_by,
+            "order": order,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -782,32 +738,36 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/thousandEyesTestResults')
+        e_url = "/dna/data/api/v1/thousandEyesTestResults"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a499ab977fea5c139c9344227c7769a5_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_a499ab977fea5c139c9344227c7769a5_v2_3_7_9", json_data
+        )
 
-    def retrieves_the_total_count_of_thousand_eyes_test_results(self,
-                                                                agent_id=None,
-                                                                end_time=None,
-                                                                network_device_name=None,
-                                                                site_id=None,
-                                                                start_time=None,
-                                                                test_id=None,
-                                                                test_name=None,
-                                                                test_type=None,
-                                                                headers=None,
-                                                                **request_parameters):
+    def retrieves_the_total_count_of_thousand_eyes_test_results(
+        self,
+        agent_id=None,
+        end_time=None,
+        network_device_name=None,
+        site_id=None,
+        start_time=None,
+        test_id=None,
+        test_name=None,
+        test_type=None,
+        headers=None,
+        **request_parameters
+    ):
         """Retrieves the total count of ThousandEyes test results for the given filters. If `startTime` and `endTime` are
         not provided, the API defaults to the last 24 hours.  For detailed information about the usage of the
-        API, please refer to the Open API specification document https://github.com/cisco-en-
-        programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-
-        thousandEyesTestResults-1.0.0-resolved.yaml .
+        API, please refer to the Open API specification document
+        https://github.com/cisco-en-programmability/catalyst-center-api-specs/blob/main/Assurance/CE_Cat_Center_Org-AssuranceUserDefinedIssueAPIs-1.0.0-resolved.yaml
 
         Args:
             site_id(str): siteId query parameter. The site UUID without the top level hierarchy. `siteId` must be a
@@ -858,36 +818,25 @@ class Applications(object):
         check_type(agent_id, str)
         check_type(network_device_name, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'siteId':
-                site_id,
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'testId':
-                test_id,
-            'testName':
-                test_name,
-            'testType':
-                test_type,
-            'agentId':
-                agent_id,
-            'networkDeviceName':
-                network_device_name,
+            "siteId": site_id,
+            "startTime": start_time,
+            "endTime": end_time,
+            "testId": test_id,
+            "testName": test_name,
+            "testType": test_type,
+            "agentId": agent_id,
+            "networkDeviceName": network_device_name,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -895,37 +844,42 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/thousandEyesTestResults/count')
+        e_url = "/dna/data/api/v1/thousandEyesTestResults/count"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_ef366ca484355d15937dd851a67c88e3_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_ef366ca484355d15937dd851a67c88e3_v2_3_7_9", json_data
+        )
 
-    def the_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range(self,
-                                                                                            agent_id=None,
-                                                                                            end_time=None,
-                                                                                            limit=None,
-                                                                                            network_device_name=None,
-                                                                                            offset=None,
-                                                                                            order=None,
-                                                                                            site_id=None,
-                                                                                            start_time=None,
-                                                                                            test_id=None,
-                                                                                            test_name=None,
-                                                                                            test_type=None,
-                                                                                            trend_interval=None,
-                                                                                            headers=None,
-                                                                                            **request_parameters):
+    def the_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range(
+        self,
+        agent_id=None,
+        end_time=None,
+        limit=None,
+        network_device_name=None,
+        offset=None,
+        order=None,
+        site_id=None,
+        start_time=None,
+        test_id=None,
+        test_name=None,
+        test_type=None,
+        trend_interval=None,
+        headers=None,
+        **request_parameters
+    ):
         """Get trend time series for ThousandEyes test results. The data will be grouped based on the specified trend time
         interval. If `startTime` and `endTime` are not provided, the API defaults to the last 24 hours. By
         default the number of records returned will be 100 and the records will be sorted by time in ascending
         (`asc`) order .  For detailed information about the usage of the API, please refer to the Open API
         specification document https://github.com/cisco-en-programmability/catalyst-center-api-
-        specs/blob/main/Assurance/CE_Cat_Center_Org-thousandEyesTestResults-1.0.0-resolved.yaml .
+        specs/blob/main/Assurance/CE_Cat_Center_Org-thousandEyesTestResults-1.0.0-resolved.yaml.
 
         Args:
             site_id(str): siteId query parameter. The site UUID without the top level hierarchy. `siteId` must be a
@@ -953,7 +907,7 @@ class Applications(object):
                 for multiple agentIds) .
             network_device_name(str): networkDeviceName query parameter. Name of the network device as per the
                 inventory. This supports `*` wildcard, and filtering is case-insensitve. .
-            limit(int): limit query parameter. Maximum number of records to return .
+            limit(int): limit query parameter. Maximum number of records to return.
             offset(int): offset query parameter. Specifies the starting point within all records returned by the
                 API. It's one based offset. The starting value is 1. .
             order(str): order query parameter. The sort order of the field ascending or descending. .
@@ -987,44 +941,29 @@ class Applications(object):
         check_type(offset, int)
         check_type(order, str)
         if headers is not None:
-            if 'X-CALLER-ID' in headers:
-                check_type(headers.get('X-CALLER-ID'),
-                           str)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-CALLER-ID" in headers:
+                check_type(headers.get("X-CALLER-ID"), str)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'siteId':
-                site_id,
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'trendInterval':
-                trend_interval,
-            'testId':
-                test_id,
-            'testName':
-                test_name,
-            'testType':
-                test_type,
-            'agentId':
-                agent_id,
-            'networkDeviceName':
-                network_device_name,
-            'limit':
-                limit,
-            'offset':
-                offset,
-            'order':
-                order,
+            "siteId": site_id,
+            "startTime": start_time,
+            "endTime": end_time,
+            "trendInterval": trend_interval,
+            "testId": test_id,
+            "testName": test_name,
+            "testType": test_type,
+            "agentId": agent_id,
+            "networkDeviceName": network_device_name,
+            "limit": limit,
+            "offset": offset,
+            "order": order,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1032,28 +971,33 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/data/api/v1/thousandEyesTestResults/trendAnalytics')
+        e_url = "/dna/data/api/v1/thousandEyesTestResults/trendAnalytics"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_af0e7bab8659f19c619fae31772d15_v2_3_7_9', json_data)
+        return self._object_factory(
+            "bpm_af0e7bab8659f19c619fae31772d15_v2_3_7_9", json_data
+        )
 
-    def applications(self,
-                     application_health=None,
-                     application_name=None,
-                     device_id=None,
-                     end_time=None,
-                     limit=None,
-                     mac_address=None,
-                     offset=None,
-                     site_id=None,
-                     start_time=None,
-                     headers=None,
-                     **request_parameters):
+    def applications(
+        self,
+        application_health=None,
+        application_name=None,
+        device_id=None,
+        end_time=None,
+        limit=None,
+        mac_address=None,
+        offset=None,
+        site_id=None,
+        start_time=None,
+        headers=None,
+        **request_parameters
+    ):
         """Intent API to get a list of applications for a specific site, a device, or a client device's MAC address. For a
         combination of a specific application with site and/or device the API gets list of
         issues/devices/endpoints. .
@@ -1065,8 +1009,8 @@ class Applications(object):
                 siteId and clientMac) .
             mac_address(str): macAddress query parameter. Client device's MAC address (Cannot be submitted together
                 with siteId and deviceId) .
-            start_time(int): startTime query parameter. Starting epoch time in milliseconds of time window .
-            end_time(int): endTime query parameter. Ending epoch time in milliseconds of time window .
+            start_time(int): startTime query parameter. Starting epoch time in milliseconds of time window.
+            end_time(int): endTime query parameter. Ending epoch time in milliseconds of time window.
             application_health(str): applicationHealth query parameter. Application health category (POOR, FAIR, or
                 GOOD.  Optionally use with siteId only) .
             offset(int): offset query parameter. The offset of the first application in the returned data
@@ -1074,7 +1018,7 @@ class Applications(object):
             limit(int): limit query parameter. The max number of application entries in returned data [1, 1000]
                 (optionally used with siteId only) .
             application_name(str): applicationName query parameter. The name of the application to get information
-                on .
+                on.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
@@ -1102,35 +1046,24 @@ class Applications(object):
         check_type(limit, int)
         check_type(application_name, str)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'siteId':
-                site_id,
-            'deviceId':
-                device_id,
-            'macAddress':
-                mac_address,
-            'startTime':
-                start_time,
-            'endTime':
-                end_time,
-            'applicationHealth':
-                application_health,
-            'offset':
-                offset,
-            'limit':
-                limit,
-            'applicationName':
-                application_name,
+            "siteId": site_id,
+            "deviceId": device_id,
+            "macAddress": mac_address,
+            "startTime": start_time,
+            "endTime": end_time,
+            "applicationHealth": application_health,
+            "offset": offset,
+            "limit": limit,
+            "applicationName": application_name,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -1138,14 +1071,15 @@ class Applications(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/application-health')
+        e_url = "/dna/intent/api/v1/application-health"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b85e4ce533d5ff49ddd3b2f9657cfa5_v2_3_7_9', json_data)
-
-
+        return self._object_factory(
+            "bpm_b85e4ce533d5ff49ddd3b2f9657cfa5_v2_3_7_9", json_data
+        )

@@ -63,15 +63,13 @@ class AuthenticationManagement(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def import_certificate(self,
-                              list_of_users=None,
-                              pk_password=None,
-                              headers=None,
-                              **request_parameters):
+    def import_certificate(
+        self, list_of_users=None, pk_password=None, headers=None, **request_parameters
+    ):
         """This API enables a user to import a PEM certificate and its key for the controller and/or disaster recovery. .
 
         Args:
-            pk_password(str): pkPassword query parameter. Password for encrypted private key .
+            pk_password(str): pkPassword query parameter. Password for encrypted private key.
             list_of_users(str, list, set, tuple): listOfUsers query parameter. Specify whether the
                 certificate will be used for controller ("server"), disaster recovery ("ipsec") or both
                 ("server, ipsec"). If no value is provided, the default value taken will be "server" .
@@ -95,24 +93,19 @@ class AuthenticationManagement(object):
         check_type(pk_password, str)
         check_type(list_of_users, (str, list, set, tuple))
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'pkPassword':
-                pk_password,
-            'listOfUsers':
-                list_of_users,
+            "pkPassword": pk_password,
+            "listOfUsers": list_of_users,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -120,27 +113,32 @@ class AuthenticationManagement(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/certificate')
+        e_url = "/dna/intent/api/v1/certificate"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b19d7e8de2ca5329930d06f041a4a173_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_b19d7e8de2ca5329930d06f041a4a173_v2_3_7_6_1", json_data
+        )
 
-    def import_certificate_p12(self,
-                                  p12_password,
-                                  list_of_users=None,
-                                  pk_password=None,
-                                  headers=None,
-                                  **request_parameters):
+    def import_certificate_p12(
+        self,
+        p12_password,
+        list_of_users=None,
+        pk_password=None,
+        headers=None,
+        **request_parameters
+    ):
         """This API enables a user to import a PKCS12 certificate bundle for the controller and/or disaster recovery. .
 
         Args:
-            p12_password(str): p12Password query parameter. The password for PKCS12 certificate bundle .
-            pk_password(str): pkPassword query parameter. Password for encrypted private key .
+            p12_password(str): p12Password query parameter. The password for PKCS12 certificate bundle.
+            pk_password(str): pkPassword query parameter. Password for encrypted private key.
             list_of_users(str, list, set, tuple): listOfUsers query parameter. Specify whether the
                 certificate will be used for controller ("server"), disaster recovery ("ipsec") or both
                 ("server, ipsec"). If no value is provided, the default value taken will be "server" .
@@ -161,31 +159,24 @@ class AuthenticationManagement(object):
             https://developer.cisco.com/docs/dna-center/#!importcertificatep12
         """
         check_type(headers, dict)
-        check_type(p12_password, str,
-                   may_be_none=False)
+        check_type(p12_password, str, may_be_none=False)
         check_type(pk_password, str)
         check_type(list_of_users, (str, list, set, tuple))
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
         _params = {
-            'p12Password':
-                p12_password,
-            'pkPassword':
-                pk_password,
-            'listOfUsers':
-                list_of_users,
+            "p12Password": p12_password,
+            "pkPassword": pk_password,
+            "listOfUsers": list_of_users,
         }
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -193,19 +184,20 @@ class AuthenticationManagement(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/certificate-p12')
+        e_url = "/dna/intent/api/v1/certificate-p12"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_c80e660c2e36582f939a7403ef15de22_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_c80e660c2e36582f939a7403ef15de22_v2_3_7_6_1", json_data
+        )
 
-    def authentication_api(self,
-                              headers=None,
-                              **request_parameters):
+    def authentication_api(self, headers=None, **request_parameters):
         """API to obtain an access token, which remains valid for 1 hour. The token obtained using this API is required to
         be set as value to the X-Auth-Token HTTP Header for all API calls to Cisco Catalyst Center. .
 
@@ -228,23 +220,18 @@ class AuthenticationManagement(object):
         """
         check_type(headers, dict)
         if headers is not None:
-            if 'Content-Type' in headers:
-                check_type(headers.get('Content-Type'),
-                           str, may_be_none=False)
-            if 'Authorization' in headers:
-                check_type(headers.get('Authorization'),
-                           str, may_be_none=False)
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "Content-Type" in headers:
+                check_type(headers.get("Content-Type"), str, may_be_none=False)
+            if "Authorization" in headers:
+                check_type(headers.get("Authorization"), str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -252,12 +239,15 @@ class AuthenticationManagement(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/system/api/v1/auth/token')
+        e_url = "/dna/system/api/v1/auth/token"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.post(endpoint_full_url, params=_params,
-                                           headers=_headers)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.post(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_a6bfcd88e22c5c138657b340870b4ebb_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_a6bfcd88e22c5c138657b340870b4ebb_v2_3_7_6_1", json_data
+        )

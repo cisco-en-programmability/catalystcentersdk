@@ -26,18 +26,20 @@ from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
+pytestmark = pytest.mark.skipif(
+    CATALYST_CENTER_VERSION != "2.3.7.6", reason="version does not match"
+)
 
 
 def is_valid_disaster_recovery_operational_status(json_schema_validate, obj):
-    json_schema_validate('jsd_b20622545922503da0c01b57c144f75b_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_b20622545922503da0c01b57c144f75b_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def disaster_recovery_operational_status(api):
-    endpoint_result = api.disaster_recovery.disaster_recovery_operational_status(
-
-    )
+    endpoint_result = api.disaster_recovery.disaster_recovery_operational_status()
     return endpoint_result
 
 
@@ -45,8 +47,7 @@ def disaster_recovery_operational_status(api):
 def test_disaster_recovery_operational_status(api, validator):
     try:
         assert is_valid_disaster_recovery_operational_status(
-            validator,
-            disaster_recovery_operational_status(api)
+            validator, disaster_recovery_operational_status(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -55,9 +56,7 @@ def test_disaster_recovery_operational_status(api, validator):
 
 
 def disaster_recovery_operational_status_default_val(api):
-    endpoint_result = api.disaster_recovery.disaster_recovery_operational_status(
-
-    )
+    endpoint_result = api.disaster_recovery.disaster_recovery_operational_status()
     return endpoint_result
 
 
@@ -65,8 +64,7 @@ def disaster_recovery_operational_status_default_val(api):
 def test_disaster_recovery_operational_status_default_val(api, validator):
     try:
         assert is_valid_disaster_recovery_operational_status(
-            validator,
-            disaster_recovery_operational_status_default_val(api)
+            validator, disaster_recovery_operational_status_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -74,14 +72,14 @@ def test_disaster_recovery_operational_status_default_val(api, validator):
 
 
 def is_valid_disaster_recovery_status(json_schema_validate, obj):
-    json_schema_validate('jsd_181b27ccd369519d8820de238483b865_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_181b27ccd369519d8820de238483b865_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def disaster_recovery_status(api):
-    endpoint_result = api.disaster_recovery.disaster_recovery_status(
-
-    )
+    endpoint_result = api.disaster_recovery.disaster_recovery_status()
     return endpoint_result
 
 
@@ -89,8 +87,7 @@ def disaster_recovery_status(api):
 def test_disaster_recovery_status(api, validator):
     try:
         assert is_valid_disaster_recovery_status(
-            validator,
-            disaster_recovery_status(api)
+            validator, disaster_recovery_status(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
@@ -99,9 +96,7 @@ def test_disaster_recovery_status(api, validator):
 
 
 def disaster_recovery_status_default_val(api):
-    endpoint_result = api.disaster_recovery.disaster_recovery_status(
-
-    )
+    endpoint_result = api.disaster_recovery.disaster_recovery_status()
     return endpoint_result
 
 
@@ -109,8 +104,7 @@ def disaster_recovery_status_default_val(api):
 def test_disaster_recovery_status_default_val(api, validator):
     try:
         assert is_valid_disaster_recovery_status(
-            validator,
-            disaster_recovery_status_default_val(api)
+            validator, disaster_recovery_status_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

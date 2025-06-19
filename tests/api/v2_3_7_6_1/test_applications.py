@@ -26,25 +26,29 @@ from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
 from tests.environment import CATALYST_CENTER_VERSION
 
-pytestmark = pytest.mark.skipif(CATALYST_CENTER_VERSION != '2.3.7.6', reason='version does not match')
+pytestmark = pytest.mark.skipif(
+    CATALYST_CENTER_VERSION != "2.3.7.6", reason="version does not match"
+)
 
 
 def is_valid_applications(json_schema_validate, obj):
-    json_schema_validate('jsd_1b85e4ce533d5ff49ddd3b2f9657cfa5_v2_3_7_6_1').validate(obj)
+    json_schema_validate("jsd_1b85e4ce533d5ff49ddd3b2f9657cfa5_v2_3_7_6_1").validate(
+        obj
+    )
     return True
 
 
 def applications(api):
     endpoint_result = api.applications.applications(
-        application_health='string',
-        application_name='string',
-        device_id='string',
+        application_health="string",
+        application_name="string",
+        device_id="string",
         end_time=0,
         limit=0,
-        mac_address='string',
+        mac_address="string",
         offset=0,
-        site_id='string',
-        start_time=0
+        site_id="string",
+        start_time=0,
     )
     return endpoint_result
 
@@ -52,10 +56,7 @@ def applications(api):
 @pytest.mark.applications
 def test_applications(api, validator):
     try:
-        assert is_valid_applications(
-            validator,
-            applications(api)
-        )
+        assert is_valid_applications(validator, applications(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
@@ -72,7 +73,7 @@ def applications_default_val(api):
         mac_address=None,
         offset=None,
         site_id=None,
-        start_time=None
+        start_time=None,
     )
     return endpoint_result
 
@@ -80,10 +81,7 @@ def applications_default_val(api):
 @pytest.mark.applications
 def test_applications_default_val(api, validator):
     try:
-        assert is_valid_applications(
-            validator,
-            applications_default_val(api)
-        )
+        assert is_valid_applications(validator, applications_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e

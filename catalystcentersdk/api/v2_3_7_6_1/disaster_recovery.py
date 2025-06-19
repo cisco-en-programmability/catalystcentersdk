@@ -23,9 +23,7 @@ SOFTWARE.
 """
 
 
-
 from builtins import *
-
 
 
 from ...restsession import RestSession
@@ -66,9 +64,7 @@ class DisasterRecovery(object):
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def disaster_recovery_operational_status(self,
-                                                headers=None,
-                                                **request_parameters):
+    def disaster_recovery_operational_status(self, headers=None, **request_parameters):
         """Returns the status of Disaster Recovery operation performed on the system. .
 
         Args:
@@ -90,17 +86,14 @@ class DisasterRecovery(object):
         """
         check_type(headers, dict)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -108,21 +101,21 @@ class DisasterRecovery(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/disasterrecovery/system/operationstat'
-                 + 'us')
+        e_url = "/dna/intent/api/v1/disasterrecovery/system/operationstat" + "us"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b20622545922503da0c01b57c144f75b_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_b20622545922503da0c01b57c144f75b_v2_3_7_6_1", json_data
+        )
 
-    def disaster_recovery_status(self,
-                                    headers=None,
-                                    **request_parameters):
-        """Detailed and Summarized status of DR components (Active, Standby and Witness system's health).  .
+    def disaster_recovery_status(self, headers=None, **request_parameters):
+        """Detailed and Summarized status of DR components (Active, Standby and Witness system's health).
 
         Args:
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -143,17 +136,14 @@ class DisasterRecovery(object):
         """
         check_type(headers, dict)
         if headers is not None:
-            if 'X-Auth-Token' in headers:
-                check_type(headers.get('X-Auth-Token'),
-                           str, may_be_none=False)
+            if "X-Auth-Token" in headers:
+                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
 
-        _params = {
-        }
+        _params = {}
         _params.update(request_parameters)
         _params = dict_from_items_with_values(_params)
 
-        path_params = {
-        }
+        path_params = {}
 
         with_custom_headers = False
         _headers = self._session.headers or {}
@@ -161,12 +151,15 @@ class DisasterRecovery(object):
             _headers.update(dict_of_str(headers))
             with_custom_headers = True
 
-        e_url = ('/dna/intent/api/v1/disasterrecovery/system/status')
+        e_url = "/dna/intent/api/v1/disasterrecovery/system/status"
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
-            json_data = self._session.get(endpoint_full_url, params=_params,
-                                          headers=_headers)
+            json_data = self._session.get(
+                endpoint_full_url, params=_params, headers=_headers
+            )
         else:
             json_data = self._session.get(endpoint_full_url, params=_params)
 
-        return self._object_factory('bpm_b27ccd369519d8820de238483b865_v2_3_7_6_1', json_data)
+        return self._object_factory(
+            "bpm_b27ccd369519d8820de238483b865_v2_3_7_6_1", json_data
+        )
