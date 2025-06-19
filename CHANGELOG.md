@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [3.1.3.0.0] - 2025-06-17
+## [3.1.3.0.0] - 2025-06-19
 ### Added
 - Add support of DNA Center versions ('3.1.3.0')
 - Backup service.
