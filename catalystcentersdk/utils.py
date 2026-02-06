@@ -30,7 +30,7 @@ import mimetypes
 import os
 import sys
 import urllib.parse
-from builtins import *
+from builtins import *  # noqa: F401,F403
 from collections import OrderedDict, namedtuple
 from datetime import datetime, timedelta, tzinfo
 import warnings

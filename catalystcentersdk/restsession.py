@@ -31,7 +31,7 @@ import socket
 import time
 import urllib.parse
 import warnings
-from builtins import *
+from builtins import *  # noqa: F401,F403
 
 import requests
 
