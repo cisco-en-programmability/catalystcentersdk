@@ -502,7 +502,7 @@ class ConfigurationArchive(object):
             "bpm_fe0e28b3465084b5ee60a43602be1c_v2_3_7_9", json_data
         )
 
-    def download_unmaskedraw_device_configuration_as_z_ip(
+    def download_unmaskedraw_device_configuration_as_zip(
         self,
         id,
         password=None,
@@ -592,3 +592,6 @@ class ConfigurationArchive(object):
         return self._object_factory(
             "bpm_d8fcd6dbb7ff53b58f7398c49b27ded2_v2_3_7_9", json_data
         )
+
+    # Alias for backward compatibility
+    download_unmaskedraw_device_configuration_as_z_ip = download_unmaskedraw_device_configuration_as_zip

@@ -857,7 +857,7 @@ class Applications(object):
             "bpm_ef366ca484355d15937dd851a67c88e3_v3_1_3_0", json_data
         )
 
-    def the_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range(
+    def get_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range(
         self,
         agent_id=None,
         end_time=None,
@@ -1083,3 +1083,6 @@ class Applications(object):
         return self._object_factory(
             "bpm_b85e4ce533d5ff49ddd3b2f9657cfa5_v3_1_3_0", json_data
         )
+
+    # Alias for backward compatibility
+    the_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range = get_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range
