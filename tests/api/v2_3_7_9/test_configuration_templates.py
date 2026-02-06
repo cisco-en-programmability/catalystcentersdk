@@ -1435,45 +1435,6 @@ def test_version_template_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_template_versions(json_schema_validate, obj):
-    return True if obj else False
-
-
-def get_template_versions(api):
-    endpoint_result = api.configuration_templates.get_template_versions(
-        template_id="string"
-    )
-    return endpoint_result
-
-
-@pytest.mark.configuration_templates
-def test_get_template_versions(api, validator):
-    try:
-        assert is_valid_get_template_versions(validator, get_template_versions(api))
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest)):
-            print(original_e)
-            raise original_e
-
-
-def get_template_versions_default_val(api):
-    endpoint_result = api.configuration_templates.get_template_versions(
-        template_id="string"
-    )
-    return endpoint_result
-
-
-@pytest.mark.configuration_templates
-def test_get_template_versions_default_val(api, validator):
-    try:
-        assert is_valid_get_template_versions(
-            validator, get_template_versions_default_val(api)
-        )
-    except Exception as original_e:
-        with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
-            raise original_e
-
-
 def is_valid_deletes_the_template(json_schema_validate, obj):
     json_schema_validate("jsd_c311bd3d952757b2a7b98a5bc5aa6137_v2_3_7_9").validate(obj)
     return True

@@ -1704,7 +1704,7 @@ class NetworkSettings(object):
         if payload == {}:
             _payload = payload
             json_null = False
-        if payload != None:
+        if payload is not None:
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation:
@@ -1925,7 +1925,7 @@ class NetworkSettings(object):
             _payload = {
                 "banner": banner,
             }
-        if banner == None and payload != None:
+        if banner is None and payload is not None:
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation:
@@ -2241,7 +2241,7 @@ class NetworkSettings(object):
             _payload = {
                 "dhcp": dhcp,
             }
-        if dhcp == None and payload != None:
+        if dhcp is None and payload is not None:
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation:
@@ -2462,7 +2462,7 @@ class NetworkSettings(object):
             _payload = {
                 "dns": dns,
             }
-        if payload != None:
+        if payload is not None:
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation:
@@ -2706,7 +2706,7 @@ class NetworkSettings(object):
             _payload = {
                 "ntp": ntp,
             }
-        if payload != None:
+        if payload is not None:
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation:
@@ -2938,11 +2938,11 @@ class NetworkSettings(object):
             "applicationVisibility": applicationVisibility,
         }
         if (
-            wiredDataCollection == None
-            and wirelessTelemetry == None
-            and snmpTraps == None
-            and syslogs == None
-            and applicationVisibility == None
+            wiredDataCollection is None
+            and wirelessTelemetry is None
+            and snmpTraps is None
+            and syslogs is None
+            and applicationVisibility is None
         ):
             _payload = {
                 "wiredDataCollection": None,
@@ -3047,7 +3047,7 @@ class NetworkSettings(object):
             _payload = {
                 "timeZone": timeZone,
             }
-        if payload != None:
+        if payload is not None:
             _payload.update(payload or {})
             _payload = dict_from_items_with_values(_payload)
         if active_validation:

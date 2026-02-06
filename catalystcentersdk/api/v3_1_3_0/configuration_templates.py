@@ -1948,63 +1948,6 @@ class ConfigurationTemplates(object):
             "bpm_e1a76c121857a085149e62e56caadd_v3_1_3_0", json_data
         )
 
-    def get_template_versions(self, template_id, headers=None, **request_parameters):
-        """Get all the versions of template by its id.
-
-        Args:
-            template_id(str): templateId path parameter. templateId(UUID) to get list of versioned templates.
-            headers(dict): Dictionary of HTTP Headers to send with the Request
-                .
-            **request_parameters: Additional request parameters (provides
-                support for parameters that may be added in the future).
-
-        Returns:
-            list: JSON response. A list of MyDict objects.
-            Access the object's properties by using the dot notation
-            or the bracket notation.
-
-        Raises:
-            TypeError: If the parameter types are incorrect.
-            MalformedRequest: If the request body created is invalid.
-            ApiError: If the Catalyst Center cloud returns an error.
-        Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!gets-all-the-versions-of-a-given-template
-        """
-        check_type(headers, dict)
-        check_type(template_id, str, may_be_none=False)
-        if headers is not None:
-            if "X-Auth-Token" in headers:
-                check_type(headers.get("X-Auth-Token"), str, may_be_none=False)
-
-        _params = {}
-        _params.update(request_parameters)
-        _params = dict_from_items_with_values(_params)
-
-        path_params = {
-            "templateId": template_id,
-        }
-
-        with_custom_headers = False
-        _headers = self._session.headers or {}
-        if headers:
-            _headers.update(dict_of_str(headers))
-            with_custom_headers = True
-
-        e_url = (
-            "/dna/intent/api/v1/template-" + "programmer/template/version/{templateId}"
-        )
-        endpoint_full_url = apply_path_params(e_url, path_params)
-        if with_custom_headers:
-            json_data = self._session.get(
-                endpoint_full_url, params=_params, headers=_headers
-            )
-        else:
-            json_data = self._session.get(endpoint_full_url, params=_params)
-
-        return self._object_factory(
-            "bpm_d49f82923bc5dfda63adfd224e1a22f_v3_1_3_0", json_data
-        )
-
     def deletes_the_template(self, template_id, headers=None, **request_parameters):
         """Deletes the template by its id.
 

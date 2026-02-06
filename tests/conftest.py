@@ -22,8 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import pytest
-
 pytest_plugins = [
     "tests.test_importsdk",
     "tests.test_catalystcentersdk",

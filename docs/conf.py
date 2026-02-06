@@ -7,7 +7,7 @@ import sys
 sys.path.insert(0, os.path.abspath(".."))
 
 
-from importlib.metadata import version
+from importlib.metadata import version  # noqa: E402
 
 release = version("catalystcentersdk")
 version = ".".join(release.split(".")[:2])

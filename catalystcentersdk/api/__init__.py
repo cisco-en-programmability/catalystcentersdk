@@ -820,7 +820,7 @@ class CatalystCenterAPI(object):
         """The API user string."""
         return self._session.user_string
 
-    @property
+    @user_string.setter
     def user_string(self, value):
         self._session.user_string = value
 
