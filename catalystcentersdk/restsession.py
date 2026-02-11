@@ -31,7 +31,7 @@ import socket
 import time
 import urllib.parse
 import warnings
-from builtins import *
+from builtins import *  # noqa: F401,F403
 
 import requests
 
@@ -236,7 +236,7 @@ class RestSession(object):
         """The API user string."""
         return self._user_string
 
-    @property
+    @user_string.setter
     def user_string(self, value):
         check_type(value, str, may_be_none=False)
         self._user_string = value

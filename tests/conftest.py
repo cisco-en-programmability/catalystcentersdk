@@ -22,8 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import pytest
-
 pytest_plugins = [
     "tests.test_importsdk",
     "tests.test_catalystcentersdk",
@@ -31,6 +29,7 @@ pytest_plugins = [
     "tests.api.v2_3_7_6_1",
     "tests.api.v2_3_7_9",
     "tests.api.v3_1_3_0",
+    "tests.api.v3_1_6_0",
 ]
 
 

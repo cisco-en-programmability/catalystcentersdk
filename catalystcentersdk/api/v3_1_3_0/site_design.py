@@ -23,7 +23,7 @@ SOFTWARE.
 """
 
 
-from builtins import *
+from builtins import *  # noqa: F401,F403
 
 
 from ...restsession import RestSession

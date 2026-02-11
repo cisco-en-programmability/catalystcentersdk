@@ -23,7 +23,7 @@ SOFTWARE.
 """
 
 
-from builtins import *
+from builtins import *  # noqa: F401,F403
 
 
 from ...restsession import RestSession
@@ -594,4 +594,6 @@ class ConfigurationArchive(object):
         )
 
     # Alias for backward compatibility
-    download_unmaskedraw_device_configuration_as_z_ip = download_unmaskedraw_device_configuration_as_zip
+    download_unmaskedraw_device_configuration_as_z_ip = (
+        download_unmaskedraw_device_configuration_as_zip
+    )

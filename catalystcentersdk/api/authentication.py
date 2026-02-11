@@ -24,7 +24,7 @@ SOFTWARE.
 
 
 import urllib.parse
-from builtins import *
+from builtins import *  # noqa: F401,F403
 
 import requests
 
@@ -33,7 +33,6 @@ from ..response_codes import EXPECTED_RESPONSE_CODE
 from ..utils import (
     check_response_code,
     check_type,
-    dict_from_items_with_values,
     extract_and_parse_json,
     validate_base_url,
 )

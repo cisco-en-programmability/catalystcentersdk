@@ -13,12 +13,12 @@ catalystcentersdk
     from catalystcentersdk import api
 
     # Create a CatalystCenterAPI connection object;
-    # it uses CatalystCenter sandbox URL, username and password, with CatalystCenter API version 2.3.5.3.
+    # it uses CatalystCenter sandbox URL, username and password, with CatalystCenter API version 3.1.6.0.
     # and requests to verify the server's TLS certificate with verify=True.
     catalyst = api.CatalystCenterAPI(username="devnetuser",
                             password="Cisco123!",
                             base_url="https://sandboxdnac.cisco.com:443",
-                            version='3.1.3.0',
+                            version='3.1.6.0',
                             verify=True)
 
     # Find all devices that have 'Switches and Hubs' in their family
@@ -29,7 +29,7 @@ catalystcentersdk
         print('{:20s}{}'.format(device.hostname, device.upTime))
 
     # Find all tags
-    all_tags = catalyst.tag.get_tag(sort_by='name', order='des')
+    all_tags = catalyst.tag.get_tag(sort_by='name', order='desc')
     demo_tags = [tag for tag in all_tags.response if 'Demo' in tag.name ]
 
     #  Delete all of the demo tags
@@ -155,6 +155,8 @@ The following table shows the supported versions.
      - 2.3.7.9.x
    * - 3.1.3.0
      - 3.1.3.0.x
+   * - 3.1.6.0
+     - 3.1.6.0.x
 
 
 

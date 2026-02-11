@@ -10365,37 +10365,6 @@ class MockServerRequestHandler_v3_1_3_0(BaseHTTPRequestHandler):
             self.path,
         )
 
-    def configuration_templates_get_template_versions_response(self):
-        # Add response status code.
-        self.send_response(requests.codes.ok)
-        # Add response headers.
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.end_headers()
-        # Add response content.
-        response_content = json.dumps(
-            [
-                {
-                    "composite": True,
-                    "name": "string",
-                    "projectId": "string",
-                    "projectName": "string",
-                    "templateId": "string",
-                    "versionsInfo": [
-                        {
-                            "author": "string",
-                            "description": "string",
-                            "id": "string",
-                            "version": "string",
-                            "versionComment": "string",
-                            "versionTime": 0,
-                        }
-                    ],
-                }
-            ]
-        )
-        self.wfile.write(response_content.encode("utf-8"))
-        return
-
     def matches_CONFIGURATION_TEMPLATES_c311bd3d952757b2a7b98a5bc5aa6137(self):
         return re.search(
             self.CONFIGURATION_TEMPLATES_c311bd3d952757b2a7b98a5bc5aa6137_PATTERN,
