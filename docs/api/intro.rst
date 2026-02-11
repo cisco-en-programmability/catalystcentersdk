@@ -51,7 +51,7 @@ With catalystcentersdk, the above Python code can be consolidated to the followi
 
     from catalystcentersdk import api
 
-    api_ = api.CatalystCenterAPI(base_url='https://sandboxdnac.cisco.com:443', version='2.3.7.6')
+    api_ = api.CatalystCenterAPI(base_url='https://sandboxdnac.cisco.com:443', version='3.1.6.0')
     # Or even just api_ = api.CatalystCenterAPI() as base_url and version have those values.
     try:
         devices = api_.devices.get_device_list(family='Switches and Hubs')

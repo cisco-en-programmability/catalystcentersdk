@@ -915,9 +915,15 @@ class IndustrialConfiguration(object):
 
     # Aliases for backward compatibility
     configure_are_p_ring_on_fabric_deployment = configure_rep_ring_on_fabric_deployment
-    configure_are_p_ring_on_non_fabric_deployment = configure_rep_ring_on_non_fabric_deployment
-    delete_are_p_ring_configured_in_the_fabric_deployment = delete_rep_ring_configured_in_the_fabric_deployment
-    delete_are_p_ring_configured_in_the_non_fabric_deployment = delete_rep_ring_configured_in_the_non_fabric_deployment
+    configure_are_p_ring_on_non_fabric_deployment = (
+        configure_rep_ring_on_non_fabric_deployment
+    )
+    delete_are_p_ring_configured_in_the_fabric_deployment = (
+        delete_rep_ring_configured_in_the_fabric_deployment
+    )
+    delete_are_p_ring_configured_in_the_non_fabric_deployment = (
+        delete_rep_ring_configured_in_the_non_fabric_deployment
+    )
     retrieves_the_list_of_are_p_rings = retrieves_the_list_of_rep_rings
     retrieves_the_count_of_are_p_rings = retrieves_the_count_of_rep_rings
     get_the_are_p_ring_based_on_the_ring_id = get_the_rep_ring_based_on_the_ring_id

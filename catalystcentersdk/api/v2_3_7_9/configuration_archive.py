@@ -594,4 +594,6 @@ class ConfigurationArchive(object):
         )
 
     # Alias for backward compatibility
-    download_unmaskedraw_device_configuration_as_z_ip = download_unmaskedraw_device_configuration_as_zip
+    download_unmaskedraw_device_configuration_as_z_ip = (
+        download_unmaskedraw_device_configuration_as_zip
+    )

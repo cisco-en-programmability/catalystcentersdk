@@ -26,7 +26,6 @@ SOFTWARE.
 import json
 import mimetypes
 import os
-import sys
 import urllib.parse
 from builtins import *  # noqa: F401,F403
 from collections import OrderedDict, namedtuple
@@ -48,16 +47,10 @@ EncodableFile = namedtuple(
 def to_unicode(string):
     """Convert a string (bytes, str or unicode) to unicode."""
     assert isinstance(string, str)
-    if sys.version_info[0] >= 3:
-        if isinstance(string, bytes):
-            return string.decode("utf-8")
-        else:
-            return string
+    if isinstance(string, str):
+        return string.decode("utf-8")
     else:
-        if isinstance(string, str):
-            return string.decode("utf-8")
-        else:
-            return string
+        return string
 
 
 def to_bytes(string):

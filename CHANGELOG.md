@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.0] - 2026-02-11
+### Added
+- Add support of Cisco Catalyst Center version ('3.1.6.0')
+- Adds modules for v3_1_6_0
+- New service for Cisco Catalyst Center 3.1.6.0's API:
+  - `system_software_upgrade`
+
 ## [3.1.3.0.1] - 2026-02-06
 ### Added
 - GitHub issue templates for bug reports and feature requests
@@ -116,4 +123,5 @@ to "application".
 [2.3.7.9.5]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.4...v2.3.7.9.5
 [3.1.3.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.5...v3.1.3.0.0
 [3.1.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.0...v3.1.3.0.1
+[3.1.6.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...v3.1.6.0.0
 [Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...develop

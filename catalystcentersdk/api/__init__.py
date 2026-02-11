@@ -194,8 +194,8 @@ from .v2_3_7_9.topology import Topology as Topology_v2_3_7_9
 from .v2_3_7_9.user_and_roles import UserandRoles as UserandRoles_v2_3_7_9
 from .v2_3_7_9.users import Users as Users_v2_3_7_9
 from .v2_3_7_9.wireless import Wireless as Wireless_v2_3_7_9
-from .custom_caller import CustomCaller
 
+#  v3.1.3.0 APIs
 from .v3_1_3_0.ai_endpoint_analytics import (
     AIEndpointAnalytics as AIEndpointAnalytics_v3_1_3_0,
 )
@@ -278,6 +278,82 @@ from .v3_1_3_0.user_and_roles import UserandRoles as UserandRoles_v3_1_3_0
 from .v3_1_3_0.users import Users as Users_v3_1_3_0
 from .v3_1_3_0.wired import Wired as Wired_v3_1_3_0
 from .v3_1_3_0.wireless import Wireless as Wireless_v3_1_3_0
+
+# v3.1.6.0 APIs
+from .v3_1_6_0.ai_endpoint_analytics import (
+    AiEndpointAnalytics as AiEndpointAnalytics_v3_1_6_0,
+)
+from .v3_1_6_0.application_policy import ApplicationPolicy as ApplicationPolicy_v3_1_6_0
+from .v3_1_6_0.applications import Applications as Applications_v3_1_6_0
+from .v3_1_6_0.authentication_management import (
+    AuthenticationManagement as AuthenticationManagement_v3_1_6_0,
+)
+from .v3_1_6_0.backup import Backup as Backup_v3_1_6_0
+from .v3_1_6_0.cisco_imc import CiscoIMC as CiscoIMC_v3_1_6_0
+from .v3_1_6_0.cisco_trusted_certificates import (
+    CiscoTrustedCertificates as CiscoTrustedCertificates_v3_1_6_0,
+)
+from .v3_1_6_0.clients import Clients as Clients_v3_1_6_0
+from .v3_1_6_0.command_runner import CommandRunner as CommandRunner_v3_1_6_0
+from .v3_1_6_0.compliance import Compliance as Compliance_v3_1_6_0
+from .v3_1_6_0.configuration_archive import (
+    ConfigurationArchive as ConfigurationArchive_v3_1_6_0,
+)
+from .v3_1_6_0.configuration_templates import (
+    ConfigurationTemplates as ConfigurationTemplates_v3_1_6_0,
+)
+from .v3_1_6_0.device_onboarding_pnp import (
+    DeviceOnboardingPnp as DeviceOnboardingPnp_v3_1_6_0,
+)
+from .v3_1_6_0.device_replacement import DeviceReplacement as DeviceReplacement_v3_1_6_0
+from .v3_1_6_0.devices import Devices as Devices_v3_1_6_0
+from .v3_1_6_0.disaster_recovery import DisasterRecovery as DisasterRecovery_v3_1_6_0
+from .v3_1_6_0.discovery import Discovery as Discovery_v3_1_6_0
+from .v3_1_6_0.eox import Eox as Eox_v3_1_6_0
+from .v3_1_6_0.event_management import EventManagement as EventManagement_v3_1_6_0
+from .v3_1_6_0.fabric_wireless import FabricWireless as FabricWireless_v3_1_6_0
+from .v3_1_6_0.file import File as File_v3_1_6_0
+from .v3_1_6_0.health_and_performance import (
+    HealthAndPerformance as HealthAndPerformance_v3_1_6_0,
+)
+from .v3_1_6_0.itsm import Itsm as Itsm_v3_1_6_0
+from .v3_1_6_0.itsm_integration import ItsmIntegration as ItsmIntegration_v3_1_6_0
+from .v3_1_6_0.industrial_configuration import (
+    IndustrialConfiguration as IndustrialConfiguration_v3_1_6_0,
+)
+from .v3_1_6_0.issues import Issues as Issues_v3_1_6_0
+from .v3_1_6_0.know_your_network import KnowYourNetwork as KnowYourNetwork_v3_1_6_0
+from .v3_1_6_0.lan_automation import LanAutomation as LanAutomation_v3_1_6_0
+from .v3_1_6_0.licenses import Licenses as Licenses_v3_1_6_0
+from .v3_1_6_0.network_settings import NetworkSettings as NetworkSettings_v3_1_6_0
+from .v3_1_6_0.path_trace import PathTrace as PathTrace_v3_1_6_0
+from .v3_1_6_0.platform import Platform as Platform_v3_1_6_0
+from .v3_1_6_0.reports import Reports as Reports_v3_1_6_0
+from .v3_1_6_0.restore import Restore as Restore_v3_1_6_0
+from .v3_1_6_0.sda import Sda as Sda_v3_1_6_0
+from .v3_1_6_0.security_advisories import (
+    SecurityAdvisories as SecurityAdvisories_v3_1_6_0,
+)
+from .v3_1_6_0.sensors import Sensors as Sensors_v3_1_6_0
+from .v3_1_6_0.site_design import SiteDesign as SiteDesign_v3_1_6_0
+from .v3_1_6_0.sites import Sites as Sites_v3_1_6_0
+from .v3_1_6_0.software_image_management_swim import (
+    SoftwareImageManagementSwim as SoftwareImageManagementSwim_v3_1_6_0,
+)
+from .v3_1_6_0.system_settings import SystemSettings as SystemSettings_v3_1_6_0
+from .v3_1_6_0.system_software_upgrade import (
+    SystemSoftwareUpgrade as SystemSoftwareUpgrade_v3_1_6_0,
+)
+from .v3_1_6_0.tag import Tag as Tag_v3_1_6_0
+from .v3_1_6_0.task import Task as Task_v3_1_6_0
+from .v3_1_6_0.topology import Topology as Topology_v3_1_6_0
+from .v3_1_6_0.user_and_roles import UserandRoles as UserandRoles_v3_1_6_0
+from .v3_1_6_0.users import Users as Users_v3_1_6_0
+from .v3_1_6_0.wired import Wired as Wired_v3_1_6_0
+from .v3_1_6_0.wireless import Wireless as Wireless_v3_1_6_0
+
+# Custom Calller
+from .custom_caller import CustomCaller
 
 
 class CatalystCenterAPI(object):
@@ -378,7 +454,7 @@ class CatalystCenterAPI(object):
             VersionError: If the version is not provided via the version
                 argument or an environment variable, or it is not a
                 Catalyst Center API supported version
-                ['2.3.7.6', '2.3.7.9' and '3.1.3.0'].
+                ['2.3.7.6', '2.3.7.9', '3.1.3.0' and '3.1.6.0'].
 
         """
         username = username or catalystcenter_environment.get_env_username()
@@ -432,10 +508,12 @@ class CatalystCenterAPI(object):
         check_type(version, str, may_be_none=False)
         check_type(user_agent, str, may_be_none=False)
 
-        if version not in ["2.3.7.6", "2.3.7.9", "3.1.3.0"]:
+        if version not in ["2.3.7.6", "2.3.7.9", "3.1.3.0", "3.1.6.0"]:
             raise VersionError(
                 "Unknown API version, "
-                + "known versions are {}".format("2.3.7.6, 2.3.7.9 and 3.1.3.0")
+                + "known versions are {}".format(
+                    "2.3.7.6, 2.3.7.9, 3.1.3.0 and 3.1.6.0"
+                )
             )
 
         if isinstance(debug, str):
@@ -792,6 +870,115 @@ class CatalystCenterAPI(object):
             self.users = Users_v3_1_3_0(self._session, object_factory, _validator)
             self.wired = Wired_v3_1_3_0(self._session, object_factory, _validator)
             self.wireless = Wireless_v3_1_3_0(self._session, object_factory, _validator)
+
+        if version == "3.1.6.0":
+            self.ai_endpoint_analytics = AiEndpointAnalytics_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.application_policy = ApplicationPolicy_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.applications = Applications_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.authentication_management = AuthenticationManagement_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.backup = Backup_v3_1_6_0(self._session, object_factory, _validator)
+            self.cisco_i_m_c = CiscoIMC_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.cisco_trusted_certificates = CiscoTrustedCertificates_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.clients = Clients_v3_1_6_0(self._session, object_factory, _validator)
+            self.command_runner = CommandRunner_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.compliance = Compliance_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.configuration_archive = ConfigurationArchive_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.configuration_templates = ConfigurationTemplates_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.device_onboarding_pnp = DeviceOnboardingPnp_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.device_replacement = DeviceReplacement_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.devices = Devices_v3_1_6_0(self._session, object_factory, _validator)
+            self.disaster_recovery = DisasterRecovery_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.discovery = Discovery_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.eox = Eox_v3_1_6_0(self._session, object_factory, _validator)
+            self.event_management = EventManagement_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.fabric_wireless = FabricWireless_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.file = File_v3_1_6_0(self._session, object_factory, _validator)
+            self.health_and_performance = HealthAndPerformance_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.itsm = Itsm_v3_1_6_0(self._session, object_factory, _validator)
+            self.itsm_integration = ItsmIntegration_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.industrial_configuration = IndustrialConfiguration_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.issues = Issues_v3_1_6_0(self._session, object_factory, _validator)
+            self.know_your_network = KnowYourNetwork_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.lan_automation = LanAutomation_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.licenses = Licenses_v3_1_6_0(self._session, object_factory, _validator)
+            self.network_settings = NetworkSettings_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.path_trace = PathTrace_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.platform = Platform_v3_1_6_0(self._session, object_factory, _validator)
+            self.reports = Reports_v3_1_6_0(self._session, object_factory, _validator)
+            self.restore = Restore_v3_1_6_0(self._session, object_factory, _validator)
+            self.sda = Sda_v3_1_6_0(self._session, object_factory, _validator)
+            self.security_advisories = SecurityAdvisories_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.sensors = Sensors_v3_1_6_0(self._session, object_factory, _validator)
+            self.site_design = SiteDesign_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.sites = Sites_v3_1_6_0(self._session, object_factory, _validator)
+            self.software_image_management_swim = SoftwareImageManagementSwim_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.system_settings = SystemSettings_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.system_software_upgrade = SystemSoftwareUpgrade_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.tag = Tag_v3_1_6_0(self._session, object_factory, _validator)
+            self.task = Task_v3_1_6_0(self._session, object_factory, _validator)
+            self.topology = Topology_v3_1_6_0(self._session, object_factory, _validator)
+            self.user_and_roles = UserandRoles_v3_1_6_0(
+                self._session, object_factory, _validator
+            )
+            self.users = Users_v3_1_6_0(self._session, object_factory, _validator)
+            self.wired = Wired_v3_1_6_0(self._session, object_factory, _validator)
+            self.wireless = Wireless_v3_1_6_0(self._session, object_factory, _validator)
 
         self.custom_caller = CustomCaller(self._session, object_factory)
 
