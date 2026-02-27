@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddsBorderDevice data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,153 +34,121 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorB6F2D8E46Cdd5F05Bb06F52Cd1B26Fb2(object):
     """AddsBorderDevice request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorB6F2D8E46Cdd5F05Bb06F52Cd1B26Fb2, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "items": {
-                "properties": {
-                "borderPriority": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "borderPriority": {
                 "type": "string"
-                },
-                "borderSessionType": {
+            },
+            "borderSessionType": {
                 "enum": [
-                "EXTERNAL",
-                "INTERNAL",
-                "ANYWHERE"
+                    "EXTERNAL",
+                    "INTERNAL",
+                    "ANYWHERE"
                 ],
                 "type": "string"
-                },
-                "borderWithExternalConnectivity": {
+            },
+            "borderWithExternalConnectivity": {
                 "type": "boolean"
-                },
-                "connectedToInternet": {
+            },
+            "connectedToInternet": {
                 "type": "boolean"
-                },
-                "deviceManagementIpAddress": {
+            },
+            "deviceManagementIpAddress": {
                 "type": "string"
-                },
-                "deviceRole": {
+            },
+            "deviceRole": {
                 "items": {
-                "type": "string"
+                    "type": "string"
                 },
                 "type": "array"
-                },
-                "externalConnectivityIpPoolName": {
+            },
+            "externalConnectivityIpPoolName": {
                 "type": "string"
-                },
-                "externalConnectivitySettings": {
+            },
+            "externalConnectivitySettings": {
                 "items": {
-                "properties": {
-                "externalAutonomouSystemNumber": {
-                "type": "string"
-                },
-                "interfaceDescription": {
-                "type": "string"
-                },
-                "interfaceName": {
-                "type": "string"
-                },
-                "l2Handoff": {
-                "items": {
-                "properties": {
-                "virtualNetworkName": {
-                "type": "string"
-                },
-                "vlanName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "virtualNetworkName",
-                "vlanName"
-                ],
-                "type": "object"
+                    "properties": {
+                        "externalAutonomouSystemNumber": {
+                            "type": "string"
+                        },
+                        "interfaceDescription": {
+                            "type": "string"
+                        },
+                        "interfaceName": {
+                            "type": "string"
+                        },
+                        "l2Handoff": {
+                            "items": {
+                                "properties": {
+                                    "virtualNetworkName": {
+                                        "type": "string"
+                                    },
+                                    "vlanName": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "l3Handoff": {
+                            "items": {
+                                "properties": {
+                                    "virtualNetwork": {
+                                        "properties": {
+                                            "virtualNetworkName": {
+                                                "type": "string"
+                                            },
+                                            "vlanId": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
                 },
                 "type": "array"
-                },
-                "l3Handoff": {
-                "items": {
-                "properties": {
-                "virtualNetwork": {
-                "properties": {
-                "virtualNetworkName": {
-                "type": "string"
-                },
-                "vlanId": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "virtualNetworkName"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "virtualNetwork"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "interfaceName",
-                "interfaceDescription",
-                "externalAutonomouSystemNumber"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "externalDomainRoutingProtocolName": {
+            },
+            "externalDomainRoutingProtocolName": {
                 "enum": [
-                "BGP"
+                    "BGP"
                 ],
                 "type": "string"
-                },
-                "internalAutonomouSystemNumber": {
+            },
+            "internalAutonomouSystemNumber": {
                 "type": "string"
-                },
-                "routeDistributionProtocol": {
+            },
+            "routeDistributionProtocol": {
                 "type": "string"
-                },
-                "sdaTransitNetworkName": {
+            },
+            "sdaTransitNetworkName": {
                 "type": "string"
-                },
-                "siteNameHierarchy": {
+            },
+            "siteNameHierarchy": {
                 "type": "string"
-                }
-                },
-                "required": [
-                "deviceManagementIpAddress",
-                "siteNameHierarchy",
-                "deviceRole",
-                "externalDomainRoutingProtocolName",
-                "externalConnectivityIpPoolName",
-                "internalAutonomouSystemNumber",
-                "borderSessionType",
-                "connectedToInternet",
-                "borderWithExternalConnectivity",
-                "externalConnectivitySettings"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

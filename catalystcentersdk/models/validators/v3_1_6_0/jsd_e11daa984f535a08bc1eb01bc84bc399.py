@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ClaimADeviceToASite data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,112 +34,95 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorE11Daa984F535A08Bc1EB01Bc84Bc399(object):
     """ClaimADeviceToASite request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorE11Daa984F535A08Bc1EB01Bc84Bc399, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "configInfo": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "configInfo": {
+            "properties": {
                 "configId": {
-                "type": "string"
+                    "type": "string"
                 },
                 "configParameters": {
-                "items": {
-                "properties": {
-                "key": {
-                "type": "string"
-                },
-                "value": {
-                "type": "string"
+                    "items": {
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
                 }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                },
-                "deviceId": {
-                "type": "string"
-                },
-                "gateway": {
-                "type": "string"
-                },
-                "hostname": {
-                "type": "string"
-                },
-                "imageInfo": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "deviceId": {
+            "type": "string"
+        },
+        "gateway": {
+            "type": "string"
+        },
+        "hostname": {
+            "type": "string"
+        },
+        "imageInfo": {
+            "properties": {
                 "imageId": {
-                "type": "string"
+                    "type": "string"
                 },
                 "skip": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "type": "object"
-                },
-                "ipInterfaceName": {
-                "type": "string"
-                },
-                "rfProfile": {
-                "type": "string"
-                },
-                "sensorProfile": {
-                "type": "string"
-                },
-                "siteId": {
-                "type": "string"
-                },
-                "staticIP": {
-                "type": "string"
-                },
-                "subnetMask": {
-                "type": "string"
-                },
-                "type": {
-                "enum": [
+            },
+            "type": "object"
+        },
+        "ipInterfaceName": {
+            "type": "string"
+        },
+        "rfProfile": {
+            "type": "string"
+        },
+        "sensorProfile": {
+            "type": "string"
+        },
+        "siteId": {
+            "type": "string"
+        },
+        "staticIP": {
+            "type": "string"
+        },
+        "subnetMask": {
+            "type": "string"
+        },
+        "type": {
+            "enum": [
                 "Default",
                 "StackSwitch",
                 "AccessPoint",
                 "Sensor",
                 "CatalystWLC",
                 "MobilityExpress"
-                ],
-                "type": "string"
-                },
-                "vlanId": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "deviceId",
-                "siteId",
-                "type",
-                "rfProfile",
-                "staticIP",
-                "subnetMask",
-                "gateway",
-                "vlanId",
-                "ipInterfaceName",
-                "sensorProfile"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "vlanId": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

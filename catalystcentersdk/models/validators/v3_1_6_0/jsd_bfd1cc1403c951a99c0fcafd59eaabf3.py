@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center MobilityProvision data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,92 +34,75 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorBfd1Cc1403C951A99C0FCafd59Eaabf3(object):
     """MobilityProvision request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorBfd1Cc1403C951A99C0FCafd59Eaabf3, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "dataLinkEncryption": {
+            "type": "boolean"
+        },
+        "dtlsHighCipher": {
+            "type": "boolean"
+        },
+        "macAddress": {
+            "type": "string"
+        },
+        "managementIp": {
+            "type": "string"
+        },
+        "mobilityGroupName": {
+            "type": "string"
+        },
+        "mobilityPeers": {
+            "items": {
                 "properties": {
-                "dataLinkEncryption": {
-                "type": "boolean"
+                    "deviceSeries": {
+                        "enum": [
+                            "1",
+                            "0"
+                        ],
+                        "type": "string"
+                    },
+                    "hashKey": {
+                        "type": "string"
+                    },
+                    "memberMacAddress": {
+                        "type": "string"
+                    },
+                    "mobilityGroupName": {
+                        "type": "string"
+                    },
+                    "peerDeviceName": {
+                        "type": "string"
+                    },
+                    "peerIp": {
+                        "type": "string"
+                    },
+                    "peerNetworkDeviceId": {
+                        "type": "string"
+                    },
+                    "privateIpAddress": {
+                        "type": "string"
+                    }
                 },
-                "dtlsHighCipher": {
-                "type": "boolean"
-                },
-                "macAddress": {
-                "type": "string"
-                },
-                "managementIp": {
-                "type": "string"
-                },
-                "mobilityGroupName": {
-                "type": "string"
-                },
-                "mobilityPeers": {
-                "items": {
-                "properties": {
-                "deviceSeries": {
-                "enum": [
-                "1",
-                "0"
-                ],
-                "type": "string"
-                },
-                "hashKey": {
-                "type": "string"
-                },
-                "memberMacAddress": {
-                "type": "string"
-                },
-                "mobilityGroupName": {
-                "type": "string"
-                },
-                "peerDeviceName": {
-                "type": "string"
-                },
-                "peerIp": {
-                "type": "string"
-                },
-                "peerNetworkDeviceId": {
-                "type": "string"
-                },
-                "privateIpAddress": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "privateIpAddress",
-                "peerNetworkDeviceId",
-                "mobilityGroupName",
-                "memberMacAddress"
-                ],
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "networkDeviceId": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "mobilityGroupName",
-                "macAddress",
-                "managementIp",
-                "networkDeviceId"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "networkDeviceId": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

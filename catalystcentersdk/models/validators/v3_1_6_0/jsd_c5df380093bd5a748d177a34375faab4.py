@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddsANewNetworkDevice data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,180 +34,175 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC5Df380093Bd5A748D177A34375Faab4(object):
     """AddsANewNetworkDevice request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC5Df380093Bd5A748D177A34375Faab4, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "category": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "category": {
+            "enum": [
                 "NETWORK_DEVICE, COMPUTE_DEVICE, THIRD_PARTY_DEVICE, MERAKI_DASHBOARD, FIREWALL_MANAGEMENT_CENTER"
-                ],
-                "type": "string"
-                },
-                "credentials": {
-                "properties": {
+            ],
+            "type": "string"
+        },
+        "credentials": {
+            "properties": {
                 "cli": {
-                "properties": {
-                "enablePassword": {
-                "type": "string"
-                },
-                "password": {
-                "type": "string"
-                },
-                "protocol": {
-                "enum": [
-                "SSH",
-                "TELNET"
-                ],
-                "type": "string"
-                },
-                "username": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "username",
-                "password"
-                ],
-                "type": "object"
+                    "properties": {
+                        "enablePassword": {
+                            "type": "string"
+                        },
+                        "password": {
+                            "type": "string"
+                        },
+                        "protocol": {
+                            "enum": [
+                                "SSH",
+                                "TELNET"
+                            ],
+                            "type": "string"
+                        },
+                        "username": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "username",
+                        "password"
+                    ],
+                    "type": "object"
                 },
                 "http": {
-                "properties": {
-                "password": {
-                "type": "string"
-                },
-                "port": {
-                "type": "integer"
-                },
-                "protocol": {
-                "enum": [
-                "HTTPS",
-                "HTTP"
-                ],
-                "type": "string"
-                },
-                "username": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "username",
-                "password",
-                "port"
-                ],
-                "type": "object"
+                    "properties": {
+                        "password": {
+                            "type": "string"
+                        },
+                        "port": {
+                            "type": "integer"
+                        },
+                        "protocol": {
+                            "enum": [
+                                "HTTPS",
+                                "HTTP"
+                            ],
+                            "type": "string"
+                        },
+                        "username": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "username",
+                        "password",
+                        "port"
+                    ],
+                    "type": "object"
                 },
                 "meraki": {
-                "properties": {
-                "apiKey": {
-                "type": "string"
-                },
-                "orgIds": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "apiKey"
-                ],
-                "type": "object"
+                    "properties": {
+                        "apiKey": {
+                            "type": "string"
+                        },
+                        "orgIds": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "apiKey"
+                    ],
+                    "type": "object"
                 },
                 "netconf": {
-                "properties": {
-                "port": {
-                "type": "integer"
-                }
-                },
-                "required": [
-                "port"
-                ],
-                "type": "object"
+                    "properties": {
+                        "port": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "port"
+                    ],
+                    "type": "object"
                 },
                 "snmp": {
-                "properties": {
-                "authPassword": {
-                "type": "string"
-                },
-                "authType": {
-                "enum": [
-                "SHA256",
-                "SHA",
-                "MD5"
-                ],
-                "type": "string"
-                },
-                "mode": {
-                "enum": [
-                "AUTHPRIV",
-                "AUTHNOPRIV",
-                "NOAUTHNOPRIV"
-                ],
-                "type": "string"
-                },
-                "privacyPassword": {
-                "type": "string"
-                },
-                "privacyType": {
-                "enum": [
-                "AES128",
-                "CISCOAES192",
-                "CISCOAES256",
-                "AES192",
-                "AES256"
-                ],
-                "type": "string"
-                },
-                "readCommunity": {
-                "type": "string"
-                },
-                "username": {
-                "type": "string"
-                },
-                "version": {
-                "enum": [
-                "v2",
-                "v3"
-                ],
-                "type": "string"
-                },
-                "writeCommunity": {
-                "type": "string"
+                    "properties": {
+                        "authPassword": {
+                            "type": "string"
+                        },
+                        "authType": {
+                            "enum": [
+                                "SHA256",
+                                "SHA",
+                                "MD5"
+                            ],
+                            "type": "string"
+                        },
+                        "mode": {
+                            "enum": [
+                                "AUTHPRIV",
+                                "AUTHNOPRIV",
+                                "NOAUTHNOPRIV"
+                            ],
+                            "type": "string"
+                        },
+                        "privacyPassword": {
+                            "type": "string"
+                        },
+                        "privacyType": {
+                            "enum": [
+                                "AES128",
+                                "CISCOAES192",
+                                "CISCOAES256",
+                                "AES192",
+                                "AES256"
+                            ],
+                            "type": "string"
+                        },
+                        "readCommunity": {
+                            "type": "string"
+                        },
+                        "username": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "enum": [
+                                "v2",
+                                "v3"
+                            ],
+                            "type": "string"
+                        },
+                        "writeCommunity": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "version"
+                    ],
+                    "type": "object"
                 }
-                },
-                "required": [
-                "version"
-                ],
-                "type": "object"
-                }
-                },
-                "type": "object"
-                },
-                "managementAddress": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "credentials",
-                "managementAddress",
-                "category"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        },
+        "managementAddress": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "credentials",
+        "managementAddress",
+        "category"
+    ],
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

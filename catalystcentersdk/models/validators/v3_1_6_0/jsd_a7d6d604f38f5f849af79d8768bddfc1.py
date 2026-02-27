@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ImportDevicesInBulk data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,160 +34,147 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorA7D6D604F38F5F849Af79D8768Bddfc1(object):
     """ImportDevicesInBulk request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorA7D6D604F38F5F849Af79D8768Bddfc1, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "items": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "_id": {
+                "type": "string"
+            },
+            "deviceInfo": {
                 "properties": {
-                "_id": {
-                "type": "string"
-                },
-                "deviceInfo": {
-                "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "deviceSudiSerialNos": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "hostname": {
-                "type": "string"
-                },
-                "macAddress": {
-                "type": "string"
-                },
-                "pid": {
-                "type": "string"
-                },
-                "serialNumber": {
-                "type": "string"
-                },
-                "siteId": {
-                "type": "string"
-                },
-                "stack": {
-                "type": "boolean"
-                },
-                "stackInfo": {
-                "properties": {
-                "isFullRing": {
-                "type": "boolean"
-                },
-                "stackMemberList": {
-                "items": {
-                "properties": {
-                "hardwareVersion": {
-                "type": "string"
-                },
-                "licenseLevel": {
-                "type": "string"
-                },
-                "licenseType": {
-                "type": "string"
-                },
-                "macAddress": {
-                "type": "string"
-                },
-                "pid": {
-                "type": "string"
-                },
-                "priority": {
-                "type": "number"
-                },
-                "role": {
-                "type": "string"
-                },
-                "serialNumber": {
-                "type": "string"
-                },
-                "softwareVersion": {
-                "type": "string"
-                },
-                "stackNumber": {
-                "type": "number"
-                },
-                "state": {
-                "type": "string"
-                },
-                "sudiSerialNumber": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "deviceSudiSerialNos": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "hostname": {
+                        "type": "string"
+                    },
+                    "macAddress": {
+                        "type": "string"
+                    },
+                    "pid": {
+                        "type": "string"
+                    },
+                    "serialNumber": {
+                        "type": "string"
+                    },
+                    "siteId": {
+                        "type": "string"
+                    },
+                    "stack": {
+                        "type": "boolean"
+                    },
+                    "stackInfo": {
+                        "properties": {
+                            "isFullRing": {
+                                "type": "boolean"
+                            },
+                            "stackMemberList": {
+                                "items": {
+                                    "properties": {
+                                        "hardwareVersion": {
+                                            "type": "string"
+                                        },
+                                        "licenseLevel": {
+                                            "type": "string"
+                                        },
+                                        "licenseType": {
+                                            "type": "string"
+                                        },
+                                        "macAddress": {
+                                            "type": "string"
+                                        },
+                                        "pid": {
+                                            "type": "string"
+                                        },
+                                        "priority": {
+                                            "type": "number"
+                                        },
+                                        "role": {
+                                            "type": "string"
+                                        },
+                                        "serialNumber": {
+                                            "type": "string"
+                                        },
+                                        "softwareVersion": {
+                                            "type": "string"
+                                        },
+                                        "stackNumber": {
+                                            "type": "number"
+                                        },
+                                        "state": {
+                                            "type": "string"
+                                        },
+                                        "sudiSerialNumber": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "stackRingProtocol": {
+                                "type": "string"
+                            },
+                            "supportsStackWorkflows": {
+                                "type": "boolean"
+                            },
+                            "totalMemberCount": {
+                                "type": "number"
+                            },
+                            "validLicenseLevels": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "sudiRequired": {
+                        "type": "boolean"
+                    },
+                    "userMicNumbers": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "userSudiSerialNos": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "workflowId": {
+                        "type": "string"
+                    },
+                    "workflowName": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "stackRingProtocol": {
-                "type": "string"
-                },
-                "supportsStackWorkflows": {
-                "type": "boolean"
-                },
-                "totalMemberCount": {
-                "type": "number"
-                },
-                "validLicenseLevels": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                },
-                "sudiRequired": {
-                "type": "boolean"
-                },
-                "userMicNumbers": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "userSudiSerialNos": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "workflowId": {
-                "type": "string"
-                },
-                "workflowName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "serialNumber",
-                "pid"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "deviceInfo"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateLayer3VirtualNetworks data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,48 +34,39 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorEd9125B257Ea54B79Ef2Db2D8Ebd9D00(object):
     """UpdateLayer3VirtualNetworks request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorEd9125B257Ea54B79Ef2Db2D8Ebd9D00, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "items": {
-                "properties": {
-                "anchoredSiteId": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "anchoredSiteId": {
                 "type": "string"
-                },
-                "fabricIds": {
+            },
+            "fabricIds": {
                 "items": {
-                "type": "string"
+                    "type": "string"
                 },
                 "type": "array"
-                },
-                "id": {
+            },
+            "id": {
                 "type": "string"
-                },
-                "virtualNetworkName": {
+            },
+            "virtualNetworkName": {
                 "type": "string"
-                }
-                },
-                "required": [
-                "id",
-                "virtualNetworkName"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

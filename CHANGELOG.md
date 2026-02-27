@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.1] - 2026-02-27
+### Fixed
+- Corrected `offset` and `limit` parameter types from `str` to `int` in pagination-related API methods across versions 2.3.7.6.1, 2.3.7.9, and 3.1.3.0. Affected modules: Sites, Devices, Application Policy, LAN Automation, SDA, and Wireless.
+- Corrected parameter type annotations in v3.1.6.0 for Configuration Templates (`templates`, `resourceParams`), Devices (`attributes`, `aggregateAttributes`, `groupBy`), and Reports (`schedule`, `deliveries`).
+- Updated request validation schemas across versions 2.3.7.6.1, 2.3.7.9, 3.1.3.0, and 3.1.6.0.
+
+### Changed
+- Added explicit `python_version = "3.12"` requirement to Pipfile.
+- Updated `certifi` dependency.
+
 ## [3.1.6.0.0] - 2026-02-11
 ### Added
 - Add support of Cisco Catalyst Center version ('3.1.6.0')
@@ -124,4 +134,5 @@ to "application".
 [3.1.3.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.5...v3.1.3.0.0
 [3.1.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.0...v3.1.3.0.1
 [3.1.6.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...v3.1.6.0.0
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...develop
+[3.1.6.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.0...v3.1.6.0.1
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...develop

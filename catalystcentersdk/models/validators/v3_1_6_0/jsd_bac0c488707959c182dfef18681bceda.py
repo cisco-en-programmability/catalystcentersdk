@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center SetTelemetrySettingsForASite data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,124 +34,91 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda(object):
     """SetTelemetrySettingsForASite request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "applicationVisibility": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "applicationVisibility": {
+            "properties": {
                 "collector": {
-                "properties": {
-                "address": {
-                "type": "string"
-                },
-                "collectorType": {
-                "enum": [
-                "Builtin",
-                "TelemetryBrokerOrUDPDirector"
-                ],
-                "type": "string"
-                },
-                "port": {
-                "type": "integer"
-                }
-                },
-                "required": [
-                "collectorType",
-                "address",
-                "port"
-                ],
-                "type": "object"
+                    "properties": {
+                        "address": {
+                            "type": "string"
+                        },
+                        "collectorType": {
+                            "enum": [
+                                "Builtin",
+                                "TelemetryBrokerOrUDPDirector"
+                            ],
+                            "type": "string"
+                        },
+                        "port": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
                 },
                 "enableOnWiredAccessDevices": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "required": [
-                "collector",
-                "enableOnWiredAccessDevices"
-                ],
-                "type": "object"
-                },
-                "snmpTraps": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "snmpTraps": {
+            "properties": {
                 "externalTrapServers": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "useBuiltinTrapServer": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "required": [
-                "useBuiltinTrapServer"
-                ],
-                "type": "object"
-                },
-                "syslogs": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "syslogs": {
+            "properties": {
                 "externalSyslogServers": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "useBuiltinSyslogServer": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "required": [
-                "useBuiltinSyslogServer"
-                ],
-                "type": "object"
-                },
-                "wiredDataCollection": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "wiredDataCollection": {
+            "properties": {
                 "enableWiredDataCollection": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "required": [
-                "enableWiredDataCollection"
-                ],
-                "type": "object"
-                },
-                "wirelessTelemetry": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "wirelessTelemetry": {
+            "properties": {
                 "enableWirelessTelemetry": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "required": [
-                "enableWirelessTelemetry"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "wiredDataCollection",
-                "wirelessTelemetry",
-                "snmpTraps",
-                "syslogs",
-                "applicationVisibility"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center SubmitsTheWorkflowForExecutingValidations data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -35,43 +35,33 @@ from catalystcentersdk.exceptions import MalformedRequest
 class JSONSchemaValidatorCf9D39CeF5E95Bb9Bd48D5F86E094C99(object):
     """SubmitsTheWorkflowForExecutingValidations request schema
     definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorCf9D39CeF5E95Bb9Bd48D5F86E094C99, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "description":
-                 {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "validationSetIds": {
+            "items": {
                 "type": "string"
-                },
-                "name": {
-                "type": "string"
-                },
-                "validationSetIds": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "name",
-                "validationSetIds"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

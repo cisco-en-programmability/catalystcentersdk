@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddPortAssignmentForUserDevice data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,67 +34,57 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorAf29516F0C8591DA2A92523B5Ab3386(object):
     """AddPortAssignmentForUserDevice request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorAf29516F0C8591DA2A92523B5Ab3386, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "authenticateTemplateName": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "authenticateTemplateName": {
+            "enum": [
                 "Open Authentication",
                 "Closed Authentication",
                 "Low Impact",
                 "No Authentication"
-                ],
+            ],
+            "type": "string"
+        },
+        "dataIpAddressPoolName": {
+            "type": "string"
+        },
+        "deviceManagementIpAddress": {
+            "type": "string"
+        },
+        "interfaceDescription": {
+            "type": "string"
+        },
+        "interfaceName": {
+            "type": "string"
+        },
+        "interfaceNames": {
+            "items": {
                 "type": "string"
-                },
-                "dataIpAddressPoolName": {
-                "type": "string"
-                },
-                "deviceManagementIpAddress": {
-                "type": "string"
-                },
-                "interfaceDescription": {
-                "type": "string"
-                },
-                "interfaceName": {
-                "type": "string"
-                },
-                "interfaceNames": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "scalableGroupName": {
-                "type": "string"
-                },
-                "siteNameHierarchy": {
-                "type": "string"
-                },
-                "voiceIpAddressPoolName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "siteNameHierarchy",
-                "deviceManagementIpAddress",
-                "interfaceName"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "scalableGroupName": {
+            "type": "string"
+        },
+        "siteNameHierarchy": {
+            "type": "string"
+        },
+        "voiceIpAddressPoolName": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

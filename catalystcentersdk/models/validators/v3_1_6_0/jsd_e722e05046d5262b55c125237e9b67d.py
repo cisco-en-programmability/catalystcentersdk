@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ClaimDevice data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,104 +34,93 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorE722E05046D5262B55C125237E9B67D(object):
     """ClaimDevice request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorE722E05046D5262B55C125237E9B67D, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "authorizationNeeded": {
+            "type": "boolean"
+        },
+        "configFileUrl": {
+            "type": "string"
+        },
+        "configId": {
+            "type": "string"
+        },
+        "deviceClaimList": {
+            "items": {
                 "properties": {
-                "authorizationNeeded": {
-                "type": "boolean"
-                },
-                "configFileUrl": {
-                "type": "string"
-                },
-                "configId": {
-                "type": "string"
-                },
-                "deviceClaimList": {
-                "items": {
-                "properties": {
-                "configList": {
-                "items": {
-                "properties": {
-                "configId": {
-                "type": "string"
-                },
-                "configParameters": {
-                "items": {
-                "properties": {
-                "key": {
-                "type": "string"
-                },
-                "value": {
-                "type": "string"
-                }
+                    "configList": {
+                        "items": {
+                            "properties": {
+                                "configId": {
+                                    "type": "string"
+                                },
+                                "configParameters": {
+                                    "items": {
+                                        "properties": {
+                                            "key": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "deviceId": {
+                        "type": "string"
+                    },
+                    "licenseLevel": {
+                        "type": "string"
+                    },
+                    "licenseType": {
+                        "type": "string"
+                    },
+                    "topOfStackSerialNumber": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "deviceId": {
-                "type": "string"
-                },
-                "licenseLevel": {
-                "type": "string"
-                },
-                "licenseType": {
-                "type": "string"
-                },
-                "topOfStackSerialNumber": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "deviceId"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "fileServiceId": {
-                "type": "string"
-                },
-                "imageId": {
-                "type": "string"
-                },
-                "imageUrl": {
-                "type": "string"
-                },
-                "populateInventory": {
-                "type": "boolean"
-                },
-                "projectId": {
-                "type": "string"
-                },
-                "workflowId": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "deviceClaimList"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "fileServiceId": {
+            "type": "string"
+        },
+        "imageId": {
+            "type": "string"
+        },
+        "imageUrl": {
+            "type": "string"
+        },
+        "populateInventory": {
+            "type": "boolean"
+        },
+        "projectId": {
+            "type": "string"
+        },
+        "workflowId": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

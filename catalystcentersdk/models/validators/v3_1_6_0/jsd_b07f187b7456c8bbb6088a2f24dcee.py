@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddIPPoolInSDAVirtualNetwork data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,89 +34,77 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorB07F187B7456C8Bbb6088A2F24Dcee(object):
     """AddIPPoolInSDAVirtualNetwork request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorB07F187B7456C8Bbb6088A2F24Dcee, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "autoGenerateVlanName": {
-                "type": "boolean"
-                },
-                "ipPoolName": {
-                "type": "string"
-                },
-                "isBridgeModeVm": {
-                "type": "boolean"
-                },
-                "isCommonPool": {
-                "type": "boolean"
-                },
-                "isIpDirectedBroadcast": {
-                "type": "boolean"
-                },
-                "isL2FloodingEnabled": {
-                "type": "boolean"
-                },
-                "isLayer2Only": {
-                "type": "boolean"
-                },
-                "isThisCriticalPool": {
-                "type": "boolean"
-                },
-                "isWirelessPool": {
-                "type": "boolean"
-                },
-                "poolType": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "autoGenerateVlanName": {
+            "type": "boolean"
+        },
+        "ipPoolName": {
+            "type": "string"
+        },
+        "isBridgeModeVm": {
+            "type": "boolean"
+        },
+        "isCommonPool": {
+            "type": "boolean"
+        },
+        "isIpDirectedBroadcast": {
+            "type": "boolean"
+        },
+        "isL2FloodingEnabled": {
+            "type": "boolean"
+        },
+        "isLayer2Only": {
+            "type": "boolean"
+        },
+        "isThisCriticalPool": {
+            "type": "boolean"
+        },
+        "isWirelessPool": {
+            "type": "boolean"
+        },
+        "poolType": {
+            "enum": [
                 "AP",
                 "Extended"
-                ],
-                "type": "string"
-                },
-                "scalableGroupName": {
-                "type": "string"
-                },
-                "siteNameHierarchy": {
-                "type": "string"
-                },
-                "trafficType": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "scalableGroupName": {
+            "type": "string"
+        },
+        "siteNameHierarchy": {
+            "type": "string"
+        },
+        "trafficType": {
+            "enum": [
                 "Data",
                 "Voice"
-                ],
-                "type": "string"
-                },
-                "virtualNetworkName": {
-                "type": "string"
-                },
-                "vlanId": {
-                "type": "string"
-                },
-                "vlanName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "siteNameHierarchy",
-                "virtualNetworkName",
-                "vlanName",
-                "trafficType",
-                "poolType"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "virtualNetworkName": {
+            "type": "string"
+        },
+        "vlanId": {
+            "type": "string"
+        },
+        "vlanName": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

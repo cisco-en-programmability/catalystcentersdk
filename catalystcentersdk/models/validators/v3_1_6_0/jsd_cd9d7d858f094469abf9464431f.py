@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateImagesOnTheNetworkDevice data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,61 +34,56 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorCd9D7D858F094469Abf9464431F(object):
     """UpdateImagesOnTheNetworkDevice request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorCd9D7D858F094469Abf9464431F, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "compatibleFeatures": {
+            "items": {
                 "properties": {
-                "compatibleFeatures": {
-                "items": {
-                "properties": {
-                "key": {
-                "type": "string"
-                },
-                "value": {
-                "enum": [
-                "ENABLE",
-                "DISABLE"
-                ],
-                "type": "string"
-                }
+                    "key": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "enum": [
+                            "ENABLE",
+                            "DISABLE"
+                        ],
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "installedImages": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "installedImages": {
+            "items": {
                 "properties": {
-                "id": {
-                "type": "string"
-                }
+                    "id": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "networkValidationIds": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "networkValidationIds": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

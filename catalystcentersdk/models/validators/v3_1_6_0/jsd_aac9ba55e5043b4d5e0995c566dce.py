@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center LANAutomationDeviceUpdate data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,88 +34,69 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorAac9BA55E5043B4D5E0995C566Dce(object):
     """LANAutomationDeviceUpdate request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorAac9BA55E5043B4D5E0995C566Dce, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "hostnameUpdateDevices": {
+            "items": {
                 "properties": {
-                "hostnameUpdateDevices": {
-                "items": {
-                "properties": {
-                "deviceManagementIPAddress": {
-                "type": "string"
+                    "deviceManagementIPAddress": {
+                        "type": "string"
+                    },
+                    "newHostName": {
+                        "type": "string"
+                    }
                 },
-                "newHostName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "deviceManagementIPAddress",
-                "newHostName"
-                ],
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "linkUpdate": {
-                "properties": {
+            },
+            "type": "array"
+        },
+        "linkUpdate": {
+            "properties": {
                 "destinationDeviceInterfaceName": {
-                "type": "string"
+                    "type": "string"
                 },
                 "destinationDeviceManagementIPAddress": {
-                "type": "string"
+                    "type": "string"
                 },
                 "ipPoolName": {
-                "type": "string"
+                    "type": "string"
                 },
                 "sourceDeviceInterfaceName": {
-                "type": "string"
+                    "type": "string"
                 },
                 "sourceDeviceManagementIPAddress": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "sourceDeviceManagementIPAddress",
-                "sourceDeviceInterfaceName",
-                "destinationDeviceManagementIPAddress",
-                "destinationDeviceInterfaceName"
-                ],
-                "type": "object"
-                },
-                "loopbackUpdateDeviceList": {
-                "items": {
+            },
+            "type": "object"
+        },
+        "loopbackUpdateDeviceList": {
+            "items": {
                 "properties": {
-                "deviceManagementIPAddress": {
-                "type": "string"
-                },
-                "newLoopback0IPAddress": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "deviceManagementIPAddress",
-                "newLoopback0IPAddress"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }
+                    "deviceManagementIPAddress": {
+                        "type": "string"
+                    },
+                    "newLoopback0IPAddress": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

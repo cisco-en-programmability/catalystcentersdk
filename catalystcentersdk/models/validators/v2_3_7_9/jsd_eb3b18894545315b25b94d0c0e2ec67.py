@@ -55,8 +55,7 @@ class JSONSchemaValidatorEb3B18894545315B25B94D0C0E2Ec67(object):
                                     "domainName": {
                                         "type": "string"
                                     }
-                                },
-                                "required": ["dnsServers", "domainName"]
+                                }
                             },
                             {
                                 "type": "null"

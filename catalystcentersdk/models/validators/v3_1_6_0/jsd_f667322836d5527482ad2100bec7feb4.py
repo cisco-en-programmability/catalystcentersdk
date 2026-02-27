@@ -2,7 +2,7 @@
 """Cisco Catalyst Center GetsTheListOfInterfacesAcrossTheNetworkDevicesBasedOnTheProvidedComplexFilte
 rsAndAggregationFunctions data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -36,129 +36,124 @@ from catalystcentersdk.exceptions import MalformedRequest
 class JSONSchemaValidatorF667322836D5527482Ad2100Bec7Feb4(object):
     """GetsTheListOfInterfacesAcrossTheNetworkDevicesBasedOnTheProvidedCo
     mplexFiltersAndAggregationFunctions request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorF667322836D5527482Ad2100Bec7Feb4, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "aggregateAttributes": {
+            "items": {
                 "properties": {
-                "aggregateAttributes": {
-                "items": {
-                "properties": {
-                "function": {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
-                }
+                    "function": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "attributes": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "attributes": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                },
-                "endTime": {
-                "type": "integer"
-                },
-                "filters": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "endTime": {
+            "type": "integer"
+        },
+        "filters": {
+            "items": {
                 "properties": {
-                "filters": {
-                "items": {
-                "properties": {
-                "filters": {
-                "items": {
-                "type": "string"
+                    "filters": {
+                        "items": {
+                            "properties": {
+                                "filters": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "key": {
+                                    "type": "string"
+                                },
+                                "logicalOperator": {
+                                    "type": "string"
+                                },
+                                "operator": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "logicalOperator": {
+                        "type": "string"
+                    },
+                    "operator": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "object"
+                    }
                 },
-                "type": "array"
-                },
-                "key": {
-                "type": "string"
-                },
-                "logicalOperator": {
-                "type": "string"
-                },
-                "operator": {
-                "type": "string"
-                },
-                "value": {
                 "type": "object"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "key": {
-                "type": "string"
-                },
-                "logicalOperator": {
-                "type": "string"
-                },
-                "operator": {
-                "type": "string"
-                },
-                "value": {
-                "type": "object"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "page": {
-                "properties": {
+            },
+            "type": "array"
+        },
+        "page": {
+            "properties": {
                 "limit": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "offset": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "sortBy": {
-                "items": {
-                "properties": {
-                "name": {
-                "type": "string"
-                },
-                "order": {
-                "type": "string"
+                    "items": {
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "order": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
                 }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                },
-                "startTime": {
-                "type": "integer"
-                },
-                "views": {
-                "items": {
+            },
+            "type": "object"
+        },
+        "startTime": {
+            "type": "integer"
+        },
+        "views": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

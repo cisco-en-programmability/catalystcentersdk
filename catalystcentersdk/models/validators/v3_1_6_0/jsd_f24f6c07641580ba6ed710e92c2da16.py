@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateOrUpdateRFProfile data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,146 +34,132 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorF24F6C07641580BA6Ed710E92C2Da16(object):
     """CreateOrUpdateRFProfile request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorF24F6C07641580BA6Ed710E92C2Da16, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "channelWidth": {
-                "type": "string"
-                },
-                "defaultRfProfile": {
-                "type": "boolean"
-                },
-                "enableBrownField": {
-                "type": "boolean"
-                },
-                "enableCustom": {
-                "type": "boolean"
-                },
-                "enableRadioTypeA": {
-                "type": "boolean"
-                },
-                "enableRadioTypeB": {
-                "type": "boolean"
-                },
-                "enableRadioTypeC": {
-                "type": "boolean"
-                },
-                "name": {
-                "type": "string"
-                },
-                "radioTypeAProperties": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "channelWidth": {
+            "type": "string"
+        },
+        "defaultRfProfile": {
+            "type": "boolean"
+        },
+        "enableBrownField": {
+            "type": "boolean"
+        },
+        "enableCustom": {
+            "type": "boolean"
+        },
+        "enableRadioTypeA": {
+            "type": "boolean"
+        },
+        "enableRadioTypeB": {
+            "type": "boolean"
+        },
+        "enableRadioTypeC": {
+            "type": "boolean"
+        },
+        "name": {
+            "type": "string"
+        },
+        "radioTypeAProperties": {
+            "properties": {
                 "dataRates": {
-                "type": "string"
+                    "type": "string"
                 },
                 "mandatoryDataRates": {
-                "type": "string"
+                    "type": "string"
                 },
                 "maxPowerLevel": {
-                "type": "number"
+                    "type": "number"
                 },
                 "minPowerLevel": {
-                "type": "number"
+                    "type": "number"
                 },
                 "parentProfile": {
-                "type": "string"
+                    "type": "string"
                 },
                 "powerThresholdV1": {
-                "type": "number"
+                    "type": "number"
                 },
                 "radioChannels": {
-                "type": "string"
+                    "type": "string"
                 },
                 "rxSopThreshold": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "type": "object"
-                },
-                "radioTypeBProperties": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "radioTypeBProperties": {
+            "properties": {
                 "dataRates": {
-                "type": "string"
+                    "type": "string"
                 },
                 "mandatoryDataRates": {
-                "type": "string"
+                    "type": "string"
                 },
                 "maxPowerLevel": {
-                "type": "number"
+                    "type": "number"
                 },
                 "minPowerLevel": {
-                "type": "number"
+                    "type": "number"
                 },
                 "parentProfile": {
-                "type": "string"
+                    "type": "string"
                 },
                 "powerThresholdV1": {
-                "type": "number"
+                    "type": "number"
                 },
                 "radioChannels": {
-                "type": "string"
+                    "type": "string"
                 },
                 "rxSopThreshold": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "type": "object"
-                },
-                "radioTypeCProperties": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "radioTypeCProperties": {
+            "properties": {
                 "dataRates": {
-                "type": "string"
+                    "type": "string"
                 },
                 "mandatoryDataRates": {
-                "type": "string"
+                    "type": "string"
                 },
                 "maxPowerLevel": {
-                "type": "number"
+                    "type": "number"
                 },
                 "minPowerLevel": {
-                "type": "number"
+                    "type": "number"
                 },
                 "parentProfile": {
-                "type": "string"
+                    "type": "string"
                 },
                 "powerThresholdV1": {
-                "type": "number"
+                    "type": "number"
                 },
                 "radioChannels": {
-                "type": "string"
+                    "type": "string"
                 },
                 "rxSopThreshold": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "type": "object"
-                }
-                },
-                "required": [
-                "name",
-                "defaultRfProfile",
-                "enableRadioTypeA",
-                "enableRadioTypeB",
-                "channelWidth",
-                "enableCustom",
-                "enableBrownField"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

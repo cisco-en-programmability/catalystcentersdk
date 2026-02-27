@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateHTTPReadCredential data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,67 +34,55 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorD1845268Faf55F98Bc952872259F16F(object):
     """UpdateHTTPReadCredential request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorD1845268Faf55F98Bc952872259F16F, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "comments": {
-                "type": "string"
-                },
-                "credentialType": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "comments": {
+            "type": "string"
+        },
+        "credentialType": {
+            "enum": [
                 "GLOBAL",
                 "APP"
-                ],
-                "type": "string"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "id": {
-                "type": "string"
-                },
-                "instanceTenantId": {
-                "type": "string"
-                },
-                "instanceUuid": {
-                "type": "string"
-                },
-                "password": {
-                "type": "string"
-                },
-                "port": {
-                "type": "integer"
-                },
-                "secure": {
-                "type": "boolean"
-                },
-                "username": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "id",
-                "password",
-                "port",
-                "username"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "instanceTenantId": {
+            "type": "string"
+        },
+        "instanceUuid": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        },
+        "port": {
+            "type": "integer"
+        },
+        "secure": {
+            "type": "boolean"
+        },
+        "username": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

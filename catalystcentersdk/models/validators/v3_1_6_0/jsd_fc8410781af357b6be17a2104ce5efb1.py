@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdatePnPGlobalSettings data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,107 +34,102 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorFc8410781Af357B6Be17A2104Ce5Efb1(object):
     """UpdatePnPGlobalSettings request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorFc8410781Af357B6Be17A2104Ce5Efb1, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "acceptEula": {
-                "type": "string"
-                },
-                "defaultProfile": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "acceptEula": {
+            "type": "string"
+        },
+        "defaultProfile": {
+            "properties": {
                 "cert": {
-                "type": "string"
+                    "type": "string"
                 },
                 "fqdnAddresses": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "ipAddresses": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "port": {
-                "type": "string"
-                },
-                "proxy": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "id": {
-                "type": "string"
-                },
-                "savaMappingList": {
-                "items": {
-                "properties": {
-                "ccoUser": {
-                "type": "string"
-                },
-                "expiry": {
-                "type": "string"
-                },
-                "profile": {
-                "properties": {
-                "addressFqdn": {
-                "type": "string"
-                },
-                "addressIpV4": {
-                "type": "string"
-                },
-                "cert": {
-                "type": "string"
-                },
-                "makeDefault": {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "port": {
-                "type": "string"
-                },
-                "profileId": {
-                "type": "string"
+                    "type": "string"
                 },
                 "proxy": {
-                "type": "string"
+                    "type": "string"
                 }
+            },
+            "type": "object"
+        },
+        "id": {
+            "type": "string"
+        },
+        "savaMappingList": {
+            "items": {
+                "properties": {
+                    "ccoUser": {
+                        "type": "string"
+                    },
+                    "expiry": {
+                        "type": "string"
+                    },
+                    "profile": {
+                        "properties": {
+                            "addressFqdn": {
+                                "type": "string"
+                            },
+                            "addressIpV4": {
+                                "type": "string"
+                            },
+                            "cert": {
+                                "type": "string"
+                            },
+                            "makeDefault": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "port": {
+                                "type": "string"
+                            },
+                            "profileId": {
+                                "type": "string"
+                            },
+                            "proxy": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "smartAccountId": {
+                        "type": "string"
+                    },
+                    "virtualAccountId": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "smartAccountId": {
-                "type": "string"
-                },
-                "virtualAccountId": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

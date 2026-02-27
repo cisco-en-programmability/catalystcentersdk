@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdatesDiscoveryById data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,225 +34,204 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorF325B2C7E429566BA5Ed9Ae8253B5Bef(object):
     """UpdatesDiscoveryById request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorF325B2C7E429566BA5Ed9Ae8253B5Bef, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "attributeInfo": {
-                "type": "object"
-                },
-                "cdpLevel": {
-                "type": "integer"
-                },
-                "deviceIds": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "attributeInfo": {
+            "type": "object"
+        },
+        "cdpLevel": {
+            "type": "integer"
+        },
+        "deviceIds": {
+            "type": "string"
+        },
+        "discoveryCondition": {
+            "type": "string"
+        },
+        "discoveryStatus": {
+            "type": "string"
+        },
+        "discoveryType": {
+            "type": "string"
+        },
+        "enablePasswordList": {
+            "type": "string"
+        },
+        "globalCredentialIdList": {
+            "items": {
                 "type": "string"
-                },
-                "discoveryCondition": {
-                "type": "string"
-                },
-                "discoveryStatus": {
-                "type": "string"
-                },
-                "discoveryType": {
-                "type": "string"
-                },
-                "enablePasswordList": {
-                "type": "string"
-                },
-                "globalCredentialIdList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "httpReadCredential": {
-                "properties": {
+            },
+            "type": "array"
+        },
+        "httpReadCredential": {
+            "properties": {
                 "comments": {
-                "type": "string"
+                    "type": "string"
                 },
                 "credentialType": {
-                "enum": [
-                "GLOBAL",
-                "APP"
-                ],
-                "type": "string"
+                    "enum": [
+                        "GLOBAL",
+                        "APP"
+                    ],
+                    "type": "string"
                 },
-                "description":
-                 {
-                "type": "string"
+                "description": {
+                    "type": "string"
                 },
                 "id": {
-                "type": "string"
+                    "type": "string"
                 },
                 "instanceTenantId": {
-                "type": "string"
+                    "type": "string"
                 },
                 "instanceUuid": {
-                "type": "string"
+                    "type": "string"
                 },
                 "password": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "secure": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "username": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "password",
-                "port",
-                "username"
-                ],
-                "type": "object"
-                },
-                "httpWriteCredential": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "httpWriteCredential": {
+            "properties": {
                 "comments": {
-                "type": "string"
+                    "type": "string"
                 },
                 "credentialType": {
-                "enum": [
-                "GLOBAL",
-                "APP"
-                ],
-                "type": "string"
+                    "enum": [
+                        "GLOBAL",
+                        "APP"
+                    ],
+                    "type": "string"
                 },
-                "description":
-                 {
-                "type": "string"
+                "description": {
+                    "type": "string"
                 },
                 "id": {
-                "type": "string"
+                    "type": "string"
                 },
                 "instanceTenantId": {
-                "type": "string"
+                    "type": "string"
                 },
                 "instanceUuid": {
-                "type": "string"
+                    "type": "string"
                 },
                 "password": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "secure": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "username": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "password",
-                "port",
-                "username"
-                ],
-                "type": "object"
-                },
-                "id": {
-                "type": "string"
-                },
-                "ipAddressList": {
-                "type": "string"
-                },
-                "ipFilterList": {
-                "type": "string"
-                },
-                "isAutoCdp": {
-                "type": "boolean"
-                },
-                "lldpLevel": {
-                "type": "integer"
-                },
-                "name": {
-                "type": "string"
-                },
-                "netconfPort": {
-                "type": "string"
-                },
-                "numDevices": {
-                "type": "integer"
-                },
-                "parentDiscoveryId": {
-                "type": "string"
-                },
-                "passwordList": {
-                "type": "string"
-                },
-                "preferredMgmtIPMethod": {
-                "type": "string"
-                },
-                "protocolOrder": {
-                "type": "string"
-                },
-                "retryCount": {
-                "type": "integer"
-                },
-                "snmpAuthPassphrase": {
-                "type": "string"
-                },
-                "snmpAuthProtocol": {
-                "type": "string"
-                },
-                "snmpMode": {
-                "type": "string"
-                },
-                "snmpPrivPassphrase": {
-                "type": "string"
-                },
-                "snmpPrivProtocol": {
-                "type": "string"
-                },
-                "snmpRoCommunity": {
-                "type": "string"
-                },
-                "snmpRoCommunityDesc": {
-                "type": "string"
-                },
-                "snmpRwCommunity": {
-                "type": "string"
-                },
-                "snmpRwCommunityDesc": {
-                "type": "string"
-                },
-                "snmpUserName": {
-                "type": "string"
-                },
-                "timeOut": {
-                "type": "integer"
-                },
-                "updateMgmtIp": {
-                "type": "boolean"
-                },
-                "userNameList": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "discoveryStatus",
-                "id"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        },
+        "id": {
+            "type": "string"
+        },
+        "ipAddressList": {
+            "type": "string"
+        },
+        "ipFilterList": {
+            "type": "string"
+        },
+        "isAutoCdp": {
+            "type": "boolean"
+        },
+        "lldpLevel": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "netconfPort": {
+            "type": "string"
+        },
+        "numDevices": {
+            "type": "integer"
+        },
+        "parentDiscoveryId": {
+            "type": "string"
+        },
+        "passwordList": {
+            "type": "string"
+        },
+        "preferredMgmtIPMethod": {
+            "type": "string"
+        },
+        "protocolOrder": {
+            "type": "string"
+        },
+        "retryCount": {
+            "type": "integer"
+        },
+        "snmpAuthPassphrase": {
+            "type": "string"
+        },
+        "snmpAuthProtocol": {
+            "type": "string"
+        },
+        "snmpMode": {
+            "type": "string"
+        },
+        "snmpPrivPassphrase": {
+            "type": "string"
+        },
+        "snmpPrivProtocol": {
+            "type": "string"
+        },
+        "snmpRoCommunity": {
+            "type": "string"
+        },
+        "snmpRoCommunityDesc": {
+            "type": "string"
+        },
+        "snmpRwCommunity": {
+            "type": "string"
+        },
+        "snmpRwCommunityDesc": {
+            "type": "string"
+        },
+        "snmpUserName": {
+            "type": "string"
+        },
+        "timeOut": {
+            "type": "integer"
+        },
+        "updateMgmtIp": {
+            "type": "boolean"
+        },
+        "userNameList": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

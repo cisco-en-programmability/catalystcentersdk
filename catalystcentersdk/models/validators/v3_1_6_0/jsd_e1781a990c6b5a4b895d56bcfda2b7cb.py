@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateApplication data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,119 +34,114 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorE1781A990C6B5A4B895D56Bcfda2B7Cb(object):
     """CreateApplication request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorE1781A990C6B5A4B895D56Bcfda2B7Cb, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "items": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "applicationSet": {
                 "properties": {
-                "applicationSet": {
-                "properties": {
-                "idRef": {
-                "type": "string"
-                }
+                    "idRef": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "name": {
+            },
+            "name": {
                 "type": "string"
-                },
-                "networkApplications": {
+            },
+            "networkApplications": {
                 "items": {
-                "properties": {
-                "appProtocol": {
-                "type": "string"
-                },
-                "applicationSubType": {
-                "type": "string"
-                },
-                "applicationType": {
-                "type": "string"
-                },
-                "categoryId": {
-                "type": "string"
-                },
-                "displayName": {
-                "type": "string"
-                },
-                "dscp": {
-                "type": "string"
-                },
-                "engineId": {
-                "type": "string"
-                },
-                "helpString": {
-                "type": "string"
-                },
-                "ignoreConflict": {
-                "type": "string"
-                },
-                "longDescription": {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
-                },
-                "popularity": {
-                "type": "string"
-                },
-                "rank": {
-                "type": "string"
-                },
-                "serverName": {
-                "type": "string"
-                },
-                "trafficClass": {
-                "type": "string"
-                },
-                "url": {
-                "type": "string"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "appProtocol": {
+                            "type": "string"
+                        },
+                        "applicationSubType": {
+                            "type": "string"
+                        },
+                        "applicationType": {
+                            "type": "string"
+                        },
+                        "categoryId": {
+                            "type": "string"
+                        },
+                        "displayName": {
+                            "type": "string"
+                        },
+                        "dscp": {
+                            "type": "string"
+                        },
+                        "engineId": {
+                            "type": "string"
+                        },
+                        "helpString": {
+                            "type": "string"
+                        },
+                        "ignoreConflict": {
+                            "type": "string"
+                        },
+                        "longDescription": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "popularity": {
+                            "type": "string"
+                        },
+                        "rank": {
+                            "type": "string"
+                        },
+                        "serverName": {
+                            "type": "string"
+                        },
+                        "trafficClass": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "type": "array"
-                },
-                "networkIdentity": {
+            },
+            "networkIdentity": {
                 "items": {
-                "properties": {
-                "displayName": {
-                "type": "string"
-                },
-                "lowerPort": {
-                "type": "string"
-                },
-                "ports": {
-                "type": "string"
-                },
-                "protocol": {
-                "type": "string"
-                },
-                "upperPort": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "displayName": {
+                            "type": "string"
+                        },
+                        "lowerPort": {
+                            "type": "string"
+                        },
+                        "ports": {
+                            "type": "string"
+                        },
+                        "protocol": {
+                            "type": "string"
+                        },
+                        "upperPort": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

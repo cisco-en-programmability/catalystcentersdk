@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateANewCondition data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,128 +34,123 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorEcb990Ad7F24519397Dd8D6C88De0067(object):
     """CreateANewCondition request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorEcb990Ad7F24519397Dd8D6C88De0067, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "action": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "action": {
+            "properties": {
                 "doesNotMatchAction": {
-                "enum": [
-                "DO_NOT_RAISE_VIOLATION_AND_CONTINUE, DO_NOT_RAISE_VIOLATION_AND_STOP, RAISE_VIOLATION_AND_CONTINUE, RAISE_VIOLATION_AND_STOP"
-                ],
-                "type": "string"
+                    "enum": [
+                        "DO_NOT_RAISE_VIOLATION_AND_CONTINUE, DO_NOT_RAISE_VIOLATION_AND_STOP, RAISE_VIOLATION_AND_CONTINUE, RAISE_VIOLATION_AND_STOP"
+                    ],
+                    "type": "string"
                 },
                 "doesNotMatchViolationMessage": {
-                "type": "string"
+                    "type": "string"
                 },
                 "doesNotMatchViolationMessageType": {
-                "enum": [
-                "DEFAULT_MESSAGE, CUSTOM_MESSAGE"
-                ],
-                "type": "string"
+                    "enum": [
+                        "DEFAULT_MESSAGE, CUSTOM_MESSAGE"
+                    ],
+                    "type": "string"
                 },
                 "doesNotMatchViolationSeverity": {
-                "enum": [
-                "CRITICAL, MAJOR, MINOR, WARNING, INFO"
-                ],
-                "type": "string"
+                    "enum": [
+                        "CRITICAL, MAJOR, MINOR, WARNING, INFO"
+                    ],
+                    "type": "string"
                 },
                 "matchAction": {
-                "enum": [
-                "DO_NOT_RAISE_VIOLATION_AND_CONTINUE, DO_NOT_RAISE_VIOLATION_AND_STOP, RAISE_VIOLATION_AND_CONTINUE, RAISE_VIOLATION_AND_STOP"
-                ],
-                "type": "string"
+                    "enum": [
+                        "DO_NOT_RAISE_VIOLATION_AND_CONTINUE, DO_NOT_RAISE_VIOLATION_AND_STOP, RAISE_VIOLATION_AND_CONTINUE, RAISE_VIOLATION_AND_STOP"
+                    ],
+                    "type": "string"
                 },
                 "matchViolationMessage": {
-                "type": "string"
+                    "type": "string"
                 },
                 "matchViolationMessageType": {
-                "enum": [
-                "DEFAULT_MESSAGE, CUSTOM_MESSAGE"
-                ],
-                "type": "string"
+                    "enum": [
+                        "DEFAULT_MESSAGE, CUSTOM_MESSAGE"
+                    ],
+                    "type": "string"
                 },
                 "matchViolationSeverity": {
-                "enum": [
-                "CRITICAL, MAJOR, MINOR, WARNING, INFO"
-                ],
-                "type": "string"
+                    "enum": [
+                        "CRITICAL, MAJOR, MINOR, WARNING, INFO"
+                    ],
+                    "type": "string"
                 }
-                },
-                "required": [
+            },
+            "required": [
                 "matchAction",
                 "doesNotMatchAction"
-                ],
-                "type": "object"
-                },
-                "blockEndExpression": {
-                "type": "string"
-                },
-                "blockStartExpression": {
-                "type": "string"
-                },
-                "blockViolationCriteria": {
-                "enum": [
+            ],
+            "type": "object"
+        },
+        "blockEndExpression": {
+            "type": "string"
+        },
+        "blockStartExpression": {
+            "type": "string"
+        },
+        "blockViolationCriteria": {
+            "enum": [
                 "RAISE_FOR_EACH_VIOLATION, RAISE_SINGLE_FOR_ANY_VIOLATION, RAISE_IF_ALL_VIOLATED"
-                ],
-                "type": "string"
-                },
-                "deviceProperty": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "deviceProperty": {
+            "enum": [
                 "DEVICE_NAME, IP_ADDRESS, OS_NAME, OS_VERSION"
-                ],
-                "type": "string"
-                },
-                "operator": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "operator": {
+            "enum": [
                 "CONTAINS_STRING, DOES_NOT_CONTAIN_STRING, MATCHES_EXPRESSION, DOES_NOT_MATCH_EXPRESSION, EVALUATE_EXPRESSION"
-                ],
-                "type": "string"
-                },
-                "parseAsBlocks": {
-                "type": "boolean"
-                },
-                "regexViolationCriteria": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "parseAsBlocks": {
+            "type": "boolean"
+        },
+        "regexViolationCriteria": {
+            "enum": [
                 "RAISE_FOR_EACH_VIOLATION, RAISE_SINGLE_FOR_ANY_VIOLATION, RAISE_IF_ALL_VIOLATED"
-                ],
-                "type": "string"
-                },
-                "scope": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "scope": {
+            "enum": [
                 "CONFIGURATION, DEVICE_PROPERTIES, DEVICE_COMMAND_OUTPUT, PREVIOUSLY_MATCHED_BLOCKS"
-                ],
-                "type": "string"
-                },
-                "showCommand": {
-                "type": "string"
-                },
-                "value": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "scope",
-                "operator",
-                "value",
-                "action"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "showCommand": {
+            "type": "string"
+        },
+        "value": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "scope",
+        "operator",
+        "value",
+        "action"
+    ],
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

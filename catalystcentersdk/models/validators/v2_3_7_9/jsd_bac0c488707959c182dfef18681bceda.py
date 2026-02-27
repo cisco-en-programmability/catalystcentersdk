@@ -62,14 +62,12 @@ class JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda(object):
                                             "port": {
                                                 "type": "integer"
                                             }
-                                        },
-                                        "required": ["address", "collectorType", "port"]
+                                        }
                                     },
                                     "enableOnWiredAccessDevices": {
                                         "type": "boolean"
                                     }
-                                },
-                                "required": ["collector", "enableOnWiredAccessDevices"]
+                                }
                             },
                             {
                                 "type": "null"
@@ -90,8 +88,7 @@ class JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda(object):
                                     "useBuiltinTrapServer": {
                                         "type": "boolean"
                                     }
-                                },
-                                "required": ["externalTrapServers", "useBuiltinTrapServer"]
+                                }
                             },
                             {
                                 "type": "null"
@@ -112,8 +109,7 @@ class JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda(object):
                                     "useBuiltinSyslogServer": {
                                         "type": "boolean"
                                     }
-                                },
-                                "required": ["externalSyslogServers", "useBuiltinSyslogServer"]
+                                }
                             },
                             {
                                 "type": "null"
@@ -128,8 +124,7 @@ class JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda(object):
                                     "enableWiredDataCollectio": {
                                         "type": "boolean"
                                     }
-                                },
-                                "required": ["enableWiredDataCollectio"]
+                                }
                             },
                             {
                                 "type": "null"
@@ -144,8 +139,7 @@ class JSONSchemaValidatorBac0C488707959C182DfEf18681Bceda(object):
                                     "enableWirelessTelemetry": {
                                         "type": "boolean"
                                     }
-                                },
-                                "required": ["enableWirelessTelemetry"]
+                                }
                             },
                             {
                                 "type": "null"
