@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateTag data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,82 +34,73 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC9F995AbC21B54E7860F66Aef2Ffbc85(object):
     """UpdateTag request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC9F995AbC21B54E7860F66Aef2Ffbc85, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "dynamicRules": {
+            "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "dynamicRules": {
-                "items": {
-                "properties": {
-                "memberType": {
-                "type": "string"
-                },
-                "rules": {
-                "properties": {
-                "items": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "name": {
-                "type": "string"
-                },
-                "operation": {
-                "type": "string"
-                },
-                "value": {
-                "type": "string"
-                },
-                "values": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
+                    "memberType": {
+                        "type": "string"
+                    },
+                    "rules": {
+                        "properties": {
+                            "items": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "operation": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "values": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    }
                 },
                 "type": "object"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "id": {
-                "type": "string"
-                },
-                "instanceTenantId": {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
-                },
-                "systemTag": {
-                "type": "boolean"
-                }
-                },
-                "required": [
-                "id"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "id": {
+            "type": "string"
+        },
+        "instanceTenantId": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "systemTag": {
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

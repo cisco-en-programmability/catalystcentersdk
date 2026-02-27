@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdatesTheMaintenanceScheduleInformation data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -35,71 +35,52 @@ from catalystcentersdk.exceptions import MalformedRequest
 class JSONSchemaValidatorE5Bb87A955E33A7Ee46F1085Fd880(object):
     """UpdatesTheMaintenanceScheduleInformation request schema
     definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorE5Bb87A955E33A7Ee46F1085Fd880, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "maintenanceSchedule": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "maintenanceSchedule": {
+            "properties": {
                 "endTime": {
-                "type": "number"
+                    "type": "number"
                 },
                 "recurrence": {
-                "properties": {
-                "interval": {
-                "type": "integer"
-                },
-                "recurrenceEndTime": {
-                "type": "number"
-                }
-                },
-                "required": [
-                "interval",
-                "recurrenceEndTime"
-                ],
-                "type": "object"
+                    "properties": {
+                        "interval": {
+                            "type": "integer"
+                        },
+                        "recurrenceEndTime": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
                 },
                 "startTime": {
-                "type": "number"
+                    "type": "number"
                 }
-                },
-                "required": [
-                "startTime",
-                "endTime"
-                ],
-                "type": "object"
-                },
-                "networkDeviceIds": {
-                "items": {
+            },
+            "type": "object"
+        },
+        "networkDeviceIds": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "description",
-                "maintenanceSchedule",
-                "networkDeviceIds"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

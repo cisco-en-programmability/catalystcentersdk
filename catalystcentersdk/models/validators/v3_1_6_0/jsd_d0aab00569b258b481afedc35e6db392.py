@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ProvisionUpdate data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,68 +34,59 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorD0Aab00569B258B481AfEdc35E6Db392(object):
     """ProvisionUpdate request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorD0Aab00569B258B481AfEdc35E6Db392, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "deviceName": {
+                "type": "string"
+            },
+            "dynamicInterfaces": {
                 "items": {
-                "properties": {
-                "deviceName": {
-                "type": "string"
-                },
-                "dynamicInterfaces": {
-                "items": {
-                "properties": {
-                "interfaceGateway": {
-                "type": "string"
-                },
-                "interfaceIPAddress": {
-                "type": "string"
-                },
-                "interfaceName": {
-                "type": "string"
-                },
-                "interfaceNetmaskInCIDR": {
-                "type": "integer"
-                },
-                "lagOrPortNumber": {
-                "type": "integer"
-                },
-                "vlanId": {
-                "type": "integer"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "interfaceGateway": {
+                            "type": "string"
+                        },
+                        "interfaceIPAddress": {
+                            "type": "string"
+                        },
+                        "interfaceName": {
+                            "type": "string"
+                        },
+                        "interfaceNetmaskInCIDR": {
+                            "type": "integer"
+                        },
+                        "lagOrPortNumber": {
+                            "type": "integer"
+                        },
+                        "vlanId": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
                 },
                 "type": "array"
-                },
-                "managedAPLocations": {
+            },
+            "managedAPLocations": {
                 "items": {
-                "type": "string"
+                    "type": "string"
                 },
                 "type": "array"
-                }
-                },
-                "required": [
-                "deviceName",
-                "managedAPLocations"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

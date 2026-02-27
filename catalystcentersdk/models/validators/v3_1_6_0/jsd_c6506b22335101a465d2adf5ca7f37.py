@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateMultipleSiteTagsForAWirelessProfileInBulk data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -35,57 +35,44 @@ from catalystcentersdk.exceptions import MalformedRequest
 class JSONSchemaValidatorC6506B22335101A465D2Adf5Ca7F37(object):
     """CreateMultipleSiteTagsForAWirelessProfileInBulk request schema
     definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC6506B22335101A465D2Adf5Ca7F37, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "items": {
+            "items": {
                 "properties": {
-                "items": {
-                "items": {
-                "properties": {
-                "apProfileName": {
-                "type": "string"
+                    "apProfileName": {
+                        "type": "string"
+                    },
+                    "flexProfileName": {
+                        "type": "string"
+                    },
+                    "siteIds": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "siteTagName": {
+                        "type": "string"
+                    }
                 },
-                "flexProfileName": {
-                "type": "string"
-                },
-                "siteIds": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "siteTagName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "siteIds",
-                "siteTagName",
-                "apProfileName"
-                ],
                 "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "items"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

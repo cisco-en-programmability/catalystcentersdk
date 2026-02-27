@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateWorkflow data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,149 +34,138 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorFdd2Af215B9B8327A3E24A3Dea89(object):
     """UpdateWorkflow request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorFdd2Af215B9B8327A3E24A3Dea89, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "_id": {
-                "type": "string"
-                },
-                "addToInventory": {
-                "type": "boolean"
-                },
-                "addedOn": {
-                "type": "integer"
-                },
-                "configId": {
-                "type": "string"
-                },
-                "currTaskIdx": {
-                "type": "integer"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "endTime": {
-                "type": "integer"
-                },
-                "execTime": {
-                "type": "integer"
-                },
-                "imageId": {
-                "type": "string"
-                },
-                "instanceType": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "_id": {
+            "type": "string"
+        },
+        "addToInventory": {
+            "type": "boolean"
+        },
+        "addedOn": {
+            "type": "integer"
+        },
+        "configId": {
+            "type": "string"
+        },
+        "currTaskIdx": {
+            "type": "integer"
+        },
+        "description": {
+            "type": "string"
+        },
+        "endTime": {
+            "type": "integer"
+        },
+        "execTime": {
+            "type": "integer"
+        },
+        "imageId": {
+            "type": "string"
+        },
+        "instanceType": {
+            "enum": [
                 "SystemWorkflow",
                 "UserWorkflow",
                 "SystemResetWorkflow"
-                ],
-                "type": "string"
-                },
-                "lastupdateOn": {
-                "type": "integer"
-                },
-                "name": {
-                "type": "string"
-                },
-                "startTime": {
-                "type": "integer"
-                },
-                "state": {
-                "type": "string"
-                },
-                "tasks": {
-                "items": {
+            ],
+            "type": "string"
+        },
+        "lastupdateOn": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "startTime": {
+            "type": "integer"
+        },
+        "state": {
+            "type": "string"
+        },
+        "tasks": {
+            "items": {
                 "properties": {
-                "currWorkItemIdx": {
-                "type": "integer"
-                },
-                "endTime": {
-                "type": "integer"
-                },
-                "name": {
-                "type": "string"
-                },
-                "startTime": {
-                "type": "integer"
-                },
-                "state": {
-                "type": "string"
-                },
-                "taskSeqNo": {
-                "type": "integer"
-                },
-                "timeTaken": {
-                "type": "integer"
-                },
-                "type": {
-                "type": "string"
-                },
-                "workItemList": {
-                "items": {
-                "properties": {
-                "command": {
-                "type": "string"
-                },
-                "endTime": {
-                "type": "integer"
-                },
-                "outputStr": {
-                "type": "string"
-                },
-                "startTime": {
-                "type": "integer"
-                },
-                "state": {
-                "type": "string"
-                },
-                "timeTaken": {
-                "type": "integer"
-                }
+                    "currWorkItemIdx": {
+                        "type": "integer"
+                    },
+                    "endTime": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "startTime": {
+                        "type": "integer"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "taskSeqNo": {
+                        "type": "integer"
+                    },
+                    "timeTaken": {
+                        "type": "integer"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "workItemList": {
+                        "items": {
+                            "properties": {
+                                "command": {
+                                    "type": "string"
+                                },
+                                "endTime": {
+                                    "type": "integer"
+                                },
+                                "outputStr": {
+                                    "type": "string"
+                                },
+                                "startTime": {
+                                    "type": "integer"
+                                },
+                                "state": {
+                                    "type": "string"
+                                },
+                                "timeTaken": {
+                                    "type": "integer"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "tenantId": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                },
-                "useState": {
-                "type": "string"
-                },
-                "version": {
-                "type": "integer"
-                }
-                },
-                "required": [
-                "name",
-                "tasks",
-                "type"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "tenantId": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "useState": {
+            "type": "string"
+        },
+        "version": {
+            "type": "integer"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

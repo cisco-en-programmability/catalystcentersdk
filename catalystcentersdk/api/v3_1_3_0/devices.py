@@ -11195,8 +11195,8 @@ class Devices(object):
             network_device_ids(str): networkDeviceIds query parameter. List of network device ids. .
             status(str): status query parameter. The status of the maintenance schedule. Possible values are:
                 UPCOMING, IN_PROGRESS, COMPLETED, FAILED. Refer features for more details. .
-            limit(str): limit query parameter. The number of records to show for this page. Min: 1, Max: 500.
-            offset(str): offset query parameter. The first record to show for this page; the first record is
+            limit(int): limit query parameter. The number of records to show for this page. Min: 1, Max: 500.
+            offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
             sort_by(str): sortBy query parameter. A property within the response to sort by. .
             order(str): order query parameter. Whether ascending or descending order should be used to sort the
@@ -11220,8 +11220,8 @@ class Devices(object):
         check_type(headers, dict)
         check_type(network_device_ids, str)
         check_type(status, str)
-        check_type(limit, str)
-        check_type(offset, str)
+        check_type(limit, int)
+        check_type(offset, int)
         check_type(sort_by, str)
         check_type(order, str)
         if headers is not None:
@@ -11578,8 +11578,8 @@ class Devices(object):
                 provided, then it will default to BASIC views. If multiple views are provided, the
                 response will contain the union of the views. Refer features for more details. Available
                 values : BASIC, RESYNC, USER_DEFINED_FIELDS. .
-            limit(str): limit query parameter. The number of records to show for this page. Min: 1, Max: 500.
-            offset(str): offset query parameter. The first record to show for this page; the first record is
+            limit(int): limit query parameter. The number of records to show for this page. Min: 1, Max: 500.
+            offset(int): offset query parameter. The first record to show for this page; the first record is
                 numbered 1. .
             sort_by(str): sortBy query parameter. A property within the response to sort by. Available values : id,
                 managementAddress, dnsResolvedManagementIpAddress, hostname, macAddress, type, family,
@@ -11617,8 +11617,8 @@ class Devices(object):
         check_type(reachability_status, str)
         check_type(management_state, str)
         check_type(views, str)
-        check_type(limit, str)
-        check_type(offset, str)
+        check_type(limit, int)
+        check_type(offset, int)
         check_type(sort_by, str)
         check_type(order, str)
         if headers is not None:

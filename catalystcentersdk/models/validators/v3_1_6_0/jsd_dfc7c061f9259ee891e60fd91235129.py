@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateAnExistingVariable data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,89 +34,83 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorDfc7C061F9259Ee891E60Fd91235129(object):
     """UpdateAnExistingVariable request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorDfc7C061F9259Ee891E60Fd91235129, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "dataType": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "dataType": {
+            "enum": [
                 "STRING, INTEGER, BOOLEAN, IP_ADDRESS, INTERFACE_NAME, IP_MASK"
-                ],
-                "type": "string"
-                },
-                "defaultValue": {
-                "type": "string"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "inputType": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "defaultValue": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "inputType": {
+            "enum": [
                 "SINGLE_SELECT, MULTI_SELECT, SINGLE_TEXT, MULTI_TEXT "
-                ],
-                "type": "string"
-                },
-                "mandatory": {
-                "type": "boolean"
-                },
-                "maxLength": {
-                "type": "integer"
-                },
-                "maxValue": {
-                "type": "integer"
-                },
-                "minValue": {
-                "type": "integer"
-                },
-                "name": {
-                "type": "string"
-                },
-                "selectionList": {
-                "items": {
+            ],
+            "type": "string"
+        },
+        "mandatory": {
+            "type": "boolean"
+        },
+        "maxLength": {
+            "type": "integer"
+        },
+        "maxValue": {
+            "type": "integer"
+        },
+        "minValue": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "selectionList": {
+            "items": {
                 "properties": {
-                "default": {
-                "type": "boolean"
-                },
-                "key": {
-                "type": "string"
-                },
-                "value": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "key",
-                "value"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "validationRegex": {
-                "type": "string"
-                }
+                    "default": {
+                        "type": "boolean"
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
                 },
                 "required": [
-                "name",
-                "dataType",
-                "inputType"
+                    "key",
+                    "value"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "validationRegex": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "dataType",
+        "inputType"
+    ],
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

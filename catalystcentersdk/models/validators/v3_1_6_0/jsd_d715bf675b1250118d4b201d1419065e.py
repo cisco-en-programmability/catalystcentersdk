@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center SetSiteVariables data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,50 +34,45 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorD715Bf675B1250118D4B201D1419065E(object):
     """SetSiteVariables request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorD715Bf675B1250118D4B201D1419065E, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "variableValues": {
+            "items": {
                 "properties": {
-                "variableValues": {
-                "items": {
-                "properties": {
-                "id": {
-                "type": "string"
-                },
-                "values": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
+                    "id": {
+                        "type": "string"
+                    },
+                    "values": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
                 },
                 "required": [
-                "id",
-                "values"
+                    "id",
+                    "values"
                 ],
                 "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "variableValues"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "variableValues"
+    ],
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

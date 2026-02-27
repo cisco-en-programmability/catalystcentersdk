@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddVirtualNetworkWithScalableGroups data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,44 +34,36 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorF5EBb9D50AaB287F320D32181C0(object):
     """AddVirtualNetworkWithScalableGroups request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorF5EBb9D50AaB287F320D32181C0, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "isGuestVirtualNetwork": {
-                "type": "boolean"
-                },
-                "scalableGroupNames": {
-                "items": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "isGuestVirtualNetwork": {
+            "type": "boolean"
+        },
+        "scalableGroupNames": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                },
-                "vManageVpnId": {
-                "type": "string"
-                },
-                "virtualNetworkName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "virtualNetworkName"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        },
+        "vManageVpnId": {
+            "type": "string"
+        },
+        "virtualNetworkName": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

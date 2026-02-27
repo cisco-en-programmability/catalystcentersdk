@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateSNMPDestination data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,89 +34,77 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorD69B1CffFdda5Bd1828A5A89A262Cbdd(object):
     """CreateSNMPDestination request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorD69B1CffFdda5Bd1828A5A89A262Cbdd, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "authPassword": {
-                "type": "string"
-                },
-                "community": {
-                "type": "string"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "ipAddress": {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
-                },
-                "port": {
-                "type": "string"
-                },
-                "privacyPassword": {
-                "type": "string"
-                },
-                "snmpAuthType": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "authPassword": {
+            "type": "string"
+        },
+        "community": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "ipAddress": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "port": {
+            "type": "string"
+        },
+        "privacyPassword": {
+            "type": "string"
+        },
+        "snmpAuthType": {
+            "enum": [
                 "SHA",
                 "MD5",
                 "NONE"
-                ],
-                "type": "string"
-                },
-                "snmpMode": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "snmpMode": {
+            "enum": [
                 "AUTH_PRIVACY",
                 "AUTH_NO_PRIVACY",
                 "NO_AUTH_NO_PRIVACY",
                 "NONE"
-                ],
-                "type": "string"
-                },
-                "snmpPrivacyType": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "snmpPrivacyType": {
+            "enum": [
                 "AES128",
                 "DES",
                 "NONE"
-                ],
-                "type": "string"
-                },
-                "snmpVersion": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "snmpVersion": {
+            "enum": [
                 "V2C",
                 "V3"
-                ],
-                "type": "string"
-                },
-                "userName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "name",
-                "ipAddress",
-                "port",
-                "snmpVersion"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "userName": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateA80211beProfile data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,67 +34,59 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorF08Eb586113E597A91B1658297570934(object):
     """CreateA80211beProfile request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorF08Eb586113E597A91B1658297570934, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "default": {
-                "type": "boolean"
-                },
-                "mloGroup": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "default": {
+            "type": "boolean"
+        },
+        "mloGroup": {
+            "properties": {
                 "primary24GhzEnable": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "primary5GhzEnable": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "primary6GhzEnable": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "secondary5GhzEnable": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "type": "object"
-                },
-                "muMimoDownLink": {
-                "type": "boolean"
-                },
-                "muMimoUpLink": {
-                "type": "boolean"
-                },
-                "ofdmaDownLink": {
-                "type": "boolean"
-                },
-                "ofdmaMultiRu": {
-                "type": "boolean"
-                },
-                "ofdmaUpLink": {
-                "type": "boolean"
-                },
-                "profileName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "profileName"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        },
+        "muMimoDownLink": {
+            "type": "boolean"
+        },
+        "muMimoUpLink": {
+            "type": "boolean"
+        },
+        "ofdmaDownLink": {
+            "type": "boolean"
+        },
+        "ofdmaMultiRu": {
+            "type": "boolean"
+        },
+        "ofdmaUpLink": {
+            "type": "boolean"
+        },
+        "profileName": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

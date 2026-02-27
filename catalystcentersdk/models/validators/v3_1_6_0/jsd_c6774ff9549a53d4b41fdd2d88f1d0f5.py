@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddVirtualAccount data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,140 +34,123 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC6774Ff9549A53D4B41FDd2D88F1D0F5(object):
     """AddVirtualAccount request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC6774Ff9549A53D4B41FDd2D88F1D0F5, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "autoSyncPeriod": {
-                "type": "integer"
-                },
-                "ccoUser": {
-                "type": "string"
-                },
-                "expiry": {
-                "type": "integer"
-                },
-                "lastSync": {
-                "type": "integer"
-                },
-                "profile": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "autoSyncPeriod": {
+            "type": "integer"
+        },
+        "ccoUser": {
+            "type": "string"
+        },
+        "expiry": {
+            "type": "integer"
+        },
+        "lastSync": {
+            "type": "integer"
+        },
+        "profile": {
+            "properties": {
                 "addressFqdn": {
-                "type": "string"
+                    "type": "string"
                 },
                 "addressIpV4": {
-                "type": "string"
+                    "type": "string"
                 },
                 "addressIpV6": {
-                "type": "string"
+                    "type": "string"
                 },
                 "cert": {
-                "type": "string"
+                    "type": "string"
                 },
                 "makeDefault": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "name": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "profileId": {
-                "type": "string"
+                    "type": "string"
                 },
                 "proxy": {
-                "type": "boolean"
+                    "type": "boolean"
                 }
-                },
-                "required": [
-                "addressFqdn",
-                "addressIpV4",
-                "addressIpV6",
-                "name"
-                ],
-                "type": "object"
-                },
-                "smartAccountId": {
-                "type": "string"
-                },
-                "syncResult": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "smartAccountId": {
+            "type": "string"
+        },
+        "syncResult": {
+            "properties": {
                 "syncList": {
-                "items": {
-                "properties": {
-                "deviceSnList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "syncType": {
-                "enum": [
-                "Add",
-                "Update",
-                "Delete",
-                "MismatchError"
-                ],
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
+                    "items": {
+                        "properties": {
+                            "deviceSnList": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "syncType": {
+                                "enum": [
+                                    "Add",
+                                    "Update",
+                                    "Delete",
+                                    "MismatchError"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
                 },
                 "syncMsg": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "type": "object"
-                },
-                "syncResultStr": {
-                "type": "string"
-                },
-                "syncStartTime": {
-                "type": "integer"
-                },
-                "syncStatus": {
-                "enum": [
+            },
+            "type": "object"
+        },
+        "syncResultStr": {
+            "type": "string"
+        },
+        "syncStartTime": {
+            "type": "integer"
+        },
+        "syncStatus": {
+            "enum": [
                 "NOT_SYNCED",
                 "SYNCING",
                 "SUCCESS",
                 "FAILURE"
-                ],
-                "type": "string"
-                },
-                "tenantId": {
-                "type": "string"
-                },
-                "token": {
-                "type": "string"
-                },
-                "virtualAccountId": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "profile",
-                "smartAccountId",
-                "syncStatus",
-                "virtualAccountId"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "tenantId": {
+            "type": "string"
+        },
+        "token": {
+            "type": "string"
+        },
+        "virtualAccountId": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

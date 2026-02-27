@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center StartDiscovery data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,169 +34,148 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorFdbe4Ec3E9F252A988404Dc94250B80D(object):
     """StartDiscovery request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorFdbe4Ec3E9F252A988404Dc94250B80D, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "cdpLevel": {
-                "type": "integer"
-                },
-                "discoveryType": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "cdpLevel": {
+            "type": "integer"
+        },
+        "discoveryType": {
+            "type": "string"
+        },
+        "enablePasswordList": {
+            "items": {
                 "type": "string"
-                },
-                "enablePasswordList": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "globalCredentialIdList": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                },
-                "globalCredentialIdList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "httpReadCredential": {
-                "properties": {
+            },
+            "type": "array"
+        },
+        "httpReadCredential": {
+            "properties": {
                 "password": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "secure": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "username": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "password",
-                "port",
-                "username"
-                ],
-                "type": "object"
-                },
-                "httpWriteCredential": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "httpWriteCredential": {
+            "properties": {
                 "password": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "integer"
+                    "type": "integer"
                 },
                 "secure": {
-                "type": "boolean"
+                    "type": "boolean"
                 },
                 "username": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "password",
-                "port",
-                "username"
-                ],
-                "type": "object"
-                },
-                "ipAddressList": {
+            },
+            "type": "object"
+        },
+        "ipAddressList": {
+            "type": "string"
+        },
+        "ipFilterList": {
+            "items": {
                 "type": "string"
-                },
-                "ipFilterList": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "lldpLevel": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "netconfPort": {
+            "type": "string"
+        },
+        "passwordList": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                },
-                "lldpLevel": {
-                "type": "integer"
-                },
-                "name": {
+            },
+            "type": "array"
+        },
+        "preferredMgmtIPMethod": {
+            "type": "string"
+        },
+        "protocolOrder": {
+            "type": "string"
+        },
+        "retry": {
+            "type": "integer"
+        },
+        "snmpAuthPassphrase": {
+            "type": "string"
+        },
+        "snmpAuthProtocol": {
+            "type": "string"
+        },
+        "snmpMode": {
+            "type": "string"
+        },
+        "snmpPrivPassphrase": {
+            "type": "string"
+        },
+        "snmpPrivProtocol": {
+            "type": "string"
+        },
+        "snmpROCommunity": {
+            "type": "string"
+        },
+        "snmpROCommunityDesc": {
+            "type": "string"
+        },
+        "snmpRWCommunity": {
+            "type": "string"
+        },
+        "snmpRWCommunityDesc": {
+            "type": "string"
+        },
+        "snmpUserName": {
+            "type": "string"
+        },
+        "snmpVersion": {
+            "type": "string"
+        },
+        "timeout": {
+            "type": "integer"
+        },
+        "userNameList": {
+            "items": {
                 "type": "string"
-                },
-                "netconfPort": {
-                "type": "string"
-                },
-                "passwordList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "preferredMgmtIPMethod": {
-                "type": "string"
-                },
-                "protocolOrder": {
-                "type": "string"
-                },
-                "retry": {
-                "type": "integer"
-                },
-                "snmpAuthPassphrase": {
-                "type": "string"
-                },
-                "snmpAuthProtocol": {
-                "type": "string"
-                },
-                "snmpMode": {
-                "type": "string"
-                },
-                "snmpPrivPassphrase": {
-                "type": "string"
-                },
-                "snmpPrivProtocol": {
-                "type": "string"
-                },
-                "snmpROCommunity": {
-                "type": "string"
-                },
-                "snmpROCommunityDesc": {
-                "type": "string"
-                },
-                "snmpRWCommunity": {
-                "type": "string"
-                },
-                "snmpRWCommunityDesc": {
-                "type": "string"
-                },
-                "snmpUserName": {
-                "type": "string"
-                },
-                "snmpVersion": {
-                "type": "string"
-                },
-                "timeout": {
-                "type": "integer"
-                },
-                "userNameList": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "discoveryType",
-                "ipAddressList",
-                "name",
-                "snmpVersion"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

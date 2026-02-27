@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddAccessGroup data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,65 +34,59 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC05F721266F5264869D10Ac0E663812(object):
     """AddAccessGroup request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC05F721266F5264869D10Ac0E663812, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "resourceGroups": {
+            "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "name": {
-                "type": "string"
-                },
-                "resourceGroups": {
-                "items": {
-                "properties": {
-                "name": {
-                "type": "string"
-                },
-                "srcResourceId": {
-                "type": "string"
-                },
-                "type": {
-                "type": "string"
-                }
+                    "name": {
+                        "type": "string"
+                    },
+                    "srcResourceId": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
                 },
                 "required": [
-                "srcResourceId",
-                "type"
+                    "srcResourceId",
+                    "type"
                 ],
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "role": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "role": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "name",
-                "resourceGroups",
-                "role"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "name",
+        "resourceGroups",
+        "role"
+    ],
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

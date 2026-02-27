@@ -1550,8 +1550,8 @@ class Sites(object):
 
         Args:
             id(str): id path parameter. Site Id.
-            offset(str): offset query parameter. Offset/starting index for pagination.
-            limit(str): limit query parameter. Number of devices to be listed. Default and max supported
+            offset(int): offset query parameter. Offset/starting index for pagination.
+            limit(int): limit query parameter. Number of devices to be listed. Default and max supported
                 value is 500.
             member_type(str): memberType query parameter. Member type (This API only supports the
                 'networkdevice' type) .
@@ -1574,8 +1574,8 @@ class Sites(object):
             https://developer.cisco.com/docs/dna-center/#!get-devices-that-are-assigned-to-a-site
         """
         check_type(headers, dict)
-        check_type(offset, str)
-        check_type(limit, str)
+        check_type(offset, int)
+        check_type(limit, int)
         check_type(member_type, str, may_be_none=False)
         check_type(level, str)
         check_type(id, str, may_be_none=False)
@@ -1832,8 +1832,8 @@ class Sites(object):
                 Global/USA/CA) .
             id(str): id query parameter. Site Id.
             type(str): type query parameter. Site type (Acceptable values: area, building, floor) .
-            offset(str): offset query parameter. Offset/starting index for pagination.
-            limit(str): limit query parameter. Number of sites to be listed. Default and max supported value
+            offset(int): offset query parameter. Offset/starting index for pagination.
+            limit(int): limit query parameter. Number of sites to be listed. Default and max supported value
                 is 500.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -1855,8 +1855,8 @@ class Sites(object):
         check_type(group_name_hierarchy, str)
         check_type(id, str)
         check_type(type, str)
-        check_type(offset, str)
-        check_type(limit, str)
+        check_type(offset, int)
+        check_type(limit, int)
         if headers is not None:
             if "X-Auth-Token" in headers:
                 check_type(headers.get("X-Auth-Token"), str, may_be_none=False)

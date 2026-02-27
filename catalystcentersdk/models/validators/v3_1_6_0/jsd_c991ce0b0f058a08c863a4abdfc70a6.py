@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateEmailDestination data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,87 +34,73 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC991Ce0B0F058A08C863A4Abdfc70A6(object):
     """CreateEmailDestination request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC991Ce0B0F058A08C863A4Abdfc70A6, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "emailConfigId": {
-                "type": "string"
-                },
-                "fromEmail": {
-                "type": "string"
-                },
-                "primarySMTPConfig": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "emailConfigId": {
+            "type": "string"
+        },
+        "fromEmail": {
+            "type": "string"
+        },
+        "primarySMTPConfig": {
+            "properties": {
                 "hostName": {
-                "type": "string"
+                    "type": "string"
                 },
                 "password": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "string"
+                    "type": "string"
                 },
                 "smtpType": {
-                "type": "string"
+                    "type": "string"
                 },
                 "userName": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "hostName"
-                ],
-                "type": "object"
-                },
-                "secondarySMTPConfig": {
-                "properties": {
+            },
+            "type": "object"
+        },
+        "secondarySMTPConfig": {
+            "properties": {
                 "hostName": {
-                "type": "string"
+                    "type": "string"
                 },
                 "password": {
-                "type": "string"
+                    "type": "string"
                 },
                 "port": {
-                "type": "string"
+                    "type": "string"
                 },
                 "smtpType": {
-                "type": "string"
+                    "type": "string"
                 },
                 "userName": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "hostName"
-                ],
-                "type": "object"
-                },
-                "subject": {
-                "type": "string"
-                },
-                "toEmail": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "primarySMTPConfig"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        },
+        "subject": {
+            "type": "string"
+        },
+        "toEmail": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

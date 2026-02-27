@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateSNMPv3Credentials data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,84 +34,73 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorBdc981805B5FAd0A038966D52558(object):
     """UpdateSNMPv3Credentials request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorBdc981805B5FAd0A038966D52558, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "authPassword": {
-                "type": "string"
-                },
-                "authType": {
-                "enum": [
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "authPassword": {
+            "type": "string"
+        },
+        "authType": {
+            "enum": [
                 "SHA",
                 "MD5"
-                ],
-                "type": "string"
-                },
-                "comments": {
-                "type": "string"
-                },
-                "credentialType": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "comments": {
+            "type": "string"
+        },
+        "credentialType": {
+            "enum": [
                 "GLOBAL",
                 "APP"
-                ],
-                "type": "string"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "id": {
-                "type": "string"
-                },
-                "instanceTenantId": {
-                "type": "string"
-                },
-                "instanceUuid": {
-                "type": "string"
-                },
-                "privacyPassword": {
-                "type": "string"
-                },
-                "privacyType": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "instanceTenantId": {
+            "type": "string"
+        },
+        "instanceUuid": {
+            "type": "string"
+        },
+        "privacyPassword": {
+            "type": "string"
+        },
+        "privacyType": {
+            "enum": [
                 "AES128"
-                ],
-                "type": "string"
-                },
-                "snmpMode": {
-                "enum": [
+            ],
+            "type": "string"
+        },
+        "snmpMode": {
+            "enum": [
                 "AUTHPRIV",
                 "AUTHNOPRIV",
                 "NOAUTHNOPRIV"
-                ],
-                "type": "string"
-                },
-                "username": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "id",
-                "snmpMode",
-                "username"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "username": {
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

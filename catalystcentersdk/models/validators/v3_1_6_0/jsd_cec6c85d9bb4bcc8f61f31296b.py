@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ReserveIPSubpool data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,111 +34,100 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorCeC6C85D9BB4BcC8F61F31296B(object):
     """ReserveIPSubpool request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorCeC6C85D9BB4BcC8F61F31296B, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "ipv4DhcpServers": {
-                "items": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "ipv4DhcpServers": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                },
-                "ipv4DnsServers": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "ipv4DnsServers": {
+            "items": {
                 "type": "string"
-                },
-                "type": "array"
-                },
-                "ipv4GateWay": {
+            },
+            "type": "array"
+        },
+        "ipv4GateWay": {
+            "type": "string"
+        },
+        "ipv4GlobalPool": {
+            "type": "string"
+        },
+        "ipv4Prefix": {
+            "type": "boolean"
+        },
+        "ipv4PrefixLength": {
+            "type": "integer"
+        },
+        "ipv4Subnet": {
+            "type": "string"
+        },
+        "ipv4TotalHost": {
+            "type": "integer"
+        },
+        "ipv6AddressSpace": {
+            "type": "boolean"
+        },
+        "ipv6DhcpServers": {
+            "items": {
                 "type": "string"
-                },
-                "ipv4GlobalPool": {
+            },
+            "type": "array"
+        },
+        "ipv6DnsServers": {
+            "items": {
                 "type": "string"
-                },
-                "ipv4Prefix": {
-                "type": "boolean"
-                },
-                "ipv4PrefixLength": {
-                "type": "integer"
-                },
-                "ipv4Subnet": {
-                "type": "string"
-                },
-                "ipv4TotalHost": {
-                "type": "integer"
-                },
-                "ipv6AddressSpace": {
-                "type": "boolean"
-                },
-                "ipv6DhcpServers": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "ipv6DnsServers": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "ipv6GateWay": {
-                "type": "string"
-                },
-                "ipv6GlobalPool": {
-                "type": "string"
-                },
-                "ipv6Prefix": {
-                "type": "boolean"
-                },
-                "ipv6PrefixLength": {
-                "type": "integer"
-                },
-                "ipv6Subnet": {
-                "type": "string"
-                },
-                "ipv6TotalHost": {
-                "type": "integer"
-                },
-                "name": {
-                "type": "string"
-                },
-                "slaacSupport": {
-                "type": "boolean"
-                },
-                "type": {
-                "enum": [
+            },
+            "type": "array"
+        },
+        "ipv6GateWay": {
+            "type": "string"
+        },
+        "ipv6GlobalPool": {
+            "type": "string"
+        },
+        "ipv6Prefix": {
+            "type": "boolean"
+        },
+        "ipv6PrefixLength": {
+            "type": "integer"
+        },
+        "ipv6Subnet": {
+            "type": "string"
+        },
+        "ipv6TotalHost": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "slaacSupport": {
+            "type": "boolean"
+        },
+        "type": {
+            "enum": [
                 "Generic",
                 "LAN",
                 "WAN",
                 "management",
                 "service"
-                ],
-                "type": "string"
-                }
-                },
-                "required": [
-                "name",
-                "type",
-                "ipv4GlobalPool",
-                "ipv4Prefix"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

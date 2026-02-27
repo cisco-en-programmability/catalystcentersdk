@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ImportSoftwareImageViaURL data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,44 +34,39 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorBe8Cdb967555FccA03A4C1F796Eee56(object):
     """ImportSoftwareImageViaURL request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorBe8Cdb967555FccA03A4C1F796Eee56, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "items": {
-                "properties": {
-                "applicationType": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "applicationType": {
                 "type": "string"
-                },
-                "imageFamily": {
+            },
+            "imageFamily": {
                 "type": "string"
-                },
-                "sourceURL": {
+            },
+            "sourceURL": {
                 "type": "string"
-                },
-                "thirdParty": {
+            },
+            "thirdParty": {
                 "type": "boolean"
-                },
-                "vendor": {
+            },
+            "vendor": {
                 "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateGlobalPool data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,69 +34,55 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC380301E3E05423Bdc1857Ff00Ae77A(object):
     """UpdateGlobalPool request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC380301E3E05423Bdc1857Ff00Ae77A, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "settings": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "settings": {
+            "properties": {
                 "ippool": {
-                "items": {
-                "properties": {
-                "dhcpServerIps": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "dnsServerIps": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "gateway": {
-                "type": "string"
-                },
-                "id": {
-                "type": "string"
-                },
-                "ipPoolName": {
-                "type": "string"
+                    "items": {
+                        "properties": {
+                            "dhcpServerIps": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "dnsServerIps": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "gateway": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "ipPoolName": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
                 }
-                },
-                "required": [
-                "id"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "ippool"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "settings"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

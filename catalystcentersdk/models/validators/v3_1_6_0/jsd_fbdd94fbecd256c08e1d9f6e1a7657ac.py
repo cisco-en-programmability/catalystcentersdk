@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center EditAuthenticationAndPolicyServerAccessConfiguration data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -35,119 +35,101 @@ from catalystcentersdk.exceptions import MalformedRequest
 class JSONSchemaValidatorFbdd94FbEcd256C08E1D9F6E1A7657Ac(object):
     """EditAuthenticationAndPolicyServerAccessConfiguration request
     schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorFbdd94FbEcd256C08E1D9F6E1A7657Ac, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "accountingPort": {
+            "type": "integer"
+        },
+        "authenticationPort": {
+            "type": "integer"
+        },
+        "ciscoIseDtos": {
+            "items": {
                 "properties": {
-                "accountingPort": {
-                "type": "integer"
-                },
-                "authenticationPort": {
-                "type": "integer"
-                },
-                "ciscoIseDtos": {
-                "items": {
-                "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "fqdn": {
-                "type": "string"
-                },
-                "ipAddress": {
-                "type": "string"
-                },
-                "password": {
-                "type": "string"
-                },
-                "sshkey": {
-                "type": "string"
-                },
-                "subscriberName": {
-                "type": "string"
-                },
-                "userName": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "fqdn",
-                "password",
-                "ipAddress",
-                "subscriberName",
-                "userName"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                },
-                "externalCiscoIseIpAddrDtos": {
-                "items": {
-                "properties": {
-                "externalCiscoIseIpAddresses": {
-                "items": {
-                "properties": {
-                "externalIpAddress": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "fqdn": {
+                        "type": "string"
+                    },
+                    "ipAddress": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "sshkey": {
+                        "type": "string"
+                    },
+                    "subscriberName": {
+                        "type": "string"
+                    },
+                    "userName": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "type": {
-                "type": "string"
-                }
+            },
+            "type": "array"
+        },
+        "externalCiscoIseIpAddrDtos": {
+            "items": {
+                "properties": {
+                    "externalCiscoIseIpAddresses": {
+                        "items": {
+                            "properties": {
+                                "externalIpAddress": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "port": {
-                "type": "integer"
-                },
-                "protocol": {
-                "enum": [
+            },
+            "type": "array"
+        },
+        "port": {
+            "type": "integer"
+        },
+        "protocol": {
+            "enum": [
                 "TACACS",
                 "RADIUS",
                 "RADIUS_TACACS"
-                ],
-                "type": "string"
-                },
-                "pxgridEnabled": {
-                "type": "boolean"
-                },
-                "retries": {
-                "type": "string"
-                },
-                "timeoutSeconds": {
-                "type": "string"
-                },
-                "useDnacCertForPxgrid": {
-                "type": "boolean"
-                }
-                },
-                "required": [
-                "protocol",
-                "retries",
-                "timeoutSeconds"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            ],
+            "type": "string"
+        },
+        "pxgridEnabled": {
+            "type": "boolean"
+        },
+        "retries": {
+            "type": "string"
+        },
+        "timeoutSeconds": {
+            "type": "string"
+        },
+        "useDnacCertForPxgrid": {
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

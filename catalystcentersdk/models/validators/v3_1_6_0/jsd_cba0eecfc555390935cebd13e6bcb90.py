@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center EditTheAccessPointsPositionsV2 data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,90 +34,66 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorCba0EecFc555390935CEbd13E6Bcb90(object):
     """EditTheAccessPointsPositionsV2 request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorCba0EecFc555390935CEbd13E6Bcb90, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "items": {
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "position": {
+                "properties": {
+                    "x": {
+                        "type": "number"
+                    },
+                    "y": {
+                        "type": "number"
+                    },
+                    "z": {
+                        "type": "number"
+                    }
+                },
+                "type": "object"
+            },
+            "radios": {
                 "items": {
-                "properties": {
-                "id": {
-                "type": "string"
-                },
-                "position": {
-                "properties": {
-                "x": {
-                "type": "number"
-                },
-                "y": {
-                "type": "number"
-                },
-                "z": {
-                "type": "number"
-                }
-                },
-                "required": [
-                "x",
-                "y",
-                "z"
-                ],
-                "type": "object"
-                },
-                "radios": {
-                "items": {
-                "properties": {
-                "antenna": {
-                "properties": {
-                "azimuth": {
-                "type": "integer"
-                },
-                "elevation": {
-                "type": "integer"
-                },
-                "name": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "name",
-                "azimuth",
-                "elevation"
-                ],
-                "type": "object"
-                },
-                "id": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "id",
-                "antenna"
-                ],
-                "type": "object"
+                    "properties": {
+                        "antenna": {
+                            "properties": {
+                                "azimuth": {
+                                    "type": "integer"
+                                },
+                                "elevation": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "type": "array"
-                }
-                },
-                "required": [
-                "id",
-                "position",
-                "radios"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            }
+        },
+        "type": "object"
+    },
+    "type": "array"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

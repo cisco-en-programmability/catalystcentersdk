@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateGlobalCredentialsV2 data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,149 +34,138 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorD2EcE28B509B8Ef80B2B8C5C5F36(object):
     """CreateGlobalCredentialsV2 request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorD2EcE28B509B8Ef80B2B8C5C5F36, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "cliCredential": {
+            "items": {
                 "properties": {
-                "cliCredential": {
-                "items": {
-                "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "enablePassword": {
-                "type": "string"
-                },
-                "password": {
-                "type": "string"
-                },
-                "username": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "enablePassword": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "httpsRead": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "httpsRead": {
+            "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "password": {
-                "type": "string"
-                },
-                "port": {
-                "type": "integer"
-                },
-                "username": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "port": {
+                        "type": "integer"
+                    },
+                    "username": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "httpsWrite": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "httpsWrite": {
+            "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "password": {
-                "type": "string"
-                },
-                "port": {
-                "type": "integer"
-                },
-                "username": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "port": {
+                        "type": "integer"
+                    },
+                    "username": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "snmpV2cRead": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "snmpV2cRead": {
+            "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "readCommunity": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "readCommunity": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "snmpV2cWrite": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "snmpV2cWrite": {
+            "items": {
                 "properties": {
-                "description":
-                 {
-                "type": "string"
-                },
-                "writeCommunity": {
-                "type": "string"
-                }
+                    "description": {
+                        "type": "string"
+                    },
+                    "writeCommunity": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                },
-                "type": "array"
-                },
-                "snmpV3": {
-                "items": {
+            },
+            "type": "array"
+        },
+        "snmpV3": {
+            "items": {
                 "properties": {
-                "authPassword": {
-                "type": "string"
-                },
-                "authType": {
-                "type": "string"
-                },
-                "description":
-                 {
-                "type": "string"
-                },
-                "privacyPassword": {
-                "type": "string"
-                },
-                "privacyType": {
-                "type": "string"
-                },
-                "snmpMode": {
-                "type": "string"
-                },
-                "username": {
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "type": "array"
-                }
+                    "authPassword": {
+                        "type": "string"
+                    },
+                    "authType": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "privacyPassword": {
+                        "type": "string"
+                    },
+                    "privacyType": {
+                        "type": "string"
+                    },
+                    "snmpMode": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

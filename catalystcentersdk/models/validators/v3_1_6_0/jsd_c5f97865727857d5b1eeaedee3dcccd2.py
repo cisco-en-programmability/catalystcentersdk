@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateNetworkV2 data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,166 +34,145 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorC5F97865727857D5B1EeAedee3Dcccd2(object):
     """CreateNetworkV2 request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorC5F97865727857D5B1EeAedee3Dcccd2, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                "settings": {
-                "properties": {
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "settings": {
+            "properties": {
                 "clientAndEndpoint_aaa": {
-                "properties": {
-                "ipAddress": {
-                "type": "string"
-                },
-                "network": {
-                "type": "string"
-                },
-                "protocol": {
-                "type": "string"
-                },
-                "servers": {
-                "type": "string"
-                },
-                "sharedSecret": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "servers",
-                "network",
-                "protocol"
-                ],
-                "type": "object"
+                    "properties": {
+                        "ipAddress": {
+                            "type": "string"
+                        },
+                        "network": {
+                            "type": "string"
+                        },
+                        "protocol": {
+                            "type": "string"
+                        },
+                        "servers": {
+                            "type": "string"
+                        },
+                        "sharedSecret": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "dhcpServer": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "dnsServer": {
-                "properties": {
-                "domainName": {
-                "type": "string"
-                },
-                "primaryIpAddress": {
-                "type": "string"
-                },
-                "secondaryIpAddress": {
-                "type": "string"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "domainName": {
+                            "type": "string"
+                        },
+                        "primaryIpAddress": {
+                            "type": "string"
+                        },
+                        "secondaryIpAddress": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "messageOfTheday": {
-                "properties": {
-                "bannerMessage": {
-                "type": "string"
-                },
-                "retainExistingBanner": {
-                "type": "string"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "bannerMessage": {
+                            "type": "string"
+                        },
+                        "retainExistingBanner": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "netflowcollector": {
-                "properties": {
-                "ipAddress": {
-                "type": "string"
-                },
-                "port": {
-                "type": "number"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "ipAddress": {
+                            "type": "string"
+                        },
+                        "port": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
                 },
                 "network_aaa": {
-                "properties": {
-                "ipAddress": {
-                "type": "string"
-                },
-                "network": {
-                "type": "string"
-                },
-                "protocol": {
-                "type": "string"
-                },
-                "servers": {
-                "type": "string"
-                },
-                "sharedSecret": {
-                "type": "string"
-                }
-                },
-                "required": [
-                "servers",
-                "network",
-                "protocol"
-                ],
-                "type": "object"
+                    "properties": {
+                        "ipAddress": {
+                            "type": "string"
+                        },
+                        "network": {
+                            "type": "string"
+                        },
+                        "protocol": {
+                            "type": "string"
+                        },
+                        "servers": {
+                            "type": "string"
+                        },
+                        "sharedSecret": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
                 },
                 "ntpServer": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "snmpServer": {
-                "properties": {
-                "configureDnacIP": {
-                "type": "boolean"
-                },
-                "ipAddresses": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "configureDnacIP": {
+                            "type": "boolean"
+                        },
+                        "ipAddresses": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
                 },
                 "syslogServer": {
-                "properties": {
-                "configureDnacIP": {
-                "type": "boolean"
-                },
-                "ipAddresses": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
+                    "properties": {
+                        "configureDnacIP": {
+                            "type": "boolean"
+                        },
+                        "ipAddresses": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
                 },
                 "timezone": {
-                "type": "string"
+                    "type": "string"
                 }
-                },
-                "required": [
-                "timezone"
-                ],
-                "type": "object"
-                }
-                },
-                "required": [
-                "settings"
-                ],
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )

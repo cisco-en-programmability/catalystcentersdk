@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Cisco Catalyst Center ImportProfilingRulesInBulk data model.
 
-Copyright (c) 2026 Cisco Systems.
+Copyright (c) 2025 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+from builtins import *
 
 import fastjsonschema
 
@@ -34,163 +34,154 @@ from catalystcentersdk.exceptions import MalformedRequest
 
 class JSONSchemaValidatorB4155D6F885A53Ad0E47B1A4(object):
     """ImportProfilingRulesInBulk request schema definition."""
-
     def __init__(self):
         super(JSONSchemaValidatorB4155D6F885A53Ad0E47B1A4, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
-                "$schema": "http://json-schema.org/draft-04/schema#",
+        self._validator = fastjsonschema.compile(json.loads('''
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "profilingRules": {
+            "items": {
                 "properties": {
-                "profilingRules": {
-                "items": {
-                "properties": {
-                "clusterId": {
-                "type": "string"
-                },
-                "conditionGroups": {
-                "properties": {
-                "condition": {
-                "properties": {
-                "attribute": {
-                "type": "string"
-                },
-                "attributeDictionary": {
-                "type": "string"
-                },
-                "operator": {
-                "enum": [
-                "equals",
-                "contains",
-                "startswith",
-                "matches"
-                ],
-                "type": "string"
-                },
-                "value": {
-                "type": "string"
-                }
+                    "clusterId": {
+                        "type": "string"
+                    },
+                    "conditionGroups": {
+                        "properties": {
+                            "condition": {
+                                "properties": {
+                                    "attribute": {
+                                        "type": "string"
+                                    },
+                                    "attributeDictionary": {
+                                        "type": "string"
+                                    },
+                                    "operator": {
+                                        "enum": [
+                                            "equals",
+                                            "contains",
+                                            "startswith",
+                                            "matches"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "conditionGroup": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "operator": {
+                                "enum": [
+                                    "and",
+                                    "or"
+                                ],
+                                "type": "string"
+                            },
+                            "type": {
+                                "enum": [
+                                    "attr",
+                                    "classification"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "isDeleted": {
+                        "type": "boolean"
+                    },
+                    "lastModifiedBy": {
+                        "type": "string"
+                    },
+                    "lastModifiedOn": {
+                        "type": "integer"
+                    },
+                    "pluginId": {
+                        "type": "string"
+                    },
+                    "rejected": {
+                        "type": "boolean"
+                    },
+                    "result": {
+                        "properties": {
+                            "deviceType": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "hardwareManufacturer": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "hardwareModel": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "operatingSystem": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "ruleId": {
+                        "type": "string"
+                    },
+                    "ruleName": {
+                        "type": "string"
+                    },
+                    "rulePriority": {
+                        "type": "integer"
+                    },
+                    "ruleType": {
+                        "enum": [
+                            "Cisco Default - Static",
+                            "Cisco Default - Dynamic",
+                            "Custom Rule",
+                            "ML Rule"
+                        ],
+                        "type": "string"
+                    },
+                    "ruleVersion": {
+                        "type": "integer"
+                    },
+                    "sourcePriority": {
+                        "type": "integer"
+                    },
+                    "usedAttributes": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
                 },
                 "type": "object"
-                },
-                "conditionGroup": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "operator": {
-                "enum": [
-                "and",
-                "or"
-                ],
-                "type": "string"
-                },
-                "type": {
-                "enum": [
-                "attr",
-                "classification"
-                ],
-                "type": "string"
-                }
-                },
-                "type": "object"
-                },
-                "isDeleted": {
-                "type": "boolean"
-                },
-                "lastModifiedBy": {
-                "type": "string"
-                },
-                "lastModifiedOn": {
-                "type": "integer"
-                },
-                "pluginId": {
-                "type": "string"
-                },
-                "rejected": {
-                "type": "boolean"
-                },
-                "result": {
-                "properties": {
-                "deviceType": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "hardwareManufacturer": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "hardwareModel": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                },
-                "operatingSystem": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                },
-                "ruleId": {
-                "type": "string"
-                },
-                "ruleName": {
-                "type": "string"
-                },
-                "rulePriority": {
-                "type": "integer"
-                },
-                "ruleType": {
-                "enum": [
-                "Cisco Default - Static",
-                "Cisco Default - Dynamic",
-                "Custom Rule",
-                "ML Rule"
-                ],
-                "type": "string"
-                },
-                "ruleVersion": {
-                "type": "integer"
-                },
-                "sourcePriority": {
-                "type": "integer"
-                },
-                "usedAttributes": {
-                "items": {
-                "type": "string"
-                },
-                "type": "array"
-                }
-                },
-                "required": [
-                "ruleName",
-                "ruleType"
-                ],
-                "type": "object"
-                },
-                "type": "array"
-                }
-                },
-                "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+'''))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                "{} is invalid. Reason: {}".format(request, e.message)
+                '{} is invalid. Reason: {}'.format(request, e.message)
             )
