@@ -440,26 +440,35 @@ class ConfigurationArchive(object):
         )
 
     def download_masked_device_configuration(
-        self, id, headers=None, **request_parameters
+        self, id, dirpath=None, save_file=None, filename=None,
+        headers=None, **request_parameters
     ):
         """Download the masked (sanitized) device configuration by providing the file `id`.
 
         Args:
             id(str): id path parameter. The value of `id` can be obtained from the response of API
                 `/dna/intent/api/v1/networkDeviceConfigFiles`.
+            dirpath(str): Directory absolute path. Defaults to
+                os.getcwd().
+            save_file(bool): Enable or disable automatic file creation of
+                raw response.
+            filename(str): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            MyDict: JSON response. Access the object's properties by using
-            the dot notation or the bracket notation.
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
+            information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         Documentation Link:
             https://developer.cisco.com/docs/dna-center/#!download-masked-device-configuration
         """
@@ -489,10 +498,14 @@ class ConfigurationArchive(object):
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             json_data = self._session.post(
-                endpoint_full_url, params=_params, headers=_headers
+                endpoint_full_url, params=_params, headers=_headers,
+                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
             )
         else:
-            json_data = self._session.post(endpoint_full_url, params=_params)
+            json_data = self._session.post(
+                endpoint_full_url, params=_params,
+                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
+            )
 
         return self._object_factory(
             "bpm_fe0e28b3465084b5ee60a43602be1c_v3_1_6_0", json_data
@@ -502,6 +515,9 @@ class ConfigurationArchive(object):
         self,
         id,
         password=None,
+        dirpath=None,
+        save_file=None,
+        filename=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -519,6 +535,12 @@ class ConfigurationArchive(object):
                 space or the characters <>.
             id(str): id path parameter. The value of `id` can be obtained from the response of API
                 `/dna/intent/api/v1/networkDeviceConfigFiles`.
+            dirpath(str): Directory absolute path. Defaults to
+                os.getcwd().
+            save_file(bool): Enable or disable automatic file creation of
+                raw response.
+            filename(str): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -529,13 +551,15 @@ class ConfigurationArchive(object):
                 support for parameters that may be added in the future).
 
         Returns:
-            MyDict: JSON response. Access the object's properties by using
-            the dot notation or the bracket notation.
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
+            information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         Documentation Link:
             https://developer.cisco.com/docs/dna-center/#!download-unmaskedraw-device-configuration-as-z-i-p
         """
@@ -575,11 +599,16 @@ class ConfigurationArchive(object):
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             json_data = self._session.post(
-                endpoint_full_url, params=_params, json=_payload, headers=_headers
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                headers=_headers,
+                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
             )
         else:
             json_data = self._session.post(
-                endpoint_full_url, params=_params, json=_payload
+                endpoint_full_url, params=_params, json=_payload,
+                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
             )
 
         return self._object_factory(
