@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.2] - 2026-03-30
+### Fixed
+- Added missing `dirpath`, `save_file`, `filename` parameters and `stream=True` to `download_masked_device_configuration` and `download_unmaskedraw_device_configuration_as_zip` methods in Configuration Archive module for versions 2.3.7.9, 3.1.3.0 and 3.1.6.0. These parameters are required for file download functionality to work correctly.
+
+### Changed
+- Updated `requests` dependency minimum version from 2.32.0 to 2.33.0 across pyproject.toml, Pipfile, and setup.py.
+- Regenerated Pipfile.lock, poetry.lock, requirements.txt, and requirements-dev.txt with updated dependencies.
+
 ## [3.1.6.0.1] - 2026-02-27
 ### Fixed
 - Corrected `offset` and `limit` parameter types from `str` to `int` in pagination-related API methods across versions 2.3.7.6.1, 2.3.7.9, and 3.1.3.0. Affected modules: Sites, Devices, Application Policy, LAN Automation, SDA, and Wireless.
@@ -135,4 +143,5 @@ to "application".
 [3.1.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.0...v3.1.3.0.1
 [3.1.6.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...v3.1.6.0.0
 [3.1.6.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.0...v3.1.6.0.1
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...develop
+[3.1.6.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...develop
