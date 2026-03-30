@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [3.1.6.0.2] - 2026-03-27
+## [3.1.6.0.2] - 2026-03-30
 ### Fixed
 - Added missing `dirpath`, `save_file`, `filename` parameters and `stream=True` to `download_masked_device_configuration` and `download_unmaskedraw_device_configuration_as_zip` methods in Configuration Archive module for versions 3.1.3.0 and 3.1.6.0. These parameters are required for file download functionality to work correctly.
 

@@ -11,7 +11,7 @@ Versioning <https://semver.org/spec/v2.0.0.html>`__.
 `Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...develop>`__
 -----------------------------------------------------------------------------------------------------------
 
-`3.1.6.0.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2>`__ - 2026-03-27
+`3.1.6.0.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2>`__ - 2026-03-30
 --------------------------------------------------------------------------------------------------------------------------
 
 Fixed
