@@ -8,7 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.1.6.0.2] - 2026-03-30
 ### Fixed
-- Added missing `dirpath`, `save_file`, `filename` parameters and `stream=True` to `download_masked_device_configuration` and `download_unmaskedraw_device_configuration_as_zip` methods in Configuration Archive module for versions 3.1.3.0 and 3.1.6.0. These parameters are required for file download functionality to work correctly.
+- Added missing `dirpath`, `save_file`, `filename` parameters and `stream=True` to `download_masked_device_configuration` and `download_unmaskedraw_device_configuration_as_zip` methods in Configuration Archive module for versions 2.3.7.9, 3.1.3.0 and 3.1.6.0. These parameters are required for file download functionality to work correctly.
+
+### Changed
+- Updated `requests` dependency minimum version from 2.32.0 to 2.33.0 across pyproject.toml, Pipfile, and setup.py.
+- Regenerated Pipfile.lock, poetry.lock, requirements.txt, and requirements-dev.txt with updated dependencies.
 
 ## [3.1.6.0.1] - 2026-02-27
 ### Fixed

@@ -20,9 +20,17 @@ Fixed
 - Added missing ``dirpath``, ``save_file``, ``filename`` parameters and
   ``stream=True`` to ``download_masked_device_configuration`` and
   ``download_unmaskedraw_device_configuration_as_zip`` methods in
-  Configuration Archive module for versions 3.1.3.0 and 3.1.6.0. These
-  parameters are required for file download functionality to work
-  correctly.
+  Configuration Archive module for versions 2.3.7.9, 3.1.3.0 and
+  3.1.6.0. These parameters are required for file download functionality
+  to work correctly.
+
+Changed
+~~~~~~~
+
+- Updated ``requests`` dependency minimum version from 2.32.0 to 2.33.0
+  across pyproject.toml, Pipfile, and setup.py.
+- Regenerated Pipfile.lock, poetry.lock, requirements.txt, and
+  requirements-dev.txt with updated dependencies.
 
 .. _section-1:
 
@@ -44,6 +52,8 @@ Fixed
   (``schedule``, ``deliveries``).
 - Updated request validation schemas across versions 2.3.7.6.1, 2.3.7.9,
   3.1.3.0, and 3.1.6.0.
+
+.. _changed-1:
 
 Changed
 ~~~~~~~
@@ -78,7 +88,7 @@ Added
 - GitHub issue templates for bug reports and feature requests
 - Configuration file for GitHub issues (config.yml)
 
-.. _changed-1:
+.. _changed-2:
 
 Changed
 ~~~~~~~
@@ -207,7 +217,7 @@ Added
 
 - Cisco_IMC module added
 
-.. _changed-2:
+.. _changed-3:
 
 Changed
 ~~~~~~~
@@ -276,7 +286,7 @@ Added
 
 - Documentation for alias functions has been added
 
-.. _changed-3:
+.. _changed-4:
 
 Changed
 ~~~~~~~
