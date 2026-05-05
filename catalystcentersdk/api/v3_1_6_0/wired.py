@@ -628,6 +628,7 @@ class Wired(object):
         stpInterfaceConfig=None,
         switchportInterfaceConfig=None,
         trunkInterfaceConfig=None,
+        udldGlobalConfig=None,
         vlanConfig=None,
         vtpGlobalConfig=None,
         vtpInterfaceConfig=None,
@@ -660,6 +661,7 @@ class Wired(object):
             stpInterfaceConfig(object): Wired's stpInterfaceConfig.
             switchportInterfaceConfig(object): Wired's switchportInterfaceConfig.
             trunkInterfaceConfig(object): Wired's trunkInterfaceConfig.
+            udldGlobalConfig(object): Wired's udldGlobalConfig.
             vlanConfig(object): Wired's vlanConfig.
             vtpGlobalConfig(object): Wired's vtpGlobalConfig.
             vtpInterfaceConfig(object): Wired's vtpInterfaceConfig.
@@ -720,6 +722,7 @@ class Wired(object):
             "stpGlobalConfig": stpGlobalConfig,
             "stpInterfaceConfig": stpInterfaceConfig,
             "trunkInterfaceConfig": trunkInterfaceConfig,
+            "udldGlobalConfig": udldGlobalConfig,
             "vtpGlobalConfig": vtpGlobalConfig,
             "vtpInterfaceConfig": vtpInterfaceConfig,
             "vlanConfig": vlanConfig,
@@ -777,6 +780,7 @@ class Wired(object):
         stpInterfaceConfig=None,
         switchportInterfaceConfig=None,
         trunkInterfaceConfig=None,
+        udldGlobalConfig=None,
         vlanConfig=None,
         vtpGlobalConfig=None,
         vtpInterfaceConfig=None,
@@ -810,6 +814,7 @@ class Wired(object):
             stpInterfaceConfig(object): Wired's stpInterfaceConfig.
             switchportInterfaceConfig(object): Wired's switchportInterfaceConfig.
             trunkInterfaceConfig(object): Wired's trunkInterfaceConfig.
+            udldGlobalConfig(object): Wired's udldGlobalConfig.
             vlanConfig(object): Wired's vlanConfig.
             vtpGlobalConfig(object): Wired's vtpGlobalConfig.
             vtpInterfaceConfig(object): Wired's vtpInterfaceConfig.
@@ -869,6 +874,7 @@ class Wired(object):
             "stpGlobalConfig": stpGlobalConfig,
             "stpInterfaceConfig": stpInterfaceConfig,
             "trunkInterfaceConfig": trunkInterfaceConfig,
+            "udldGlobalConfig": udldGlobalConfig,
             "vtpGlobalConfig": vtpGlobalConfig,
             "vtpInterfaceConfig": vtpInterfaceConfig,
             "vlanConfig": vlanConfig,

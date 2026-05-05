@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.3] - 2026-05-05
+### Fixed
+- **Content-Type None TypeError (Issue #18)**: Fixed `pprint_response_info()` in `utils.py` crashing with `TypeError: argument of type 'NoneType' is not iterable` when an API response lacks a `Content-Type` header. Changed `response.headers.get("Content-Type")` to `response.headers.get("Content-Type", "")` so the `in` check safely handles `None`.
+- **Webhook destination headers collision (Issue #20)**: Fixed `TypeError` in `create_webhook_destination()` and `update_webhook_destination()` across all API versions (2.3.7.6.1, 2.3.7.9, 3.1.3.0, 3.1.6.0) in the Event Management module. The `headers` parameter was incorrectly overloaded for both webhook custom headers (list) and HTTP request headers (dict). Renamed the webhook payload field parameter to `webhook_headers` to eliminate the collision. Users must now pass custom webhook headers via `webhook_headers=[...]`; the `headers` parameter continues to accept a dict for HTTP transport.
+- **Missing `udldGlobalConfig` support (Issue #17 equivalent / Issue #246)**: Added `udldGlobalConfig` parameter to `create_configurations_for_an_intended_layer2_feature_on_a_wired_device()` and `update_configurations_for_an_intended_layer2_feature_on_a_wired_device()` across all API versions (2.3.7.9, 3.1.3.0, 3.1.6.0) in the Wired module. UDLD global configuration can now be created and updated through the SDK.
+- **Port Channel Configuration key casing (portchannelConfig)**: Fixed payload key mismatch in `create_configurations_for_an_intended_layer2_feature_on_a_wired_device()` and `update_configurations_for_an_intended_layer2_feature_on_a_wired_device()` for API versions 2.3.7.9 and 3.1.3.0. The payload key `"portChannelConfig"` (uppercase C) was renamed to `"portchannelConfig"` (lowercase c) to match the API's expected format, consistent with v3.1.6.0 and the dnacentersdk. Updated request validator schemas for v3.1.3.0 and v3.1.6.0 (`jsd_d7b57050bdb98e9340d0bc4dba`, `jsd_ee7664344f50cb8f2c94beaa01629d`) to use the same corrected key.
+- **`udldGlobalConfig` validator relaxed**: Replaced the strict `udldGlobalConfig` JSON schema (which constrained `configType` to an enum, `isUdldEnabled`/`udldAggressive` to booleans, and `messageTime` to integer) with an open schema (`{}`) across all API versions (2.3.7.9, 3.1.3.0, 3.1.6.0). The field is not present in the official Cisco Catalyst Center OpenAPI specification, so a permissive schema prevents false validation failures as the API evolves.
+
 ## [3.1.6.0.2] - 2026-03-30
 ### Fixed
 - Added missing `dirpath`, `save_file`, `filename` parameters and `stream=True` to `download_masked_device_configuration` and `download_unmaskedraw_device_configuration_as_zip` methods in Configuration Archive module for versions 2.3.7.9, 3.1.3.0 and 3.1.6.0. These parameters are required for file download functionality to work correctly.
@@ -144,4 +152,5 @@ to "application".
 [3.1.6.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...v3.1.6.0.0
 [3.1.6.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.0...v3.1.6.0.1
 [3.1.6.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...develop
+[3.1.6.0.3]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...develop
