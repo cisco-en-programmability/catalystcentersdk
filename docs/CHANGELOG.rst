@@ -8,11 +8,59 @@ Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project
 adheres to `Semantic
 Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
-`Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...develop>`__
+`Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...develop>`__
 -----------------------------------------------------------------------------------------------------------
+
+[3.1.6.0.3] - 2026-05-05
+------------------------
+
+Fixed
+~~~~~
+
+- **Content-Type None TypeError (Issue #18)**: Fixed
+  ``pprint_response_info()`` in ``utils.py`` crashing with
+  ``TypeError: argument of type 'NoneType' is not iterable`` when an API
+  response lacks a ``Content-Type`` header. Changed
+  ``response.headers.get("Content-Type")`` to
+  ``response.headers.get("Content-Type", "")`` so the ``in`` check
+  safely handles ``None``.
+- **Webhook destination headers collision (Issue #20)**: Fixed
+  ``TypeError`` in ``create_webhook_destination()`` and
+  ``update_webhook_destination()`` across all API versions (2.3.7.6.1,
+  2.3.7.9, 3.1.3.0, 3.1.6.0) in the Event Management module. The
+  ``headers`` parameter was incorrectly overloaded for both webhook
+  custom headers (list) and HTTP request headers (dict). Renamed the
+  webhook payload field parameter to ``webhook_headers`` to eliminate
+  the collision. Users must now pass custom webhook headers via
+  ``webhook_headers=[...]``; the ``headers`` parameter continues to
+  accept a dict for HTTP transport.
+- **Missing ``udldGlobalConfig`` support (Issue #17 equivalent / Issue
+  #246)**: Added ``udldGlobalConfig`` parameter to
+  ``create_configurations_for_an_intended_layer2_feature_on_a_wired_device()``
+  and
+  ``update_configurations_for_an_intended_layer2_feature_on_a_wired_device()``
+  across all API versions (2.3.7.9, 3.1.3.0, 3.1.6.0) in the Wired
+  module. UDLD global configuration can now be created and updated
+  through the SDK.
+- **Port Channel Configuration key casing (portchannelConfig)**: Fixed
+  payload key mismatch in
+  ``create_configurations_for_an_intended_layer2_feature_on_a_wired_device()``
+  and
+  ``update_configurations_for_an_intended_layer2_feature_on_a_wired_device()``
+  for API versions 2.3.7.9 and 3.1.3.0. The payload key
+  ``"portChannelConfig"`` (uppercase C) was renamed to
+  ``"portchannelConfig"`` (lowercase c) to match the API’s expected
+  format, consistent with v3.1.6.0 and the dnacentersdk. Updated request
+  validator schemas for v3.1.3.0 and v3.1.6.0
+  (``jsd_d7b57050bdb98e9340d0bc4dba``,
+  ``jsd_ee7664344f50cb8f2c94beaa01629d``) to use the same corrected key.
+
+.. _section-1:
 
 `3.1.6.0.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2>`__ - 2026-03-30
 --------------------------------------------------------------------------------------------------------------------------
+
+.. _fixed-1:
 
 Fixed
 ~~~~~
@@ -32,12 +80,12 @@ Changed
 - Regenerated Pipfile.lock, poetry.lock, requirements.txt, and
   requirements-dev.txt with updated dependencies.
 
-.. _section-1:
+.. _section-2:
 
 `3.1.6.0.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.0...v3.1.6.0.1>`__ - 2026-02-27
 --------------------------------------------------------------------------------------------------------------------------
 
-.. _fixed-1:
+.. _fixed-2:
 
 Fixed
 ~~~~~
@@ -61,7 +109,7 @@ Changed
 - Added explicit ``python_version = "3.12"`` requirement to Pipfile.
 - Updated ``certifi`` dependency.
 
-.. _section-2:
+.. _section-3:
 
 `3.1.6.0.0 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...v3.1.6.0.0>`__ - 2026-02-11
 --------------------------------------------------------------------------------------------------------------------------
@@ -75,7 +123,7 @@ Added
 
   - ``system_software_upgrade``
 
-.. _section-3:
+.. _section-4:
 
 `3.1.3.0.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.0...v3.1.3.0.1>`__ - 2026-02-06
 --------------------------------------------------------------------------------------------------------------------------
@@ -126,7 +174,7 @@ Changed
   - ``get_the_are_p_ring_based_on_the_ring_id`` to
     ``get_the_rep_ring_based_on_the_ring_id``
 
-.. _section-4:
+.. _section-5:
 
 `3.1.3.0.0 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.5...v3.1.3.0.0>`__ - 2025-06-19
 --------------------------------------------------------------------------------------------------------------------------
@@ -161,7 +209,7 @@ Added
 - The v1 alias functions were all removed. Example… if your using
   “application_v1” you must be able to change it to “application”.
 
-.. _section-5:
+.. _section-6:
 
 `2.3.7.9.5 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.4...v2.3.7.9.5>`__ - 2025-03-05
 --------------------------------------------------------------------------------------------------------------------------
@@ -171,7 +219,7 @@ Fix
 
 - Error correction in the user_and_roles module
 
-.. _section-6:
+.. _section-7:
 
 `2.3.7.9.4 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.3...v2.3.7.9.4>`__ - 2025-02-28
 --------------------------------------------------------------------------------------------------------------------------
@@ -183,7 +231,7 @@ Added
 
 - Add support of DNA Center versions (‘2.3.7.7’)
 
-.. _section-7:
+.. _section-8:
 
 `2.3.7.9.3 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.2...v2.3.7.9.3>`__ - 2025-02-24
 --------------------------------------------------------------------------------------------------------------------------
@@ -197,7 +245,7 @@ Fix
   deploy_template functions in version 1 and 2. In 2.3.5.3, 2.3.7.6 and
   2.3.7.9.
 
-.. _section-8:
+.. _section-9:
 
 `2.3.7.9.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.1...v2.3.7.9.2>`__ - 2025-02-17
 --------------------------------------------------------------------------------------------------------------------------
@@ -226,7 +274,7 @@ Changed
 - Some functions were changed in versions 2.3.7.6 and 2.3.7.9 to handle
   files
 
-.. _section-9:
+.. _section-10:
 
 `2.3.7.9.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.0...v2.3.7.9.1>`__ - 2025-01-14
 --------------------------------------------------------------------------------------------------------------------------
@@ -241,7 +289,7 @@ Fix
 - Fixed a bug in site_design in the uploads_floor_image function in
   versions 2.3.7.6 and 2.3.7.9
 
-.. _section-10:
+.. _section-11:
 
 `2.3.7.9.0 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.6.2...v2.3.7.9.0>`__ - 2024-12-12
 --------------------------------------------------------------------------------------------------------------------------
@@ -254,7 +302,7 @@ Added
 - Add support of Catalyst Center versions (‘2.3.7.9’)
 - Adds modules for v2_3_7_9
 
-.. _section-11:
+.. _section-12:
 
 `2.3.7.6.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.6.1...v2.3.7.6.2>`__ - 2024-11-20
 --------------------------------------------------------------------------------------------------------------------------
@@ -274,7 +322,7 @@ Fix
 - The get_templates_details function was added because it was named
   incorrectly. There was an “s” missing from the word templates
 
-.. _section-12:
+.. _section-13:
 
 `2.3.7.6.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.6.0...v2.3.7.6.1>`__ - 2024-11-05
 --------------------------------------------------------------------------------------------------------------------------
@@ -295,7 +343,7 @@ Changed
 - Modification of documentation references in functions
 - The user_agent structure is modified
 
-.. _section-13:
+.. _section-14:
 
 `2.3.7.6.0 <https://github.com/cisco-en-programmability/catalystcentersdk/releases/tag/v2.3.7.6.0>`__ - 2024-10-30
 ------------------------------------------------------------------------------------------------------------------

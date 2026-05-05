@@ -574,7 +574,7 @@ class JSONSchemaValidatorEe7664344F50Cb8F2C94Beaa01629D(object):
             },
             "type": "object"
         },
-        "portChannelConfig": {
+        "portchannelConfig": {
             "properties": {
                 "items": {
                     "items": {
@@ -1137,6 +1137,34 @@ class JSONSchemaValidatorEe7664344F50Cb8F2C94Beaa01629D(object):
                             },
                             "pruneEligibleVlans": {
                                 "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "udldGlobalConfig": {
+            "properties": {
+                "items": {
+                    "items": {
+                        "properties": {
+                            "configType": {
+                                "enum": [
+                                    "UDLD_GLOBAL"
+                                ],
+                                "type": "string"
+                            },
+                            "isUdldEnabled": {
+                                "type": "boolean"
+                            },
+                            "udldAggressive": {
+                                "type": "boolean"
+                            },
+                            "messageTime": {
+                                "type": "integer"
                             }
                         },
                         "type": "object"

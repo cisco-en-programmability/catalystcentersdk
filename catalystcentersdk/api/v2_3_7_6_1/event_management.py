@@ -2882,13 +2882,13 @@ class EventManagement(object):
     def create_webhook_destination(
         self,
         description=None,
-        headers=None,
         isProxyRoute=None,
         method=None,
         name=None,
         trustCert=None,
         url=None,
         webhookId=None,
+        webhook_headers=None,
         payload=None,
         customHeaders=None,
         active_validation=True,
@@ -2898,13 +2898,13 @@ class EventManagement(object):
 
         Args:
             description(string): Event Management's Description.
-            headers(list): Event Management's headers (list of objects).
             isProxyRoute(boolean): Event Management's Is Proxy Route.
             method(string): Event Management's Method. Available values are 'POST' and 'PUT'.
             name(string): Event Management's Name.
             trustCert(boolean): Event Management's Trust Cert.
             url(string): Event Management's Url.
             webhookId(string): Event Management's Required only for update webhook configuration.
+            webhook_headers(list): Event Management's headers (list of objects).
             customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -2945,7 +2945,7 @@ class EventManagement(object):
             "url": url,
             "method": method,
             "trustCert": trustCert,
-            "headers": headers,
+            "headers": webhook_headers,
             "isProxyRoute": isProxyRoute,
         }
         _payload.update(payload or {})
@@ -2982,13 +2982,13 @@ class EventManagement(object):
     def update_webhook_destination(
         self,
         description=None,
-        headers=None,
         isProxyRoute=None,
         method=None,
         name=None,
         trustCert=None,
         url=None,
         webhookId=None,
+        webhook_headers=None,
         payload=None,
         customHeaders=None,
         active_validation=True,
@@ -2998,13 +2998,13 @@ class EventManagement(object):
 
         Args:
             description(string): Event Management's Description.
-            headers(list): Event Management's headers (list of objects).
             isProxyRoute(boolean): Event Management's Is Proxy Route.
             method(string): Event Management's Method. Available values are 'POST' and 'PUT'.
             name(string): Event Management's Name.
             trustCert(boolean): Event Management's Trust Cert.
             url(string): Event Management's Url.
             webhookId(string): Event Management's Required only for update webhook configuration.
+            webhook_headers(list): Event Management's headers (list of objects).
             customHeaders(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -3043,7 +3043,7 @@ class EventManagement(object):
             "url": url,
             "method": method,
             "trustCert": trustCert,
-            "headers": headers,
+            "headers": webhook_headers,
             "isProxyRoute": isProxyRoute,
         }
         _payload.update(payload or {})
