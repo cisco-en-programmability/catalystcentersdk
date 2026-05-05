@@ -11,8 +11,8 @@ Versioning <https://semver.org/spec/v2.0.0.html>`__.
 `Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...develop>`__
 -----------------------------------------------------------------------------------------------------------
 
-[3.1.6.0.3] - 2026-05-05
-------------------------
+`3.1.6.0.3 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3>`__ - 2026-05-05
+--------------------------------------------------------------------------------------------------------------------------
 
 Fixed
 ~~~~~
@@ -54,6 +54,14 @@ Fixed
   validator schemas for v3.1.3.0 and v3.1.6.0
   (``jsd_d7b57050bdb98e9340d0bc4dba``,
   ``jsd_ee7664344f50cb8f2c94beaa01629d``) to use the same corrected key.
+- **``udldGlobalConfig`` validator relaxed**: Replaced the strict
+  ``udldGlobalConfig`` JSON schema (which constrained ``configType`` to
+  an enum, ``isUdldEnabled``/``udldAggressive`` to booleans, and
+  ``messageTime`` to integer) with an open schema (``{}``) across all
+  API versions (2.3.7.9, 3.1.3.0, 3.1.6.0). The field is not present in
+  the official Cisco Catalyst Center OpenAPI specification, so a
+  permissive schema prevents false validation failures as the API
+  evolves.
 
 .. _section-1:
 

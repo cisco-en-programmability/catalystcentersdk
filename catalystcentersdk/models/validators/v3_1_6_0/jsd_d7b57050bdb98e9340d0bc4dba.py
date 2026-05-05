@@ -1146,34 +1146,7 @@ class JSONSchemaValidatorD7B57050BdB98E9340D0Bc4Dba(object):
             },
             "type": "object"
         },
-        "udldGlobalConfig": {
-            "properties": {
-                "items": {
-                    "items": {
-                        "properties": {
-                            "configType": {
-                                "enum": [
-                                    "UDLD_GLOBAL"
-                                ],
-                                "type": "string"
-                            },
-                            "isUdldEnabled": {
-                                "type": "boolean"
-                            },
-                            "udldAggressive": {
-                                "type": "boolean"
-                            },
-                            "messageTime": {
-                                "type": "integer"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "type": "array"
-                }
-            },
-            "type": "object"
-        },
+        "udldGlobalConfig": {},
         "vlanConfig": {
             "properties": {
                 "items": {
