@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.4] - 2026-05-07
+### Fixed
+- **Authorization retries not applying to auth requests (PR #248 equivalent)**: The `Authentication` class was issuing token requests via bare `requests.post()` calls, bypassing any `urllib3.Retry` adapter configured on the session. This meant user-configured retry logic — intended to handle intermittent network issues — was silently ignored during authentication. `Authentication` now accepts an optional `requests.Session` and uses it for token requests, so retry adapters apply uniformly across all SDK calls.
+
 ## [3.1.6.0.3] - 2026-05-05
 ### Fixed
 - **Content-Type None TypeError (Issue #18)**: Fixed `pprint_response_info()` in `utils.py` crashing with `TypeError: argument of type 'NoneType' is not iterable` when an API response lacks a `Content-Type` header. Changed `response.headers.get("Content-Type")` to `response.headers.get("Content-Type", "")` so the `in` check safely handles `None`.
@@ -153,4 +157,5 @@ to "application".
 [3.1.6.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.0...v3.1.6.0.1
 [3.1.6.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2
 [3.1.6.0.3]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...develop
+[3.1.6.0.4]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...v3.1.6.0.4
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...develop
