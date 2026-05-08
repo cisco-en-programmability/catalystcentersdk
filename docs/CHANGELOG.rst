@@ -8,8 +8,23 @@ Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project
 adheres to `Semantic
 Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
-`Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...develop>`__
+`Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...develop>`__
 -----------------------------------------------------------------------------------------------------------
+
+`3.1.6.0.4 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...v3.1.6.0.4>`__ - 2026-05-07
+--------------------------------------------------------------------------------------------------------------------------
+
+Fixed
+~~~~~
+
+- **Authorization retries not applying to auth requests (PR #248
+  equivalent)**: The ``Authentication`` class was issuing token requests
+  via bare ``requests.post()`` calls, bypassing any ``urllib3.Retry``
+  adapter configured on the session. This meant user-configured retry
+  logic — intended to handle intermittent network issues — was silently
+  ignored during authentication. ``Authentication`` now accepts an
+  optional ``requests.Session`` and uses it for token requests, so retry
+  adapters apply uniformly across all SDK calls.
 
 `3.1.6.0.3 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3>`__ - 2026-05-05
 --------------------------------------------------------------------------------------------------------------------------
