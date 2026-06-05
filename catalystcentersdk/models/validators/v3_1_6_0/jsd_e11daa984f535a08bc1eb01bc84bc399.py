@@ -113,6 +113,15 @@ class JSONSchemaValidatorE11Daa984F535A08Bc1EB01Bc84Bc399(object):
         },
         "vlanId": {
             "type": "string"
+        },
+        "licenseLevel": {
+            "type": "string"
+        },
+        "topOfStackSerialNumber": {
+            "type": "string"
+        },
+        "cablingScheme": {
+            "type": "string"
         }
     },
     "type": "object"

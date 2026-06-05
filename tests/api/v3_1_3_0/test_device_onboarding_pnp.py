@@ -555,6 +555,9 @@ def claim_a_device_to_a_site(api):
         subnetMask="string",
         type="string",
         vlanId="string",
+        licenseLevel="string",
+        topOfStackSerialNumber="string",
+        cablingScheme="string",
     )
     return endpoint_result
 
@@ -588,6 +591,9 @@ def claim_a_device_to_a_site_default_val(api):
         subnetMask=None,
         type=None,
         vlanId=None,
+        licenseLevel=None,
+        topOfStackSerialNumber=None,
+        cablingScheme=None,
     )
     return endpoint_result
 

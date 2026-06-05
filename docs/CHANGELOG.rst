@@ -8,11 +8,32 @@ Changelog <https://keepachangelog.com/en/1.0.0/>`__, and this project
 adheres to `Semantic
 Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
-`Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...develop>`__
+`Unreleased <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...develop>`__
 -----------------------------------------------------------------------------------------------------------
+
+`3.1.6.0.5 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...v3.1.6.0.5>`__ - 2026-06-05
+--------------------------------------------------------------------------------------------------------------------------
+
+Fixed
+~~~~~
+
+- **Missing ``licenseLevel``, ``topOfStackSerialNumber``, and
+  ``cablingScheme`` in ``claim_a_device_to_a_site`` (Issue #23)**: Added
+  the three missing parameters to the method signature, ``_payload``
+  assembly, and request validator JSON schema across all SDK API
+  versions (2.3.7.6.1, 2.3.7.9, 3.1.3.0, 3.1.6.0). Previously, passing
+  these fields with ``active_validation=True`` caused a
+  ``MalformedRequest`` error, and with ``active_validation=False`` they
+  were silently dropped from the request body, making it impossible to
+  claim stacked Catalyst switches with a license level or cabling scheme
+  via the SDK.
+
+.. _section-1:
 
 `3.1.6.0.4 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...v3.1.6.0.4>`__ - 2026-05-07
 --------------------------------------------------------------------------------------------------------------------------
+
+.. _fixed-1:
 
 Fixed
 ~~~~~
@@ -26,8 +47,12 @@ Fixed
   optional ``requests.Session`` and uses it for token requests, so retry
   adapters apply uniformly across all SDK calls.
 
+.. _section-2:
+
 `3.1.6.0.3 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3>`__ - 2026-05-05
 --------------------------------------------------------------------------------------------------------------------------
+
+.. _fixed-2:
 
 Fixed
 ~~~~~
@@ -78,12 +103,12 @@ Fixed
   permissive schema prevents false validation failures as the API
   evolves.
 
-.. _section-1:
+.. _section-3:
 
 `3.1.6.0.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2>`__ - 2026-03-30
 --------------------------------------------------------------------------------------------------------------------------
 
-.. _fixed-1:
+.. _fixed-3:
 
 Fixed
 ~~~~~
@@ -103,12 +128,12 @@ Changed
 - Regenerated Pipfile.lock, poetry.lock, requirements.txt, and
   requirements-dev.txt with updated dependencies.
 
-.. _section-2:
+.. _section-4:
 
 `3.1.6.0.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.0...v3.1.6.0.1>`__ - 2026-02-27
 --------------------------------------------------------------------------------------------------------------------------
 
-.. _fixed-2:
+.. _fixed-4:
 
 Fixed
 ~~~~~
@@ -132,7 +157,7 @@ Changed
 - Added explicit ``python_version = "3.12"`` requirement to Pipfile.
 - Updated ``certifi`` dependency.
 
-.. _section-3:
+.. _section-5:
 
 `3.1.6.0.0 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.1...v3.1.6.0.0>`__ - 2026-02-11
 --------------------------------------------------------------------------------------------------------------------------
@@ -146,7 +171,7 @@ Added
 
   - ``system_software_upgrade``
 
-.. _section-4:
+.. _section-6:
 
 `3.1.3.0.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.3.0.0...v3.1.3.0.1>`__ - 2026-02-06
 --------------------------------------------------------------------------------------------------------------------------
@@ -197,7 +222,7 @@ Changed
   - ``get_the_are_p_ring_based_on_the_ring_id`` to
     ``get_the_rep_ring_based_on_the_ring_id``
 
-.. _section-5:
+.. _section-7:
 
 `3.1.3.0.0 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.5...v3.1.3.0.0>`__ - 2025-06-19
 --------------------------------------------------------------------------------------------------------------------------
@@ -232,7 +257,7 @@ Added
 - The v1 alias functions were all removed. Example… if your using
   “application_v1” you must be able to change it to “application”.
 
-.. _section-6:
+.. _section-8:
 
 `2.3.7.9.5 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.4...v2.3.7.9.5>`__ - 2025-03-05
 --------------------------------------------------------------------------------------------------------------------------
@@ -242,7 +267,7 @@ Fix
 
 - Error correction in the user_and_roles module
 
-.. _section-7:
+.. _section-9:
 
 `2.3.7.9.4 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.3...v2.3.7.9.4>`__ - 2025-02-28
 --------------------------------------------------------------------------------------------------------------------------
@@ -254,7 +279,7 @@ Added
 
 - Add support of DNA Center versions (‘2.3.7.7’)
 
-.. _section-8:
+.. _section-10:
 
 `2.3.7.9.3 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.2...v2.3.7.9.3>`__ - 2025-02-24
 --------------------------------------------------------------------------------------------------------------------------
@@ -268,7 +293,7 @@ Fix
   deploy_template functions in version 1 and 2. In 2.3.5.3, 2.3.7.6 and
   2.3.7.9.
 
-.. _section-9:
+.. _section-11:
 
 `2.3.7.9.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.1...v2.3.7.9.2>`__ - 2025-02-17
 --------------------------------------------------------------------------------------------------------------------------
@@ -297,7 +322,7 @@ Changed
 - Some functions were changed in versions 2.3.7.6 and 2.3.7.9 to handle
   files
 
-.. _section-10:
+.. _section-12:
 
 `2.3.7.9.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.9.0...v2.3.7.9.1>`__ - 2025-01-14
 --------------------------------------------------------------------------------------------------------------------------
@@ -312,7 +337,7 @@ Fix
 - Fixed a bug in site_design in the uploads_floor_image function in
   versions 2.3.7.6 and 2.3.7.9
 
-.. _section-11:
+.. _section-13:
 
 `2.3.7.9.0 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.6.2...v2.3.7.9.0>`__ - 2024-12-12
 --------------------------------------------------------------------------------------------------------------------------
@@ -325,7 +350,7 @@ Added
 - Add support of Catalyst Center versions (‘2.3.7.9’)
 - Adds modules for v2_3_7_9
 
-.. _section-12:
+.. _section-14:
 
 `2.3.7.6.2 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.6.1...v2.3.7.6.2>`__ - 2024-11-20
 --------------------------------------------------------------------------------------------------------------------------
@@ -345,7 +370,7 @@ Fix
 - The get_templates_details function was added because it was named
   incorrectly. There was an “s” missing from the word templates
 
-.. _section-13:
+.. _section-15:
 
 `2.3.7.6.1 <https://github.com/cisco-en-programmability/catalystcentersdk/compare/v2.3.7.6.0...v2.3.7.6.1>`__ - 2024-11-05
 --------------------------------------------------------------------------------------------------------------------------
@@ -366,7 +391,7 @@ Changed
 - Modification of documentation references in functions
 - The user_agent structure is modified
 
-.. _section-14:
+.. _section-16:
 
 `2.3.7.6.0 <https://github.com/cisco-en-programmability/catalystcentersdk/releases/tag/v2.3.7.6.0>`__ - 2024-10-30
 ------------------------------------------------------------------------------------------------------------------
