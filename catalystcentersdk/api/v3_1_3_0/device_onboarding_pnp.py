@@ -857,6 +857,9 @@ class DeviceOnboardingPnp(object):
         subnetMask=None,
         type=None,
         vlanId=None,
+        licenseLevel=None,
+        topOfStackSerialNumber=None,
+        cablingScheme=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -882,6 +885,10 @@ class DeviceOnboardingPnp(object):
             type(string): Device Onboarding (PnP)'s Type. Available values are 'Default', 'StackSwitch',
                 'AccessPoint', 'Sensor', 'CatalystWLC' and 'MobilityExpress'.
             vlanId(string): Device Onboarding (PnP)'s for Catalyst 9800 WLC.
+            licenseLevel(string): Device Onboarding (PnP)'s license level for StackSwitch.
+            topOfStackSerialNumber(string): Device Onboarding (PnP)'s serial number of top-of-stack
+                member for StackSwitch.
+            cablingScheme(string): Device Onboarding (PnP)'s cabling scheme for StackSwitch.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -929,6 +936,9 @@ class DeviceOnboardingPnp(object):
             "ipInterfaceName": ipInterfaceName,
             "sensorProfile": sensorProfile,
             "hostname": hostname,
+            "licenseLevel": licenseLevel,
+            "topOfStackSerialNumber": topOfStackSerialNumber,
+            "cablingScheme": cablingScheme,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.5] - 2026-06-05
+### Fixed
+- **Missing `licenseLevel`, `topOfStackSerialNumber`, and `cablingScheme` in `claim_a_device_to_a_site` (Issue #23)**: Added the three missing parameters to the method signature, `_payload` assembly, and request validator JSON schema across all SDK API versions (2.3.7.6.1, 2.3.7.9, 3.1.3.0, 3.1.6.0). Previously, passing these fields with `active_validation=True` caused a `MalformedRequest` error, and with `active_validation=False` they were silently dropped from the request body, making it impossible to claim stacked Catalyst switches with a license level or cabling scheme via the SDK.
+
 ## [3.1.6.0.4] - 2026-05-07
 ### Fixed
 - **Authorization retries not applying to auth requests (PR #248 equivalent)**: The `Authentication` class was issuing token requests via bare `requests.post()` calls, bypassing any `urllib3.Retry` adapter configured on the session. This meant user-configured retry logic — intended to handle intermittent network issues — was silently ignored during authentication. `Authentication` now accepts an optional `requests.Session` and uses it for token requests, so retry adapters apply uniformly across all SDK calls.
@@ -158,4 +162,5 @@ to "application".
 [3.1.6.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.1...v3.1.6.0.2
 [3.1.6.0.3]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3
 [3.1.6.0.4]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...v3.1.6.0.4
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...develop
+[3.1.6.0.5]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...v3.1.6.0.5
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...develop
