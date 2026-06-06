@@ -161,9 +161,9 @@ flake8==7.3.0 ; python_version >= "3.12" and python_version < "4.0" \
 idna==3.11 ; python_version >= "3.12" and python_version < "4.0" \
     --hash=sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea \
     --hash=sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902
-imagesize==1.5.0 ; python_version >= "3.12" and python_version < "4.0" \
-    --hash=sha256:32677681b3f434c2cb496f00e89c5a291247b35b1f527589909e008057da5899 \
-    --hash=sha256:8bfc5363a7f2133a89f0098451e0bcb1cd71aba4dc02bbcecb39d99d40e1b94f
+imagesize==2.0.0 ; python_version >= "3.12" and python_version < "4.0" \
+    --hash=sha256:5667c5bbb57ab3f1fa4bc366f4fbc971db3d5ed011fd2715fd8001f782718d96 \
+    --hash=sha256:8e8358c4a05c304f1fccf7ff96f036e7243a189e9e42e90851993c558cfe9ee3
 iniconfig==2.3.0 ; python_version >= "3.12" and python_version < "4.0" \
     --hash=sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730 \
     --hash=sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12
