@@ -829,6 +829,17 @@ v3.1.6.0 summary
 .. include:: api_structure_table_v3_1_6_0.rst
 
 
+.. _v3_1_6_0 aliases:
+
+v3.1.6.0 backward-compatible aliases
+------------------------------------
+
+Several v3.1.6.0 operations were renamed with a _v2 suffix.
+The original names are kept as aliases for backward compatibility and will be restored in a future release.
+
+.. include:: api_aliases_table_v3_1_6_0.rst
+
+
 CatalystCenterAPI Class
 =======================
 

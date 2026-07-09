@@ -3662,3 +3662,22 @@ SiteDesign.deletes_a_floor = SiteDesign.deletes_a_floor_v2
 SiteDesign.gets_a_floor = SiteDesign.gets_a_floor_v2
 SiteDesign.updates_a_floor = SiteDesign.updates_a_floor_v2
 SiteDesign.uploads_floor_image = SiteDesign.uploads_floor_image_v2
+SiteDesign.get_access_points_positions = SiteDesign.get_access_points_positions_v2
+SiteDesign.edit_the_access_points_positions = (
+    SiteDesign.edit_the_access_points_positions_v2
+)
+SiteDesign.assign_planned_access_points_to_operations_ones = (
+    SiteDesign.assign_planned_access_points_to_operations_ones_v2
+)
+SiteDesign.add_planned_access_points_positions = (
+    SiteDesign.add_planned_access_points_positions_v2
+)
+SiteDesign.edit_planned_access_points_positions = (
+    SiteDesign.edit_planned_access_points_positions_v2
+)
+SiteDesign.get_planned_access_points_positions_count = (
+    SiteDesign.get_planned_access_points_positions_count_v2
+)
+SiteDesign.delete_planned_access_points_position = (
+    SiteDesign.delete_planned_access_points_position_v2
+)

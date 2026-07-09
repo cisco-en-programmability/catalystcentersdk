@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.6] - 2026-07-09
+### Fixed
+- **Missing backward-compatibility aliases for renamed Site Design `_v2` methods (Issue #39)**: The v3.1.6.0 API classes renamed several Site Design operations with a `_v2` suffix and re-exposed the historical names as aliases, but seven access point position methods on `SiteDesign` were left without one. Calling them by their historical name raised `AttributeError` when the SDK ran against API version 3.1.6.0, breaking downstream consumers such as the `cisco.catalystcenter` Ansible collection. Added the missing aliases so the following names resolve again: `get_access_points_positions`, `edit_the_access_points_positions`, `assign_planned_access_points_to_operations_ones`, `add_planned_access_points_positions`, `edit_planned_access_points_positions`, `get_planned_access_points_positions_count`, and `delete_planned_access_points_position`.
+
 ## [3.1.6.0.5] - 2026-06-05
 ### Fixed
 - **Missing `licenseLevel`, `topOfStackSerialNumber`, and `cablingScheme` in `claim_a_device_to_a_site` (Issue #23)**: Added the three missing parameters to the method signature, `_payload` assembly, and request validator JSON schema across all SDK API versions (2.3.7.6.1, 2.3.7.9, 3.1.3.0, 3.1.6.0). Previously, passing these fields with `active_validation=True` caused a `MalformedRequest` error, and with `active_validation=False` they were silently dropped from the request body, making it impossible to claim stacked Catalyst switches with a license level or cabling scheme via the SDK.
@@ -163,4 +167,5 @@ to "application".
 [3.1.6.0.3]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.2...v3.1.6.0.3
 [3.1.6.0.4]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...v3.1.6.0.4
 [3.1.6.0.5]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...v3.1.6.0.5
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...develop
+[3.1.6.0.6]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...v3.1.6.0.6
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.6...develop
