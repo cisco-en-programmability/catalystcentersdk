@@ -2934,3 +2934,17 @@ class SiteDesign(object):
         return self._object_factory(
             "bpm_df8448b465a0abdc9bb7ee17aac9f_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+SiteDesign.creates_a_building = SiteDesign.creates_a_building_v2
+SiteDesign.deletes_a_building = SiteDesign.deletes_a_building_v2
+SiteDesign.gets_a_building = SiteDesign.gets_a_building_v2
+SiteDesign.updates_a_building = SiteDesign.updates_a_building_v2
+SiteDesign.creates_a_floor = SiteDesign.creates_a_floor_v2
+SiteDesign.get_floor_settings = SiteDesign.get_floor_settings_v2
+SiteDesign.updates_floor_settings = SiteDesign.updates_floor_settings_v2
+SiteDesign.deletes_a_floor = SiteDesign.deletes_a_floor_v2
+SiteDesign.gets_a_floor = SiteDesign.gets_a_floor_v2
+SiteDesign.updates_a_floor = SiteDesign.updates_a_floor_v2
+SiteDesign.uploads_floor_image = SiteDesign.uploads_floor_image_v2

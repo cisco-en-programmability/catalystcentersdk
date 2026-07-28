@@ -1060,3 +1060,9 @@ class UserandRoles(object):
         return self._object_factory(
             "bpm_bedf83096a45ad1beaaa1fc6c192103_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+UserandRoles.get_users = UserandRoles.get_users_api
+UserandRoles.add_user = UserandRoles.add_user_api
+UserandRoles.update_user = UserandRoles.update_user_api

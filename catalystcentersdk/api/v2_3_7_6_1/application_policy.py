@@ -1944,3 +1944,13 @@ class ApplicationPolicy(object):
         return self._object_factory(
             "bpm_ef849b2f5415501086635693a458e69b_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+ApplicationPolicy.create_application_sets = ApplicationPolicy.create_application_sets_v2
+ApplicationPolicy.get_application_set_count = (
+    ApplicationPolicy.get_application_set_count_v2
+)
+ApplicationPolicy.create_applications = ApplicationPolicy.create_applications_v2
+ApplicationPolicy.edit_applications = ApplicationPolicy.edit_applications_v2
+ApplicationPolicy.get_application_count = ApplicationPolicy.get_application_count_v2

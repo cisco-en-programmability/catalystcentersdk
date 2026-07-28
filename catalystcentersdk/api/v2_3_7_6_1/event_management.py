@@ -3478,3 +3478,7 @@ class EventManagement(object):
         return self._object_factory(
             "bpm_b94cfb5af084c1a65d8e51df71_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+EventManagement.get_eventartifacts = EventManagement.get_event_artifacts

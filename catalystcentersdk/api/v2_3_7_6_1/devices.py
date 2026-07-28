@@ -8840,3 +8840,7 @@ class Devices(object):
         return self._object_factory(
             "bpm_a51fd8467055ff1a69ade1ae8096993_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+Devices.get_device_interface_stats_info = Devices.get_device_interface_stats_info_v2

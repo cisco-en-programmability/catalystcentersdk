@@ -3059,3 +3059,9 @@ class Discovery(object):
         return self._object_factory(
             "bpm_caa7cd8d7a3550cfb102cd3498494d04_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+Discovery.create_global_credentials = Discovery.create_global_credentials_v2
+Discovery.get_all_global_credentials = Discovery.get_all_global_credentials_v2
+Discovery.delete_global_credential = Discovery.delete_global_credential_v2

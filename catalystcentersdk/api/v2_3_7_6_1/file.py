@@ -356,3 +356,7 @@ class File(object):
         return self._object_factory(
             "bpm_e7fb3df05906b8cd6077d4d9cc5c_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+File.download_a_file_by_fileid = File.download_a_file_by_file_id

@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.6.0.7] - 2026-07-28
+### Fixed
+- **Missing backward-compatibility aliases in v2.3.7.6.1 (Issues #44, #45, #46)**: Three v2.3.7.6.1 API classes exposed `_v2` methods without the historical compatibility alias present in v3.1.6.0, raising `AttributeError` for Catalyst Center 2.3.7.6 users and breaking the `cisco.catalystcenter` Ansible collection's `device_templates`, `site_hierarchy`, `device_credentials`, and `device_discovery` workflows. Added the missing aliases: `ConfigurationTemplates.get_templates_details` to `get_templates_details_v2`, `SiteDesign.deletes_a_floor` to `deletes_a_floor_v2`, and `Discovery.get_all_global_credentials` to `get_all_global_credentials_v2`.
+- **Additional missing v2.3.7.6.1 aliases found by audit**: After fixing Issues #44-#46, audited every v2.3.7.6.1 module against its v3.1.6.0 counterpart for the same class of missing compatibility alias. Found and fixed 22 more across 8 modules: `ApplicationPolicy` (`create_application_sets`, `get_application_set_count`, `create_applications`, `edit_applications`, `get_application_count`), `ConfigurationTemplates` (`get_projects_details`), `Devices` (`get_device_interface_stats_info`), `Discovery` (`create_global_credentials`, `delete_global_credential`), `EventManagement` (`get_eventartifacts`), `File` (`download_a_file_by_fileid`), `Sda` (`get_port_channels_connectivity`), `SiteDesign` (7 more building/floor methods), and `UserandRoles` (`get_users`, `add_user`, `update_user`). Each alias was verified to resolve to a method hitting the same REST endpoint in both versions before being added.
+
 ## [3.1.6.0.6] - 2026-07-09
 ### Fixed
 - **Missing backward-compatibility aliases for renamed Site Design `_v2` methods (Issue #39)**: The v3.1.6.0 API classes renamed several Site Design operations with a `_v2` suffix and re-exposed the historical names as aliases, but seven access point position methods on `SiteDesign` were left without one. Calling them by their historical name raised `AttributeError` when the SDK ran against API version 3.1.6.0, breaking downstream consumers such as the `cisco.catalystcenter` Ansible collection. Added the missing aliases so the following names resolve again: `get_access_points_positions`, `edit_the_access_points_positions`, `assign_planned_access_points_to_operations_ones`, `add_planned_access_points_positions`, `edit_planned_access_points_positions`, `get_planned_access_points_positions_count`, and `delete_planned_access_points_position`.
@@ -168,4 +173,5 @@ to "application".
 [3.1.6.0.4]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.3...v3.1.6.0.4
 [3.1.6.0.5]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...v3.1.6.0.5
 [3.1.6.0.6]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...v3.1.6.0.6
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.6...develop
+[3.1.6.0.7]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.6...v3.1.6.0.7
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.7...develop
