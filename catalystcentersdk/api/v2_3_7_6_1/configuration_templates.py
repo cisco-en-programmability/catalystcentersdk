@@ -2021,3 +2021,12 @@ class ConfigurationTemplates(object):
         return self._object_factory(
             "bpm_bf40cea4982c54278a52ac2e7b0c458a_v2_3_7_6_1", json_data
         )
+
+
+# Alias Functions
+ConfigurationTemplates.get_projects_details = (
+    ConfigurationTemplates.get_projects_details_v2
+)
+ConfigurationTemplates.get_templates_details = (
+    ConfigurationTemplates.get_templates_details_v2
+)
