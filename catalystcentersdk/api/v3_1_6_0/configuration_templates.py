@@ -22,9 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -34,7 +31,7 @@ from ...utils import (
 )
 
 
-class ConfigurationTemplates(object):
+class ConfigurationTemplates:
     """Cisco Catalyst Center Configuration Templates API (version: 3.1.6.0).
 
     Wraps the Catalyst Center Configuration Templates
@@ -57,7 +54,7 @@ class ConfigurationTemplates(object):
         """
         check_type(session, RestSession)
 
-        super(ConfigurationTemplates, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory
@@ -1909,7 +1906,9 @@ class ConfigurationTemplates(object):
             "bpm_e1a76c121857a085149e62e56caadd_v3_1_6_0", json_data
         )
 
-    def get_template_versions_by_id(self, template_id, headers=None, **request_parameters):
+    def get_template_versions_by_id(
+        self, template_id, headers=None, **request_parameters
+    ):
         """Get all the versions of template by its id.
 
         Args:

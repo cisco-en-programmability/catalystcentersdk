@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorB172Bd7Cd55378Bd25E4Ae525A9179(object):
+class JSONSchemaValidatorB172Bd7Cd55378Bd25E4Ae525A9179:
     """GetCountOfFieldNotices request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorB172Bd7Cd55378Bd25E4Ae525A9179, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -61,11 +59,7 @@ class JSONSchemaValidatorB172Bd7Cd55378Bd25E4Ae525A9179(object):
                 "response"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -22,10 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -35,7 +31,7 @@ from ...utils import (
 )
 
 
-class Users(object):
+class Users:
     """Cisco Catalyst Center Users API (version: 2.3.7.6).
 
     Wraps the Catalyst Center Users
@@ -58,7 +54,7 @@ class Users(object):
         """
         check_type(session, RestSession)
 
-        super(Users, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

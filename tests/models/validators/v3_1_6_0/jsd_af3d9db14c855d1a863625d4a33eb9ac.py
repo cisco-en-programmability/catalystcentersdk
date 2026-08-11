@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorAf3D9Db14C855D1A863625D4A33Eb9Ac(object):
+class JSONSchemaValidatorAf3D9Db14C855D1A863625D4A33Eb9Ac:
     """DeleteImage request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorAf3D9Db14C855D1A863625D4A33Eb9Ac, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -66,11 +64,7 @@ class JSONSchemaValidatorAf3D9Db14C855D1A863625D4A33Eb9Ac(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

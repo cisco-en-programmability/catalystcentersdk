@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 # Package Constants
 DEFAULT_BASE_URL = "https://sandboxdnac.cisco.com:443"
 

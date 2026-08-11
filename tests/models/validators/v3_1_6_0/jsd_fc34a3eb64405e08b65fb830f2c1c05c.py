@@ -26,22 +26,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorFc34A3Eb64405E08B65FB830F2C1C05C(object):
+class JSONSchemaValidatorFc34A3Eb64405E08B65FB830F2C1C05C:
     """GetSecurityAdvisoryAffectingTheNetworkDeviceByDeviceIdAndAdvisoryI
     d request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorFc34A3Eb64405E08B65FB830F2C1C05C, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -108,11 +106,7 @@ class JSONSchemaValidatorFc34A3Eb64405E08B65FB830F2C1C05C(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

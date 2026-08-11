@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD2EcE28B509B8Ef80B2B8C5C5F36(object):
+class JSONSchemaValidatorD2EcE28B509B8Ef80B2B8C5C5F36:
     """CreateGlobalCredentialsV2 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD2EcE28B509B8Ef80B2B8C5C5F36, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "cliCredential": {
@@ -172,11 +170,7 @@ class JSONSchemaValidatorD2EcE28B509B8Ef80B2B8C5C5F36(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

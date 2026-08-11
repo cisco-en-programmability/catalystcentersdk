@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorFb5A8C0075563491622171958074Bf(object):
+class JSONSchemaValidatorFb5A8C0075563491622171958074Bf:
     """CreateSyslogEventSubscription request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorFb5A8C0075563491622171958074Bf, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "statusUri": {
@@ -47,11 +45,7 @@ class JSONSchemaValidatorFb5A8C0075563491622171958074Bf(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorBc1B3345F259E9859AC21A1Ec694Fe(object):
+class JSONSchemaValidatorBc1B3345F259E9859AC21A1Ec694Fe:
     """RetrievesTheCountOfMRPRingMembers request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorBc1B3345F259E9859AC21A1Ec694Fe, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -68,11 +66,7 @@ class JSONSchemaValidatorBc1B3345F259E9859AC21A1Ec694Fe(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

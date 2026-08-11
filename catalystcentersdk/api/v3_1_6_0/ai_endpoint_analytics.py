@@ -22,9 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -34,7 +31,7 @@ from ...utils import (
 )
 
 
-class AiEndpointAnalytics(object):
+class AiEndpointAnalytics:
     """Cisco Catalyst Center AI Endpoint Analytics API (version: 3.1.6.0).
 
     Wraps the Catalyst Center AI Endpoint Analytics
@@ -57,7 +54,7 @@ class AiEndpointAnalytics(object):
         """
         check_type(session, RestSession)
 
-        super(AiEndpointAnalytics, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

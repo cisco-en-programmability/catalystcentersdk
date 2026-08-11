@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorBb187B0C0A55E7E8089Ac78Eb29D8A2(object):
+class JSONSchemaValidatorBb187B0C0A55E7E8089Ac78Eb29D8A2:
     """DeleteDiscoveryByIdV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorBb187B0C0A55E7E8089Ac78Eb29D8A2, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -63,11 +61,7 @@ class JSONSchemaValidatorBb187B0C0A55E7E8089Ac78Eb29D8A2(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

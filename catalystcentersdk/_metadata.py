@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 __title__ = "catalystcentersdk"
 __description__ = "Community-developed Python SDK for the CatalystCenter APIs"
 __url__ = "https://github.com/cisco-en-programmability/catalystcentersdk"

@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD833C51C4F5Cd2879D3E69F773295C(object):
+class JSONSchemaValidatorD833C51C4F5Cd2879D3E69F773295C:
     """CreateAGlobalIPAddressPool request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD833C51C4F5Cd2879D3E69F773295C, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "addressSpace": {
@@ -85,11 +83,7 @@ class JSONSchemaValidatorD833C51C4F5Cd2879D3E69F773295C(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

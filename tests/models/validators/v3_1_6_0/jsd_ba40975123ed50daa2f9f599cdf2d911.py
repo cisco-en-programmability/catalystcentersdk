@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorBa40975123Ed50DaA2F9F599Cdf2D911(object):
+class JSONSchemaValidatorBa40975123Ed50DaA2F9F599Cdf2D911:
     """CommitDeviceConfiguration request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorBa40975123Ed50DaA2F9F599Cdf2D911, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -61,11 +59,7 @@ class JSONSchemaValidatorBa40975123Ed50DaA2F9F599Cdf2D911(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

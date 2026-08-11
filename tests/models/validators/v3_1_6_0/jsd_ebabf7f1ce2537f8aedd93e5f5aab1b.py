@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorEbabf7F1Ce2537F8AedD93E5F5Aab1B(object):
+class JSONSchemaValidatorEbabf7F1Ce2537F8AedD93E5F5Aab1B:
     """GetAccessPointRebootTaskResult request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorEbabf7F1Ce2537F8AedD93E5F5Aab1B, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -67,11 +65,7 @@ class JSONSchemaValidatorEbabf7F1Ce2537F8AedD93E5F5Aab1B(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 from catalystcentersdk.config import (
     DEFAULT_DEBUG,
     DEFAULT_VERSION,
@@ -356,7 +355,7 @@ from .v3_1_6_0.wireless import Wireless as Wireless_v3_1_6_0
 from .custom_caller import CustomCaller
 
 
-class CatalystCenterAPI(object):
+class CatalystCenterAPI:
     """Cisco Catalyst Center API wrapper.
 
     Creates a 'session' for all API calls through a created CatalystCenterAPI

@@ -22,23 +22,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorDabd13Cd5E9C928DAf80D6758D62(object):
+class JSONSchemaValidatorDabd13Cd5E9C928DAf80D6758D62:
     """AddLayer3VirtualNetworksV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorDabd13Cd5E9C928DAf80D6758D62, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -58,11 +55,7 @@ class JSONSchemaValidatorDabd13Cd5E9C928DAf80D6758D62(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD0AcccfaE6885Bc28F8F39C67F4Acfc1(object):
+class JSONSchemaValidatorD0AcccfaE6885Bc28F8F39C67F4Acfc1:
     """SystemHealth request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD0AcccfaE6885Bc28F8F39C67F4Acfc1, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "cimcaddress": {
@@ -92,11 +90,7 @@ class JSONSchemaValidatorD0AcccfaE6885Bc28F8F39C67F4Acfc1(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

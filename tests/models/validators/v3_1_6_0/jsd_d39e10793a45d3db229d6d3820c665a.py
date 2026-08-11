@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD39E10793A45D3DB229D6D3820C665A(object):
+class JSONSchemaValidatorD39E10793A45D3DB229D6D3820C665A:
     """GetTransitPeerNetworkInfo request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD39E10793A45D3DB229D6D3820C665A, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "description":
@@ -120,11 +118,7 @@ class JSONSchemaValidatorD39E10793A45D3DB229D6D3820C665A(object):
                 "transitPeerNetworkId"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD16471A58805B4AA2C757209D188Aed(object):
+class JSONSchemaValidatorD16471A58805B4AA2C757209D188Aed:
     """CreateSNMPReadCommunity request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD16471A58805B4AA2C757209D188Aed, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -69,11 +67,7 @@ class JSONSchemaValidatorD16471A58805B4AA2C757209D188Aed(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

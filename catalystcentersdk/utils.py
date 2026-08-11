@@ -22,12 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import json
 import mimetypes
 import os
 import urllib.parse
-from builtins import *  # noqa: F401,F403
+
 from collections import OrderedDict, namedtuple
 import warnings
 import functools

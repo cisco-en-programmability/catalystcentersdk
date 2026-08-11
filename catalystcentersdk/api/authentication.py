@@ -22,9 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import urllib.parse
-from builtins import *  # noqa: F401,F403
+
 
 import requests
 
@@ -37,14 +36,13 @@ from ..utils import (
     validate_base_url,
 )
 
-
 __author__ = ""
 __author_email__ = ""
 __copyright__ = "Copyright (c) 2024 Cisco Systems."
 __license__ = "MIT"
 
 
-class Authentication(object):
+class Authentication:
     """Cisco CatalystCenter Authentication API.
 
     Wraps the CatalystCenter Authentication API and exposes the API as native
@@ -84,7 +82,7 @@ class Authentication(object):
         check_type(single_request_timeout, int)
         check_type(verify, (bool, str), may_be_none=False)
 
-        super(Authentication, self).__init__()
+        super().__init__()
 
         self._base_url = str(validate_base_url(base_url))
         self._single_request_timeout = single_request_timeout

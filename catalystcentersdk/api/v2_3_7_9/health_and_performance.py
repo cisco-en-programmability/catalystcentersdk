@@ -22,10 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -35,7 +31,7 @@ from ...utils import (
 )
 
 
-class HealthAndPerformance(object):
+class HealthAndPerformance:
     """Cisco Catalyst Center Health and Performance API (version: 2.3.7.9).
 
     Wraps the Catalyst Center Health and Performance
@@ -58,7 +54,7 @@ class HealthAndPerformance(object):
         """
         check_type(session, RestSession)
 
-        super(HealthAndPerformance, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

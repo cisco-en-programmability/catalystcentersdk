@@ -32,11 +32,12 @@ import fastjsonschema
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorC8354B61A36524CBb2E1037Bd814807(object):
+class JSONSchemaValidatorC8354B61A36524CBb2E1037Bd814807:
     """RogueAdditionalDetails request schema definition."""
+
     def __init__(self):
-        super(JSONSchemaValidatorC8354B61A36524CBb2E1037Bd814807, self).__init__()
-        self._validator = fastjsonschema.compile(json.loads('''
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
@@ -73,12 +74,12 @@ class JSONSchemaValidatorC8354B61A36524CBb2E1037Bd814807(object):
     },
     "type": "object"
 }
-'''))
+"""))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                '{} is invalid. Reason: {}'.format(request, e.message)
+                "{} is invalid. Reason: {}".format(request, e.message)
             )

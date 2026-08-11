@@ -28,9 +28,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from builtins import *  # noqa: F401,F403
-
 import fastjsonschema
 from catalystcentersdk.exceptions import MalformedRequest
 
@@ -13762,11 +13759,11 @@ from .validators.v3_1_6_0.jsd_ffd2fefb57d5523c87a5d941eb93ddc3 import (
 )
 
 
-class JSONSchemaValidator(object):
+class JSONSchemaValidator:
     """Validates a CatalystCenter JSON request."""
 
     def __init__(self):
-        super(JSONSchemaValidator, self).__init__()
+        super().__init__()
         self._validator = fastjsonschema.compile({})
 
     def validate(self, request):

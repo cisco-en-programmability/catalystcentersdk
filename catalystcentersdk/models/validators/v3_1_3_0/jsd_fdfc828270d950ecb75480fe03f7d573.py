@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorFdfc828270D950EcB75480Fe03F7D573(object):
+class JSONSchemaValidatorFdfc828270D950EcB75480Fe03F7D573:
     """UpdateResyncIntervalForTheNetworkDevice request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorFdfc828270D950EcB75480Fe03F7D573, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "interval": {
@@ -52,11 +50,7 @@ class JSONSchemaValidatorFdfc828270D950EcB75480Fe03F7D573(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

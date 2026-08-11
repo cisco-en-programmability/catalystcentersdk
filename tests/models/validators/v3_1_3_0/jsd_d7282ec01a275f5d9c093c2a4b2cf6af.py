@@ -30,28 +30,22 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD7282Ec01A275F5D9C093C2A4B2Cf6Af(object):
+class JSONSchemaValidatorD7282Ec01A275F5D9C093C2A4B2Cf6Af:
     """DeleteNFSConfigurationV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD7282Ec01A275F5D9C093C2A4B2Cf6Af, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

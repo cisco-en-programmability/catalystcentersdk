@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorF5645E6E819558FA08761Dee45Ca406(object):
+class JSONSchemaValidatorF5645E6E819558FA08761Dee45Ca406:
     """CreateNetconfCredentials request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorF5645E6E819558FA08761Dee45Ca406, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -78,11 +76,7 @@ class JSONSchemaValidatorF5645E6E819558FA08761Dee45Ca406(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

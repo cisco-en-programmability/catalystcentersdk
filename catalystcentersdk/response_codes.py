@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 RESPONSE_CODES = {
     200: "Successful request with body content.",
     201: "Fulfilled request, a new resource has been created.",

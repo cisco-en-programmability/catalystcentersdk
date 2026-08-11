@@ -22,9 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import logging
-from builtins import *  # noqa: F401,F403
+
 
 import requests
 
@@ -83,7 +82,7 @@ class DownloadFailure(catalystcentersdkException):
 
         self.message = "Check raw property to retrieve raw response."
 
-        super(DownloadFailure, self).__init__(
+        super().__init__(
             "[{status_code}]{status} - {message} : {original_error}".format(
                 status_code=self.status_code,
                 status=" " + self.status if self.status else "",
@@ -141,7 +140,7 @@ class ApiError(catalystcentersdkException):
         self.description = RESPONSE_CODES.get(self.status_code)
         """A description of the HTTP Response Code from the API docs."""
 
-        super(ApiError, self).__init__(
+        super().__init__(
             "[{status_code}]{status} - {message}".format(
                 status_code=self.status_code,
                 status=" " + self.status if self.status else "",
@@ -175,7 +174,7 @@ class RateLimitError(ApiError):
         1 second if CatalystCenter returns a `Retry-After` header of 0 seconds.
         """
 
-        super(RateLimitError, self).__init__(response)
+        super().__init__(response)
 
 
 class RateLimitWarning(UserWarning):
@@ -197,7 +196,7 @@ class RateLimitWarning(UserWarning):
         1 second if CatalystCenter returns a `Retry-After` header of 0 seconds.
         """
 
-        super(RateLimitWarning, self).__init__()
+        super().__init__()
 
 
 class MalformedRequest(catalystcentersdkException):

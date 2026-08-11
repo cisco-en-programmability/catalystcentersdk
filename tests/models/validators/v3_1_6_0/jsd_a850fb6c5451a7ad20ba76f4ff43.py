@@ -25,21 +25,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from dnacentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43(object):
+class JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43:
     """DeleteWirelessProfile request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "executionId": {
@@ -57,11 +55,7 @@ class JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43(object):
                 "executionStatusUrl"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

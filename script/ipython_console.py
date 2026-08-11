@@ -4,7 +4,6 @@
 Used to interactively work with the main package contents in IPython.
 """
 
-
 __copyright__ = "Copyright (c) 2024 Cisco Systems."
 __license__ = "MIT"
 

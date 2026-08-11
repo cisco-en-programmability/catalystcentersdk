@@ -30,21 +30,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorA1D68F15E02Adc37239B3Fcbbb6(object):
+class JSONSchemaValidatorA1D68F15E02Adc37239B3Fcbbb6:
     """DeleteSPProfileV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorA1D68F15E02Adc37239B3Fcbbb6, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "executionId": {
@@ -58,11 +56,7 @@ class JSONSchemaValidatorA1D68F15E02Adc37239B3Fcbbb6(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:
