@@ -115,7 +115,7 @@ from .v2_3_7_6_1.system_settings import (
 from .v2_3_7_6_1.tag import Tag as Tag_v2_3_7_6_1
 from .v2_3_7_6_1.task import Task as Task_v2_3_7_6_1
 from .v2_3_7_6_1.topology import Topology as Topology_v2_3_7_6_1
-from .v2_3_7_6_1.user_and_roles import UserandRoles as UserandRoles_v2_3_7_6_1
+from .v2_3_7_6_1.user_and_roles import UserAndRoles as UserAndRoles_v2_3_7_6_1
 from .v2_3_7_6_1.users import Users as Users_v2_3_7_6_1
 from .v2_3_7_6_1.wireless import Wireless as Wireless_v2_3_7_6_1
 
@@ -126,7 +126,7 @@ from .v2_3_7_9.application_policy import (
     ApplicationPolicy as ApplicationPolicy_v2_3_7_9,
 )
 from .v2_3_7_9.applications import Applications as Applications_v2_3_7_9
-from .v2_3_7_9.cisco_i_m_c import CiscoIMC as CiscoIMC_v2_3_7_9
+from .v2_3_7_9.cisco_imc import CiscoIMC as CiscoIMC_v2_3_7_9
 from .v2_3_7_9.authentication_management import (
     AuthenticationManagement as AuthenticationManagement_v2_3_7_9,
 )
@@ -153,7 +153,7 @@ from .v2_3_7_9.disaster_recovery import (
     DisasterRecovery as DisasterRecovery_v2_3_7_9,
 )
 from .v2_3_7_9.discovery import Discovery as Discovery_v2_3_7_9
-from .v2_3_7_9.eox import Eox as Eox_v2_3_7_9
+from .v2_3_7_9.eox import EoX as EoX_v2_3_7_9
 from .v2_3_7_9.event_management import (
     EventManagement as EventManagement_v2_3_7_9,
 )
@@ -189,7 +189,7 @@ from .v2_3_7_9.system_settings import SystemSettings as SystemSettings_v2_3_7_9
 from .v2_3_7_9.tag import Tag as Tag_v2_3_7_9
 from .v2_3_7_9.task import Task as Task_v2_3_7_9
 from .v2_3_7_9.topology import Topology as Topology_v2_3_7_9
-from .v2_3_7_9.user_and_roles import UserandRoles as UserandRoles_v2_3_7_9
+from .v2_3_7_9.user_and_roles import UserAndRoles as UserAndRoles_v2_3_7_9
 from .v2_3_7_9.users import Users as Users_v2_3_7_9
 from .v2_3_7_9.wireless import Wireless as Wireless_v2_3_7_9
 
@@ -205,7 +205,7 @@ from .v3_1_3_0.authentication_management import (
     AuthenticationManagement as AuthenticationManagement_v3_1_3_0,
 )
 from .v3_1_3_0.backup import Backup as Backup_v3_1_3_0
-from .v3_1_3_0.cisco_i_m_c import CiscoIMC as CiscoIMC_v3_1_3_0
+from .v3_1_3_0.cisco_imc import CiscoIMC as CiscoIMC_v3_1_3_0
 from .v3_1_3_0.cisco_trusted_certificates import (
     CiscoTrustedCertificates as CiscoTrustedCertificates_v3_1_3_0,
 )
@@ -229,7 +229,7 @@ from .v3_1_3_0.disaster_recovery import (
     DisasterRecovery as DisasterRecovery_v3_1_3_0,
 )
 from .v3_1_3_0.discovery import Discovery as Discovery_v3_1_3_0
-from .v3_1_3_0.eox import Eox as Eox_v3_1_3_0
+from .v3_1_3_0.eox import EoX as EoX_v3_1_3_0
 from .v3_1_3_0.event_management import (
     EventManagement as EventManagement_v3_1_3_0,
 )
@@ -272,14 +272,14 @@ from .v3_1_3_0.system_settings import SystemSettings as SystemSettings_v3_1_3_0
 from .v3_1_3_0.tag import Tag as Tag_v3_1_3_0
 from .v3_1_3_0.task import Task as Task_v3_1_3_0
 from .v3_1_3_0.topology import Topology as Topology_v3_1_3_0
-from .v3_1_3_0.user_and_roles import UserandRoles as UserandRoles_v3_1_3_0
+from .v3_1_3_0.user_and_roles import UserAndRoles as UserAndRoles_v3_1_3_0
 from .v3_1_3_0.users import Users as Users_v3_1_3_0
 from .v3_1_3_0.wired import Wired as Wired_v3_1_3_0
 from .v3_1_3_0.wireless import Wireless as Wireless_v3_1_3_0
 
 # v3.1.6.0 APIs
 from .v3_1_6_0.ai_endpoint_analytics import (
-    AiEndpointAnalytics as AiEndpointAnalytics_v3_1_6_0,
+    AIEndpointAnalytics as AIEndpointAnalytics_v3_1_6_0,
 )
 from .v3_1_6_0.application_policy import ApplicationPolicy as ApplicationPolicy_v3_1_6_0
 from .v3_1_6_0.applications import Applications as Applications_v3_1_6_0
@@ -307,7 +307,7 @@ from .v3_1_6_0.device_replacement import DeviceReplacement as DeviceReplacement_
 from .v3_1_6_0.devices import Devices as Devices_v3_1_6_0
 from .v3_1_6_0.disaster_recovery import DisasterRecovery as DisasterRecovery_v3_1_6_0
 from .v3_1_6_0.discovery import Discovery as Discovery_v3_1_6_0
-from .v3_1_6_0.eox import Eox as Eox_v3_1_6_0
+from .v3_1_6_0.eox import EoX as EoX_v3_1_6_0
 from .v3_1_6_0.event_management import EventManagement as EventManagement_v3_1_6_0
 from .v3_1_6_0.fabric_wireless import FabricWireless as FabricWireless_v3_1_6_0
 from .v3_1_6_0.file import File as File_v3_1_6_0
@@ -345,7 +345,7 @@ from .v3_1_6_0.system_software_upgrade import (
 from .v3_1_6_0.tag import Tag as Tag_v3_1_6_0
 from .v3_1_6_0.task import Task as Task_v3_1_6_0
 from .v3_1_6_0.topology import Topology as Topology_v3_1_6_0
-from .v3_1_6_0.user_and_roles import UserandRoles as UserandRoles_v3_1_6_0
+from .v3_1_6_0.user_and_roles import UserAndRoles as UserAndRoles_v3_1_6_0
 from .v3_1_6_0.users import Users as Users_v3_1_6_0
 from .v3_1_6_0.wired import Wired as Wired_v3_1_6_0
 from .v3_1_6_0.wireless import Wireless as Wireless_v3_1_6_0
@@ -659,7 +659,7 @@ class CatalystCenterAPI:
             self.topology = Topology_v2_3_7_6_1(
                 self._session, object_factory, _validator
             )
-            self.user_and_roles = UserandRoles_v2_3_7_6_1(
+            self.user_and_roles = UserAndRoles_v2_3_7_6_1(
                 self._session, object_factory, _validator
             )
             self.users = Users_v2_3_7_6_1(self._session, object_factory, _validator)
@@ -668,9 +668,13 @@ class CatalystCenterAPI:
             )
 
         if version == "2.3.7.9":
-            self.a_i_endpoint_analytics = AIEndpointAnalytics_v2_3_7_9(
+            self.ai_endpoint_analytics = AIEndpointAnalytics_v2_3_7_9(
                 self._session, object_factory, _validator
             )
+            # Backward-compatible attribute alias: this attribute was
+            # inconsistently named `a_i_endpoint_analytics` for this version
+            # only, unlike every other version's `ai_endpoint_analytics`.
+            self.a_i_endpoint_analytics = self.ai_endpoint_analytics
             self.application_policy = ApplicationPolicy_v2_3_7_9(
                 self._session, object_factory, _validator
             )
@@ -712,7 +716,7 @@ class CatalystCenterAPI:
             self.discovery = Discovery_v2_3_7_9(
                 self._session, object_factory, _validator
             )
-            self.eox = Eox_v2_3_7_9(self._session, object_factory, _validator)
+            self.eox = EoX_v2_3_7_9(self._session, object_factory, _validator)
             self.event_management = EventManagement_v2_3_7_9(
                 self._session, object_factory, _validator
             )
@@ -758,7 +762,7 @@ class CatalystCenterAPI:
             self.tag = Tag_v2_3_7_9(self._session, object_factory, _validator)
             self.task = Task_v2_3_7_9(self._session, object_factory, _validator)
             self.topology = Topology_v2_3_7_9(self._session, object_factory, _validator)
-            self.user_and_roles = UserandRoles_v2_3_7_9(
+            self.user_and_roles = UserAndRoles_v2_3_7_9(
                 self._session, object_factory, _validator
             )
             self.users = Users_v2_3_7_9(self._session, object_factory, _validator)
@@ -810,7 +814,7 @@ class CatalystCenterAPI:
             self.discovery = Discovery_v3_1_3_0(
                 self._session, object_factory, _validator
             )
-            self.eox = Eox_v3_1_3_0(self._session, object_factory, _validator)
+            self.eox = EoX_v3_1_3_0(self._session, object_factory, _validator)
             self.event_management = EventManagement_v3_1_3_0(
                 self._session, object_factory, _validator
             )
@@ -863,7 +867,7 @@ class CatalystCenterAPI:
             self.tag = Tag_v3_1_3_0(self._session, object_factory, _validator)
             self.task = Task_v3_1_3_0(self._session, object_factory, _validator)
             self.topology = Topology_v3_1_3_0(self._session, object_factory, _validator)
-            self.user_and_roles = UserandRoles_v3_1_3_0(
+            self.user_and_roles = UserAndRoles_v3_1_3_0(
                 self._session, object_factory, _validator
             )
             self.users = Users_v3_1_3_0(self._session, object_factory, _validator)
@@ -871,7 +875,7 @@ class CatalystCenterAPI:
             self.wireless = Wireless_v3_1_3_0(self._session, object_factory, _validator)
 
         if version == "3.1.6.0":
-            self.ai_endpoint_analytics = AiEndpointAnalytics_v3_1_6_0(
+            self.ai_endpoint_analytics = AIEndpointAnalytics_v3_1_6_0(
                 self._session, object_factory, _validator
             )
             self.application_policy = ApplicationPolicy_v3_1_6_0(
@@ -916,7 +920,7 @@ class CatalystCenterAPI:
             self.discovery = Discovery_v3_1_6_0(
                 self._session, object_factory, _validator
             )
-            self.eox = Eox_v3_1_6_0(self._session, object_factory, _validator)
+            self.eox = EoX_v3_1_6_0(self._session, object_factory, _validator)
             self.event_management = EventManagement_v3_1_6_0(
                 self._session, object_factory, _validator
             )
@@ -972,7 +976,7 @@ class CatalystCenterAPI:
             self.tag = Tag_v3_1_6_0(self._session, object_factory, _validator)
             self.task = Task_v3_1_6_0(self._session, object_factory, _validator)
             self.topology = Topology_v3_1_6_0(self._session, object_factory, _validator)
-            self.user_and_roles = UserandRoles_v3_1_6_0(
+            self.user_and_roles = UserAndRoles_v3_1_6_0(
                 self._session, object_factory, _validator
             )
             self.users = Users_v3_1_6_0(self._session, object_factory, _validator)

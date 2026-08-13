@@ -30,7 +30,7 @@ from ...utils import (
 )
 
 
-class Eox:
+class EoX:
     """Cisco Catalyst Center EoX API (version: 3.1.3.0).
 
     Wraps the Catalyst Center EoX
@@ -40,7 +40,7 @@ class Eox:
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new Eox
+        """Initialize a new EoX
         object with the provided RestSession.
 
         Args:
@@ -223,3 +223,7 @@ class Eox:
         return self._object_factory(
             "bpm_f0a0dfdaca465bdc91fc290d87476b89_v3_1_3_0", json_data
         )
+
+
+# Alias Functions
+Eox = EoX

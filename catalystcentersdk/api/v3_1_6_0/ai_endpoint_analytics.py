@@ -30,7 +30,7 @@ from ...utils import (
 )
 
 
-class AiEndpointAnalytics:
+class AIEndpointAnalytics:
     """Cisco Catalyst Center AI Endpoint Analytics API (version: 3.1.6.0).
 
     Wraps the Catalyst Center AI Endpoint Analytics
@@ -40,7 +40,7 @@ class AiEndpointAnalytics:
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new AiEndpointAnalytics
+        """Initialize a new AIEndpointAnalytics
         object with the provided RestSession.
 
         Args:
@@ -1662,3 +1662,4 @@ class AiEndpointAnalytics:
 
 
 # Alias Functions
+AiEndpointAnalytics = AIEndpointAnalytics

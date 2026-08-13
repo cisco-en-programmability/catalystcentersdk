@@ -30,7 +30,7 @@ from ...utils import (
 )
 
 
-class UserandRoles:
+class UserAndRoles:
     """Cisco Catalyst Center User and Roles API (version: 2.3.7.6).
 
     Wraps the Catalyst Center User and Roles
@@ -40,7 +40,7 @@ class UserandRoles:
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new UserandRoles
+        """Initialize a new UserAndRoles
         object with the provided RestSession.
 
         Args:
@@ -1058,6 +1058,7 @@ class UserandRoles:
 
 
 # Alias Functions
-UserandRoles.get_users = UserandRoles.get_users_api
-UserandRoles.add_user = UserandRoles.add_user_api
-UserandRoles.update_user = UserandRoles.update_user_api
+UserAndRoles.get_users = UserAndRoles.get_users_api
+UserAndRoles.add_user = UserAndRoles.add_user_api
+UserAndRoles.update_user = UserAndRoles.update_user_api
+UserandRoles = UserAndRoles
