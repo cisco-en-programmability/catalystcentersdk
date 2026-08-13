@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreatesAICAPConfigurationWorkflowForICAPIntentToRemoveTheICAPConfigurationOn
 TheDeviceV1 data model.
 

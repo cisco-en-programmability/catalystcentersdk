@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI ai_endpoint_analytics API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.

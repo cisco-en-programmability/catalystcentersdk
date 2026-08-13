@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheListOfThousandEyesTestResultsAlongWithRelatedMetricsV1 data
 model.
 

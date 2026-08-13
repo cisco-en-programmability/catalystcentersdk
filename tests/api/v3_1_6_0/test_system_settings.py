@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """DNACenterAPI system_settings API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.

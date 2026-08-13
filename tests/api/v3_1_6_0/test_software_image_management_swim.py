@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """DNACenterAPI software_image_management_swim API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.

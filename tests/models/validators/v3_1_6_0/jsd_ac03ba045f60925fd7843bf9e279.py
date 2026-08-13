@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetExternalAuthenticationSettingAPI data model.
 
 Copyright (c) 2025 Cisco Systems.

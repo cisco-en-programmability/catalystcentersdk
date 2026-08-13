@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateTheListOfSitesForTheNetworkDeviceProductNameAssignedToTheSoftwareImage
 V1 data model.
 

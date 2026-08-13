@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheCountOfDeployedICAPConfigurationsWhileSupportingBasicFilteringV1
 data model.
 

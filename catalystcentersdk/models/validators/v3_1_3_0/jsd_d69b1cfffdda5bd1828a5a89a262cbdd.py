@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center CreateSNMPDestination data model.
 
 Copyright (c) 2025 Cisco Systems.

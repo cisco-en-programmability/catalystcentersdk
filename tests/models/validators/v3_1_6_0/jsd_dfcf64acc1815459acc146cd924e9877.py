@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheListOfClients_WhileAlsoOfferingBasicFilteringAndSortingCapabilit
 ies data model.
 

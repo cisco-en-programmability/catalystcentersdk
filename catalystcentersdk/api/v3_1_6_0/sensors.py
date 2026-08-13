@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Sensors API wrapper.
 
 Copyright (c) 2026 Cisco Systems.

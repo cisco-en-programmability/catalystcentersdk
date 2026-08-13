@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetTheDeviceDataForTheGivenDeviceIdUuidV1 data model.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

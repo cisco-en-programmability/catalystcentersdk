@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteDot11axConfigurationFeatureTemplate data model.
 
 Copyright (c) 2025 Cisco Systems.

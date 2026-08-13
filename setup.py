@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """catalystcentersdk setup module."""
 
 import os
@@ -6,7 +5,7 @@ from codecs import open
 
 from setuptools import find_packages, setup
 
-__copyright__ = "Copyright (c) 2024 Cisco Systems."
+__copyright__ = "Copyright (c) 2026 Cisco Systems."
 __license__ = "MIT"
 
 

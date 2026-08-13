@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center LAN Automation API wrapper.
 
 Copyright (c) 2025 Cisco Systems.

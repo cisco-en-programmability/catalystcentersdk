@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """DNACenterAPI cisco_trusted_certificates API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI device_onboarding_pnp API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.

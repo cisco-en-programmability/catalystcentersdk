@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center TheTrendAnalyticsDataForTheNetworkDeviceInTheSpecifiedTimeRangeV1 data
 model.
 

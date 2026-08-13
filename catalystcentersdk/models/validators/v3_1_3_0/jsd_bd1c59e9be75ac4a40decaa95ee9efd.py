@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center GetsTheListOfNetworkDevicesBasedOnTheProvidedComplexFiltersAndAggregationFun
 ctions data model.
 

@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 """IPython Project Console.
 
 Used to interactively work with the main package contents in IPython.
 """
 
-__copyright__ = "Copyright (c) 2024 Cisco Systems."
+__copyright__ = "Copyright (c) 2026 Cisco Systems."
 __license__ = "MIT"
 
 

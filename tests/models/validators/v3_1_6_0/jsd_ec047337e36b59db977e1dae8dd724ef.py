@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetFabricDevicesLayer2Handoffs data model.
 
 Copyright (c) 2025 Cisco Systems.

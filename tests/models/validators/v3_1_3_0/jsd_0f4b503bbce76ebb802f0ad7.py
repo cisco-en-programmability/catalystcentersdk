@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetsTheTotalNetworkDeviceInterfaceCountsInTheSpecifiedTimeRangeWhenThereIsNo
 StartAndEndTimeSpecifiedReturnsTheLatestInterfacesTotalCountV1 data model.
 

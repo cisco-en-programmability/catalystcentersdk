@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Cisco CatalystCenter Authentication API wrapper.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +37,7 @@ from ..utils import (
 
 __author__ = ""
 __author_email__ = ""
-__copyright__ = "Copyright (c) 2024 Cisco Systems."
+__copyright__ = "Copyright (c) 2026 Cisco Systems."
 __license__ = "MIT"
 
 

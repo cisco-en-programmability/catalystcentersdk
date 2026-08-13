@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center AddLayer3VirtualNetworks data model.
 
 Copyright (c) 2025 Cisco Systems.

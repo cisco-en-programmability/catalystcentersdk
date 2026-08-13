@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheListOfNetworkProfilesThatTheGivenSiteHasBeenAssignedV1 data
 model.
 

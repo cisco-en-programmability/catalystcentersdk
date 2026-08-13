@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetTheInterfaceDataForTheGivenInterfaceIdinstanceUuidAlongWithTheStatisticsA
 ndPoeDataV1 data model.
 

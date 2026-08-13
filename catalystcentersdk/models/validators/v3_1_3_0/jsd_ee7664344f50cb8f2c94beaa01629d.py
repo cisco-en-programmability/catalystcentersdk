@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center UpdateConfigurationsForAnIntendedLayer2FeatureOnAWiredDevice data model.
 
 Copyright (c) 2025 Cisco Systems.

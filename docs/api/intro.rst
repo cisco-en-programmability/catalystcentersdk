@@ -161,7 +161,7 @@ catalystcentersdk License
 .. include:: ../../LICENSE
 
 
-*Copyright (c) 2024 Cisco Systems.*
+*Copyright (c) 2026 Cisco Systems.*
 
 
 .. _MIT Open Source License: https://opensource.org/licenses/MIT

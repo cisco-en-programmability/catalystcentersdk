@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI site_design API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.

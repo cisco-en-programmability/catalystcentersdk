@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetTrendAnalyticsDataForAGivenAAAServiceMatchingTheIdOfTheServiceV1 data
 model.
 

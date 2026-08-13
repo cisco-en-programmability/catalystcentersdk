@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheTotalNumberOfDHCPServicesForGivenSetOfComplexFiltersV1 data
 model.
 

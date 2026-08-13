@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesInformationForTheGivenPortChannelOnASpecificNetworkDevice data
 model.
 

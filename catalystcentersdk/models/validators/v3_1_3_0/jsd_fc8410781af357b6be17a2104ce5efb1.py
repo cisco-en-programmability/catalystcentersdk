@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center UpdatePnPGlobalSettings data model.
 
 Copyright (c) 2025 Cisco Systems.

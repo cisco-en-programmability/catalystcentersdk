@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetFieldNoticeNetworkDeviceForTheNoticeByNetworkDeviceId data model.
 
 Copyright (c) 2025 Cisco Systems.

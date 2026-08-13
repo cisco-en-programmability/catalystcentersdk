@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Validates CatalystCenter JSON request objects.
 
 Classes:
@@ -7,7 +6,7 @@ Classes:
 The SchemaValidator class validates any dict structure passed by
 the user with the JSON schema of the request.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

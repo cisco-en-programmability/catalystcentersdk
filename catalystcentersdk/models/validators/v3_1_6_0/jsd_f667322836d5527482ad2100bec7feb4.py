@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetsTheListOfInterfacesAcrossTheNetworkDevicesBasedOnTheProvidedComplexFilte
 rsAndAggregationFunctions data model.
 

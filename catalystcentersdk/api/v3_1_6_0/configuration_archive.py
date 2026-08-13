@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Configuration Archive API wrapper.
 
 Copyright (c) 2026 Cisco Systems.

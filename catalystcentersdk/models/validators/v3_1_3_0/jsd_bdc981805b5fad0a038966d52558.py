@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center UpdateSNMPv3Credentials data model.
 
 Copyright (c) 2025 Cisco Systems.

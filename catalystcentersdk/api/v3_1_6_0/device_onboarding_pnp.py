@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Device Onboarding (PnP) API wrapper.
 
 Copyright (c) 2026 Cisco Systems.

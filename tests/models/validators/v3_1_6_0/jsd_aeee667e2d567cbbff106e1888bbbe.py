@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteExtranetPolicyById data model.
 
 Copyright (c) 2025 Cisco Systems.

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetSummaryAnalyticsDataOfAAAServicesForGivenSetOfComplexFiltersV1 data
 model.
 

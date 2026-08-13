@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetNumberOfConfigurationsForAnIntendedLayer2FeatureOnAWiredDeviceV1 data
 model.
 

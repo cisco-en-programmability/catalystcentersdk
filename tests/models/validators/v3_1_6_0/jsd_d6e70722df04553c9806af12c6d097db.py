@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheDetailsOfASpecificDNSServiceMatchingTheIdOfTheService data
 model.
 

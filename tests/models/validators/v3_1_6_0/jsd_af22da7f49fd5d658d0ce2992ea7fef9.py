@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetTheTotalNumberOfSiteAnalyticsRecordsAvailableForForGivenSetOfQueryParamet
 ers data model.
 

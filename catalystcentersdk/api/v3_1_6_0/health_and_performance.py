@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Health and Performance API wrapper.
 
 Copyright (c) 2026 Cisco Systems.

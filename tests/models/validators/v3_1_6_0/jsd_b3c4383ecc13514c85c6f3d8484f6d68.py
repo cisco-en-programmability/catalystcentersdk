@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center SetBannerSettingsForASite data model.
 
 Copyright (c) 2025 Cisco Systems.

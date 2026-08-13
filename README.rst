@@ -203,7 +203,7 @@ All notable changes to this project will be documented in the CHANGELOG_ file.
 The development team may make additional name changes as the library evolves with the Cisco CatalystCenter APIs.
 
 
-*Copyright (c) 2024 Cisco Systems.*
+*Copyright (c) 2026 Cisco Systems.*
 
 .. _Introduction: https://catalystcentersdk.readthedocs.io/en/latest/api/intro.html
 .. _catalystcentersdk.readthedocs.io: https://catalystcentersdk.readthedocs.io

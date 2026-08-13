@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import os
 import sys
@@ -12,7 +11,7 @@ release = version("catalystcentersdk")
 version = ".".join(release.split(".")[:2])
 
 project = "catalystcentersdk"
-copyright = "Copyright (c) 2024 Cisco Systems."
+copyright = "Copyright (c) 2026 Cisco Systems."
 author = ""
 language = "en"
 

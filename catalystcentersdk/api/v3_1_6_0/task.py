@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Task API wrapper.
 
 Copyright (c) 2026 Cisco Systems.

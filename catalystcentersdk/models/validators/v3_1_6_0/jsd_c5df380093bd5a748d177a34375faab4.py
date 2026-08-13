@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center AddsANewNetworkDevice data model.
 
 Copyright (c) 2025 Cisco Systems.

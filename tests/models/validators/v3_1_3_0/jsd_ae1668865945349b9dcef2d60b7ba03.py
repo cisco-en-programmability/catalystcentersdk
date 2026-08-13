@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetTheTotalCustomIssueDefinitionsCountBasedOnTheProvidedFiltersV1 data
 model.
 

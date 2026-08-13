@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center GetTheTotalNumberOfSiteAnalyticsRecordsAvailableForForGivenSetOfFilters data
 model.
 

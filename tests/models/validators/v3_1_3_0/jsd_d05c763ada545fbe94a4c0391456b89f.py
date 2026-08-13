@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetsTheTotalNumberNetworkDevicesBasedOnTheProvidedComplexFiltersAndAggregati
 onFunctionsV1 data model.
 
