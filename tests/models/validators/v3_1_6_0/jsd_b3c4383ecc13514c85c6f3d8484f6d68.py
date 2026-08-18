@@ -28,7 +28,7 @@ import json
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
 class JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68:

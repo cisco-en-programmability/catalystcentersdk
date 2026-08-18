@@ -840,7 +840,6 @@ def update_device_default_val(api):
         active_validation=True,
         deviceInfo=None,
         id="string",
-        id=None,
         payload=None,
     )
     return endpoint_result

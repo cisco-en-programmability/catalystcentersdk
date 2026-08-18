@@ -314,7 +314,6 @@ def clone_given_template_default_val(api):
         name="string",
         payload=None,
         project_id="string",
-        project_id=None,
         template_id="string",
     )
     return endpoint_result

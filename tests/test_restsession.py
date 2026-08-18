@@ -24,7 +24,7 @@ SOFTWARE.
 import logging
 import warnings
 
-import catalystcentersdkersdk
+import catalystcentersdk
 import pytest
 
 logging.captureWarnings(True)
@@ -34,7 +34,7 @@ logging.captureWarnings(True)
 def rate_limit_detected(w):
     """Check to see if a rate-limit warning is in the warnings list."""
     while w:
-        if issubclass(w.pop().category, catalystcentersdkersdk.RateLimitWarning):
+        if issubclass(w.pop().category, catalystcentersdk.RateLimitWarning):
             return True
     return False
 

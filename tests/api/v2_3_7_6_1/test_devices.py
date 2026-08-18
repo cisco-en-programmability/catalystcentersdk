@@ -2587,7 +2587,6 @@ def clear_mac_address_table(api):
         deployment_mode="string",
         interface_uuid="string",
         operation="string",
-        payload=None,
         payload={},
     )
     return endpoint_result

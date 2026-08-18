@@ -23,11 +23,11 @@ SOFTWARE.
 
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
-from dnacentersdk.exceptions import MalformedRequest
-from tests.environment import DNA_CENTER_VERSION
+from catalystcentersdk.exceptions import MalformedRequest
+from tests.environment import CATALYST_CENTER_VERSION
 
 pytestmark = pytest.mark.skipif(
-    DNA_CENTER_VERSION != "3.1.6.0", reason="version does not match"
+    CATALYST_CENTER_VERSION != "3.1.6.0", reason="version does not match"
 )
 
 
@@ -6135,7 +6135,6 @@ def clear_mac_address_table(api):
         deployment_mode="string",
         interface_uuid="string",
         operation="string",
-        payload=None,
         payload={},
     )
     return endpoint_result
