@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteEnterpriseSSIDV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorA43Afa4D91A5043996C682A7A7A2D62(object):
+class JSONSchemaValidatorA43Afa4D91A5043996C682A7A7A2D62:
     """DeleteEnterpriseSSIDV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorA43Afa4D91A5043996C682A7A7A2D62, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "executionId": {
@@ -58,11 +55,7 @@ class JSONSchemaValidatorA43Afa4D91A5043996C682A7A7A2D62(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

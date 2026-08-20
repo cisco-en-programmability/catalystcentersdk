@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """DNACenterAPI device_onboarding_pnp API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.
@@ -21,13 +20,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
-from dnacentersdk.exceptions import MalformedRequest
-from tests.environment import DNA_CENTER_VERSION
+from catalystcentersdk.exceptions import MalformedRequest
+from tests.environment import CATALYST_CENTER_VERSION
 
 pytestmark = pytest.mark.skipif(
-    DNA_CENTER_VERSION != "3.1.6.0", reason="version does not match"
+    CATALYST_CENTER_VERSION != "3.1.6.0", reason="version does not match"
 )
 
 
@@ -881,7 +881,7 @@ def test_update_device(api, validator):
 
 def update_device_default_val(api):
     endpoint_result = api.device_onboarding_pnp.update_device(
-        active_validation=True, deviceInfo=None, id="string", id=None, payload=None
+        active_validation=True, deviceInfo=None, id="string", payload=None
     )
     return endpoint_result
 

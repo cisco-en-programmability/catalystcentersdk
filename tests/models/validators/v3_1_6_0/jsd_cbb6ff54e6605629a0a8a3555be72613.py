@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheTotalNumberOfPacketCaptureFilesMatchingSpecifiedCriteria data
 model.
 
@@ -26,22 +25,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorCbb6Ff54E6605629A0A8A3555Be72613(object):
+class JSONSchemaValidatorCbb6Ff54E6605629A0A8A3555Be72613:
     """RetrievesTheTotalNumberOfPacketCaptureFilesMatchingSpecifiedCriter
     ia request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorCbb6Ff54E6605629A0A8A3555Be72613, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -57,11 +54,7 @@ class JSONSchemaValidatorCbb6Ff54E6605629A0A8A3555Be72613(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

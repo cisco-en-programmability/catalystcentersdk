@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """pytest configuration and top-level fixtures.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +29,7 @@ pytest_plugins = [
     "tests.api.v2_3_7_9",
     "tests.api.v3_1_3_0",
     "tests.api.v3_1_6_0",
+    "tests.api.v3_2_3_0",
 ]
 
 
@@ -40,6 +40,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line("markers", "catalystcentersdk: package mark")
     config.addinivalue_line("markers", "api: catalystcentersdk mark")
+    config.addinivalue_line(
+        "markers", "ai_endpoint_analytics: ai_endpoint_analytics wrapper test"
+    )
     config.addinivalue_line(
         "markers", "application_policy: application_policy wrapper test"
     )
@@ -52,6 +55,11 @@ def pytest_configure(config):
     config.addinivalue_line(
         "markers",
         "cisco_catalystcenter_system: cisco_catalystcenter_system wrapper test",
+    )
+    config.addinivalue_line("markers", "backup: backup wrapper test")
+    config.addinivalue_line("markers", "cisco_imc: cisco_imc wrapper test")
+    config.addinivalue_line(
+        "markers", "cisco_trusted_certificates: cisco_trusted_certificates wrapper test"
     )
     config.addinivalue_line("markers", "clients: clients wrapper test")
     config.addinivalue_line("markers", "command_runner: command_runner wrapper test")
@@ -90,6 +98,12 @@ def pytest_configure(config):
         "markers", "itsm_integration: itsm_integration wrapper test"
     )
     config.addinivalue_line("markers", "issues: issues wrapper test")
+    config.addinivalue_line(
+        "markers", "industrial_configuration: industrial_configuration wrapper test"
+    )
+    config.addinivalue_line(
+        "markers", "know_your_network: know_your_network wrapper test"
+    )
     config.addinivalue_line("markers", "lan_automation: lan_automation wrapper test")
     config.addinivalue_line("markers", "licenses: licenses wrapper test")
     config.addinivalue_line(
@@ -103,7 +117,9 @@ def pytest_configure(config):
     )
     config.addinivalue_line("markers", "policy: policy wrapper test")
     config.addinivalue_line("markers", "reports: reports wrapper test")
+    config.addinivalue_line("markers", "restore: restore wrapper test")
     config.addinivalue_line("markers", "sda: sda wrapper test")
+    config.addinivalue_line("markers", "security: security wrapper test")
     config.addinivalue_line(
         "markers", "security_advisories: security_advisories wrapper test"
     )
@@ -115,9 +131,13 @@ def pytest_configure(config):
         "software_image_management_swim: software_image_management_swim wrapper test",
     )
     config.addinivalue_line("markers", "system_settings: system_settings wrapper test")
+    config.addinivalue_line(
+        "markers", "system_software_upgrade: system_software_upgrade wrapper test"
+    )
     config.addinivalue_line("markers", "tag: tag wrapper test")
     config.addinivalue_line("markers", "task: task wrapper test")
     config.addinivalue_line("markers", "topology: topology wrapper test")
     config.addinivalue_line("markers", "user_and_roles: user_and_roles wrapper test")
     config.addinivalue_line("markers", "users: users wrapper test")
+    config.addinivalue_line("markers", "wired: wired wrapper test")
     config.addinivalue_line("markers", "wireless: wireless wrapper test")

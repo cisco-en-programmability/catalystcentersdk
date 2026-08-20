@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheListOfAAAServicesForGivenParameters data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,22 +24,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorCc60533FBa1AC9A077366Acd(object):
+class JSONSchemaValidatorCc60533FBa1AC9A077366Acd:
     """RetrievesTheListOfAAAServicesForGivenParameters request schema
     definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorCc60533FBa1AC9A077366Acd, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "page": {
@@ -144,11 +141,7 @@ class JSONSchemaValidatorCc60533FBa1AC9A077366Acd(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

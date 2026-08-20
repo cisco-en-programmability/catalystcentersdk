@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center User and Roles API wrapper.
 
 Copyright (c) 2025 Cisco Systems.
@@ -22,10 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -35,7 +30,7 @@ from ...utils import (
 )
 
 
-class UserandRoles(object):
+class UserAndRoles:
     """Cisco Catalyst Center User and Roles API (version: 2.3.7.9).
 
     Wraps the Catalyst Center User and Roles
@@ -45,7 +40,7 @@ class UserandRoles(object):
     """
 
     def __init__(self, session, object_factory, request_validator):
-        """Initialize a new UserandRoles
+        """Initialize a new UserAndRoles
         object with the provided RestSession.
 
         Args:
@@ -58,7 +53,7 @@ class UserandRoles(object):
         """
         check_type(session, RestSession)
 
-        super(UserandRoles, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory
@@ -1060,3 +1055,7 @@ class UserandRoles(object):
         return self._object_factory(
             "bpm_bedf83096a45ad1beaaa1fc6c192103_v2_3_7_9", json_data
         )
+
+
+# Alias Functions
+UserandRoles = UserAndRoles

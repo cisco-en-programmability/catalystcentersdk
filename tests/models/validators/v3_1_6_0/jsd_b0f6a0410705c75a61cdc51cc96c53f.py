@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetSSIDToIPPoolMapping data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorB0F6A0410705C75A61CDc51Cc96C53F(object):
+class JSONSchemaValidatorB0F6A0410705C75A61CDc51Cc96C53F:
     """GetSSIDToIPPoolMapping request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorB0F6A0410705C75A61CDc51Cc96C53F, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "ssidDetails": {
@@ -64,11 +61,7 @@ class JSONSchemaValidatorB0F6A0410705C75A61CDc51Cc96C53F(object):
                 "vlanName"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

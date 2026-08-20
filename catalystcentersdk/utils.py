@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Package helper functions and classes.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +21,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import json
 import mimetypes
 import os
 import urllib.parse
-from builtins import *  # noqa: F401,F403
+
 from collections import OrderedDict, namedtuple
 import warnings
 import functools

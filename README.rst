@@ -13,12 +13,12 @@ catalystcentersdk
     from catalystcentersdk import api
 
     # Create a CatalystCenterAPI connection object;
-    # it uses CatalystCenter sandbox URL, username and password, with CatalystCenter API version 3.1.6.0.
+    # it uses CatalystCenter sandbox URL, username and password, with CatalystCenter API version 3.2.3.0.
     # and requests to verify the server's TLS certificate with verify=True.
     catalyst = api.CatalystCenterAPI(username="devnetuser",
                             password="Cisco123!",
                             base_url="https://sandboxdnac.cisco.com:443",
-                            version='3.1.6.0',
+                            version='3.2.3.0',
                             verify=True)
 
     # Find all devices that have 'Switches and Hubs' in their family
@@ -157,10 +157,35 @@ The following table shows the supported versions.
      - 3.1.3.0.x
    * - 3.1.6.0
      - 3.1.6.0.x
+   * - 3.2.3.0
+     - 3.2.3.0.x
 
 
 
 If your SDK is older please consider updating it first.
+
+Method naming and v1/v2 aliases
+--------------------------------
+
+Cisco's Catalyst Center API sometimes exposes both a **v1** and a **v2** version of the same operation at different URLs (for example ``/dna/intent/api/v1/applications`` and ``/dna/intent/api/v2/applications``). When both genuinely exist for the same operation, this SDK follows one consistent rule:
+
++ **v2 is the main/default method** - it gets the plain method name, with no version suffix. This is the name you should use going forward.
+
++ **v2 also gets a** ``_v2``-suffixed alias pointing to that same method, so calling it out explicitly (``some_method_v2(...)``) always works too.
+
++ **v1 keeps a** ``_v1`` suffix by default (``some_method_v1(...)``), since it's the older variant of the same operation.
+
++ **If v1's own name is different from v2's** - Cisco doesn't always name both sides of a v1/v2 pair the same way (for example the v1 side of "create an application set" is ``CreateApplicationSetV1``, singular, while the v2 side is ``CreateApplicationSets``, plural) - the v1 method *additionally* gets its own plain-name alias (its name with just the ``_v1`` suffix dropped, e.g. ``create_application_set``), so it's reachable both by its ``_v1``-suffixed name and by its own natural identity.
+
+If an operation's name ends in ``V1`` or ``V2`` but there's no genuine sibling at the other version's URL, that suffix isn't a real version marker - it's just how Cisco happened to name a standalone endpoint - so it's dropped entirely and the method only exists under its plain name.
+
+A few related naming conventions worth knowing:
+
++ **Acronyms stay whole.** Method and class names keep acronyms like ``QoS``, ``DNS``, ``DHCP``, ``IMC``, ``CSSM``, and ``WLC`` as a single word (``get_qos_...``, not ``get_qo_s_...``), matching how they're normally written.
+
++ **Branded class names match Cisco's own capitalization** - for example ``EoX``, ``CiscoIMC``, ``AIEndpointAnalytics``, and ``UserAndRoles``. Where an older, differently-capitalized spelling was already in use (``Eox``, ``CiscoImc``, ``AiEndpointAnalytics``, ``UserandRoles``), it's kept as an alias of the class, so existing code keeps working.
+
++ **Nothing gets removed, only added alongside.** Whenever a name changes for consistency, the previous name keeps working as an alias - upgrading the SDK version should never break an existing integration because of a rename.
 
 Documentation
 -------------
@@ -203,7 +228,7 @@ All notable changes to this project will be documented in the CHANGELOG_ file.
 The development team may make additional name changes as the library evolves with the Cisco CatalystCenter APIs.
 
 
-*Copyright (c) 2024 Cisco Systems.*
+*Copyright (c) 2026 Cisco Systems.*
 
 .. _Introduction: https://catalystcentersdk.readthedocs.io/en/latest/api/intro.html
 .. _catalystcentersdk.readthedocs.io: https://catalystcentersdk.readthedocs.io

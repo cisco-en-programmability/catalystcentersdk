@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center SecurityServiceInsertionByIdV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorA9B856DC5A85D55A378E1F83C54F3B7(object):
+class JSONSchemaValidatorA9B856DC5A85D55A378E1F83C54F3B7:
     """SecurityServiceInsertionByIdV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorA9B856DC5A85D55A378E1F83C54F3B7, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -108,11 +105,7 @@ class JSONSchemaValidatorA9B856DC5A85D55A378E1F83C54F3B7(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center StartDiscovery data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorFdbe4Ec3E9F252A988404Dc94250B80D(object):
+class JSONSchemaValidatorFdbe4Ec3E9F252A988404Dc94250B80D:
     """StartDiscovery request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorFdbe4Ec3E9F252A988404Dc94250B80D, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "cdpLevel": {
@@ -176,11 +173,7 @@ class JSONSchemaValidatorFdbe4Ec3E9F252A988404Dc94250B80D(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

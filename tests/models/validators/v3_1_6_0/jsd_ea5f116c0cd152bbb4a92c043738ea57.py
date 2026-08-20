@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheListOfClientsByApplyingComplexFiltersWhileAlsoSupportingAggregat
 eAttributes data model.
 
@@ -26,22 +25,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorEa5F116C0Cd152BbB4A92C043738Ea57(object):
+class JSONSchemaValidatorEa5F116C0Cd152BbB4A92C043738Ea57:
     """RetrievesTheListOfClientsByApplyingComplexFiltersWhileAlsoSupporti
     ngAggregateAttributes request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorEa5F116C0Cd152BbB4A92C043738Ea57, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "page": {
@@ -459,11 +456,7 @@ class JSONSchemaValidatorEa5F116C0Cd152BbB4A92C043738Ea57(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

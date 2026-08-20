@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Configuration Archive API wrapper.
 
 Copyright (c) 2026 Cisco Systems.
@@ -22,9 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -34,7 +30,7 @@ from ...utils import (
 )
 
 
-class ConfigurationArchive(object):
+class ConfigurationArchive:
     """Cisco Catalyst Center Configuration Archive API (version: 3.1.6.0).
 
     Wraps the Catalyst Center Configuration Archive
@@ -57,7 +53,7 @@ class ConfigurationArchive(object):
         """
         check_type(session, RestSession)
 
-        super(ConfigurationArchive, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory
@@ -440,8 +436,13 @@ class ConfigurationArchive(object):
         )
 
     def download_masked_device_configuration(
-        self, id, dirpath=None, save_file=None, filename=None,
-        headers=None, **request_parameters
+        self,
+        id,
+        dirpath=None,
+        save_file=None,
+        filename=None,
+        headers=None,
+        **request_parameters
     ):
         """Download the masked (sanitized) device configuration by providing the file `id`.
 
@@ -498,13 +499,22 @@ class ConfigurationArchive(object):
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             json_data = self._session.post(
-                endpoint_full_url, params=_params, headers=_headers,
-                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
+                endpoint_full_url,
+                params=_params,
+                headers=_headers,
+                stream=True,
+                dirpath=dirpath,
+                save_file=save_file,
+                filename=filename,
             )
         else:
             json_data = self._session.post(
-                endpoint_full_url, params=_params,
-                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
+                endpoint_full_url,
+                params=_params,
+                stream=True,
+                dirpath=dirpath,
+                save_file=save_file,
+                filename=filename,
             )
 
         return self._object_factory(
@@ -603,12 +613,20 @@ class ConfigurationArchive(object):
                 params=_params,
                 json=_payload,
                 headers=_headers,
-                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
+                stream=True,
+                dirpath=dirpath,
+                save_file=save_file,
+                filename=filename,
             )
         else:
             json_data = self._session.post(
-                endpoint_full_url, params=_params, json=_payload,
-                stream=True, dirpath=dirpath, save_file=save_file, filename=filename,
+                endpoint_full_url,
+                params=_params,
+                json=_payload,
+                stream=True,
+                dirpath=dirpath,
+                save_file=save_file,
+                filename=filename,
             )
 
         return self._object_factory(

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """DNACenterAPI authentication API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.
@@ -21,11 +20,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 import pytest
-from tests.environment import DNA_CENTER_VERSION
+from tests.environment import CATALYST_CENTER_VERSION
 
 pytestmark = pytest.mark.skipif(
-    DNA_CENTER_VERSION != "3.1.6.0", reason="version does not match"
+    CATALYST_CENTER_VERSION != "3.1.6.0", reason="version does not match"
 )
 
 
@@ -36,7 +36,7 @@ def is_valid_authentication_api(json_schema_validate, obj):
 
 def authentication_api(api):
     endpoint_result = api.authentication.authentication_api(
-        username="DNA_CENTER_USERNAME", password="DNA_CENTER_PASSWORD"
+        username="CATALYST_CENTER_USERNAME", password="CATALYST_CENTER_PASSWORD"
     )
     return endpoint_result
 
@@ -48,7 +48,7 @@ def test_authentication_api(api, validator):
 
 def authentication_api_default(api):
     endpoint_result = api.authentication.authentication_api(
-        username="DNA_CENTER_USERNAME", password="DNA_CENTER_PASSWORD"
+        username="CATALYST_CENTER_USERNAME", password="CATALYST_CENTER_PASSWORD"
     )
     return endpoint_result
 

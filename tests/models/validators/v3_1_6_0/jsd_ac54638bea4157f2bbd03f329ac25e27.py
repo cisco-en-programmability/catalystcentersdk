@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetAllITSMIntegrationSettings data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorAc54638BEa4157F2Bbd03F329Ac25E27(object):
+class JSONSchemaValidatorAc54638BEa4157F2Bbd03F329Ac25E27:
     """GetAllITSMIntegrationSettings request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorAc54638BEa4157F2Bbd03F329Ac25E27, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "data": {
@@ -107,11 +104,7 @@ class JSONSchemaValidatorAc54638BEa4157F2Bbd03F329Ac25E27(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

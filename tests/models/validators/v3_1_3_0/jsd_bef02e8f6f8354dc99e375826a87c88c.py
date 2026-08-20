@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetRolesAPIV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorBef02E8F6F8354Dc99E375826A87C88C(object):
+class JSONSchemaValidatorBef02E8F6F8354Dc99E375826A87C88C:
     """GetRolesAPIV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorBef02E8F6F8354Dc99E375826A87C88C, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -106,11 +103,7 @@ class JSONSchemaValidatorBef02E8F6F8354Dc99E375826A87C88C(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

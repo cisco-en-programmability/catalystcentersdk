@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center CountTheNumberOfDiscoveryJobsForGivenDiscoveryId data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,22 +24,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorEc84F99950B383BbCb694Ac2002F(object):
+class JSONSchemaValidatorEc84F99950B383BbCb694Ac2002F:
     """CountTheNumberOfDiscoveryJobsForGivenDiscoveryId request schema
     definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorEc84F99950B383BbCb694Ac2002F, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -63,11 +60,7 @@ class JSONSchemaValidatorEc84F99950B383BbCb694Ac2002F(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

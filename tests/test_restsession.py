@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """catalystcentersdk/restsession.py Fixtures & Tests
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +24,7 @@ SOFTWARE.
 import logging
 import warnings
 
-import catalystcentersdkersdk
+import catalystcentersdk
 import pytest
 
 logging.captureWarnings(True)
@@ -35,7 +34,7 @@ logging.captureWarnings(True)
 def rate_limit_detected(w):
     """Check to see if a rate-limit warning is in the warnings list."""
     while w:
-        if issubclass(w.pop().category, catalystcentersdkersdk.RateLimitWarning):
+        if issubclass(w.pop().category, catalystcentersdk.RateLimitWarning):
             return True
     return False
 

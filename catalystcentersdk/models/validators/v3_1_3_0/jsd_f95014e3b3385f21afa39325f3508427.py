@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center AddFabricDevicesLayer3HandoffsWithSdaTransit data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,22 +29,20 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorF95014E3B3385F21Afa39325F3508427(object):
+class JSONSchemaValidatorF95014E3B3385F21Afa39325F3508427:
     """AddFabricDevicesLayer3HandoffsWithSdaTransit request schema
     definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorF95014E3B3385F21Afa39325F3508427, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -74,11 +71,7 @@ class JSONSchemaValidatorF95014E3B3385F21Afa39325F3508427(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

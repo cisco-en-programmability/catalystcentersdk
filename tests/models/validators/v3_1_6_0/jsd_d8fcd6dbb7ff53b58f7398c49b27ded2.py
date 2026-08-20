@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DownloadUnmaskedrawDeviceConfigurationAsZIP data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,29 +24,23 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD8Fcd6DbB7Ff53B58F7398C49B27Ded2(object):
+class JSONSchemaValidatorD8Fcd6DbB7Ff53B58F7398C49B27Ded2:
     """DownloadUnmaskedrawDeviceConfigurationAsZIP request schema
     definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD8Fcd6DbB7Ff53B58F7398C49B27Ded2, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

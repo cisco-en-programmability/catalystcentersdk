@@ -58,7 +58,7 @@ command:
     $ python setup.py install
 
 
-*Copyright (c) 2024 Cisco Systems.*
+*Copyright (c) 2026 Cisco Systems.*
 
 
 .. _Python Package Index (PyPI): https://pypi.python.org/pypi/catalystcentersdk

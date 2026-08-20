@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center UpdateADevicesTelemetrySettingsToConformToTheTelemetrySettingsForItsSite
 data model.
 
@@ -26,22 +25,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorDe1B75D59B083Df0Ece12259Ecd(object):
+class JSONSchemaValidatorDe1B75D59B083Df0Ece12259Ecd:
     """UpdateADevicesTelemetrySettingsToConformToTheTelemetrySettingsForI
     tsSite request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorDe1B75D59B083Df0Ece12259Ecd, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -61,11 +58,7 @@ class JSONSchemaValidatorDe1B75D59B083Df0Ece12259Ecd(object):
                 "response"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

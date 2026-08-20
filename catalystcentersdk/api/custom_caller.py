@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Cisco CatalystCenter CustomCaller
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,9 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import logging
-from builtins import *  # noqa: F401,F403
 
 
 from ..restsession import RestSession
@@ -39,7 +36,7 @@ from ..utils import (
 logger = logging.getLogger(__name__)
 
 
-class CustomCaller(object):
+class CustomCaller:
     """Cisco CatalystCenter CustomCaller.
 
     CatalystCenter CustomCaller allows API creation.
@@ -59,7 +56,7 @@ class CustomCaller(object):
         """
         check_type(session, RestSession)
 
-        super(CustomCaller, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

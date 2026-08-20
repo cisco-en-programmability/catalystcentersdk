@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Validates CatalystCenter JSON request objects.
 
 Classes:
@@ -7,7 +6,7 @@ Classes:
 The SchemaValidator class validates any dict structure passed by
 the user with the JSON schema of the request.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +26,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-
-
-from builtins import *  # noqa: F401,F403
 
 import fastjsonschema
 from catalystcentersdk.exceptions import MalformedRequest
@@ -4988,11 +4984,11 @@ from .validators.v3_1_6_0.jsd_ffd2fefb57d5523c87a5d941eb93ddc3 import (
 )
 
 
-class JSONSchemaValidator(object):
+class JSONSchemaValidator:
     """Validates a CatalystCenter JSON request."""
 
     def __init__(self):
-        super(JSONSchemaValidator, self).__init__()
+        super().__init__()
         self._validator = fastjsonschema.compile({})
 
     def validate(self, request):
