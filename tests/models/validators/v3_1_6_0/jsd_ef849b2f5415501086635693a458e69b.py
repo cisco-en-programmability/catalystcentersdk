@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteApplicationV2 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorEf849B2F5415501086635693A458E69B(object):
+class JSONSchemaValidatorEf849B2F5415501086635693A458E69B:
     """DeleteApplicationV2 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorEf849B2F5415501086635693A458E69B, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -58,11 +55,7 @@ class JSONSchemaValidatorEf849B2F5415501086635693A458E69B(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

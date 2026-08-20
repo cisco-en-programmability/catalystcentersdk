@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteFabricDeviceLayer3HandoffWithIpTransitById data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,22 +24,20 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorFafe4D2D2Fe510DB8F0906E5F583559(object):
+class JSONSchemaValidatorFafe4D2D2Fe510DB8F0906E5F583559:
     """DeleteFabricDeviceLayer3HandoffWithIpTransitById request schema
     definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorFafe4D2D2Fe510DB8F0906E5F583559, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -67,11 +64,7 @@ class JSONSchemaValidatorFafe4D2D2Fe510DB8F0906E5F583559(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

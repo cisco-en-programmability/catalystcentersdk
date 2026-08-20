@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Event Management API wrapper.
 
 Copyright (c) 2025 Cisco Systems.
@@ -22,10 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -36,7 +31,7 @@ from ...utils import (
 )
 
 
-class EventManagement(object):
+class EventManagement:
     """Cisco Catalyst Center Event Management API (version: 2.3.7.9).
 
     Wraps the Catalyst Center Event Management
@@ -59,7 +54,7 @@ class EventManagement(object):
         """
         check_type(session, RestSession)
 
-        super(EventManagement, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

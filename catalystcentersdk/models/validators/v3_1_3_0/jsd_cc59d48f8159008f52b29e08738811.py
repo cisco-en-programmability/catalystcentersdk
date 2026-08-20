@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center CreateWirelessProfileConnectivity data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorCc59D48F8159008F52B29E08738811(object):
+class JSONSchemaValidatorCc59D48F8159008F52B29E08738811:
     """CreateWirelessProfileConnectivity request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorCc59D48F8159008F52B29E08738811, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "additionalInterfaces": {
@@ -138,11 +135,7 @@ class JSONSchemaValidatorCc59D48F8159008F52B29E08738811(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

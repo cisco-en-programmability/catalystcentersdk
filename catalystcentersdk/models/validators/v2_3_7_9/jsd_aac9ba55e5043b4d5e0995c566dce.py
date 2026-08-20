@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center LANAutomationDeviceUpdateV1 data model.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,23 +21,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorAac9BA55E5043B4D5E0995C566Dce(object):
+class JSONSchemaValidatorAac9BA55E5043B4D5E0995C566Dce:
     """LANAutomationDeviceUpdateV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorAac9BA55E5043B4D5E0995C566Dce, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "hostnameUpdateDevices": {
@@ -91,11 +87,7 @@ class JSONSchemaValidatorAac9BA55E5043B4D5E0995C566Dce(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

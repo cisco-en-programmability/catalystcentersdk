@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateLSCCertificateRenewalProfile data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorDa35060D4A15Da8B4C7D9176408Ca1E(object):
+class JSONSchemaValidatorDa35060D4A15Da8B4C7D9176408Ca1E:
     """CreateLSCCertificateRenewalProfile request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorDa35060D4A15Da8B4C7D9176408Ca1E, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -66,11 +63,7 @@ class JSONSchemaValidatorDa35060D4A15Da8B4C7D9176408Ca1E(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center CreateTag data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorE8271B05B62C54609F74B4F2F373Ad5A(object):
+class JSONSchemaValidatorE8271B05B62C54609F74B4F2F373Ad5A:
     """CreateTag request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorE8271B05B62C54609F74B4F2F373Ad5A, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "description":
@@ -102,11 +99,7 @@ class JSONSchemaValidatorE8271B05B62C54609F74B4F2F373Ad5A(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

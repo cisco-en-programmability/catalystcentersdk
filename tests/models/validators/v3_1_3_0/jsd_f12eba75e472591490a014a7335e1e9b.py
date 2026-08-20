@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrievesTheListOfNetworkProfilesThatTheGivenSiteHasBeenAssignedV1 data
 model.
 
@@ -31,22 +30,20 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorF12Eba75E472591490A014A7335E1E9B(object):
+class JSONSchemaValidatorF12Eba75E472591490A014A7335E1E9B:
     """RetrievesTheListOfNetworkProfilesThatTheGivenSiteHasBeenAssignedV1
     request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorF12Eba75E472591490A014A7335E1E9B, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -65,11 +62,7 @@ class JSONSchemaValidatorF12Eba75E472591490A014A7335E1E9B(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

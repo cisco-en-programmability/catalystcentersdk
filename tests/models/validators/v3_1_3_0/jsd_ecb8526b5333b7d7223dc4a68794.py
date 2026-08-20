@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetMulticastVirtualNetworkCountV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorEcb8526B5333B7D7223Dc4A68794(object):
+class JSONSchemaValidatorEcb8526B5333B7D7223Dc4A68794:
     """GetMulticastVirtualNetworkCountV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorEcb8526B5333B7D7223Dc4A68794, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -60,11 +57,7 @@ class JSONSchemaValidatorEcb8526B5333B7D7223Dc4A68794(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

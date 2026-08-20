@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI configuration_templates API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.
@@ -21,6 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
@@ -314,7 +314,6 @@ def clone_given_template_default_val(api):
         name="string",
         payload=None,
         project_id="string",
-        project_id=None,
         template_id="string",
     )
     return endpoint_result

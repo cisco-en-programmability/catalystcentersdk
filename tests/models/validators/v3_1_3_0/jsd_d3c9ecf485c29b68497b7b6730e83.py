@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center RetrieveSitesWithOverriddenSSIDsV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorD3C9ECf485C29B68497B7B6730E83(object):
+class JSONSchemaValidatorD3C9ECf485C29B68497B7B6730E83:
     """RetrieveSitesWithOverriddenSSIDsV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorD3C9ECf485C29B68497B7B6730E83, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -80,11 +77,7 @@ class JSONSchemaValidatorD3C9ECf485C29B68497B7B6730E83(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteTransitNetworkById data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorBc1Bbf0065150EbAbbe5E5Bee3D80D7(object):
+class JSONSchemaValidatorBc1Bbf0065150EbAbbe5E5Bee3D80D7:
     """DeleteTransitNetworkById request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorBc1Bbf0065150EbAbbe5E5Bee3D80D7, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -66,11 +63,7 @@ class JSONSchemaValidatorBc1Bbf0065150EbAbbe5E5Bee3D80D7(object):
                 "version"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

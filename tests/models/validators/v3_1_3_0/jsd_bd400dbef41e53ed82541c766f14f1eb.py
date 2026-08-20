@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateAPAuthorizationListV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorBd400DbeF41E53Ed82541C766F14F1Eb(object):
+class JSONSchemaValidatorBd400DbeF41E53Ed82541C766F14F1Eb:
     """CreateAPAuthorizationListV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorBd400DbeF41E53Ed82541C766F14F1Eb, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -63,11 +60,7 @@ class JSONSchemaValidatorBd400DbeF41E53Ed82541C766F14F1Eb(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

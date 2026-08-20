@@ -69,7 +69,7 @@ CatalystCenter for Developers
 Leveraging the CatalystCenter APIs and developing on top of the CatalystCenter cloud is easy. Head over to the `CatalystCenter for Developers`_ website to learn more.
 
 
-*Copyright (c) 2024 Cisco Systems.*
+*Copyright (c) 2026 Cisco Systems.*
 
 
 .. _DNA Center: https://www.cisco.com/c/en/us/products/cloud-systems-management/dna-center/index.html

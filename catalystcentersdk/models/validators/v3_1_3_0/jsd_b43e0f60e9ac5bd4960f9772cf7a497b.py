@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center GetTopNAnalyticsDataOfDNSServicesForGivenSetOfComplexFilters data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,22 +29,20 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B(object):
+class JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B:
     """GetTopNAnalyticsDataOfDNSServicesForGivenSetOfComplexFilters
     request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "aggregateAttributes": {
@@ -139,11 +136,7 @@ class JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Test suite for the community-developed Python SDK for the CatalystCenter APIs.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -370,7 +369,7 @@ from catalystcentersdk.api.v3_1_6_0.authentication_management import (
     AuthenticationManagement as AuthenticationManagement_v3_1_6_0,
 )
 from catalystcentersdk.api.v3_1_6_0.backup import Backup as Backup_v3_1_6_0
-from catalystcentersdk.api.v3_1_6_0.cisco_i_m_c import CiscoIMC as CiscoIMC_v3_1_6_0
+from catalystcentersdk.api.v3_1_6_0.cisco_imc import CiscoIMC as CiscoIMC_v3_1_6_0
 from catalystcentersdk.api.v3_1_6_0.cisco_trusted_certificates import (
     CiscoTrustedCertificates as CiscoTrustedCertificates_v3_1_6_0,
 )

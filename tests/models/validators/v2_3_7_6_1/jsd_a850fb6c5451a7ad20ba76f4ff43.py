@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center DeleteWirelessProfileV1 data model.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,23 +21,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43(object):
+class JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43:
     """DeleteWirelessProfileV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "executionId": {
@@ -52,11 +48,7 @@ class JSONSchemaValidatorA850Fb6C5451A7Ad20Ba76F4Ff43(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

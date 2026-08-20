@@ -6,6 +6,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.3.0.0] - 2026-08-20
+### Added
+- Add support of Cisco Catalyst Center version ('3.2.3.0')
+- Adds modules for v3_2_3_0
+- New service for Cisco Catalyst Center 3.2.3.0's API:
+  - `security`
+
+### Changed
+- Cisco Catalyst Center 3.2.3.0's API drops the `ai_endpoint_analytics` and `disaster_recovery` tags present in 3.1.6.0; these services are not available under version 3.2.3.0.
+- Standardized class name capitalization for `AIEndpointAnalytics`, `EoX`, `CiscoIMC`, and `UserAndRoles` across all API versions; the previous spellings (`AiEndpointAnalytics`, `Eox`, `CiscoImc`, `UserandRoles`) remain available as class aliases.
+- Renamed module `cisco_i_m_c.py` to `cisco_imc.py` for versions 2.3.7.9 and 3.1.3.0 (already correct in 3.1.6.0 and 3.2.3.0); the old filename is kept as a backward-compatible shim re-exporting `CiscoIMC`.
+- Established a consistent v1/v2 method naming convention, documented in the README under "Method naming and v1/v2 aliases": the v2 operation is the canonical method name and also gets a `_v2` alias, while the v1 operation keeps its `_v1` suffix and additionally gets a bare-name alias whenever its own operationId differs from the v2 side's.
+
+### Fixed
+- **Duplicate keyword argument crash on parameters shared by path and body (e.g. `id`)**: The generator's parameter sorter could resolve a name collision between a required path parameter and an optional body property of the same name in favor of the optional one, silently turning a required path segment into an omittable `id=None`, or otherwise raise `SyntaxError: keyword argument repeated` in generated code. Fixed the generator to always prefer the required occurrence and resynced the affected methods (e.g. `update_application_health_score_definition_for_the_given_id` in 3.2.3.0).
+- **`get_template_versions` / `gets_all_the_versions_of_a_given_template` naming collision**: A stale `rename_endpoints` shortcut collapsed two distinct Configuration Templates operations onto the same method name, silently shadowing one of them across all API versions. Removed the stale shortcut so both operations are reachable under their own names.
+- **`lan_automation_start_v2` alias missing (3.2.3.0)**: The generator template only supported one alias per endpoint, so this genuine `_v2` alias was being silently shadowed by an unrelated short alias (`start`). Fixed the template to support multiple aliases per endpoint, restoring `lan_automation_start_v2`.
+- **`Sda.get_site_v2` incorrectly pointed to a v1-only endpoint (3.2.3.0)**: A `rename_endpoints` shortcut for SDA's `GetSiteFromSDAFabric` collided by name with an unrelated `Sites`-tag alias, producing a bogus `get_site_v2` method that actually called the v1 SDA endpoint. Removed the incorrect alias.
+- **Missing v1/v2 divergent-name aliases (3.2.3.0)**: Cisco does not always name both sides of a v1/v2 pair the same way (for example the v1 side of "create an application set" is `CreateApplicationSetV1`, singular, while the v2 side is `CreateApplicationSets`, plural). Added bare-name aliases so the v1 method is also reachable under its own identity: `ApplicationPolicy.create_application_set`, `get_application_sets_count`, `edit_application`, `create_application`, `get_applications_count`; `ConfigurationTemplates.gets_the_templates_available`; `UserAndRoles.get_roles_api`.
+- **Missing aliases required by the `cisco.catalystcenter` Ansible collection (3.2.3.0)**: Added `Discovery.get_global_credentials` and `Licenses.retrieves_c_s_s_m_connection_mode` / `update_c_s_s_m_connection_mode` aliases so the collection's existing calls resolve correctly under 3.2.3.0.
+- **Legacy `dnacentersdk` rebranding leftovers in the 3.1.6.0 test suite**: Fixed lingering `dnacentersdk` imports across 1353 validator files and 49 API test files, stray `DNA_CENTER_VERSION` / `DNA_CENTER_USERNAME` / `DNA_CENTER_PASSWORD` environment variable references across the test suite, a `cisco_i_m_c` import path mismatch in `test_catalystcentersdk.py`, and a `catalystcentersdkersdk` typo in `test_restsession.py`. None of these affected the published package; they only blocked running the test suite from source.
+- Registered the 3.2.3.0 mock server and added its missing pytest markers (`security`, `ai_endpoint_analytics`, `backup`, `cisco_imc`, `cisco_trusted_certificates`, `industrial_configuration`, `know_your_network`, `restore`, `system_software_upgrade`, `wired`) to `conftest.py`, so the test suite collects and runs cleanly for 3.2.3.0.
+
 ## [3.1.6.0.7] - 2026-07-28
 ### Fixed
 - **Missing backward-compatibility aliases in v2.3.7.6.1 (Issues #44, #45, #46)**: Three v2.3.7.6.1 API classes exposed `_v2` methods without the historical compatibility alias present in v3.1.6.0, raising `AttributeError` for Catalyst Center 2.3.7.6 users and breaking the `cisco.catalystcenter` Ansible collection's `device_templates`, `site_hierarchy`, `device_credentials`, and `device_discovery` workflows. Added the missing aliases: `ConfigurationTemplates.get_templates_details` to `get_templates_details_v2`, `SiteDesign.deletes_a_floor` to `deletes_a_floor_v2`, and `Discovery.get_all_global_credentials` to `get_all_global_credentials_v2`.
@@ -174,4 +197,5 @@ to "application".
 [3.1.6.0.5]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.4...v3.1.6.0.5
 [3.1.6.0.6]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...v3.1.6.0.6
 [3.1.6.0.7]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.6...v3.1.6.0.7
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.7...develop
+[3.2.3.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.7...v3.2.3.0.0
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.0...develop

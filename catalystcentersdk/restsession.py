@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """RestSession class for creating connections to the Catalyst Center APIs.
 
-Copyright (c) 2024 Cisco Systems.
+Copyright (c) 2026 Cisco Systems.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
 import errno
 import logging
 import os
@@ -31,7 +29,7 @@ import socket
 import time
 import urllib.parse
 import warnings
-from builtins import *  # noqa: F401,F403
+
 
 import requests
 
@@ -90,7 +88,7 @@ class DownloadResponse(HTTPResponse):
             dirpath(str): The download directory path.
             collected_data(bytes): HTTP response's data.
         """
-        super(DownloadResponse, self).__init__(
+        super().__init__(
             body=response.raw,
             headers=response.headers,
             status=response.status_code,
@@ -129,7 +127,7 @@ class DownloadResponse(HTTPResponse):
 
 
 # Main module interface
-class RestSession(object):
+class RestSession:
     """RESTful HTTP session class for making calls to the Catalyst Center APIs."""
 
     def __init__(
@@ -184,7 +182,7 @@ class RestSession(object):
         check_type(debug, (bool), may_be_none=False)
         check_type(user_agent, str, may_be_none=False)
 
-        super(RestSession, self).__init__()
+        super().__init__()
 
         # Initialize attributes and properties
         self._base_url = str(validate_base_url(base_url))

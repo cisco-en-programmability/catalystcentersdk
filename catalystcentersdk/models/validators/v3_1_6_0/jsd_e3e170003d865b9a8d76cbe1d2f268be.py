@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateTemplate data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -32,11 +31,12 @@ import fastjsonschema
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorE3E170003D865B9A8D76Cbe1D2F268Be(object):
+class JSONSchemaValidatorE3E170003D865B9A8D76Cbe1D2F268Be:
     """CreateTemplate request schema definition."""
+
     def __init__(self):
-        super(JSONSchemaValidatorE3E170003D865B9A8D76Cbe1D2F268Be, self).__init__()
-        self._validator = fastjsonschema.compile(json.loads('''
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
@@ -706,12 +706,12 @@ class JSONSchemaValidatorE3E170003D865B9A8D76Cbe1D2F268Be(object):
     ],
     "type": "object"
 }
-'''))
+"""))
 
     def validate(self, request):
         try:
             self._validator(request)
         except fastjsonschema.exceptions.JsonSchemaException as e:
             raise MalformedRequest(
-                '{} is invalid. Reason: {}'.format(request, e.message)
+                "{} is invalid. Reason: {}".format(request, e.message)
             )

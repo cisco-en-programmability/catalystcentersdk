@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center CreateNFSConfiguration data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorE9C39175D785A0EB9D6F402F378A2Ba(object):
+class JSONSchemaValidatorE9C39175D785A0EB9D6F402F378A2Ba:
     """CreateNFSConfiguration request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorE9C39175D785A0EB9D6F402F378A2Ba, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "nfsPort": {
@@ -68,11 +65,7 @@ class JSONSchemaValidatorE9C39175D785A0EB9D6F402F378A2Ba(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetTheInterfaceDataForTheGivenInterfaceIdinstanceUuidAlongWithTheStatisticsA
 ndPoeDataV1 data model.
 
@@ -31,22 +30,20 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorAdcdf890505770Af113B18B30C1B5F(object):
+class JSONSchemaValidatorAdcdf890505770Af113B18B30C1B5F:
     """GetTheInterfaceDataForTheGivenInterfaceIdinstanceUuidAlongWithTheS
     tatisticsAndPoeDataV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorAdcdf890505770Af113B18B30C1B5F, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -258,11 +255,7 @@ class JSONSchemaValidatorAdcdf890505770Af113B18B30C1B5F(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

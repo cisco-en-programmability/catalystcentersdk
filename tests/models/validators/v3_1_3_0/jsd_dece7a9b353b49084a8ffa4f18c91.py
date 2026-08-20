@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center CreateSyslogDestinationV1 data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorDece7A9B353B49084A8Ffa4F18C91(object):
+class JSONSchemaValidatorDece7A9B353B49084A8Ffa4F18C91:
     """CreateSyslogDestinationV1 request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorDece7A9B353B49084A8Ffa4F18C91, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "apiStatus": {
@@ -66,11 +63,7 @@ class JSONSchemaValidatorDece7A9B353B49084A8Ffa4F18C91(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

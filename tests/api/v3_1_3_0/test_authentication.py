@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI authentication API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.
@@ -21,11 +20,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 import pytest
-from tests.environment import DNA_CENTER_VERSION
+from tests.environment import CATALYST_CENTER_VERSION
 
 pytestmark = pytest.mark.skipif(
-    DNA_CENTER_VERSION != "3.1.3.0", reason="version does not match"
+    CATALYST_CENTER_VERSION != "3.1.3.0", reason="version does not match"
 )
 
 

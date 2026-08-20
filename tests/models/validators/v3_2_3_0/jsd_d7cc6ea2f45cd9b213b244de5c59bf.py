@@ -1,0 +1,1308 @@
+"""Cisco Catalyst Center RetrievesPreviousPathTraceResult data model.
+
+Copyright (c) 2026 Cisco Systems.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
+import json
+
+import fastjsonschema
+
+from catalystcentersdk.exceptions import MalformedRequest
+
+
+class JSONSchemaValidatorD7Cc6EA2F45Cd9B213B244De5C59Bf:
+    """RetrievesPreviousPathTraceResult request schema definition."""
+
+    def __init__(self):
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "properties": {
+                        "response": {
+                            "properties": {
+                                "aclStatus": {
+                                    "properties": {
+                                        "aclTraceCalculation": {
+                                            "type": "string"
+                                        },
+                                        "aclTraceCalculationFailureReason": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "controlPath": {
+                                    "type": "boolean"
+                                },
+                                "createTime": {
+                                    "type": "integer"
+                                },
+                                "destinationIpAddress": {
+                                    "type": "string"
+                                },
+                                "destinationPort": {
+                                    "type": "string"
+                                },
+                                "failureReason": {
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "inclusions": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "lastUpdateTime": {
+                                    "type": "integer"
+                                },
+                                "networkElementsInfo": {
+                                    "items": {
+                                        "properties": {
+                                            "accuracyList": {
+                                                "items": {
+                                                    "properties": {
+                                                        "percent": {
+                                                            "type": "integer"
+                                                        },
+                                                        "reason": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "aclStatus": {
+                                                "properties": {
+                                                    "aclTraceCalculation": {
+                                                        "type": "string"
+                                                    },
+                                                    "aclTraceCalculationFailureReason": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "deviceStatistics": {
+                                                "properties": {
+                                                    "cpuStatistics": {
+                                                        "properties": {
+                                                            "fiveMinUsageInPercentage": {
+                                                                "type": "number"
+                                                            },
+                                                            "fiveSecsUsageInPercentage": {
+                                                                "type": "number"
+                                                            },
+                                                            "oneMinUsageInPercentage": {
+                                                                "type": "number"
+                                                            },
+                                                            "refreshedAt": {
+                                                                "type": "integer"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "memoryStatistics": {
+                                                        "properties": {
+                                                            "memoryUsage": {
+                                                                "type": "integer"
+                                                            },
+                                                            "refreshedAt": {
+                                                                "type": "integer"
+                                                            },
+                                                            "totalMemory": {
+                                                                "type": "integer"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "deviceStatsCollection": {
+                                                "type": "string"
+                                            },
+                                            "deviceStatsCollectionFailureReason": {
+                                                "type": "string"
+                                            },
+                                            "egressInterface": {
+                                                "properties": {
+                                                    "physicalInterface": {
+                                                        "properties": {
+                                                            "aclName": {
+                                                                "type": "string"
+                                                            },
+                                                            "aclResult": {
+                                                                "type": "string"
+                                                            },
+                                                            "aclRules": {
+                                                                "properties": {
+                                                                    "matchingAclRules": {
+                                                                        "items": {
+                                                                            "properties": {
+                                                                                "ace": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "matchingPorts": {
+                                                                                    "items": {
+                                                                                        "properties": {
+                                                                                            "ports": {
+                                                                                                "items": {
+                                                                                                    "properties": {
+                                                                                                        "destPorts": {
+                                                                                                            "items": {
+                                                                                                                "type": "string"
+                                                                                                            },
+                                                                                                            "type": "array"
+                                                                                                        },
+                                                                                                        "sourcePorts": {
+                                                                                                            "items": {
+                                                                                                                "type": "string"
+                                                                                                            },
+                                                                                                            "type": "array"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "object"
+                                                                                                },
+                                                                                                "type": "array"
+                                                                                            },
+                                                                                            "protocol": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        "type": "object"
+                                                                                    },
+                                                                                    "type": "array"
+                                                                                },
+                                                                                "result": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "type": "array"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "interfaceStatistics": {
+                                                                "properties": {
+                                                                    "adminStatus": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "inputPackets": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueCount": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueDrops": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueFlushes": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueMaxDepth": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputRateInBps": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "operationalStatus": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "outputDrop": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputPackets": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputQueueCount": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputQueueDepth": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputRateInBps": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "refreshedAt": {
+                                                                        "type": "integer"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "interfaceStatsCollection": {
+                                                                "type": "string"
+                                                            },
+                                                            "interfaceStatsCollectionFailureReason": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "pathOverlayInfo": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "controlPlane": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "dataPacketEncapsulation": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "destinationIpAddress": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "destinationPort": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "protocol": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "sourceIpAddress": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "sourcePort": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "vxlanInfo": {
+                                                                            "properties": {
+                                                                                "dscp": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "vnid": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            },
+                                                            "qos": {
+                                                                "properties": {
+                                                                    "collectionFailureReason": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "statistics": {
+                                                                        "items": {
+                                                                            "properties": {
+                                                                                "classMapName": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "dropRate": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "numBytes": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "numPackets": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "offeredRate": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "queueBandwidthInBps": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "queueDepth": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "queueNoBufferDrops": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "queueTotalDrops": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "refreshedAt": {
+                                                                                    "type": "integer"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "statsCollection": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "usedVlan": {
+                                                                "type": "string"
+                                                            },
+                                                            "vrfName": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "virtualInterface": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "aclName": {
+                                                                    "type": "string"
+                                                                },
+                                                                "aclResult": {
+                                                                    "type": "string"
+                                                                },
+                                                                "aclRules": {
+                                                                    "properties": {
+                                                                        "matchingAclRules": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "ace": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "matchingPorts": {
+                                                                                        "items": {
+                                                                                            "properties": {
+                                                                                                "ports": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "destPorts": {
+                                                                                                                "items": {
+                                                                                                                    "type": "string"
+                                                                                                                },
+                                                                                                                "type": "array"
+                                                                                                            },
+                                                                                                            "sourcePorts": {
+                                                                                                                "items": {
+                                                                                                                    "type": "string"
+                                                                                                                },
+                                                                                                                "type": "array"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array"
+                                                                                                },
+                                                                                                "protocol": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "type": "array"
+                                                                                    },
+                                                                                    "result": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "id": {
+                                                                    "type": "string"
+                                                                },
+                                                                "interfaceStatistics": {
+                                                                    "properties": {
+                                                                        "adminStatus": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "inputPackets": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueCount": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueDrops": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueFlushes": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueMaxDepth": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputRateInBps": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "operationalStatus": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "outputDrop": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputPackets": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputQueueCount": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputQueueDepth": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputRateInBps": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "refreshedAt": {
+                                                                            "type": "integer"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "interfaceStatsCollection": {
+                                                                    "type": "string"
+                                                                },
+                                                                "interfaceStatsCollectionFailureReason": {
+                                                                    "type": "string"
+                                                                },
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "pathOverlayInfo": {
+                                                                    "items": {
+                                                                        "properties": {
+                                                                            "controlPlane": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "dataPacketEncapsulation": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "destinationIpAddress": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "destinationPort": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "protocol": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "sourceIpAddress": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "sourcePort": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "vxlanInfo": {
+                                                                                "properties": {
+                                                                                    "dscp": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "vnid": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    },
+                                                                    "type": "array"
+                                                                },
+                                                                "qos": {
+                                                                    "properties": {
+                                                                        "collectionFailureReason": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "statistics": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "classMapName": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "dropRate": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "numBytes": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "numPackets": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "offeredRate": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "queueBandwidthInBps": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "queueDepth": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "queueNoBufferDrops": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "queueTotalDrops": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "refreshedAt": {
+                                                                                        "type": "integer"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        },
+                                                                        "statsCollection": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "usedVlan": {
+                                                                    "type": "string"
+                                                                },
+                                                                "vrfName": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "flexConnect": {
+                                                "properties": {
+                                                    "authentication": {
+                                                        "enum": [
+                                                            "LOCAL",
+                                                            "CENTRAL"
+                                                        ],
+                                                        "type": "string"
+                                                    },
+                                                    "dataSwitching": {
+                                                        "enum": [
+                                                            "LOCAL",
+                                                            "CENTRAL"
+                                                        ],
+                                                        "type": "string"
+                                                    },
+                                                    "egressAclName": {
+                                                        "type": "string"
+                                                    },
+                                                    "egressAclResult": {
+                                                        "type": "string"
+                                                    },
+                                                    "egressAclRules": {
+                                                        "properties": {
+                                                            "matchingAclRules": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "ace": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "matchingPorts": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "ports": {
+                                                                                        "items": {
+                                                                                            "properties": {
+                                                                                                "destPorts": {
+                                                                                                    "items": {
+                                                                                                        "type": "string"
+                                                                                                    },
+                                                                                                    "type": "array"
+                                                                                                },
+                                                                                                "sourcePorts": {
+                                                                                                    "items": {
+                                                                                                        "type": "string"
+                                                                                                    },
+                                                                                                    "type": "array"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "type": "array"
+                                                                                    },
+                                                                                    "protocol": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        },
+                                                                        "result": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "ingressAclName": {
+                                                        "type": "string"
+                                                    },
+                                                    "ingressAclResult": {
+                                                        "type": "string"
+                                                    },
+                                                    "ingressAclRules": {
+                                                        "properties": {
+                                                            "matchingAclRules": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "ace": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "matchingPorts": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "ports": {
+                                                                                        "items": {
+                                                                                            "properties": {
+                                                                                                "destPorts": {
+                                                                                                    "items": {
+                                                                                                        "type": "string"
+                                                                                                    },
+                                                                                                    "type": "array"
+                                                                                                },
+                                                                                                "sourcePorts": {
+                                                                                                    "items": {
+                                                                                                        "type": "string"
+                                                                                                    },
+                                                                                                    "type": "array"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "type": "array"
+                                                                                    },
+                                                                                    "protocol": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        },
+                                                                        "result": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "wirelessLanControllerId": {
+                                                        "type": "string"
+                                                    },
+                                                    "wirelessLanControllerName": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "ingressInterface": {
+                                                "properties": {
+                                                    "physicalInterface": {
+                                                        "properties": {
+                                                            "aclName": {
+                                                                "type": "string"
+                                                            },
+                                                            "aclResult": {
+                                                                "type": "string"
+                                                            },
+                                                            "aclRules": {
+                                                                "properties": {
+                                                                    "matchingAclRules": {
+                                                                        "items": {
+                                                                            "properties": {
+                                                                                "ace": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "matchingPorts": {
+                                                                                    "items": {
+                                                                                        "properties": {
+                                                                                            "ports": {
+                                                                                                "items": {
+                                                                                                    "properties": {
+                                                                                                        "destPorts": {
+                                                                                                            "items": {
+                                                                                                                "type": "string"
+                                                                                                            },
+                                                                                                            "type": "array"
+                                                                                                        },
+                                                                                                        "sourcePorts": {
+                                                                                                            "items": {
+                                                                                                                "type": "string"
+                                                                                                            },
+                                                                                                            "type": "array"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "type": "object"
+                                                                                                },
+                                                                                                "type": "array"
+                                                                                            },
+                                                                                            "protocol": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        "type": "object"
+                                                                                    },
+                                                                                    "type": "array"
+                                                                                },
+                                                                                "result": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "type": "array"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "interfaceStatistics": {
+                                                                "properties": {
+                                                                    "adminStatus": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "inputPackets": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueCount": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueDrops": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueFlushes": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputQueueMaxDepth": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "inputRateInBps": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "operationalStatus": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "outputDrop": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputPackets": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputQueueCount": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputQueueDepth": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "outputRateInBps": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "refreshedAt": {
+                                                                        "type": "integer"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "interfaceStatsCollection": {
+                                                                "type": "string"
+                                                            },
+                                                            "interfaceStatsCollectionFailureReason": {
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "pathOverlayInfo": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "controlPlane": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "dataPacketEncapsulation": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "destinationIpAddress": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "destinationPort": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "protocol": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "sourceIpAddress": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "sourcePort": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "vxlanInfo": {
+                                                                            "properties": {
+                                                                                "dscp": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "vnid": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            },
+                                                            "qos": {
+                                                                "properties": {
+                                                                    "collectionFailureReason": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "statistics": {
+                                                                        "items": {
+                                                                            "properties": {
+                                                                                "classMapName": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "dropRate": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "numBytes": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "numPackets": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "offeredRate": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "queueBandwidthInBps": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "queueDepth": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "queueNoBufferDrops": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "queueTotalDrops": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "refreshedAt": {
+                                                                                    "type": "integer"
+                                                                                }
+                                                                            },
+                                                                            "type": "object"
+                                                                        },
+                                                                        "type": "array"
+                                                                    },
+                                                                    "statsCollection": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "usedVlan": {
+                                                                "type": "string"
+                                                            },
+                                                            "vrfName": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "virtualInterface": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "aclName": {
+                                                                    "type": "string"
+                                                                },
+                                                                "aclResult": {
+                                                                    "type": "string"
+                                                                },
+                                                                "aclRules": {
+                                                                    "properties": {
+                                                                        "matchingAclRules": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "ace": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "matchingPorts": {
+                                                                                        "items": {
+                                                                                            "properties": {
+                                                                                                "ports": {
+                                                                                                    "items": {
+                                                                                                        "properties": {
+                                                                                                            "destPorts": {
+                                                                                                                "items": {
+                                                                                                                    "type": "string"
+                                                                                                                },
+                                                                                                                "type": "array"
+                                                                                                            },
+                                                                                                            "sourcePorts": {
+                                                                                                                "items": {
+                                                                                                                    "type": "string"
+                                                                                                                },
+                                                                                                                "type": "array"
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "type": "object"
+                                                                                                    },
+                                                                                                    "type": "array"
+                                                                                                },
+                                                                                                "protocol": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "type": "array"
+                                                                                    },
+                                                                                    "result": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "id": {
+                                                                    "type": "string"
+                                                                },
+                                                                "interfaceStatistics": {
+                                                                    "properties": {
+                                                                        "adminStatus": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "inputPackets": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueCount": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueDrops": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueFlushes": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputQueueMaxDepth": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "inputRateInBps": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "operationalStatus": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "outputDrop": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputPackets": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputQueueCount": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputQueueDepth": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "outputRateInBps": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "refreshedAt": {
+                                                                            "type": "integer"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "interfaceStatsCollection": {
+                                                                    "type": "string"
+                                                                },
+                                                                "interfaceStatsCollectionFailureReason": {
+                                                                    "type": "string"
+                                                                },
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "pathOverlayInfo": {
+                                                                    "items": {
+                                                                        "properties": {
+                                                                            "controlPlane": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "dataPacketEncapsulation": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "destinationIpAddress": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "destinationPort": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "protocol": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "sourceIpAddress": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "sourcePort": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "vxlanInfo": {
+                                                                                "properties": {
+                                                                                    "dscp": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "vnid": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    },
+                                                                    "type": "array"
+                                                                },
+                                                                "qos": {
+                                                                    "properties": {
+                                                                        "collectionFailureReason": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "statistics": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "classMapName": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "dropRate": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "numBytes": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "numPackets": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "offeredRate": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "queueBandwidthInBps": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "queueDepth": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "queueNoBufferDrops": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "queueTotalDrops": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "refreshedAt": {
+                                                                                        "type": "integer"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        },
+                                                                        "statsCollection": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "usedVlan": {
+                                                                    "type": "string"
+                                                                },
+                                                                "vrfName": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "ipAddress": {
+                                                "type": "string"
+                                            },
+                                            "linkInformationSource": {
+                                                "type": "string"
+                                            },
+                                            "macAddress": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "performanceMonitorCollection": {
+                                                "type": "string"
+                                            },
+                                            "performanceMonitorCollectionFailureReason": {
+                                                "type": "string"
+                                            },
+                                            "performanceMonitorStatistics": {
+                                                "items": {
+                                                    "properties": {
+                                                        "byteRate": {
+                                                            "type": "integer"
+                                                        },
+                                                        "destinationIpAddress": {
+                                                            "type": "string"
+                                                        },
+                                                        "destinationPort": {
+                                                            "type": "string"
+                                                        },
+                                                        "inputInterface": {
+                                                            "type": "string"
+                                                        },
+                                                        "ipv4DSCP": {
+                                                            "type": "string"
+                                                        },
+                                                        "ipv4TTL": {
+                                                            "type": "integer"
+                                                        },
+                                                        "outputInterface": {
+                                                            "type": "string"
+                                                        },
+                                                        "packetBytes": {
+                                                            "type": "integer"
+                                                        },
+                                                        "packetCount": {
+                                                            "type": "integer"
+                                                        },
+                                                        "packetLoss": {
+                                                            "type": "integer"
+                                                        },
+                                                        "packetLossPercentage": {
+                                                            "type": "number"
+                                                        },
+                                                        "protocol": {
+                                                            "type": "string"
+                                                        },
+                                                        "refreshedAt": {
+                                                            "type": "integer"
+                                                        },
+                                                        "rtpJitterMax": {
+                                                            "type": "integer"
+                                                        },
+                                                        "rtpJitterMean": {
+                                                            "type": "integer"
+                                                        },
+                                                        "rtpJitterMin": {
+                                                            "type": "integer"
+                                                        },
+                                                        "sourceIpAddress": {
+                                                            "type": "string"
+                                                        },
+                                                        "sourcePort": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "role": {
+                                                "type": "string"
+                                            },
+                                            "ssid": {
+                                                "type": "string"
+                                            },
+                                            "tunnels": {
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "wlanId": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "periodicRefresh": {
+                                    "type": "boolean"
+                                },
+                                "previousPathTraceId": {
+                                    "type": "string"
+                                },
+                                "properties": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "protocol": {
+                                    "type": "string"
+                                },
+                                "sourceIpAddress": {
+                                    "type": "string"
+                                },
+                                "sourcePort": {
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }""".replace("\n" + " " * 16, "")))
+
+    def validate(self, request):
+        try:
+            self._validator(request)
+        except fastjsonschema.exceptions.JsonSchemaException as e:
+            raise MalformedRequest(
+                "{} is invalid. Reason: {}".format(request, e.message)
+            )

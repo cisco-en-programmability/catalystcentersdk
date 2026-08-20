@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI devices API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.
@@ -21,6 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
@@ -5076,7 +5076,6 @@ def clear_mac_address_table(api):
         deployment_mode="string",
         interface_uuid="string",
         operation="string",
-        payload=None,
         payload={},
     )
     return endpoint_result

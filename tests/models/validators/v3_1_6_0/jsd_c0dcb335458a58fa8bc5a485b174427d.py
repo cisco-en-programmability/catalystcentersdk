@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center GetSyslogSubscriptionDetails data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorC0Dcb335458A58Fa8Bc5A485B174427D(object):
+class JSONSchemaValidatorC0Dcb335458A58Fa8Bc5A485B174427D:
     """GetSyslogSubscriptionDetails request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorC0Dcb335458A58Fa8Bc5A485B174427D, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "items": {
                 "properties": {
@@ -84,11 +81,7 @@ class JSONSchemaValidatorC0Dcb335458A58Fa8Bc5A485B174427D(object):
                 "type": "object"
                 },
                 "type": "array"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

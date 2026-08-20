@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center RemoveALinkFromPortChannel data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorFb433Ea1Bbc5Dc49Dce4Fde0A04E5Ed(object):
+class JSONSchemaValidatorFb433Ea1Bbc5Dc49Dce4Fde0A04E5Ed:
     """RemoveALinkFromPortChannel request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorFb433Ea1Bbc5Dc49Dce4Fde0A04E5Ed, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "portChannelMembers": {
@@ -69,11 +66,7 @@ class JSONSchemaValidatorFb433Ea1Bbc5Dc49Dce4Fde0A04E5Ed(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

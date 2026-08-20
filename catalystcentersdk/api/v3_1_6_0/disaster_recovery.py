@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Disaster Recovery API wrapper.
 
 Copyright (c) 2026 Cisco Systems.
@@ -22,9 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -34,7 +30,7 @@ from ...utils import (
 )
 
 
-class DisasterRecovery(object):
+class DisasterRecovery:
     """Cisco Catalyst Center Disaster Recovery API (version: 3.1.6.0).
 
     Wraps the Catalyst Center Disaster Recovery
@@ -57,7 +53,7 @@ class DisasterRecovery(object):
         """
         check_type(session, RestSession)
 
-        super(DisasterRecovery, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

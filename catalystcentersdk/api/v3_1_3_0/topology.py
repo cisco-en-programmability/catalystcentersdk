@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center Topology API wrapper.
 
 Copyright (c) 2025 Cisco Systems.
@@ -22,10 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-from builtins import *  # noqa: F401,F403
-
-
 from ...restsession import RestSession
 from ...utils import (
     apply_path_params,
@@ -35,7 +30,7 @@ from ...utils import (
 )
 
 
-class Topology(object):
+class Topology:
     """Cisco Catalyst Center Topology API (version: 3.1.3.0).
 
     Wraps the Catalyst Center Topology
@@ -58,7 +53,7 @@ class Topology(object):
         """
         check_type(session, RestSession)
 
-        super(Topology, self).__init__()
+        super().__init__()
 
         self._session = session
         self._object_factory = object_factory

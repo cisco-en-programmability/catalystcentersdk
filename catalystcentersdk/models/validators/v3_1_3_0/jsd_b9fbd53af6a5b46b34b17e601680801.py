@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center UpdateEventDrivenRRMConfigurationFeatureTemplate data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,22 +29,20 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorB9Fbd53Af6A5B46B34B17E601680801(object):
+class JSONSchemaValidatorB9Fbd53Af6A5B46B34B17E601680801:
     """UpdateEventDrivenRRMConfigurationFeatureTemplate request schema
     definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorB9Fbd53Af6A5B46B34B17E601680801, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "designName": {
@@ -86,11 +83,7 @@ class JSONSchemaValidatorB9Fbd53Af6A5B46B34B17E601680801(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco Catalyst Center SyncNetworkDevicesCredential data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -25,21 +24,19 @@ SOFTWARE.
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
-from dnacentersdk.exceptions import MalformedRequest
+from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorE73B352Ff2573AAb906C2Ad75C5A71(object):
+class JSONSchemaValidatorE73B352Ff2573AAb906C2Ad75C5A71:
     """SyncNetworkDevicesCredential request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorE73B352Ff2573AAb906C2Ad75C5A71, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "response": {
@@ -59,11 +56,7 @@ class JSONSchemaValidatorE73B352Ff2573AAb906C2Ad75C5A71(object):
                 "response"
                 ],
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:

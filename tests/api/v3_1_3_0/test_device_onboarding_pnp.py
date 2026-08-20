@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """CatalystCenterAPI device_onboarding_pnp API fixtures and tests.
 
 Copyright (c) 2025 Cisco Systems.
@@ -21,6 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
+
 import pytest
 from fastjsonschema.exceptions import JsonSchemaException
 from catalystcentersdk.exceptions import MalformedRequest
@@ -812,7 +812,6 @@ def update_device_default_val(api):
         active_validation=True,
         deviceInfo=None,
         id="string",
-        id=None,
         payload=None,
     )
     return endpoint_result

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Cisco DNA Center AddMulticastInSDAFabric data model.
 
 Copyright (c) 2025 Cisco Systems.
@@ -30,21 +29,19 @@ from __future__ import (
 )
 
 import json
-from builtins import *  # noqa: F401,F403
+
 
 import fastjsonschema
 
 from catalystcentersdk.exceptions import MalformedRequest
 
 
-class JSONSchemaValidatorB7079A38844E56Dd8F1B6B876880A02E(object):
+class JSONSchemaValidatorB7079A38844E56Dd8F1B6B876880A02E:
     """AddMulticastInSDAFabric request schema definition."""
 
     def __init__(self):
-        super(JSONSchemaValidatorB7079A38844E56Dd8F1B6B876880A02E, self).__init__()
-        self._validator = fastjsonschema.compile(
-            json.loads(
-                """{
+        super().__init__()
+        self._validator = fastjsonschema.compile(json.loads("""{
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                 "multicastMethod": {
@@ -103,11 +100,7 @@ class JSONSchemaValidatorB7079A38844E56Dd8F1B6B876880A02E(object):
                 }
                 },
                 "type": "object"
-                }""".replace(
-                    "\n" + " " * 16, ""
-                )
-            )
-        )
+                }""".replace("\n" + " " * 16, "")))
 
     def validate(self, request):
         try:
