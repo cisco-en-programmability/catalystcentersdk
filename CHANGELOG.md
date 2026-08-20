@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [3.2.3.0.0] - 2026-08-17
+## [3.2.3.0.0] - 2026-08-20
 ### Added
 - Add support of Cisco Catalyst Center version ('3.2.3.0')
 - Adds modules for v3_2_3_0
