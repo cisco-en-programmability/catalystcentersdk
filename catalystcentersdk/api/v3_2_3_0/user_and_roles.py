@@ -645,7 +645,7 @@ class UserAndRoles:
             "bpm_ec0b30eca9d540a845848cffd7c602a_v3_2_3_0", json_data
         )
 
-    def get_users(self, auth_source=None, headers=None, **request_parameters):
+    def get_users_api(self, auth_source=None, headers=None, **request_parameters):
         """Get all users in the system.
 
         Args:
@@ -701,7 +701,7 @@ class UserAndRoles:
             "bpm_fa405b6d1be56739f2dfeea63212015_v3_2_3_0", json_data
         )
 
-    def add_user(
+    def add_user_api(
         self,
         accessGroups=None,
         email=None,
@@ -800,7 +800,7 @@ class UserAndRoles:
             "bpm_d82755e5e03510daf0951c1f42c2702_v3_2_3_0", json_data
         )
 
-    def update_user(
+    def update_user_api(
         self,
         accessGroups=None,
         email=None,
@@ -1970,3 +1970,10 @@ class UserAndRoles:
         return self._object_factory(
             "bpm_da9e850c44d353f78ab002a640e5604f_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+UserAndRoles.get_users = UserAndRoles.get_users_api
+UserAndRoles.add_user = UserAndRoles.add_user_api
+UserAndRoles.update_user = UserAndRoles.update_user_api
+UserandRoles = UserAndRoles

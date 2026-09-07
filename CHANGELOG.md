@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.3.0.1] - 2026-09-07
+### Fixed
+- **Names dropped in 3.2.3.0.0 (issues #57, #58, #60, #62, #64, #65)**: collapsed acronyms (`_r_r_m_`, `_l_s_c_`, `_n_f_s_`, `_i_m_c_`, `_d_h_c_p_` and the rest), the move to `get_all_*` / `get_count_of_*`, and alias blocks that were not carried over left 53 names raising `AttributeError` on upgrade. All are back, plus the `UserandRoles` class name. Four `Wireless` aliases reach a method whose parameters moved upstream, `CalendarProfileSetting` to `calendarProfile` among them, so pass arguments as keywords.
+- **Plain names repointed to `/v2/` (issues #59, #61)**: `ApplicationPolicy.get_application_sets`, `get_applications`, `delete_application_set`, `delete_application`, `Sites.get_site` and `get_site_count` mean the v1 operation again with their 3.1.6.0.7 signatures, raising neither `TypeError` nor unfiltered results; the v2 operations keep their `_v2` names.
+- **File downloads (issue #63)**: the two `ConfigurationArchive` configuration downloads stream again instead of raising `JSONDecodeError`, and `Reports.download_flexible_report` and `Sensors.downloads_a_specific_icap_packet_capture_file` now stream as well, returning `DownloadResponse` instead of `MyDict`.
+
+### Removed
+- The README's "Method naming and v1/v2 aliases" section.
+
 ## [3.2.3.0.0] - 2026-08-20
 ### Added
 - Add support of Cisco Catalyst Center version ('3.2.3.0')
@@ -198,4 +207,5 @@ to "application".
 [3.1.6.0.6]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.5...v3.1.6.0.6
 [3.1.6.0.7]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.6...v3.1.6.0.7
 [3.2.3.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.7...v3.2.3.0.0
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.0...develop
+[3.2.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.0...v3.2.3.0.1
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.1...develop

@@ -11445,3 +11445,7 @@ class Sda:
         return self._object_factory(
             "bpm_e5bd8dbbf65253f0aadd77a62b1b8b58_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Sda.get_port_channels = Sda.get_port_channels_connectivity

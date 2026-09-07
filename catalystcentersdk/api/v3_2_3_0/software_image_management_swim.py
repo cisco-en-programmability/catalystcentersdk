@@ -4625,3 +4625,9 @@ class SoftwareImageManagementSwim:
         return self._object_factory(
             "bpm_e96f4748798d55d2a9257675107b7d7d_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+SoftwareImageManagementSwim.initiates_sync_of_software_images_from_cisco_com_v1 = (
+    SoftwareImageManagementSwim.initiates_sync_of_software_images_from_cisco_com
+)

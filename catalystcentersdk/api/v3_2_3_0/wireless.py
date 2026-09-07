@@ -7701,7 +7701,7 @@ class Wireless:
             "bpm_eee9dcac5f5da160215064de4add_v3_2_3_0", json_data
         )
 
-    def update_approfile_by_id(
+    def update_ap_profile_by_id(
         self,
         id,
         apPowerProfileName=None,
@@ -45430,3 +45430,86 @@ class Wireless:
         return self._object_factory(
             "bpm_e56eb2c294159d891b7dbe493ddc434_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Wireless.access_points_l_s_c_certificate_instantaneous_renewal = (
+    Wireless.renewal_of_lsc_certificate_on_access_points
+)
+Wireless.assign_anchor_managed_ap_locations_for_w_l_c = (
+    Wireless.assign_anchor_managed_ap_locations_for_wlc
+)
+Wireless.assign_managed_ap_locations_for_w_l_c = (
+    Wireless.assign_managed_ap_locations_for_wlc
+)
+Wireless.configure_access_points_v2 = Wireless.configure_access_points_connectivity
+Wireless.create_a80211be_profile = Wireless.create80211be_profile
+Wireless.create_event_driven_r_r_m_configuration_feature_template = (
+    Wireless.create_event_driven_rrm_configuration_feature_template
+)
+Wireless.create_l_s_c_certificate_renewal_profile = (
+    Wireless.create_access_point_certificate_renewal_profile
+)
+Wireless.create_r_r_m_f_r_a_configuration_feature_template = (
+    Wireless.create_rrm_fra_configuration_feature_template
+)
+Wireless.create_r_r_m_general_configuration_feature_template = (
+    Wireless.create_rrm_general_configuration_feature_template
+)
+Wireless.delete_a80211be_profile = Wireless.delete80211be_profile
+Wireless.delete_event_driven_r_r_m_configuration_feature_template = (
+    Wireless.delete_event_driven_rrm_configuration_feature_template
+)
+Wireless.delete_l_s_c_certificate_renewal_profile_by_id = (
+    Wireless.delete_access_point_certificate_renewal_profile
+)
+Wireless.delete_r_r_m_f_r_a_configuration_feature_template = (
+    Wireless.delete_rrm_fra_configuration_feature_template
+)
+Wireless.delete_r_r_m_general_configuration_feature_template = (
+    Wireless.delete_rrm_general_configuration_feature_template
+)
+Wireless.get80211be_profile_by_id = Wireless.get80211be_profiles_by_id
+Wireless.get80211be_profiles = Wireless.get_all80211be_profiles
+Wireless.get80211be_profiles_count = Wireless.get_count_of80211be_profiles
+Wireless.get_all_site_tags_from_wireless_controller = (
+    Wireless.get_all_the_site_tags_in_the_wireless_conntroller_by_device_id
+)
+Wireless.get_anchor_capable_devices = Wireless.get_all_anchor_capable_devices
+Wireless.get_anchor_groups = Wireless.get_all_anchor_groups
+Wireless.get_ap_profiles_count = Wireless.get_count_of_ap_profile
+Wireless.get_event_driven_r_r_m_configuration_feature_template = (
+    Wireless.get_event_driven_rrm_configuration_feature_template
+)
+Wireless.get_l_s_c_certificate_renewal_profile_by_id = (
+    Wireless.retrieve_the_access_point_certificate_renewal_profile_by_id
+)
+Wireless.get_l_s_c_certificate_renewal_profile_count = (
+    Wireless.get_access_point_certificate_renewal_profile_count
+)
+Wireless.get_l_s_c_certificate_renewal_profiles = (
+    Wireless.get_access_point_certificate_renewal_profile
+)
+Wireless.get_r_r_m_f_r_a_configuration_feature_template = (
+    Wireless.get_rrm_fra_configuration_feature_template
+)
+Wireless.get_r_r_m_general_configuration_feature_template = (
+    Wireless.get_rrm_general_configuration_feature_template
+)
+Wireless.get_wireless_profiles_count = Wireless.get_wireless_profile_count
+Wireless.update_event_driven_r_r_m_configuration_feature_template = (
+    Wireless.update_event_driven_rrm_configuration_feature_template
+)
+Wireless.update_l_s_c_certificate_renewal_profile = (
+    Wireless.update_access_point_certificate_renewal_profile
+)
+Wireless.update_r_r_m_f_r_a_configuration_feature_template = (
+    Wireless.update_rrm_fra_configuration_feature_template
+)
+Wireless.update_r_r_m_general_configuration_feature_template = (
+    Wireless.update_rrm_general_configuration_feature_template
+)
+# `update_approfile_by_id` broke the `ap_profile` naming used by the rest of its
+# family; the method is `update_ap_profile_by_id` again and the 3.2.3.0.0 spelling
+# is the alias.
+Wireless.update_approfile_by_id = Wireless.update_ap_profile_by_id

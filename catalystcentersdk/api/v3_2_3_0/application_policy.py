@@ -59,7 +59,7 @@ class ApplicationPolicy:
         self._object_factory = object_factory
         self._request_validator = request_validator
 
-    def get_application_sets(
+    def get_application_sets_v2(
         self, attributes, limit, offset, name=None, headers=None, **request_parameters
     ):
         """Get application set/s by offset/limit or by name.
@@ -124,22 +124,6 @@ class ApplicationPolicy:
 
         return self._object_factory(
             "bpm_b399a8f895b65f3d91926da8508a9295_v3_2_3_0", json_data
-        )
-
-    def get_application_sets_v2(
-        self, attributes, limit, offset, name=None, headers=None, **query_parameters
-    ):
-        """Alias for `get_application_sets <#catalystcentersdk.
-        api.v3_2_3_0.application_policy.
-        ApplicationPolicy.get_application_sets>`_
-        """
-        return self.get_application_sets(
-            attributes=attributes,
-            limit=limit,
-            offset=offset,
-            name=name,
-            headers=headers,
-            **query_parameters
         )
 
     def create_application_sets(
@@ -813,7 +797,7 @@ class ApplicationPolicy:
             "bpm_b11aa4de387251c794665e030fa815da_v3_2_3_0", json_data
         )
 
-    def delete_application(self, id, headers=None, **request_parameters):
+    def delete_application_v2(self, id, headers=None, **request_parameters):
         """Delete existing custom application by id.
 
         Args:
@@ -866,13 +850,6 @@ class ApplicationPolicy:
         return self._object_factory(
             "bpm_ef849b2f5415501086635693a458e69b_v3_2_3_0", json_data
         )
-
-    def delete_application_v2(self, id, headers=None, **query_parameters):
-        """Alias for `delete_application <#catalystcentersdk.
-        api.v3_2_3_0.application_policy.
-        ApplicationPolicy.delete_application>`_
-        """
-        return self.delete_application(id=id, headers=headers, **query_parameters)
 
     def enable_application_telemetry_feature_on_multiple_network_devices(
         self,
@@ -1612,7 +1589,7 @@ class ApplicationPolicy:
             **query_parameters
         )
 
-    def get_applications(
+    def get_applications_v2(
         self, attributes, limit, offset, name=None, headers=None, **request_parameters
     ):
         """Get application/s by offset/limit or by name.
@@ -1677,22 +1654,6 @@ class ApplicationPolicy:
 
         return self._object_factory(
             "bpm_f8a81055328e2c77f0dcb60a68_v3_2_3_0", json_data
-        )
-
-    def get_applications_v2(
-        self, attributes, limit, offset, name=None, headers=None, **query_parameters
-    ):
-        """Alias for `get_applications <#catalystcentersdk.
-        api.v3_2_3_0.application_policy.
-        ApplicationPolicy.get_applications>`_
-        """
-        return self.get_applications(
-            attributes=attributes,
-            limit=limit,
-            offset=offset,
-            name=name,
-            headers=headers,
-            **query_parameters
         )
 
     def create_applications(
@@ -1857,7 +1818,7 @@ class ApplicationPolicy:
             "bpm_fa27ccbaf55711849381a707e1edfa_v3_2_3_0", json_data
         )
 
-    def delete_application_set(self, id, headers=None, **request_parameters):
+    def delete_application_set_v2(self, id, headers=None, **request_parameters):
         """Delete existing custom application set by id.
 
         Args:
@@ -1910,13 +1871,6 @@ class ApplicationPolicy:
         return self._object_factory(
             "bpm_fbef625d3225c1eb6db93289a11a33e_v3_2_3_0", json_data
         )
-
-    def delete_application_set_v2(self, id, headers=None, **query_parameters):
-        """Alias for `delete_application_set <#catalystcentersdk.
-        api.v3_2_3_0.application_policy.
-        ApplicationPolicy.delete_application_set>`_
-        """
-        return self.delete_application_set(id=id, headers=headers, **query_parameters)
 
     def get_application_policy_queuing_profile_count(
         self, headers=None, **request_parameters
@@ -2027,7 +1981,7 @@ class ApplicationPolicy:
         """
         return self.get_applications_count_v1(headers=headers, **query_parameters)
 
-    def get_applications_v1(
+    def get_applications(
         self, limit=None, name=None, offset=None, headers=None, **request_parameters
     ):
         """Get applications by offset/limit or by name.
@@ -2089,7 +2043,7 @@ class ApplicationPolicy:
             "bpm_b12cdd3a75c51258c9e051e84189f92_v3_2_3_0", json_data
         )
 
-    def delete_application_policy(self, id, headers=None, **request_parameters):
+    def delete_application(self, id, headers=None, **request_parameters):
         """Delete existing application by its id.
 
         Args:
@@ -2582,7 +2536,7 @@ class ApplicationPolicy:
             **query_parameters
         )
 
-    def delete_application_set_policy(self, id, headers=None, **request_parameters):
+    def delete_application_set(self, id, headers=None, **request_parameters):
         """Delete existing application-set by it's id.
 
         Args:
@@ -2636,7 +2590,7 @@ class ApplicationPolicy:
             "bpm_a59a448c5c25f1e8246d6827e6e3215_v3_2_3_0", json_data
         )
 
-    def get_application_sets_v1(
+    def get_application_sets(
         self, limit=None, name=None, offset=None, headers=None, **request_parameters
     ):
         """Get appllication-sets by offset/limit or by name.
