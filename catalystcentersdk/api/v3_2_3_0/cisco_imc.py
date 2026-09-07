@@ -468,3 +468,21 @@ class CiscoIMC:
 
 
 CiscoImc = CiscoIMC
+
+
+# Alias Functions
+CiscoIMC.retrieves_cisco_i_m_c_configurations_for_catalyst_center_nodes = (
+    CiscoIMC.retrieves_cisco_imc_configurations_for_catalyst_center_nodes
+)
+CiscoIMC.adds_cisco_i_m_c_configuration_to_a_catalyst_center_node = (
+    CiscoIMC.adds_cisco_imc_configuration_to_a_catalyst_center_node
+)
+CiscoIMC.deletes_the_cisco_i_m_c_configuration_for_a_catalyst_center_node = (
+    CiscoIMC.deletes_the_cisco_imc_configuration_for_a_catalyst_center_node
+)
+CiscoIMC.retrieves_the_cisco_i_m_c_configuration_for_a_catalyst_center_node = (
+    CiscoIMC.retrieves_the_cisco_imc_configuration_for_a_catalyst_center_node
+)
+CiscoIMC.updates_the_cisco_i_m_c_configuration_for_a_catalyst_center_node = (
+    CiscoIMC.updates_the_cisco_imc_configuration_for_a_catalyst_center_node
+)

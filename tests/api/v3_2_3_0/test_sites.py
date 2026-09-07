@@ -767,35 +767,35 @@ def test_read_site_count_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_site_count(json_schema_validate, obj):
+def is_valid_get_site_count_v2(json_schema_validate, obj):
     json_schema_validate("jsd_371b10ff66e5568ebe6d41faeeabda22_v3_2_3_0").validate(obj)
     return True
 
 
-def get_site_count(api):
-    endpoint_result = api.sites.get_site_count(id="string")
+def get_site_count_v2(api):
+    endpoint_result = api.sites.get_site_count_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_count(api, validator):
+def test_get_site_count_v2(api, validator):
     try:
-        assert is_valid_get_site_count(validator, get_site_count(api))
+        assert is_valid_get_site_count_v2(validator, get_site_count_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_site_count_default_val(api):
-    endpoint_result = api.sites.get_site_count(id=None)
+def get_site_count_v2_default_val(api):
+    endpoint_result = api.sites.get_site_count_v2(id=None)
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_count_default_val(api, validator):
+def test_get_site_count_v2_default_val(api, validator):
     try:
-        assert is_valid_get_site_count(validator, get_site_count_default_val(api))
+        assert is_valid_get_site_count_v2(validator, get_site_count_v2_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
@@ -1155,39 +1155,39 @@ def test_get_sites_energy_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_site(json_schema_validate, obj):
+def is_valid_get_site_v2(json_schema_validate, obj):
     json_schema_validate("jsd_43c5e65cce2954fdb7177ac0a8e0b76f_v3_2_3_0").validate(obj)
     return True
 
 
-def get_site(api):
-    endpoint_result = api.sites.get_site(
+def get_site_v2(api):
+    endpoint_result = api.sites.get_site_v2(
         group_name_hierarchy="string", id="string", limit=0, offset=0, type="string"
     )
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site(api, validator):
+def test_get_site_v2(api, validator):
     try:
-        assert is_valid_get_site(validator, get_site(api))
+        assert is_valid_get_site_v2(validator, get_site_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_site_default_val(api):
-    endpoint_result = api.sites.get_site(
+def get_site_v2_default_val(api):
+    endpoint_result = api.sites.get_site_v2(
         group_name_hierarchy=None, id=None, limit=None, offset=None, type=None
     )
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_default_val(api, validator):
+def test_get_site_v2_default_val(api, validator):
     try:
-        assert is_valid_get_site(validator, get_site_default_val(api))
+        assert is_valid_get_site_v2(validator, get_site_v2_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
@@ -1666,35 +1666,35 @@ def test_export_map_archive_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_site_count_v1(json_schema_validate, obj):
+def is_valid_get_site_count(json_schema_validate, obj):
     json_schema_validate("jsd_e7a025fbe2c452fc82eedd5c50104aba_v3_2_3_0").validate(obj)
     return True
 
 
-def get_site_count_v1(api):
-    endpoint_result = api.sites.get_site_count_v1(site_id="string")
+def get_site_count(api):
+    endpoint_result = api.sites.get_site_count(site_id="string")
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_count_v1(api, validator):
+def test_get_site_count(api, validator):
     try:
-        assert is_valid_get_site_count_v1(validator, get_site_count_v1(api))
+        assert is_valid_get_site_count(validator, get_site_count(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_site_count_v1_default_val(api):
-    endpoint_result = api.sites.get_site_count_v1(site_id=None)
+def get_site_count_default_val(api):
+    endpoint_result = api.sites.get_site_count(site_id=None)
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_count_v1_default_val(api, validator):
+def test_get_site_count_default_val(api, validator):
     try:
-        assert is_valid_get_site_count_v1(validator, get_site_count_v1_default_val(api))
+        assert is_valid_get_site_count(validator, get_site_count_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
@@ -2153,39 +2153,39 @@ def test_create_site_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_site_v1(json_schema_validate, obj):
+def is_valid_get_site(json_schema_validate, obj):
     json_schema_validate("jsd_dbdd6074bedc59b9a3edd6477897d659_v3_2_3_0").validate(obj)
     return True
 
 
-def get_site_v1(api):
-    endpoint_result = api.sites.get_site_v1(
+def get_site(api):
+    endpoint_result = api.sites.get_site(
         limit=0, name="string", offset=0, site_id="string", type="string"
     )
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_v1(api, validator):
+def test_get_site(api, validator):
     try:
-        assert is_valid_get_site_v1(validator, get_site_v1(api))
+        assert is_valid_get_site(validator, get_site(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_site_v1_default_val(api):
-    endpoint_result = api.sites.get_site_v1(
+def get_site_default_val(api):
+    endpoint_result = api.sites.get_site(
         limit=None, name=None, offset=None, site_id=None, type=None
     )
     return endpoint_result
 
 
 @pytest.mark.sites
-def test_get_site_v1_default_val(api, validator):
+def test_get_site_default_val(api, validator):
     try:
-        assert is_valid_get_site_v1(validator, get_site_v1_default_val(api))
+        assert is_valid_get_site(validator, get_site_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e

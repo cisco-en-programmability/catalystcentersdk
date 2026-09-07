@@ -5669,3 +5669,21 @@ class NetworkSettings:
         return self._object_factory(
             "bpm_a1d68f15e02adc37239b3fcbbb6_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+NetworkSettings.retrieve_d_h_c_p_settings_for_a_site = (
+    NetworkSettings.retrieve_dhcp_settings_for_a_site
+)
+NetworkSettings.retrieve_d_n_s_settings_for_a_site = (
+    NetworkSettings.retrieve_dns_settings_for_a_site
+)
+NetworkSettings.retrieve_n_t_p_settings_for_a_site = (
+    NetworkSettings.retrieve_ntp_settings_for_a_site
+)
+NetworkSettings.set_d_n_s_settings_for_a_site = (
+    NetworkSettings.set_dns_settings_for_a_site
+)
+NetworkSettings.set_n_t_p_settings_for_a_site = (
+    NetworkSettings.set_ntp_settings_for_a_site
+)

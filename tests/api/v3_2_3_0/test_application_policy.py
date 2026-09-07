@@ -31,40 +31,40 @@ pytestmark = pytest.mark.skipif(
 )
 
 
-def is_valid_get_application_sets(json_schema_validate, obj):
+def is_valid_get_application_sets_v2(json_schema_validate, obj):
     json_schema_validate("jsd_b399a8f895b65f3d91926da8508a9295_v3_2_3_0").validate(obj)
     return True
 
 
-def get_application_sets(api):
-    endpoint_result = api.application_policy.get_application_sets(
+def get_application_sets_v2(api):
+    endpoint_result = api.application_policy.get_application_sets_v2(
         attributes="string", limit=0, name="string", offset=0
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_application_sets(api, validator):
+def test_get_application_sets_v2(api, validator):
     try:
-        assert is_valid_get_application_sets(validator, get_application_sets(api))
+        assert is_valid_get_application_sets_v2(validator, get_application_sets_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_application_sets_default_val(api):
-    endpoint_result = api.application_policy.get_application_sets(
+def get_application_sets_v2_default_val(api):
+    endpoint_result = api.application_policy.get_application_sets_v2(
         attributes=None, limit=None, name=None, offset=None
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_application_sets_default_val(api, validator):
+def test_get_application_sets_v2_default_val(api, validator):
     try:
-        assert is_valid_get_application_sets(
-            validator, get_application_sets_default_val(api)
+        assert is_valid_get_application_sets_v2(
+            validator, get_application_sets_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -485,36 +485,36 @@ def test_update_application_policy_queuing_profile_default_val(api, validator):
             raise original_e
 
 
-def is_valid_delete_application(json_schema_validate, obj):
+def is_valid_delete_application_v2(json_schema_validate, obj):
     json_schema_validate("jsd_ef849b2f5415501086635693a458e69b_v3_2_3_0").validate(obj)
     return True
 
 
-def delete_application(api):
-    endpoint_result = api.application_policy.delete_application(id="string")
+def delete_application_v2(api):
+    endpoint_result = api.application_policy.delete_application_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application(api, validator):
+def test_delete_application_v2(api, validator):
     try:
-        assert is_valid_delete_application(validator, delete_application(api))
+        assert is_valid_delete_application_v2(validator, delete_application_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def delete_application_default_val(api):
-    endpoint_result = api.application_policy.delete_application(id="string")
+def delete_application_v2_default_val(api):
+    endpoint_result = api.application_policy.delete_application_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_default_val(api, validator):
+def test_delete_application_v2_default_val(api, validator):
     try:
-        assert is_valid_delete_application(
-            validator, delete_application_default_val(api)
+        assert is_valid_delete_application_v2(
+            validator, delete_application_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -999,39 +999,41 @@ def test_edit_applications_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_applications(json_schema_validate, obj):
+def is_valid_get_applications_v2(json_schema_validate, obj):
     json_schema_validate("jsd_645981f8a81055328e2c77f0dcb60a68_v3_2_3_0").validate(obj)
     return True
 
 
-def get_applications(api):
-    endpoint_result = api.application_policy.get_applications(
+def get_applications_v2(api):
+    endpoint_result = api.application_policy.get_applications_v2(
         attributes="string", limit=0, name="string", offset=0
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_applications(api, validator):
+def test_get_applications_v2(api, validator):
     try:
-        assert is_valid_get_applications(validator, get_applications(api))
+        assert is_valid_get_applications_v2(validator, get_applications_v2(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_applications_default_val(api):
-    endpoint_result = api.application_policy.get_applications(
+def get_applications_v2_default_val(api):
+    endpoint_result = api.application_policy.get_applications_v2(
         attributes=None, limit=None, name=None, offset=None
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_applications_default_val(api, validator):
+def test_get_applications_v2_default_val(api, validator):
     try:
-        assert is_valid_get_applications(validator, get_applications_default_val(api))
+        assert is_valid_get_applications_v2(
+            validator, get_applications_v2_default_val(api)
+        )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
@@ -1183,36 +1185,38 @@ def test_application_policy_intent_default_val(api, validator):
             raise original_e
 
 
-def is_valid_delete_application_set(json_schema_validate, obj):
+def is_valid_delete_application_set_v2(json_schema_validate, obj):
     json_schema_validate("jsd_1fbef625d3225c1eb6db93289a11a33e_v3_2_3_0").validate(obj)
     return True
 
 
-def delete_application_set(api):
-    endpoint_result = api.application_policy.delete_application_set(id="string")
+def delete_application_set_v2(api):
+    endpoint_result = api.application_policy.delete_application_set_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_set(api, validator):
+def test_delete_application_set_v2(api, validator):
     try:
-        assert is_valid_delete_application_set(validator, delete_application_set(api))
+        assert is_valid_delete_application_set_v2(
+            validator, delete_application_set_v2(api)
+        )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def delete_application_set_default_val(api):
-    endpoint_result = api.application_policy.delete_application_set(id="string")
+def delete_application_set_v2_default_val(api):
+    endpoint_result = api.application_policy.delete_application_set_v2(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_set_default_val(api, validator):
+def test_delete_application_set_v2_default_val(api, validator):
     try:
-        assert is_valid_delete_application_set(
-            validator, delete_application_set_default_val(api)
+        assert is_valid_delete_application_set_v2(
+            validator, delete_application_set_v2_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1299,78 +1303,74 @@ def test_get_applications_count_v1_default_val(api, validator):
             raise original_e
 
 
-def is_valid_get_applications_v1(json_schema_validate, obj):
+def is_valid_get_applications(json_schema_validate, obj):
     json_schema_validate("jsd_5b12cdd3a75c51258c9e051e84189f92_v3_2_3_0").validate(obj)
     return True
 
 
-def get_applications_v1(api):
-    endpoint_result = api.application_policy.get_applications_v1(
+def get_applications(api):
+    endpoint_result = api.application_policy.get_applications(
         limit=0, name="string", offset=0
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_applications_v1(api, validator):
+def test_get_applications(api, validator):
     try:
-        assert is_valid_get_applications_v1(validator, get_applications_v1(api))
+        assert is_valid_get_applications(validator, get_applications(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_applications_v1_default_val(api):
-    endpoint_result = api.application_policy.get_applications_v1(
+def get_applications_default_val(api):
+    endpoint_result = api.application_policy.get_applications(
         limit=None, name=None, offset=None
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_applications_v1_default_val(api, validator):
+def test_get_applications_default_val(api, validator):
     try:
-        assert is_valid_get_applications_v1(
-            validator, get_applications_v1_default_val(api)
-        )
+        assert is_valid_get_applications(validator, get_applications_default_val(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_application_policy(json_schema_validate, obj):
+def is_valid_delete_application(json_schema_validate, obj):
     json_schema_validate("jsd_d11d35f3505652b68905ddf1ee2f7e66_v3_2_3_0").validate(obj)
     return True
 
 
-def delete_application_policy(api):
-    endpoint_result = api.application_policy.delete_application_policy(id="string")
+def delete_application(api):
+    endpoint_result = api.application_policy.delete_application(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_policy(api, validator):
+def test_delete_application(api, validator):
     try:
-        assert is_valid_delete_application_policy(
-            validator, delete_application_policy(api)
-        )
+        assert is_valid_delete_application(validator, delete_application(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def delete_application_policy_default_val(api):
-    endpoint_result = api.application_policy.delete_application_policy(id=None)
+def delete_application_default_val(api):
+    endpoint_result = api.application_policy.delete_application(id=None)
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_policy_default_val(api, validator):
+def test_delete_application_default_val(api, validator):
     try:
-        assert is_valid_delete_application_policy(
-            validator, delete_application_policy_default_val(api)
+        assert is_valid_delete_application(
+            validator, delete_application_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -1623,78 +1623,76 @@ def test_create_application_set_v1_default_val(api, validator):
             raise original_e
 
 
-def is_valid_delete_application_set_policy(json_schema_validate, obj):
+def is_valid_delete_application_set(json_schema_validate, obj):
     json_schema_validate("jsd_0a59a448c5c25f1e8246d6827e6e3215_v3_2_3_0").validate(obj)
     return True
 
 
-def delete_application_set_policy(api):
-    endpoint_result = api.application_policy.delete_application_set_policy(id="string")
+def delete_application_set(api):
+    endpoint_result = api.application_policy.delete_application_set(id="string")
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_set_policy(api, validator):
+def test_delete_application_set(api, validator):
     try:
-        assert is_valid_delete_application_set_policy(
-            validator, delete_application_set_policy(api)
-        )
+        assert is_valid_delete_application_set(validator, delete_application_set(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def delete_application_set_policy_default_val(api):
-    endpoint_result = api.application_policy.delete_application_set_policy(id=None)
+def delete_application_set_default_val(api):
+    endpoint_result = api.application_policy.delete_application_set(id=None)
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_delete_application_set_policy_default_val(api, validator):
+def test_delete_application_set_default_val(api, validator):
     try:
-        assert is_valid_delete_application_set_policy(
-            validator, delete_application_set_policy_default_val(api)
+        assert is_valid_delete_application_set(
+            validator, delete_application_set_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_get_application_sets_v1(json_schema_validate, obj):
+def is_valid_get_application_sets(json_schema_validate, obj):
     json_schema_validate("jsd_8b60dbd805b95030bc2caf345a44b504_v3_2_3_0").validate(obj)
     return True
 
 
-def get_application_sets_v1(api):
-    endpoint_result = api.application_policy.get_application_sets_v1(
+def get_application_sets(api):
+    endpoint_result = api.application_policy.get_application_sets(
         limit=0, name="string", offset=0
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_application_sets_v1(api, validator):
+def test_get_application_sets(api, validator):
     try:
-        assert is_valid_get_application_sets_v1(validator, get_application_sets_v1(api))
+        assert is_valid_get_application_sets(validator, get_application_sets(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def get_application_sets_v1_default_val(api):
-    endpoint_result = api.application_policy.get_application_sets_v1(
+def get_application_sets_default_val(api):
+    endpoint_result = api.application_policy.get_application_sets(
         limit=None, name=None, offset=None
     )
     return endpoint_result
 
 
 @pytest.mark.application_policy
-def test_get_application_sets_v1_default_val(api, validator):
+def test_get_application_sets_default_val(api, validator):
     try:
-        assert is_valid_get_application_sets_v1(
-            validator, get_application_sets_v1_default_val(api)
+        assert is_valid_get_application_sets(
+            validator, get_application_sets_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
