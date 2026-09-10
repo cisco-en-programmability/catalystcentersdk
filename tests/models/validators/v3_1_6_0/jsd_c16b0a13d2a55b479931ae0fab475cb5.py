@@ -46,7 +46,7 @@ class JSONSchemaValidatorC16B0A13D2A55B479931Ae0Fab475Cb5:
                 "properties": {
                 "discoveryStatus": {
                 "enum": [
-                "SUCCESS, UNREACHABLE\t, DISCARDED"
+                "SUCCESS, UNREACHABLE\\t, DISCARDED"
                 ],
                 "type": "string"
                 },

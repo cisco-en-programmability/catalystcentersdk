@@ -215,7 +215,7 @@ class Licenses:
 
     def update_c_s_s_m_connection_mode(
         self,
-        connection_mode=None,
+        connectionMode=None,
         parameters=None,
         headers=None,
         payload=None,
@@ -227,7 +227,7 @@ class Licenses:
         Licenses.update_cssm_connection_mode>`_
         """
         return self.update_cssm_connection_mode(
-            connection_mode=connection_mode,
+            connectionMode=connectionMode,
             parameters=parameters,
             payload=payload,
             active_validation=active_validation,

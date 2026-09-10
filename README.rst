@@ -124,6 +124,9 @@ Check out the complete Introduction_
 Installation
 ------------
 
+Requires Python >= 3.10, matching the controller Python versions supported by
+``ansible-core`` >= 2.16, which the ``cisco.catalystcenter`` collection targets.
+
 Installing and upgrading catalystcentersdk is easy:
 
 **Install via PIP**

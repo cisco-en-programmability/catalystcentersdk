@@ -493,12 +493,12 @@ class NetworkSettings:
     def assign_device_credential_to_site_v2(
         self,
         site_id,
-        cli_id=None,
-        http_read=None,
-        http_write=None,
-        snmp_v2_read_id=None,
-        snmp_v2_write_id=None,
-        snmp_v3_id=None,
+        cliId=None,
+        httpRead=None,
+        httpWrite=None,
+        snmpV2ReadId=None,
+        snmpV2WriteId=None,
+        snmpV3Id=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -510,12 +510,12 @@ class NetworkSettings:
         """
         return self.assign_device_credential_to_site(
             site_id=site_id,
-            cli_id=cli_id,
-            http_read=http_read,
-            http_write=http_write,
-            snmp_v2_read_id=snmp_v2_read_id,
-            snmp_v2_write_id=snmp_v2_write_id,
-            snmp_v3_id=snmp_v3_id,
+            cliId=cliId,
+            httpRead=httpRead,
+            httpWrite=httpWrite,
+            snmpV2ReadId=snmpV2ReadId,
+            snmpV2WriteId=snmpV2WriteId,
+            snmpV3Id=snmpV3Id,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -2464,16 +2464,7 @@ class NetworkSettings:
     def create_network_v2(
         self,
         site_id,
-        client_and_endpoint_aaa=None,
-        dhcp_server=None,
-        dns_server=None,
-        message_of_theday=None,
-        netflowcollector=None,
-        network_aaa=None,
-        ntp_server=None,
-        snmp_server=None,
-        syslog_server=None,
-        timezone=None,
+        settings=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -2485,16 +2476,7 @@ class NetworkSettings:
         """
         return self.create_network(
             site_id=site_id,
-            client_and_endpoint_aaa=client_and_endpoint_aaa,
-            dhcp_server=dhcp_server,
-            dns_server=dns_server,
-            message_of_theday=message_of_theday,
-            netflowcollector=netflowcollector,
-            network_aaa=network_aaa,
-            ntp_server=ntp_server,
-            snmp_server=snmp_server,
-            syslog_server=syslog_server,
-            timezone=timezone,
+            settings=settings,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -2590,16 +2572,7 @@ class NetworkSettings:
     def update_network_v2(
         self,
         site_id,
-        client_and_endpoint_aaa=None,
-        dhcp_server=None,
-        dns_server=None,
-        message_of_theday=None,
-        netflowcollector=None,
-        network_aaa=None,
-        ntp_server=None,
-        snmp_server=None,
-        syslog_server=None,
-        timezone=None,
+        settings=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -2611,16 +2584,7 @@ class NetworkSettings:
         """
         return self.update_network(
             site_id=site_id,
-            client_and_endpoint_aaa=client_and_endpoint_aaa,
-            dhcp_server=dhcp_server,
-            dns_server=dns_server,
-            message_of_theday=message_of_theday,
-            netflowcollector=netflowcollector,
-            network_aaa=network_aaa,
-            ntp_server=ntp_server,
-            snmp_server=snmp_server,
-            syslog_server=syslog_server,
-            timezone=timezone,
+            settings=settings,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -3411,7 +3375,7 @@ class NetworkSettings:
 
     def update_sp_profile_v2(
         self,
-        qos=None,
+        settings=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -3422,7 +3386,7 @@ class NetworkSettings:
         NetworkSettings.update_sp_profile>`_
         """
         return self.update_sp_profile(
-            qos=qos,
+            settings=settings,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
@@ -3505,7 +3469,7 @@ class NetworkSettings:
 
     def create_sp_profile_v2(
         self,
-        qos=None,
+        settings=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -3516,7 +3480,7 @@ class NetworkSettings:
         NetworkSettings.create_sp_profile>`_
         """
         return self.create_sp_profile(
-            qos=qos,
+            settings=settings,
             payload=payload,
             active_validation=active_validation,
             headers=headers,

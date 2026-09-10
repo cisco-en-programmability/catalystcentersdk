@@ -232,12 +232,12 @@ class ConfigurationTemplates:
 
     def deploy_template_v2(
         self,
-        force_push_template=None,
-        is_composite=None,
-        main_template_id=None,
-        member_template_deployment_info=None,
-        target_info=None,
-        template_id=None,
+        forcePushTemplate=None,
+        isComposite=None,
+        mainTemplateId=None,
+        memberTemplateDeploymentInfo=None,
+        targetInfo=None,
+        templateId=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -248,12 +248,12 @@ class ConfigurationTemplates:
         ConfigurationTemplates.deploy_template>`_
         """
         return self.deploy_template(
-            force_push_template=force_push_template,
-            is_composite=is_composite,
-            main_template_id=main_template_id,
-            member_template_deployment_info=member_template_deployment_info,
-            target_info=target_info,
-            template_id=template_id,
+            forcePushTemplate=forcePushTemplate,
+            isComposite=isComposite,
+            mainTemplateId=mainTemplateId,
+            memberTemplateDeploymentInfo=memberTemplateDeploymentInfo,
+            targetInfo=targetInfo,
+            templateId=templateId,
             payload=payload,
             active_validation=active_validation,
             headers=headers,

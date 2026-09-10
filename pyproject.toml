@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "catalystcentersdk"
-version = "3.2.3.0.1"
+version = "3.2.3.0.2"
 description = "Cisco CatalystCenter Platform SDK"
 authors = ["Jose Bogarin Solano <jbogarin@cloverhound.com>", "William Astorga <wastorga@cloverhound.com>", "Francisco Muñoz <fmunoz@cloverhound.com>", "Bryan Vargas <bvargas@cloverhound.com>"]
 license = "MIT"
@@ -12,7 +12,7 @@ classifiers = [
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.10,<4.0"
 requests = "^2.33.0"
 fastjsonschema = "^2.16.2"
 requests-toolbelt = "^1.0.0"

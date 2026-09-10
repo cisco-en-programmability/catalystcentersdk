@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.3.0.2] - 2026-09-10
+### Fixed
+- **Report view filters (issue #69)**: an array-valued filter such as `MULTI_SELECT_TREE` no longer raises `MalformedRequest` on 2.3.7.6 and 2.3.7.9; every version takes both the array and the object form.
+- **3.2.3.0 aliases sent an empty request body**: 17 `_v2` and acronym aliases forwarded names their target does not take, leaving the fields in the query string, and `claim_a_device_to_a_site` regains the StackSwitch fields.
+- **Test suite**: the 3.1.6.0 validators load again and the 3.2.3.0 ones are registered.
+
+### Changed
+- Python requirement lowered from 3.12 to **>= 3.10**, matching the `cisco.catalystcenter` collection and the floor `requests` itself sets.
+
 ## [3.2.3.0.1] - 2026-09-07
 ### Fixed
 - **Names dropped in 3.2.3.0.0 (issues #57, #58, #60, #62, #64, #65)**: collapsed acronyms (`_r_r_m_`, `_l_s_c_`, `_n_f_s_`, `_i_m_c_`, `_d_h_c_p_` and the rest), the move to `get_all_*` / `get_count_of_*`, and alias blocks that were not carried over left 53 names raising `AttributeError` on upgrade. All are back, plus the `UserandRoles` class name. Four `Wireless` aliases reach a method whose parameters moved upstream, `CalendarProfileSetting` to `calendarProfile` among them, so pass arguments as keywords.
@@ -208,4 +217,5 @@ to "application".
 [3.1.6.0.7]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.6...v3.1.6.0.7
 [3.2.3.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.7...v3.2.3.0.0
 [3.2.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.0...v3.2.3.0.1
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.1...develop
+[3.2.3.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.1...v3.2.3.0.2
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.2...develop

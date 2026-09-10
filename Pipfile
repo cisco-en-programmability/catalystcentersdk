@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [requires]
-python_version = "3.12"
+python_version = "3.10"
 
 [packages] # Here goes your package requirements for running the application and its versions (which packages you will use when running the application).
 requests = ">=2.33.0, <3.0.0"
