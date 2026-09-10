@@ -2357,7 +2357,7 @@ class SiteDesign:
         """
         return self.get_floor_settings(headers=headers, **query_parameters)
 
-    def edit_planned_access_points_positions_on_the_map(
+    def edit_planned_access_points_positions(
         self,
         floor_id,
         headers=None,
@@ -2433,7 +2433,7 @@ class SiteDesign:
             "bpm_eb209544555e43ae2bc909499f3900_v3_2_3_0", json_data
         )
 
-    def edit_planned_access_points_positions_on_the_map_v2(
+    def edit_planned_access_points_positions_v2(
         self,
         floor_id,
         headers=None,
@@ -2441,11 +2441,11 @@ class SiteDesign:
         active_validation=True,
         **query_parameters
     ):
-        """Alias for `edit_planned_access_points_positions_on_the_map <#catalystcentersdk.
+        """Alias for `edit_planned_access_points_positions <#catalystcentersdk.
         api.v3_2_3_0.site_design.
-        SiteDesign.edit_planned_access_points_positions_on_the_map>`_
+        SiteDesign.edit_planned_access_points_positions>`_
         """
-        return self.edit_planned_access_points_positions_on_the_map(
+        return self.edit_planned_access_points_positions(
             floor_id=floor_id,
             payload=payload,
             active_validation=active_validation,
@@ -4207,3 +4207,12 @@ class SiteDesign:
         return self._object_factory(
             "bpm_ac24397435521da0a2feaf8af96162_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+# Cisco renamed this operation's operationId in 3.2.3.0; the def keeps the name it
+# had in v2_3_7_9 and v3_1_3_0, which its three sibling planned-AP-position methods
+# still use, and the 3.2.3.0.0 spelling stays available (issue #62).
+SiteDesign.edit_planned_access_points_positions_on_the_map = (
+    SiteDesign.edit_planned_access_points_positions
+)

@@ -861,3 +861,9 @@ class Backup:
         return self._object_factory(
             "bpm_e87332fa345c06b01cc351ca31a35c_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Backup.get_all_n_f_s_configurations = Backup.get_all_nfs_configurations
+Backup.create_n_f_s_configuration = Backup.create_nfs_configuration
+Backup.delete_n_f_s_configuration = Backup.delete_nfs_configuration

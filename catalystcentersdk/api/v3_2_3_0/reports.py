@@ -1101,7 +1101,14 @@ class Reports:
         )
 
     def download_flexible_report(
-        self, execution_id, report_id, headers=None, **request_parameters
+        self,
+        execution_id,
+        report_id,
+        dirpath=None,
+        save_file=None,
+        filename=None,
+        headers=None,
+        **request_parameters
     ):
         """This is used to download the flexible report. The API returns report content. Save the response to a file by
         converting the response data as a blob and setting the file format available from content-disposition
@@ -1110,20 +1117,27 @@ class Reports:
         Args:
             report_id(str): reportId path parameter. Id of the report.
             execution_id(str): executionId path parameter. Id of execution.
+            dirpath(str): Directory absolute path. Defaults to
+                os.getcwd().
+            save_file(bool): Enable or disable automatic file creation of
+                raw response.
+            filename(str): The filename used to save the download
+                file.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
         Returns:
-            list: JSON response. A list of MyDict objects.
-            Access the object's properties by using the dot notation
-            or the bracket notation.
+            DownloadResponse: The DownloadResponse wrapper. Wraps the urllib3.response.HTTPResponse. For more
+            information check the `urlib3 documentation <https://urllib3.readthedocs.io/en/latest/reference/urllib3.response.html>`_
 
         Raises:
             TypeError: If the parameter types are incorrect.
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
+            DownloadFailure: If was not able to download the raw
+            response to a file.
         Documentation Link:
             https://developer.cisco.com/docs/dna-center/#!download-flexible-report
         """
@@ -1158,10 +1172,23 @@ class Reports:
         endpoint_full_url = apply_path_params(e_url, path_params)
         if with_custom_headers:
             json_data = self._session.get(
-                endpoint_full_url, params=_params, headers=_headers
+                endpoint_full_url,
+                params=_params,
+                headers=_headers,
+                stream=True,
+                dirpath=dirpath,
+                save_file=save_file,
+                filename=filename,
             )
         else:
-            json_data = self._session.get(endpoint_full_url, params=_params)
+            json_data = self._session.get(
+                endpoint_full_url,
+                params=_params,
+                stream=True,
+                dirpath=dirpath,
+                save_file=save_file,
+                filename=filename,
+            )
 
         return self._object_factory(
             "bpm_fc4acf45953f5b68be682c3c5906bf14_v3_2_3_0", json_data

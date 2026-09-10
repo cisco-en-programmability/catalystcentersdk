@@ -16,20 +16,12 @@
      - :meth:`create_application_sets() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.create_application_sets>`
    * - ``create_applications_v2``
      - :meth:`create_applications() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.create_applications>`
-   * - ``delete_application_v2``
-     - :meth:`delete_application() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.delete_application>`
-   * - ``delete_application_set_v2``
-     - :meth:`delete_application_set() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.delete_application_set>`
    * - ``edit_applications_v2``
      - :meth:`edit_applications() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.edit_applications>`
    * - ``get_application_count_v2``
      - :meth:`get_application_count() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.get_application_count>`
    * - ``get_application_set_count_v2``
      - :meth:`get_application_set_count() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.get_application_set_count>`
-   * - ``get_application_sets_v2``
-     - :meth:`get_application_sets() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.get_application_sets>`
-   * - ``get_applications_v2``
-     - :meth:`get_applications() <catalystcentersdk.api.v3_2_3_0.application_policy.ApplicationPolicy.get_applications>`
 
 **Clients**
 
@@ -184,19 +176,6 @@
      - :meth:`updates_floor_settings() <catalystcentersdk.api.v3_2_3_0.site_design.SiteDesign.updates_floor_settings>`
    * - ``uploads_floor_image_v2``
      - :meth:`uploads_floor_image() <catalystcentersdk.api.v3_2_3_0.site_design.SiteDesign.uploads_floor_image>`
-
-**Sites**
-
-.. list-table::
-   :header-rows: 1
-   :widths: 45 55
-
-   * - Alias (``_v2``-suffixed)
-     - Resolves to
-   * - ``get_site_v2``
-     - :meth:`get_site() <catalystcentersdk.api.v3_2_3_0.sites.Sites.get_site>`
-   * - ``get_site_count_v2``
-     - :meth:`get_site_count() <catalystcentersdk.api.v3_2_3_0.sites.Sites.get_site_count>`
 
 **UserAndRoles**
 

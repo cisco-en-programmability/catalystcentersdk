@@ -1555,7 +1555,7 @@ class Sites:
             "bpm_e67558dd99925a0385f5f870bbb8f634_v3_2_3_0", json_data
         )
 
-    def get_site_count(self, id=None, headers=None, **request_parameters):
+    def get_site_count_v2(self, id=None, headers=None, **request_parameters):
         """Get the site count of the specified site's sub-hierarchy (inclusive of the provided site).   Sunset since
         Catalyst Center Release 2.3.7.6   Alternative:   GET: /dna/intent/api/v1/sites/count .
 
@@ -1609,13 +1609,6 @@ class Sites:
         return self._object_factory(
             "bpm_b10ff66e5568ebe6d41faeeabda22_v3_2_3_0", json_data
         )
-
-    def get_site_count_v2(self, id=None, headers=None, **query_parameters):
-        """Alias for `get_site_count <#catalystcentersdk.
-        api.v3_2_3_0.sites.
-        Sites.get_site_count>`_
-        """
-        return self.get_site_count(id=id, headers=headers, **query_parameters)
 
     def get_the_total_number_of_site_analytics_records_available_for_for_given_set_of_query_parameters(
         self,
@@ -2448,7 +2441,7 @@ class Sites:
 
         return self._object_factory("bpm_e9d85a8da71b95b17b58263c_v3_2_3_0", json_data)
 
-    def get_site(
+    def get_site_v2(
         self,
         group_name_hierarchy=None,
         id=None,
@@ -2523,30 +2516,6 @@ class Sites:
 
         return self._object_factory(
             "bpm_c5e65cce2954fdb7177ac0a8e0b76f_v3_2_3_0", json_data
-        )
-
-    def get_site_v2(
-        self,
-        group_name_hierarchy=None,
-        id=None,
-        limit=None,
-        offset=None,
-        type=None,
-        headers=None,
-        **query_parameters
-    ):
-        """Alias for `get_site <#catalystcentersdk.
-        api.v3_2_3_0.sites.
-        Sites.get_site>`_
-        """
-        return self.get_site(
-            group_name_hierarchy=group_name_hierarchy,
-            id=id,
-            limit=limit,
-            offset=offset,
-            type=type,
-            headers=headers,
-            **query_parameters
         )
 
     def get_site_analytics_for_one_site(
@@ -3472,7 +3441,7 @@ class Sites:
             "bpm_c937494318f952ba92eaeb82b144c338_v3_2_3_0", json_data
         )
 
-    def get_site_count_v1(self, site_id=None, headers=None, **request_parameters):
+    def get_site_count(self, site_id=None, headers=None, **request_parameters):
         """Get the site count of the specified site's sub-hierarchy (inclusive of the provided site).
 
         Args:
@@ -4452,7 +4421,7 @@ class Sites:
             "bpm_bce8e6b307ce52dd8f5546fbd78e05ee_v3_2_3_0", json_data
         )
 
-    def get_site_v1(
+    def get_site(
         self,
         limit=None,
         name=None,
