@@ -11968,9 +11968,9 @@ class Devices:
     def get_device_interface_stats_info_v2(
         self,
         device_id,
-        end_time=None,
+        endTime=None,
         query=None,
-        start_time=None,
+        startTime=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -11982,9 +11982,9 @@ class Devices:
         """
         return self.get_device_interface_stats_info(
             device_id=device_id,
-            end_time=end_time,
+            endTime=endTime,
             query=query,
-            start_time=start_time,
+            startTime=startTime,
             payload=payload,
             active_validation=active_validation,
             headers=headers,

@@ -37,7 +37,7 @@ def is_valid_get_access_groups(json_schema_validate, obj):
 
 
 def get_access_groups(api):
-    endpoint_result = api.userand_roles.get_access_groups(
+    endpoint_result = api.user_and_roles.get_access_groups(
         ids="string",
         limit=0,
         names="string",
@@ -60,7 +60,7 @@ def test_get_access_groups(api, validator):
 
 
 def get_access_groups_default_val(api):
-    endpoint_result = api.userand_roles.get_access_groups(
+    endpoint_result = api.user_and_roles.get_access_groups(
         ids=None,
         limit=None,
         names=None,
@@ -87,7 +87,7 @@ def is_valid_add_access_group(json_schema_validate, obj):
 
 
 def add_access_group(api):
-    endpoint_result = api.userand_roles.add_access_group(
+    endpoint_result = api.user_and_roles.add_access_group(
         active_validation=True,
         description="string",
         name="string",
@@ -111,7 +111,7 @@ def test_add_access_group(api, validator):
 
 
 def add_access_group_default_val(api):
-    endpoint_result = api.userand_roles.add_access_group(
+    endpoint_result = api.user_and_roles.add_access_group(
         active_validation=True,
         description=None,
         name=None,
@@ -137,7 +137,7 @@ def is_valid_get_access_group_count(json_schema_validate, obj):
 
 
 def get_access_group_count(api):
-    endpoint_result = api.userand_roles.get_access_group_count()
+    endpoint_result = api.user_and_roles.get_access_group_count()
     return endpoint_result
 
 
@@ -152,7 +152,7 @@ def test_get_access_group_count(api, validator):
 
 
 def get_access_group_count_default_val(api):
-    endpoint_result = api.userand_roles.get_access_group_count()
+    endpoint_result = api.user_and_roles.get_access_group_count()
     return endpoint_result
 
 
@@ -173,7 +173,7 @@ def is_valid_delete_access_group(json_schema_validate, obj):
 
 
 def delete_access_group(api):
-    endpoint_result = api.userand_roles.delete_access_group(id="string")
+    endpoint_result = api.user_and_roles.delete_access_group(id="string")
     return endpoint_result
 
 
@@ -188,7 +188,7 @@ def test_delete_access_group(api, validator):
 
 
 def delete_access_group_default_val(api):
-    endpoint_result = api.userand_roles.delete_access_group(id="string")
+    endpoint_result = api.user_and_roles.delete_access_group(id="string")
     return endpoint_result
 
 
@@ -209,7 +209,7 @@ def is_valid_get_access_group(json_schema_validate, obj):
 
 
 def get_access_group(api):
-    endpoint_result = api.userand_roles.get_access_group(id="string")
+    endpoint_result = api.user_and_roles.get_access_group(id="string")
     return endpoint_result
 
 
@@ -224,7 +224,7 @@ def test_get_access_group(api, validator):
 
 
 def get_access_group_default_val(api):
-    endpoint_result = api.userand_roles.get_access_group(id="string")
+    endpoint_result = api.user_and_roles.get_access_group(id="string")
     return endpoint_result
 
 
@@ -243,7 +243,7 @@ def is_valid_update_access_group(json_schema_validate, obj):
 
 
 def update_access_group(api):
-    endpoint_result = api.userand_roles.update_access_group(
+    endpoint_result = api.user_and_roles.update_access_group(
         active_validation=True,
         description="string",
         id="string",
@@ -267,7 +267,7 @@ def test_update_access_group(api, validator):
 
 
 def update_access_group_default_val(api):
-    endpoint_result = api.userand_roles.update_access_group(
+    endpoint_result = api.user_and_roles.update_access_group(
         active_validation=True,
         description=None,
         id="string",
@@ -295,7 +295,7 @@ def is_valid_add_role_api(json_schema_validate, obj):
 
 
 def add_role_api(api):
-    endpoint_result = api.userand_roles.add_role_api(
+    endpoint_result = api.user_and_roles.add_role_api(
         active_validation=True,
         description="string",
         payload=None,
@@ -316,7 +316,7 @@ def test_add_role_api(api, validator):
 
 
 def add_role_api_default_val(api):
-    endpoint_result = api.userand_roles.add_role_api(
+    endpoint_result = api.user_and_roles.add_role_api(
         active_validation=True,
         description=None,
         payload=None,
@@ -341,7 +341,7 @@ def is_valid_update_role_api(json_schema_validate, obj):
 
 
 def update_role_api(api):
-    endpoint_result = api.userand_roles.update_role_api(
+    endpoint_result = api.user_and_roles.update_role_api(
         active_validation=True,
         description="string",
         payload=None,
@@ -362,7 +362,7 @@ def test_update_role_api(api, validator):
 
 
 def update_role_api_default_val(api):
-    endpoint_result = api.userand_roles.update_role_api(
+    endpoint_result = api.user_and_roles.update_role_api(
         active_validation=True,
         description=None,
         payload=None,
@@ -387,7 +387,7 @@ def is_valid_get_permissions_api(json_schema_validate, obj):
 
 
 def get_permissions_api(api):
-    endpoint_result = api.userand_roles.get_permissions_api()
+    endpoint_result = api.user_and_roles.get_permissions_api()
     return endpoint_result
 
 
@@ -402,7 +402,7 @@ def test_get_permissions_api(api, validator):
 
 
 def get_permissions_api_default_val(api):
-    endpoint_result = api.userand_roles.get_permissions_api()
+    endpoint_result = api.user_and_roles.get_permissions_api()
     return endpoint_result
 
 
@@ -423,7 +423,7 @@ def is_valid_delete_role_api(json_schema_validate, obj):
 
 
 def delete_role_api(api):
-    endpoint_result = api.userand_roles.delete_role_api(role_id="string")
+    endpoint_result = api.user_and_roles.delete_role_api(role_id="string")
     return endpoint_result
 
 
@@ -438,7 +438,7 @@ def test_delete_role_api(api, validator):
 
 
 def delete_role_api_default_val(api):
-    endpoint_result = api.userand_roles.delete_role_api(role_id="string")
+    endpoint_result = api.user_and_roles.delete_role_api(role_id="string")
     return endpoint_result
 
 
@@ -457,7 +457,7 @@ def is_valid_get_roles_api(json_schema_validate, obj):
 
 
 def get_roles_api(api):
-    endpoint_result = api.userand_roles.get_roles_api()
+    endpoint_result = api.user_and_roles.get_roles_api()
     return endpoint_result
 
 
@@ -472,7 +472,7 @@ def test_get_roles_api(api, validator):
 
 
 def get_roles_api_default_val(api):
-    endpoint_result = api.userand_roles.get_roles_api()
+    endpoint_result = api.user_and_roles.get_roles_api()
     return endpoint_result
 
 
@@ -491,7 +491,7 @@ def is_valid_get_users(json_schema_validate, obj):
 
 
 def get_users(api):
-    endpoint_result = api.userand_roles.get_users(auth_source="string")
+    endpoint_result = api.user_and_roles.get_users(auth_source="string")
     return endpoint_result
 
 
@@ -506,7 +506,7 @@ def test_get_users(api, validator):
 
 
 def get_users_default_val(api):
-    endpoint_result = api.userand_roles.get_users(auth_source=None)
+    endpoint_result = api.user_and_roles.get_users(auth_source=None)
     return endpoint_result
 
 
@@ -525,7 +525,7 @@ def is_valid_add_user(json_schema_validate, obj):
 
 
 def add_user(api):
-    endpoint_result = api.userand_roles.add_user(
+    endpoint_result = api.user_and_roles.add_user(
         accessGroups=["string"],
         active_validation=True,
         email="string",
@@ -550,7 +550,7 @@ def test_add_user(api, validator):
 
 
 def add_user_default_val(api):
-    endpoint_result = api.userand_roles.add_user(
+    endpoint_result = api.user_and_roles.add_user(
         accessGroups=None,
         active_validation=True,
         email=None,
@@ -579,7 +579,7 @@ def is_valid_update_user(json_schema_validate, obj):
 
 
 def update_user(api):
-    endpoint_result = api.userand_roles.update_user(
+    endpoint_result = api.user_and_roles.update_user(
         accessGroups=["string"],
         active_validation=True,
         email="string",
@@ -603,7 +603,7 @@ def test_update_user(api, validator):
 
 
 def update_user_default_val(api):
-    endpoint_result = api.userand_roles.update_user(
+    endpoint_result = api.user_and_roles.update_user(
         accessGroups=None,
         active_validation=True,
         email=None,
@@ -631,7 +631,7 @@ def is_valid_delete_user_api(json_schema_validate, obj):
 
 
 def delete_user_api(api):
-    endpoint_result = api.userand_roles.delete_user_api(user_id="string")
+    endpoint_result = api.user_and_roles.delete_user_api(user_id="string")
     return endpoint_result
 
 
@@ -646,7 +646,7 @@ def test_delete_user_api(api, validator):
 
 
 def delete_user_api_default_val(api):
-    endpoint_result = api.userand_roles.delete_user_api(user_id="string")
+    endpoint_result = api.user_and_roles.delete_user_api(user_id="string")
     return endpoint_result
 
 
@@ -665,7 +665,7 @@ def is_valid_get_external_authentication_setting_api(json_schema_validate, obj):
 
 
 def get_external_authentication_setting_api(api):
-    endpoint_result = api.userand_roles.get_external_authentication_setting_api()
+    endpoint_result = api.user_and_roles.get_external_authentication_setting_api()
     return endpoint_result
 
 
@@ -682,7 +682,7 @@ def test_get_external_authentication_setting_api(api, validator):
 
 
 def get_external_authentication_setting_api_default_val(api):
-    endpoint_result = api.userand_roles.get_external_authentication_setting_api()
+    endpoint_result = api.user_and_roles.get_external_authentication_setting_api()
     return endpoint_result
 
 
@@ -703,7 +703,7 @@ def is_valid_manage_external_authentication_setting_api(json_schema_validate, ob
 
 
 def manage_external_authentication_setting_api(api):
-    endpoint_result = api.userand_roles.manage_external_authentication_setting_api(
+    endpoint_result = api.user_and_roles.manage_external_authentication_setting_api(
         active_validation=True, enable=True, payload=None
     )
     return endpoint_result
@@ -722,7 +722,7 @@ def test_manage_external_authentication_setting_api(api, validator):
 
 
 def manage_external_authentication_setting_api_default_val(api):
-    endpoint_result = api.userand_roles.manage_external_authentication_setting_api(
+    endpoint_result = api.user_and_roles.manage_external_authentication_setting_api(
         active_validation=True, enable=None, payload=None
     )
     return endpoint_result
@@ -745,7 +745,7 @@ def is_valid_get_external_authentication_servers_api(json_schema_validate, obj):
 
 
 def get_external_authentication_servers_api(api):
-    endpoint_result = api.userand_roles.get_external_authentication_servers_api(
+    endpoint_result = api.user_and_roles.get_external_authentication_servers_api(
         invoke_source="string"
     )
     return endpoint_result
@@ -764,7 +764,7 @@ def test_get_external_authentication_servers_api(api, validator):
 
 
 def get_external_authentication_servers_api_default_val(api):
-    endpoint_result = api.userand_roles.get_external_authentication_servers_api(
+    endpoint_result = api.user_and_roles.get_external_authentication_servers_api(
         invoke_source=None
     )
     return endpoint_result
@@ -787,7 +787,7 @@ def is_valid_delete_aaa_attribute_api(json_schema_validate, obj):
 
 
 def delete_aaa_attribute_api(api):
-    endpoint_result = api.userand_roles.delete_aaa_attribute_api()
+    endpoint_result = api.user_and_roles.delete_aaa_attribute_api()
     return endpoint_result
 
 
@@ -804,7 +804,7 @@ def test_delete_aaa_attribute_api(api, validator):
 
 
 def delete_aaa_attribute_api_default_val(api):
-    endpoint_result = api.userand_roles.delete_aaa_attribute_api()
+    endpoint_result = api.user_and_roles.delete_aaa_attribute_api()
     return endpoint_result
 
 
@@ -825,7 +825,7 @@ def is_valid_get_aaa_attribute_api(json_schema_validate, obj):
 
 
 def get_aaa_attribute_api(api):
-    endpoint_result = api.userand_roles.get_aaa_attribute_api()
+    endpoint_result = api.user_and_roles.get_aaa_attribute_api()
     return endpoint_result
 
 
@@ -840,7 +840,7 @@ def test_get_aaa_attribute_api(api, validator):
 
 
 def get_aaa_attribute_api_default_val(api):
-    endpoint_result = api.userand_roles.get_aaa_attribute_api()
+    endpoint_result = api.user_and_roles.get_aaa_attribute_api()
     return endpoint_result
 
 
@@ -861,7 +861,7 @@ def is_valid_add_and_update_aaa_attribute_api(json_schema_validate, obj):
 
 
 def add_and_update_aaa_attribute_api(api):
-    endpoint_result = api.userand_roles.add_and_update_aaa_attribute_api(
+    endpoint_result = api.user_and_roles.add_and_update_aaa_attribute_api(
         active_validation=True, attributeName="string", payload=None
     )
     return endpoint_result
@@ -880,7 +880,7 @@ def test_add_and_update_aaa_attribute_api(api, validator):
 
 
 def add_and_update_aaa_attribute_api_default_val(api):
-    endpoint_result = api.userand_roles.add_and_update_aaa_attribute_api(
+    endpoint_result = api.user_and_roles.add_and_update_aaa_attribute_api(
         active_validation=True, attributeName=None, payload=None
     )
     return endpoint_result
@@ -903,7 +903,7 @@ def is_valid_get_roles_v2(json_schema_validate, obj):
 
 
 def get_roles_v2(api):
-    endpoint_result = api.userand_roles.get_roles_v2()
+    endpoint_result = api.user_and_roles.get_roles_v2()
     return endpoint_result
 
 
@@ -918,7 +918,7 @@ def test_get_roles_v2(api, validator):
 
 
 def get_roles_v2_default_val(api):
-    endpoint_result = api.userand_roles.get_roles_v2()
+    endpoint_result = api.user_and_roles.get_roles_v2()
     return endpoint_result
 
 
@@ -937,7 +937,7 @@ def is_valid_add_role_v2(json_schema_validate, obj):
 
 
 def add_role_v2(api):
-    endpoint_result = api.userand_roles.add_role_v2(
+    endpoint_result = api.user_and_roles.add_role_v2(
         active_validation=True,
         description="string",
         name="string",
@@ -958,7 +958,7 @@ def test_add_role_v2(api, validator):
 
 
 def add_role_v2_default_val(api):
-    endpoint_result = api.userand_roles.add_role_v2(
+    endpoint_result = api.user_and_roles.add_role_v2(
         active_validation=True,
         description=None,
         name=None,
@@ -983,7 +983,7 @@ def is_valid_get_permissions_v2(json_schema_validate, obj):
 
 
 def get_permissions_v2(api):
-    endpoint_result = api.userand_roles.get_permissions_v2()
+    endpoint_result = api.user_and_roles.get_permissions_v2()
     return endpoint_result
 
 
@@ -998,7 +998,7 @@ def test_get_permissions_v2(api, validator):
 
 
 def get_permissions_v2_default_val(api):
-    endpoint_result = api.userand_roles.get_permissions_v2()
+    endpoint_result = api.user_and_roles.get_permissions_v2()
     return endpoint_result
 
 
@@ -1019,7 +1019,7 @@ def is_valid_delete_role_v2(json_schema_validate, obj):
 
 
 def delete_role_v2(api):
-    endpoint_result = api.userand_roles.delete_role_v2(id="string")
+    endpoint_result = api.user_and_roles.delete_role_v2(id="string")
     return endpoint_result
 
 
@@ -1034,7 +1034,7 @@ def test_delete_role_v2(api, validator):
 
 
 def delete_role_v2_default_val(api):
-    endpoint_result = api.userand_roles.delete_role_v2(id="string")
+    endpoint_result = api.user_and_roles.delete_role_v2(id="string")
     return endpoint_result
 
 
@@ -1053,7 +1053,7 @@ def is_valid_get_role_v2(json_schema_validate, obj):
 
 
 def get_role_v2(api):
-    endpoint_result = api.userand_roles.get_role_v2(id="string")
+    endpoint_result = api.user_and_roles.get_role_v2(id="string")
     return endpoint_result
 
 
@@ -1068,7 +1068,7 @@ def test_get_role_v2(api, validator):
 
 
 def get_role_v2_default_val(api):
-    endpoint_result = api.userand_roles.get_role_v2(id="string")
+    endpoint_result = api.user_and_roles.get_role_v2(id="string")
     return endpoint_result
 
 
@@ -1087,7 +1087,7 @@ def is_valid_update_role_v2(json_schema_validate, obj):
 
 
 def update_role_v2(api):
-    endpoint_result = api.userand_roles.update_role_v2(
+    endpoint_result = api.user_and_roles.update_role_v2(
         active_validation=True,
         description="string",
         id="string",
@@ -1109,7 +1109,7 @@ def test_update_role_v2(api, validator):
 
 
 def update_role_v2_default_val(api):
-    endpoint_result = api.userand_roles.update_role_v2(
+    endpoint_result = api.user_and_roles.update_role_v2(
         active_validation=True,
         description=None,
         id="string",

@@ -157,7 +157,7 @@ class JSONSchemaValidatorD89E1C3E150Ef9FaaFf44Fa483De5:
                 "type": "string"
                 },
                 "value": {
-                "type": "object"
+                "type": ["array", "object"]
                 }
                 },
                 "type": "object"

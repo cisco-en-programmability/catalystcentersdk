@@ -351,7 +351,7 @@ class ApplicationPolicy:
 
     def updates_the_application_qo_s_policy_setting(
         self,
-        deploy_by_default_on_wired_devices=None,
+        deployByDefaultOnWiredDevices=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -362,7 +362,7 @@ class ApplicationPolicy:
         ApplicationPolicy.updates_the_application_qos_policy_setting>`_
         """
         return self.updates_the_application_qos_policy_setting(
-            deploy_by_default_on_wired_devices=deploy_by_default_on_wired_devices,
+            deployByDefaultOnWiredDevices=deployByDefaultOnWiredDevices,
             payload=payload,
             active_validation=active_validation,
             headers=headers,
