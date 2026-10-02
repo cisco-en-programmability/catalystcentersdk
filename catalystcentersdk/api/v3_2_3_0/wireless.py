@@ -9034,7 +9034,7 @@ class Wireless:
             "bpm_bd1debf91d457ab92d7357bc0402bae_v3_2_3_0", json_data
         )
 
-    def update_wireless_profile(
+    def update_wireless_profile_connectivity(
         self,
         id,
         additionalInterfaces=None,
@@ -9136,7 +9136,9 @@ class Wireless:
             "bpm_d91a3aad0fd954e7a43aa3256ce433f6_v3_2_3_0", json_data
         )
 
-    def delete_wireless_profile(self, id, headers=None, **request_parameters):
+    def delete_wireless_profile_connectivity(
+        self, id, headers=None, **request_parameters
+    ):
         """This API allows the user to delete Wireless Network Profile by Id.
 
         Args:
@@ -32801,7 +32803,7 @@ class Wireless:
             "bpm_bec142b3bf65c109d752da5705ae2ca_v3_2_3_0", json_data
         )
 
-    def create_wireless_profile(
+    def create_wireless_profile_connectivity(
         self,
         additionalInterfaces=None,
         apZones=None,
@@ -38798,32 +38800,18 @@ class Wireless:
             "bpm_da3ce01bfbd593eafa884958336d8c5_v3_2_3_0", json_data
         )
 
-    def create_wireless_profile_connectivity(
+    def create_wireless_profile(
         self,
-        additionalInterfaces=None,
-        apZones=None,
-        featureTemplates=None,
-        id=None,
-        ssidDetails=None,
-        wirelessProfileName=None,
+        profileDetails=None,
         headers=None,
         payload=None,
         active_validation=True,
         **request_parameters
     ):
-        """Creates Wireless Network Profile on Cisco DNA Center and associates sites and SSIDs to it.
+        """Creates Wireless Network Profile on Cisco Catalyst Center and associates sites and SSIDs to it.
 
         Args:
-            additionalInterfaces(list): Wireless's These interfaces will be configured on the device as independent
-                interfaces in addition to the interfaces mapped to SSIDs. (list of strings. Constraints:
-                maxLength set to 4094).
-            apZones(list): Wireless's List of apZones Attached to wireless Profile (list of objects). Constraints:
-                maxLength set to 100.
-            featureTemplates(list): Wireless's Feature Templates which needs to be associated to the wireless
-                network profile. (list of objects). Constraints: maxLength set to 500.
-            id(string): Wireless's Id.
-            ssidDetails(list): Wireless's SSID Details (list of objects). Constraints: maxLength set to 16.
-            wirelessProfileName(string): Wireless's Wireless Profile Name.
+            profileDetails(object): Wireless's profileDetails.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -38842,7 +38830,7 @@ class Wireless:
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile-connectivity
+            https://developer.cisco.com/docs/dna-center/#!create-wireless-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -38856,12 +38844,7 @@ class Wireless:
 
         path_params = {}
         _payload = {
-            "wirelessProfileName": wirelessProfileName,
-            "ssidDetails": ssidDetails,
-            "apZones": apZones,
-            "additionalInterfaces": additionalInterfaces,
-            "featureTemplates": featureTemplates,
-            "id": id,
+            "profileDetails": profileDetails,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
@@ -38948,14 +38931,9 @@ class Wireless:
             "bpm_bbc1866a50505c0695ae243718d51936_v3_2_3_0", json_data
         )
 
-    def update_wireless_profile_connectivity(
+    def update_wireless_profile(
         self,
-        additionalInterfaces=None,
-        apZones=None,
-        featureTemplates=None,
-        id=None,
-        ssidDetails=None,
-        wirelessProfileName=None,
+        profileDetails=None,
         headers=None,
         payload=None,
         active_validation=True,
@@ -38965,16 +38943,7 @@ class Wireless:
         profile should be provided.
 
         Args:
-            additionalInterfaces(list): Wireless's These interfaces will be configured on the device as independent
-                interfaces in addition to the interfaces mapped to SSIDs. (list of strings. Constraints:
-                maxLength set to 4094).
-            apZones(list): Wireless's List of apZones Attached to wireless Profile (list of objects). Constraints:
-                maxLength set to 100.
-            featureTemplates(list): Wireless's Feature Templates which needs to be associated to the wireless
-                network profile. (list of objects). Constraints: maxLength set to 500.
-            id(string): Wireless's Id.
-            ssidDetails(list): Wireless's SSID Details (list of objects). Constraints: maxLength set to 16.
-            wirelessProfileName(string): Wireless's Wireless Profile Name.
+            profileDetails(object): Wireless's profileDetails.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the
@@ -38993,7 +38962,7 @@ class Wireless:
             MalformedRequest: If the request body created is invalid.
             ApiError: If the Catalyst Center cloud returns an error.
         Documentation Link:
-            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile-connectivity
+            https://developer.cisco.com/docs/dna-center/#!update-wireless-profile
         """
         check_type(headers, dict)
         check_type(payload, dict)
@@ -39007,12 +38976,7 @@ class Wireless:
 
         path_params = {}
         _payload = {
-            "wirelessProfileName": wirelessProfileName,
-            "ssidDetails": ssidDetails,
-            "apZones": apZones,
-            "additionalInterfaces": additionalInterfaces,
-            "featureTemplates": featureTemplates,
-            "id": id,
+            "profileDetails": profileDetails,
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
@@ -44516,7 +44480,7 @@ class Wireless:
             "bpm_f790a930d452708353c374f5c0f90f_v3_2_3_0", json_data
         )
 
-    def delete_wireless_profile_connectivity(
+    def delete_wireless_profile(
         self, wireless_profile_name, headers=None, **request_parameters
     ):
         """Delete the Wireless Profile whose name is provided.

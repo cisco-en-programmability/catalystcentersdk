@@ -3191,8 +3191,8 @@ class NetworkSettings:
             "httpReadCredentialsId": httpReadCredentialsId,
             "httpWriteCredentialsId": httpWriteCredentialsId,
         }
-        _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
+        _payload.update(payload or {})
         if active_validation:
             self._request_validator(
                 "jsd_e481654675355408be8daff9a82f9a0_v2_3_7_9"

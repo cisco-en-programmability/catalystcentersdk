@@ -411,6 +411,8 @@ class RestSession:
                     filepath = os.path.join(dirpath, filename)
                 except Exception as e:
                     raise DownloadFailure(resp, e)
+            elif filename:
+                filepath = os.path.join(dirpath, filename)
             if save_file and filepath:
                 try:
                     with open(filepath, "wb") as f:
@@ -427,7 +429,7 @@ class RestSession:
             )
             return final_response
 
-    def request(self, method, url, erc, custom_refresh, **kwargs):
+    def request(self, method, url, erc, custom_refresh, json_null=True, **kwargs):
         """Abstract base method for making requests to the Catalyst Center APIs.
 
         This base method:
@@ -443,6 +445,8 @@ class RestSession:
             url(str): The URL of the API endpoint to be called.
             erc(int): The expected response code that should be returned by the
                 Catalyst Center API endpoint to indicate success.
+            json_null(bool): Drop an empty json body instead of sending it.
+                Defaults to True.
             **kwargs: Passed on to the requests package.
 
         Returns:
@@ -461,7 +465,7 @@ class RestSession:
         kwargs.setdefault("verify", self.verify)
 
         # Fixes requests inconsistent behavior with additional parameters
-        if not kwargs.get("json"):
+        if json_null and not kwargs.get("json"):
             kwargs.pop("json", None)
 
         if not kwargs.get("data"):
@@ -517,13 +521,19 @@ class RestSession:
                     logger.debug("Refreshing access token")
                     self.refresh_token()
                     logger.debug("Refreshed token.")
-                    return self.request(method, url, erc, 1, **kwargs)
+                    return self.request(
+                        method, url, erc, 1, json_null=json_null, **kwargs
+                    )
                 else:
                     # Re-raise the ApiError
                     logger.debug(pprint_response_info(response))
                     raise
             else:
-                logger.debug(pprint_response_info(response))
+                logger.debug(
+                    pprint_response_info(
+                        response, include_body=not kwargs.get("stream", False)
+                    )
+                )
                 return response
 
     def multipart_data(self, fields, create_callback):

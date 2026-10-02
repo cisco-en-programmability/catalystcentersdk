@@ -18637,3 +18637,73 @@ class Devices:
         return self._object_factory(
             "bpm_e0994dc92565d2a865dd2eac9c06c41_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Devices.get_summary_analytics_data_of_d_h_c_p_services_for_given_set_of_complex_filters = (
+    Devices.get_summary_analytics_data_of_dhcp_services_for_given_set_of_complex_filters
+)
+Devices.get_summary_analytics_data_of_d_n_s_services_for_given_set_of_complex_filters = (
+    Devices.get_summary_analytics_data_of_dns_services_for_given_set_of_complex_filters
+)
+Devices.get_top_n_analytics_data_of_d_h_c_p_services_for_given_set_of_complex_filters = (
+    Devices.get_top_n_analytics_data_of_dhcp_services_for_given_set_of_complex_filters
+)
+Devices.get_top_n_analytics_data_of_d_n_s_services_for_given_set_of_complex_filters = (
+    Devices.get_top_n_analytics_data_of_dns_services_for_given_set_of_complex_filters
+)
+Devices.get_total_interfaces_count_across_the_network_devices = (
+    Devices.the_total_interfaces_count_across_the_network_devices
+)
+Devices.get_trend_analytics_data_for_a_given_d_h_c_p_service_matching_the_id_of_the_service = (
+    Devices.get_trend_analytics_data_for_a_given_dhcp_service_matching_the_id_of_the_service
+)
+Devices.get_trend_analytics_data_for_a_given_d_n_s_service_matching_the_id_of_the_service = (
+    Devices.get_trend_analytics_data_for_a_given_dns_service_matching_the_id_of_the_service
+)
+Devices.get_trend_analytics_data_for_the_interfaces_in_the_specified_time_range = (
+    Devices.the_trend_analytcis_data_for_the_interfaces_in_the_specified_time_range
+)
+Devices.get_trend_analytics_data_for_the_network_device_in_the_specified_time_range = (
+    Devices.the_trend_analytics_data_for_the_network_device_in_the_specified_time_range
+)
+Devices.get_trend_analytics_data_of_d_h_c_p_services_for_given_set_of_complex_filters = (
+    Devices.get_trend_analytics_data_of_dhcp_services_for_given_set_of_complex_filters
+)
+Devices.get_trend_analytics_data_of_d_n_s_services_for_given_set_of_complex_filters = (
+    Devices.get_trend_analytics_data_of_dns_services_for_given_set_of_complex_filters
+)
+Devices.gets_the_total_network_device_interface_counts = (
+    Devices.gets_the_total_network_device_interface_counts_in_the_specified_time_range_when_there_is_no_start_and_end_time_specified_returns_the_latest_interfaces_total_count
+)
+Devices.poe_details_ = Devices.poe_details
+Devices.retrieves_the_details_of_a_specific_d_h_c_p_service_matching_the_id_of_the_service = (
+    Devices.retrieves_the_details_of_a_specific_dhcp_service_matching_the_id_of_the_service
+)
+Devices.retrieves_the_details_of_a_specific_d_n_s_service_matching_the_id_of_the_service = (
+    Devices.retrieves_the_details_of_a_specific_dns_service_matching_the_id_of_the_service
+)
+Devices.retrieves_the_list_of_d_h_c_p_services_for_given_parameters = (
+    Devices.retrieves_the_list_of_dhcp_services_for_given_parameters
+)
+Devices.retrieves_the_list_of_d_h_c_p_services_for_given_set_of_complex_filters = (
+    Devices.retrieves_the_list_of_dhcp_services_for_given_set_of_complex_filters
+)
+Devices.retrieves_the_list_of_d_n_s_services_for_given_parameters = (
+    Devices.retrieves_the_list_of_dns_services_for_given_parameters
+)
+Devices.retrieves_the_list_of_d_n_s_services_for_given_set_of_complex_filters = (
+    Devices.retrieves_the_list_of_dns_services_for_given_set_of_complex_filters
+)
+Devices.retrieves_the_total_number_of_d_h_c_p_services_for_given_parameters = (
+    Devices.retrieves_the_total_number_of_dhcp_services_for_given_parameters
+)
+Devices.retrieves_the_total_number_of_d_h_c_p_services_for_given_set_of_complex_filters = (
+    Devices.retrieves_the_total_number_of_dhcp_services_for_given_set_of_complex_filters
+)
+Devices.retrieves_the_total_number_of_d_n_s_services_for_given_parameters = (
+    Devices.retrieves_the_total_number_of_dns_services_for_given_parameters
+)
+Devices.retrieves_the_total_number_of_d_n_s_services_for_given_set_of_complex_filters = (
+    Devices.retrieves_the_total_number_of_dns_services_for_given_set_of_complex_filters
+)

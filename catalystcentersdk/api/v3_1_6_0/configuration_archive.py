@@ -633,5 +633,9 @@ class ConfigurationArchive:
             "bpm_d8fcd6dbb7ff53b58f7398c49b27ded2_v3_1_6_0", json_data
         )
 
+    download_unmaskedraw_device_configuration_as_z_ip = (
+        download_unmaskedraw_device_configuration_as_zip
+    )
+
 
 # Alias Functions

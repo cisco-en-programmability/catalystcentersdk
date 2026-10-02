@@ -533,6 +533,7 @@ class ConfigurationArchive:
         filename=None,
         headers=None,
         payload=None,
+        active_validation=True,
         **request_parameters
     ):
         """Download the unmasked (raw) device configuration by providing the file `id` and a `password`. The response will
@@ -557,6 +558,8 @@ class ConfigurationArchive:
                 .
             payload(dict): A JSON serializable Python object to send in the
                 body of the Request.
+            active_validation(bool): Enable/Disable payload validation.
+                Defaults to True.
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
@@ -594,6 +597,10 @@ class ConfigurationArchive:
         }
         _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
+        if active_validation:
+            self._request_validator(
+                "jsd_d8fcd6dbb7ff53b58f7398c49b27ded2_v2_3_7_9"
+            ).validate(_payload)
 
         with_custom_headers = False
         _headers = self._session.headers or {}

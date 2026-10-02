@@ -2310,3 +2310,18 @@ class SystemSettings:
         return self._object_factory(
             "bpm_e0ed6b9a530ea05d77a199ded4e3_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+SystemSettings.creates_configuration_details_of_the_external_ip_a_m_server = (
+    SystemSettings.creates_configuration_details_of_the_external_ipam_server
+)
+SystemSettings.deletes_configuration_details_of_the_external_ip_a_m_server = (
+    SystemSettings.deletes_configuration_details_of_the_external_ipam_server
+)
+SystemSettings.retrieves_configuration_details_of_the_external_ip_a_m_server = (
+    SystemSettings.retrieves_configuration_details_of_the_external_ipam_server
+)
+SystemSettings.updates_configuration_details_of_the_external_ip_a_m_server = (
+    SystemSettings.updates_configuration_details_of_the_external_ipam_server
+)

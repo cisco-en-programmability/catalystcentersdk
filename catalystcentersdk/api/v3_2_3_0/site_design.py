@@ -4216,3 +4216,6 @@ class SiteDesign:
 SiteDesign.edit_planned_access_points_positions_on_the_map = (
     SiteDesign.edit_planned_access_points_positions
 )
+SiteDesign.edit_planned_access_points_positions_on_the_map_v2 = (
+    SiteDesign.edit_planned_access_points_positions
+)

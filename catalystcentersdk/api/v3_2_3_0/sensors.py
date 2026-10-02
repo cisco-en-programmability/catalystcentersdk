@@ -2538,3 +2538,57 @@ class Sensors:
         return self._object_factory(
             "bpm_cfadc5e4c912588389f4f63d2fb6e4ed_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Sensors.creates_ai_cap_configuration_workflow_for_i_capintent_to_remove_the_i_cap_configuration_on_the_device = (
+    Sensors.creates_an_icap_configuration_intent_to_remove_icap_rf_stats_or_anomaly_on_the_device_with_preview_approve
+)
+Sensors.creates_an_i_cap_configuration_intent_for_preview_approve = (
+    Sensors.creates_an_icap_configuration_intent_for_preview_approve
+)
+Sensors.deploys_the_given_i_cap_configuration_intent_without_preview_and_approve = (
+    Sensors.deploys_the_given_icap_configuration_intent_without_preview_and_approve
+)
+Sensors.deploys_the_i_cap_configuration_intent_by_activity_id = (
+    Sensors.deploys_the_icap_configuration_intent_by_activity_id
+)
+Sensors.discards_the_i_cap_configuration_intent_by_activity_id = (
+    Sensors.discards_the_icap_configuration_intent_by_activity_id
+)
+Sensors.downloads_a_specific_i_cap_packet_capture_file = (
+    Sensors.downloads_a_specific_icap_packet_capture_file
+)
+Sensors.generates_the_devices_clis_of_the_i_cap_configuration_intent = (
+    Sensors.generates_the_devices_clis_of_the_icap_configuration_intent
+)
+Sensors.get_device_deployment_status = (
+    Sensors.get_device_deployment_status_know_your_network
+)
+Sensors.get_i_cap_configuration_status_per_network_device = (
+    Sensors.get_icap_configuration_intent_status_per_network_device
+)
+Sensors.lists_i_cap_packet_capture_files_matching_specified_criteria = (
+    Sensors.lists_icap_packet_capture_files_matching_specified_criteria
+)
+Sensors.remove_the_i_cap_configuration_on_the_device_without_preview = (
+    Sensors.remove_the_icap_configuration_on_the_device_without_preview
+)
+Sensors.retrieves_deployed_i_cap_configurations_while_supporting_basic_filtering = (
+    Sensors.retrieves_deployed_icap_configurations_while_supporting_basic_filtering
+)
+Sensors.retrieves_details_of_a_specific_i_cap_packet_capture_file = (
+    Sensors.retrieves_details_of_a_specific_icap_packet_capture_file
+)
+Sensors.retrieves_the_count_of_deployed_i_cap_configurations_while_supporting_basic_filtering = (
+    Sensors.retrieves_the_count_of_deployed_icap_configurations_while_supporting_basic_filtering
+)
+Sensors.retrieves_the_devices_clis_of_the_i_capintent = (
+    Sensors.retrieves_the_devices_clis_of_the_icapintent
+)
+Sensors.retrieves_the_spectrum_interference_devices_reports_sent_by_w_l_c_for_provided_ap_mac = (
+    Sensors.retrieves_the_spectrum_interference_devices_reports_sent_by_wlc_for_provided_ap_mac
+)
+Sensors.retrieves_the_spectrum_sensor_reports_sent_by_w_l_c_for_provided_ap_mac = (
+    Sensors.retrieves_the_spectrum_sensor_reports_sent_by_wlc_for_provided_ap_mac
+)

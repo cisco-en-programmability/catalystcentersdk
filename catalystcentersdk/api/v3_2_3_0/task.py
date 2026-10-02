@@ -1369,3 +1369,7 @@ class Task:
         return self._object_factory(
             "bpm_d235a8436ddd5bb1add2c7bf04940a99_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Task.get_task_by_operation_id = Task.get_task_by_operationid

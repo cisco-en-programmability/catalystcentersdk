@@ -3293,3 +3293,9 @@ class ConfigurationTemplates:
         return self._object_factory(
             "bpm_dec1857f1585557eb39e12a9c93ef985_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+ConfigurationTemplates.get_template_versions_by_id = (
+    ConfigurationTemplates.gets_all_the_versions_of_a_given_template
+)

@@ -11449,3 +11449,6 @@ class Sda:
 
 # Alias Functions
 Sda.get_port_channels = Sda.get_port_channels_connectivity
+Sda.get_trend_analytics_data_for_a_fabric_site_in_the_specified_time_range = (
+    Sda.the_trend_analytics_data_for_a_fabric_site_in_the_specified_time_range
+)

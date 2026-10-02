@@ -8980,3 +8980,7 @@ class Compliance:
         return self._object_factory(
             "bpm_f6011b1d24c53d1aa7dda9e0d3ee29b_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Compliance.get_compliance_status_ = Compliance.get_compliance_status
