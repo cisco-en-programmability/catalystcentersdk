@@ -127,12 +127,18 @@ class ApiError(catalystcentersdkException):
             except ValueError:
                 logger.warning("Error parsing JSON response body")
 
-        self.message = (
-            self.details.get("message")
-            or self.details.get("response", {}).get("message")
-            or self.details.get("description")
-            if self.details and isinstance(self.details, dict)
+        details = self.details if isinstance(self.details, dict) else {}
+        response_details = details.get("response")
+        response_message = (
+            response_details.get("message")
+            if isinstance(response_details, dict)
             else None
+        )
+        self.message = (
+            details.get("message")
+            or details.get("errorMessage")
+            or response_message
+            or details.get("description")
         )
         """The error message from the parsed API response."""
 
