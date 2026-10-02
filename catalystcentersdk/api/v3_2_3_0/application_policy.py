@@ -2792,3 +2792,18 @@ class ApplicationPolicy:
         return self._object_factory(
             "bpm_dda852745acd5ce5a97b0cfdf0de2fd2_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+ApplicationPolicy.disable_c_b_a_r_feature_on_multiple_network_devices = (
+    ApplicationPolicy.disable_cbar_feature_on_multiple_network_devices
+)
+ApplicationPolicy.enable_c_b_a_r_feature_on_multiple_network_devices = (
+    ApplicationPolicy.enable_cbar_feature_on_multiple_network_devices
+)
+ApplicationPolicy.delete_application_policy = ApplicationPolicy.delete_application
+ApplicationPolicy.delete_application_set_policy = (
+    ApplicationPolicy.delete_application_set
+)
+ApplicationPolicy.get_application_sets_v1 = ApplicationPolicy.get_application_sets
+ApplicationPolicy.get_applications_v1 = ApplicationPolicy.get_applications

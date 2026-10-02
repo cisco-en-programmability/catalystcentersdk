@@ -46,7 +46,7 @@ class JSONSchemaValidatorE481654675355408Be8Daff9A82F9A0:
                     "type": "string"
                 }
             },
-            "type": "object"
+            "type": ["object", "null"]
         },
         "httpReadCredentialsId": {
             "properties": {
@@ -54,7 +54,7 @@ class JSONSchemaValidatorE481654675355408Be8Daff9A82F9A0:
                     "type": "string"
                 }
             },
-            "type": "object"
+            "type": ["object", "null"]
         },
         "httpWriteCredentialsId": {
             "properties": {
@@ -62,7 +62,7 @@ class JSONSchemaValidatorE481654675355408Be8Daff9A82F9A0:
                     "type": "string"
                 }
             },
-            "type": "object"
+            "type": ["object", "null"]
         },
         "snmpv2cReadCredentialsId": {
             "properties": {
@@ -70,7 +70,7 @@ class JSONSchemaValidatorE481654675355408Be8Daff9A82F9A0:
                     "type": "string"
                 }
             },
-            "type": "object"
+            "type": ["object", "null"]
         },
         "snmpv2cWriteCredentialsId": {
             "properties": {
@@ -78,7 +78,7 @@ class JSONSchemaValidatorE481654675355408Be8Daff9A82F9A0:
                     "type": "string"
                 }
             },
-            "type": "object"
+            "type": ["object", "null"]
         },
         "snmpv3CredentialsId": {
             "properties": {
@@ -86,7 +86,7 @@ class JSONSchemaValidatorE481654675355408Be8Daff9A82F9A0:
                     "type": "string"
                 }
             },
-            "type": "object"
+            "type": ["object", "null"]
         }
     },
     "type": "object"

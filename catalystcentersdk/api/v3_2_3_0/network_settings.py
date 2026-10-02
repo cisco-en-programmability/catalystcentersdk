@@ -94,7 +94,7 @@ class NetworkSettings:
             https://developer.cisco.com/docs/dna-center/#!set-banner-settings-for-a-site
         """
         check_type(headers, dict)
-        check_type(payload, (list, dict))
+        check_type(payload, dict)
         check_type(id, str, may_be_none=False)
         if headers is not None:
             if "X-Auth-Token" in headers:
@@ -107,7 +107,11 @@ class NetworkSettings:
         path_params = {
             "id": id,
         }
-        _payload = payload or {}
+        _payload = {
+            "banner": banner,
+        }
+        _payload.update(payload or {})
+        _payload = dict_from_items_with_values(_payload)
         if active_validation:
             self._request_validator(
                 "jsd_b3c4383ecc13514c85c6f3d8484f6d68_v3_2_3_0"
@@ -2667,8 +2671,8 @@ class NetworkSettings:
             "httpReadCredentialsId": httpReadCredentialsId,
             "httpWriteCredentialsId": httpWriteCredentialsId,
         }
-        _payload.update(payload or {})
         _payload = dict_from_items_with_values(_payload)
+        _payload.update(payload or {})
         if active_validation:
             self._request_validator(
                 "jsd_e481654675355408be8daff9a82f9a0_v3_2_3_0"

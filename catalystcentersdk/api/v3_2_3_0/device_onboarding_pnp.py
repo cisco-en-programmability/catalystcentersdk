@@ -3015,3 +3015,7 @@ class DeviceOnboardingPnp:
         return self._object_factory(
             "bpm_e722e05046d5262b55c125237e9b67d_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+DeviceOnboardingPnp.unclaim_device = DeviceOnboardingPnp.un_claim_device

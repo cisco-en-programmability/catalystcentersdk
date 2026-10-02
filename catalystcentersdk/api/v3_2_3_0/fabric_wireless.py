@@ -1117,3 +1117,10 @@ class FabricWireless:
         return self._object_factory(
             "bpm_bb706025a9cb183ce7a60e0b5df_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+FabricWireless.add_w_l_c_to_fabric_domain = FabricWireless.add_wlc_to_fabric_domain
+FabricWireless.remove_w_l_c_from_fabric_domain = (
+    FabricWireless.remove_wlc_from_fabric_domain
+)

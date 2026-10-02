@@ -2622,3 +2622,24 @@ class IndustrialConfiguration:
         return self._object_factory(
             "bpm_dbfa788ae5dfe849b7b4784aa8297_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+IndustrialConfiguration.configure_rep_ring_on_fabric_deployment = (
+    IndustrialConfiguration.configure_a_rep_ring_on_fabric_deployment
+)
+IndustrialConfiguration.configure_rep_ring_on_non_fabric_deployment = (
+    IndustrialConfiguration.configure_a_rep_ring_on_non_fabric_deployment
+)
+IndustrialConfiguration.retrieves_the_count_of_m_r_p_ring_members = (
+    IndustrialConfiguration.retrieves_the_count_of_mrp_ring_members
+)
+IndustrialConfiguration.retrieves_the_count_of_m_r_p_rings = (
+    IndustrialConfiguration.retrieves_the_count_of_mrp_rings
+)
+IndustrialConfiguration.retrieves_the_list_of_network_devices_part_of_m_r_p_ring = (
+    IndustrialConfiguration.retrieves_the_list_of_network_devices_part_of_mrp_ring
+)
+IndustrialConfiguration.retrieves_the_list_of_rep_rings = (
+    IndustrialConfiguration.retrieve_the_list_rep_rings
+)

@@ -284,7 +284,7 @@ def update_webhook_destination(api):
     endpoint_result = api.event_management.update_webhook_destination(
         active_validation=True,
         description="string",
-        headers_=[
+        webhook_headers=[
             {
                 "name": "string",
                 "value": "string",
@@ -319,7 +319,7 @@ def update_webhook_destination_default_val(api):
     endpoint_result = api.event_management.update_webhook_destination(
         active_validation=True,
         description=None,
-        headers_=None,
+        webhook_headers=None,
         isProxyRoute=None,
         method=None,
         name=None,
@@ -351,7 +351,7 @@ def create_webhook_destination(api):
     endpoint_result = api.event_management.create_webhook_destination(
         active_validation=True,
         description="string",
-        headers_=[
+        webhook_headers=[
             {
                 "name": "string",
                 "value": "string",
@@ -386,7 +386,7 @@ def create_webhook_destination_default_val(api):
     endpoint_result = api.event_management.create_webhook_destination(
         active_validation=True,
         description=None,
-        headers_=None,
+        webhook_headers=None,
         isProxyRoute=None,
         method=None,
         name=None,

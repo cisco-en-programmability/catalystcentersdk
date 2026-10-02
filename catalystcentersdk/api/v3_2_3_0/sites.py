@@ -4581,3 +4581,8 @@ class Sites:
         return self._object_factory(
             "bpm_a544e27e18e5412af3b68d915c8ca50_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Sites.get_site_count_v1 = Sites.get_site_count
+Sites.get_site_v1 = Sites.get_site

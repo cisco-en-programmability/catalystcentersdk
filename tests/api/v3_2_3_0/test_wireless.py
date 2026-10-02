@@ -6338,13 +6338,13 @@ def test_get_number_of_configurations_for_mdns_wired_filter_feature_on_a_device_
             raise original_e
 
 
-def is_valid_update_wireless_profile(json_schema_validate, obj):
+def is_valid_update_wireless_profile_connectivity(json_schema_validate, obj):
     json_schema_validate("jsd_d91a3aad0fd954e7a43aa3256ce433f6_v3_2_3_0").validate(obj)
     return True
 
 
-def update_wireless_profile(api):
-    endpoint_result = api.wireless.update_wireless_profile(
+def update_wireless_profile_connectivity(api):
+    endpoint_result = api.wireless.update_wireless_profile_connectivity(
         active_validation=True,
         additionalInterfaces=["string"],
         apZones=[
@@ -6372,17 +6372,19 @@ def update_wireless_profile(api):
 
 
 @pytest.mark.wireless
-def test_update_wireless_profile(api, validator):
+def test_update_wireless_profile_connectivity(api, validator):
     try:
-        assert is_valid_update_wireless_profile(validator, update_wireless_profile(api))
+        assert is_valid_update_wireless_profile_connectivity(
+            validator, update_wireless_profile_connectivity(api)
+        )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def update_wireless_profile_default_val(api):
-    endpoint_result = api.wireless.update_wireless_profile(
+def update_wireless_profile_connectivity_default_val(api):
+    endpoint_result = api.wireless.update_wireless_profile_connectivity(
         active_validation=True,
         additionalInterfaces=None,
         apZones=None,
@@ -6396,46 +6398,48 @@ def update_wireless_profile_default_val(api):
 
 
 @pytest.mark.wireless
-def test_update_wireless_profile_default_val(api, validator):
+def test_update_wireless_profile_connectivity_default_val(api, validator):
     try:
-        assert is_valid_update_wireless_profile(
-            validator, update_wireless_profile_default_val(api)
+        assert is_valid_update_wireless_profile_connectivity(
+            validator, update_wireless_profile_connectivity_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
             raise original_e
 
 
-def is_valid_delete_wireless_profile(json_schema_validate, obj):
+def is_valid_delete_wireless_profile_connectivity(json_schema_validate, obj):
     json_schema_validate("jsd_2439792afcc95b9babb1b6a776e065e1_v3_2_3_0").validate(obj)
     return True
 
 
-def delete_wireless_profile(api):
-    endpoint_result = api.wireless.delete_wireless_profile(id="string")
+def delete_wireless_profile_connectivity(api):
+    endpoint_result = api.wireless.delete_wireless_profile_connectivity(id="string")
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_delete_wireless_profile(api, validator):
+def test_delete_wireless_profile_connectivity(api, validator):
     try:
-        assert is_valid_delete_wireless_profile(validator, delete_wireless_profile(api))
+        assert is_valid_delete_wireless_profile_connectivity(
+            validator, delete_wireless_profile_connectivity(api)
+        )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def delete_wireless_profile_default_val(api):
-    endpoint_result = api.wireless.delete_wireless_profile(id="string")
+def delete_wireless_profile_connectivity_default_val(api):
+    endpoint_result = api.wireless.delete_wireless_profile_connectivity(id="string")
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_delete_wireless_profile_default_val(api, validator):
+def test_delete_wireless_profile_connectivity_default_val(api, validator):
     try:
-        assert is_valid_delete_wireless_profile(
-            validator, delete_wireless_profile_default_val(api)
+        assert is_valid_delete_wireless_profile_connectivity(
+            validator, delete_wireless_profile_connectivity_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -24238,13 +24242,13 @@ def test_get_wireless_profiles_default_val(api, validator):
             raise original_e
 
 
-def is_valid_create_wireless_profile(json_schema_validate, obj):
+def is_valid_create_wireless_profile_connectivity(json_schema_validate, obj):
     json_schema_validate("jsd_75cc59d48f8159008f52b29e08738811_v3_2_3_0").validate(obj)
     return True
 
 
-def create_wireless_profile(api):
-    endpoint_result = api.wireless.create_wireless_profile(
+def create_wireless_profile_connectivity(api):
+    endpoint_result = api.wireless.create_wireless_profile_connectivity(
         active_validation=True,
         additionalInterfaces=["string"],
         apZones=[
@@ -24272,17 +24276,19 @@ def create_wireless_profile(api):
 
 
 @pytest.mark.wireless
-def test_create_wireless_profile(api, validator):
+def test_create_wireless_profile_connectivity(api, validator):
     try:
-        assert is_valid_create_wireless_profile(validator, create_wireless_profile(api))
+        assert is_valid_create_wireless_profile_connectivity(
+            validator, create_wireless_profile_connectivity(api)
+        )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def create_wireless_profile_default_val(api):
-    endpoint_result = api.wireless.create_wireless_profile(
+def create_wireless_profile_connectivity_default_val(api):
+    endpoint_result = api.wireless.create_wireless_profile_connectivity(
         active_validation=True,
         additionalInterfaces=None,
         apZones=None,
@@ -24296,10 +24302,10 @@ def create_wireless_profile_default_val(api):
 
 
 @pytest.mark.wireless
-def test_create_wireless_profile_default_val(api, validator):
+def test_create_wireless_profile_connectivity_default_val(api, validator):
     try:
-        assert is_valid_create_wireless_profile(
-            validator, create_wireless_profile_default_val(api)
+        assert is_valid_create_wireless_profile_connectivity(
+            validator, create_wireless_profile_connectivity_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -28741,70 +28747,55 @@ def test_get_access_point_certificate_renewal_profile_count_default_val(api, val
             raise original_e
 
 
-def is_valid_create_wireless_profile_connectivity(json_schema_validate, obj):
+def is_valid_create_wireless_profile(json_schema_validate, obj):
     json_schema_validate("jsd_b95201b6a6905a10b463e036bf591166_v3_2_3_0").validate(obj)
     return True
 
 
-def create_wireless_profile_connectivity(api):
-    endpoint_result = api.wireless.create_wireless_profile_connectivity(
+def create_wireless_profile(api):
+    endpoint_result = api.wireless.create_wireless_profile(
         active_validation=True,
-        additionalInterfaces=["string"],
-        apZones=[
-            {"apZoneName": "string", "rfProfileName": "string", "ssids": ["string"]}
-        ],
-        featureTemplates=[{"id": "string", "ssids": ["string"]}],
-        id="string",
         payload=None,
-        ssidDetails=[
-            {
-                "ssidName": "string",
-                "enableFabric": True,
-                "flexConnect": {"enableFlexConnect": True, "localToVlan": 0},
-                "interfaceName": "string",
-                "wlanProfileName": "string",
-                "policyProfileName": "string",
-                "dot11beProfileId": "string",
-                "vlanGroupName": "string",
-                "anchorGroupName": "string",
-            }
-        ],
-        wirelessProfileName="string",
+        profileDetails={
+            "name": "string",
+            "sites": ["string"],
+            "ssidDetails": [
+                {
+                    "name": "string",
+                    "enableFabric": True,
+                    "flexConnect": {"enableFlexConnect": True, "localToVlan": 0},
+                    "interfaceName": "string",
+                    "wlanProfileName": "string",
+                    "policyProfileName": "string",
+                }
+            ],
+        },
     )
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_create_wireless_profile_connectivity(api, validator):
+def test_create_wireless_profile(api, validator):
     try:
-        assert is_valid_create_wireless_profile_connectivity(
-            validator, create_wireless_profile_connectivity(api)
-        )
+        assert is_valid_create_wireless_profile(validator, create_wireless_profile(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def create_wireless_profile_connectivity_default_val(api):
-    endpoint_result = api.wireless.create_wireless_profile_connectivity(
-        active_validation=True,
-        additionalInterfaces=None,
-        apZones=None,
-        featureTemplates=None,
-        id=None,
-        payload=None,
-        ssidDetails=None,
-        wirelessProfileName=None,
+def create_wireless_profile_default_val(api):
+    endpoint_result = api.wireless.create_wireless_profile(
+        active_validation=True, payload=None, profileDetails=None
     )
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_create_wireless_profile_connectivity_default_val(api, validator):
+def test_create_wireless_profile_default_val(api, validator):
     try:
-        assert is_valid_create_wireless_profile_connectivity(
-            validator, create_wireless_profile_connectivity_default_val(api)
+        assert is_valid_create_wireless_profile(
+            validator, create_wireless_profile_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -28847,70 +28838,55 @@ def test_get_wireless_profile_default_val(api, validator):
             raise original_e
 
 
-def is_valid_update_wireless_profile_connectivity(json_schema_validate, obj):
+def is_valid_update_wireless_profile(json_schema_validate, obj):
     json_schema_validate("jsd_5135bbf7ce025bc2a291b90c37a6b898_v3_2_3_0").validate(obj)
     return True
 
 
-def update_wireless_profile_connectivity(api):
-    endpoint_result = api.wireless.update_wireless_profile_connectivity(
+def update_wireless_profile(api):
+    endpoint_result = api.wireless.update_wireless_profile(
         active_validation=True,
-        additionalInterfaces=["string"],
-        apZones=[
-            {"apZoneName": "string", "rfProfileName": "string", "ssids": ["string"]}
-        ],
-        featureTemplates=[{"id": "string", "ssids": ["string"]}],
-        id="string",
         payload=None,
-        ssidDetails=[
-            {
-                "ssidName": "string",
-                "enableFabric": True,
-                "flexConnect": {"enableFlexConnect": True, "localToVlan": 0},
-                "interfaceName": "string",
-                "wlanProfileName": "string",
-                "policyProfileName": "string",
-                "dot11beProfileId": "string",
-                "vlanGroupName": "string",
-                "anchorGroupName": "string",
-            }
-        ],
-        wirelessProfileName="string",
+        profileDetails={
+            "name": "string",
+            "sites": ["string"],
+            "ssidDetails": [
+                {
+                    "name": "string",
+                    "enableFabric": True,
+                    "flexConnect": {"enableFlexConnect": True, "localToVlan": 0},
+                    "interfaceName": "string",
+                    "wlanProfileName": "string",
+                    "policyProfileName": "string",
+                }
+            ],
+        },
     )
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_update_wireless_profile_connectivity(api, validator):
+def test_update_wireless_profile(api, validator):
     try:
-        assert is_valid_update_wireless_profile_connectivity(
-            validator, update_wireless_profile_connectivity(api)
-        )
+        assert is_valid_update_wireless_profile(validator, update_wireless_profile(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def update_wireless_profile_connectivity_default_val(api):
-    endpoint_result = api.wireless.update_wireless_profile_connectivity(
-        active_validation=True,
-        additionalInterfaces=None,
-        apZones=None,
-        featureTemplates=None,
-        id=None,
-        payload=None,
-        ssidDetails=None,
-        wirelessProfileName=None,
+def update_wireless_profile_default_val(api):
+    endpoint_result = api.wireless.update_wireless_profile(
+        active_validation=True, payload=None, profileDetails=None
     )
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_update_wireless_profile_connectivity_default_val(api, validator):
+def test_update_wireless_profile_default_val(api, validator):
     try:
-        assert is_valid_update_wireless_profile_connectivity(
-            validator, update_wireless_profile_connectivity_default_val(api)
+        assert is_valid_update_wireless_profile(
+            validator, update_wireless_profile_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):
@@ -33099,42 +33075,40 @@ def test_ap_provision_connectivity_default_val(api, validator):
             raise original_e
 
 
-def is_valid_delete_wireless_profile_connectivity(json_schema_validate, obj):
+def is_valid_delete_wireless_profile(json_schema_validate, obj):
     json_schema_validate("jsd_9610a850fb6c5451a7ad20ba76f4ff43_v3_2_3_0").validate(obj)
     return True
 
 
-def delete_wireless_profile_connectivity(api):
-    endpoint_result = api.wireless.delete_wireless_profile_connectivity(
+def delete_wireless_profile(api):
+    endpoint_result = api.wireless.delete_wireless_profile(
         wireless_profile_name="string"
     )
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_delete_wireless_profile_connectivity(api, validator):
+def test_delete_wireless_profile(api, validator):
     try:
-        assert is_valid_delete_wireless_profile_connectivity(
-            validator, delete_wireless_profile_connectivity(api)
-        )
+        assert is_valid_delete_wireless_profile(validator, delete_wireless_profile(api))
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest)):
             print(original_e)
             raise original_e
 
 
-def delete_wireless_profile_connectivity_default_val(api):
-    endpoint_result = api.wireless.delete_wireless_profile_connectivity(
+def delete_wireless_profile_default_val(api):
+    endpoint_result = api.wireless.delete_wireless_profile(
         wireless_profile_name="string"
     )
     return endpoint_result
 
 
 @pytest.mark.wireless
-def test_delete_wireless_profile_connectivity_default_val(api, validator):
+def test_delete_wireless_profile_default_val(api, validator):
     try:
-        assert is_valid_delete_wireless_profile_connectivity(
-            validator, delete_wireless_profile_connectivity_default_val(api)
+        assert is_valid_delete_wireless_profile(
+            validator, delete_wireless_profile_default_val(api)
         )
     except Exception as original_e:
         with pytest.raises((JsonSchemaException, MalformedRequest, TypeError)):

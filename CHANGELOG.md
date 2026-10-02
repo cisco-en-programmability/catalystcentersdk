@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.3.0.3] - 2026-10-02
+### Fixed
+- **Issue #68**: `set_banner_settings_for_a_site` sends its `banner` again on 3.2.3.0.
+- **Issue #71**: the plain and `_connectivity` wireless profile names match the earlier namespaces again; code written against 3.2.3.0.0 to 3.2.3.0.2 must swap them.
+- **Issue #73**: a `null` in `payload` reaches `update_device_credential_settings_for_a_site` and passes validation.
+- **Issue #20**: the webhook destination methods take `webhook_headers` again on 3.2.3.0.
+- **Issues #17, #63**: streamed downloads keep their body when the response is JSON or has no `Content-Disposition`.
+- **Aliases**: 68 names from 3.1.6.0.x and 3.2.3.0.0 resolve again on 3.2.3.0; pass arguments as keywords.
+- **2.3.7.6**: the site settings setters no longer raise `TypeError` on `json_null`.
+
 ## [3.2.3.0.2] - 2026-09-10
 ### Fixed
 - **Report view filters (issue #69)**: an array-valued filter such as `MULTI_SELECT_TREE` no longer raises `MalformedRequest` on 2.3.7.6 and 2.3.7.9; every version takes both the array and the object form.
@@ -218,4 +228,5 @@ to "application".
 [3.2.3.0.0]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.1.6.0.7...v3.2.3.0.0
 [3.2.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.0...v3.2.3.0.1
 [3.2.3.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.1...v3.2.3.0.2
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.2...develop
+[3.2.3.0.3]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.2...v3.2.3.0.3
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.3...develop

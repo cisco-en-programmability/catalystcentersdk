@@ -283,14 +283,16 @@ def pprint_request_info(url, method, _headers, **kwargs):
     return debug_print
 
 
-def pprint_response_info(response):
+def pprint_response_info(response, include_body=True):
     debug_print = "\nResponse" "\n\tStatus: {} - {}" "\n\tHeaders: \n{}"
     headers = response.headers
     headers = "\n".join(["\t\t{}: {}".format(a, b) for a, b in headers.items()])
     body = None
     file_resp_headers = ["Content-Disposition", "fileName"]
 
-    if "application/json" in response.headers.get("Content-Type", ""):
+    if not include_body:
+        body = None
+    elif "application/json" in response.headers.get("Content-Type", ""):
         try:
             body = response.json()
             body = json.dumps(body, indent=4)

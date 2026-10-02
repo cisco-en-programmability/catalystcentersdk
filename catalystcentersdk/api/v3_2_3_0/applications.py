@@ -2015,3 +2015,9 @@ class Applications:
         return self._object_factory(
             "bpm_b85e4ce533d5ff49ddd3b2f9657cfa5_v3_2_3_0", json_data
         )
+
+
+# Alias Functions
+Applications.get_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range = (
+    Applications.the_trend_analytics_data_for_thousand_eyes_test_results_in_the_specified_time_range
+)

@@ -462,7 +462,7 @@ class EventManagement:
     def update_webhook_destination(
         self,
         description=None,
-        headers_=None,
+        webhook_headers=None,
         isProxyRoute=None,
         method=None,
         name=None,
@@ -472,13 +472,14 @@ class EventManagement:
         headers=None,
         payload=None,
         active_validation=True,
+        headers_=None,
         **request_parameters
     ):
         """Update Webhook Destination.   Update Webhook  Destination.
 
         Args:
             description(string): Event Management's description.
-            headers_: Part of the JSON serializable Python object to send in the body of the Request.
+            webhook_headers(list): Event Management's headers (list of objects).
             isProxyRoute(boolean): Event Management's isProxyRoute.
             method(string): Event Management's method. Available values are 'POST' and 'PUT'.
             name(string): Event Management's name.
@@ -491,6 +492,7 @@ class EventManagement:
                 body of the Request.
             active_validation(bool): Enable/Disable payload validation.
                 Defaults to True.
+            headers_(list): Former name of webhook_headers, still accepted.
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
@@ -525,7 +527,7 @@ class EventManagement:
             "url": url,
             "method": method,
             "trustCert": trustCert,
-            "headers": headers_,
+            "headers": webhook_headers if webhook_headers is not None else headers_,
             "isProxyRoute": isProxyRoute,
         }
         _payload.update(payload or {})
@@ -559,7 +561,7 @@ class EventManagement:
     def create_webhook_destination(
         self,
         description=None,
-        headers_=None,
+        webhook_headers=None,
         isProxyRoute=None,
         method=None,
         name=None,
@@ -569,13 +571,14 @@ class EventManagement:
         headers=None,
         payload=None,
         active_validation=True,
+        headers_=None,
         **request_parameters
     ):
         """Create Webhook Destination.   Create  Webhook Destination.
 
         Args:
             description(string): Event Management's description.
-            headers_: Part of the JSON serializable Python object to send in the body of the Request.
+            webhook_headers(list): Event Management's headers (list of objects).
             isProxyRoute(boolean): Event Management's isProxyRoute.
             method(string): Event Management's method. Available values are 'POST' and 'PUT'.
             name(string): Event Management's name.
@@ -588,6 +591,7 @@ class EventManagement:
                 body of the Request.
             active_validation(bool): Enable/Disable payload validation.
                 Defaults to True.
+            headers_(list): Former name of webhook_headers, still accepted.
             **request_parameters: Additional request parameters (provides
                 support for parameters that may be added in the future).
 
@@ -622,7 +626,7 @@ class EventManagement:
             "url": url,
             "method": method,
             "trustCert": trustCert,
-            "headers": headers_,
+            "headers": webhook_headers if webhook_headers is not None else headers_,
             "isProxyRoute": isProxyRoute,
         }
         _payload.update(payload or {})

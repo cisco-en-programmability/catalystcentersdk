@@ -23,11 +23,25 @@ SOFTWARE.
 
 import ast
 import importlib
+import inspect
+import re
 from pathlib import Path
 
 import pytest
+import requests
+
+from catalystcentersdk.models.schema_validator import SchemaValidator
 
 NAMESPACES = ["v2_3_7_6_1", "v2_3_7_9", "v3_1_3_0", "v3_1_6_0", "v3_2_3_0"]
+
+
+SESSION_KWARGS = set(inspect.signature(requests.Session.request).parameters) | {
+    "erc",
+    "save_file",
+    "dirpath",
+    "filename",
+    "json_null",
+}
 
 
 class RecordingSession:
@@ -39,6 +53,8 @@ class RecordingSession:
         self.calls = []
 
     def _record(self, url, **kwargs):
+        unknown = set(kwargs) - SESSION_KWARGS
+        assert not unknown, f"RestSession would reject {sorted(unknown)}"
         self.calls.append(kwargs)
         return {}
 
@@ -172,3 +188,136 @@ def test_pnp_claim_carries_the_stackswitch_fields(namespace):
     body = api._session.calls[0]["json"]
     for field in PNP_FIELDS:
         assert field in body, f"{namespace} dropped {field} from the request body"
+
+
+# The banner body that v3_2_3_0 used to drop. See issue #68.
+@pytest.mark.parametrize("namespace", NAMESPACES)
+def test_banner_settings_send_the_banner(namespace):
+    api = build(namespace, "network_settings", "NetworkSettings")
+    api.set_banner_settings_for_a_site(
+        id="site-1",
+        banner={"type": "Custom", "message": "hello"},
+        active_validation=False,
+    )
+    assert api._session.calls[0]["json"]["banner"] == {
+        "type": "Custom",
+        "message": "hello",
+    }
+
+
+@pytest.mark.parametrize("namespace", NAMESPACES)
+def test_banner_settings_reject_a_list_payload(namespace):
+    api = build(namespace, "network_settings", "NetworkSettings")
+    with pytest.raises(TypeError):
+        api.set_banner_settings_for_a_site(
+            id="site-1",
+            payload=[{"type": "Custom", "message": "hello"}],
+            active_validation=False,
+        )
+
+
+# `null` means "inherit from the parent site", so it must survive. See issue #73.
+@pytest.mark.parametrize("namespace", NAMESPACES)
+def test_device_credential_settings_can_send_null(namespace):
+    api = build(namespace, "network_settings", "NetworkSettings")
+    version = ".".join(namespace[1:].split("_")[:4])
+    api._request_validator = SchemaValidator(version).json_schema_validate
+    api.update_device_credential_settings_for_a_site(
+        id="site-1",
+        cliCredentialsId={"credentialsId": "cred-1"},
+        payload={"snmpv3CredentialsId": None, "httpReadCredentialsId": {}},
+    )
+    body = api._session.calls[0]["json"]
+    assert body["cliCredentialsId"] == {"credentialsId": "cred-1"}  # pinned
+    assert body["snmpv3CredentialsId"] is None  # inherited
+    assert body["httpReadCredentialsId"] == {}  # unset
+
+
+# The plain name is the legacy family, `_connectivity` the current one, in every
+# namespace. See issue #71.
+WIRELESS_PROFILE_ENDPOINTS = [
+    ("create_wireless_profile", "/dna/intent/api/v1/wireless/profile"),
+    ("create_wireless_profile_connectivity", "/dna/intent/api/v1/wirelessProfiles"),
+    ("update_wireless_profile", "/dna/intent/api/v1/wireless/profile"),
+    (
+        "update_wireless_profile_connectivity",
+        "/dna/intent/api/v1/wirelessProfiles/{id}",
+    ),
+    (
+        "delete_wireless_profile",
+        "/dna/intent/api/v1/wireless-profile/{wirelessProfileName}",
+    ),
+    (
+        "delete_wireless_profile_connectivity",
+        "/dna/intent/api/v1/wirelessProfiles/{id}",
+    ),
+]
+
+
+@pytest.mark.parametrize("namespace", NAMESPACES)
+@pytest.mark.parametrize("method,endpoint", WIRELESS_PROFILE_ENDPOINTS)
+def test_wireless_profile_names_keep_their_endpoint(namespace, method, endpoint):
+    source = Path(f"catalystcentersdk/api/{namespace}/wireless.py").read_text()
+    body = source[source.index(f"    def {method}(") :]
+    chunk = body[body.index("e_url = ") : body.index("endpoint_full_url")]
+    assert "".join(re.findall(r'"([^"]*)"', chunk)) == endpoint
+
+
+WEBHOOK_METHODS = ["create_webhook_destination", "update_webhook_destination"]
+WEBHOOK_HEADERS = [{"name": "X-Token", "value": "abc"}]
+
+
+@pytest.mark.parametrize("namespace", NAMESPACES)
+@pytest.mark.parametrize("method", WEBHOOK_METHODS)
+def test_webhook_headers_reach_the_body(namespace, method):
+    api = build(namespace, "event_management", "EventManagement")
+    getattr(api, method)(
+        name="hook", webhook_headers=WEBHOOK_HEADERS, active_validation=False
+    )
+    sent = api._session.calls[0]
+    assert sent["json"]["headers"] == WEBHOOK_HEADERS
+    assert not sent.get("params")
+
+
+@pytest.mark.parametrize("method", WEBHOOK_METHODS)
+def test_webhook_headers_keep_their_previous_name(method):
+    api = build("v3_2_3_0", "event_management", "EventManagement")
+    getattr(api, method)(name="hook", headers_=WEBHOOK_HEADERS, active_validation=False)
+    sent = api._session.calls[0]
+    assert sent["json"]["headers"] == WEBHOOK_HEADERS
+    assert not sent.get("params")
+
+
+@pytest.mark.parametrize("namespace", NAMESPACES)
+@pytest.mark.parametrize(
+    "method", ["create_wireless_profile", "update_wireless_profile"]
+)
+def test_legacy_wireless_profile_sends_profile_details(namespace, method):
+    api = build(namespace, "wireless", "Wireless")
+    details = {"name": "profile-1", "sites": ["Global/USA"]}
+    getattr(api, method)(profileDetails=details, active_validation=False)
+    sent = api._session.calls[0]
+    assert sent["json"] == {"profileDetails": details}
+    assert not sent.get("params")
+
+
+DOWNLOAD_NAMESPACES = ["v2_3_7_9", "v3_1_3_0", "v3_1_6_0", "v3_2_3_0"]
+
+
+@pytest.mark.parametrize("namespace", DOWNLOAD_NAMESPACES)
+@pytest.mark.parametrize(
+    "method",
+    [
+        "download_unmaskedraw_device_configuration_as_zip",
+        "download_unmaskedraw_device_configuration_as_z_ip",
+    ],
+)
+def test_unmasked_config_download_validates_and_streams(namespace, method):
+    api = build(namespace, "configuration_archive", "ConfigurationArchive")
+    version = ".".join(namespace[1:].split("_")[:4])
+    api._request_validator = SchemaValidator(version).json_schema_validate
+    getattr(api, method)(id="device-1", password="Secret#123", active_validation=True)
+    sent = api._session.calls[0]
+    assert sent["json"] == {"password": "Secret#123"}
+    assert sent["stream"] is True
+    assert not sent.get("params")
