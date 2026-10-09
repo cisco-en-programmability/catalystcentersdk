@@ -4550,6 +4550,9 @@ from .validators.v3_1_6_0.jsd_b3ab480a3f485ecc9fef1bd2f8c9d109 import (
 from .validators.v3_1_6_0.jsd_b3c4383ecc13514c85c6f3d8484f6d68 import (
     JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68 as JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68_v3_1_6_0,
 )
+from .validators.v3_2_3_0.jsd_b3c4383ecc13514c85c6f3d8484f6d68 import (
+    JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68 as JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68_v3_2_3_0,
+)
 from .validators.v3_1_6_0.jsd_b43e0f60e9ac5bd4960f9772cf7a497b import (
     JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B as JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B_v3_1_6_0,
 )
@@ -9528,6 +9531,9 @@ class SchemaValidator:
             self.json_schema_validators[
                 "jsd_b3c4383ecc13514c85c6f3d8484f6d68_v3_1_6_0"
             ] = JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68_v3_1_6_0()
+            self.json_schema_validators[
+                "jsd_b3c4383ecc13514c85c6f3d8484f6d68_v3_2_3_0"
+            ] = JSONSchemaValidatorB3C4383ECc13514C85C6F3D8484F6D68_v3_2_3_0()
             self.json_schema_validators[
                 "jsd_b43e0f60e9ac5bd4960f9772cf7a497b_v3_1_6_0"
             ] = JSONSchemaValidatorB43E0F60E9Ac5Bd4960F9772Cf7A497B_v3_1_6_0()
