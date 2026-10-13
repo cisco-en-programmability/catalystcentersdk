@@ -2804,7 +2804,7 @@ class DeviceOnboardingPnp:
             deviceType(string): Device Onboarding (PnP)'s Type of device being claimed. Different device types
                 require different parameters.. Available values are 'SWITCH', 'ACCESS_POINT',
                 'STACK_SWITCH', 'SENSOR', 'MOBILITY_EXPRESS', 'WIRELESS_CONTROLLER', 'SVL' and 'ROUTER'.
-            gateway(): Device Onboarding (PnP)'s Gateway for wireless controller. Cannot have the same value as the
+            gateway(string): Device Onboarding (PnP)'s Gateway for wireless controller. Cannot have the same value as the
                 staticIpAddress.
             hostname(string): Device Onboarding (PnP)'s Hostname to be pushed to the device.
             imageInfo(object): Device Onboarding (PnP)'s Details of the image to be installed on device. Image
@@ -2819,7 +2819,7 @@ class DeviceOnboardingPnp:
             sensorProfile(string): Device Onboarding (PnP)'s Sensor profile.
             siteId(string): Device Onboarding (PnP)'s Unique identifier of the site to claim the device to. A list
                 of sites can be fetched from the `GET /dna/intent/api/v1/sites` API.
-            staticIpAddress(): Device Onboarding (PnP)'s Static IP for wireless controller. Cannot have the same
+            staticIpAddress(string): Device Onboarding (PnP)'s Static IP for wireless controller. Cannot have the same
                 value as the gateway. The Vlan and IP Address used for PnP communication cannot be used
                 here.
             subnetMask(string): Device Onboarding (PnP)'s Subnet mask for wireless controller.

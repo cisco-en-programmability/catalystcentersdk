@@ -1104,7 +1104,7 @@ class NetworkSettings:
         Args:
             addressSpace(): Network Settings's addressSpace.
             id(string): Network Settings's The UUID for this global IP pool.
-            name(): Network Settings's name.
+            name(string): Network Settings's name.
             poolType(string): Network Settings's Once created, a global pool type cannot be changed. **Tunnel**
                 Assigns IP addresses to site-to-site VPN for IPSec tunneling. **Generic** used for all
                 other network types. . Available values are 'Generic' and 'Tunnel'.
@@ -3120,7 +3120,7 @@ class NetworkSettings:
         Args:
             addressSpace(): Network Settings's addressSpace.
             id(string): Network Settings's The UUID for this global IP pool.
-            name(): Network Settings's name.
+            name(string): Network Settings's name.
             poolType(string): Network Settings's Once created, a global pool type cannot be changed. **Tunnel**
                 Assigns IP addresses to site-to-site VPN for IPSec tunneling. **Generic** used for all
                 other network types. . Available values are 'Generic' and 'Tunnel'.
@@ -3635,7 +3635,7 @@ class NetworkSettings:
             id(string): Network Settings's The UUID for this reserve IP pool (subpool).
             ipV4AddressSpace(): Network Settings's ipV4AddressSpace.
             ipV6AddressSpace(): Network Settings's ipV6AddressSpace.
-            name(): Network Settings's name.
+            name(string): Network Settings's name.
             poolType(string): Network Settings's Once created, a subpool type cannot be changed. **LAN** Assigns IP
                 addresses to LAN interfaces of applicable VNFs and underlay LAN automation.
                 **Management** Assigns IP addresses to management interfaces. A management network is a
@@ -3932,7 +3932,7 @@ class NetworkSettings:
             id(string): Network Settings's The UUID for this reserve IP pool (subpool).
             ipV4AddressSpace(): Network Settings's ipV4AddressSpace.
             ipV6AddressSpace(): Network Settings's ipV6AddressSpace.
-            name(): Network Settings's name.
+            name(string): Network Settings's name.
             poolType(string): Network Settings's Once created, a subpool type cannot be changed. **LAN** Assigns IP
                 addresses to LAN interfaces of applicable VNFs and underlay LAN automation.
                 **Management** Assigns IP addresses to management interfaces. A management network is a

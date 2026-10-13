@@ -2052,7 +2052,7 @@ class Licenses:
                 and 'UNIFIED_AP'.
             hostname(string): Licenses's Hostname of the network device.
             id(string): Licenses's Unique ID of the license details of the network device.
-            lastSuccessfulUsageReportingTime(): Licenses's lastSuccessfulUsageReportingTime.
+            lastSuccessfulUsageReportingTime(integer): Licenses's lastSuccessfulUsageReportingTime.
             licenseLevel(string): Licenses's The license level to be applied on the network device. Passing the
                 license level as `NONE` will result in one of the following outcomes: 1. For wireless
                 devices consuming CNS licenses, the license will be reset to the CNS Advantage license.
@@ -2073,7 +2073,7 @@ class Licenses:
                 wireless capability, it will show wireless license which can be
                 `AIR_DNA_ESSENTIALS`/`AIR_DNA_ADVANTAGE` and
                 `AIR_NETWORK_ESSENTIALS`/`AIR_NETWORK_ADVANTAGE`.  (list of objects).
-            managementAddress(): Licenses's managementAddress.
+            managementAddress(string): Licenses's managementAddress.
             networkDeviceId(string): Licenses's A unique identifier for the network device.
             registrationStatus(string): Licenses's Smart License registration status.  | Registration status
                 | Description | | ---------------------| -----------------------------------------------
