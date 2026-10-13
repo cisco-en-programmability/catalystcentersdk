@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.3.0.4] - 2026-10-13
+### Fixed
+- **3.2.3.0 docstrings**: 23 request body parameters documented with an empty type, such as `unitsOfMeasure()` in `creates_a_floor` and `managementAddress()` in `adds_a_new_network_device`, now say `string` or `integer`. No runtime change.
+
 ## [3.2.3.0.3] - 2026-10-02
 ### Fixed
 - **Issue #68**: `set_banner_settings_for_a_site` sends its `banner` again on 3.2.3.0.
@@ -229,4 +233,5 @@ to "application".
 [3.2.3.0.1]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.0...v3.2.3.0.1
 [3.2.3.0.2]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.1...v3.2.3.0.2
 [3.2.3.0.3]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.2...v3.2.3.0.3
-[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.3...develop
+[3.2.3.0.4]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.3...v3.2.3.0.4
+[Unreleased]: https://github.com/cisco-en-programmability/catalystcentersdk/compare/v3.2.3.0.4...develop

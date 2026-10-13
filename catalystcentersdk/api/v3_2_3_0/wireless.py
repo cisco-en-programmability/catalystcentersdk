@@ -28658,7 +28658,7 @@ class Wireless:
                 value to 'true' to enable or 'false' to disable clean air.
             cleanAirSI6(boolean): Wireless's To configure clean air status for 6 GHz band, set this parameter's
                 value to 'true' to enable or 'false' to disable clean air.
-            dnsIpAddress(): Wireless's Configure DNS IPv4 or IPv6 Address for the access point. The IP Address
+            dnsIpAddress(string): Wireless's Configure DNS IPv4 or IPv6 Address for the access point. The IP Address
                 should be reachable from the static IP Address configured on the access point. .
             domainName(string): Wireless's Configure domain name for the access point.
             failoverPriority(string): Wireless's Configure the failover priority for the access point. Allowed
@@ -28691,7 +28691,7 @@ class Wireless:
                 'FLEX_LOCAL': The access point operates in flexconnect-local mode.  Choose one of the
                 above values to set the desired mode.. Available values are 'LOCAL', 'MONITOR',
                 'SNIFFER', 'BRIDGE' and 'FLEX_LOCAL'.
-            primaryControllerIpAddress(): Wireless's To configure this parameter, specify the IPv4 or IPv6 address
+            primaryControllerIpAddress(string): Wireless's To configure this parameter, specify the IPv4 or IPv6 address
                 of the primary controller for the access point.
             primaryControllerName(string): Wireless's To configure this parameter, specify the hostname of the
                 primary controller for the access point.
@@ -28701,11 +28701,11 @@ class Wireless:
             rapDownlinkBackhaul(string): Wireless's Sets the downlink backhaul band for a Root Access Point (RAP).
                 Allowed values are '2.4 GHz' and '5 GHz'. The default is '5 GHz'.. Available values are
                 '5 GHz' and '2.4 GHz'.
-            secondaryControllerIpAddress(): Wireless's To configure this parameter, specify the IPv4 or IPv6 address
+            secondaryControllerIpAddress(string): Wireless's To configure this parameter, specify the IPv4 or IPv6 address
                 of the secondary controller for the access point.
             secondaryControllerName(string): Wireless's To configure this parameter, specify the hostname of the
                 secondary controller for the access point.
-            tertiaryControllerIpAddress(): Wireless's To configure this parameter, specify the IPv4 or IPv6 address
+            tertiaryControllerIpAddress(string): Wireless's To configure this parameter, specify the IPv4 or IPv6 address
                 of the tertiary controller for the access point.
             tertiaryControllerName(string): Wireless's To configure this parameter, specify the hostname of the
                 tertiary controller for the access point.
@@ -33943,7 +33943,7 @@ class Wireless:
                 single number (e.g., 100), multiple ports with comma separated values (e.g., 1,2,3) or a
                 range with a hyphen and no whitespaces (e.g., 100-200). Valid values are between 0 and
                 65535.
-            protocol(): Wireless's An IPv4 or IPv6 protocol.
+            protocol(string): Wireless's An IPv4 or IPv6 protocol.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
             payload(dict): A JSON serializable Python object to send in the

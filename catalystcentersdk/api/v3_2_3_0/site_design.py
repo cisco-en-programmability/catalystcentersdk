@@ -1540,7 +1540,7 @@ class SiteDesign:
                 the API POST:/dna/system/api/v1/accessGroups, this value should be used to populate the
                 srcResourceId field of the request payload.
             type(string): Site Design's Site type. Available values are 'floor'.
-            unitsOfMeasure(): Site Design's unitsOfMeasure.
+            unitsOfMeasure(string): Site Design's unitsOfMeasure.
             width(number): Site Design's Floor width.
             id(str): id path parameter. Floor Id.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -2932,7 +2932,7 @@ class SiteDesign:
                 the API POST:/dna/system/api/v1/accessGroups, this value should be used to populate the
                 srcResourceId field of the request payload.
             type(string): Site Design's Site type. Available values are 'floor'.
-            unitsOfMeasure(): Site Design's unitsOfMeasure.
+            unitsOfMeasure(string): Site Design's unitsOfMeasure.
             width(number): Site Design's Floor width.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

@@ -2426,7 +2426,7 @@ class Devices:
                 | HTTP                 |                    | . Available values are
                 'FIREWALL_MANAGEMENT_CENTER'.
             credentials(object): Devices's Credentials used to access the network device. .
-            managementAddress(): Devices's Management address of the network device. For meraki dashboard, this is
+            managementAddress(string): Devices's Management address of the network device. For meraki dashboard, this is
                 the dashboard URL.
             id(str): id path parameter. Unique identifier of the device.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -5685,7 +5685,7 @@ class Devices:
                 | HTTP                 |                    | . Available values are
                 'FIREWALL_MANAGEMENT_CENTER'.
             credentials(object): Devices's Credentials used to access the network device. .
-            managementAddress(): Devices's Management address of the network device. For meraki dashboard, this is
+            managementAddress(string): Devices's Management address of the network device. For meraki dashboard, this is
                 the dashboard URL.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .
@@ -12345,7 +12345,7 @@ class Devices:
                 | . Available values are 'NETWORK_DEVICE', 'COMPUTE_DEVICE', 'THIRD_PARTY_DEVICE',
                 'MERAKI_DASHBOARD' and 'FIREWALL_MANAGEMENT_CENTER'.
             credentials(object): Devices's Credentials used to access the network device. .
-            managementAddress(): Devices's Management address of the network device. For meraki dashboard, this is
+            managementAddress(string): Devices's Management address of the network device. For meraki dashboard, this is
                 the dashboard URL.
             id(str): id path parameter. Unique identifier of the network device.
             headers(dict): Dictionary of HTTP Headers to send with the Request
@@ -14919,7 +14919,7 @@ class Devices:
                 | HTTP                 |                    | . Available values are
                 'FIREWALL_MANAGEMENT_CENTER'.
             credentials(object): Devices's Credentials used to access the network device. .
-            managementAddress(): Devices's Management address of the network device. For meraki dashboard, this is
+            managementAddress(string): Devices's Management address of the network device. For meraki dashboard, this is
                 the dashboard URL.
             headers(dict): Dictionary of HTTP Headers to send with the Request
                 .

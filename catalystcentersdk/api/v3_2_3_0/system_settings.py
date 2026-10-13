@@ -600,7 +600,7 @@ class SystemSettings:
         """Updates the CMX Server.
 
         Args:
-            connectionAddress(): System Settings's The CMX Server connection address.
+            connectionAddress(string): System Settings's The CMX Server connection address.
             id(string): System Settings's Cisco Spaces or CMX Server resource Id.
             password(string): System Settings's The password of the CMX Server user given.
             username(string): System Settings's The CMX Server username. This user must have full API read and write
@@ -1374,7 +1374,7 @@ class SystemSettings:
         configuring the CMX TLS certificate.
 
         Args:
-            connectionAddress(): System Settings's The CMX Server connection address.
+            connectionAddress(string): System Settings's The CMX Server connection address.
             id(string): System Settings's Cisco Spaces or CMX Server resource Id.
             password(string): System Settings's The password of the CMX Server user given.
             username(string): System Settings's The CMX Server username. This user must have full API read and write
@@ -1539,7 +1539,7 @@ class SystemSettings:
 
         Args:
             password(string): System Settings's The password for the external IPAM server login username.
-            provider(): System Settings's provider.
+            provider(string): System Settings's provider.
             serverName(string): System Settings's A descriptive name of this external server, used for
                 identification purposes.
             serverUrl(string): System Settings's The URL of this external server.
@@ -1693,7 +1693,7 @@ class SystemSettings:
 
         Args:
             password(string): System Settings's The password for the external IPAM server login username.
-            provider(): System Settings's provider.
+            provider(string): System Settings's provider.
             serverName(string): System Settings's A descriptive name of this external server, used for
                 identification purposes.
             serverUrl(string): System Settings's The URL of this external server.
